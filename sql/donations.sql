@@ -309,4 +309,22 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Ben Kuhn', 'GiveDirectly', 1000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'GiveWell top charities', 5000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'EA Giving Group', 20000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL)
+
+    ('Timothy Telleen-Lawton', 'Donor lottery', 5000.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Gregory Lewis', 'Donor lottery', 5000.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Ajeya Cotra', 'Donor lottery', 2200.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Rohin Shah', 'Donor lottery', 2800.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Helen Toner', 'Donor lottery', 2500.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Nicole Ross', 'Donor lottery', 500.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Howie Lempel', 'Donor lottery', 5000.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Rebecca Raible', 'Donor lottery', 2000.00, NULL, '2016-12-12', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Pablo Stafforini', 'Donor lottery', 2000.00, NULL, '2016-12-12', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Donor lottery', 500.00, NULL, '2016-12-16', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Brayden McLean', 'Donor lottery', 5000.00, NULL, '2016-12-24', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Benjamin Hoffman', 'Donor lottery', 100.00, NULL, '2016-12-24', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Catherine Olsson', 'Donor lottery', 500.00, NULL, '2016-12-26', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Eric Herboso', 'Donor lottery', 500.00, NULL, '2016-12-31', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Ian David Moss', 'Donor lottery', 2500.00, NULL, '2016-12-31', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Glenn Willen', 'Donor lottery', 500.00, NULL, '2017-01-02', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
+    ('Jacob Steinhardt', 'Donor lottery', 4000.00, NULL, '2017-01-04', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL)
 ;
