@@ -41,5 +41,7 @@ insert into donors(donor, facebook_username, website, donations_url, income,
     ('Rebecca Raible', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Rohin Shah', NULL, 'http://rohinshah.com/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Timothy Telleen-Lawton', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Vipul Naik', 'vipulnaik.r', 'https://vipulnaik.com/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+    ('Vipul Naik', 'vipulnaik.r', 'https://vipulnaik.com/',
+        'https://vipulnaik.com/donation-history/', NULL, NULL, 'vipulnaik_r',
+        'VipulNaik', 'vipulnaik', NULL, NULL, 'vipulnaik', 'vipulnaik')
 ;
