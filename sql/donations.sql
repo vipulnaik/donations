@@ -310,6 +310,10 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Ben Kuhn', 'GiveWell top charities', 5000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'EA Giving Group', 20000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
 
+    ('Michael Dickens', 'The Humane League', 500.00, NULL, '2014-05-01', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL),
+    ('Michael Dickens', 'Animal Charity Evaluators', 3000.00, NULL, '2015-05-01', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL),
+    ('Michael Dickens', 'Raising for Effective Giving', 20000.00, NULL, '2015-10-01', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL),
+
     ('Timothy Telleen-Lawton', 'Donor lottery', 5000.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
     ('Gregory Lewis', 'Donor lottery', 5000.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
     ('Ajeya Cotra', 'Donor lottery', 2200.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
