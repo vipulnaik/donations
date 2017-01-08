@@ -292,5 +292,21 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Jeff Kaufman', 'Save the Children', 336.00, NULL, '2006-01-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Save the Children', 336.00, NULL, '2005-01-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Save the Children', 168.00, NULL, '2004-01-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-    ('Jeff Kaufman', 'Save the Children', 168.00, NULL, '2003-01-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL)
+    ('Jeff Kaufman', 'Save the Children', 168.00, NULL, '2003-01-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
+
+    ('Ben Kuhn', 'GiveDirectly', 120.00, NULL, '2013-07-06', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'Schistosomiasis Control Initiative', 80.00, NULL, '2013-07-06', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'Against Malaria Foundation', 200.00, NULL, '2013-07-06', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'GiveWell (unrestricted)', 6000.00, NULL, '2013-11-22', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'GiveWell (unrestricted)', 10000.00, NULL, '2014-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'GiveWell (unrestricted)', 10000.00, NULL, '2015-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', NULL, 18333.00, NULL, NULL, NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'EA Policy Analytics', 6333.00, NULL, '2015-06-07', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'GiveWell (unrestricted)', 10000.00, NULL, '2015-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'Charity Entrepreneurship', 2000.00, NULL, '2015-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'EA Giving Group', 10000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', NULL, 26000.00, NULL, NULL, NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'GiveDirectly', 1000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'GiveWell top charities', 5000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'EA Giving Group', 20000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL)
 ;
