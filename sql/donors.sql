@@ -16,7 +16,10 @@ create table donors (
     unique key donor(`donor`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-insert into donors(donor) values
+insert into donors(donor, facebook_username, website, donations_url, income,
+    notes, twitter_username, lesswrong_username, eaf_username,
+    gratipay_username, patreon_username, predictionbook_username,
+    github_username) values
     ('Aaron Gertler')
     ('Ajeya Cotra')
     ('Ben Kuhn')
