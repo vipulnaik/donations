@@ -1,7 +1,7 @@
 create table donations (
     donation_id int(11) not null auto_increment primary key,
     donor varchar(40),
-    donee varchar(40),
+    donee varchar(80),
     amount float(14,2),
     fraction float(3, 2),
     donation_date date,
@@ -288,9 +288,9 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Jeff Kaufman', 'Oxfam America', 360.00, NULL, '2008-12-15', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Oxfam America', 5000.00, NULL, '2008-10-11', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Oxfam America', 1500.00, NULL, '2008-07-26', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-    ('Jeff Kaufman', 'Save the Children', 336.00, NULL, '2007', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-    ('Jeff Kaufman', 'Save the Children', 336.00, NULL, '2006', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-    ('Jeff Kaufman', 'Save the Children', 336.00, NULL, '2005', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-    ('Jeff Kaufman', 'Save the Children', 168.00, NULL, '2004', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-    ('Jeff Kaufman', 'Save the Children', 168.00, NULL, '2003', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL)
+    ('Jeff Kaufman', 'Save the Children', 336.00, NULL, '2007-01-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
+    ('Jeff Kaufman', 'Save the Children', 336.00, NULL, '2006-01-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
+    ('Jeff Kaufman', 'Save the Children', 336.00, NULL, '2005-01-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
+    ('Jeff Kaufman', 'Save the Children', 168.00, NULL, '2004-01-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
+    ('Jeff Kaufman', 'Save the Children', 168.00, NULL, '2003-01-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL)
 ;
