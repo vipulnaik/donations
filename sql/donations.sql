@@ -222,7 +222,6 @@ insert into donations(donor, donee, amount, fraction, donation_date,
 
     ('Jeff Kaufman', 'Against Malaria Foundation', 6,000.00, NULL, '2017-01-05', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Against Malaria Foundation', 6,000.00, NULL, '2017-01-05', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-Employer donation match
     ('Jeff Kaufman', 'Against Malaria Foundation', 10,000.00, NULL, '2016-12-24', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'EA Giving Group Fund', 80,100.00, NULL, '2016-12-24', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Against Malaria Foundation', 134.58.00, NULL, '2016-12-05', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
@@ -237,17 +236,14 @@ Employer donation match
     ('Jeff Kaufman', 'Against Malaria Foundation', 5,000.00, NULL, '2015-08-30', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Centre for Effective Altruism', 50,000.00, NULL, '2015-05-28', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Centre for Effective Altruism', 6,000.00, NULL, '2015-05-28', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-Employer donation match
     ('Jeff Kaufman', 'To GiveWell, for distribution to their top charities', 6,443.00, NULL, '2014-12-31', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'To GiveWell, for distribution to their top charities', 57,763.00, NULL, '2014-12-20', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Give Directly', 20.00, NULL, '2014-08-28', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-Donation in exchange for work
     ('Jeff Kaufman', 'Centre for Effective Altruism', 30,000.00, NULL, '2014-07-28', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'To GiveWell, for distribution to their top charities', 4,250.00, NULL, '2014-02-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'GiveWell', 100.00, NULL, '2014-02-01', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Centre for Effective Altruism', 30,000.00, NULL, '2014-01-08', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Centre for Effective Altruism', 5,800.00, NULL, '2014-01-08', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-Employer donation match
     ('Jeff Kaufman', 'To GiveWell, for distribution to their top charities', 13,000.00, NULL, '2013-12-28', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Centre for Effective Altruism', 10,000.00, NULL, '2013-12-28', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'To GiveWell, for distribution to their top charities', 1,550.00, NULL, '2013-12-09', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
@@ -258,23 +254,17 @@ Employer donation match
     ('Jeff Kaufman', 'Against Malaria Foundation', 10,000.00, NULL, '2013-06-26', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Against Malaria Foundation', 6,000.00, NULL, '2013-04-26', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Against Malaria Foundation', 5,800.00, NULL, '2013-04-26', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-Employer donation match
     ('Jeff Kaufman', 'Against Malaria Foundation', 400.00, NULL, '2013-02-08', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Against Malaria Foundation', 6,000.00, NULL, '2013-02-04', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Against Malaria Foundation', 5,800.00, NULL, '2013-02-04', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-Employer donation match
     ('Jeff Kaufman', 'Against Malaria Foundation', 200.00, NULL, '2013-01-21', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-Donation in exchange for work
     ('Jeff Kaufman', 'Giving What We Can', 4,200.00, NULL, '2012-11-17', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', '80,000 Hours', 21,053.00, NULL, '2012-11-07', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Against Malaria Foundation', 19,000.00, NULL, '2012-09-18', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Against Malaria Foundation', 12,000.00, NULL, '2012-09-18', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-Employer donation match
     ('Jeff Kaufman', 'Against Malaria Foundation', 1000.00, NULL, '2012-09-10', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-Donation in exchange for work
     ('Jeff Kaufman', 'Against Malaria Foundation', 150.00, NULL, '2012-07-07', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Against Malaria Foundation', 2000.00, NULL, '2012-06-04', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
-Donation in exchange for work
     ('Jeff Kaufman', 'Schistomiasis Control Initiative', 31.00, NULL, '2012-05-28', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Against Malaria Foundation', 5000.00, NULL, '2012-01-29', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
     ('Jeff Kaufman', 'Schistomiasis Control Initiative', 500.00, NULL, '2012-01-29', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL),
