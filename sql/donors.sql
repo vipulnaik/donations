@@ -17,6 +17,11 @@ create table donors (
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 insert into donors(donor) values
-    ('Jeff Kaufman');
+    ('Jeff Kaufman')
+    ('Ben Kuhn')
+    ('Vipul Naik')
+    ('Peter Hurford')
+    ('Michael Dickens')
+;
 
 update donors set website='http://jefftk.com/' where donor = 'Jeff Kaufman';
