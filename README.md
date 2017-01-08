@@ -4,7 +4,8 @@ coming soon
 
 ## Setting up
 
-From the shell run:
+From the shell run (note this will create and read into a `donations` database,
+so be careful if you already have a database with that name):
 
     make init && make read
 
