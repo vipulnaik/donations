@@ -17,6 +17,8 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     cause_area, url, notes, payment_modality, matched, goal_amount) values
     ('Vipul Naik', 'GiveDirectly', 500.00, NULL, '2012-12', 'Global poverty',
     'https://vipulnaik.com/donation-history/', NULL, NULL, NULL, NULL),
+    ('Vipul Naik', NULL, 500.00, NULL, '2011', NULL,
+    'https://vipulnaik.com/donation-history/', NULL, NULL, NULL, NULL),
     ('Vipul Naik', 'VillageReach', 5100.00, NULL, '2010-12', NULL,
     'https://vipulnaik.com/donation-history/', NULL, NULL, NULL, NULL)
 ;
