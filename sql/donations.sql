@@ -308,7 +308,7 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Ben Kuhn', NULL, 26000.00, NULL, NULL, NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'GiveDirectly', 1000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'GiveWell top charities', 5000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
-    ('Ben Kuhn', 'EA Giving Group', 20000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL)
+    ('Ben Kuhn', 'EA Giving Group', 20000.00, NULL, '2016-12-31', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL),
 
     ('Timothy Telleen-Lawton', 'Donor lottery', 5000.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
     ('Gregory Lewis', 'Donor lottery', 5000.00, NULL, '2016-12-07', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL),
