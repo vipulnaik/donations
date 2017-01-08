@@ -218,5 +218,5 @@ insert into donations(donor, donee, amount, fraction, donation_date,
         NULL, NULL, NULL, NULL),
     ('Peter Hurford', 'Schistosomiasis Control Initiative', 337.00, NULL,
         '2016-12-30', NULL, 'http://peterhurford.com/other/donations.html',
-        NULL, NULL, NULL, NULL),
+        NULL, NULL, NULL, NULL)
 ;
