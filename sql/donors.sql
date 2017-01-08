@@ -3,6 +3,8 @@ create table donors (
     donor varchar(40) not null,
     facebook_username varchar(100),
     website varchar(40),
+    donations_url varchar(100),
+    income int(12),
     notes varchar(2000) default null,
     twitter_username varchar(40),
     lesswrong_username varchar(40),
