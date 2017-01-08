@@ -20,5 +20,11 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Vipul Naik', NULL, 500.00, NULL, '2011', NULL,
     'https://vipulnaik.com/donation-history/', NULL, NULL, NULL, NULL),
     ('Vipul Naik', 'VillageReach', 5100.00, NULL, '2010-12', NULL,
+    'https://vipulnaik.com/donation-history/', NULL, NULL, NULL, NULL),
+    ('Vipul Naik', 'Mozilla Foundation', 12.50, NULL, '2007', NULL,
+    'https://vipulnaik.com/donation-history/', NULL, NULL, NULL, NULL),
+    ('Vipul Naik', 'Creative Commons', 25.00, NULL, '2007', NULL,
+    'https://vipulnaik.com/donation-history/', NULL, NULL, NULL, NULL),
+    ('Vipul Naik', 'Wikimedia Foundation', 125.00, NULL, '2007', NULL,
     'https://vipulnaik.com/donation-history/', NULL, NULL, NULL, NULL)
 ;
