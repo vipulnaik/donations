@@ -22,6 +22,23 @@ insert into donors(donor) values
     ('Vipul Naik')
     ('Peter Hurford')
     ('Michael Dickens')
+    ('Timothy Telleen-Lawton')
+    ('Gregory Lewis')
+    ('Ajeya Cotra')
+    ('Rohin Shah')
+    ('Helen Toner')
+    ('Nicole Ross')
+    ('Howie Lempel')
+    ('Rebecca Raible')
+    ('Pablo Stafforini')
+    ('Aaron Gertler')
+    ('Brayden McLean')
+    ('Benjamin Hoffman')
+    ('Catherine Olsson')
+    ('Eric Herboso')
+    ('Ian David Moss')
+    ('Glenn Willen')
+    ('Jacob Steinhardt')
 ;
 
 update donors set website='http://jefftk.com/' where donor = 'Jeff Kaufman';
