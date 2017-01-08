@@ -12,3 +12,7 @@ so be careful if you already have a database with that name):
 If you need to pass in arguments to `mysql`, use the `MYSQL_ARGS` variable:
 
     make read MYSQL_ARGS="-u user -psecret"
+
+After modifying the SQL instructions, use `reset` to drop the tables:
+
+    make reset && make read
