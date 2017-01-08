@@ -1,3 +1,4 @@
 .PHONY: reset
 reset:
-	mysql -e "use donations; drop table donations; drop table donors;"
+	mysql -e "use donations; drop table if exists donations;"
+	mysql -e "use donations; drop table if exists donors;"
