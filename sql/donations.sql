@@ -2,12 +2,12 @@ create table donations(
     donation_id int(11) not null auto_increment primary key,
     donor varchar(40),
     donee varchar(40),
-    amount float(7,2) NOT NULL,
+    amount float(14,2) NOT NULL,
     donation_date date NOT NULL,
     cause_area varchar(100) NOT NULL,
     url varchar(100),
     notes varchar(2000) DEFAULT NULL,
     payment_modality varchar(100),
     matched boolean,
-    goal amount
+    goal_amount float(14,2),
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
