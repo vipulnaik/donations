@@ -20,28 +20,28 @@ insert into donors(donor, facebook_username, website, donations_url, income,
     notes, twitter_username, lesswrong_username, eaf_username,
     gratipay_username, patreon_username, predictionbook_username,
     github_username) values
-    ('Aaron Gertler')
-    ('Ajeya Cotra')
-    ('Ben Kuhn')
-    ('Benjamin Hoffman')
-    ('Brayden McLean')
-    ('Catherine Olsson')
-    ('Eric Herboso')
-    ('Glenn Willen')
-    ('Gregory Lewis')
-    ('Helen Toner')
-    ('Howie Lempel')
-    ('Ian David Moss')
-    ('Jacob Steinhardt')
-    ('Jeff Kaufman')
-    ('Michael Dickens')
-    ('Nicole Ross')
-    ('Pablo Stafforini')
-    ('Peter Hurford')
-    ('Rebecca Raible')
-    ('Rohin Shah')
-    ('Timothy Telleen-Lawton')
-    ('Vipul Naik')
+    ('Aaron Gertler', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Ajeya Cotra', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Benjamin Hoffman', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Brayden McLean', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Catherine Olsson', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Eric Herboso', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Glenn Willen', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Gregory Lewis', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Helen Toner', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Howie Lempel', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Ian David Moss', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Jacob Steinhardt', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Jeff Kaufman', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Michael Dickens', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Nicole Ross', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Pablo Stafforini', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Peter Hurford', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Rebecca Raible', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Rohin Shah', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Timothy Telleen-Lawton', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Vipul Naik', 'vipulnaik.r', 'https://vipulnaik.com/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
 ;
 
 update donors set website='http://jefftk.com/' where donor = 'Jeff Kaufman';
