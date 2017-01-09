@@ -363,7 +363,7 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Aaron Gertler', 'Givewell and CFAR', 1000.00, NULL, '2016-02-01', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Split 90/10. The Givewell donation was for operational support.', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Aaron Gertler', '.impact, the Parsemus Foundation, and the Against Malaria Foundation', 1250.00, NULL, '2016-01-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Split 40/20/40. I donated to Parsemus as a gift to David Benatar. The AMF donation matched a fundraiser from EA Adelaide.', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Aaron Gertler', 'Multiple organizations (50% Givewell)', 3785.00, NULL, '2015-01-01', 'year', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Second year as a Giving What We Can member.', NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Aaron Gertler', 'Multiple organizations (primarily Givewell)', 1685.00, '2014-01-01', 'year', 'donation log', NULL, 'http://aarongertler.net/donations/', 'First year as a Giving What We Can member.', NULL, NULL, NULL, NULL, NULL, NULL)
+    ('Aaron Gertler', 'Multiple organizations (primarily Givewell)', 1685.00, NULL, '2014-01-01', 'year', 'donation log', NULL, 'http://aarongertler.net/donations/', 'First year as a Giving What We Can member.', NULL, NULL, NULL, NULL, NULL, NULL)
 ;
 
 insert into donations(donor, donee, amount, fraction, donation_date,
