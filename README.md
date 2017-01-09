@@ -26,4 +26,4 @@ Once the database is ready, one can run the site locally:
     cd access-portal
     php -S localhost:8000
 
-Now you can visit `http://localhost:8000/index.php` in one’s browser.
+Now one can visit `http://localhost:8000/index.php` in one’s browser.
