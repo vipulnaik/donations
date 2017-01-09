@@ -354,6 +354,23 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     payment_modality, match_eligible, goal_amount, influencer, employer_match,
     matching_employer)
     values
+    ('Aaron Gertler', 'EA Donor Lottery, Centre for Effective Altruism', 1250.00, NULL, '2016-12-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'My end-of-year donation. $500 went to support Paul Christiano’s interesting donor lottery idea. $750 went to CEA, which runs a number of useful EA projects.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'AMF, Innovations for Poverty Action, Environmental Defense Fund', 350.00, NULL, '2016-12-06', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'My share of donations from a Giving Game co-sponsored by The Life You Can Save.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'GiveWell', 750.00, NULL, '2016-09-10', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Operational funding.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'AMF', 500.00, NULL, '2016-07-12', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'In support of a friend’s campaign.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'AMF and .impact', 1000.00, NULL, '2016-06-26', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Split 60/40.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'AMF and GiveDirectly', 2000.00, NULL, '2016-04-17', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Split 70/30. The GiveDirectly donation resulted from their basic income announcement, though I gave unrestricted funding.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Givewell and CFAR', 1000.00, NULL, '2016-02-01', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Split 90/10. The Givewell donation was for operational support.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', '.impact, the Parsemus Foundation, and the Against Malaria Foundation', 1250.00, NULL, '2016-01-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Split 40/20/40. I donated to Parsemus as a gift to David Benatar. The AMF donation matched a fundraiser from EA Adelaide.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Multiple organizations (50% Givewell)', 3785.00, NULL, '2015-01-01', 'year', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Second year as a Giving What We Can member.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Multiple organizations (primarily Givewell)', 1685.00, '2014-01-01', 'year', 'donation log', NULL, 'http://aarongertler.net/donations/', 'First year as a Giving What We Can member.', NULL, NULL, NULL, NULL, NULL, NULL)
+;
+
+insert into donations(donor, donee, amount, fraction, donation_date,
+    donation_date_precision, donation_date_basis, cause_area, url, notes,
+    payment_modality, match_eligible, goal_amount, influencer, employer_match,
+    matching_employer)
+    values
     ('Pablo Stafforini', 'Shulman-Christiano donor lottery', 2000.00, NULL, '2016-12-07', 'day', 'donation log', NULL, 'http://www.stafforini.com/blog/donations/', 'See here for details.', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Pablo Stafforini', 'Centre for Effective Altruism', 96.39, NULL, '2016-09-29', 'day', 'donation log', NULL, 'http://www.stafforini.com/blog/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Pablo Stafforini', 'Multiple charities (AMF, SCI, GD, GW, GWWC)', 261.33, NULL, '2016-08-11', 'day', 'donation log', NULL, 'http://www.stafforini.com/blog/donations/', 'Theron Pummer’s fundraiser.', NULL, NULL, NULL, NULL, NULL, NULL),
