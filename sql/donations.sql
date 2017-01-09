@@ -13,7 +13,7 @@ create table donations (
     payment_modality varchar(100),
     match_eligible boolean,
     goal_amount float(14,2),
-    influencer varchar(40),
+    influencer varchar(1000),
     employer_match float(14,2),
     matching_employer varchar(100)
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -306,23 +306,31 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
     ('Ben Kuhn', 'GiveDirectly', 120.00, NULL, '2013-07-06', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'Schistosomiasis Control Initiative', 80.00, NULL, '2013-07-06', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'Against Malaria Foundation', 200.00, NULL, '2013-07-06', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Ben Kuhn', 'GiveWell (unrestricted)', 6000.00, NULL, '2013-11-22', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Ben Kuhn', 'GiveWell (unrestricted)', 10000.00, NULL, '2014-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Ben Kuhn', 'GiveWell (unrestricted)', 10000.00, NULL, '2015-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'GiveWell', 6000.00, NULL, '2013-11-22', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'GiveWell', 10000.00, NULL, '2014-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'GiveWell', 10000.00, NULL, '2015-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, 'GiveWell', 10000, 'Wave'),
     ('Ben Kuhn', 'EA Policy Analytics', 6333.00, NULL, '2015-06-07', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Ben Kuhn', 'GiveWell (unrestricted)', 10000.00, NULL, '2015-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'Charity Entrepreneurship', 2000.00, NULL, '2015-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Ben Kuhn', 'EA Giving Group', 10000.00, NULL, '2016-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'GiveDirectly', 1000.00, NULL, '2016-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Ben Kuhn', 'GiveWell top charities', 5000.00, NULL, '2016-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Ben Kuhn', 'EA Giving Group', 20000.00, NULL, '2016-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+    ('Ben Kuhn', 'GiveWell top charities', 5000.00, NULL, '2016-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', 'See http://www.benkuhn.net/giving-2016 for more context', NULL, NULL, NULL, 'GiveWell', NULL, NULL),
+    ('Ben Kuhn', 'EA Giving Group', 20000.00, NULL, '2016-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', 'See http://www.benkuhn.net/giving-2016 for more context', NULL, NULL, NULL, 'Nick Beckstead', 10000, 'Wave');
 
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis,
     cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer)
     values
-    ('Michael Dickens', 'The Humane League', 500.00, NULL, '2014-05-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Michael Dickens', 'Animal Charity Evaluators', 3000.00, NULL, '2015-05-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Michael Dickens', 'Raising for Effective Giving', 20000.00, NULL, '2015-10-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Jacob Steinhardt', 'Donor lottery', 4000.00, 0.40, '2017-01-04','day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', 'See https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016/ for more context; the announcemet was 2016-12-28, before the actual transaction', NULL, NULL, NULL, 'Carl Shulman', NULL, NULL),
+    ('Jacob Steinhardt', 'GiveWell top charities', 2500.00, 0.25, '2016-12-28','day', 'date of donation announcement', 'Global health and global poverty', 'https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016/', 'Although donation was announced on this day we do not know when it was made', NULL, NULL, NULL, 'GiveWell', NULL, NULL),
+    ('Jacob Steinhardt','GiveDirectly',500,0.05,'2016-12-28','day','date of donation announcement', 'Global poverty/cash transfers','https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016/', 'Although donation was announced on this day we do not know when it was made', NULL, NULL, NULL, 'GiveWell + a student of Pascaline Dupas', NULL, NULL),
+    ('Jacob Steinhardt','Carnegie Endowment for International Peace',500,0.05,'2016-12-28','day','date of donation announcement', 'World peace','https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016/', 'Earmarked for Carnegie-Tsinghua Center. Although donation was announced on this day we do not know when it was made', NULL, NULL, NULL, 'Nick Beckstead (Open Philanthropy Project) (only for awareness, not for recommendation)', NULL, NULL),
+    ('Jacob Steinhardt','Blue Ribbon Study Panel',500,0.05,'2016-12-28','day','date of donation announcement', 'World peace','https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016/', 'Although donation was announced on this day we do not know when it was made', NULL, NULL, NULL, 'Jaime Yassif (Open Philanthropy Project)', NULL, NULL);
+    
+
+insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis,
+    cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer)
+    values
+    ('Michael Dickens', 'The Humane League', 500.00, NULL, '2014-05-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', 'Donated as part of Stanford EA consensus', NULL, NULL, NULL, 'Stanford EA', NULL, NULL),
+    ('Michael Dickens', 'Animal Charity Evaluators', 3000.00, NULL, '2015-05-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', 'Part of a collective donation by Stanford EA; Dickens had a preference for THL but deferred to group consensus', NULL, NULL, NULL, 'Stanford EA', NULL, NULL),
+    ('Michael Dickens', 'Raising for Effective Giving', 20000.00, NULL, '2015-10-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', 'See http://effective-altruism.com/ea/ns/my_cause_selection_michael_dickens/ for the full reasoning; also mirrored at http://mdickens.me/2015/09/15/my_cause_selection/', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Michael Dickens', 'The Humane League', 20.00, NULL, '2015-11-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/small.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Michael Dickens', 'Raising for Effective Giving', 20.00, NULL, '2015-12-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/small.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Michael Dickens', 'Machine Intelligence Research Institute', 20.00, NULL, '2016-01-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/small.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -331,11 +339,11 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis,
     cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer)
     values
-    ('Timothy Telleen-Lawton', 'Donor lottery', 5000.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Timothy Telleen-Lawton', 'Donor lottery', 5000.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', 'Reasoning explained more in http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/ (go to section for Timothy Telleen-Lawton)', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Gregory Lewis', 'Donor lottery', 5000.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Ajeya Cotra', 'Donor lottery', 2200.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Ajeya Cotra', 'Donor lottery', 2200.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', 'Reasoning explained more in http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/ (go to section for Ajeya Cotra)', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Rohin Shah', 'Donor lottery', 2800.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Helen Toner', 'Donor lottery', 2500.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Helen Toner', 'Donor lottery', 2500.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', 'Reasoning explained more in http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/ (go to section for Helen Toner)', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Nicole Ross', 'Donor lottery', 500.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Howie Lempel', 'Donor lottery', 5000.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Rebecca Raible', 'Donor lottery', 2000.00, NULL, '2016-12-12', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -344,8 +352,7 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
     ('Catherine Olsson', 'Donor lottery', 500.00, NULL, '2016-12-26','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Eric Herboso', 'Donor lottery', 500.00, NULL, '2016-12-31','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Ian David Moss', 'Donor lottery', 2500.00, NULL, '2016-12-31','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Glenn Willen', 'Donor lottery', 500.00, NULL, '2017-01-02','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Jacob Steinhardt', 'Donor lottery', 4000.00, NULL, '2017-01-04','day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+    ('Glenn Willen', 'Donor lottery', 500.00, NULL, '2017-01-02','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 insert into donations(donor, donee, amount, fraction, donation_date,
     donation_date_precision, donation_date_basis, cause_area, url, notes,
@@ -403,3 +410,4 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Pablo Stafforini', 'Animal Charity Evaluators', 1000.00, NULL, '2013-02-01', 'day', 'donation log', NULL, 'http://www.stafforini.com/blog/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Pablo Stafforini', 'Animal Charity Evaluators', 1000.00, NULL, '2013-01-01', 'day', 'donation log', NULL, 'http://www.stafforini.com/blog/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL)
 ;
+
