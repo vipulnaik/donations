@@ -13,7 +13,7 @@ create table donations (
     payment_modality varchar(100),
     match_eligible boolean,
     goal_amount float(14,2),
-    influencer varchar(40),
+    influencer varchar(1000),
     employer_match float(14,2),
     matching_employer varchar(100)
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -330,9 +330,9 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis,
     cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer)
     values
-    ('Michael Dickens', 'The Humane League', 500.00, NULL, '2014-05-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Michael Dickens', 'Animal Charity Evaluators', 3000.00, NULL, '2015-05-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Michael Dickens', 'Raising for Effective Giving', 20000.00, NULL, '2015-10-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Michael Dickens', 'The Humane League', 500.00, NULL, '2014-05-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', 'Donated as part of Stanford EA consensus', NULL, NULL, NULL, 'Stanford EA', NULL, NULL),
+    ('Michael Dickens', 'Animal Charity Evaluators', 3000.00, NULL, '2015-05-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', 'Part of a collective donation by Stanford EA; Dickens had a preference for THL but deferred to group consensus', NULL, NULL, NULL, 'Stanford EA', NULL, NULL),
+    ('Michael Dickens', 'Raising for Effective Giving', 20000.00, NULL, '2015-10-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', 'See http://effective-altruism.com/ea/ns/my_cause_selection_michael_dickens/ for the full reasoning; also mirrored at http://mdickens.me/2015/09/15/my_cause_selection/', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Michael Dickens', 'The Humane League', 20.00, NULL, '2015-11-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/small.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Michael Dickens', 'Raising for Effective Giving', 20.00, NULL, '2015-12-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/small.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Michael Dickens', 'Machine Intelligence Research Institute', 20.00, NULL, '2016-01-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/small.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
