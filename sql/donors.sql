@@ -35,7 +35,7 @@ insert into donors(donor, country, facebook_username, website, donations_url) va
     ('Howie Lempel', 'United States', 'hlempel', NULL, NULL),
     ('Ian David Moss', 'United States', 'iandavidmoss', NULL, NULL),
     ('Jacob Steinhardt', 'United States', 'jacob.steinhardt', NULL, NULL),
-    ('Jeff Kaufman', 'United States', 'jefftk', 'http://www.jefftk.com/', 'http://www.jefftk.com/donations'),
+    ('Jeff Kaufman and Julia Wise', 'United States', 'jefftk', 'http://www.jefftk.com/', 'http://www.jefftk.com/donations'),
     ('Michael Dickens', 'United States', 'michael.j.dickens', 'http://mdickens.me/', 'http://mdickens.me/donations/'),
     ('Nicole Ross', 'United States', 'nicolejamesross', NULL, NULL),
     ('Pablo Stafforini', 'United Kingdom', 'stafforini', 'http://www.stafforini.com', 'http://www.stafforini.com/blog/donations/'),
