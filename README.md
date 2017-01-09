@@ -2,6 +2,8 @@
 
 coming soon
 
+Note that the passwordFile.inc file in access-portal/backend/globalVariables is excluded from the Git repository, but you can see a corresponding dummy password file at [dummyPasswordFile.inc](https://github.com/vipulnaik/donations/blob/master/access-portal/backend/globalVariables/dummyPasswordFile.inc).
+
 ## Setting up
 
 From the shell run (note this will create and read into a `donations` database,
