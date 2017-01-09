@@ -320,6 +320,16 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis,
     cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer)
     values
+    ('Jacob Steinhardt', 'Donor lottery', 4000.00, 0.40, '2017-01-04','day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', 'See https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016/ for more context; the announcemet was 2016-12-28, before the actual transaction', NULL, NULL, NULL, 'Carl Shulman', NULL, NULL),
+    ('Jacob Steinhardt', 'GiveWell top charities', 2500.00, 0.25, '2016-12-28','day', 'date of donation announcement', 'Global health and global poverty', 'https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016/', 'Although donation was announced on this day we do not know when it was made', NULL, NULL, NULL, 'GiveWell', NULL, NULL),
+    ('Jacob Steinhardt','GiveDirectly',500,0.05,'2016-12-28','day','date of donation announcement', 'Global poverty/cash transfers','https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016/', 'Although donation was announced on this day we do not know when it was made', NULL, NULL, NULL, 'GiveWell + a student of Pascaline Dupas', NULL, NULL),
+    ('Jacob Steinhardt','Carnegie Endowment for International Peace',500,0.05,'2016-12-28','day','date of donation announcement', 'World peace','https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016/', 'Earmarked for Carnegie-Tsinghua Center. Although donation was announced on this day we do not know when it was made', NULL, NULL, NULL, 'Nick Beckstead (Open Philanthropy Project) (only for awareness, not for recommendation)', NULL, NULL),
+    ('Jacob Steinhardt','Blue Ribbon Study Panel',500,0.05,'2016-12-28','day','date of donation announcement', 'World peace','https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016/', 'Although donation was announced on this day we do not know when it was made', NULL, NULL, NULL, 'Jaime Yassif (Open Philanthropy Project)', NULL, NULL);
+    
+
+insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis,
+    cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer)
+    values
     ('Michael Dickens', 'The Humane League', 500.00, NULL, '2014-05-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Michael Dickens', 'Animal Charity Evaluators', 3000.00, NULL, '2015-05-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Michael Dickens', 'Raising for Effective Giving', 20000.00, NULL, '2015-10-01', 'month', 'donation log', NULL, 'http://mdickens.me/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -346,6 +356,4 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
     ('Catherine Olsson', 'Donor lottery', 500.00, NULL, '2016-12-26','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Eric Herboso', 'Donor lottery', 500.00, NULL, '2016-12-31','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Ian David Moss', 'Donor lottery', 2500.00, NULL, '2016-12-31','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Glenn Willen', 'Donor lottery', 500.00, NULL, '2017-01-02','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Jacob Steinhardt', 'Donor lottery', 4000.00, NULL, '2017-01-04','day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL)
-;
+    ('Glenn Willen', 'Donor lottery', 500.00, NULL, '2017-01-02','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
