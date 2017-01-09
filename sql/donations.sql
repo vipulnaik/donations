@@ -339,7 +339,6 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
     ('Nicole Ross', 'Donor lottery', 500.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Howie Lempel', 'Donor lottery', 5000.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Rebecca Raible', 'Donor lottery', 2000.00, NULL, '2016-12-12', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Aaron Gertler', 'Donor lottery', 500.00, NULL, '2016-12-16', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Brayden McLean', 'Donor lottery', 5000.00, NULL, '2016-12-24', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Benjamin Hoffman', 'Donor lottery', 100.00, NULL, '2016-12-24','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Catherine Olsson', 'Donor lottery', 500.00, NULL, '2016-12-26','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -353,7 +352,8 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     payment_modality, match_eligible, goal_amount, influencer, employer_match,
     matching_employer)
     values
-    ('Aaron Gertler', 'EA Donor Lottery, Centre for Effective Altruism', 1250.00, NULL, '2016-12-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'My end-of-year donation. $500 went to support Paul Christiano’s interesting donor lottery idea. $750 went to CEA, which runs a number of useful EA projects.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Donor lottery', 500.00, NULL, '2016-12-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', '$500 went to support Paul Christiano’s interesting donor lottery idea.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Centre for Effective Altruism', 750.00, NULL, '2016-12-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'My end-of-year donation. $750 went to CEA, which runs a number of useful EA projects.', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Aaron Gertler', 'AMF, Innovations for Poverty Action, Environmental Defense Fund', 350.00, NULL, '2016-12-06', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'My share of donations from a Giving Game co-sponsored by The Life You Can Save.', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Aaron Gertler', 'GiveWell', 750.00, NULL, '2016-09-10', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Operational funding.', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Aaron Gertler', 'AMF', 500.00, NULL, '2016-07-12', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'In support of a friend’s campaign.', NULL, NULL, NULL, NULL, NULL, NULL),
