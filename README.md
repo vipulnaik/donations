@@ -18,3 +18,12 @@ If you need to pass in arguments to `mysql`, use the `MYSQL_ARGS` variable:
 After modifying the SQL instructions, use `reset` to drop the tables:
 
     make reset && make read
+
+Once the database is ready, one can run the site locally:
+
+    cp access-portal/backend/globalVariables/{dummyPasswordFile.inc,passwordFile.inc}
+    vi access-portal/backend/globalVariables/passwordFile.inc # change to add database login info
+    cd access-portal
+    php -S localhost:8000
+
+Now you can visit `http://localhost:8000/index.php` in your browser.
