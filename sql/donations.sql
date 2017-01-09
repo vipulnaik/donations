@@ -339,7 +339,6 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
     ('Nicole Ross', 'Donor lottery', 500.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Howie Lempel', 'Donor lottery', 5000.00, NULL, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Rebecca Raible', 'Donor lottery', 2000.00, NULL, '2016-12-12', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Pablo Stafforini', 'Donor lottery', 2000.00, NULL, '2016-12-12', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Aaron Gertler', 'Donor lottery', 500.00, NULL, '2016-12-16', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Brayden McLean', 'Donor lottery', 5000.00, NULL, '2016-12-24', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Benjamin Hoffman', 'Donor lottery', 100.00, NULL, '2016-12-24','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -371,7 +370,7 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     payment_modality, match_eligible, goal_amount, influencer, employer_match,
     matching_employer)
     values
-    ('Pablo Stafforini', 'Shulman-Christiano donor lottery', 2000.00, NULL, '2016-12-07', 'day', 'donation log', NULL, 'http://www.stafforini.com/blog/donations/', 'See here for details.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Pablo Stafforini', 'Donor lottery', 2000.00, NULL, '2016-12-07', 'day', 'donation log', NULL, 'http://www.stafforini.com/blog/donations/', 'See here <http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/> for details.', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Pablo Stafforini', 'Centre for Effective Altruism', 96.39, NULL, '2016-09-29', 'day', 'donation log', NULL, 'http://www.stafforini.com/blog/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Pablo Stafforini', 'Multiple charities (AMF, SCI, GD, GW, GWWC)', 261.33, NULL, '2016-08-11', 'day', 'donation log', NULL, 'http://www.stafforini.com/blog/donations/', 'Theron Pummer’s fundraiser.', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Pablo Stafforini', 'EA researcher', 2986.22, NULL, '2016-08-05', 'day', 'donation log', NULL, 'http://www.stafforini.com/blog/donations/', 'I helped a prominent EA figure who was going through financial hardship.', NULL, NULL, NULL, NULL, NULL, NULL),
