@@ -1,6 +1,6 @@
 <?php
 
-print '<h4 id="donationAmountsByDonorAndYear">Donation amounts by donor and year</h4>';
+print '<h4 id="donationAmountsByDonorAndYear">Donation amounts by donor and year</h4>'."\n";
 
 $years = array_reverse(range(2001, 2017));
 $donorQuery = "select distinct donor from donors;";
@@ -40,35 +40,38 @@ function cmpDonorsByAmount($firstDonor, $secondDonor) {
 
 usort($donors, "cmpDonorsByAmount");
 
-print '<table border="1">';
-print '<tr><th>Donor</th>';
+print '<table border="1" class="tablesorter">'."\n";
+print "<thead>\n";
+print "  <tr>\n    <th>Donor</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
-    print "<th>$year</th>";
+    print "    <th>$year</th>\n";
   }
 }
-print '<th>Total</th></tr>';
+print "    <th>Total</th>\n  </tr>\n";
+print "</thead>\n<tbody>\n";
 
 foreach ($donors as $donor) {
-  print "<tr>";
-  print "<td>$donor</td>";
+  print "  <tr>\n";
+  print "    <td>$donor</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
-      print '<td align="right">'.sprintf("%.2f",$donationAmountByDonorAndYear[$donor][$year]).'</td>';
+      print '    <td align="right">'.sprintf("%.2f",$donationAmountByDonorAndYear[$donor][$year]).'</td>'."\n";
     }
   }
-  print '<td align="right"><strong>'.sprintf("%.2f",$donorDonationAmount[$donor]).'</strong></td>';
-  print "</tr>";
+  print '    <td align="right"><strong>'.sprintf("%.2f",$donorDonationAmount[$donor]).'</strong></td>'."\n";
+  print "  </tr>\n";
 }
 
-print "<tr><td><strong>Total</strong></td>";
+print "  <tr>\n    <td><strong>Total</strong></td>\n";
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
-    print '<td align="right"><strong>'.sprintf("%.2f",$yearDonationAmount[$year]).'</td>';
+    print '    <td align="right"><strong>'.sprintf("%.2f",$yearDonationAmount[$year])."</strong></td>\n";
   }
 }
 
-print '<td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount).'</td>';
-print "</tr>";
-print "</table>";
+print '    <td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount).'</strong></td>'."\n";
+print "  </tr>\n";
+print "</tbody>\n";
+print "</table>\n";
