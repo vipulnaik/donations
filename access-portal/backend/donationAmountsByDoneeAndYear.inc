@@ -70,7 +70,7 @@ foreach ($donees as $donee) {
 print "</tbody>\n";
 print "<tfoot>\n";
 print "  <tr>\n    <td><strong>Total</strong></td>\n";
-print '	 <td align="center">--</td>\n';
+print '	 <td align="center">--</td>'."\n";
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
