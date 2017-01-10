@@ -43,7 +43,7 @@ usort($donors, "cmpDonorsByAmount");
 
 print '<table id="myTable" class="tablesorter">'."\n";
 print "<thead>\n";
-print "  <tr>\n    <th>Donor</th>\n";
+print "  <tr>\n    <th>Donor</th>\n	<th>Number of donees</th>";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print "    <th>$year</th>\n";
@@ -54,11 +54,8 @@ print "</thead>\n<tbody>\n";
 
 foreach ($donors as $donor) {
   print "  <tr>\n";
-  print "    <td>$donor (".$numDonees[$donor]." donee";
-  if ($numDonees[$donor] != 1) {
-    print "s";
-  }
-  print ")</td>\n";
+  print "    <td>$donor</td>\n";
+  print '<td align="right">'.$numDonees[$donor]."</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.sprintf("%.2f",$donationAmountByDonorAndYear[$donor][$year]).'</td>'."\n";
@@ -71,6 +68,7 @@ foreach ($donors as $donor) {
 print "</tbody>\n";
 print "<tfoot>\n";
 print "  <tr>\n    <td><strong>Total</strong></td>\n";
+print '	 <td align="center">--</td>\n';
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
