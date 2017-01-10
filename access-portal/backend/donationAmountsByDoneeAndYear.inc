@@ -65,6 +65,8 @@ foreach ($donees as $donee) {
   print "  </tr>\n";
 }
 
+print "</tbody>\n";
+print "<tfoot>\n";
 print "  <tr>\n    <td><strong>Total</strong></td>\n";
 
 foreach ($years as $year) {
@@ -75,5 +77,5 @@ foreach ($years as $year) {
 
 print '    <td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount)."</strong></td>\n";
 print "  </tr>\n";
-print "</tbody>\n";
+print "</tfoot>\n";
 print "</table>";
