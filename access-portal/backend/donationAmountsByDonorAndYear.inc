@@ -1,5 +1,11 @@
 <?php
 
+print '<script>$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+); </script>'."\n";
+
 print '<h4 id="donationAmountsByDonorAndYear">Donation amounts by donor and year</h4>'."\n";
 
 $years = array_reverse(range(2001, 2017));
@@ -40,7 +46,7 @@ function cmpDonorsByAmount($firstDonor, $secondDonor) {
 
 usort($donors, "cmpDonorsByAmount");
 
-print '<table border="1" class="tablesorter">'."\n";
+print '<table id="myTable" class="tablesorter">'."\n";
 print "<thead>\n";
 print "  <tr>\n    <th>Donor</th>\n";
 foreach ($years as $year) {

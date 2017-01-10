@@ -1,3 +1,9 @@
 access-portal/backend/globalVariables/passwordFile.inc
 access-portal/logs/
 sql/private/
+access-portal/asc.gif
+access-portal/bg.gif
+access-portal/desc.gif
+access-portal/jquery*.js
+access-portal/jquery.tablesorter.js
+access-portal/style.css

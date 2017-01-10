@@ -27,3 +27,18 @@ Once the database is ready, one can run the site locally:
     php -S localhost:8000
 
 Now one can visit `http://localhost:8000/index.php` in one’s browser.
+
+For table sorting:
+
+    curl -Lo access-portal/jquery-3.1.1.min.js \
+        'https://code.jquery.com/jquery-3.1.1.min.js'
+    curl -Lo access-portal/jquery.tablesorter.js \
+        'https://github.com/christianbach/tablesorter/raw/master/jquery.tablesorter.js'
+    curl -Lo access-portal/style.css \
+        'https://raw.githubusercontent.com/christianbach/tablesorter/master/themes/blue/style.css'
+    curl -Lo access-portal/bg.gif \
+        'https://github.com/christianbach/tablesorter/raw/master/themes/blue/bg.gif'
+    curl -Lo access-portal/asc.gif \
+        'https://github.com/christianbach/tablesorter/raw/master/themes/blue/asc.gif'
+    curl -Lo access-portal/desc.gif \
+        'https://github.com/christianbach/tablesorter/raw/master/themes/blue/desc.gif'
