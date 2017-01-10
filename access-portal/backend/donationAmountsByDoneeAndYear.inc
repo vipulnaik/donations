@@ -42,7 +42,8 @@ function cmpDoneesByAmount($firstDonee, $secondDonee) {
 
 usort($donees, "cmpDoneesByAmount");
 
-print '<table border="1">';
+print '<table id="myTable2" class="tablesorter">'."\n";
+print "<thead>\n";
 print '<tr><th>Donee</th>';
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
@@ -50,6 +51,7 @@ foreach ($years as $year) {
   }
 }
 print '<th>Total</th></tr>';
+print "</thead>\n<tbody>\n";
 
 foreach ($donees as $donee) {
   print "<tr>";
@@ -73,4 +75,5 @@ foreach ($years as $year) {
 
 print '<td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount).'</td>';
 print "</tr>";
+print "</tbody>\n";
 print "</table>";

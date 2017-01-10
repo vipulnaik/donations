@@ -1,11 +1,5 @@
 <?php
 
-print '<script>$(document).ready(function()
-    {
-        $("#myTable").tablesorter();
-    }
-); </script>'."\n";
-
 print '<h4 id="donationAmountsByDonorAndYear">Donation amounts by donor and year</h4>'."\n";
 
 $years = array_reverse(range(2001, 2017));

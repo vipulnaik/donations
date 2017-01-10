@@ -8,6 +8,12 @@ print '<script type="text/javascript" src="./jquery.tablesorter.js"></script>'."
 print '</head>';
 include_once("backend/globalVariables/passwordFile.inc");
 print '<body>';
+print '<script>$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+        $("#myTable2").tablesorter();
+    }
+); </script>'."\n";
 print '<h3>Donations recorded for Vipul Naik</h3>';
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
