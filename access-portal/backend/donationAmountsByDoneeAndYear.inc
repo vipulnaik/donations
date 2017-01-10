@@ -5,12 +5,13 @@ print '<h4 id="donationAmountsByDoneeAndYear">Donation amounts by donee and year
 $years = array_reverse(range(2001, 2017));
 
 # We'll change the below to reference an explicit donees table, when that's made
-$doneeQuery = "select distinct donee from donations;";
+$doneeQuery = "select donee, count(distinct donor) as numDonors from donations group by donee;";
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();
 for ($i = 0; $i < $doneeResult -> num_rows; $i++) {
   $row = $doneeResult -> fetch_assoc();
   array_push($donees, $row['donee']);
+  $numDonors[$row['donee']] = $row['numDonors'];
 }
 $grandTotalDonationAmount = 0;
 foreach($donees as $donee) {
@@ -55,7 +56,11 @@ print "</thead>\n<tbody>\n";
 
 foreach ($donees as $donee) {
   print "  <tr>\n";
-  print "    <td>$donee</td>\n";
+  print "    <td>$donee (".$numDonors[$donee]." donor";
+  if ($numDonors[$donee] != 1) {
+    print "s";
+  }
+  print ")</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.sprintf("%.2f",$donationAmountByDoneeAndYear[$donee][$year])."</td>\n";
