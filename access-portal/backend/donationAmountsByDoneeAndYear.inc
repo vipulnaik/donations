@@ -44,36 +44,36 @@ usort($donees, "cmpDoneesByAmount");
 
 print '<table id="myTable2" class="tablesorter">'."\n";
 print "<thead>\n";
-print '<tr><th>Donee</th>';
+print "  <tr>\n    <th>Donee</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
-    print "<th>$year</th>";
+    print "    <th>$year</th>\n";
   }
 }
-print '<th>Total</th></tr>';
+print "    <th>Total</th>\n  </tr>\n";
 print "</thead>\n<tbody>\n";
 
 foreach ($donees as $donee) {
-  print "<tr>";
-  print "<td>$donee</td>";
+  print "  <tr>\n";
+  print "    <td>$donee</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
-      print '<td align="right">'.sprintf("%.2f",$donationAmountByDoneeAndYear[$donee][$year]).'</td>';
+      print '    <td align="right">'.sprintf("%.2f",$donationAmountByDoneeAndYear[$donee][$year])."</td>\n";
     }
   }
-  print '<td align="right"><strong>'.sprintf("%.2f",$doneeDonationAmount[$donee]).'</strong></td>';
-  print "</tr>";
+  print '    <td align="right"><strong>'.sprintf("%.2f",$doneeDonationAmount[$donee])."</strong></td>\n";
+  print "  </tr>\n";
 }
 
-print "<tr><td><strong>Total</strong></td>";
+print "  <tr>\n    <td><strong>Total</strong></td>\n";
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
-    print '<td align="right"><strong>'.sprintf("%.2f",$yearDonationAmount[$year]).'</td>';
+    print '    <td align="right"><strong>'.sprintf("%.2f",$yearDonationAmount[$year])."</strong></td>\n";
   }
 }
 
-print '<td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount).'</td>';
-print "</tr>";
+print '    <td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount)."</strong></td>\n";
+print "  </tr>\n";
 print "</tbody>\n";
 print "</table>";
