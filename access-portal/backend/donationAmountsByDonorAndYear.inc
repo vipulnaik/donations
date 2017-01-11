@@ -54,7 +54,7 @@ print "</thead>\n<tbody>\n";
 
 foreach ($donors as $donor) {
   print "  <tr>\n";
-  print "    <td>$donor</td>\n";
+  print '    <td><a href="/donor.php?donor='.urlencode($donor).'">'.$donor.'</a></td>'."\n";
   print '<td align="right">'.$numDonees[$donor]."</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
