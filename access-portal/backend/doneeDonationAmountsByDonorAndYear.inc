@@ -1,15 +1,14 @@
 <?php
 
-print '<h4 id="donationAmountsByDonorAndYear">Donation amounts by donor and year</h4>'."\n";
+print '<h4 id="doneeDonationAmountsByDonorAndYear">Donation amounts by donor and year for donee '.$donee.'</h4>'."\n";
 
 $years = array_reverse(range(2001, 2017));
-$donorQuery = "select donor,count(distinct donee) as numDonees from donations group by donor;";
+$donorQuery = "select donor from donations where donee = '".$donee."' group by donor;";
 $donorResult = $mysqli -> query($donorQuery);
 $donors = array();
 for ($i = 0; $i < $donorResult -> num_rows; $i++) {
   $row = $donorResult -> fetch_assoc();
   array_push($donors, $row['donor']);
-  $numDonees[$row['donor']] = $row['numDonees'];
 }
 $grandTotalDonationAmount = 0;
 foreach($donors as $donor) {
@@ -20,7 +19,7 @@ foreach($donors as $donor) {
   }
 }
 
-$donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations group by donor, year(donation_date)";
+$donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donee='".$donee."' group by donor, year(donation_date)";
 $donorAndYearResult = $mysqli -> query($donorAndYearQuery);
 
 for ($i=0; $i < $donorAndYearResult -> num_rows; $i++) {
@@ -43,7 +42,7 @@ usort($donors, "cmpDonorsByAmount");
 
 print '<table id="myTable" class="tablesorter">'."\n";
 print "<thead>\n";
-print "  <tr>\n    <th>Donor</th>\n	<th>Number of donees</th>";
+print "  <tr>\n    <th>Donor</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print "    <th>$year</th>\n";
@@ -55,7 +54,6 @@ print "</thead>\n<tbody>\n";
 foreach ($donors as $donor) {
   print "  <tr>\n";
   print '    <td><a href="/donor.php?donor='.urlencode($donor).'">'.$donor.'</a></td>'."\n";
-  print '<td align="right">'.$numDonees[$donor]."</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.sprintf("%.2f",$donationAmountByDonorAndYear[$donor][$year]).'</td>'."\n";
@@ -68,7 +66,6 @@ foreach ($donors as $donor) {
 print "</tbody>\n";
 print "<tfoot>\n";
 print "  <tr>\n    <td><strong>Total</strong></td>\n";
-print '	 <td align="center">--</td>'."\n";
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {

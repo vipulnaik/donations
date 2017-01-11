@@ -21,7 +21,7 @@ foreach($donees as $donee) {
   }
 }
 
-$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor='".$donor."' group by donee, year";
+$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor='".$donor."' group by donee, year(donation_date)";
 $doneeAndYearResult = $mysqli -> query($doneeAndYearQuery);
 
 for ($i=0; $i < $doneeAndYearResult -> num_rows; $i++) {
