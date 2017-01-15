@@ -24,6 +24,9 @@ if ($donorSelectResult -> num_rows == 0) {
   if ($row['website'] != '') {
     print '<tr><td>Website</td><td><a href="'.$row['website'].'">'.$row['website'].'</a></td></tr>';
   }
+  if ($row['donations_url'] != '') {
+    print '<tr><td>Donations URL</td><td><a href="'.$row['donations_url'].'">'.$row['donations_url'].'</a></td></tr>';
+  }
   if ($row['twitter_username'] != '') {
     print '<tr><td>Twitter username</td><td><a href="https://twitter.com/'.$row['twitter_username'].'">'.$row['twitter_username'].'</a></td></tr>';
   }
