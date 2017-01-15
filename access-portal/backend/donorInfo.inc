@@ -15,12 +15,19 @@ if ($donorSelectResult -> num_rows == 0) {
   if ($row['employers'] != '') {
     print '<tr><td>Employers</td><td><a href="'.$row['employers'].'">'.$row['employers'].'</a></td></tr>';
   }
-  $facebook_username = $row['facebook_username'];
-  $facebook_url = 'https://www.facebook.com/'.$facebook_username;
-  if (substr($facebook_username, 0, 4) == "http") {
-    $facebook_url = $facebook_username;
+  if ($row['facebook_username'] != '') {
+    $facebook_username = $row['facebook_username'];
+    $facebook_url = 'https://www.facebook.com/'.$facebook_username;
+    if (substr($facebook_username, 0, 4) == "http") {
+      $facebook_url = $facebook_username;
+    }
+    print "<tr>\n    <td>Facebook username</td>\n    ".'<td><a href="'.$facebook_url.'">'.$facebook_username."</a></td>\n</tr>\n";
   }
-  print "<tr>\n    <td>Facebook username</td>\n    ".'<td><a href="'.$facebook_url.'">'.$facebook_username."</a></td>\n</tr>\n";
+  if ($row['linkedin_username'] != '') {
+    $linkedin_username = $row['linkedin_username'];
+    $linkedin_url = 'https://www.linkedin.com/in/' . $linkedin_username;
+    print "<tr>\n    <td>LinkedIn username</td>\n    ".'<td><a href="'.$linkedin_url.'">'.$linkedin_username."</a></td>\n</tr>\n";
+  }
   if ($row['website'] != '') {
     print '<tr><td>Website</td><td><a href="'.$row['website'].'">'.$row['website'].'</a></td></tr>';
   }
