@@ -14,17 +14,19 @@ include_once("backend/globalVariables/passwordFile.inc");
 print '<body>';
 print '<script>$(document).ready(function()
     {
-        $("#myTable").tablesorter();
-        $("#myTable2").tablesorter();
+        $("#myTableDonorInfo").tablesorter();
+        $("#myTableDonorDonationAmountsByDoneeAndYear").tablesorter();
     }
 ); </script>'."\n";
 print '<h3>Donations recorded by Vipul Naik for donor '.$donor.'</h3>';
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
+print '<li><a href="#donorInfo">Basic donor info</a></li>';
 print '<li><a href="#donorDonationAmountsByDoneeAndYear">Donor donation amounts by donee and year</a></li>';
 print '</ul>';
 
+include ("backend/donorInfo.inc");
 include ("backend/donorDonationAmountsByDoneeAndYear.inc");
 
 print '</body>';
