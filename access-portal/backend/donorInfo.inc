@@ -35,7 +35,7 @@ if ($donorSelectResult -> num_rows == 0) {
     if (substr($row['donations_url'],0,4) == 'http') {
       print '<tr><td>Donations URL</td><td><a href="'.$row['donations_url'].'">'.$row['donations_url'].'</a></td></tr>';
     } else {
-      print '<tr><td>Donations URL</td><td>$row['donations_url']</td></tr>';
+      print '<tr><td>Donations URL</td><td>'.$row['donations_url'].'</td></tr>';
     }
   }
   if ($row['twitter_username'] != '') {
