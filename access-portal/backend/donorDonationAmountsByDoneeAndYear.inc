@@ -55,7 +55,7 @@ print "</thead>\n<tbody>\n";
 
 foreach ($donees as $donee) {
   print "  <tr>\n";
-  print "    <td>$donee</td>\n";
+  print '    <td><a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a></td>'."\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.sprintf("%.2f",$donationAmountByDoneeAndYear[$donee][$year])."</td>\n";
