@@ -12,8 +12,8 @@ if ($donorSelectResult -> num_rows == 0) {
   print '<tr><th>Item</th><th>Value</th></tr>';
   print "</thead>\n<tbody>\n";
   print "<tr>\n    <td>Country</td>\n    <td>".$row['country']."</td>\n</tr>\n";
-  if ($row['employers'] != '') {
-    print '<tr><td>Employers</td><td><a href="'.$row['employers'].'">'.$row['employers'].'</a></td></tr>';
+  if ($row['affiliated_orgs'] != '') {
+    print '<tr><td>Affiliated organizations (current or former</td><td><a href="'.$row['affiliated_orgs'].'">'.$row['affiliated_orgs'].'</a></td></tr>';
   }
   if ($row['facebook_username'] != '') {
     $facebook_username = $row['facebook_username'];
