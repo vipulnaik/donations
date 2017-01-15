@@ -32,7 +32,11 @@ if ($donorSelectResult -> num_rows == 0) {
     print '<tr><td>Website</td><td><a href="'.$row['website'].'">'.$row['website'].'</a></td></tr>';
   }
   if ($row['donations_url'] != '') {
-    print '<tr><td>Donations URL</td><td><a href="'.$row['donations_url'].'">'.$row['donations_url'].'</a></td></tr>';
+    if (substr($row['donations_url'],0,4) == 'http') {
+      print '<tr><td>Donations URL</td><td><a href="'.$row['donations_url'].'">'.$row['donations_url'].'</a></td></tr>';
+    } else {
+      print '<tr><td>Donations URL</td><td>$row['donations_url']</td></tr>';
+    }
   }
   if ($row['twitter_username'] != '') {
     print '<tr><td>Twitter username</td><td><a href="https://twitter.com/'.$row['twitter_username'].'">'.$row['twitter_username'].'</a></td></tr>';
@@ -45,6 +49,9 @@ if ($donorSelectResult -> num_rows == 0) {
   }
   if ($row['eahub_username'] != '') {
     print '<tr><td>Effective Altruism Hub username</td><td><a href="https://eahub.com/user/'.$row['eahub_username'].'">'.$row['eahub_username'].'</a></td></tr>';
+  }
+  if ($row['github_username'] != '') {
+    print '<tr><td>GitHub username</td><td><a href="https://github.com/'.$row['github_username'].'">'.$row['github_username'].'</a></td></tr>';
   }
   if ($row['gratipay_username'] != '') {
     print '<tr><td>GratiPay username</td><td><a href="https://gratipay.com/~'.$row['gratipay_username'].'">'.$row['gratipay_username'].'</a></td></tr>';
