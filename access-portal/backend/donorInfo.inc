@@ -1,6 +1,7 @@
 <?php
 $donorSelectQuery = "select * from donors where donor='$donor';";
 $donorSelectResult = $mysqli -> query($donorSelectQuery);
+$affiliatedOrgsList = array();
 print '<h4 id="donorInfo">Basic donor information</h4>';
 if ($donorSelectResult -> num_rows == 0) {
   print "<p>We do not have any donor information for the donor $donor in our system.";
@@ -13,7 +14,12 @@ if ($donorSelectResult -> num_rows == 0) {
   print "</thead>\n<tbody>\n";
   print "<tr>\n    <td>Country</td>\n    <td>".$row['country']."</td>\n</tr>\n";
   if ($row['affiliated_orgs'] != '') {
-    print '<tr><td>Affiliated organizations (current or former; restricted to potential donees or others relevant to donation decisions)</td><td><a href="'.$row['affiliated_orgs'].'">'.$row['affiliated_orgs'].'</a></td></tr>';
+    $affiliatedOrgsList = explode(',',$row['affiliated_orgs']);
+    print '<tr><td>Affiliated organizations (current or former; restricted to potential donees or others relevant to donation decisions)</td><td>';
+    foreach ($affiliatedOrgsList as $affiliatedOrg) {
+      print '<a href="/donee.php?donee='.urlencode($affiliatedOrg).'">'.$affiliatedOrg.'</a> ';
+    }
+    print '</td></tr>';
   }
   if ($row['facebook_username'] != '') {
     $facebook_username = $row['facebook_username'];
