@@ -35,7 +35,7 @@ insert into donors(donor, country, facebook_username, website, donations_url, le
     ('Howie Lempel', 'United States', 'hlempel', NULL, NULL, NULL,'howie-lempel-201a6378','Open Philanthropy Project',NULL,NULL,NULL,'howielempel'),
     ('Ian David Moss', 'United States', 'iandavidmoss', NULL, NULL, NULL,'mossinator',NULL,NULL,'david-moss',NULL,NULL),
     ('Jacob Steinhardt', 'United States', 'jacob.steinhardt', NULL, NULL, 'jsteinhardt','jacob-steinhardt-a30437bb',NULL,'jsteinhardt',NULL,'jsteinha','jacobsteinhardt'),
-    ('Jeff Kaufman and Julia Wise', 'United States', 'jefftk', 'http://www.jefftk.com/', 'http://www.jefftk.com/donations', 'jkaufman','jeff-kaufman-28a8bab',NULL,'Jeff_Kaufman','jeff-kaufman','jeffkaufman',NULL),
+    ('Jeff Kaufman and Julia Wise', 'United States', 'jefftk', 'http://www.jefftk.com/', 'http://www.jefftk.com/donations', 'jkaufman','jeff-kaufman-28a8bab','Centre for Effective Altruism','Jeff_Kaufman','jeff-kaufman','jeffkaufman',NULL),
     ('Michael Dickens', 'United States', 'michael.j.dickens', 'http://mdickens.me/', 'http://mdickens.me/donations/', 'MTGandP','michael-dickens-a4173255',NULL, 'MichaelDickens','michael-dickens','michaeldickens',NULL),
     ('Nicole Ross', 'United States', 'nicolejamesross', NULL, NULL, NULL,'nicole-ross-184a6142','GiveWell,Open Philanthropy Project', NULL, NULL, NULL, NULL),
     ('Pablo Stafforini', 'United Kingdom', 'stafforini', 'http://www.stafforini.com', 'http://www.stafforini.com/blog/donations/', NULL,'stafforini','Centre for Effective Altruism,80,000 Hours',NULL,'pablo-stafforini', NULL,'stafforini'),
