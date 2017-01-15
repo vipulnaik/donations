@@ -13,7 +13,7 @@ if ($donorSelectResult -> num_rows == 0) {
   print "</thead>\n<tbody>\n";
   print "<tr>\n    <td>Country</td>\n    <td>".$row['country']."</td>\n</tr>\n";
   if ($row['affiliated_orgs'] != '') {
-    print '<tr><td>Affiliated organizations (current or former</td><td><a href="'.$row['affiliated_orgs'].'">'.$row['affiliated_orgs'].'</a></td></tr>';
+    print '<tr><td>Affiliated organizations (current or former; restricted to potential donees or others relevant to donation decisions)</td><td><a href="'.$row['affiliated_orgs'].'">'.$row['affiliated_orgs'].'</a></td></tr>';
   }
   if ($row['facebook_username'] != '') {
     $facebook_username = $row['facebook_username'];
