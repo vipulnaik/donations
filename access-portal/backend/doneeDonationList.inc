@@ -48,6 +48,8 @@ for($i = 0; $i < $doneeDonationSelectResult -> num_rows; $i++) {
   }
   if ($row['url'] != '') {
     print '<td><a href="'.$row['url'].'">'.$row['url'].'</a></td>';
+  } else {
+    print '<td>--</td>';
   }
   if ($row['employer_match'] != '') {
     if ($row['matching_employer'] != '') {
