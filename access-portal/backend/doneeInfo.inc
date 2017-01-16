@@ -27,7 +27,7 @@ if ($doneeSelectResult -> num_rows == 0) {
     print '<tr><td>Donate page</td><td><a href="'.$row['donate_page'].'">'.$row['donate_page'].'</a></td></tr>';
   }
   if ($row['donor_list_page'] != '') {
-    print '<tr><td>Donate page</td><td><a href="'.$row['donor_list_page'].'">'.$row['donor_list_page'].'</a></td></tr>';
+    print '<tr><td>Donors list page</td><td><a href="'.$row['donor_list_page'].'">'.$row['donor_list_page'].'</a></td></tr>';
   }
   if ($row['transparency_and_financials_page'] != '') {
     print '<tr><td>Transparency and financials page</td><td><a href="'.$row['transparency_and_financials_page'].'">'.$row['transparency_and_financials_page'].'</a></td></tr>';
