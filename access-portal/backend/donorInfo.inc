@@ -54,7 +54,7 @@ if ($donorSelectResult -> num_rows == 0) {
     print '<tr><td>Effective Altruism Forum username</td><td><a href="http://effective-altruism.com/user/'.$row['eaf_username'].'">'.$row['eaf_username'].'</a></td></tr>';
   }
   if ($row['eahub_username'] != '') {
-    print '<tr><td>Effective Altruism Hub username</td><td><a href="https://eahub.com/user/'.$row['eahub_username'].'">'.$row['eahub_username'].'</a></td></tr>';
+    print '<tr><td>Effective Altruism Hub username</td><td><a href="https://eahub.org/user/'.$row['eahub_username'].'">'.$row['eahub_username'].'</a></td></tr>';
   }
   if ($row['github_username'] != '') {
     print '<tr><td>GitHub username</td><td><a href="https://github.com/'.$row['github_username'].'">'.$row['github_username'].'</a></td></tr>';
