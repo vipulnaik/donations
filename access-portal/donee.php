@@ -16,6 +16,7 @@ print '<script>$(document).ready(function()
     {
         $("#myTableDoneeInfo").tablesorter();
         $("#myTableDoneeDonationAmountsByDonorAndYear").tablesorter();
+        $("#myTableDoneeDonationList").tablesorter();
     }
 ); </script>'."\n";
 print '<h3>Donations recorded by Vipul Naik for donee '.$donee.'</h3>';
@@ -24,10 +25,12 @@ print '<h4>Table of contents</h4>';
 print '<ul>';
 print '<li><a href="#doneeInfo">Basic donee information</a></li>';
 print '<li><a href="#doneeDonationAmountsByDonorAndYear">Donee donation amounts by donor and year</a></li>';
+print '<li><a href="#doneeDonationList">Donee donation list</a></li>';
 print '</ul>';
 
 include ("backend/doneeInfo.inc");
 include ("backend/doneeDonationAmountsByDonorAndYear.inc");
+include ("backend/doneeDonationList.inc");
 
 print '</body>';
 ?>
