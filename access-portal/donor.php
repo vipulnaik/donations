@@ -17,6 +17,7 @@ print '<script>$(document).ready(function()
     {
         $("#myTableDonorInfo").tablesorter();
         $("#myTableDonorDonationAmountsByDoneeAndYear").tablesorter();
+        $("#myTableDonorDocumentList").tablesorter();
         $("#myTableDonorDonationList").tablesorter();
     }
 ); </script>'."\n";
@@ -26,11 +27,13 @@ print '<h4>Table of contents</h4>';
 print '<ul>';
 print '<li><a href="#donorInfo">Basic donor info</a></li>';
 print '<li><a href="#donorDonationAmountsByDoneeAndYear">Donor donation amounts by donee and year</a></li>';
+print '<li><a href="#donorDocumentList">Donor document list</a></li>';
 print '<li><a href="#donorDonationList">Donor donation list</a></li>';
 print '</ul>';
 
 include ("backend/donorInfo.inc");
 include ("backend/donorDonationAmountsByDoneeAndYear.inc");
+include ("backend/donorDocumentList.inc");
 include ("backend/donorDonationList.inc");
 
 print '</body>';
