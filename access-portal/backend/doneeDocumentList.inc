@@ -1,8 +1,8 @@
 <?php
 
-$doneeDocumentSelectQuery = "select * from donations where affected_donees REGEXP '$donee' order by publication_date";
+$doneeDocumentSelectQuery = "select * from documents where affected_donees REGEXP '$donee' order by publication_date desc";
 $doneeDocumentSelectResult = $mysqli -> query($doneeDocumentSelectQuery);
-print '<h4 id="doneeDocumentList">Full list of documents in reverse chronological order ('.($doneeDonationSelectResult -> num_rows).' tasks)</h4>';
+print '<h4 id="doneeDocumentList">Full list of documents in reverse chronological order ('.($doneeDocumentSelectResult -> num_rows).' documents)</h4>';
 print "\n";
 print '<table id="myTableDoneeDocumentList" class="tablesorter">'."\n";
 print "<thead>\n";
@@ -20,11 +20,11 @@ print "</thead>\n<tbody>\n";
 for($i = 0; $i < $doneeDocumentSelectResult -> num_rows; $i++) {
   $row = $doneeDocumentSelectResult -> fetch_assoc();
   print '<tr>';
-  print '<td><a href="'.$row['url']).'">'.$row['title'].'</a></td>';
+  print '<td><a href="'.$row['url'].'">'.$row['title'].'</a></td>';
   print '<td>'.$row['publication_date'].'</td>';
   if ($row['author'] != '') {
     # Change this to check if author is in list
-    print '<td><a href="/donor.php?donor='.urlencode($row['author']).'">'.$row['author'].'</a></td>';
+    print '<td>'.explodeDonorCsv($row['author']).'</td>';
   } else {
     print '<td></td>';
   }
@@ -32,19 +32,9 @@ for($i = 0; $i < $doneeDocumentSelectResult -> num_rows; $i++) {
   # Link to publisher as donor or donee?
   print '<td>'.$row['publisher'].'</td>';
 
-
-  if ($row['url'] != '') {
-    print '<td><a href="'.$row['url'].'">'.$row['url'].'</a></td>';
-  } else {
-    print '<td>--</td>';
-  }
-  if ($row['employer_match'] != '') {
-    if ($row['matching_employer'] != '') {
-      print '<td align="right"><element title="Matched by '.$row['matching_employer'].'">'.sprintf("%.2f",$row['employer_match']).'</element></td>';
-    }
-  } else {
-    print '<td>--</td>';
-  }
+  print '<td>'.explodeDonorCsv($row['affected_donors']).'</td>';
+  print '<td>'.explodeDoneeCsv($row['affected_donees']).'</td>';
+  print '<td>'.$row['document_scope'].'</td>';
   print '<td>'.cleanNotes($row['notes']).'</td>';
   print '</tr>';
 }
