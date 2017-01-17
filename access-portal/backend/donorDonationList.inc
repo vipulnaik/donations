@@ -64,16 +64,4 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
 
 print "</tbody>\n</table>\n";
 
-function cleanNotes($notes) {
-  $notesList = explode(" ",$notes);
-  $augmentedNotes = "";
-  foreach ($notesList as $notesWord) {
-    if (substr($notesWord,0,4) == "http") {
-      $augmentedNotes = $augmentedNotes . '<a href="'.$notesWord.'">'.$notesWord.'</a> ';
-    } else {
-      $augmentedNotes = $augmentedNotes . $notesWord . " ";
-    }
-  }
-  return $augmentedNotes;
-}
 ?>
