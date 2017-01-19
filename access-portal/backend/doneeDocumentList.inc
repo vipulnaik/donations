@@ -2,7 +2,7 @@
 
 $doneeDocumentSelectQuery = "select * from documents where affected_donees REGEXP '$donee' order by publication_date desc";
 $doneeDocumentSelectResult = $mysqli -> query($doneeDocumentSelectQuery);
-if ($donorDocumentSelectResult -> num_rows > 0) {
+if ($doneeDocumentSelectResult -> num_rows > 0) {
   print '<h4 id="doneeDocumentList">Full list of documents in reverse chronological order ('.($doneeDocumentSelectResult -> num_rows).' documents)</h4>';
   print "\n";
   print '<table id="myTableDoneeDocumentList" class="tablesorter">'."\n";
