@@ -3,8 +3,11 @@ DATABASE=donations
 
 .PHONY: reset
 reset:
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists documents;"
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donations;"
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donees;"
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donors;"
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists gifts;"
 
 .PHONY: init
 init:
@@ -12,8 +15,11 @@ init:
 
 .PHONY: read
 read:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/gifts.sql
 
 .PHONY: fetch_table_sorting
 fetch_table_sorting:
