@@ -402,6 +402,9 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Elizabeth Van Nostrand', 'Social Justice Fund Northwest', 2500, NULL, '2014-12-29','day','date of donation announcement',NULL, 'https://acesounderglass.com/2014/12/29/how-to-figure-out-how-much-to-donate/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Elizabeth Van Nostrand', 'Electronic Frontier Foundation', 2500, NULL, '2014-12-29','day','date of donation announcement',NULL, 'https://acesounderglass.com/2014/12/29/how-to-figure-out-how-much-to-donate/', 'Half the patent bonus; see https://acesounderglass.com/2015/01/02/why-i-donated-to-the-eff-this-year/ for more', NULL, NULL, NULL, NULL, NULL, NULL);
 
+
+# -- Get Haseeb Qureshi donations from https://medium.com/@hosseeb/2016-donations-and-some-thoughts-on-the-muslim-ban-d514c3389e3a#.c92gw8j79
+
 # -- Old GiveWell donations
 
 insert into donations(donor, donee, amount, fraction, donation_date,
