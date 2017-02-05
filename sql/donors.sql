@@ -51,7 +51,8 @@ insert into donors(donor, country, facebook_username, website, donations_url, le
     ('Blake Borgeson','United States','blakeborgeson','http://www.blakeb.org/',NULL,NULL,'blakeborgeson',NULL,NULL,'blakeborgeson','blakeweb','blakeweb'),
     ('Eric Friedman','United States','friedman.eric','http://reinventingphilanthropy.com/',NULL,NULL,'ericfriedman',NULL,NULL,'eric-friedman',NULL,NULL),
     ('Haseeb Qureshi','United States','someguynamedhaseeb','http://haseebq.com/',NULL,NULL,'imhaseeb',NULL,NULL,'haseeb-qureshi','Haseeb-Qureshi','hosseeb'),
-    ('Jacob Trefethen','United States','jacob.trefethen','https://jacobtrefethen.com/',NULL,NULL,'jacob-trefethen-82105350',NULL,'JacobTref',NULL,'jacobtref','JacobTref');
+    ('Jacob Trefethen','United States','jacob.trefethen','https://jacobtrefethen.com/',NULL,NULL,'jacob-trefethen-82105350',NULL,'JacobTref',NULL,'jacobtref','JacobTref'),
+    ('Ben Hoskin','United States','ben.944',NULL,NULL,'Larks','ben-hoskin-024b9021','Machine Intelligence Research Institute,Giving What We Can','Larks',NULL,NULL,NULL);
 
 # -- insert into donors(donor, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username) values
 
