@@ -47,7 +47,11 @@ insert into donors(donor, country, facebook_username, website, donations_url, le
     ('Patrick Brinich-Langlois','United States','pbrinichlanglois','http://www.patbl.com/','http://www.patbl.com/misc/other/donations/',NULL,'patbl',NULL,NULL,'patrick-brinich-langlois','patbl','notnotpat'),
     ('Ozy Brennan','United States','https://www.facebook.com/profile.php?id=100007139566626','https://thingofthings.wordpress.com/','https://thingofthings.wordpress.com/2016/12/22/donations-post-2016/',NULL,'ozy-brennan-1b86b3b2','Foundational Research Institute',NULL,NULL,'ozybrennan',NULL),
     ('Elizabeth Van Nostrand','United States','li.van.nostrand','http://acesounderglass.com/','Multiple posts: https://acesounderglass.com/2016/12/01/5167/,https://acesounderglass.com/2015/12/31/2015-donations/,https://acesounderglass.com/2014/12/29/how-to-figure-out-how-much-to-donate/',NULL,'elizabethvannostrand',NULL,NULL,'elizabeth-van-nostrand','AcesoUnderGlass','AcesoUnderGlass'),
-    ('Neil Sinhababu','Singapore','neilsinhababu','http://www.neilsinhababu.com/','http://neilsinhababu.blogspot.com/2016/12/2016-utilitarian-financial-activity.html',NULL,'neil-sinhababu-21a7a3b',NULL,NULL,'neil-sinhababu',NULL,'neilsinhababu');
+    ('Neil Sinhababu','Singapore','neilsinhababu','http://www.neilsinhababu.com/','http://neilsinhababu.blogspot.com/2016/12/2016-utilitarian-financial-activity.html',NULL,'neil-sinhababu-21a7a3b',NULL,NULL,'neil-sinhababu',NULL,'neilsinhababu'),
+    ('Blake Borgeson','United States','blakeborgeson','http://www.blakeb.org/',NULL,NULL,'blakeborgeson',NULL,NULL,'blakeborgeson','blakeweb','blakeweb'),
+    ('Eric Friedman','United States','friedman.eric','http://reinventingphilanthropy.com/',NULL,NULL,'ericfriedman',NULL,NULL,'eric-friedman',NULL,NULL),
+    ('Haseeb Qureshi','United States','someguynamedhaseeb','http://haseebq.com/',NULL,NULL,'imhaseeb',NULL,NULL,'haseeb-qureshi','Haseeb-Qureshi','hosseeb'),
+    ('Jacob Trefethen','United States','jacob.trefethen','https://jacobtrefethen.com/',NULL,NULL,'jacob-trefethen-82105350',NULL,'JacobTref',NULL,'jacobtref','JacobTref');
 
 # -- insert into donors(donor, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username) values
 
