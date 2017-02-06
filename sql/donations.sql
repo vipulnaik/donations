@@ -386,7 +386,8 @@ insert into donations(donor, donee, amount, fraction, donation_date,
 insert into donations(donor, donee, amount, fraction, donation_date,
     donation_date_precision, donation_date_basis, cause_area, url, notes,
     payment_modality, match_eligible, goal_amount, influencer, employer_match,
-    matching_employer) values 
+    matching_employer) values
+    ('Elizabeth Van Nostrand','International Refugee Assistance Project',100,NULL,'2017-02-02','day','date of donation announcement','Refugee assistance/capacity building/fighting executive excess','http://slatestarcodex.com/2017/02/02/guest-post-the-international-refugee-assistance-program/','Cites need to have capacity to fight back against excesses of Donald Trump',NULL, NULL,NULL, NULL, NULL, NULL), 
     ('Elizabeth Van Nostrand', 'Tostan', 19750, 1.0, '2016-12-01', 'day', 'date of donation announcement', 'Education', 'https://acesounderglass.com/2016/12/01/5167/', 'Cites Gates Foundation connection, organic raising of issues around female genital cutting', NULL, NULL, NULL, NULL, 19750, 'Wave'),
     ('Elizabeth Van Nostrand', 'GiveWell', 6000, NULL, '2015-12-31', 'day', 'date of donation announcement', 'Charity evaluator', 'https://acesounderglass.com/2015/12/31/2015-donations/', 'Needed to use up company matching before quitting and GiveWell is never a bad choice', NULL, NULL, NULL, NULL, 6000, 'Google'),
     ('Elizabeth Van Nostrand', 'Raising for Effective Giving', 5000, NULL, '2015-12-31', 'day', 'date of donation announcement', 'Effective altruism/meta/fundraising', 'https://acesounderglass.com/2015/12/31/2015-donations/', 'Unlike GWWC, focuses on specific non-EA population and counts money actually donated, not pledges', NULL, NULL, NULL, NULL, NULL, NULL),
@@ -427,6 +428,13 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Eric Friedman','Freedom from Hunger Fund',27000,NULL,'2009-01-01','year','date of donation announced in announcement',NULL,'http://blog.givewell.org/2011/06/21/guest-post-from-eric-friedman/','Historical donation mentioned when explaining more recent donation. Relevant quote: I started following GiveWell in 2009. It was clear from their blog that we shared similar values, and I loved what they were trying to do. But I disagreed with some aspects of their approach. Their emphasis on measurement seemed excessive. This approach had a built-in bias towards smaller, single-program organizations that could measure their impact more precisely. I wasn’t convinced that there weren’t economies of scale in international development. And their focus on scaling up existing solutions and excluding funding unproven innovations seemed incomplete. While I liked what they were doing, I still had more conviction in my own ability to pick organizations.',NULL,NULL,NULL,NULL,NULL,NULL),
     ('Eric Friedman','GiveWell top charities',31000,NULL,'2010-01-01','year','date of donation announced in announcement',NULL,'http://blog.givewell.org/2011/06/21/guest-post-from-eric-friedman/','Relevant quote: Eventually, we decided that there was one fundamental principle we should apply: giving was primarily about helping the less fortunate, not our friendships or personal interests. Breaking up with Freedom from Hunger would be hard. I explained our reasoning and they took it in stride, demonstrating that they care more about the less fortunate than their own institutional growth. They are a good group. But in 2010, we gave about $31,000 to GiveWell’s donor advised fund to ultimately be distributed as they recommended.',NULL,NULL,NULL,NULL,NULL,NULL),
     ('Ian Turner','VillageReach',35000,1.0,'2009-01-01','year','date of donation announced in announcement',NULL,'http://blog.givewell.org/2010/10/28/the-process-of-giving-a-personal-story-guest-post-from-ian-turner/','Last minute decision change from Population Services International based on news that VillageReach is starting a new program similar to its original pilot',NULL,NULL,NULL,'GiveWell',NULL,NULL);
+
+# -- Eva Vivalt
+insert into donations(donor, donee, amount, fraction, donation_date,
+    donation_date_precision, donation_date_basis, cause_area, url, notes,
+    payment_modality, match_eligible, goal_amount, influencer, employer_match,
+    matching_employer) values 
+    ('Eva Vivalt','AidGrade',NULL,1.0,'2016-12-09','day','date of donation announcement','International aid/global health/global poverty/evaluation','http://effective-altruism.com/ea/14u/eas_write_about_where_they_give/','AidGrade was founded by Eva Vivalt. She describes the donation as "putting my money where my mouth is"',NULL,NULL,NULL,NULL,NULL,NULL);
 
 # -- Brian Tomasik donations
 insert into donations(donor, donee, amount, fraction, donation_date,
