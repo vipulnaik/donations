@@ -436,6 +436,13 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     matching_employer) values 
     ('Eva Vivalt','AidGrade',NULL,1.0,'2016-12-09','day','date of donation announcement','International aid/global health/global poverty/evaluation','http://effective-altruism.com/ea/14u/eas_write_about_where_they_give/','AidGrade was founded by Eva Vivalt. She describes the donation as "putting my money where my mouth is"',NULL,NULL,NULL,NULL,NULL,NULL);
 
+# -- Jacob Trefethen
+insert into donations(donor, donee, amount, fraction, donation_date,
+    donation_date_precision, donation_date_basis, cause_area, url, notes,
+    payment_modality, match_eligible, goal_amount, influencer, employer_match,
+    matching_employer) values 
+    ('Jacob Trefethen','Environmental Data and Governance Initiative',NULL,1.0,'2017-01-16','day','date of donation announcement','Environmentalism/watchdog','http://effective-altruism.com/ea/16b/why_i_donated_to_the_environmental_data/','Donation made to small nonprofit based on inside information and close contact with the organization, making it easier to evaluate',NULL,NULL,NULL,NULL,NULL,NULL);
+
 # -- Brian Tomasik donations
 insert into donations(donor, donee, amount, fraction, donation_date,
     donation_date_precision, donation_date_basis, cause_area, url, notes,
@@ -450,6 +457,8 @@ insert into donations(donor, donee, amount, fraction, donation_date,
    ('Brian Tomasik','Animal Charity Evaluators',12000,1.0,'2013-01-01','year','donation log','Animal welfare/charity evaluator','http://reducing-suffering.org/my-donations-past-and-present/','Called Effective Animal Activism (EAA) at the time; switch from Vegan Outreach to this was because of belief in higher leverage per dollar',NULL,NULL,NULL,'Nick Cooney',12000,'Microsoft'),
    ('Brian Tomasik','Machine Intelligence Research Institute',10,NULL,'2014-01-01','year','donation log','Existential risk/unfriendly AI',NULL,'Part of a donation drive; information conveyed via private communication and published with permission',NULL,NULL,NULL,NULL,NULL,NULL),
    ('Brian Tomasik','Machine Intelligence Research Institute',2000,NULL,'2015-01-01','year','donation log','Existential risk/unfriendly AI',NULL,'Thank you for a helpful conversation with outgoing director Luke Muehlhauser; information conveyed via private communication and published with permission',NULL,NULL,NULL,'Luke Muehlhauser',NULL,NULL);
+
+# -- Blake Borgeson donations
 
 insert into donations(donor, donee, amount, fraction, donation_date,
     donation_date_precision, donation_date_basis, cause_area, url, notes,
@@ -484,6 +493,24 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Elie Hassenfeld','Against Malaria Foundation',NULL,1.0,'2015-12-09','day','date of donation announcement','Global health/malaria','http://blog.givewell.org/2015/12/09/staff-members-personal-donations-for-giving-season-2015/','More confidence in cost-effectiveness model and in GiveWell recommendation to donate all to AMF',NULL,NULL,NULL,'GiveWell',NULL,NULL),
     ('Elie Hassenfeld','A political campaign',NULL,NULL,'2016-12-09','day','date of donation announcement','Politics','http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/','States "I already gave a significant portion of this year’s donation to a political campaign, so I’m planning to give less at the end of this year than I have in previous years." Details of political campaign not specified, but 2016 is a presidential election year in the United States',NULL,NULL,NULL,'GiveWell',NULL,NULL),
     ('Elie Hassenfeld','GiveWell top charities',NULL,NULL,'2016-12-09','day','date of donation announcement','Global health and cash transfers','http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/','This donation covered all the end-of-year giving, and all giving left from after the donation to "a political campaign"',NULL,NULL,NULL,'GiveWell',NULL,NULL);
+
+# -- Alexander Berger donations
+
+insert into donations(donor, donee, amount, fraction, donation_date,
+    donation_date_precision, donation_date_basis, cause_area, url, notes,
+    payment_modality, match_eligible, goal_amount, influencer, employer_match,
+    matching_employer) values 
+    ('Aleaxnder Berger','GiveDirectly',NULL,1.0,'2013-12-12','day','date of donation announcement','Cash transfers','http://blog.givewell.org/2013/12/12/staff-members-personal-donations/','Actually, split evenly between giving now and waiting, but all the amount actually given went to GiveDirectly. Two main upside points: (1) May not remain a GiveWell top recommendation, so more need to grow enough to develop a non-GiveWell funding stream, (2) Helps to set cash as a baseline for recommendations',NULL,NULL,NULL,'GiveWell',NULL,NULL),
+    ('Alexander Berger','GiveWell',NULL,0.1,'2014-12-17','day','date of donation announcement','Global health/malaria','http://blog.givewell.org/2014/12/17/staff-members-personal-donations-giving-season-2014/','Does not like dynamic of asking people familiar with GiveWel work to donate entirely to GiveWell instead of top charities, and thinks a 10% to GiveWell rule makes more sense. So, doing that himself',NULL,NULL,NULL,'GiveWell',NULL,NULL),
+    ('Alexander Berger','Against Malaria Foundation',NULL,0.7,'2014-12-17','day','date of donation announcement','Global health/malaria','http://blog.givewell.org/2014/12/17/staff-members-personal-donations-giving-season-2014/','Giving a bit more to AMF than the recommended allocation that would work, because it seems more promising',NULL,NULL,NULL,'GiveWell',NULL,NULL),
+    ('Alexander Berger','Schistosomiasis Control Initiative',NULL,0.1,'2014-12-17','day','date of donation announcement','Global health/deworming','http://blog.givewell.org/2014/12/17/staff-members-personal-donations-giving-season-2014/','Less than GiveWell allocation target because of increased funding to AMF and 10% for GiveWell operations',NULL,NULL,NULL,'GiveWell',NULL,NULL),
+    ('Alexander Berger','GiveDirectly',NULL,0.1,'2014-12-17','day','date of donation announcement','Cash transfers','http://blog.givewell.org/2014/12/17/staff-members-personal-donations-giving-season-2014/','Correct target after removing 10% for GiveWell and adjusting for non-donation to Deworm the World Initiative',NULL,NULL,NULL,'GiveWell',NULL,NULL),
+    ('Alexander Berger','Against Malaria Foundation',NULL,0.9,'2015-12-09','day','date of donation announcement','Global health/malaria','http://blog.givewell.org/2015/12/09/staff-members-personal-donations-for-giving-season-2015/','More confidence in cost-effectiveness model and in GiveWell recommendation to donate almost all to AMF. 10% for other causes for other reasons',NULL,NULL,NULL,'GiveWell',NULL,NULL),
+    ('Alexander Berger','GiveWell',NULL,0.05,'2015-12-09','day','date of donation announcement','Charity evaluator','http://blog.givewell.org/2015/12/09/staff-members-personal-donations-for-giving-season-2015/','Reduced from 10% to 5% from last year. Reasons for donating a bit to GiveWell same as last year: wants to set and follow a norm of donating a bit to GiveWell. Due to increase in money moved (relative to cost of running GiveWell), reducing percentage from 10% to 5%',NULL,NULL,NULL,'GiveWell',NULL,NULL),
+    ('Alexander Berger','GiveDirectly',NULL,0.05,'2015-12-09','day','date of donation announcement','Cash transfers','http://blog.givewell.org/2015/12/09/staff-members-personal-donations-for-giving-season-2015/','Outstanding organization and valuable for setting cash transfer benchmark',NULL,NULL,NULL,'GiveWell',NULL,NULL),
+    ('Alexander Berger','GiveWell top charities',NULL,0.8,'2016-12-09','day','date of donation announcement','Global health and cash transfers','http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/','Less than the 90% last year. Partly because of less urgency around top charities, and optimism regarding better opportunities to be found by the Open Philanthropy Project',NULL,NULL,NULL,'GiveWell',NULL,NULL),
+     ('Alexander Berger','GiveWell',NULL,0.05,'2016-12-09','day','date of donation announcement','Charity evaluator','http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/','Same reasons as in 2015: set a norm of donors giving to GiveWell to support their research',NULL,NULL,NULL,'GiveWell',NULL,NULL),
+     ('Alexander Berger','GiveDirectly',NULL,0.05,'2016-12-09','day','date of donation announcement','Cash transfers','http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/','Same reasons as in 2015: outstanding organization and valuable for cash benchmark',NULL,NULL,NULL,'GiveWell',NULL,NULL),
 
 
 # -- Open Philanthropy Project donations
