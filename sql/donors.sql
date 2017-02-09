@@ -53,7 +53,12 @@ insert into donors(donor, country, facebook_username, website, donations_url, le
     ('Haseeb Qureshi','United States','someguynamedhaseeb','http://haseebq.com/',NULL,NULL,'imhaseeb',NULL,NULL,'haseeb-qureshi','Haseeb-Qureshi','hosseeb'),
     ('Jacob Trefethen','United States','jacob.trefethen','https://jacobtrefethen.com/',NULL,NULL,'jacob-trefethen-82105350',NULL,'JacobTref',NULL,'jacobtref','JacobTref'),
     ('Ben Hoskin','United States','ben.944',NULL,NULL,'Larks','ben-hoskin-024b9021','Machine Intelligence Research Institute,Giving What We Can','Larks',NULL,NULL,NULL),
-    ('Eva Vivalt','United States','eva.vivalt','http://evavivalt.com/',NULL,'eva-vivalt-a1579b54','AidGrade',NULL,'eva-vivalt',NULL,'evavivalt');
+    ('Eva Vivalt','United States','eva.vivalt','http://evavivalt.com/',NULL,NULL,'eva-vivalt-a1579b54','AidGrade',NULL,'eva-vivalt',NULL,'evavivalt'),
+    ('Holden Karnofsky','United States','holden.karnofsky','https://medium.com/@holden0',NULL,'HoldenKarnofsky','holden-karnofsky-75970b7','GiveWell,Open Philanthropy Project','HoldenKarnofsky',NULL,NULL,'holdenkarnofsky'),
+    ('Elie Hassenfeld','United States','elie.hassenfeld',NULL,NULL,NULL,'elie-hassenfeld-92072a9','GiveWell,Open Philanthropy Project',NULL,NULL,NULL,'eliehassenfeld'),
+    ('Alexander Berger','United States','alexander.is','http://marginalchange.blogspot.com/',NULL,NULL,'alexander-berger-58906098','GiveWell,Open Philanthropy Project',NULL,NULL,NULL,'albrgr'),
+    ('Josh Rosenberg','United States','jhrosenberg',NULL,NULL,NULL,'josh-rosenberg-07590626','GiveWell,Open Philanthropy Project',NULL,NULL,NULL,NULL),
+    ('Sophie Monahan','United States','sophical',NULL,NULL,NULL,'sophie-monahan-8160a9a2','GiveWell,Open Philanthropy Project',NULL,NULL,NULL,NULL);
 
 # -- insert into donors(donor, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username) values
 
