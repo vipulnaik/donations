@@ -4,7 +4,7 @@ $donor = 'Vipul Naik';
 if (!empty($_REQUEST['donor'])) {
   $donor = $_REQUEST['donor'];
 }
-print '<title>Donations recorded by Vipul Naik for donor '.$donor.'</title>';
+print "<title>$donor donations made</title>";
 include_once('analytics.inc');
 include_once('backend/stringFunctions.inc');
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
@@ -21,7 +21,7 @@ print '<script>$(document).ready(function()
         $("#myTableDonorDonationList").tablesorter();
     }
 ); </script>'."\n";
-print '<h3>Donations recorded by Vipul Naik for donor '.$donor.'</h3>';
+print "<h3>$donor donations made</h3>";
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
