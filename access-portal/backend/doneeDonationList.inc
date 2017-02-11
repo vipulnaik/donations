@@ -2,7 +2,7 @@
 
 $doneeDonationSelectQuery = "select * from donations where donee='$donee' order by donation_date desc";
 $doneeDonationSelectResult = $mysqli -> query($doneeDonationSelectQuery);
-print '<h4 id="doneeDonationList">Full list of donations in reverse chronological order ('.($doneeDonationSelectResult -> num_rows).' tasks)</h4>';
+print '<h4 id="doneeDonationList">Full list of donations in reverse chronological order ('.($doneeDonationSelectResult -> num_rows).' donations)</h4>';
 print "\n";
 print '<table id="myTableDoneeDonationList" class="tablesorter">'."\n";
 print "<thead>\n";
