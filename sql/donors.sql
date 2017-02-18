@@ -1,6 +1,7 @@
 create table donors (
     donor_id int(11) not null auto_increment primary key,
     donor varchar(40) not null,
+    donor_type enum('Individual','Couple','Donor group','Subsidiary','Private foundation') default 'Individual',
     country varchar(40) not null, # -- Country of current residence, NOT country of origin
     affiliated_orgs varchar(1000), # -- All current and former employers, plus orgs they are board members or advisors for, but restricting to orgs that are either potential donees or other nonprofits with significant footprint in the associated communities
     bay_area boolean, # -- Whether the person currently lives in the San Francisco Bay Area
@@ -21,6 +22,9 @@ create table donors (
     unique key donor(`donor`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+insert into donors(donor, donor_type, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username) values
+    ('Jeff Kaufman and Julia Wise', 'Couple', 'United States', 'jefftk', 'http://www.jefftk.com/', 'http://www.jefftk.com/donations', 'jkaufman','jeff-kaufman-28a8bab','Centre for Effective Altruism','Jeff_Kaufman','jeff-kaufman','jeffkaufman',NULL);
+
 insert into donors(donor, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username) values
     ('Aaron Gertler', 'United States', 'aaron.gertler', 'http://aarongertler.net/', 'http://aarongertler.net/donations/','aarongertler','aarongertler',NULL,'aarongertler','aaron-gertler','aarongertler','aarongertler'),
     ('Ajeya Cotra', 'United States', 'https://www.facebook.com/profile.php?id=1638572396','https://ajeyac.wordpress.com', 'no single location; https://eahub.org/user/ajeya-cotra, http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/, http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/',NULL,'ajeya-cotra-90942b8b','Open Philanthropy Project',NULL,'ajeya-cotra',NULL,NULL),
@@ -35,7 +39,6 @@ insert into donors(donor, country, facebook_username, website, donations_url, le
     ('Howie Lempel', 'United States', 'hlempel', NULL, NULL, NULL,'howie-lempel-201a6378','Open Philanthropy Project',NULL,NULL,NULL,'howielempel'),
     ('Ian David Moss', 'United States', 'iandavidmoss', NULL, NULL, NULL,'mossinator',NULL,NULL,'david-moss',NULL,NULL),
     ('Jacob Steinhardt', 'United States', 'jacob.steinhardt', NULL, NULL, 'jsteinhardt','jacob-steinhardt-a30437bb',NULL,'jsteinhardt',NULL,'jsteinha','jacobsteinhardt'),
-    ('Jeff Kaufman and Julia Wise', 'United States', 'jefftk', 'http://www.jefftk.com/', 'http://www.jefftk.com/donations', 'jkaufman','jeff-kaufman-28a8bab','Centre for Effective Altruism','Jeff_Kaufman','jeff-kaufman','jeffkaufman',NULL),
     ('Michael Dickens', 'United States', 'michael.j.dickens', 'http://mdickens.me/', 'http://mdickens.me/donations/', 'MTGandP','michael-dickens-a4173255',NULL, 'MichaelDickens','michael-dickens','michaeldickens',NULL),
     ('Nicole Ross', 'United States', 'nicolejamesross', NULL, NULL, NULL,'nicole-ross-184a6142','GiveWell,Open Philanthropy Project', NULL, NULL, NULL, NULL),
     ('Pablo Stafforini', 'United Kingdom', 'stafforini', 'http://www.stafforini.com', 'http://www.stafforini.com/blog/donations/', NULL,'stafforini','Centre for Effective Altruism,80,000 Hours',NULL,'pablo-stafforini', NULL,'stafforini'),
