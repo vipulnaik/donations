@@ -29,6 +29,7 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
   $twitterUsername[$row['donee']] = $row['twitter_username'];
   $wikipediaPage[$row['donee']] = $row['wikipedia_page'];
   $website[$row['donee']] = $row['website'];
+  $causeArea[$row['donee']] = $row['cause_area'];
 }
 
 
@@ -55,7 +56,7 @@ usort($donees, "cmpDoneesByAmount");
 
 print '<table id="myTableDonorDonationAmountsByDoneeAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
-print "  <tr>\n    <th>Donee</th>\n	<th>Metadata</th>\n";
+print "  <tr>\n    <th>Donee</th>\n	<th>Cause area</th>\n	<th>Metadata</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print "    <th>$year</th>\n";
@@ -67,6 +68,7 @@ print "</thead>\n<tbody>\n";
 foreach ($donees as $donee) {
   print "  <tr>\n";
   print '    <td><a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a></td>'."\n";
+  print '    <td>'.$causeArea[$donee].'</td>'."\n";
   print '    <td>';
   if ($facebookUsername[$donee] != '') {
     $facebook_username = $facebookUsername[$donee];
@@ -98,7 +100,7 @@ foreach ($donees as $donee) {
 
 print "</tbody>\n";
 print "<tfoot>\n";
-print "  <tr>\n    <td><strong>Total</strong></td>\n";
+print "  <tr>\n    <td><strong>Total</strong></td>\n	".'<td align="center">--</td>'."\n".'	<td align="center">--</td>'."\n";
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
