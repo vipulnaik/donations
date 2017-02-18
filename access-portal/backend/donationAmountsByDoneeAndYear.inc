@@ -4,7 +4,6 @@ print '<h4 id="donationAmountsByDoneeAndYear">Donation amounts by donee and year
 
 $years = array_reverse(range(2001, 2017));
 
-# We'll change the below to reference an explicit donees table, when that's made
 $doneeQuery = "select donee, count(distinct donor) as numDonors from donations group by donee;";
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();
@@ -20,6 +19,16 @@ foreach($donees as $donee) {
     $yearDonationAmount[$year] = 0;
     $donationAmountByDoneeAndYear[$donee][$year] = 0;
   }
+}
+
+$doneeMetadataQuery = "select * from donees;";
+$doneeMetadataResult = $mysqli -> query($doneeMetadataQuery);
+for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
+  $row = $doneeMetadataResult -> fetch_assoc();
+  $facebookUsername[$row['donee']] = $row['facebook_username'];
+  $twitterUsername[$row['donee']] = $row['twitter_username'];
+  $wikipediaPage[$row['donee']] = $row['wikipedia_page'];
+  $website[$row['donee']] = $row['website'];
 }
 
 $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations group by donee, year(donation_date)";
@@ -45,7 +54,7 @@ usort($donees, "cmpDoneesByAmount");
 
 print '<table id="myTable2" class="tablesorter">'."\n";
 print "<thead>\n";
-print "  <tr>\n    <th>Donee</th>\n	<th>Number of donors</th>\n";
+print "  <tr>\n    <th>Donee</th>\n	<th>Metadata</th>\n	<th>Number of donors</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print "    <th>$year</th>\n";
@@ -57,6 +66,26 @@ print "</thead>\n<tbody>\n";
 foreach ($donees as $donee) {
   print "  <tr>\n";
   print '    <td><a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a></td>'."\n";
+  print '    <td>';
+  if ($facebookUsername[$donee] != '') {
+    $facebook_username = $facebookUsername[$donee];
+    $facebook_url = 'https://www.facebook.com/'.$facebook_username;
+    if (substr($facebook_username, 0, 4) == "http") {
+      $facebook_url = $facebook_username;
+    }
+    print '<a href="'.$facebook_url.'">FB</a> ';
+  }
+  if ($twitterUsername[$donee] != '') {
+    print '<a href="https://twitter.com/'.$twitterUsername[$donee].'">Tw</a> ';
+  }
+  if ($wikipediaPage[$donee] != '') {
+    print '<a href="'.$wikipediaPage[$donee].'">WP</a> ';
+  }
+  if ($website[$donee] != '') {
+    print '<a href="'.$website[$donee].'">Site</a>';
+  }
+  
+  print "</td>\n";
   print '    <td align="right">'.$numDonors[$donee]."</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {

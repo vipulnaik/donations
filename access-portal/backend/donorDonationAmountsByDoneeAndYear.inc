@@ -21,6 +21,17 @@ foreach($donees as $donee) {
   }
 }
 
+$doneeMetadataQuery = "select * from donees;";
+$doneeMetadataResult = $mysqli -> query($doneeMetadataQuery);
+for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
+  $row = $doneeMetadataResult -> fetch_assoc();
+  $facebookUsername[$row['donee']] = $row['facebook_username'];
+  $twitterUsername[$row['donee']] = $row['twitter_username'];
+  $wikipediaPage[$row['donee']] = $row['wikipedia_page'];
+  $website[$row['donee']] = $row['website'];
+}
+
+
 $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor='".$donor."' group by donee, year(donation_date)";
 $doneeAndYearResult = $mysqli -> query($doneeAndYearQuery);
 
@@ -44,7 +55,7 @@ usort($donees, "cmpDoneesByAmount");
 
 print '<table id="myTableDonorDonationAmountsByDoneeAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
-print "  <tr>\n    <th>Donee</th>\n";
+print "  <tr>\n    <th>Donee</th>\n	<th>Metadata</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print "    <th>$year</th>\n";
@@ -56,6 +67,26 @@ print "</thead>\n<tbody>\n";
 foreach ($donees as $donee) {
   print "  <tr>\n";
   print '    <td><a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a></td>'."\n";
+  print '    <td>';
+  if ($facebookUsername[$donee] != '') {
+    $facebook_username = $facebookUsername[$donee];
+    $facebook_url = 'https://www.facebook.com/'.$facebook_username;
+    if (substr($facebook_username, 0, 4) == "http") {
+      $facebook_url = $facebook_username;
+    }
+    print '<a href="'.$facebook_url.'">FB</a> ';
+  }
+  if ($twitterUsername[$donee] != '') {
+    print '<a href="https://twitter.com/'.$twitterUsername[$donee].'">Tw</a> ';
+  }
+  if ($wikipediaPage[$donee] != '') {
+    print '<a href="'.$wikipediaPage[$donee].'">WP</a> ';
+  }
+  if ($website[$donee] != '') {
+    print '<a href="'.$website[$donee].'">Site</a>';
+  }
+  
+  print "</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.sprintf("%.2f",$donationAmountByDoneeAndYear[$donee][$year])."</td>\n";
