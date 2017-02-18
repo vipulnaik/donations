@@ -21,6 +21,8 @@ create table donees (
     key_people varchar(2000),
     cause_area varchar(2000),
     recommenders varchar(2000),
+    launch_date date,
+    launch_date_precision enum('day','month','year','multi-year'),
     notes varchar(2000) default null,
     youtube_username varchar(100),
     instagram_username varchar(100),
