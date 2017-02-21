@@ -1,6 +1,6 @@
 create table donors (
     donor_id int(11) not null auto_increment primary key,
-    donor varchar(40) not null,
+    donor varchar(100) not null,
     donor_type enum('Individual','Couple','Donor group','Subsidiary','Private foundation') default 'Individual',
     country varchar(40) not null, # -- Country of current residence, NOT country of origin
     affiliated_orgs varchar(1000), # -- All current and former employers, plus orgs they are board members or advisors for, but restricting to orgs that are either potential donees or other nonprofits with significant footprint in the associated communities
