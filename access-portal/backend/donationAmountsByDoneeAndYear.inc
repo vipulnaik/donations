@@ -10,7 +10,7 @@ $donees = array();
 for ($i = 0; $i < $doneeResult -> num_rows; $i++) {
   $row = $doneeResult -> fetch_assoc();
   array_push($donees, $row['donee']);
-  $numDonors[$row['donee']] = $row['numDonors'];
+  $numDonorsByDonee[$row['donee']] = $row['numDonors'];
 }
 $grandTotalDonationAmount = 0;
 foreach($donees as $donee) {
@@ -88,7 +88,7 @@ foreach ($donees as $donee) {
   }
   
   print "</td>\n";
-  print '    <td align="right">'.$numDonors[$donee]."</td>\n";
+  print '    <td align="right">'.$numDonorsByDonee[$donee]."</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.sprintf("%.2f",$donationAmountByDoneeAndYear[$donee][$year])."</td>\n";
