@@ -1,7 +1,5 @@
 <?php
 
-print '<h4 id="donationAmountsByDoneeAndYear">Donation amounts by donee and year</h4>';
-
 $years = array_reverse(range(2001, 2017));
 
 $doneeQuery = "select donee, count(distinct donor) as numDonors from donations group by donee;";
@@ -52,6 +50,9 @@ function cmpDoneesByAmount($firstDonee, $secondDonee) {
 }
 
 usort($donees, "cmpDoneesByAmount");
+
+$numDonees = count($donees);
+print '<h4 id="donationAmountsByDoneeAndYear">Donation amounts by donee and year'." ($numDonees donees)</h4>\n";
 
 print '<table id="myTableDonationAmountsByDoneeAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
