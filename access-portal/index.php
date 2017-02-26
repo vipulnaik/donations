@@ -11,18 +11,21 @@ include_once("backend/globalVariables/passwordFile.inc");
 print '<body>';
 print '<script>$(document).ready(function()
     {
-        $("#myTable").tablesorter();
-        $("#myTable2").tablesorter();
+        $("#myTableDonationAmountsByCauseAreaAndYear").tablesorter();
+        $("#myTableDonationAmountsByDonorAndYear").tablesorter();	
+        $("#myTableDonationAmountsByDoneeAndYear").tablesorter();	
     }
 ); </script>'."\n";
 print '<h3>Donations recorded for Vipul Naik</h3>';
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
+print '<li><a href="#donationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</a></li>';
 print '<li><a href="#donationAmountsByDonorAndYear">Donation amounts by donor and year</a></li>';
 print '<li><a href="#donationAmountsByDoneeAndYear">Donation amounts by donee and year</a></li>';
 print '</ul>';
 
+include ("backend/donationAmountsByCauseAreaAndYear.inc");
 include ("backend/donationAmountsByDonorAndYear.inc");
 include ("backend/donationAmountsByDoneeAndYear.inc");
 

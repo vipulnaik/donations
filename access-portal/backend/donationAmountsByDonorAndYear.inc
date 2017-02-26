@@ -41,7 +41,7 @@ function cmpDonorsByAmount($firstDonor, $secondDonor) {
 
 usort($donors, "cmpDonorsByAmount");
 
-print '<table id="myTable" class="tablesorter">'."\n";
+print '<table id="myTableDonationAmountsByDonorAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
 print "  <tr>\n    <th>Donor</th>\n	<th>Number of donees</th>";
 foreach ($years as $year) {
