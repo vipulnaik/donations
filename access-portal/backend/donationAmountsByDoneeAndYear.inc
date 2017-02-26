@@ -29,7 +29,7 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
   $twitterUsername[$row['donee']] = $row['twitter_username'];
   $wikipediaPage[$row['donee']] = $row['wikipedia_page'];
   $website[$row['donee']] = $row['website'];
-  $causeArea[$row['donee']] = $row['cause_area'];
+  $causeAreaForDonee[$row['donee']] = $row['cause_area'];
 }
 
 $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations group by donee, year(donation_date)";
@@ -67,7 +67,7 @@ print "</thead>\n<tbody>\n";
 foreach ($donees as $donee) {
   print "  <tr>\n";
   print '    <td><a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a></td>'."\n";
-  print '    <td>'.$causeArea[$donee].'</td>'."\n";
+  print '    <td>'.$causeAreaForDonee[$donee].'</td>'."\n";
   print '    <td>';
   if ($facebookUsername[$donee] != '') {
     $facebook_username = $facebookUsername[$donee];

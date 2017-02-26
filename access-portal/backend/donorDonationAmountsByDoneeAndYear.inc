@@ -4,7 +4,6 @@ print '<h4 id="donorDonationAmountsByDoneeAndYear">Donation amounts by donee and
 
 $years = array_reverse(range(2001, 2017));
 
-# We'll change the below to reference an explicit donees table, when that's made
 $doneeQuery = "select donee from donations where donor='".$donor."' group by donee;";
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();
@@ -29,7 +28,7 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
   $twitterUsername[$row['donee']] = $row['twitter_username'];
   $wikipediaPage[$row['donee']] = $row['wikipedia_page'];
   $website[$row['donee']] = $row['website'];
-  $causeArea[$row['donee']] = $row['cause_area'];
+  $causeAreaForDonee[$row['donee']] = $row['cause_area'];
 }
 
 
@@ -68,7 +67,7 @@ print "</thead>\n<tbody>\n";
 foreach ($donees as $donee) {
   print "  <tr>\n";
   print '    <td><a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a></td>'."\n";
-  print '    <td>'.$causeArea[$donee].'</td>'."\n";
+  print '    <td>'.$causeAreaForDonee[$donee].'</td>'."\n";
   print '    <td>';
   if ($facebookUsername[$donee] != '') {
     $facebook_username = $facebookUsername[$donee];
