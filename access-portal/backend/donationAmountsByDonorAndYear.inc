@@ -1,15 +1,22 @@
 <?php
 
-print '<h4 id="donationAmountsByDonorAndYear">Donation amounts by donor and year</h4>'."\n";
-
 $years = array_reverse(range(2001, 2017));
-$donorQuery = "select donor,count(distinct donee) as numDonees from donations group by donor;";
+$totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations";
+$totalNumDistinctDoneesResult = $mysqli -> query($totalNumDistinctDoneesQuery);
+for ($i = 0; $i < $totalNumDistinctDoneesResult -> num_rows; $i++) {
+  $row = $totalNumDistinctDoneesResult -> fetch_assoc();
+  $totalNumDistinctDonees = $row['numDonees'];
+}
+$donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations group by donor;";
 $donorResult = $mysqli -> query($donorQuery);
 $donors = array();
+$grandTotalNumDonations = 0;
 for ($i = 0; $i < $donorResult -> num_rows; $i++) {
   $row = $donorResult -> fetch_assoc();
   array_push($donors, $row['donor']);
   $numDonees[$row['donor']] = $row['numDonees'];
+  $numDonations[$row['donor']] = $row['numDonations'];
+  $grandTotalNumDonations += $row['numDonations'];
 }
 $grandTotalDonationAmount = 0;
 foreach($donors as $donor) {
@@ -40,10 +47,12 @@ function cmpDonorsByAmount($firstDonor, $secondDonor) {
 }
 
 usort($donors, "cmpDonorsByAmount");
+$numDonors = count($donors);
+print '<h4 id="donationAmountsByDonorAndYear">Donation amounts by donor and year'." ($numDonors donors)</h4>\n";
 
 print '<table id="myTableDonationAmountsByDonorAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
-print "  <tr>\n    <th>Donor</th>\n	<th>Number of donees</th>";
+print "  <tr>\n    <th>Donor</th>\n	<th>Number of donations</th>\n	<th>Number of donees</th>";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print "    <th>$year</th>\n";
@@ -55,7 +64,8 @@ print "</thead>\n<tbody>\n";
 foreach ($donors as $donor) {
   print "  <tr>\n";
   print '    <td><a href="/donor.php?donor='.urlencode($donor).'">'.$donor.'</a></td>'."\n";
-  print '<td align="right">'.$numDonees[$donor]."</td>\n";
+  print '    <td align="right">'.$numDonations[$donor]."</td>\n";
+  print '    <td align="right">'.$numDonees[$donor]."</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.sprintf("%.2f",$donationAmountByDonorAndYear[$donor][$year]).'</td>'."\n";
@@ -68,7 +78,8 @@ foreach ($donors as $donor) {
 print "</tbody>\n";
 print "<tfoot>\n";
 print "  <tr>\n    <td><strong>Total</strong></td>\n";
-print '	 <td align="center">--</td>'."\n";
+print '	 <td align="right"><strong>'.$grandTotalNumDonations.'</strong></td>'."\n";
+print '	 <td align="right"><strong>'.$totalNumDistinctDonees.'</strong></td>'."\n";
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
