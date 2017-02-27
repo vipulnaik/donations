@@ -89,7 +89,7 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
     ('Peter Hurford', 'Animal Charity Evaluators', 12.00, NULL, '2016-03-26', 'day', 'donation log', NULL, 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Peter Hurford', '.impact', 7792.00, NULL, '2016-04-20', 'day', 'donation log', NULL, 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Peter Hurford', 'Charity Science Outreach', 6000.00, NULL, '2016-04-20', 'day', 'donation log', NULL, 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Peter Hurford', 'Against Malaria Foundation', 100.00, NULL, '2016-04-29', 'day', 'donation log', NULL, 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Peter Hurford', 'Against Malaria Foundation', 100.00, NULL, '2016-04-29', 'day', 'donation log', 'Global health/malaria', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Peter Hurford', '.impact', 12000.00, NULL, '2016-05-01', 'day', 'donation log', NULL, 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Peter Hurford', '.impact', 192.00, NULL, '2016-08-07', 'day', 'donation log', NULL, 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Peter Hurford', '.impact', 500.00, NULL, '2016-08-24', 'day', 'donation log', NULL, 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
