@@ -90,10 +90,10 @@ foreach ($donees as $donee) {
   print "</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
-      print '    <td align="right">'.number_format($donationAmountByDoneeAndYear[$donee][$year],2)."</td>\n";
+      print '    <td align="right">'.sprintf("%.2f",$donationAmountByDoneeAndYear[$donee][$year])."</td>\n";
     }
   }
-  print '    <td align="right"><strong>'.number_format($doneeDonationAmount[$donee],2)."</strong></td>\n";
+  print '    <td align="right"><strong>'.sprintf("%.2f",$doneeDonationAmount[$donee])."</strong></td>\n";
   print "  </tr>\n";
 }
 
@@ -103,11 +103,11 @@ print "  <tr>\n    <td><strong>Total</strong></td>\n	".'<td align="center">--</t
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
-    print '    <td align="right"><strong>'.number_format($yearDonationAmount[$year],2)."</strong></td>\n";
+    print '    <td align="right"><strong>'.sprintf("%.2f",$yearDonationAmount[$year])."</strong></td>\n";
   }
 }
 
-print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
+print '    <td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount)."</strong></td>\n";
 print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";

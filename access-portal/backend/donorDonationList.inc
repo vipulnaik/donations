@@ -21,7 +21,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   print '<tr>';
   print '<td><a href="/donee.php?donee='.urlencode($row['donee']).'">'.$row['donee'].'</a></td>';
   if ($row['amount'] != '') {
-    print '<td align="right">'.number_format($row['amount'],2).'</td>';
+    print '<td align="right">'.sprintf("%.2f",$row['amount']).'</td>';
   } else {
     print '<td>--</td>';
   }
@@ -53,7 +53,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   }
   if ($row['employer_match'] != '') {
     if ($row['matching_employer'] != '') {
-      print '<td align="right"><element title="Matched by '.$row['matching_employer'].'">'.number_format($row['employer_match'],2).'</element></td>';
+      print '<td align="right"><element title="Matched by '.$row['matching_employer'].'">'.sprintf("%.2f",$row['employer_match']).'</element></td>';
     }
   } else {
     print '<td>--</td>';
