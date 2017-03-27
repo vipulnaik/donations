@@ -34,6 +34,11 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
   ('https://www.facebook.com/groups/EffectiveAnimalActivism/permalink/656583861179155/','The Open Philanthropy Project just announced our latest grant to WildAid in China','2016-10-25',NULL,'Lewis Bollard','Open Philanthropy Project','Open Philanthropy Project','Green Monday,World Animal Protection,Brighter Green,WildAid','Broad donor strategy','Announcement of strategy on Facebook; might do an official blog post later'),
   ('https://www.facebook.com/groups/EffectiveAnimalActivism/search/?query=broiler%20chicken','Broiler chicken search in Effective Animal Activism group on Facebook','2016-08-27','2016-12-14','Brian Tomasik,Chris Byrd',NULL,'Third-party coverage of donor strategy','The Humane Society of the United States,Mercy for Animals','Third-party coverage of donor strategy','Just a few Facebook posts -- no coherent strategy articulation yet');
 
+# -- Open Phil criminal justice strategy
+
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,notes) values
+  ('http://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/criminal-justice-reform-strategy','Criminal Justice Reform Strategy','2017-03-27',NULL,NULL,'Open Philanthropy Project','Open Philanthropy Project',NULL,'Broad donor strategy','Explanation of the criminal justice reform strategy of the Open Philanthropy Project in the United States, under the leadership of Chloe Cockburn. Discusses broad goals, types of organizations funded, other funders in the space, and expected impact');
+
 # -- Animal Charity Evaluators recommendations
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,notes) values
