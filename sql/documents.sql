@@ -37,7 +37,7 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 # -- Open Phil criminal justice strategy
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,notes) values
-  ('http://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/criminal-justice-reform-strategy','Criminal Justice Reform Strategy','2017-03-27',NULL,NULL,'Open Philanthropy Project','Open Philanthropy Project',NULL,'Broad donor strategy','Explanation of the criminal justice reform strategy of the Open Philanthropy Project in the United States, under the leadership of Chloe Cockburn. Discusses broad goals, types of organizations funded, other funders in the space, and expected impact');
+  ('http://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/criminal-justice-reform-strategy','Criminal Justice Reform Strategy','2017-03-27',NULL,NULL,'Open Philanthropy Project','Open Philanthropy Project',NULL,'Broad donor strategy','Explanation of the criminal justice reform strategy of the Open Philanthropy Project in the United States, under the leadership of Chloe Cockburn. Discusses broad goals, types of organizations funded, other funders in the space, and expected impact. Announced in email https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/_aKeLKRqtQY by Devin Jacob on 2017-03-27');
 
 # -- Animal Charity Evaluators recommendations
 
