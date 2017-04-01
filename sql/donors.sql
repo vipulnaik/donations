@@ -37,7 +37,7 @@ insert into donors(donor, country, facebook_username, website, donations_url, le
     ('Ben Kuhn', 'United States', 'ben.s.kuhn', 'http://www.benkuhn.net/', 'http://www.benkuhn.net/ea/','benkuhn', 'benskuhn',NULL,NULL,'ben-kuhn','benkuhn','benskuhn'),
     ('Benjamin Hoffman', 'United States', 'benjamin.r.hoffman', 'http://benjaminrosshoffman.com/', NULL,'Benquo','benjaminrhoffman','GiveWell','BenHoffman','ben-hoffman',NULL, NULL),
     ('Brayden McLean', 'United States', 'brayden.mclean', 'http://brayden.strikingly.com/',NULL,'BraydenM','braydenmclean',NULL,NULL,'brayden-mclean','braydenm','brayden_mclean'),
-    ('Catherine Olsson', 'United States', 'catherio', NULL, NULL,'catherio','catherineolsson',NULL,NULL,NULL,'catherio','catherineols'),
+    ('Catherine Olsson', 'United States', 'catherio', NULL, NULL,'catherio','catherineolsson','OpenAI',NULL,NULL,'catherio','catherineols'),
     ('Eric Herboso', 'United States', 'EricHerboso','http://www.ericherboso.org', NULL,'EricHerboso','ericherboso','Animal Charity Evaluators','EricHerboso','eric-herboso',NULL,'ericherboso'),
     ('Glenn Willen', 'United States', 'gwillen', NULL, NULL,'gwillen', NULL,NULL,'gwillen',NULL,'gwillen',NULL),
     ('Gregory Lewis', 'United Kingdom', 'gjlewis37', NULL, NULL,NULL,'gregoryjlewis','Giving What We Can','Gregory_Lewis','gregory-lewis',NULL,NULL),
