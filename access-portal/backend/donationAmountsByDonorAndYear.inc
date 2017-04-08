@@ -1,13 +1,13 @@
 <?php
 
 $years = array_reverse(range(2001, 2017));
-$totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations";
+$totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent";
 $totalNumDistinctDoneesResult = $mysqli -> query($totalNumDistinctDoneesQuery);
 for ($i = 0; $i < $totalNumDistinctDoneesResult -> num_rows; $i++) {
   $row = $totalNumDistinctDoneesResult -> fetch_assoc();
   $totalNumDistinctDonees = $row['numDonees'];
 }
-$donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations group by donor;";
+$donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent group by donor;";
 $donorResult = $mysqli -> query($donorQuery);
 $donors = array();
 $grandTotalNumDonations = 0;
@@ -27,7 +27,7 @@ foreach($donors as $donor) {
   }
 }
 
-$donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations group by donor, year(donation_date)";
+$donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent group by donor, year(donation_date)";
 $donorAndYearResult = $mysqli -> query($donorAndYearQuery);
 
 for ($i=0; $i < $donorAndYearResult -> num_rows; $i++) {

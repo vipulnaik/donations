@@ -70,7 +70,7 @@ print "</thead>\n<tbody>\n";
 
 foreach ($causeAreas as $causeArea) {
   print "  <tr>\n";
-  print "    <td>$causeArea (".'<a href="/donor.php?donor='.urlencode($donor).'&cause_area_filter='.urlencode($causeArea).'">filter</a>'.")</td>\n";
+  print "    <td>".'<a href="/?cause_area_filter='.urlencode($causeArea).'">'."$causeArea</a> (".'<a href="/donor.php?donor='.urlencode($donor).'&cause_area_filter='.urlencode($causeArea).'">filter this donor</a>'.")</td>\n";
   print '    <td align="right">'.$numDonationsByCauseArea[$causeArea]."</td>\n";
   print '    <td align="right">'.$numDoneesByCauseArea[$causeArea]."</td>\n";
   foreach ($years as $year) {

@@ -2,7 +2,7 @@
 
 $years = array_reverse(range(2001, 2017));
 
-$doneeQuery = "select donee, count(distinct donor) as numDonors from donations group by donee;";
+$doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee;";
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();
 for ($i = 0; $i < $doneeResult -> num_rows; $i++) {
@@ -19,7 +19,7 @@ foreach($donees as $donee) {
   }
 }
 
-$doneeMetadataQuery = "select * from donees;";
+$doneeMetadataQuery = "select * from donees $causeAreaFilterQueryComponent;";
 $doneeMetadataResult = $mysqli -> query($doneeMetadataQuery);
 for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
   $row = $doneeMetadataResult -> fetch_assoc();
@@ -30,7 +30,7 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
   $causeAreaForDonee[$row['donee']] = $row['cause_area'];
 }
 
-$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations group by donee, year(donation_date)";
+$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent group by donee, year(donation_date)";
 $doneeAndYearResult = $mysqli -> query($doneeAndYearQuery);
 
 for ($i=0; $i < $doneeAndYearResult -> num_rows; $i++) {

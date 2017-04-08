@@ -4,7 +4,7 @@ print '<h4 id="donationAmountsByCauseAreaAndYear">Donation amounts by cause area
 
 $years = array_reverse(range(2001, 2017));
 
-$causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area from donations group by substring_index(cause_area,'/',1)";
+$causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area from donations $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1)";
 $causeAreaResult = $mysqli -> query($causeAreaQuery);
 $causeAreas = array();
 for ($i = 0; $i < $causeAreaResult -> num_rows; $i++) {
@@ -20,7 +20,7 @@ foreach($causeAreas as $causeArea) {
   }
 }
 
-$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations group by substring_index(cause_area,'/',1), year(donation_date)";
+$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1), year(donation_date)";
 $causeAreaAndYearResult = $mysqli -> query($causeAreaAndYearQuery);
 
 for ($i=0; $i < $causeAreaAndYearResult -> num_rows; $i++) {
@@ -54,7 +54,7 @@ print "</thead>\n<tbody>\n";
 
 foreach ($causeAreas as $causeArea) {
   print "  <tr>\n";
-  print "    <td>$causeArea</td>\n";
+  print "    <td>".'<a href="/?cause_area_filter='.urlencode($causeArea).'">'."$causeArea</a></td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.sprintf("%.2f",$donationAmountByCauseAreaAndYear[$causeArea][$year])."</td>\n";
