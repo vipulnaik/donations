@@ -53,9 +53,15 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 
 # -- Open Phil labor mobility/migration policy strategy
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('http://www.openphilanthropy.org/research/cause-reports/labor-mobility','Labor Mobility','2013-05-01',NULL,NULL,'Open Philanthropy Project','Open Philanthropy Project',NULL,'Review of current state of cause area','Migration policy/international labor mobility','Initial findings from a shallow investigation into the current state of labor mobility, with more focus on the United States');
+  ('http://www.openphilanthropy.org/research/cause-reports/labor-mobility','Migration policy/international labor mobility','2013-05-01',NULL,NULL,'Open Philanthropy Project','Open Philanthropy Project',NULL,'Review of current state of cause area','Migration policy/international labor mobility','Initial findings from a shallow investigation into the current state of labor mobility, with more focus on the United States');
 
-# -- Open Phil macroroeconomic policy
+# -- Open Phil macroeconomic stabilization policy
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('http://www.openphilanthropy.org/research/cause-reports/macroeconomic-policy','Macroeconomic stabilization policy','2014-05-01',NULL,NULL,'Open Philanthropy Project','Open Philanthropy Project',NULL,'Review of current state of cause area','Initial findings from a medium-depth investigation into the current state of macroeconomic stabilization policy');
+
+# -- Open Phil global health
+# -- insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+# -- ('http://www.openphilanthropy.org/research/cause-reports/advocacy-improved-or-increased-us-foreign-aid','Advocacy for Improved or Increased U.S. Foreign Aid
 
 # -- Animal Charity Evaluators recommendations
 
