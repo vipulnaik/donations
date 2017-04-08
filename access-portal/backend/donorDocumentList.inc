@@ -15,6 +15,7 @@ if ($donorDocumentSelectResult -> num_rows > 0) {
   print '<th>Affected donors</th>';
   print '<th>Affected donees</th>';
   print '<th>Document scope</th>';
+  print '<th>Cause area</th>';
   print '<th>Notes</th>';
   print '</tr>';
   print "</thead>\n<tbody>\n";
@@ -36,6 +37,7 @@ if ($donorDocumentSelectResult -> num_rows > 0) {
     print '<td>'.explodeDonorCsv($row['affected_donors']).'</td>';
     print '<td>'.explodeDoneeCsv($row['affected_donees']).'</td>';
     print '<td>'.$row['document_scope'].'</td>';
+    print '<td>'.$row['cause_area'].'</td>';
     print '<td>'.cleanNotes($row['notes']).'</td>';
     print '</tr>';
   }
