@@ -4,13 +4,13 @@ print '<h4 id="donorDonationAmountsByCauseAreaAndYear">Donation amounts by cause
 
 $years = array_reverse(range(2001, 2017));
 
-$totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where donor='".$donor."';";
+$totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where donor='$donor' $causeAreaFilterQueryComponent;";
 $totalNumDistinctDoneesResult = $mysqli -> query($totalNumDistinctDoneesQuery);
 for ($i = 0; $i < $totalNumDistinctDoneesResult -> num_rows; $i++) {
   $row = $totalNumDistinctDoneesResult -> fetch_assoc();
   $totalNumDistinctDonees = $row['numDonees'];
 }
-$causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area,count(distinct donee) as numDonees,count(*) as numDonations from donations where donor='".$donor."' group by substring_index(cause_area,'/',1)";
+$causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area,count(distinct donee) as numDonees,count(*) as numDonations from donations where donor='$donor' $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1)";
 $causeAreaResult = $mysqli -> query($causeAreaQuery);
 $causeAreas = array();
 $grandTotalNumDonations = 0;
@@ -30,7 +30,7 @@ foreach($causeAreas as $causeArea) {
   }
 }
 
-$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(distinct donee) as numDonees, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor='".$donor."' group by substring_index(cause_area,'/',1), year(donation_date)";
+$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(distinct donee) as numDonees, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor='$donor' $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1), year(donation_date)";
 $causeAreaAndYearResult = $mysqli -> query($causeAreaAndYearQuery);
 
 for ($i=0; $i < $causeAreaAndYearResult -> num_rows; $i++) {
@@ -70,7 +70,7 @@ print "</thead>\n<tbody>\n";
 
 foreach ($causeAreas as $causeArea) {
   print "  <tr>\n";
-  print "    <td>$causeArea</td>\n";
+  print "    <td>$causeArea (".'<a href="/donor.php?donor='.urlencode($donor).'&cause_area_filter='.urlencode($causeArea).'">filter</a>'.")</td>\n";
   print '    <td align="right">'.$numDonationsByCauseArea[$causeArea]."</td>\n";
   print '    <td align="right">'.$numDoneesByCauseArea[$causeArea]."</td>\n";
   foreach ($years as $year) {

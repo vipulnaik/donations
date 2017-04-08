@@ -4,7 +4,7 @@ print '<h4 id="donorDonationAmountsByDoneeAndYear">Donation amounts by donee and
 
 $years = array_reverse(range(2001, 2017));
 
-$doneeQuery = "select donee from donations where donor='".$donor."' group by donee;";
+$doneeQuery = "select donee from donations where donor='$donor' $causeAreaFilterQueryComponent group by donee;";
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();
 for ($i = 0; $i < $doneeResult -> num_rows; $i++) {
@@ -32,7 +32,7 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
 }
 
 
-$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor='".$donor."' group by donee, year(donation_date)";
+$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor='$donor' $causeAreaFilterQueryComponent group by donee, year(donation_date)";
 $doneeAndYearResult = $mysqli -> query($doneeAndYearQuery);
 
 for ($i=0; $i < $doneeAndYearResult -> num_rows; $i++) {

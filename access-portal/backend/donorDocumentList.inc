@@ -1,6 +1,6 @@
 <?php
 
-$donorDocumentSelectQuery = "select * from documents where affected_donors REGEXP '$donor' order by publication_date desc";
+$donorDocumentSelectQuery = "select * from documents where affected_donors REGEXP '$donor' $causeAreaFilterQueryComponent order by publication_date desc";
 $donorDocumentSelectResult = $mysqli -> query($donorDocumentSelectQuery);
 if ($donorDocumentSelectResult -> num_rows > 0) {
   print '<h4 id="donorDocumentList">Full list of documents in reverse chronological order ('.($donorDocumentSelectResult -> num_rows).' documents)</h4>';

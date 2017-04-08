@@ -4,7 +4,15 @@ $donor = 'Vipul Naik';
 if (!empty($_REQUEST['donor'])) {
   $donor = $_REQUEST['donor'];
 }
-print "<title>$donor donations made</title>";
+$causeAreaFilterString = '';
+$causeAreaFilterStringHelper = '';
+$causeAreaFilterQueryComponent = "";
+if (!empty($_REQUEST['cause_area_filter'])) {
+  $causeAreaFilterString = $_REQUEST['cause_area_filter'];
+  $causeAreaFilterStringHelper = " (filtered to cause areas matching $causeAreaFilterStringHelper)";
+  $causeAreaFilterQueryComponent = " and cause_area REGEXP '$causeAreaFilterString' ";
+}
+print "<title>$donor donations made (filtered to cause areas matching $causeAreaFilterStringHelper)</title>";
 include_once('analytics.inc');
 include_once('backend/stringFunctions.inc');
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";

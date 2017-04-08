@@ -1,6 +1,6 @@
 <?php
 
-$donorDonationSelectQuery = "select * from donations where donor='$donor' order by donation_date desc";
+$donorDonationSelectQuery = "select * from donations where donor='$donor' $causeAreaFilterQueryComponent order by donation_date desc";
 $donorDonationSelectResult = $mysqli -> query($donorDonationSelectQuery);
 print '<h4 id="donorDonationList">Full list of donations in reverse chronological order ('.($donorDonationSelectResult -> num_rows).' donations)</h4>';
 print "\n";
