@@ -57,7 +57,7 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 
 # -- Open Phil macroeconomic stabilization policy
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('http://www.openphilanthropy.org/research/cause-reports/macroeconomic-policy','Macroeconomic stabilization policy','2014-05-01',NULL,NULL,'Open Philanthropy Project','Open Philanthropy Project',NULL,'Review of current state of cause area','Initial findings from a medium-depth investigation into the current state of macroeconomic stabilization policy');
+  ('http://www.openphilanthropy.org/research/cause-reports/macroeconomic-policy','Macroeconomic policy','2014-05-01',NULL,NULL,'Open Philanthropy Project','Open Philanthropy Project',NULL,'Review of current state of cause area','Macroeconomic stabilization policy','Initial findings from a medium-depth investigation into the current state of macroeconomic stabilization policy');
 
 # -- Open Phil global health
 # -- insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
