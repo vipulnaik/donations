@@ -17,6 +17,7 @@ init:
 read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/givewell-and-good-ventures-misc.sql
         mysql $(MYSQL_ARGS) $(DATABASE) < sql/open-phil-grants.sql
         mysql $(MYSQL_ARGS) $(DATABASE) < sql/arnold-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees.sql
