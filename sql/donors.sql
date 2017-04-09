@@ -26,7 +26,9 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
   ('Laura and John Arnold Foundation','Private foundation','United States','Laura-and-John-Arnold-Foundation-177757582300684','http://www.arnoldfoundation.org/','http://www.arnoldfoundation.org/grants/',NULL,NULL,NULL,NULL,NULL,NULL,'lja_foundation'),
   ('Open Philanthropy Project','Private foundation','United States','openphilanthropy','http://www.openphilanthropy.org/','http://www.openphilanthropy.org/giving/grants',NULL,NULL,'GiveWell,Good Ventures',NULL,NULL,NULL,'open_phil'),
   ('GiveWell Incubation Grants','Subsidiary','United States',NULL,'http://www.givewell.org/research/incubation-grants','http://www.givewell.org/research/incubation-grants',NULL,NULL,'GiveWell,Good Ventures',NULL,NULL,NULL,NULL),
-  ('Good Ventures/GiveWell top and standout charities','Subsidiary','United States',NULL,NULL,NULL,NULL,NULL,'GiveWell,Good Ventures,Open Philanthropy Project',NULL,NULL,NULL,NULL);
+  ('Good Ventures/GiveWell top and standout charities','Subsidiary','United States',NULL,NULL,NULL,NULL,NULL,'GiveWell,Good Ventures,Open Philanthropy Project',NULL,NULL,NULL,NULL),
+  ('Good Ventures/not recommended by GiveWell or Open Philanthropy Project','Subsidiary','United States',NULL,NULL,NULL,NULL,NULL,'Good Ventures',NULL,NULL,NULL,NULL),
+  ('GiveWell discretionary regranting','Subsidiary','United States',NULL,NULL,NULL,NULL,NULL,'GiveWell',NULL,NULL,NULL,NULL);
 
 insert into donors(donor, donor_type, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username) values
     ('Jeff Kaufman and Julia Wise', 'Couple', 'United States', 'jefftk', 'http://www.jefftk.com/', 'http://www.jefftk.com/donations', 'jkaufman','jeff-kaufman-28a8bab','Centre for Effective Altruism','Jeff_Kaufman','jeff-kaufman','jeffkaufman',NULL);
