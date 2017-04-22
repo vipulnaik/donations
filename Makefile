@@ -21,6 +21,7 @@ read:
         mysql $(MYSQL_ARGS) $(DATABASE) < sql/open-phil-grants.sql
         mysql $(MYSQL_ARGS) $(DATABASE) < sql/arnold-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/google-org.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/ea-funds.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/gifts.sql
