@@ -12,6 +12,7 @@ print '<th>Amount (current USD)</th>';
 print '<th>Donation date</th>';
 print '<th>Cause area</th>';
 print '<th>URL</th>';
+print '<th>Influencer</th>';
 print '<th>Employer match</th>';
 print '<th>Notes</th>';
 print '</tr>';
@@ -51,6 +52,11 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   } else {
     print '<td>--</td>';
   }
+  if ($row['influencer'] != '') {
+    print '<td align="right"><a href="/donor.php?donor='.urlencode($row['influencer']).'">'.$row['influencer'].'</a></td>';
+  } else {
+    print '<td>--</td>';
+  }  
   if ($row['employer_match'] != '') {
     if ($row['matching_employer'] != '') {
       print '<td align="right"><element title="Matched by '.$row['matching_employer'].'">'.sprintf("%.2f",$row['employer_match']).'</element></td>';
