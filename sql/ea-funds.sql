@@ -14,7 +14,7 @@ insert into donations(donor, donee, amount, donation_date,
 # -- Global catastrophic risks
 insert into donations(donor, donee, amount, donation_date,
     donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, notes, affected_countries) values
-  ('Effective Altruism Funds','Berkeley Existential Risk Initiative',14838.02,'2017-04-20','day','date of donation announcement','Global catastrophic risks','http://effective-altruism.com/ea/19d/update_on_effective_altruism_funds/','https://app.effectivealtruism.org/funds/far-future','Nick Beckstead',14838.02,1.0,'Grantee approached Nick Beckstead with a grant proposal asking for 50000 USD. Beckstead provided all the money donated already from the far future fund, and made up the remainder via the EA Giving Group and some personal funds',NULL);
+  ('Effective Altruism Funds','Berkeley Existential Risk Initiative',14838.02,'2017-04-20','day','date of donation announcement','AI risk/other global catastrophic risks','http://effective-altruism.com/ea/19d/update_on_effective_altruism_funds/','https://app.effectivealtruism.org/funds/far-future','Nick Beckstead',14838.02,1.0,'Grantee approached Nick Beckstead with a grant proposal asking for 50000 USD. Beckstead provided all the money donated already from the far future fund, and made up the remainder via the EA Giving Group and some personal funds',NULL);
 
 # -- Global health
 insert into donations(donor, donee, amount, donation_date,
