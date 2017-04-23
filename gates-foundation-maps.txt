@@ -1,6 +1,6 @@
 # See http://iatistandard.org/105/codelists/Sector/ for
 # the codes and description
-d = {
+d1 = {
     "Agrarian reform": "Agriculture/agrarian reform",
     "Agricultural co-operatives": "Agriculture/agricultural co-operatives",
     "Agricultural development": "Agriculture/agricultural development",
@@ -92,7 +92,7 @@ d = {
 
 # See http://iatistandard.org/105/codelists/Sector/ for
 # the codes and description
-d = {
+d2 = {
     "Agrarian reform": "http://www.gatesfoundation.org/What-We-Do/Global-Development/Agricultural-Development",
     "Agricultural co-operatives": "http://www.gatesfoundation.org/What-We-Do/Global-Development/Agricultural-Development",
     "Agricultural development": "http://www.gatesfoundation.org/What-We-Do/Global-Development/Agricultural-Development",
