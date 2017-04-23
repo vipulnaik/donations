@@ -2,8 +2,6 @@
 
 print '<h4 id="donationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</h4>';
 
-$years = array_reverse(range(2001, 2017));
-
 $causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area from donations $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1)";
 $causeAreaResult = $mysqli -> query($causeAreaQuery);
 $causeAreas = array();

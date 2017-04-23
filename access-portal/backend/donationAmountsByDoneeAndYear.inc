@@ -1,7 +1,5 @@
 <?php
 
-$years = array_reverse(range(2001, 2017));
-
 $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee;";
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();

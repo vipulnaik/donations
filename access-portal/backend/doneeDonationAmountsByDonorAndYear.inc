@@ -2,7 +2,6 @@
 
 print '<h4 id="doneeDonationAmountsByDonorAndYear">Donation amounts by donor and year for donee '.$donee.'</h4>'."\n";
 
-$years = array_reverse(range(2001, 2017));
 $donorQuery = "select donor from donations where donee = ".'"'.$donee.'"'." group by donor;";
 $donorResult = $mysqli -> query($donorQuery);
 $donors = array();

@@ -16,6 +16,7 @@ print '<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>'."\n
 print '<script type="text/javascript" src="./jquery.tablesorter.js"></script>'."\n";
 print '</head>';
 include_once("backend/globalVariables/passwordFile.inc");
+include_once("backend/globalVariables/lists.inc");
 print '<body>';
 print '<script>$(document).ready(function()
     {

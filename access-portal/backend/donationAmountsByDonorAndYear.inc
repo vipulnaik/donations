@@ -1,6 +1,5 @@
 <?php
 
-$years = array_reverse(range(2001, 2017));
 $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent";
 $totalNumDistinctDoneesResult = $mysqli -> query($totalNumDistinctDoneesQuery);
 for ($i = 0; $i < $totalNumDistinctDoneesResult -> num_rows; $i++) {

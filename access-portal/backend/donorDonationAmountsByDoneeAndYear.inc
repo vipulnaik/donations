@@ -2,8 +2,6 @@
 
 print '<h4 id="donorDonationAmountsByDoneeAndYear">Donation amounts by donee and year</h4>';
 
-$years = array_reverse(range(2001, 2017));
-
 $doneeQuery = "select donee from donations where donor=".'"'.$donor.'"'." $causeAreaFilterQueryComponent group by donee;";
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();

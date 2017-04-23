@@ -2,8 +2,6 @@
 
 print '<h4 id="donorDonationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</h4>';
 
-$years = array_reverse(range(2001, 2017));
-
 $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where donor='$donor' $causeAreaFilterQueryComponent;";
 $totalNumDistinctDoneesResult = $mysqli -> query($totalNumDistinctDoneesQuery);
 for ($i = 0; $i < $totalNumDistinctDoneesResult -> num_rows; $i++) {
