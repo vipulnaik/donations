@@ -10,7 +10,7 @@ $causeAreaFilterQueryComponent = "";
 if (!empty($_REQUEST['cause_area_filter'])) {
   $causeAreaFilterString = $_REQUEST['cause_area_filter'];
   $causeAreaFilterStringHelper = " (filtered to cause areas matching $causeAreaFilterStringHelper)";
-  $causeAreaFilterQueryComponent = " and cause_area REGEXP '$causeAreaFilterString' ";
+  $causeAreaFilterQueryComponent = " and cause_area REGEXP ".'"'.$causeAreaFilterString.'" ';
 }
 print "<title>$donor donations made (filtered to cause areas matching $causeAreaFilterStringHelper)</title>";
 include_once('analytics.inc');

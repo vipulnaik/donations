@@ -4,7 +4,7 @@ print '<h4 id="donorDonationAmountsByDoneeAndYear">Donation amounts by donee and
 
 $years = array_reverse(range(2001, 2017));
 
-$doneeQuery = "select donee from donations where donor='$donor' $causeAreaFilterQueryComponent group by donee;";
+$doneeQuery = "select donee from donations where donor=".'"'.$donor.'"'." $causeAreaFilterQueryComponent group by donee;";
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();
 for ($i = 0; $i < $doneeResult -> num_rows; $i++) {
@@ -32,7 +32,7 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
 }
 
 
-$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor='$donor' $causeAreaFilterQueryComponent group by donee, year(donation_date)";
+$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor=".'"'.$donor.'"'." $causeAreaFilterQueryComponent group by donee, year(donation_date)";
 $doneeAndYearResult = $mysqli -> query($doneeAndYearQuery);
 
 for ($i=0; $i < $doneeAndYearResult -> num_rows; $i++) {
@@ -67,9 +67,9 @@ print "</thead>\n<tbody>\n";
 foreach ($donees as $donee) {
   print "  <tr>\n";
   print '    <td><a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a></td>'."\n";
-  print '    <td>'.$causeAreaForDonee[$donee].'</td>'."\n";
+  print '    <td>'.(isset($causeAreaForDonee[$donee]) ? $causeAreaForDonee[$donee] : "").'</td>'."\n";
   print '    <td>';
-  if ($facebookUsername[$donee] != '') {
+  if (isset($facebookUsername[$donee]) && $facebookUsername[$donee] != '') {
     $facebook_username = $facebookUsername[$donee];
     $facebook_url = 'https://www.facebook.com/'.$facebook_username;
     if (substr($facebook_username, 0, 4) == "http") {
@@ -77,13 +77,13 @@ foreach ($donees as $donee) {
     }
     print '<a href="'.$facebook_url.'">FB</a> ';
   }
-  if ($twitterUsername[$donee] != '') {
+  if (isset($twitterUsername[$donee]) && $twitterUsername[$donee] != '') {
     print '<a href="https://twitter.com/'.$twitterUsername[$donee].'">Tw</a> ';
   }
-  if ($wikipediaPage[$donee] != '') {
+  if (isset($wikipediaPage[$donee]) && $wikipediaPage[$donee] != '') {
     print '<a href="'.$wikipediaPage[$donee].'">WP</a> ';
   }
-  if ($website[$donee] != '') {
+  if (isset($website[$donee]) && $website[$donee] != '') {
     print '<a href="'.$website[$donee].'">Site</a>';
   }
   
