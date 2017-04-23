@@ -21,9 +21,10 @@ create table donations (
     matching_employer varchar(100),
     special_donation_reason enum('Giving Game','Compensation to charity for effort','Committed periodic donation','Fundraiser/Gift','Hat tip','One-off opportunity', 'Offset'),
     donation_earmark varchar(100),
-    affected_countries varchar(200),
+    affected_countries varchar(2000),
     affected_states varchar(200),
-    affected_cities varchar(200)
+    affected_cities varchar(200),
+    affected_regions varchar(200)
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis,
