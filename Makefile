@@ -16,6 +16,7 @@ init:
 .PHONY: read
 read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/oxprio.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/givewell-and-good-ventures-misc.sql
         mysql $(MYSQL_ARGS) $(DATABASE) < sql/open-phil-grants.sql
