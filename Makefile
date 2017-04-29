@@ -15,8 +15,12 @@ init:
 
 .PHONY: read
 read:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/oxprio.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/givewell-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/open-phil-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-and-good-ventures-misc.sql
         mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/open-phil-grants.sql
