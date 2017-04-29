@@ -22,5 +22,8 @@ create table donations (
     affected_countries varchar(2000),
     affected_states varchar(200),
     affected_cities varchar(200),
-    affected_regions varchar(200)
+    affected_regions varchar(200),
+    donation_announcement_date date,
+    donation_announcement_date_precision enum('day','month','year','multi-year'),
+    donation_announcement_url varchar(200)
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
