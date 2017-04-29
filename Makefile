@@ -15,15 +15,19 @@ init:
 
 .PHONY: read
 read:
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/oxprio.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/givewell-and-good-ventures-misc.sql
-        mysql $(MYSQL_ARGS) $(DATABASE) < sql/open-phil-grants.sql
-        mysql $(MYSQL_ARGS) $(DATABASE) < sql/arnold-foundation-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/google-org.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/ea-funds.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/gates-foundation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents-schema.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/oxprio.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/givewell-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/open-phil-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-and-good-ventures-misc.sql
+        mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/open-phil-grants.sql
+        mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/arnold-foundation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/google-org.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ea-funds.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/gates-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/gifts.sql
