@@ -4,7 +4,7 @@ create table documents (
   title varchar(200),
   publication_date date,
   modified_date date,
-  author varchar(40),
+  author varchar(200),
   publisher varchar(40),
   affected_donors varchar(1000),
   affected_donees varchar(1000),
