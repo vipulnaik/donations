@@ -52,12 +52,13 @@ print '<h4 id="donationAmountsByDonorAndYear">Donation amounts by donor and year
 print '<table id="myTableDonationAmountsByDonorAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
 print "  <tr>\n    <th>Donor</th>\n	<th>Number of donations</th>\n	<th>Number of donees</th>";
+print "    <th>Total</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print "    <th>$year</th>\n";
   }
 }
-print "    <th>Total</th>\n  </tr>\n";
+print "  </tr>\n";
 print "</thead>\n<tbody>\n";
 
 foreach ($donors as $donor) {
@@ -65,12 +66,12 @@ foreach ($donors as $donor) {
   print '    <td><a href="/donor.php?donor='.urlencode($donor).'">'.$donor.'</a></td>'."\n";
   print '    <td align="right">'.$numDonations[$donor]."</td>\n";
   print '    <td align="right">'.$numDonees[$donor]."</td>\n";
+  print '    <td align="right"><strong>'.sprintf("%.2f",$donorDonationAmount[$donor]).'</strong></td>'."\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.sprintf("%.2f",$donationAmountByDonorAndYear[$donor][$year]).'</td>'."\n";
     }
   }
-  print '    <td align="right"><strong>'.sprintf("%.2f",$donorDonationAmount[$donor]).'</strong></td>'."\n";
   print "  </tr>\n";
 }
 
@@ -80,13 +81,14 @@ print "  <tr>\n    <td><strong>Total</strong></td>\n";
 print '	 <td align="right"><strong>'.$grandTotalNumDonations.'</strong></td>'."\n";
 print '	 <td align="right"><strong>'.$totalNumDistinctDonees.'</strong></td>'."\n";
 
+print '    <td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount).'</strong></td>'."\n";
+
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print '    <td align="right"><strong>'.sprintf("%.2f",$yearDonationAmount[$year])."</strong></td>\n";
   }
 }
 
-print '    <td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount).'</strong></td>'."\n";
 print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>\n";

@@ -55,20 +55,25 @@ print '<h4 id="donationAmountsByDoneeAndYear">Donation amounts by donee and year
 print '<table id="myTableDonationAmountsByDoneeAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
 print "  <tr>\n    <th>Donee</th>\n	<th>Cause area</th>\n	<th>Metadata</th>\n	<th>Number of donors</th>\n";
+print "    <th>Total</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print "    <th>$year</th>\n";
   }
 }
-print "    <th>Total</th>\n  </tr>\n";
+print "  </tr>\n";
 print "</thead>\n<tbody>\n";
 
 foreach ($donees as $donee) {
   print "  <tr>\n";
   print '    <td><a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a></td>'."\n";
-  print '    <td>'.$causeAreaForDonee[$donee].'</td>'."\n";
+  if (array_key_exists($donee, $causeAreaForDonee)) {
+    print '    <td>'.$causeAreaForDonee[$donee].'</td>'."\n";
+  } else {
+    print '	<td></td>'."\n";
+  }
   print '    <td>';
-  if ($facebookUsername[$donee] != '') {
+  if (array_key_exists($donee, $facebookUsername) and $facebookUsername[$donee] != '') {
     $facebook_username = $facebookUsername[$donee];
     $facebook_url = 'https://www.facebook.com/'.$facebook_username;
     if (substr($facebook_username, 0, 4) == "http") {
@@ -76,24 +81,24 @@ foreach ($donees as $donee) {
     }
     print '<a href="'.$facebook_url.'">FB</a> ';
   }
-  if ($twitterUsername[$donee] != '') {
+  if (array_key_exists($donee, $twitterUsername) and $twitterUsername[$donee] != '') {
     print '<a href="https://twitter.com/'.$twitterUsername[$donee].'">Tw</a> ';
   }
-  if ($wikipediaPage[$donee] != '') {
+  if (array_key_exists($donee, $wikipediaPage) and $wikipediaPage[$donee] != '') {
     print '<a href="'.$wikipediaPage[$donee].'">WP</a> ';
   }
-  if ($website[$donee] != '') {
+  if (array_key_exists($donee, $website) and $website[$donee] != '') {
     print '<a href="'.$website[$donee].'">Site</a>';
   }
   
   print "</td>\n";
   print '    <td align="right">'.$numDonorsByDonee[$donee]."</td>\n";
+  print '    <td align="right"><strong>'.sprintf("%.2f",$doneeDonationAmount[$donee])."</strong></td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.sprintf("%.2f",$donationAmountByDoneeAndYear[$donee][$year])."</td>\n";
     }
   }
-  print '    <td align="right"><strong>'.sprintf("%.2f",$doneeDonationAmount[$donee])."</strong></td>\n";
   print "  </tr>\n";
 }
 
@@ -104,13 +109,14 @@ print '	 <td align="center">--</td>'."\n";
 print '	 <td align="center">--</td>'."\n";
 print '	 <td align="center">--</td>'."\n";
 
+print '    <td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount)."</strong></td>\n";
+
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print '    <td align="right"><strong>'.sprintf("%.2f",$yearDonationAmount[$year])."</strong></td>\n";
   }
 }
 
-print '    <td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount)."</strong></td>\n";
 print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
