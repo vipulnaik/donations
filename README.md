@@ -1,6 +1,6 @@
 # donations
 
-coming soon
+Available at https://donations.vipulnaik.com but still in beta
 
 Note that the passwordFile.inc file in access-portal/backend/globalVariables is excluded from the Git repository, but you can see a corresponding dummy password file at [dummyPasswordFile.inc](https://github.com/vipulnaik/donations/blob/master/access-portal/backend/globalVariables/dummyPasswordFile.inc).
 
