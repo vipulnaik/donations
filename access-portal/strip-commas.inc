@@ -1,15 +1,16 @@
 <script>
     // Given a table cell, if the cell consists of a number, strip commas and
-    // return the number as a string. Otherwise just return the cell HTML. This
+    // return the number as a string. Otherwise just return the cell text. This
     // is mainly useful when trying to sort a column.
     function stripCommas(node) {
-        // node is <td>, and the first child node is <a> on a numerical
-        // cell, so cellText should just be a string representation of
-        // the number in the cell
         try {
+            // Here we assume node is <td>, and the first child node is <a> on
+            // a numerical cell
             var cellText = node.childNodes[0].innerHTML;
         }
         catch(err) { }
+        // If the above fails, then try again assuming that node is <td> but
+        // without <a>
         if (typeof cellText === 'undefined') {
             try {
                 var cellText = node.innerHTML;
@@ -21,9 +22,6 @@
         if (typeof cellText !== 'undefined' && (cellText[0] === "-" || (cellText[0] >= "0" && cellText[0] <= "9"))) {
             return cellText.replace(/,/g, "");
         }
-        // return node.childNodes[0].childNodes[0].innerHTML.replace(/,/g, "");
-        var c = node.innerHTML;
-        // console.log(c);
-        return c;
+        return node.innerText;
     }
 </script>
