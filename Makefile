@@ -22,7 +22,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/open-phil-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-and-good-ventures-misc.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-and-good-ventures.sql
         mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/open-phil-grants.sql
         mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/arnold-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/google-org.sql
