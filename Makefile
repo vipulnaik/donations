@@ -31,6 +31,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/gifts.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved.sql
 
 .PHONY: fetch_table_sorting
 fetch_table_sorting:
