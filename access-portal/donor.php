@@ -14,6 +14,7 @@ if (!empty($_REQUEST['cause_area_filter'])) {
 }
 print "<title>$donor donations made (filtered to cause areas matching $causeAreaFilterStringHelper)</title>";
 include_once('analytics.inc');
+include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
 print '<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>'."\n";
@@ -24,11 +25,11 @@ include_once("backend/globalVariables/lists.inc");
 print '<body>';
 print '<script>$(document).ready(function()
     {
-        $("#myTableDonorInfo").tablesorter();
-        $("#myTableDonorDonationAmountsByDoneeAndYear").tablesorter();
-        $("#myTableDonorDonationAmountsByCauseAreaAndYear").tablesorter();
-        $("#myTableDonorDocumentList").tablesorter();
-        $("#myTableDonorDonationList").tablesorter();
+        $("#myTableDonorInfo").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonorDonationAmountsByDoneeAndYear").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonorDonationAmountsByCauseAreaAndYear").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonorDocumentList").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonorDonationList").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
 print "<h3>$donor donations made</h3>";

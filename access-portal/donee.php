@@ -6,6 +6,7 @@ if (!empty($_REQUEST['donee'])) {
 }
 print "<title>$donee donations received</title>";
 include_once('analytics.inc');
+include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
 print '<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>'."\n";
@@ -16,10 +17,10 @@ include_once("backend/globalVariables/lists.inc");
 print '<body>';
 print '<script>$(document).ready(function()
     {
-        $("#myTableDoneeInfo").tablesorter();
-        $("#myTableDoneeDonationAmountsByDonorAndYear").tablesorter();
-        $("#myTableDoneeDocumentList").tablesorter();
-        $("#myTableDoneeDonationList").tablesorter();
+        $("#myTableDoneeInfo").tablesorter({textExtraction: stripCommas});
+        $("#myTableDoneeDonationAmountsByDonorAndYear").tablesorter({textExtraction: stripCommas});
+        $("#myTableDoneeDocumentList").tablesorter({textExtraction: stripCommas});
+        $("#myTableDoneeDonationList").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
 print "<h3>$donee donations received</h3>";

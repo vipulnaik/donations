@@ -2,6 +2,7 @@
 print '<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" >';
 print '<title>Donations recorded by Vipul Naik</title>';
 include_once('analytics.inc');
+include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
 $causeAreaFilterString = '';
 $causeAreaFilterStringHelper = '';
@@ -20,9 +21,9 @@ include_once("backend/globalVariables/lists.inc");
 print '<body>';
 print '<script>$(document).ready(function()
     {
-        $("#myTableDonationAmountsByCauseAreaAndYear").tablesorter();
-        $("#myTableDonationAmountsByDonorAndYear").tablesorter();	
-        $("#myTableDonationAmountsByDoneeAndYear").tablesorter();	
+        $("#myTableDonationAmountsByCauseAreaAndYear").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonationAmountsByDonorAndYear").tablesorter({textExtraction: stripCommas});	
+        $("#myTableDonationAmountsByDoneeAndYear").tablesorter({textExtraction: stripCommas});	
     }
 ); </script>'."\n";
 print '<h3>Donations recorded for Vipul Naik</h3>';
