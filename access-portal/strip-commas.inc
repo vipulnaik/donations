@@ -19,7 +19,7 @@
 
         // Check if a number
         if (typeof cellText !== 'undefined' && (cellText[0] === "-" || (cellText[0] >= "0" && cellText[0] <= "9"))) {
-            return cellText.replace(/,/g, "");;
+            return cellText.replace(/,/g, "");
         }
         // return node.childNodes[0].childNodes[0].innerHTML.replace(/,/g, "");
         var c = node.innerHTML;
