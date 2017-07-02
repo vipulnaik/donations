@@ -58,7 +58,25 @@ if ($doneeSelectResult -> num_rows == 0) {
   }
   if ($row['open_phil_grant_review'] != '') {
     print '<tr><td>Open Philanthropy Project grant review</td><td><a href="'.$row['open_phil_grant_review'].'">'.$row['open_phil_grant_review'].'</a></td></tr>';
-  }  
+  }
+  if ($row['instagram_username'] != '') {
+    print '<tr><td>Instagram username</td><td><a href="https://www.instagram.com/'.$row['instagram_username'].'">'.$row['instagram_username'].'</a></td></tr>';
+  }
+  if ($row['tumblr_subdomain'] != '') {
+    print '<tr><td>Tumblr subdomain</td><td><a href="'.$row['tumblr_subdomain'].'.tumblr.com">'.$row['tumblr_subdomain'].'</a></td></tr>';
+  }
+  if ($row['medium_username'] != '') {
+    print '<tr><td>Medium username</td><td><a href="https://www.medium.com/@'.$row['medium_username'].'">'.$row['medium_username'].'</a></td></tr>';
+  }
+  if ($row['charity_navigator_page'] != '') {
+    print '<tr><td>Charity Navigator page</td><td><a href="'.$row['charity_navigator_page'].'">'.$row['charity_navigator_page'].'</a></td></tr>';
+  }
+  if ($row['guidestar_page'] != '') {
+    print '<tr><td>Guidestar page</td><td><a href="'.$row['guidestar_page'].'">'.$row['guidestar_page'].'</a></td></tr>';
+  }
+  if ($row['timelines_wiki_page'] != '') {
+    print '<tr><td>Timelines wiki page</td><td><a href="'.$row['timelines_wiki_page'].'">'.$row['timelines_wiki_page'].'</a></td></tr>';
+  }
   if ($row['notes'] != '') {
     print '<tr><td>Notes</td><td>'.$row['notes'].'</td></tr>';
   }
