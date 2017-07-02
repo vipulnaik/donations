@@ -54,18 +54,22 @@ function cmpDoneesByAmount($firstDonee, $secondDonee) {
 
 usort($donees, "cmpDoneesByAmount");
 
+$dataForGraph = "donee";
 print '<table id="myTableDonorDonationAmountsByDoneeAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
 print "  <tr>\n    <th>Donee</th>\n	<th>Cause area</th>\n	<th>Metadata</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print "    <th>$year</th>\n";
+    $dataForGraph .= "|$year";
   }
 }
+$dataForGraph .= "|Total\n";
 print "    <th>Total</th>\n  </tr>\n";
 print "</thead>\n<tbody>\n";
 
 foreach ($donees as $donee) {
+  $dataForGraph .= $donee;
   print "  <tr>\n";
   print '    <td><a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a></td>'."\n";
   print '    <td>'.(isset($causeAreaForDonee[$donee]) ? $causeAreaForDonee[$donee] : "").'</td>'."\n";
@@ -103,9 +107,11 @@ foreach ($donees as $donee) {
   print "</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
+      $dataForGraph .=  "|".sprintf("%.2f", $donationAmountByDoneeAndYear[$donee][$year]);
       print '    <td align="right">'.number_format($donationAmountByDoneeAndYear[$donee][$year],2)."</td>\n";
     }
   }
+  $dataForGraph .= "|".sprintf("%.2f",$doneeDonationAmount[$donee])."\n";
   print '    <td align="right"><strong>'.number_format($doneeDonationAmount[$donee],2)."</strong></td>\n";
   print "  </tr>\n";
 }
@@ -114,13 +120,19 @@ print "</tbody>\n";
 print "<tfoot>\n";
 print "  <tr>\n    <td><strong>Total</strong></td>\n	".'<td align="center">--</td>'."\n".'	<td align="center">--</td>'."\n";
 
+$dataForGraph .= "Total";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
+    $dataForGraph .= "|".sprintf("%.2f",$yearDonationAmount[$year]);
     print '    <td align="right"><strong>'.number_format($yearDonationAmount[$year],2)."</strong></td>\n";
   }
 }
 
+$dataForGraph .= "|".sprintf("%.2f",$grandTotalDonationAmount)."\n";
 print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
 print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
+
+print "dataForGraph = $dataForGraph";
+
