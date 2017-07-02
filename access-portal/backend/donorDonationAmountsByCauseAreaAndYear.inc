@@ -171,7 +171,7 @@ if (file_exists($filePathBaseCumulative . ".csv") == false) {
     # print "<br/>The cached file contents match the existing data<br/><br/>";
   }
 }
-$cmdToExecuteCumulative = $generateGraphCmdBase . " " . $filePathBaseCumulative . ".csv " . $filePathBase . "-timeseries.png";
+$cmdToExecuteCumulative = $generateGraphCmdBase . " " . $filePathBaseCumulative . ".csv " . $filePathBaseCumulative . "-timeseries.png";
 if ($dataHasChangedCumulative == true or file_exists($filePathBaseCumulative . "-timeseries.png") == false) {
   if (file_exists($filePathBaseCumulative . "-timeseries.png") == true) {
     exec("rm ".$filePathBaseCumulative . "-timeseries.png");
