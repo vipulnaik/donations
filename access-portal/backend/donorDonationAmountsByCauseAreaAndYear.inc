@@ -116,4 +116,31 @@ foreach ($years as $year) {
   }
 }
 
-# print "dataForGraph = $dataForGraph";
+$permalinkUrl = "https://donations.vipulnaik.com/donor.php?donor=" + urlencode($donor) + "#donorDonationAmountsByCauseAreaAndYear";
+$fileName = hash("md5",$permalinkUrl);
+$filePathBase = $imagesPath . $fileName;
+$dataHasChanged = false;
+if (file_exists($filePathBase . ".csv") == false) {
+  # print "<br/>There is no file with the CSV $filePathBase . csv, so we are writing it out<br/>";
+  file_put_contents($filePathBase . ".csv", $dataForGraph);
+  $dataHasChanged = true;
+} else {
+  $previousOutput = file_get_contents($filePathBase . ".csv");
+  if ($previousOutput != $dataForGraph) {
+    # print "<br/>We have a cached file but the underlying data has changed<br/><br/>";
+    $dataHasChanged = true;
+    file_put_contents($filePathBase . ".csv", $dataForGraph);
+  } else {
+    # print "<br/>The cached file contents match the existing data<br/><br/>";
+  }
+}
+$cmdToExecute = $generateGraphCmdBase . " " . $filePathBase . ".csv " . $filePathBase . "-timeseries.png";
+if ($dataHasChanged == true or file_exists($filePathBase . "-timeseries.png") == false) {
+  if (file_exists($filePathBase . "-timeseries.png") == true) {
+    exec("rm ".$filePathBase . "-timeseries.png");
+  }
+  exec($cmdToExecute);
+}
+
+print '<img src="/images/'.$fileName.'-timeseries.png" alt="Graph of pageviews should have loaded here"></img>';
+
