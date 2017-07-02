@@ -53,6 +53,7 @@ usort($causeAreas, "cmpCauseAreasByAmount");
 
 print "<p>If you hover over a cell for a given cause area and year, you will get a tooltip with the number of donees and the number of donations.</p>\n";
 
+$dataForGraph = "Cause area";
 print '<table id="myTableDonorDonationAmountsByCauseAreaAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
 print "  <tr><th>Cause area</th>\n";
@@ -60,28 +61,34 @@ print "	 <th>Number of donations</th>\n";
 print "	 <th>Number of donees</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
+    $dataForGraph .= "|$year";
     print "    <th>$year</th>\n";
   }
 }
+$dataForGraph .= "|Total\n";
 print "    <th>Total</th>\n  </tr>\n";
 print "</thead>\n<tbody>\n";
 
 foreach ($causeAreas as $causeArea) {
+  $dataForGraph .= $causeArea;
   print "  <tr>\n";
   print "    <td>".'<a href="/?cause_area_filter='.urlencode($causeArea).'">'."$causeArea</a> (".'<a href="/donor.php?donor='.urlencode($donor).'&cause_area_filter='.urlencode($causeArea).'">filter this donor</a>'.")</td>\n";
   print '    <td align="right">'.$numDonationsByCauseArea[$causeArea]."</td>\n";
   print '    <td align="right">'.$numDoneesByCauseArea[$causeArea]."</td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
+      $dataForGraph .= "|".sprintf("%d",$donationAmountByCauseAreaAndYear[$causeArea][$year]);
       print '    <td align="right"><a title="'.sprintf("%d",$numDonationsByCauseAreaAndYear[$causeArea][$year]).' donations to '.sprintf("%d",$numDoneesByCauseAreaAndYear[$causeArea][$year]).' distinct donees">'.number_format($donationAmountByCauseAreaAndYear[$causeArea][$year],2)."</a></td>\n";
     }
   }
+  $dataForGraph .= "|".sprintf("%d",$causeAreaDonationAmount[$causeArea])."\n";
   print '    <td align="right"><strong>'.number_format($causeAreaDonationAmount[$causeArea],2)."</strong></td>\n";
   print "  </tr>\n";
 }
 
 print "</tbody>\n";
 print "<tfoot>\n";
+$dataForGraph .= "Total";
 print "  <tr>\n    <td><strong>Total</strong></td>\n";
 print '    <td align="right"><strong>'.$grandTotalNumDonations."</strong></td>\n";
 print '    <td align="right"><strong>'.$totalNumDistinctDonees."</strong></td>\n";
@@ -89,11 +96,15 @@ print '    <td align="right"><strong>'.$totalNumDistinctDonees."</strong></td>\n
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
+    $dataForGraph .= "|".sprintf("%d",$yearDonationAmount[$year]);
     print '    <td align="right"><strong>'.number_format($yearDonationAmount[$year],2)."</strong></td>\n";
   }
 }
 
+$dataForGraph .= "|".sprintf("%d",$grandTotalDonationAmount)."\n";
 print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
 print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
+
+print "dataForGraph = $dataForGraph";
