@@ -114,4 +114,4 @@ foreach ($years as $year) {
   }
 }
 
-print "dataForGraph = $dataForGraph";
+# print "dataForGraph = $dataForGraph";
