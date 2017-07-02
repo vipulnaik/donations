@@ -104,7 +104,7 @@ $dataForGraph = "Year";
 foreach ($causeAreas as $causeArea) {
   $dataForGraph .= "|$causeArea";
 }
-$dataForGraph .= "\n";
+$dataForGraph .= "|Total\n";
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
@@ -112,7 +112,7 @@ foreach ($years as $year) {
     foreach ($causeAreas as $causeArea) {
       $dataForGraph .= "|".sprintf("%d",$donationAmountByCauseAreaAndYear[$causeArea][$year]);
     }
-    $dataForGraph .= "\n";
+    $dataForGraph .= "|".sprintf("%d",$yearDonationAmount[$year])."\n";
   }
 }
 
@@ -142,5 +142,6 @@ if ($dataHasChanged == true or file_exists($filePathBase . "-timeseries.png") ==
   exec($cmdToExecute);
 }
 
+print "<p><strong>Graph of spending by cause area and year (incremental, not cumulative)</strong></p>";
 print '<img src="/images/'.$fileName.'-timeseries.png" alt="Graph of pageviews should have loaded here"></img>';
 
