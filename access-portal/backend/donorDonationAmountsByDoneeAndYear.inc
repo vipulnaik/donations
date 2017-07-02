@@ -134,5 +134,5 @@ print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
 
-print "dataForGraph = $dataForGraph";
+# print "dataForGraph = $dataForGraph";
 
