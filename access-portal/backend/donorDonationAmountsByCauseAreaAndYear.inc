@@ -97,3 +97,21 @@ print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2
 print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
+
+$dataForGraph = "Year";
+foreach ($causeAreas as $causeArea) {
+  $dataForGraph .= "|$causeArea";
+}
+$dataForGraph .= "\n";
+
+foreach ($years as $year) {
+  if ($yearDonationAmount[$year] > 0) {
+    $dataForGraph .= "$year";
+    foreach ($causeAreas as $causeArea) {
+      $dataForGraph .= "|".sprintf("%d",$donationAmountByCauseAreaAndYear[$causeArea][$year]);
+    }
+    $dataForGraph .= "\n";
+  }
+}
+
+print "dataForGraph = $dataForGraph";
