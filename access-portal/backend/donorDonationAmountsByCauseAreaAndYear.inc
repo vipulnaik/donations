@@ -127,7 +127,7 @@ foreach (array_reverse($years) as $year) {
   }
 }
 
-$permalinkUrl = "https://donations.vipulnaik.com/donor.php?donor=" + urlencode($donor) + "#donorDonationAmountsByCauseAreaAndYear";
+$permalinkUrl = "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor) . "#donorDonationAmountsByCauseAreaAndYear";
 $fileName = hash("md5",$permalinkUrl);
 $filePathBase = $imagesPath . $fileName;
 $dataHasChanged = false;
@@ -154,7 +154,7 @@ if ($dataHasChanged == true or file_exists($filePathBase . "-timeseries.png") ==
 }
 
 # Cumulative version
-$fileNameCumulative = hash("md5",$permalinkUrl + "-cumulative");
+$fileNameCumulative = hash("md5",$permalinkUrl . "-cumulative");
 $filePathBaseCumulative = $imagesPath . $fileNameCumulative;
 $dataHasChangedCumulative = false;
 if (file_exists($filePathBaseCumulative . ".csv") == false) {
