@@ -62,7 +62,7 @@ def get_df(fname, top=0):
     return df
 
 def do_a_plot(df, fname, kind):
-    df.plot(kind=kind, legend=None)
+    df.plot(kind=kind) # , legend=None)
     # If we want rolling averages, we would set n to whatever the window length
     # is, but for now we don't, so just hard-code it to 1
     # n = 1
