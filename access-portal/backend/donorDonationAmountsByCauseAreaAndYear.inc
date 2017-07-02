@@ -115,7 +115,7 @@ foreach (array_reverse($years) as $year) {
     $dataForCumulativeGraph .= "$year";
     foreach ($causeAreas as $causeArea) {
       if (!isset($cumulativeForCauseArea[$causeArea])) {
-        $cumulativeForCauseArea = 0;
+        $cumulativeForCauseArea[$causeArea] = 0;
       }
       $cumulativeForCauseArea[$causeArea] += $donationAmountByCauseAreaAndYear[$causeArea][$year];
       $dataForGraph .= "|".sprintf("%d",$donationAmountByCauseAreaAndYear[$causeArea][$year]);
