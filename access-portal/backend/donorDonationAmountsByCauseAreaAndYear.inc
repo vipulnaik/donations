@@ -53,6 +53,8 @@ usort($causeAreas, "cmpCauseAreasByAmount");
 
 print "<p>If you hover over a cell for a given cause area and year, you will get a tooltip with the number of donees and the number of donations.</p>\n";
 
+print "<p>Note: Cause area classification used here may not match that used by donor for all cases.</p>\n";
+
 print '<table id="myTableDonorDonationAmountsByCauseAreaAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
 print "  <tr><th>Cause area</th>\n";
