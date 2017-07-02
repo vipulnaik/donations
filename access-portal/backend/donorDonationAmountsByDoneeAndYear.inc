@@ -27,6 +27,9 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
   $wikipediaPage[$row['donee']] = $row['wikipedia_page'];
   $website[$row['donee']] = $row['website'];
   $causeAreaForDonee[$row['donee']] = $row['cause_area'];
+  $charityNavigatorPage[$row['donee']] = $row['charity_navigator_page'];
+  $guidestarPage[$row['donee']] = $row['guidestar_page'];
+  $timelinesWikiPage[$row['donee']] = $row['timelines_wiki_page'];
 }
 
 
@@ -82,7 +85,19 @@ foreach ($donees as $donee) {
     print '<a href="'.$wikipediaPage[$donee].'">WP</a> ';
   }
   if (isset($website[$donee]) && $website[$donee] != '') {
-    print '<a href="'.$website[$donee].'">Site</a>';
+    print '<a href="'.$website[$donee].'">Site</a> ';
+  }
+  if (array_key_exists($donee, $givewellReview) and $givewellReview[$donee] != '') {
+    print '<a href="'.$givewellReview[$donee].'">GW</a> ';
+  }
+  if (array_key_exists($donee, $charityNavigatorPage) and $charityNavigatorPage[$donee] != '') {
+    print '<a href="'.$charityNavigatorPage[$donee].'">CN</a> ';
+  }
+  if (array_key_exists($donee, $guidestarPage) and $guidestarPage[$donee] != '') {
+    print '<a href="'.$guidestarPage[$donee].'">GS</a> ';
+  }
+  if (array_key_exists($donee, $timelinesWikiPage) and $timelinesWikiPage[$donee] != '') {
+    print '<a href="'.$timelinesWikiPage[$donee].'">TW</a> ';
   }
   
   print "</td>\n";
