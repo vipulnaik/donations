@@ -68,7 +68,8 @@ def do_a_plot(df, fname, kind, legend=None):
     # If we want rolling averages, we would set n to whatever the window length
     # is, but for now we don't, so just hard-code it to 1
     # n = 1
-    plt.legend(bbox_to_anchor=(0.0, -0.14), loc='upper left', ncol=2)    
+    if legend:
+        plt.legend(bbox_to_anchor=(0.0, -0.14), loc='upper left', ncol=2)    
     plt.savefig(fname, bbox_inches="tight")
     plt.clf()
     plt.close()
