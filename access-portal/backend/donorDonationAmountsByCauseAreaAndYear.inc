@@ -127,6 +127,18 @@ foreach (array_reverse($years) as $year) {
   }
 }
 
+$dataForGraph .= "Total";
+$dataForCumulativeGraph .= "Total";
+foreach ($causeAreas as $causeArea) {
+  if (!isset($cumulativeForCauseArea[$causeArea])) {
+    $cumulativeForCauseArea[$causeArea] = 0;
+  }
+  $dataForGraph .= "|".sprintf("%d",$cumulativeForCauseArea[$causeArea]);
+  $dataForCumulativeGraph .= "|".sprintf("%d",$cumulativeForCauseArea[$causeArea]);  
+}
+$dataForGraph .= "|".sprintf("%d",$cumulativeTotal)."\n";
+$dataForCumulativeGraph .= "|".sprintf("%d",$cumulativeTotal)."\n";
+
 $permalinkUrl = "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor) . "#donorDonationAmountsByCauseAreaAndYear";
 $fileName = hash("md5",$permalinkUrl);
 $filePathBase = $imagesPath . $fileName;
