@@ -138,8 +138,11 @@ foreach ($causeAreas as $causeArea) {
 }
 $dataForGraph .= "|".sprintf("%d",$cumulativeTotal)."\n";
 $dataForCumulativeGraph .= "|".sprintf("%d",$cumulativeTotal)."\n";
-
-$permalinkUrl = "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor) . "#donorDonationAmountsByCauseAreaAndYear";
+$permalinkUrlBase = "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor);
+if (isset($causeAreaFilterString) and $causeAreaFilterString != '') {
+  $permalinkUrlBase .= "&cause_area_filter=".urlencode($causeAreaFilterString);
+}
+$permalinkUrl = $permalinkUrlBase . "#donorDonationAmountsByCauseAreaAndYear";
 $fileName = hash("md5",$permalinkUrl);
 $filePathBase = $imagesPath . $fileName;
 $dataHasChanged = false;
