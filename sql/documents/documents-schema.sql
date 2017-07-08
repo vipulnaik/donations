@@ -8,7 +8,7 @@ create table documents (
   publisher varchar(40),
   affected_donors varchar(1000),
   affected_donees varchar(1000),
-  document_scope enum('Launch','Broad donor strategy','Single donation documentation','Donee periodic update','Donee donation case','Evaluator review of donee','Evaluator update on donee','Evaluator consolidated recommendation list','Periodic donation list documentation','Reasoning supplement','Third-party coverage of donor strategy','Third-party case for donation','Third-party case against donation','Donation suggestion list', 'Unsolicited third-party suggestions for donor','Review of current state of cause area', 'Status change'),
+  document_scope enum('Launch','Broad donor strategy','Single donation documentation','Donee periodic update','Donee donation case','Evaluator review of donee','Evaluator update on donee','Evaluator consolidated recommendation list','Periodic donation list documentation','Reasoning supplement','Third-party coverage of donor strategy','Third-party case for donation','Third-party case against donation','Donation suggestion list', 'Unsolicited third-party suggestions for donor','Review of current state of cause area', 'Status change','Miscellaneous commentary', 'Donee AMA'),
   cause_area varchar(200),
   notes varchar(2000),
   unique key url(`url`)
