@@ -35,6 +35,7 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
     ('Jeff Kaufman and Julia Wise', 'Couple', 'United States', 'jefftk', 'http://www.jefftk.com/', 'http://www.jefftk.com/donations', 'jkaufman','jeff-kaufman-28a8bab','Centre for Effective Altruism','Jeff_Kaufman','jeff-kaufman','jeffkaufman',NULL);
 
 insert into donors(donor, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username) values
+    ('Brandon Reinhart','United States','GreenMarine',NULL,NULL,'BrandonReinhart',NULL,NULL,NULL,NULL,NULL,'metal_hart'),
     ('Aaron Gertler', 'United States', 'aaron.gertler', 'http://aarongertler.net/', 'http://aarongertler.net/donations/','aarongertler','aarongertler',NULL,'aarongertler','aaron-gertler','aarongertler','aarongertler'),
     ('Ajeya Cotra', 'United States', 'https://www.facebook.com/profile.php?id=1638572396','https://ajeyac.wordpress.com', 'no single location; https://eahub.org/user/ajeya-cotra, http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/, http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/',NULL,'ajeya-cotra-90942b8b','Open Philanthropy Project',NULL,'ajeya-cotra',NULL,NULL),
     ('Ben Kuhn', 'United States', 'ben.s.kuhn', 'http://www.benkuhn.net/', 'http://www.benkuhn.net/ea/','benkuhn', 'benskuhn',NULL,NULL,'ben-kuhn','benkuhn','benskuhn'),
