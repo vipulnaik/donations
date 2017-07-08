@@ -20,6 +20,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/oxprio.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/givewell-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/open-phil-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ace-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-and-good-ventures.sql
