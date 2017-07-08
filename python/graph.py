@@ -51,6 +51,11 @@ def get_df(fname, top=0):
     df = pd.read_csv(fname, sep='|')
     if 'Percentage' in df:
         del df['Percentage']
+    if top > 0:
+        # df.iloc[-2] is the Total row, and "1:" skips the first item, which is
+        # the string "Total".
+        top_cols = df.iloc[-1, 1:].sort_values(ascending=False)[:top].index.tolist()
+    df = df[:-1]        
     if "Month" in df:
         # 200610 -> "2006-10"
         df['Month'] = pd.to_datetime(df['Month'])
@@ -61,6 +66,8 @@ def get_df(fname, top=0):
             str(x) + "-01-01"))
         df = df.set_index('Year')
     df = df.sort_index()
+    if top_cols:
+        return df[top_cols]
     return df
 
 def do_a_plot(df, fname, kind, legend=None):
@@ -68,7 +75,8 @@ def do_a_plot(df, fname, kind, legend=None):
     # If we want rolling averages, we would set n to whatever the window length
     # is, but for now we don't, so just hard-code it to 1
     # n = 1
-    plt.legend(bbox_to_anchor=(0.0, -0.14), loc='upper left', ncol=2)    
+    if legend:
+        plt.legend(bbox_to_anchor=(0.0, -0.14), loc='upper left', ncol=2)    
     plt.savefig(fname, bbox_inches="tight")
     plt.clf()
     plt.close()
