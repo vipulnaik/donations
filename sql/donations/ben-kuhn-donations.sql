@@ -2,7 +2,7 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
     cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer)
     values
     ('Ben Kuhn', 'GiveDirectly', 120.00, NULL, '2013-07-06', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Ben Kuhn', 'Schistosomiasis Control Initiative', 80.00, NULL, '2013-07-06', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Ben Kuhn', 'Schistosomiasis Control Initiative', 80.00, NULL, '2013-07-06', 'day', 'donation log', 'Global health/deworming', 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'Against Malaria Foundation', 200.00, NULL, '2013-07-06', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'GiveWell', 6000.00, NULL, '2013-11-22', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Ben Kuhn', 'GiveWell', 10000.00, NULL, '2014-12-31', 'day', 'donation log', NULL, 'http://www.benkuhn.net/ea/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
