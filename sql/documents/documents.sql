@@ -22,11 +22,6 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016','Donations for 2016','2016-12-28',NULL,'Jacob Steinhardt',NULL,'Jacob Steinhardt','Donor lottery,GiveWell top charities,GiveDirectly,Blue Ribbon Study Panel,Carnegie Endowment for International Peace','Periodic donation list documentation','Biosecurity and pandemic preparedness,International relations,Global health and global poverty','Explanation for donation choices, also mention experimental funding of smaller projects');
 
-# -- documents related to SHIC
-insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('http://effective-altruism.com/ea/128/students_for_high_impact_charity_review_and_10k/','Students for High Impact Charity: Review and $10K Grant','2016-09-27',NULL,'Peter Hurford',NULL,'Peter Hurford','Students for High Impact Charity','Single donation documentation','Effective altruism/movement growth','Explanation of some of the investigative process that led the author to decide to donate to SHIC. The focus is on the investigation process and information revealed about SHIC rather than on the amount donated'),
-  ('http://effective-altruism.com/ea/190/students_for_highimpact_charity_interim_report/','Students for High-Impact Charity Interim Report','2017-04-03',NULL,'Baxter Bullock',NULL,NULL,'Students for High Impact Charity','Donee periodic update','Effective altruism/movement growth','Full report linked to is at https://drive.google.com/file/d/0B_YyyNcGXfb6ZVljWFVSdThVVjg/view (Google Drive)');
-
 # -- AI risk general
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
