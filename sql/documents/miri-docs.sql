@@ -24,7 +24,10 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
   ('https://www.facebook.com/vipulnaik.r/posts/10210792236177912','Belief status: off-the-cuff thoughts!','2017-01-19','2017-01-19','Vipul Naik','Facebook',NULL,'Machine Intelligence Research Institute','Reasoning supplement','AI risk','The post argues that (lack of) academic endorsement of the work done by MIRI should not be an important factor in evaluating MIRI, offering three reasons. Commenters include Rob Bensinger, Research Communications Manager at MIRI'),
   ('http://effective-altruism.com/ea/1ca/my_current_thoughts_on_miris_highly_reliable/','My current thoughts on MIRI’s highly reliable agent design work','2017-07-07',NULL,'Daniel Dewey','Effective Altruism Forum','Open Philanthropy Project','Machine Intelligence Research Institute','Evaluator review of donee','AI risk','Post discusses thoughts on the MIRI work on highly reliable agent design. Dewey is looking into the subject to inform Open Philanthropy Project grantmaking to MIRI specifically and for AI risk in general; the post reflects his own opinions that could affect Open Phil decisions');
 
-# -- documents to add
+# -- Donors describe why they donate
 
-# -- http://effective-altruism.com/ea/12r/ask_miri_anything_ama/
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('http://effective-altruism.com/ea/14c/why_im_donating_to_miri_this_year/',"Why I'm donating to MIRI this year", #'
+   '2016-11-30',NULL,'Owen Cotton-Barratt',NULL,'Owen Cotton-Barratt','Machine Intelligence Research Institute','Single donation documentation','AI risk','Primary interest is in existential risk. Cited CoI and other reasons for not donating to own employer, Centre for Effective Altruism. Notes disagreements with MIRI, citing http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support#research but highlights need for epistemic humility');
+   
 
