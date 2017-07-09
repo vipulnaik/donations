@@ -1,0 +1,22 @@
+insert into donations(donor, donee, amount, fraction, donation_date,
+    donation_date_precision, donation_date_basis, cause_area, url, notes,
+    payment_modality, match_eligible, goal_amount, influencer, employer_match,
+    matching_employer)
+    values
+    ('Aaron Gertler', 'Donor lottery', 500.00, NULL, '2016-12-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'See http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/ for more details', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Centre for Effective Altruism', 750.00, NULL, '2016-12-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'My end-of-year donation. $750 went to CEA, which runs a number of useful EA projects.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Against Malaria Foundation, Innovations for Poverty Action, Environmental Defense Fund', 350.00, NULL, '2016-12-06', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'My share of donations from a Giving Game co-sponsored by The Life You Can Save.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'GiveWell', 750.00, NULL, '2016-09-10', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Operational funding', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Against Malaria Foundation', 500.00, NULL, '2016-07-12', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'In support of a friend’s campaign.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Against Malaria Foundation', 600, NULL, '2016-06-26', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Rethink Charity', 600, NULL, '2016-06-26', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Against Malaria Foundation', 1400, NULL, '2016-04-17', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'GiveDirectly', 600, NULL, '2016-04-17', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'The donation resulted from their basic income announcement, though I gave unrestricted funding.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'GiveWell', 900, NULL, '2016-02-01', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Operational funding', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Center for Applied Rationality', 100, NULL, '2016-02-01', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Rethink Charity', 500, NULL, '2016-01-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Parsemus Foundation', 250, NULL, '2016-01-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Gift to David Benatar', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Against Malaria Foundation', 500, NULL, '2016-01-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Matched a fundraiser from EA Adelaide', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'GiveWell', 1892.50, NULL, '2015-01-01', 'year', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Second year as a Giving What We Can member.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Multiple organizations', 1892.50, NULL, '2015-01-01', 'year', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Second year as a Giving What We Can member.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Multiple organizations (primarily GiveWell)', 1685.00, NULL, '2014-01-01', 'year', 'donation log', NULL, 'http://aarongertler.net/donations/', 'First year as a Giving What We Can member.', NULL, NULL, NULL, NULL, NULL, NULL);

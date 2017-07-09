@@ -1,0 +1,15 @@
+insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis,
+    cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer, special_donation_reason)
+    values
+    ('Vipul Naik', 'Wikimedia Foundation', 125.00, NULL, '2007-12-01', 'month', 'donation log', NULL, 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'Direct online solicitation', NULL, NULL,'Hat tip'),
+    ('Vipul Naik', 'Mozilla Foundation', 12.50, NULL, '2007-12-01', 'month', 'donation log', NULL, 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'Direct online solicitation', NULL, NULL,'Hat tip'),
+    ('Vipul Naik', 'Creative Commons', 25.00, NULL, '2007-12-01', 'month', 'donation log', NULL, 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'Direct online solicitation', NULL, NULL,'Hat tip'),
+    ('Vipul Naik', 'Children International', NULL, 1.00, '2008-01-01', 'year', 'donation log', NULL, 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'Street sales', NULL, NULL,'Committed periodic donation'),
+    ('Vipul Naik', 'Children International', NULL, 1.00, '2009-01-01', 'year', 'donation log', NULL, 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'Street sales', NULL, NULL,'Committed periodic donation'),
+    ('Vipul Naik', 'Children International', NULL, NULL, '2010-01-01', 'year', 'donation log', NULL, 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'Street sales', NULL, NULL,'Committed periodic donation'),
+    ('Vipul Naik', 'VillageReach', 1250.00, NULL, '2010-01-16', 'day', 'transaction', 'Global health/vaccination', 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'GiveWell', NULL, NULL,NULL),
+    ('Vipul Naik', 'VillageReach', 2000.00, NULL, '2010-05-22', 'day', 'transaction', 'Global health/vaccination', 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'GiveWell', NULL, NULL,NULL),
+    ('Vipul Naik', 'Undisclosed recipient', 7500.00, NULL, '2010-09-01', 'month', 'donation log', 'Education/low-cost private education in developing world', 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'Donor initiative', NULL, NULL,'One-off opportunity'),
+    ('Vipul Naik', 'VillageReach', 5100.00, NULL, '2010-12-22', 'day', 'transaction', 'Global health/vaccination', 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'GiveWell', NULL, NULL, NULL),
+    ('Vipul Naik', 'The Seasteading Institute', 520.00, NULL, '2011-05-31', 'day', 'transaction', 'Alternate governance/seasteading', 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'Donor initiative', NULL, NULL, 'Compensation to charity for effort'),
+    ('Vipul Naik', 'GiveDirectly', 500.00, NULL, '2012-12-24', 'day', 'transaction', 'Global poverty/cash transfers', 'https://vipulnaik.com/donation-history/', NULL, NULL, false, NULL, 'GiveWell', NULL, NULL, NULL);
