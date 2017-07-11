@@ -1,6 +1,5 @@
 <?php
 print '<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" >';
-print '<title>Donations recorded by Vipul Naik</title>';
 include_once('analytics.inc');
 include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
@@ -9,9 +8,10 @@ $causeAreaFilterStringHelper = '';
 $causeAreaFilterQueryComponent = "";
 if (!empty($_REQUEST['cause_area_filter'])) {
   $causeAreaFilterString = $_REQUEST['cause_area_filter'];
-  $causeAreaFilterStringHelper = " (filtered to cause areas matching $causeAreaFilterStringHelper)";
+  $causeAreaFilterStringHelper = " (filtered to cause areas matching $causeAreaFilterString)";
   $causeAreaFilterQueryComponent = " where cause_area REGEXP '$causeAreaFilterString' ";
 }
+print "<title>Donations recorded by Vipul Naik $causeAreaFilterStringHelper</title>";
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
 print '<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>'."\n";
 print '<script type="text/javascript" src="./jquery.tablesorter.js"></script>'."\n";
@@ -26,7 +26,7 @@ print '<script>$(document).ready(function()
         $("#myTableDonationAmountsByDoneeAndYear").tablesorter({textExtraction: stripCommas});	
     }
 ); </script>'."\n";
-print '<h3>Donations recorded for Vipul Naik</h3>';
+print "<h3>Donations recorded for Vipul Naik $causeAreaFilterStringHelper</h3>";
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';

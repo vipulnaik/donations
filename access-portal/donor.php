@@ -32,7 +32,7 @@ print '<script>$(document).ready(function()
         $("#myTableDonorDonationList").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
-print "<h3>$donor donations made</h3>";
+print "<h3>$donor donations made $causeAreaFilterStringHelper</h3>";
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
