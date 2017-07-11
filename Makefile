@@ -22,6 +22,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/open-phil-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ace-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/miri-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cfar-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/80k-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gwwc-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/dickens-docs.sql
