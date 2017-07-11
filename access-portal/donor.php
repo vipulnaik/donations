@@ -9,10 +9,10 @@ $causeAreaFilterStringHelper = '';
 $causeAreaFilterQueryComponent = "";
 if (!empty($_REQUEST['cause_area_filter'])) {
   $causeAreaFilterString = $_REQUEST['cause_area_filter'];
-  $causeAreaFilterStringHelper = " (filtered to cause areas matching $causeAreaFilterStringHelper)";
+  $causeAreaFilterStringHelper = " (filtered to cause areas matching $causeAreaFilterString)";
   $causeAreaFilterQueryComponent = " and cause_area REGEXP ".'"'.$causeAreaFilterString.'" ';
 }
-print "<title>$donor donations made (filtered to cause areas matching $causeAreaFilterStringHelper)</title>";
+print "<title>$donor donations made $causeAreaFilterStringHelper</title>";
 include_once('analytics.inc');
 include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
