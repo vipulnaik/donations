@@ -26,7 +26,7 @@ print '<script>$(document).ready(function()
         $("#myTableDonationAmountsByDoneeAndYear").tablesorter({textExtraction: stripCommas});	
     }
 ); </script>'."\n";
-print "<h3>Donations recorded for Vipul Naik $causeAreaFilterStringHelper</h3>";
+print "<h3>Donations recorded by Vipul Naik $causeAreaFilterStringHelper</h3>";
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
