@@ -135,6 +135,7 @@ def get_social_media(url):
         if "en.wikipedia.org" in url:
             print(url)
 
+
 def links(doc, parse_full=False):
     if parse_full:
         soup = BeautifulSoup(doc, "html.parser")
@@ -143,6 +144,7 @@ def links(doc, parse_full=False):
         only_a_tags = SoupStrainer("a")
         links = BeautifulSoup(doc, "html.parser", parse_only=only_a_tags)
     return links
+
 
 def addthis(links):
     """
@@ -164,9 +166,8 @@ def addthis(links):
 def urls_on_page(doc):
     """
     """
-    links = links(doc)
     result = []
-    for link in links:
+    for link in links(doc):
         if link.has_attr("href"):
             result.append(link["href"])
     return result
