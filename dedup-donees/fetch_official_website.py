@@ -3,13 +3,13 @@
 import requests
 import logging
 import re
+import sys
 
 
 def main():
-    with open("temp3") as f:
-        for line in f:
-            orgname = line.split("\t")[0].strip()
-            print("{}\t{}".format(orgname, get_homepage(orgname)))
+    for line in sys.stdin:
+        orgname = line.rstrip()
+        print("{}\t{}".format(orgname, get_homepage(orgname)))
 
 
 def get_homepage(orgname, lang="en"):
