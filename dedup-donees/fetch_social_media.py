@@ -5,19 +5,28 @@ import logging
 import re
 
 
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
 
 
 def main():
-    # print(get_homepage("Drugs for Neglected Diseases Initiative"))
-    print(wikidata_official_website("Drugs for Neglected Diseases Initiative"))
+    with open("temp3") as f:
+        for line in f:
+            orgname = line.split("\t")[0].strip()
+            print("{}\t{}".format(orgname, get_homepage(orgname)))
 
 
 def get_homepage(orgname, lang="en"):
     """
     Take orgname and try to return a homepage for that org.
     """
-    return just_a_domain(orgname)
+    wikidata = wikidata_official_website(orgname)
+    if wikidata:
+        return wikidata[0]
+    else:
+        domains = just_a_domain(orgname)
+        if domains:
+            return domains[0]
+    return ""
 
 
 def wikidata_official_website(orgname, lang="en"):
