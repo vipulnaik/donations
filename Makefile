@@ -12,6 +12,7 @@ reset:
 
 .PHONY: init
 init:
+	mkdir -p access-portal/images
 	mysql $(MYSQL_ARGS) -e "create database $(DATABASE);"
 
 # To update this section, paste the output of:
