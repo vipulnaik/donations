@@ -32,7 +32,7 @@ def wikidata_official_website(orgname, lang="en"):
             "language": lang,
             "search": orgname,
     }
-    r = requests.get('http://www.wikidata.org/w/api.php', params=payload)
+    r = requests.get('https://www.wikidata.org/w/api.php', params=payload)
     result = r.json()
     if 'error' in result:
         logging.warning("FAILED %s %s", r.url, result['error'])
@@ -56,7 +56,7 @@ def wikidata_official_website(orgname, lang="en"):
                 "entity": entity,
                 "property": "P856",
         }
-        r = requests.get('http://www.wikidata.org/w/api.php', params=payload)
+        r = requests.get('https://www.wikidata.org/w/api.php', params=payload)
         result = r.json()
         if 'error' in result:
             logging.warning("FAILED %s %s", r.url, result['error'])
@@ -85,7 +85,7 @@ def just_a_domain(orgname, lang="en"):
             'prop': 'externallinks',
             'page': orgname,
     }
-    r = requests.get('http://{}.wikipedia.org/w/api.php'.format(lang),
+    r = requests.get('https://{}.wikipedia.org/w/api.php'.format(lang),
                      params=payload)
     result = r.json()
     candidates = []
