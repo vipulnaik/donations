@@ -36,7 +36,7 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
     ('Jeff Kaufman and Julia Wise', 'Couple', 'United States', 'jefftk', 'http://www.jefftk.com/', 'http://www.jefftk.com/donations', 'jkaufman','jeff-kaufman-28a8bab','Centre for Effective Altruism','Jeff_Kaufman','jeff-kaufman','jeffkaufman',NULL);
 
 insert into donors(donor, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username, instagram_username) values
-    ('Brandon Reinhart','United States','GreenMarine',NULL,NULL,'BrandonReinhart',NULL,NULL,NULL,NULL,NULL,'metal_hart','metal.hart'),
+    ('Brandon Reinhart','United States','GreenMarine',NULL,NULL,'BrandonReinhart',NULL,NULL,NULL,NULL,NULL,'metal_hart','metal.hart');
 
 insert into donors(donor, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username) values
     ('Aaron Gertler', 'United States', 'aaron.gertler', 'http://aarongertler.net/', 'http://aarongertler.net/donations/','aarongertler','aarongertler',NULL,'aarongertler','aaron-gertler','aarongertler','aarongertler'),

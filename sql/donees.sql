@@ -33,7 +33,7 @@ create table donees (
     pinterest_username varchar(100),
     charity_navigator_page varchar(100),
     guidestar_page varchar(100),
-    timelines_wiki_page varchar(100)
+    timelines_wiki_page varchar(100),
     unique key donee(`donee`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
