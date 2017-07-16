@@ -2,7 +2,7 @@
 
 Available at https://donations.vipulnaik.com but still in beta
 
-Note that the passwordFile.inc file in access-portal/backend/globalVariables is excluded from the Git repository, but you can see a corresponding dummy password file at [dummyPasswordFile.inc](https://github.com/vipulnaik/donations/blob/master/access-portal/backend/globalVariables/dummyPasswordFile.inc).
+Note that the `passwordFile.inc` file in `access-portal/backend/globalVariables` is excluded from the Git repository, but you can see a corresponding dummy password file at [`dummyPasswordFile.inc`](https://github.com/vipulnaik/donations/blob/master/access-portal/backend/globalVariables/dummyPasswordFile.inc).
 
 ## Setting up
 
@@ -19,14 +19,14 @@ After modifying the SQL instructions, use `reset` to drop the tables:
 
     make reset && make read
 
-Once the database is ready, one can run the site locally:
+Once the database is ready, you can run the site locally:
 
     cp access-portal/backend/globalVariables/{dummyPasswordFile.inc,passwordFile.inc}
     vi access-portal/backend/globalVariables/passwordFile.inc # change to add database login info
     cd access-portal
     php -S localhost:8000
 
-Now one can visit `http://localhost:8000/index.php` in one’s browser.
+Now you can visit `http://localhost:8000/index.php` in your browser.
 
 For table sorting:
 
