@@ -135,16 +135,36 @@ def get_social_media(url):
         if "en.wikipedia.org" in url:
             print(url)
 
-
-def urls_on_page(doc, parse_full=False):
-    """
-    """
+def links(doc, parse_full=False):
     if parse_full:
         soup = BeautifulSoup(doc, "html.parser")
         links = soup.find_all("a")
     else:
         only_a_tags = SoupStrainer("a")
         links = BeautifulSoup(doc, "html.parser", parse_only=only_a_tags)
+    return links
+
+def addthis(links):
+    """
+    Get AddThis accounts.
+    """
+    for link in links:
+        if link.get("class") is not None:
+            if any("addthis_button_twitter_follow" in c
+                    for c in link.get("class")):
+                print("https://twitter.com/" + link.get("addthis:userid"))
+            if any("addthis_button_instagram_follow" in c
+                    for c in link.get("class")):
+                print("https://instagram.com/" + link.get("addthis:userid"))
+            if any("addthis_button_facebook_follow" in c
+                    for c in link.get("class")):
+                print("https://facebook.com/" + link.get("addthis:userid"))
+
+
+def urls_on_page(doc):
+    """
+    """
+    links = links(doc)
     result = []
     for link in links:
         if link.has_attr("href"):
