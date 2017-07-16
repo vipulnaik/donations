@@ -36,6 +36,11 @@ def get_social_media(url):
 
 
 def links(doc, parse_full=False):
+    """
+    Given an HTML document, parse it to find all link tags. Return a list of
+    <a> tags. If parse_full is true, parse the whole document; otherwise use
+    SoupStrainer to parse only <a> tags.
+    """
     if parse_full:
         soup = BeautifulSoup(doc, "html.parser")
         links = soup.find_all("a")
