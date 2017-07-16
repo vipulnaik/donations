@@ -8,6 +8,7 @@ reset:
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donees;"
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donors;"
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists gifts;"
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists money_moved;"
 
 .PHONY: init
 init:
