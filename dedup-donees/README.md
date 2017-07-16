@@ -10,7 +10,7 @@ Get biggest donees:
 corresponding organization websites. Observe:
 
 ```bash
-$ mysql --skip-column name -e \
+$ mysql --skip-column-names -e \
     "use donations; select donee,sum(amount) from donations group by donee order by sum(amount) desc;" \
     | head -10 | cut -f1 | ./fetch_official_website.py
 GAVI Alliance   http://www.gavi.org/
