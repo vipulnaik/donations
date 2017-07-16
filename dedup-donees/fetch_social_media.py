@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import re
 import requests
 from bs4 import SoupStrainer, BeautifulSoup
 
@@ -75,6 +76,17 @@ def urls_on_page(doc):
         if link.has_attr("href"):
             result.append(link["href"])
     return result
+
+
+def regex_match(doc):
+    """
+    """
+    results = []
+    for line in doc.decode("utf-8").split("\n"):
+        m = re.match(r"//(facebook|instagram|twitter)\.com/([A-Za-z0-9-]+/?)+", line)
+        if m:
+            results.append(m.group(0))
+    return results
 
 
 if __name__ == "__main__":
