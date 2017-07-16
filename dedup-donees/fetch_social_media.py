@@ -6,12 +6,21 @@ import re
 
 
 def main():
-    print(get_homepage("Imperial College London"))
+    print(get_homepage("Drugs for Neglected Diseases Initiative"))
 
 
 def get_homepage(orgname, lang="en"):
     """
     Take orgname and try to return a homepage for that org.
+    """
+    return just_a_domain(orgname)
+
+
+def just_a_domain(orgname, lang="en"):
+    """
+    Apply the heuristic of "any external link on the Wikipedia page that is
+    just a domain (i.e. not a deep link) is likely to be the official website
+    of the org".
     """
     payload = {
             'action': 'parse',
