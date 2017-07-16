@@ -136,13 +136,15 @@ def get_social_media(url):
             print(url)
 
 
-def urls_on_page(doc):
+def urls_on_page(doc, parse_full=False):
     """
     """
-    only_a_tags = SoupStrainer("a")
-    # soup = BeautifulSoup(doc, "html.parser")
-    # links = soup.find_all("a")
-    links = BeautifulSoup(doc, "html.parser", parse_only=only_a_tags)
+    if parse_full:
+        soup = BeautifulSoup(doc, "html.parser")
+        links = soup.find_all("a")
+    else:
+        only_a_tags = SoupStrainer("a")
+        links = BeautifulSoup(doc, "html.parser", parse_only=only_a_tags)
     result = []
     for link in links:
         if link.has_attr("href"):
