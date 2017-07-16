@@ -5,6 +5,9 @@ import logging
 import re
 
 
+logging.basicConfig(level=logging.DEBUG)
+
+
 def main():
     # print(get_homepage("Drugs for Neglected Diseases Initiative"))
     print(wikidata_official_website("Drugs for Neglected Diseases Initiative"))
@@ -22,6 +25,7 @@ def wikidata_official_website(orgname, lang="en"):
     Apply the heuristic of "if Wikidata has an official website listed for an
     org with this name, that is likely to be the official website".
     """
+    # First get some candidate entities by searching wikidata
     payload = {
             "action": "wbsearchentities",
             "format": "json",
@@ -39,7 +43,34 @@ def wikidata_official_website(orgname, lang="en"):
         for d in result["search"]:
             if "id" in d:
                 candidate_org_ids.append(d["id"])
-    return candidate_org_ids
+
+    logging.debug("CANDIDATE IDs: %s", candidate_org_ids)
+
+    # Now that we have some candidate entities, query to find official websites
+    candidates = []
+    for entity in candidate_org_ids:
+        payload = {
+                "action": "wbgetclaims",
+                "format": "json",
+                # "language": lang,
+                "entity": entity,
+                "property": "P856",
+        }
+        r = requests.get('http://www.wikidata.org/w/api.php', params=payload)
+        result = r.json()
+        if 'error' in result:
+            logging.warning("FAILED %s %s", r.url, result['error'])
+        if 'warnings' in result:
+            logging.warning(result['warnings'])
+        if "claims" in result and "P856" in result["claims"]:
+            for i in result["claims"]["P856"]:
+                try:
+                    url = i["mainsnak"]["datavalue"]["value"]
+                    candidates.append(url)
+                except KeyError as e:
+                    logging.warning("Could not find P856: %s", e)
+
+    return candidates
 
 
 def just_a_domain(orgname, lang="en"):
