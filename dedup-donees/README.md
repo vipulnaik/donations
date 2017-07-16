@@ -7,12 +7,17 @@ Get biggest donees:
     mysql -e "use donations; select donee,sum(amount) from donations group by donee order by sum(amount) desc;" > temp3
 
 `fetch_official_website.py` takes a list of organization names and prints out
-corresponding organization websites. Observe:
+corresponding organization websites. For instance with:
 
 ```bash
-$ mysql --skip-column-names -e \
+mysql --skip-column-names -e \
     "use donations; select donee,sum(amount) from donations group by donee order by sum(amount) desc;" \
     | head -10 | cut -f1 | ./fetch_official_website.py
+```
+
+one should obtain an output like:
+
+```
 GAVI Alliance   http://www.gavi.org/
 World Health Organization       http://www.who.int
 PATH    https://www.path.com
