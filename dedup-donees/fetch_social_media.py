@@ -3,6 +3,7 @@
 import requests
 import logging
 import re
+from bs4 import SoupStrainer, BeautifulSoup
 
 
 # logging.basicConfig(level=logging.DEBUG)
@@ -109,6 +110,37 @@ def just_a_domain(orgname, lang="en"):
             if m:
                 candidates.append(m.group(0))
     return candidates
+
+
+def get_social_media(url):
+    """
+    Find social media accounts given a URL (most likely the homepage of the
+    org).
+    """
+    r = requests.get(url)
+    for url in urls_on_page(r.content):
+        if "facebook.com" in url:
+            print(url)
+        if "instagram.com" in url:
+            print(url)
+        if "twitter.com" in url:
+            print(url)
+        if "pinterest.com" in url:
+            print(url)
+        if "en.wikipedia.org" in url:
+            print(url)
+
+
+def urls_on_page(doc):
+    """
+    """
+    only_a_tags = SoupStrainer("a")
+    soup = BeautifulSoup(doc, "html.parser", parse_only=only_a_tags)
+    result = []
+    for link in soup:
+        if link.has_attr("href"):
+            result.append(link["href"])
+    return result
 
 
 if __name__ == "__main__":
