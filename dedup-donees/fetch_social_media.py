@@ -92,12 +92,12 @@ def domains_match(links):
         url = link["href"]
         for domain in ["facebook", "instagram", "twitter", "pinterest"]:
             m = (re.match(r"(?:https?:)?//(?:www\.)?" + domain +
-                          r"\.com/([A-Za-z0-9.-]+)", url))
+                          r"\.com/([A-Za-z0-9_.-]+)", url))
             if m and not blacklisted(url):
                 result.append({domain: m.group(1), "source": "domains_match"})
         for domain in ["youtube"]:
             m = (re.match(r"(?:https?:)?//(?:www\.)?" + domain +
-                          r"\.com/user/([A-Za-z0-9.-]+)/?", url))
+                          r"\.com/user/([A-Za-z0-9_.-]+)/?", url))
             if m and not blacklisted(url):
                 result.append({domain: m.group(1), "source": "domains_match"})
     return result
@@ -115,11 +115,11 @@ def regex_match(doc):
     for line in f:
         matches = re.findall(r"""//(?:www\.)?"""
                              "(facebook|instagram|twitter|pinterest)"
-                             r"""\.com/([A-Za-z0-9.-]+)""",
+                             r"""\.com/([A-Za-z0-9_.-]+)""",
                              line)
         matches += re.findall(r"""//(?:www\.)?"""
                               "(youtube)"
-                              r"""\.com/user/([A-Za-z0-9.-]+)""",
+                              r"""\.com/user/([A-Za-z0-9_.-]+)""",
                               line)
         for m in matches:
             if not blacklisted(m[1]):
