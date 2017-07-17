@@ -102,7 +102,12 @@ def regex_match(doc):
     """
     """
     results = []
-    for line in doc.decode("utf-8").split("\n"):
+    try:
+        f = doc.decode("utf-8").split("\n")
+    except UnicodeDecodeError as e:
+        logging.warning(e)
+        f = ""
+    for line in f:
         matches = re.findall(r"""//(?:www\.)?"""
                              "(facebook|instagram|twitter|pinterest)"
                              r"""\.com/([A-Za-z0-9.-]+)""",
