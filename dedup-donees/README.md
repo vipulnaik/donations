@@ -29,7 +29,7 @@ United States Fund for UNICEF
 Johns Hopkins University        http://www.jhu.edu
 ```
 
-`fetch_social_media.py` gets social media accounts. Currently, it looks for:
+`fetch_social_media.py` gets social media accounts. Currently, it is supposed to for:
 
 - Facebook
 - Twitter
