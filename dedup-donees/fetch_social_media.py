@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import re
+import logging
 import requests
 import sys
 import json
@@ -85,14 +86,13 @@ def domains_match(links):
     for link in links:
         if link.has_attr("href"):
             url = link["href"]
-            if "facebook.com" in url and not blacklisted(url):
-                result.append({"facebook": url, "source": "domains_match"})
-            if "instagram.com" in url and not blacklisted(url):
-                result.append({"instagram": url, "source": "domains_match"})
-            if "twitter.com" in url and not blacklisted(url):
-                result.append({"twitter": url, "source": "domains_match"})
-            if "pinterest.com" in url and not blacklisted(url):
-                result.append({"pinterest": url, "source": "domains_match"})
+            for domain in ["facebook", "instagram", "twitter", "pinterest"]:
+                username = (re.sub(r"(?:https?:)?//(?:www\.)?" + domain +
+                            r"\.com/([A-Za-z0-9]+)/?", r"\1", url))
+                if domain + ".com" in url and not blacklisted(url):
+                    result.append({domain: username, "source": "domains_match"})
+                    if "/" in username:
+                        logging.warning("%s | %s", url, username)
     return result
 
 
