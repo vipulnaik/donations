@@ -21,7 +21,7 @@ def main():
         url = line.strip()
         result[url] = get_social_media(url)
     with open("social_media.json", "w") as f:
-        json.dump(result, f)
+        json.dump(result, f, indent=4)
 
 
 def get_social_media(url):
@@ -65,13 +65,16 @@ def addthis(links):
         if link.get("class") is not None:
             if any("addthis_button_twitter_follow" in c
                     for c in link.get("class")):
-                result.append({"twitter": link.get("addthis:userid")})
+                result.append({"twitter": link.get("addthis:userid"),
+                               "source": "addthis"})
             if any("addthis_button_instagram_follow" in c
                     for c in link.get("class")):
-                result.append({"instagram": link.get("addthis:userid")})
+                result.append({"instagram": link.get("addthis:userid"),
+                               "source": "addthis"})
             if any("addthis_button_facebook_follow" in c
                     for c in link.get("class")):
-                result.append({"facebook": link.get("addthis:userid")})
+                result.append({"facebook": link.get("addthis:userid"),
+                               "source": "addthis"})
     return result
 
 
@@ -83,13 +86,13 @@ def domains_match(links):
         if link.has_attr("href"):
             url = link["href"]
             if "facebook.com" in url:
-                result.append({"facebook": url})
+                result.append({"facebook": url, "source": "domains_match"})
             if "instagram.com" in url:
-                result.append({"instagram": url})
+                result.append({"instagram": url, "source": "domains_match"})
             if "twitter.com" in url:
-                result.append({"twitter": url})
+                result.append({"twitter": url, "source": "domains_match"})
             if "pinterest.com" in url:
-                result.append({"pinterest": url})
+                result.append({"pinterest": url, "source": "domains_match"})
     return result
 
 
@@ -102,7 +105,8 @@ def regex_match(doc):
                      line)
         if m:
             # results.append(m.group(0))
-            results.append({m.group(1): m.group(2)})
+            results.append({m.group(1): m.group(2),
+                            "source": "regex_match"})
     return results
 
 
