@@ -87,10 +87,9 @@ def domains_match(links):
         if link.has_attr("href"):
             url = link["href"]
             for domain in ["facebook", "instagram", "twitter", "pinterest"]:
-                m = (re.search(r"(?:https?:)?//(?:www\.)?" + domain +
+                matches = (re.findall(r"(?:https?:)?//(?:www\.)?" + domain +
                             r"\.com/([A-Za-z0-9-]+)/?", url))
-                if m:
-                    username = m.group(1)
+                for username in matches:
                     if domain + ".com" in url and not blacklisted(url):
                         result.append({domain: username, "source": "domains_match"})
                         if "/" in username:
@@ -103,10 +102,12 @@ def regex_match(doc):
     """
     results = []
     for line in doc.decode("utf-8").split("\n"):
-        m = re.search(r"""//(?:www\.)?(facebook|instagram|twitter)\.com/([A-Za-z0-9]+)""",
+        matches = re.findall(r"""//(?:www\.)?(facebook|instagram|twitter|pinterest)\.com/([A-Za-z0-9]+)""",
                      line)
-        if m:
-            results.append({m.group(1): m.group(2),
+        if matches:
+            logging.warning("%s %s", type(matches), matches)
+        for m in matches:
+            results.append({m[0]: m[1],
                             "source": "regex_match"})
     return results
 
