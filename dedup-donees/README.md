@@ -38,3 +38,6 @@ Johns Hopkins University        http://www.jhu.edu
 - Tumblr
 - Medium
 - Pinterest
+
+This script takes lines of URLs and writes a JSON file containing social media
+info.
