@@ -112,16 +112,12 @@ def regex_match(doc):
 
 
 def blacklisted(account_name):
-    if "search?" in account_name:
-        return True
     if account_name.lower() in ["search", "intent", "sharer", "pages"]:
         return True
-    if "/sharer/" in account_name:
-        return True
-    if "/intent/" in account_name:
-        return True
-    if "/#!/" in account_name:
-        return True
+    bad = ["search?", "/sharer/", "/intent/", "/#!/", "/i/", "/p/"]
+    for b in bad:
+        if b in account_name:
+            return True
     return False
 
 if __name__ == "__main__":
