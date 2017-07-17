@@ -28,3 +28,13 @@ PATH Vaccine Solutions
 United States Fund for UNICEF
 Johns Hopkins University        http://www.jhu.edu
 ```
+
+`fetch_social_media.py` gets social media accounts. Currently, it looks for:
+
+- Facebook
+- Twitter
+- Instagram
+- YouTube
+- Tumblr
+- Medium
+- Pinterest
