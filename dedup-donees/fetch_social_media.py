@@ -135,7 +135,7 @@ def blacklisted(account_name):
     for b in bad:
         if b in account_name:
             return True
-    if re.match(r"^\d+$", account_name):
+    if re.match(r"^\d\d\d\d$", account_name):
         return True
     return False
 
