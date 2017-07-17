@@ -87,12 +87,14 @@ def domains_match(links):
         if link.has_attr("href"):
             url = link["href"]
             for domain in ["facebook", "instagram", "twitter", "pinterest"]:
-                username = (re.sub(r"(?:https?:)?//(?:www\.)?" + domain +
-                            r"\.com/([A-Za-z0-9]+)/?", r"\1", url))
-                if domain + ".com" in url and not blacklisted(url):
-                    result.append({domain: username, "source": "domains_match"})
-                    if "/" in username:
-                        logging.warning("%s | %s", url, username)
+                m = (re.search(r"(?:https?:)?//(?:www\.)?" + domain +
+                            r"\.com/([A-Za-z0-9-]+)/?", url))
+                if m:
+                    username = m.group(1)
+                    if domain + ".com" in url and not blacklisted(url):
+                        result.append({domain: username, "source": "domains_match"})
+                        if "/" in username:
+                            logging.warning("%s | %s", url, username)
     return result
 
 
