@@ -122,13 +122,14 @@ def regex_match(doc):
                               r"""\.com/user/([A-Za-z0-9.-]+)""",
                               line)
         for m in matches:
-            results.append({m[0]: m[1],
-                            "source": "regex_match"})
+            if not blacklisted(m[1]):
+                results.append({m[0]: m[1],
+                                "source": "regex_match"})
     return results
 
 
 def blacklisted(account_name):
-    if account_name.lower() in ["search", "intent", "sharer", "pages"]:
+    if account_name.lower() in ["search", "intent", "sharer", "pages", "i", "tr", "p"]:
         return True
     bad = ["search?", "/sharer/", "/intent/", "/#!/", "/i/", "/p/"]
     for b in bad:
