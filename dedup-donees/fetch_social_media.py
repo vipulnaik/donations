@@ -2,6 +2,8 @@
 
 import re
 import requests
+import sys
+import json
 from bs4 import SoupStrainer, BeautifulSoup
 
 
@@ -14,7 +16,12 @@ HEADERS = {
 
 
 def main():
-    pass
+    result = {}
+    for line in sys.stdin:
+        url = line.strip()
+        result[url] = get_social_media(url)
+    with open("social_media.json", "w") as f:
+        json.dump(result, f)
 
 
 def get_social_media(url):
@@ -23,17 +30,15 @@ def get_social_media(url):
     org).
     """
     r = requests.get(url, headers=HEADERS)
-    for url in urls_on_page(r.content):
-        if "facebook.com" in url:
-            print(url)
-        if "instagram.com" in url:
-            print(url)
-        if "twitter.com" in url:
-            print(url)
-        if "pinterest.com" in url:
-            print(url)
-        if "en.wikipedia.org" in url:
-            print(url)
+    l = links(r.content)
+    result = []
+
+    # Populate the results list using various heuristics
+    result.extend(addthis(l))
+    result.extend(domains_match(l))
+    result.extend(regex_match(r.content))
+
+    return result
 
 
 def links(doc, parse_full=False):
@@ -55,20 +60,22 @@ def addthis(links):
     """
     Get AddThis accounts.
     """
+    result = []
     for link in links:
         if link.get("class") is not None:
             if any("addthis_button_twitter_follow" in c
                     for c in link.get("class")):
-                print("https://twitter.com/" + link.get("addthis:userid"))
+                result.append({"twitter": link.get("addthis:userid")})
             if any("addthis_button_instagram_follow" in c
                     for c in link.get("class")):
-                print("https://instagram.com/" + link.get("addthis:userid"))
+                result.append({"instagram": link.get("addthis:userid")})
             if any("addthis_button_facebook_follow" in c
                     for c in link.get("class")):
-                print("https://facebook.com/" + link.get("addthis:userid"))
+                result.append({"facebook": link.get("addthis:userid")})
+    return result
 
 
-def urls_on_page(doc):
+def domains_match(links):
     """
     """
     result = []
@@ -76,6 +83,17 @@ def urls_on_page(doc):
         if link.has_attr("href"):
             result.append(link["href"])
     return result
+    for url in urls_on_page(r.content):
+        if "facebook.com" in url:
+            print(url)
+        if "instagram.com" in url:
+            print(url)
+        if "twitter.com" in url:
+            print(url)
+        if "pinterest.com" in url:
+            print(url)
+        if "en.wikipedia.org" in url:
+            print(url)
 
 
 def regex_match(doc):
@@ -86,7 +104,8 @@ def regex_match(doc):
         m = re.match(r"//(facebook|instagram|twitter)\.com/([A-Za-z0-9-]+/?)+",
                      line)
         if m:
-            results.append(m.group(0))
+            # results.append(m.group(0))
+            results.append({m.group(1): m.group(2)})
     return results
 
 
