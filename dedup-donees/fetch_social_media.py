@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import re
-import logging
+# import logging
 import requests
 import sys
 import json
@@ -111,8 +111,6 @@ def regex_match(doc):
                               "(youtube)"
                               r"""\.com/user/([A-Za-z0-9.-]+)""",
                               line)
-        if matches:
-            logging.warning("%s %s", type(matches), matches)
         for m in matches:
             results.append({m[0]: m[1],
                             "source": "regex_match"})
