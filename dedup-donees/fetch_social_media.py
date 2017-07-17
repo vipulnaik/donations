@@ -129,12 +129,14 @@ def regex_match(doc):
 
 
 def blacklisted(account_name):
-    if account_name.lower() in ["search", "intent", "sharer", "pages", "i", "tr", "p"]:
+    if account_name.lower() in ["search", "intent", "sharer", "pages", "i", "tr", "p", "H"]:
         return True
     bad = ["search?", "/sharer/", "/intent/", "/#!/", "/i/", "/p/"]
     for b in bad:
         if b in account_name:
             return True
+    if re.match(r"^\d+$", account_name):
+        return True
     return False
 
 
