@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import re
-# import logging
+import logging
 import requests
 import sys
 import json
@@ -20,6 +20,7 @@ def main():
     result = {}
     for line in sys.stdin:
         url = line.strip()
+        logging.warning("Doing %s", url)
         result[url] = get_social_media(url)
     with open("social_media.json", "w") as f:
         json.dump(result, f, indent=4)
@@ -30,16 +31,20 @@ def get_social_media(url):
     Find social media accounts given a URL (most likely the homepage of the
     org).
     """
-    r = requests.get(url, headers=HEADERS)
-    l = link_tags(r.content)
-    result = []
+    try:
+        r = requests.get(url, headers=HEADERS)
+        l = link_tags(r.content)
+        result = []
 
-    # Populate the results list using various heuristics
-    result.extend(addthis(l))
-    result.extend(domains_match(l))
-    result.extend(regex_match(r.content))
+        # Populate the results list using various heuristics
+        result.extend(addthis(l))
+        result.extend(domains_match(l))
+        result.extend(regex_match(r.content))
 
-    return result
+        return result
+
+    except Exception as e:
+        logging.warning(e)
 
 
 def link_tags(doc, parse_full=False):
