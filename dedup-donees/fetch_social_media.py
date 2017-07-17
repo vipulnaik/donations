@@ -101,10 +101,9 @@ def regex_match(doc):
     """
     results = []
     for line in doc.decode("utf-8").split("\n"):
-        m = re.match(r"//(facebook|instagram|twitter)\.com/([A-Za-z0-9-]+/?)+",
+        m = re.search(r"""//(?:www\.)?(facebook|instagram|twitter)\.com/([A-Za-z0-9]+)""",
                      line)
         if m:
-            # results.append(m.group(0))
             results.append({m.group(1): m.group(2),
                             "source": "regex_match"})
     return results
