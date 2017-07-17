@@ -85,13 +85,13 @@ def domains_match(links):
     for link in links:
         if link.has_attr("href"):
             url = link["href"]
-            if "facebook.com" in url:
+            if "facebook.com" in url and not blacklisted(url):
                 result.append({"facebook": url, "source": "domains_match"})
-            if "instagram.com" in url:
+            if "instagram.com" in url and not blacklisted(url):
                 result.append({"instagram": url, "source": "domains_match"})
-            if "twitter.com" in url:
+            if "twitter.com" in url and not blacklisted(url):
                 result.append({"twitter": url, "source": "domains_match"})
-            if "pinterest.com" in url:
+            if "pinterest.com" in url and not blacklisted(url):
                 result.append({"pinterest": url, "source": "domains_match"})
     return result
 
@@ -108,6 +108,19 @@ def regex_match(doc):
                             "source": "regex_match"})
     return results
 
+
+def blacklisted(account_name):
+    if "search?" in account_name:
+        return True
+    if account_name.lower() in ["search", "intent", "sharer", "pages"]:
+        return True
+    if "/sharer/" in account_name:
+        return True
+    if "/intent/" in account_name:
+        return True
+    if "/#!/" in account_name:
+        return True
+    return False
 
 if __name__ == "__main__":
     main()
