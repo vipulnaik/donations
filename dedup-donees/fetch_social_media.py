@@ -30,7 +30,7 @@ def get_social_media(url):
     org).
     """
     r = requests.get(url, headers=HEADERS)
-    l = links(r.content)
+    l = link_tags(r.content)
     result = []
 
     # Populate the results list using various heuristics
@@ -41,7 +41,7 @@ def get_social_media(url):
     return result
 
 
-def links(doc, parse_full=False):
+def link_tags(doc, parse_full=False):
     """
     Given an HTML document, parse it to find all link tags. Return a list of
     <a> tags. If parse_full is true, parse the whole document; otherwise use
@@ -79,21 +79,18 @@ def domains_match(links):
     """
     """
     result = []
-    for link in links(doc):
+    for link in links:
         if link.has_attr("href"):
-            result.append(link["href"])
+            url = link["href"]
+            if "facebook.com" in url:
+                result.append({"facebook": url})
+            if "instagram.com" in url:
+                result.append({"instagram": url})
+            if "twitter.com" in url:
+                result.append({"twitter": url})
+            if "pinterest.com" in url:
+                result.append({"pinterest": url})
     return result
-    for url in urls_on_page(r.content):
-        if "facebook.com" in url:
-            print(url)
-        if "instagram.com" in url:
-            print(url)
-        if "twitter.com" in url:
-            print(url)
-        if "pinterest.com" in url:
-            print(url)
-        if "en.wikipedia.org" in url:
-            print(url)
 
 
 def regex_match(doc):
