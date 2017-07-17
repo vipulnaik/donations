@@ -108,9 +108,9 @@ def regex_match(doc):
                              r"""\.com/([A-Za-z0-9.-]+)""",
                              line)
         matches += re.findall(r"""//(?:www\.)?"""
-                             "(youtube)"
-                             r"""\.com/user/([A-Za-z0-9.-]+)""",
-                             line)
+                              "(youtube)"
+                              r"""\.com/user/([A-Za-z0-9.-]+)""",
+                              line)
         if matches:
             logging.warning("%s %s", type(matches), matches)
         for m in matches:
@@ -127,6 +127,7 @@ def blacklisted(account_name):
         if b in account_name:
             return True
     return False
+
 
 if __name__ == "__main__":
     main()
