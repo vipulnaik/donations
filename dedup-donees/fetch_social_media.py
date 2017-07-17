@@ -106,6 +106,10 @@ def regex_match(doc):
                              "(facebook|instagram|twitter|pinterest)"
                              r"""\.com/([A-Za-z0-9.-]+)""",
                              line)
+        matches += re.findall(r"""//(?:www\.)?"""
+                             "(youtube)"
+                             r"""\.com/user/([A-Za-z0-9.-]+)""",
+                             line)
         if matches:
             logging.warning("%s %s", type(matches), matches)
         for m in matches:
