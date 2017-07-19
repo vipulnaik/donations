@@ -48,6 +48,7 @@ def get_social_media(url):
 
     except Exception as e:
         logging.warning(e)
+        return []
 
 
 def link_tags(doc, parse_full=False):
