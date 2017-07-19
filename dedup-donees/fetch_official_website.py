@@ -22,6 +22,11 @@ def main():
 
 def get_homepage(orgname, lang="en"):
     """
+    Use multiple heuristics to get a list of guesses for the homepage of the
+    org. Input orgname is a string of the org's canonical name. The output is a
+    list of guesses. Each guess is a dict of the form
+    {"source": source, "url": url}, where "source" tells which heuristic was
+    used, and "url" is the homepage URL.
     """
     result = []
     wikidata = wikidata_official_website(orgname)
