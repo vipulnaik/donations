@@ -163,6 +163,53 @@ you can pass the JSON through `filter_url.py` to get lines of URL:
 
     cat url.json | ./filter_url.py | ./fetch_social_media.py > social_media.json
 
+Example input:
+
+```bash
+echo "http://intelligence.org" | ./fetch_social_media.py
+```
+
+Corresponding output:
+
+```json
+{
+    "http://intelligence.org": [
+        {
+            "source": "domains_match",
+            "twitter": "MIRIBerkeley"
+        },
+        {
+            "source": "domains_match",
+            "facebook": "MachineIntelligenceResearchInstitute"
+        },
+        {
+            "source": "domains_match",
+            "twitter": "MIRIBerkeley"
+        },
+        {
+            "source": "regex_match",
+            "facebook": "MachineIntelligenceResearchInstitute"
+        },
+        {
+            "source": "regex_match",
+            "facebook": "MachineIntelligenceResearchInstitute"
+        },
+        {
+            "source": "regex_match",
+            "twitter": "MIRIBerkeley"
+        },
+        {
+            "source": "regex_match",
+            "facebook": "MachineIntelligenceResearchInstitute"
+        },
+        {
+            "source": "regex_match",
+            "twitter": "MIRIBerkeley"
+        }
+    ]
+}
+```
+
 ## `generate_sql.py`
 
 This script takes the outputs of `fetch_official_website.py` and
