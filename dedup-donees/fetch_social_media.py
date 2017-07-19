@@ -8,7 +8,8 @@ import json
 from bs4 import SoupStrainer, BeautifulSoup
 
 
-# logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG)
+logging.getLogger("requests").setLevel(logging.WARNING)
 HEADERS = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) "
                       "AppleWebKit/537.36 (KHTML, like Gecko) "
