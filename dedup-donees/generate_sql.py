@@ -5,17 +5,27 @@ import json
 import logging
 
 
+logging.basicConfig(level=logging.DEBUG)
+logging.getLogger("requests").setLevel(logging.WARNING)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("url_file", type=argparse.FileType("r"))
     parser.add_argument("social_media_file", type=argparse.FileType("r"))
+    parser.add_argument("--org_list", dest="org_list",
+                        type=argparse.FileType("r"))
     args = parser.parse_args()
-
-    org_list = []
-    url_map = {}
 
     url_map = json.load(args.url_file)
     social_media_map = json.load(args.social_media_file)
+    if args.org_list:
+        logging.info("Found org_list, using specified list.")
+        org_list = [line.rstrip() for line in args.org_list]
+    else:
+        logging.info("No org_list found, using generated list from {}"
+                     .format(args.url_file.name))
+        org_list = list(url_map.keys())
 
     print("insert into donees(donee, former_name, country, bay_area, "
           "facebook_username, website, donate_page, donor_list_page, "
