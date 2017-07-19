@@ -23,8 +23,7 @@ def main():
         url = line.strip()
         logging.warning("Doing %s", url)
         result[url] = get_social_media(url)
-    with open("social_media.json", "w") as f:
-        json.dump(result, f, indent=4)
+    json.dump(result, sys.stdout, indent=4)
 
 
 def get_social_media(url):
