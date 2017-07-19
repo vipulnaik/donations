@@ -20,8 +20,10 @@ mysql --skip-column-names -e \
     "use donations; select distinct(donee) from donations order by donee;" \
     > org_list.txt
 
-# Use the data generated above to construct the SQL insert statements
+# Use the data generated above to construct the SQL insert statements. Use the
+# top command if you generated an org_list; otherwise use the bottom command.
 ./generate_sql.py --org_list org_list.txt url.json social_media.json > out.sql
+./generate_sql.py url.json social_media.json > out.sql
 ```
 
 ## Contents
