@@ -60,25 +60,25 @@ print "<thead>\n";
 print "  <tr><th>Cause area</th>\n";
 print "	 <th>Number of donations</th>\n";
 print "	 <th>Number of donees</th>\n";
+print "    <th>Total</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print "    <th>$year</th>\n";
   }
 }
-print "    <th>Total</th>\n  </tr>\n";
-print "</thead>\n<tbody>\n";
+print "</tr>\n</thead>\n<tbody>\n";
 
 foreach ($causeAreas as $causeArea) {
   print "  <tr>\n";
   print "    <td>".'<a href="/?cause_area_filter='.urlencode($causeArea).'">'."$causeArea</a> (".'<a href="/donor.php?donor='.urlencode($donor).'&cause_area_filter='.urlencode($causeArea).'">filter this donor</a>'.")</td>\n";
   print '    <td align="right">'.$numDonationsByCauseArea[$causeArea]."</td>\n";
   print '    <td align="right">'.$numDoneesByCauseArea[$causeArea]."</td>\n";
+  print '    <td align="right"><strong>'.number_format($causeAreaDonationAmount[$causeArea],2)."</strong></td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right"><a title="'.sprintf("%d",$numDonationsByCauseAreaAndYear[$causeArea][$year]).' donations to '.sprintf("%d",$numDoneesByCauseAreaAndYear[$causeArea][$year]).' distinct donees">'.number_format($donationAmountByCauseAreaAndYear[$causeArea][$year],2)."</a></td>\n";
     }
   }
-  print '    <td align="right"><strong>'.number_format($causeAreaDonationAmount[$causeArea],2)."</strong></td>\n";
   print "  </tr>\n";
 }
 
@@ -87,7 +87,7 @@ print "<tfoot>\n";
 print "  <tr>\n    <td><strong>Total</strong></td>\n";
 print '    <td align="right"><strong>'.$grandTotalNumDonations."</strong></td>\n";
 print '    <td align="right"><strong>'.$totalNumDistinctDonees."</strong></td>\n";
-
+print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
@@ -95,7 +95,6 @@ foreach ($years as $year) {
   }
 }
 
-print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
 print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
