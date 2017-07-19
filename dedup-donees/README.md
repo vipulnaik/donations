@@ -20,8 +20,8 @@ mysql --skip-column-names -e \
 
 # This step is optional. It allows you to specify a list of orgs for which to
 # output SQL insert statements. This way, you can only output for a subset of
-# orgs or output in a specific order. Here, we output all orgs in alphabetical
-# order. (This makes diffing across time easier.)
+# orgs or output in a specific order. Here, we output all non-blacklisted orgs
+# in alphabetical order. (This makes diffing across time easier.)
 mysql --skip-column-names -e \
     "use donations; select distinct(donee) from donations order by donee;" \
     | grep -vxFf blacklist.txt
