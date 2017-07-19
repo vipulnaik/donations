@@ -21,7 +21,7 @@ mysql --skip-column-names -e \
     > org_list.txt
 
 # Use the data generated above to construct the SQL insert statements
-./generate_sql.py url.json social_media.json > out.sql
+./generate_sql.py --org_list org_list.txt url.json social_media.json > out.sql
 ```
 
 ## Contents
