@@ -5,7 +5,8 @@ TL;DR to get the SQL run:
 ```bash
 # Get map of org name -> URL
 mysql --skip-column-names -e \
-    "use donations; select donee,sum(amount) from donations group by donee order by sum(amount) desc;" \
+    "use donations; select donee,sum(amount) from donations \
+    group by donee order by sum(amount) desc;" \
     | cut -f1 | ./fetch_official_website.py > url.json
 
 # Get map of org URL -> social media accounts
