@@ -8,6 +8,12 @@ cat url.json | ./filter_url.py | ./fetch_social_media.py > social_media.json
 ./generate_sql.py url.json social_media.json > out.sql
 ```
 
+## Contents
+
+* [fetch_official_website.py](#fetch_official_websitepy)
+* [fetch_social_media.py](#fetch_social_mediapy)
+* [generate_sql.py](#generate_sqlpy)
+
 Get some donees:
 
     mysql -e "use donations; select distinct(donee) from donations;" | sort > temp
@@ -148,3 +154,12 @@ The corresponding output is:
 
 This script takes lines of URLs and writes a JSON file containing social media
 info.
+
+## `generate_sql.py`
+
+This script takes the outputs of `fetch_official_website.py` and
+`fetch_social_media.py` and outputs the SQL file that can be inserted into the
+database. Since the previous two scripts are "inclusive" in the sense that they
+include guesses from multiple sources (while marking the sources),
+`generate_sql.py` is the script that implements the "intelligent" scoring to
+select among the guesses.
