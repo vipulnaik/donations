@@ -14,11 +14,7 @@ def main():
     org_list = []
     url_map = {}
 
-    for line in args.url_file:
-        orgname, url = line.split("\t")
-        org_list.append(orgname)
-        url_map[orgname] = url.rstrip()
-
+    url_map = json.load(args.url_file)
     social_media_map = json.load(args.social_media_file)
 
     print("insert into donees(donee, former_name, country, bay_area,"
@@ -38,7 +34,12 @@ def main():
 def org_url(orgname, url_map):
     """
     """
-    return url_map.get(orgname, "")
+    lst = url_map.get(orgname, [])
+    if lst:
+        for d in lst:
+            if d["source"] == "wikidata_official_website":
+                return d["url"]
+    return ""
 
 
 def org_social_media(url, social_media_map):
