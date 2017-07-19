@@ -12,8 +12,8 @@ mysql --skip-column-names -e \
 # Get map of org URL -> social media accounts
 cat url.json | ./filter_url.py | ./fetch_social_media.py > social_media.json
 
-# We don't want to output SQL insert lines for donees whose data we have
-# already manually entered, so create a blacklist
+# This step is optional. We don't want to output SQL insert lines for donees
+# whose data we have already manually entered, so create a blacklist
 mysql --skip-column-names -e \
     "use donations; select distinct(donee) from donees;" \
     > blacklist.txt
