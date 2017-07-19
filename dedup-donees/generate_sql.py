@@ -27,7 +27,8 @@ def main():
           "medium_username, pinterest_username, launch_date,"
           "launch_date_precision, launch_date_url, charity_navigator_page,"
           "guidestar_page, timelines_wiki_page) values")
-    print("    " + ",\n    ".join(cooked_row(orgname, url_map, social_media_map)
+    print("    " + ",\n    ".join(
+          cooked_row(orgname, url_map, social_media_map)
           for orgname in org_list) + ";")
 
 
@@ -80,38 +81,38 @@ def cooked_row(orgname, url_map, social_media_map):
     sm = org_social_media(url, social_media_map)
     result = "("
     result += ",".join([
-        mysql_quote(orgname), # donee
-        "NULL", # former_name
-        "NULL", # country
-        "NULL", # bay_area
-        mysql_quote(sm.get("facebook", "")), # facebook_username
-        mysql_quote(url) , # website
-        "NULL", # donate_page
-        "NULL", # donor_list_page
-        "NULL", # transparency_and_financials_page
-        "NULL", # donation_case_page
-        "NULL", # donation_statistics_page
-        mysql_quote(sm.get("twitter", "")), # twitter_username
-        "NULL", # eahub_username
-        "NULL", # wikipedia_page
-        "NULL", # givewell_review
-        "NULL", # open_phil_grant_review
-        "NULL", # ace_review
-        "NULL", # key_people
-        "NULL", # cause_area
-        "NULL", # recommenders
-        "NULL", # notes
-        mysql_quote(sm.get("youtube", "")), # youtube_username
-        mysql_quote(sm.get("instagram", "")), # instagram_username
-        mysql_quote(sm.get("tumblr", "")), # tumblr_subdomain
-        mysql_quote(sm.get("medium", "")), # medium_username
-        mysql_quote(sm.get("pinterest", "")), # pinterest_username
-        "NULL", # launch_date
-        "NULL", # launch_date_precision
-        "NULL", # launch_date_url
-        "NULL", # charity_navigator_page
-        "NULL", # guidestar_page
-        "NULL", # timelines_wiki_page
+        mysql_quote(orgname),  # donee
+        "NULL",  # former_name
+        "NULL",  # country
+        "NULL",  # bay_area
+        mysql_quote(sm.get("facebook", "")),  # facebook_username
+        mysql_quote(url),  # website
+        "NULL",  # donate_page
+        "NULL",  # donor_list_page
+        "NULL",  # transparency_and_financials_page
+        "NULL",  # donation_case_page
+        "NULL",  # donation_statistics_page
+        mysql_quote(sm.get("twitter", "")),  # twitter_username
+        "NULL",  # eahub_username
+        "NULL",  # wikipedia_page
+        "NULL",  # givewell_review
+        "NULL",  # open_phil_grant_review
+        "NULL",  # ace_review
+        "NULL",  # key_people
+        "NULL",  # cause_area
+        "NULL",  # recommenders
+        "NULL",  # notes
+        mysql_quote(sm.get("youtube", "")),  # youtube_username
+        mysql_quote(sm.get("instagram", "")),  # instagram_username
+        mysql_quote(sm.get("tumblr", "")),  # tumblr_subdomain
+        mysql_quote(sm.get("medium", "")),  # medium_username
+        mysql_quote(sm.get("pinterest", "")),  # pinterest_username
+        "NULL",  # launch_date
+        "NULL",  # launch_date_precision
+        "NULL",  # launch_date_url
+        "NULL",  # charity_navigator_page
+        "NULL",  # guidestar_page
+        "NULL",  # timelines_wiki_page
     ])
     result += ")"
     return result
