@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import logging
 
 
 def main():
@@ -14,9 +15,9 @@ def main():
     url_map = {}
 
     for line in args.url_file:
-        orgname, url = line.rstrip().split("\t")
+        orgname, url = line.split("\t")
         org_list.append(orgname)
-        url_map[orgname] = url
+        url_map[orgname] = url.rstrip()
 
     social_media_map = json.load(args.social_media_file)
 
@@ -45,6 +46,16 @@ def org_social_media(url, social_media_map):
     Given the "messy" social media map containing potential accounts, score
     them to produce a map containing just the best guesses.
     """
+    result = {}
+    lst = social_media_map.get(url, [])
+    if lst:
+        accounts = ["facebook", "twitter", "instagram", "tumblr", "pinterest",
+                    "youtube"]
+        for a in accounts:
+            for d in lst:
+                if a in d:
+                    result[a] = d[a]
+    return result
 
 
 def mysql_quote(x):
