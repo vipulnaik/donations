@@ -95,14 +95,19 @@ def domains_match(links):
     result = []
     for link in filter(lambda l: l.has_attr("href"), links):
         url = link["href"]
-        for domain in ["facebook", "instagram", "twitter", "pinterest"]:
+        for domain in ["facebook", "instagram", "twitter", "pinterest", "medium"]:
             m = (re.match(r"(?:https?:)?//(?:www\.)?" + domain +
-                          r"\.com/([A-Za-z0-9_.-]+)", url))
+                          r"\.com/([A-Za-z0-9@_.-]+)", url))
             if m and not blacklisted(url):
                 result.append({domain: m.group(1), "source": "domains_match"})
         for domain in ["youtube"]:
             m = (re.match(r"(?:https?:)?//(?:www\.)?" + domain +
                           r"\.com/user/([A-Za-z0-9_.-]+)/?", url))
+            if m and not blacklisted(url):
+                result.append({domain: m.group(1), "source": "domains_match"})
+        for domain in ["tumblr"]:
+            m = (re.match(r"(?:https?:)?//([A-Za-z0-9_-]+)\." + domain +
+                          r"\.com", url))
             if m and not blacklisted(url):
                 result.append({domain: m.group(1), "source": "domains_match"})
     return result
@@ -122,16 +127,24 @@ def regex_match(doc):
         f = ""
     for line in f:
         matches = re.findall(r"""//(?:www\.)?"""
-                             "(facebook|instagram|twitter|pinterest)"
-                             r"""\.com/([A-Za-z0-9_.-]+)""",
+                             "(facebook|instagram|twitter|pinterest|medium)"
+                             r"""\.com/([A-Za-z0-9@_.-]+)""",
                              line)
         matches += re.findall(r"""//(?:www\.)?"""
                               "(youtube)"
                               r"""\.com/user/([A-Za-z0-9_.-]+)""",
                               line)
+        matches2 = re.findall(r"""//([A-Za-z0-9_-]+)\."""
+                             "(tumblr)"
+                             r"""\.com""",
+                             line)
         for m in matches:
             if not blacklisted(m[1]):
                 results.append({m[0]: m[1],
+                                "source": "regex_match"})
+        for m in matches2:
+            if not blacklisted(m[0]):
+                results.append({m[1]: m[0],
                                 "source": "regex_match"})
     return results
 
