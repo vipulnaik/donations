@@ -1,3 +1,13 @@
+TL;DR to get the SQL run:
+
+```bash
+mysql --skip-column-names -e \
+    "use donations; select donee,sum(amount) from donations group by donee order by sum(amount) desc;" \
+    | cut -f1 | ./fetch_official_website.py > url.json
+cat url.json | ./filter_url.py | ./fetch_social_media.py > social_media.json
+./generate_sql.py url.json social_media.json > out.sql
+```
+
 Get some donees:
 
     mysql -e "use donations; select distinct(donee) from donations;" | sort > temp
