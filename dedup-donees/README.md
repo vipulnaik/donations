@@ -1,3 +1,5 @@
+# Donee deduplication and social media collection
+
 TL;DR to get the SQL run:
 
 ```bash
@@ -10,9 +12,12 @@ cat url.json | ./filter_url.py | ./fetch_social_media.py > social_media.json
 
 ## Contents
 
+* [Deduplication playground](#deduplication-playground)
 * [fetch_official_website.py](#fetch_official_websitepy)
 * [fetch_social_media.py](#fetch_social_mediapy)
 * [generate_sql.py](#generate_sqlpy)
+
+## Deduplication playground
 
 Get some donees:
 
