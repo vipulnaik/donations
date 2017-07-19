@@ -153,7 +153,10 @@ The corresponding output is:
 - Pinterest
 
 This script takes lines of URLs and writes a JSON file containing social media
-info.
+info. Since `fetch_official_website.py` outputs a JSON instead of lines of URL,
+you can pass the JSON through `filter_url.py` to get lines of URL:
+
+    cat url.json | ./filter_url.py | ./fetch_social_media.py > social_media.json
 
 ## `generate_sql.py`
 
