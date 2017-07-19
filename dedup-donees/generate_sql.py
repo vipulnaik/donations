@@ -61,7 +61,7 @@ def org_social_media(url, social_media_map):
     lst = social_media_map.get(url, [])
     if lst:
         accounts = ["facebook", "twitter", "instagram", "tumblr", "pinterest",
-                    "youtube"]
+                    "youtube", "medium"]
         for a in accounts:
             for d in lst:
                 if a in d:
