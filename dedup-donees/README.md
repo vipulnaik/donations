@@ -49,7 +49,7 @@ mysql --skip-column-names -e \
 
 The corresponding output is:
 
-```
+```json
 {
     "GAVI Alliance": [
         {
