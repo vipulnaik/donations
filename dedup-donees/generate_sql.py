@@ -46,10 +46,9 @@ def org_url(orgname, url_map):
     """
     """
     lst = url_map.get(orgname, [])
-    if lst:
-        for d in lst:
-            if d["source"] == "wikidata_official_website":
-                return d["url"]
+    for d in lst:
+        if d["source"] == "wikidata_official_website":
+            return d["url"]
     return ""
 
 
