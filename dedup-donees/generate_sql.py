@@ -1,8 +1,25 @@
 #!/usr/bin/env python3
 
+import argparse
+import json
+
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("url_file", type=argparse.FileType("r"))
+    parser.add_argument("social_media_file", type=argparse.FileType("r"))
+    args = parser.parse_args()
+
     org_list = []
+    url_map = {}
+
+    for line in args.url_file:
+        orgname, url = line.rstrip().split("\t")
+        org_list.append(orgname)
+        url_map[orgname] = url
+
+    social_media_map = json.load(args.social_media_file)
+
     print("insert into donees(donee, former_name, country, bay_area,"
           "facebook_username, website, donate_page, donor_list_page,"
           "transparency_and_financials_page, donation_case_page,"
@@ -13,16 +30,20 @@ def main():
           "medium_username, pinterest_username, launch_date,"
           "launch_date_precision, launch_date_url, charity_navigator_page,"
           "guidestar_page, timelines_wiki_page) values")
-    print("    " + ",\n    ".join(cooked_row(orgname) for orgname in org_list) + ";")
+    print("    " + ",\n    ".join(cooked_row(orgname, url_map, social_media_map)
+          for orgname in org_list) + ";")
 
 
-def org_url(orgname):
+def org_url(orgname, url_map):
     """
     """
+    return url_map.get(orgname, "")
 
 
-def org_social_media(url):
+def org_social_media(url, social_media_map):
     """
+    Given the "messy" social media map containing potential accounts, score
+    them to produce a map containing just the best guesses.
     """
 
 
@@ -38,13 +59,13 @@ def mysql_quote(x):
     return "'{}'".format(x)
 
 
-def cooked_row(orgname):
+def cooked_row(orgname, url_map, social_media_map):
     """
     Return a string that can be used directly
     in a SQL insert statement (without trailing comma).
     """
-    url = org_url(orgname)
-    sm = org_social_media(url)
+    url = org_url(orgname, url_map)
+    sm = org_social_media(url, social_media_map)
     result = "("
     result += ",".join([
         mysql_quote(orgname), # donee
