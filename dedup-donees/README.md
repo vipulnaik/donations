@@ -3,10 +3,23 @@
 TL;DR to get the SQL run:
 
 ```bash
+# Get map of org name -> URL
 mysql --skip-column-names -e \
     "use donations; select donee,sum(amount) from donations group by donee order by sum(amount) desc;" \
     | cut -f1 | ./fetch_official_website.py > url.json
+
+# Get map of org URL -> social media accounts
 cat url.json | ./filter_url.py | ./fetch_social_media.py > social_media.json
+
+# This step is optional. It allows you to specify a list of orgs for which to
+# output SQL insert statements. This way, you can only output for a subset of
+# orgs or output in a specific order. Here, we output all orgs in alphabetical
+# order. (This makes diffing across time easier.)
+mysql --skip-column-names -e \
+    "use donations; select distinct(donee) from donations order by donee;" \
+    > org_list.txt
+
+# Use the data generated above to construct the SQL insert statements
 ./generate_sql.py url.json social_media.json > out.sql
 ```
 
