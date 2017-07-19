@@ -17,15 +17,15 @@ def main():
     url_map = json.load(args.url_file)
     social_media_map = json.load(args.social_media_file)
 
-    print("insert into donees(donee, former_name, country, bay_area,"
-          "facebook_username, website, donate_page, donor_list_page,"
+    print("insert into donees(donee, former_name, country, bay_area, "
+          "facebook_username, website, donate_page, donor_list_page, "
           "transparency_and_financials_page, donation_case_page,"
-          "donation_statistics_page, twitter_username, eahub_username,"
-          "wikipedia_page, givewell_review, open_phil_grant_review,"
-          "ace_review, key_people, cause_area, recommenders, notes,"
-          "youtube_username, instagram_username, tumblr_subdomain,"
-          "medium_username, pinterest_username, launch_date,"
-          "launch_date_precision, launch_date_url, charity_navigator_page,"
+          "donation_statistics_page, twitter_username, eahub_username, "
+          "wikipedia_page, givewell_review, open_phil_grant_review, "
+          "ace_review, key_people, cause_area, recommenders, notes, "
+          "youtube_username, instagram_username, tumblr_subdomain, "
+          "medium_username, pinterest_username, launch_date, "
+          "launch_date_precision, launch_date_url, charity_navigator_page, "
           "guidestar_page, timelines_wiki_page) values")
     print("    " + ",\n    ".join(
           cooked_row(orgname, url_map, social_media_map)
