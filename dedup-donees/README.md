@@ -147,7 +147,7 @@ The corresponding output is:
 
 ## `fetch_social_media.py`
 
-`fetch_social_media.py` gets social media accounts. Currently, it is supposed to for:
+`fetch_social_media.py` gets social media accounts. Currently, it looks for:
 
 - Facebook
 - Twitter
