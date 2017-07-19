@@ -66,7 +66,7 @@ foreach ($donors as $donor) {
   print '    <td><a href="/donor.php?donor='.urlencode($donor).'">'.$donor.'</a></td>'."\n";
   print '    <td align="right">'.$numDonations[$donor]."</td>\n";
   print '    <td align="right">'.$numDonees[$donor]."</td>\n";
-  print '    <td align="right"><strong>'.sprintf("%.2f",$donorDonationAmount[$donor]).'</strong></td>'."\n";
+  print '    <td align="right"><strong>'.number_format($donorDonationAmount[$donor],2).'</strong></td>'."\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.number_format($donationAmountByDonorAndYear[$donor][$year], 2).'</td>'."\n";
@@ -81,7 +81,7 @@ print "  <tr>\n    <td><strong>Total</strong></td>\n";
 print '	 <td align="right"><strong>'.$grandTotalNumDonations.'</strong></td>'."\n";
 print '	 <td align="right"><strong>'.$totalNumDistinctDonees.'</strong></td>'."\n";
 
-print '    <td align="right"><strong>'.sprintf("%.2f",$grandTotalDonationAmount).'</strong></td>'."\n";
+print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2).'</strong></td>'."\n";
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {

@@ -30,6 +30,7 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
   $charityNavigatorPage[$row['donee']] = $row['charity_navigator_page'];
   $guidestarPage[$row['donee']] = $row['guidestar_page'];
   $timelinesWikiPage[$row['donee']] = $row['timelines_wiki_page'];
+  $givewellReview[$row['donee']] = $row['givewell_review'];
 }
 
 
@@ -57,13 +58,13 @@ usort($donees, "cmpDoneesByAmount");
 print '<table id="myTableDonorDonationAmountsByDoneeAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
 print "  <tr>\n    <th>Donee</th>\n	<th>Cause area</th>\n	<th>Metadata</th>\n";
+print "    <th>Total</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
     print "    <th>$year</th>\n";
   }
 }
-print "    <th>Total</th>\n  </tr>\n";
-print "</thead>\n<tbody>\n";
+print "</tr>\n</thead>\n<tbody>\n";
 
 foreach ($donees as $donee) {
   print "  <tr>\n";
@@ -101,18 +102,19 @@ foreach ($donees as $donee) {
   }
   
   print "</td>\n";
+  print '    <td align="right"><strong>'.number_format($doneeDonationAmount[$donee],2)."</strong></td>\n";  
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] > 0) {
       print '    <td align="right">'.number_format($donationAmountByDoneeAndYear[$donee][$year],2)."</td>\n";
     }
   }
-  print '    <td align="right"><strong>'.number_format($doneeDonationAmount[$donee],2)."</strong></td>\n";
   print "  </tr>\n";
 }
 
 print "</tbody>\n";
 print "<tfoot>\n";
 print "  <tr>\n    <td><strong>Total</strong></td>\n	".'<td align="center">--</td>'."\n".'	<td align="center">--</td>'."\n";
+print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
 
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] > 0) {
@@ -120,7 +122,6 @@ foreach ($years as $year) {
   }
 }
 
-print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
 print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";

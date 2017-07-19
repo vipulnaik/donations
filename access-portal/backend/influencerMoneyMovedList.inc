@@ -23,7 +23,7 @@ if ($influencerMoneyMovedSelectResult -> num_rows > 0) {
     } else {
       print "    <td>All donors other than ones specified</td>\n";
     }
-    print '    <td right="align">'.sprintf("%.2f",$moneyMovedRow['amount'])."</td>\n";
+    print '    <td right="align">'.number_format($moneyMovedRow['amount'],2)."</td>\n";
     print "    <td>".$moneyMovedRow['start_date']."</td>\n";
     print "    <td>".$moneyMovedRow['end_date']."</td>\n";
     print '    <td><a href="'.$moneyMovedRow['document_url'].'">'.$moneyMovedRow['document_title'].'</a></td>'."\n";
