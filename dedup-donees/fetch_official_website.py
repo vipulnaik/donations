@@ -4,26 +4,31 @@ import requests
 import logging
 import re
 import sys
+import json
+
+
+logging.basicConfig(level=logging.DEBUG)
+logging.getLogger("requests").setLevel(logging.WARNING)
 
 
 def main():
+    result = {}
     for line in sys.stdin:
         orgname = line.rstrip()
-        print("{}\t{}".format(orgname, get_homepage(orgname)))
+        logging.info("Doing %s", orgname)
+        result[orgname] = get_homepage(orgname)
+    json.dump(result, sys.stdout, indent=4)
 
 
 def get_homepage(orgname, lang="en"):
     """
-    Take orgname and try to return a homepage for that org.
     """
+    result = []
     wikidata = wikidata_official_website(orgname)
-    if wikidata:
-        return wikidata[0]
-    else:
-        domains = just_a_domain(orgname)
-        if domains:
-            return domains[0]
-    return ""
+    domains = just_a_domain(orgname)
+    result.extend(wikidata)
+    result.extend(domains)
+    return result
 
 
 def wikidata_official_website(orgname, lang="en"):
@@ -72,7 +77,8 @@ def wikidata_official_website(orgname, lang="en"):
             for i in result["claims"]["P856"]:
                 try:
                     url = i["mainsnak"]["datavalue"]["value"]
-                    candidates.append(url)
+                    candidates.append({"source": "wikidata_official_website",
+                                       "url": url})
                 except KeyError as e:
                     logging.warning("Could not find P856: %s", e)
 
@@ -104,7 +110,8 @@ def just_a_domain(orgname, lang="en"):
         for link in links:
             m = re.match(r"(https?:)?//[A-Za-z0-9.]+/?$", link)
             if m:
-                candidates.append(m.group(0))
+                candidates.append({"source": "just_a_domain",
+                                   "url": m.group(0)})
     return candidates
 
 
