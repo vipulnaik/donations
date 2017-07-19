@@ -57,18 +57,38 @@ def cooked_row(orgname):
     #       "guidestar_page, timelines_wiki_page) values")
     result = "("
     result += ",".join([
-        mysql_quote(t['donor']),
-        mysql_quote(t['donee']),
-        str(t['amount']),
-        mysql_quote(t['donation_date']),
-        mysql_quote(t['donation_date_precision']),
-        mysql_quote(t['donation_date_basis']),
-        mysql_quote(t['cause_area']),
-        mysql_quote(t['url']),
-        mysql_quote(t['donor_cause_area_url']),
-        mysql_quote(t['notes']),
-        mysql_quote(t['affected_countries']),
-        mysql_quote(t['affected_regions']),
+        mysql_quote(orgname), # donee
+        "NULL", # former_name
+        "NULL", # country
+        "NULL", # bay_area
+        mysql_quote(sm.get("facebook", "")), # facebook_username
+        mysql_quote(url) , # website
+        "NULL", # donate_page
+        "NULL", # donor_list_page
+        "NULL", # transparency_and_financials_page
+        "NULL", # donation_case_page
+        "NULL", # donation_statistics_page
+        mysql_quote(sm.get("twitter", "")), # twitter_username
+        "NULL", # eahub_username
+        "NULL", # wikipedia_page
+        "NULL", # givewell_review
+        "NULL", # open_phil_grant_review
+        "NULL", # ace_review
+        "NULL", # key_people
+        "NULL", # cause_area
+        "NULL", # recommenders
+        "NULL", # notes
+        mysql_quote(sm.get("youtube", "")), # youtube_username
+        mysql_quote(sm.get("instagram", "")), # instagram_username
+        mysql_quote(sm.get("tumblr", "")), # tumblr_subdomain
+        mysql_quote(sm.get("medium", "")), # medium_username
+        mysql_quote(sm.get("pinterest", "")), # pinterest_username
+        "NULL", # launch_date
+        "NULL", # launch_date_precision
+        "NULL", # launch_date_url
+        "NULL", # charity_navigator_page
+        "NULL", # guidestar_page
+        "NULL", # timelines_wiki_page
     ])
     result += ")"
     return result
