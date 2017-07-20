@@ -31,7 +31,7 @@ def main():
     result = {}
     for line in sys.stdin:
         url = line.strip()
-        logging.warning("Doing %s", url)
+        logging.info("Doing %s", url)
         result[url] = get_social_media(url)
     json.dump(result, sys.stdout, indent=4)
 
