@@ -59,12 +59,24 @@ def org_social_media(url, social_media_map):
     """
     result = {}
     lst = social_media_map.get(url, [])
-    accounts = ["facebook", "twitter", "instagram", "tumblr", "pinterest",
+    services = ["facebook", "twitter", "instagram", "tumblr", "pinterest",
                 "youtube", "medium"]
-    for a in accounts:
+    for service in services:
+        candidates = {}
         for d in lst:
-            if a in d:
-                result[a] = d[a]
+            if service in d:
+                username = d[service]
+                if username in candidates:
+                    candidates[username]["sources"].add(d["source"])
+                else:
+                    candidates[username] = {"sources": {d["source"],
+                                            "score": 0}}
+        # Score the candidate usernames
+        for c in candidates:
+            # AddThis takes precedence
+            c["score"] = max(c["score"], 3)
+            c["score"] = max(c["score"], len(c["sources"]))
+            c["score"] = max(c["score"], 1)
     return result
 
 
