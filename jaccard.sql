@@ -7,7 +7,7 @@ select
 from (
     select
         d2.donor as donor,
-        count(dt2.donee) as 'intersect',
+        count(distinct dt2.donee) as 'intersect',
         (select count(distinct dt3.donee) from
          donations dt3 where dt3.donor in(d1.donor, d2.donor)) as 'union'
     from
