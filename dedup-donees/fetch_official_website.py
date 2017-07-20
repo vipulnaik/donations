@@ -5,13 +5,23 @@ import logging
 import re
 import sys
 import json
+import argparse
 
 
-logging.basicConfig(level=logging.DEBUG)
 logging.getLogger("requests").setLevel(logging.WARNING)
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--debug", help="print debug statements",
+                        action="store_const", dest="loglevel",
+                        const=logging.DEBUG, default=logging.WARNING)
+    parser.add_argument("-v", "--verbose", help="be verbose",
+                        action="store_const", dest="loglevel",
+                        const=logging.INFO)
+    args = parser.parse_args()
+    logging.basicConfig(level=args.loglevel)
+
     result = {}
     for line in sys.stdin:
         orgname = line.rstrip()

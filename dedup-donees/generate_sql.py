@@ -5,7 +5,6 @@ import json
 import logging
 
 
-logging.basicConfig(level=logging.DEBUG)
 logging.getLogger("requests").setLevel(logging.WARNING)
 
 
@@ -15,7 +14,14 @@ def main():
     parser.add_argument("social_media_file", type=argparse.FileType("r"))
     parser.add_argument("--org_list", dest="org_list",
                         type=argparse.FileType("r"))
+    parser.add_argument("--debug", help="print debug statements",
+                        action="store_const", dest="loglevel",
+                        const=logging.DEBUG, default=logging.WARNING)
+    parser.add_argument("-v", "--verbose", help="be verbose",
+                        action="store_const", dest="loglevel",
+                        const=logging.INFO)
     args = parser.parse_args()
+    logging.basicConfig(level=args.loglevel)
 
     url_map = json.load(args.url_file)
     social_media_map = json.load(args.social_media_file)

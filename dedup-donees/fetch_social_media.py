@@ -5,10 +5,10 @@ import logging
 import requests
 import sys
 import json
+import argparse
 from bs4 import SoupStrainer, BeautifulSoup
 
 
-logging.basicConfig(level=logging.DEBUG)
 logging.getLogger("requests").setLevel(logging.WARNING)
 HEADERS = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) "
@@ -18,6 +18,16 @@ HEADERS = {
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--debug", help="print debug statements",
+                        action="store_const", dest="loglevel",
+                        const=logging.DEBUG, default=logging.WARNING)
+    parser.add_argument("-v", "--verbose", help="be verbose",
+                        action="store_const", dest="loglevel",
+                        const=logging.INFO)
+    args = parser.parse_args()
+    logging.basicConfig(level=args.loglevel)
+
     result = {}
     for line in sys.stdin:
         url = line.strip()
