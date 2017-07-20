@@ -58,6 +58,16 @@ def org_url(orgname, url_map):
     return ""
 
 
+def org_enwiki(orgname, url_map):
+    """
+    """
+    lst = url_map.get(orgname, [])
+    for d in lst:
+        if "enwiki_url" in d:
+            return d["enwiki_url"]
+    return ""
+
+
 def org_social_media(url, social_media_map):
     """
     Given the "messy" social media map containing potential accounts, score
@@ -130,7 +140,7 @@ def cooked_row(orgname, url_map, social_media_map):
         "NULL",  # donation_statistics_page
         mysql_quote(sm.get("twitter", "")),  # twitter_username
         "NULL",  # eahub_username
-        "NULL",  # wikipedia_page
+        org_enwiki(orgname, url_map),  # wikipedia_page
         "NULL",  # givewell_review
         "NULL",  # open_phil_grant_review
         "NULL",  # ace_review
