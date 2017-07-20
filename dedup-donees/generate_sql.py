@@ -3,6 +3,7 @@
 import argparse
 import json
 import logging
+from fetch_social_media import blacklisted
 
 
 logging.getLogger("requests").setLevel(logging.WARNING)
@@ -58,6 +59,16 @@ def org_url(orgname, url_map):
     return ""
 
 
+def org_enwiki(orgname, url_map):
+    """
+    """
+    lst = url_map.get(orgname, [])
+    for d in lst:
+        if "enwiki_url" in d:
+            return d["enwiki_url"]
+    return ""
+
+
 def org_social_media(url, social_media_map):
     """
     Given the "messy" social media map containing potential accounts, score
@@ -86,8 +97,10 @@ def org_social_media(url, social_media_map):
             d["score"] = max(d["score"], len(d["sources"]))
             if "domain_match" in d["sources"]:
                 d["score"] = max(d["score"], 1)
+            if blacklisted(c):
+                d["score"] = -1
         best = ("", 0)
-        for c in candidates:
+        for c in sorted(candidates):
             d = candidates[c]
             if d["score"] > best[1]:
                 best = (c, d["score"])
@@ -130,7 +143,7 @@ def cooked_row(orgname, url_map, social_media_map):
         "NULL",  # donation_statistics_page
         mysql_quote(sm.get("twitter", "")),  # twitter_username
         "NULL",  # eahub_username
-        "NULL",  # wikipedia_page
+        mysql_quote(org_enwiki(orgname, url_map)),  # wikipedia_page
         "NULL",  # givewell_review
         "NULL",  # open_phil_grant_review
         "NULL",  # ace_review
