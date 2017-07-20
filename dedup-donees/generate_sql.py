@@ -3,6 +3,7 @@
 import argparse
 import json
 import logging
+from fetch_social_media import blacklisted
 
 
 logging.getLogger("requests").setLevel(logging.WARNING)
@@ -96,8 +97,10 @@ def org_social_media(url, social_media_map):
             d["score"] = max(d["score"], len(d["sources"]))
             if "domain_match" in d["sources"]:
                 d["score"] = max(d["score"], 1)
+            if blacklisted(c):
+                d["score"] = -1
         best = ("", 0)
-        for c in candidates:
+        for c in sorted(candidates):
             d = candidates[c]
             if d["score"] > best[1]:
                 best = (c, d["score"])
