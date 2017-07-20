@@ -16,12 +16,15 @@ init:
 	mysql $(MYSQL_ARGS) -e "create database $(DATABASE);"
 
 # To update this section, paste the output of:
-#     find . -type f -iname '*.sql' | sort | sed 's/^\.\//\tmysql $(MYSQL_ARGS) $(DATABASE) < /'
-# Then move the SQL files ending in "-schema" to the top.
+#     find . -type f -iname '*.sql' -not -path "./dedup-donees/*" | sort | sed 's/^\.\//\tmysql $(MYSQL_ARGS) $(DATABASE) < /'
+# Then move the SQL files ending in "-schema" to the top. In Vim you can
+# visually select the .sql lines:
+#     '<,'>g/-schema/m'<-1
 .PHONY: read
 read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/80k-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ace-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cfar-docs.sql
@@ -62,7 +65,8 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/patrick-brinich-langlois-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/peter-hurford-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/vipul-naik-donations.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/social-media-mass-grab.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/gifts.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved.sql

@@ -4,26 +4,46 @@ import requests
 import logging
 import re
 import sys
+import json
+import argparse
+
+
+logging.getLogger("requests").setLevel(logging.WARNING)
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--debug", help="print debug statements",
+                        action="store_const", dest="loglevel",
+                        const=logging.DEBUG, default=logging.WARNING)
+    parser.add_argument("-v", "--verbose", help="be verbose",
+                        action="store_const", dest="loglevel",
+                        const=logging.INFO)
+    args = parser.parse_args()
+    logging.basicConfig(level=args.loglevel)
+
+    result = {}
     for line in sys.stdin:
         orgname = line.rstrip()
-        print("{}\t{}".format(orgname, get_homepage(orgname)))
+        logging.info("Doing %s", orgname)
+        result[orgname] = get_homepage(orgname)
+    json.dump(result, sys.stdout, indent=4)
 
 
 def get_homepage(orgname, lang="en"):
     """
-    Take orgname and try to return a homepage for that org.
+    Use multiple heuristics to get a list of guesses for the homepage of the
+    org. Input orgname is a string of the org's canonical name. The output is a
+    list of guesses. Each guess is a dict of the form
+    {"source": source, "url": url}, where "source" tells which heuristic was
+    used, and "url" is the homepage URL.
     """
+    result = []
     wikidata = wikidata_official_website(orgname)
-    if wikidata:
-        return wikidata[0]
-    else:
-        domains = just_a_domain(orgname)
-        if domains:
-            return domains[0]
-    return ""
+    domains = just_a_domain(orgname)
+    result.extend(wikidata)
+    result.extend(domains)
+    return result
 
 
 def wikidata_official_website(orgname, lang="en"):
@@ -72,7 +92,8 @@ def wikidata_official_website(orgname, lang="en"):
             for i in result["claims"]["P856"]:
                 try:
                     url = i["mainsnak"]["datavalue"]["value"]
-                    candidates.append(url)
+                    candidates.append({"source": "wikidata_official_website",
+                                       "url": url})
                 except KeyError as e:
                     logging.warning("Could not find P856: %s", e)
 
@@ -104,7 +125,8 @@ def just_a_domain(orgname, lang="en"):
         for link in links:
             m = re.match(r"(https?:)?//[A-Za-z0-9.]+/?$", link)
             if m:
-                candidates.append(m.group(0))
+                candidates.append({"source": "just_a_domain",
+                                   "url": m.group(0)})
     return candidates
 
 
