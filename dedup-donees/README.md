@@ -26,6 +26,10 @@ echo "Multiple charities (Against Malaria Foundation, Schistosomiasis" \
     "Control Initiative, GiveDirectly, GiveWell, Giving What We Can)" \
     >> blacklist.txt
 echo "Multiple organizations (primarily GiveWell)" >> blacklist.txt
+echo "Research Center for Eco-environmental Sciences (RCEES)," \
+    "Chinese Academy of Sciences (CAS); and Chinese Committee for" \
+    "SCOPE (Scientific Committee on Problems of the Environment)" \
+    >> blacklist.txt
 
 # This step is optional. It allows you to specify a list of orgs for which to
 # output SQL insert statements. This way, you can only output for a subset of
