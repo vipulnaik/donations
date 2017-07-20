@@ -69,14 +69,24 @@ def org_social_media(url, social_media_map):
                 if username in candidates:
                     candidates[username]["sources"].add(d["source"])
                 else:
-                    candidates[username] = {"sources": {d["source"],
-                                            "score": 0}}
+                    candidates[username] = {"sources": {d["source"]},
+                                            "score": 0}
         # Score the candidate usernames
         for c in candidates:
+            d = candidates[c]
             # AddThis takes precedence
-            c["score"] = max(c["score"], 3)
-            c["score"] = max(c["score"], len(c["sources"]))
-            c["score"] = max(c["score"], 1)
+            if "addthis" in d["sources"]:
+                d["score"] = max(d["score"], 3)
+            d["score"] = max(d["score"], len(d["sources"]))
+            if "domain_match" in d["sources"]:
+                d["score"] = max(d["score"], 1)
+        best = ("", 0)
+        for c in candidates:
+            d = candidates[c]
+            if d["score"] > best[1]:
+                best = (c, d["score"])
+        result[service] = best[0]
+        logging.debug("%s candidates: %s", service, candidates)
     return result
 
 
