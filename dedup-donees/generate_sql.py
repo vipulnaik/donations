@@ -143,7 +143,7 @@ def cooked_row(orgname, url_map, social_media_map):
         "NULL",  # donation_statistics_page
         mysql_quote(sm.get("twitter", "")),  # twitter_username
         "NULL",  # eahub_username
-        org_enwiki(orgname, url_map),  # wikipedia_page
+        mysql_quote(org_enwiki(orgname, url_map)),  # wikipedia_page
         "NULL",  # givewell_review
         "NULL",  # open_phil_grant_review
         "NULL",  # ace_review
