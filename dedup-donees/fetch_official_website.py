@@ -97,6 +97,30 @@ def wikidata_official_website(orgname, lang="en"):
                 except KeyError as e:
                     logging.warning("Could not find P856: %s", e)
 
+    # Get Wikipedia page URL
+    for entity in candidate_org_ids:
+        payload = {
+                "action": "wbgetentities",
+                "format": "json",
+                "ids": entity,
+                "props": "sitelinks/urls",
+                "languages": lang,
+                "sites": "enwiki",
+                "sitefilter": "enwiki",
+        }
+        r = requests.get('https://www.wikidata.org/w/api.php', params=payload)
+        result = r.json()
+        if 'error' in result:
+            logging.warning("FAILED %s %s", r.url, result['error'])
+        if 'warnings' in result:
+            logging.warning(result['warnings'])
+        try:
+            url = result["entities"][entity]["sitelinks"]["enwiki"]["url"]
+            candidates.append({"source": "wikidata_enwiki",
+                               "enwiki_url": url})
+        except KeyError as e:
+            logging.warning("Could not find enwiki url: %s", e)
+
     return candidates
 
 
