@@ -15,7 +15,7 @@ create table donees (
     contact_email varchar(40),
     twitter_username varchar(40),
     eahub_username varchar(40),
-    wikipedia_page varchar(100),
+    wikipedia_page varchar(120),
     givewell_review varchar(100),
     open_phil_grant_review varchar(200),
     ace_review varchar(200),
