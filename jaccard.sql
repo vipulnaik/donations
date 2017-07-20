@@ -6,16 +6,16 @@ select
     jaccard.intersect/jaccard.union as jaccard_index
 from (
     select
-        d2.donor as donor,
-        count(distinct dt2.donee) as 'intersect',
-        (select count(distinct dt3.donee) from
-         donations dt3 where dt3.donor in(d1.donor, d2.donor)) as 'union'
+        other_donors.donor,
+        (select count(distinct donee) from donations
+            where donor = 'Open Philanthropy Project' and
+            donee in (select distinct(donee) from donations where
+                donor = other_donors.donor
+            )
+        ) as 'intersect',
+        (select count(distinct donee) from donations where donor = 'Open Philanthropy Project' or donor = other_donors.donor) as 'union'
     from
-        donors as d1
-        inner join donors as d2 on d1.donor != d2.donor
-        left join donations as dt1 on dt1.donor = d1.donor
-        left join donations as dt2 on dt2.donor = d2.donor and dt1.donee = dt2.donee
-    where d1.donor = 'Open Philanthropy Project'
-    group by d1.donor, d2.donor
+        (select distinct(donor) from donations
+            where donor != 'Open Philanthropy Project') as other_donors
 ) as jaccard
 order by jaccard_index desc;
