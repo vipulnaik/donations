@@ -18,6 +18,14 @@ mysql --skip-column-names -e \
     "use donations; select distinct(donee) from donees;" \
     > blacklist.txt
 
+# Add some problematic donee names to the blacklist
+echo "Against Malaria Foundation, Innovations for Poverty Action," \
+    "Environmental Defense Fund" >> blacklist.txt
+echo "Multiple charities (Against Malaria Foundation, Schistosomiasis" \
+    "Control Initiative, GiveDirectly, GiveWell, Giving What We Can)" \
+    > blacklist.txt
+echo "Multiple organizations (primarily GiveWell)" > blacklist.txt
+
 # This step is optional. It allows you to specify a list of orgs for which to
 # output SQL insert statements. This way, you can only output for a subset of
 # orgs or output in a specific order. Here, we output all non-blacklisted orgs
