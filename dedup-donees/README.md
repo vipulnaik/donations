@@ -24,7 +24,7 @@ mysql --skip-column-names -e \
 # in alphabetical order. (This makes diffing across time easier.)
 mysql --skip-column-names -e \
     "use donations; select distinct(donee) from donations order by donee;" \
-    | grep -vxFf blacklist.txt
+    | grep -vxFf blacklist.txt \
     > org_list.txt
 
 # Use the data generated above to construct the SQL insert statements. Use the
