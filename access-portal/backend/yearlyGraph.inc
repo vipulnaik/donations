@@ -52,9 +52,9 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
 
   $permalinkUrlBase = "https://donations.vipulnaik.com/donor.php?donor=" .
     urlencode($donor);
-  /* if (isset($causeAreaFilterString) and $causeAreaFilterString != '') { */
-  /*   $permalinkUrlBase .= "&cause_area_filter=".urlencode($causeAreaFilterString); */
-  /* } */
+  if (isset($causeAreaFilterString) and $causeAreaFilterString != '') {
+    $permalinkUrlBase .= "&cause_area_filter=".urlencode($causeAreaFilterString);
+  }
   $permalinkUrl = $permalinkUrlBase . $graphIdentifier;
   $fileName = hash("md5", $permalinkUrl);
   $filePathBase = $imagesPath . $fileName;
