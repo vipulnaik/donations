@@ -180,7 +180,7 @@ $permalinkUrl = $permalinkUrlBase . "#donorDonationAmountsByDoneeAndYear";
 $fileName = hash("md5", $permalinkUrl);
 $filePathBase = $imagesPath . $fileName;
 $dataHasChanged= false;
-if (file_exists($filePathBase . ".csv") == false) {
+if (file_exists(! $filePathBase . ".csv")) {
   file_put_contents($filePathBase . ".csv", $dataForGraph);
   $dataHasChanged = true;
 } else {
@@ -194,7 +194,7 @@ if (file_exists($filePathBase . ".csv") == false) {
 /* Incremental graph */
 $cmdToExecute = $generateGraphCmdBase . " " . $filePathBase . ".csv " .
   $filePathBase . "-timeseries.png";
-if ($dataHasChanged or file_exists($filePathBase . "-timeseries.png") == false) {
+if ($dataHasChanged or ! file_exists($filePathBase . "-timeseries.png")) {
   if (file_exists($filePathBase . "-timeseries.png")) {
     exec("rm " . $filePathBase . "-timeseries.png");
   }
@@ -205,7 +205,7 @@ if ($dataHasChanged or file_exists($filePathBase . "-timeseries.png") == false) 
 $fileNameCumulative = hash("md5", $permalinkUrl . "-cumulative");
 $filePathBaseCumulative = $imagesPath . $fileNameCumulative;
 $dataHasChangedCumulative = false;
-if (file_exists($filePathBaseCumulative . ".csv") == false) {
+if (! file_exists($filePathBaseCumulative . ".csv")) {
   file_put_contents($filePathBaseCumulative . ".csv", $dataForCumulativeGraph);
   $dataHasChangedCumulative = true;
 } else {
@@ -216,8 +216,8 @@ if (file_exists($filePathBaseCumulative . ".csv") == false) {
   }
 }
 $cmdToExecuteCumulative = $generateGraphCmdBase . " " . $filePathBaseCumulative . ".csv " . $filePathBaseCumulative . "-timeseries.png";
-if ($dataHasChangedCumulative == true or file_exists($filePathBaseCumulative . "-timeseries.png") == false) {
-  if (file_exists($filePathBaseCumulative . "-timeseries.png") == true) {
+if ($dataHasChangedCumulative or ! file_exists($filePathBaseCumulative . "-timeseries.png")) {
+  if (file_exists($filePathBaseCumulative . "-timeseries.png")) {
     exec("rm ".$filePathBaseCumulative . "-timeseries.png");
   }
   exec($cmdToExecuteCumulative);
