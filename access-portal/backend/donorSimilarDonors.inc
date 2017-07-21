@@ -75,7 +75,7 @@ order by jaccard_index desc;
 EOD;
 
 if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
-  $stmt->bind_param("ssss", $donor, $donor, $donor, $donor);
+  $stmt->bind_param("ssssss", $donor, $donor, $donor, $donor, $donor, $donor);
   $stmt->execute();
   $result = $stmt->get_result();
 
@@ -99,7 +99,11 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
     print '    <th>Union size</th>' . "\n";
     print '    <th>Magnitude product</th>' . "\n";
     print '    <th>Jaccard similarity</th>' . "\n";
-    print '    <th>Cosine similarity</th>';
+    print '    <th>Cosine similarity</th>' . "\n";
+    print '    <th>Weighted magnitude</th>' . "\n";
+    print '    <th>Weighted magnitude other</th>' . "\n";
+    print '    <th>Weighted dot product</th>' . "\n";
+    print '    <th>Weighted cosine similarity</th>' . "\n";
     print '  </tr>' . "\n";
     print '</thead>' . "\n";
     print '<tbody>' . "\n";
@@ -114,6 +118,10 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
       $magnitude_product = $row[5];
       $jaccard_index = $row[6];
       $cosine_similarity = $row[7];
+      $weighted_magnitude = $row[8];
+      $weighted_magnitude_other = $row[9];
+      $weighted_dot_product = $row[10];
+      $weighted_cosine_similarity = $row[11];
 
       if ($jaccard_index > 0) {
         print '  <tr>' . "\n";
@@ -126,9 +134,15 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
           '    <td align="right">%s</td>' . "\n" .
           '    <td align="right">%s</td>' . "\n" .
           '    <td align="right">%s</td>' . "\n" .
+          '    <td align="right">%s</td>' . "\n" .
+          '    <td align="right">%s</td>' . "\n" .
+          '    <td align="right">%s</td>' . "\n" .
+          '    <td align="right">%s</td>' . "\n" .
           '    <td align="right">%s</td>' . "\n",
           $donor_size, $other_donor_size, $intersect, $union,
-          $magnitude_product, $jaccard_index, $cosine_similarity
+          $magnitude_product, $jaccard_index, $cosine_similarity,
+          $weighted_magnitude, $weighted_magnitude_other,
+          $weighted_dot_product, $weighted_cosine_similarity
         );
         print '  </tr>' . "\n";
         $maxRows--;
