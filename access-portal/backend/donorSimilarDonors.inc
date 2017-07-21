@@ -76,7 +76,7 @@ EOD;
 
 if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
   /*
-   * The number of occurrences of "s" in the string above, as well as the
+   * The number of occurrences of "s" in the string below, as well as the
    * number of occurrences of $donor, must match the number of occurrences of
    * "?" in the query stored in $donorSimilarityQuery above. */
   $stmt->bind_param("ssssss", $donor, $donor, $donor, $donor, $donor, $donor);
