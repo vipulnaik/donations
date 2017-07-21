@@ -38,6 +38,8 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
   print '<thead>' . "\n";
   print '  <tr>' . "\n";
   print '    <th>Donor</th>' . "\n";
+  print '    <th>Number of donees in common (intersect)</th>' . "\n";
+  print '    <th>Union size</th>' . "\n";
   print '    <th>Jaccard similarity</th>';
   print '  </tr>' . "\n";
   print '</thead>' . "\n";
@@ -47,8 +49,9 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
   while (mysqli_stmt_fetch($stmt) && $maxRows > 0) {
     if ($jaccard_index > 0) {
       print '  <tr>' . "\n";
-      printf("    <td>%s</td>\n    <td>%s</td>\n", $other_donor,
-             $jaccard_index);
+      printf("    <td>%s</td>\n    <td>%s</td>\n" .
+             "    <td>%s</td>\n    <td>%s</td>\n", $other_donor,
+             $intersect, $union, $jaccard_index);
       print '  </tr>' . "\n";
       $maxRows--;
     }
