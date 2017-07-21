@@ -126,7 +126,6 @@ print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
 
-include_once('backend/yearlyGraph.inc');
 $graphs = yearlyGraphs(
   $years,
   $donees,
