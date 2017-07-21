@@ -15,10 +15,10 @@ def donees(f):
         donee = donee.replace(' & ', ' ')
         donee = donee.replace('-', ' ')
         donee = donee.replace(': ', ' ')
-        donee = re.sub(r",? inc\.?", "", donee).strip()
-        donee = re.sub(r",? llc\.?", "", donee).strip()
-        if donee.endswith(" foundation"):
-            donee = donee[:-len(" foundation")]
+        donee = re.sub(r"(,? (inc|llc|nfp|institute|fund|foundation))+",
+                       "", donee).strip()
+
+        donee = donee.replace(' ', "")
 
         if donee in result:
             result[donee].append(original)
