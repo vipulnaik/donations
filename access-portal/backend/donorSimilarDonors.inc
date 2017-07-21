@@ -87,12 +87,18 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
   if ((! $result) || ($result->num_rows <= 0)) {
     printf("<p>Sorry, we couldn't find any similar donors.</p>");
   } else {
+    $maxRows = 30;
+    $shownRows = min($maxRows, $result->num_rows);
     print '<p>The following table uses the ' .
       '<a href="https://en.wikipedia.org/wiki/Jaccard_index">' .
       'Jaccard index</a> and ' .
       '<a href="https://en.wikipedia.org/wiki/Cosine_similarity">' .
       'cosine similarity</a>' .
-      ' to compare the similarity of donors.</p>' . "\n";
+      ' to compare the similarity of donors.' .
+      " We are showing the top $shownRows donors by the Jaccard index because" .
+      " we show up to $maxRows donors and" .
+      " show only donors with at least one donee in common." .
+      '</p>' . "\n";
     print '<table id="myTableDonorSimilarDonors" class="tablesorter">' . "\n";
     print '<thead>' . "\n";
     print '  <tr>' . "\n";
@@ -107,7 +113,6 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
     print '</thead>' . "\n";
     print '<tbody>' . "\n";
 
-    $maxRows = 30;
     while (($row = $result->fetch_row()) && $maxRows > 0) {
       $other_donor = $row[0];
       $donor_size = $row[1];
