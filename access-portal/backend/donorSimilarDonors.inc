@@ -71,7 +71,6 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
     print '<tbody>' . "\n";
 
     $maxRows = 30;
-    /* $stmt->bind_result($other_donor, $intersect, $union, $jaccard_index); */
     while (($row = $result->fetch_row()) && $maxRows > 0) {
       $other_donor = $row[0];
       $donor_size = $row[1];
