@@ -2,7 +2,7 @@
 
 print '<h4 id="doneeDonationAmountsByDonorAndYear">Donation amounts by donor and year for donee '.$donee.'</h4>'."\n";
 
-$donorQuery = "select donor from donations where donee = ".'"'.$donee.'"'." group by donor;";
+$donorQuery = "select donor from donations where donee = ".'"'.str_replace('"','\"',$donee).'"'." group by donor;";
 $donorResult = $mysqli -> query($donorQuery);
 $donors = array();
 for ($i = 0; $i < $donorResult -> num_rows; $i++) {
@@ -18,7 +18,7 @@ foreach($donors as $donor) {
   }
 }
 
-$donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donee=".'"'.$donee.'"'." group by donor, year(donation_date)";
+$donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donee=".'"'.str_replace('"','\"',$donee).'"'." group by donor, year(donation_date)";
 $donorAndYearResult = $mysqli -> query($donorAndYearQuery);
 
 for ($i=0; $i < $donorAndYearResult -> num_rows; $i++) {

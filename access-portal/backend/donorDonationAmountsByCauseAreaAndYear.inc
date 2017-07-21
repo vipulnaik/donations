@@ -2,13 +2,13 @@
 
 print '<h4 id="donorDonationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</h4>';
 
-$totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where donor='$donor' $causeAreaFilterQueryComponent;";
+$totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where donor=".'"'.str_replace('"','\"',$donor).'"'." $causeAreaFilterQueryComponent;";
 $totalNumDistinctDoneesResult = $mysqli -> query($totalNumDistinctDoneesQuery);
 for ($i = 0; $i < $totalNumDistinctDoneesResult -> num_rows; $i++) {
   $row = $totalNumDistinctDoneesResult -> fetch_assoc();
   $totalNumDistinctDonees = $row['numDonees'];
 }
-$causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area,count(distinct donee) as numDonees,count(*) as numDonations from donations where donor='$donor' $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1)";
+$causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area,count(distinct donee) as numDonees,count(*) as numDonations from donations where donor=".'"'.str_replace('"','\"',$donor).'"'." $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1)";
 $causeAreaResult = $mysqli -> query($causeAreaQuery);
 $causeAreas = array();
 $grandTotalNumDonations = 0;
@@ -28,7 +28,7 @@ foreach($causeAreas as $causeArea) {
   }
 }
 
-$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(distinct donee) as numDonees, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor='$donor' $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1), year(donation_date)";
+$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(distinct donee) as numDonees, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor=".'"'.str_replace('"','\"',$donor).'"'." $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1), year(donation_date)";
 $causeAreaAndYearResult = $mysqli -> query($causeAreaAndYearQuery);
 
 for ($i=0; $i < $causeAreaAndYearResult -> num_rows; $i++) {

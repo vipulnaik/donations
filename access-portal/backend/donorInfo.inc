@@ -1,5 +1,5 @@
 <?php
-$donorSelectQuery = "select * from donors where donor='$donor';";
+$donorSelectQuery = "select * from donors where donor=".'"'.str_replace('"','\"',$donor).'"'.";";
 $donorSelectResult = $mysqli -> query($donorSelectQuery);
 $affiliatedOrgsList = array();
 print '<h4 id="donorInfo">Basic donor information</h4>';

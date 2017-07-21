@@ -1,6 +1,6 @@
 <?php
 
-$influencerMoneyMovedSelectQuery = "select * from money_moved where influencer='$influencer' order by start_date desc";
+$influencerMoneyMovedSelectQuery = "select * from money_moved where influencer=".'"'.str_replace('"','\"',$influencer).'"'." order by start_date desc";
 $influencerMoneyMovedSelectResult = $mysqli -> query($influencerMoneyMovedSelectQuery);
 if ($influencerMoneyMovedSelectResult -> num_rows > 0) {
   print '<h4 id="influencerMoneyMovedList">Money moved infomation for influencer '.$influencer.' ('.($influencerMoneyMovedSelectResult -> num_rows).' rows)</h4>';
