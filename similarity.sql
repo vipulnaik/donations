@@ -1,11 +1,15 @@
 -- Modified from https://stackoverflow.com/a/36823694/3422337
 select
-    jaccard.donor,
-    jaccard.intersect,
-    jaccard.union,
-    jaccard.intersect/jaccard.union as jaccard_index,
-    jaccard.intersect / (sqrt(jaccard.donor_size) *
-        sqrt(jaccard.other_donor_size)) as cosine_similarity
+    similarity.donor,
+    similarity.donor_size,
+    similarity.other_donor_size,
+    similarity.intersect,
+    similarity.union,
+    sqrt(similarity.donor_size) * sqrt(similarity.other_donor_size)
+        as magnitude_product,
+    similarity.intersect/similarity.union as jaccard_index,
+    similarity.intersect / (sqrt(similarity.donor_size) *
+        sqrt(similarity.other_donor_size)) as cosine_similarity
 from (
     select
         other_donors.donor as donor,
@@ -30,6 +34,6 @@ from (
         select distinct(donor) from donations
         where donor != 'Open Philanthropy Project'
     ) as other_donors
-) as jaccard
+) as similarity
 having jaccard_index > 0
 order by jaccard_index desc;
