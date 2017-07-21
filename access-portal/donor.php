@@ -41,13 +41,14 @@ print '<li><a href="#donorDonationAmountsByCauseAreaAndYear">Donor donation amou
 print '<li><a href="#donorDonationAmountsByDoneeAndYear">Donor donation amounts by donee and year</a></li>';
 print '<li><a href="#donorDocumentList">Donor document list</a></li>';
 print '<li><a href="#donorDonationList">Donor donation list</a></li>';
+print '<li><a href="#donorSimilarDonors">Similar donors</a></li>';
 print '</ul>';
 
-include ("backend/donorSimilarDonors.inc");
 include ("backend/donorInfo.inc");
 include ("backend/donorDonationAmountsByCauseAreaAndYear.inc");
 include ("backend/donorDonationAmountsByDoneeAndYear.inc");
 include ("backend/donorDocumentList.inc");
 include ("backend/donorDonationList.inc");
+include ("backend/donorSimilarDonors.inc");
 print '</body>';
 ?>

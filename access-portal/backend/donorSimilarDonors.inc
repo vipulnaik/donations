@@ -33,7 +33,7 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
   $stmt->bind_param("sss", $donor, $donor, $donor);
   $stmt->execute();
   $stmt->bind_result($other_donor, $intersect, $union, $jaccard_index);
-  print '<h4>Similarity to other donors</h4>' . "\n";
+  print '<h4 id="donorSimilarDonors">Similarity to other donors</h4>' . "\n";
   print '<table class="tablesorter">' . "\n";
   print '<thead>' . "\n";
   print '  <tr>' . "\n";
