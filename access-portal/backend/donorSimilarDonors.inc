@@ -97,16 +97,11 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
     print '<thead>' . "\n";
     print '  <tr>' . "\n";
     print '    <th>Donor</th>' . "\n";
-    print '    <th>Donor size</th>' . "\n";
-    print '    <th>Other donor size</th>' . "\n";
-    print '    <th>Number of donees in common (intersect)</th>' . "\n";
+    print '    <th>Number of distinct donees</th>' . "\n";
+    print '    <th>Number of donees in common (intersection)</th>' . "\n";
     print '    <th>Union size</th>' . "\n";
-    print '    <th>Magnitude product</th>' . "\n";
     print '    <th>Jaccard similarity</th>' . "\n";
     print '    <th>Cosine similarity</th>' . "\n";
-    print '    <th>Weighted magnitude</th>' . "\n";
-    print '    <th>Weighted magnitude other</th>' . "\n";
-    print '    <th>Weighted dot product</th>' . "\n";
     print '    <th>Weighted cosine similarity</th>' . "\n";
     print '  </tr>' . "\n";
     print '</thead>' . "\n";
@@ -137,16 +132,9 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
           '    <td align="right">%s</td>' . "\n" .
           '    <td align="right">%s</td>' . "\n" .
           '    <td align="right">%s</td>' . "\n" .
-          '    <td align="right">%s</td>' . "\n" .
-          '    <td align="right">%s</td>' . "\n" .
-          '    <td align="right">%s</td>' . "\n" .
-          '    <td align="right">%s</td>' . "\n" .
-          '    <td align="right">%s</td>' . "\n" .
           '    <td align="right">%s</td>' . "\n",
-          $donor_size, $other_donor_size, $intersect, $union,
-          $magnitude_product, $jaccard_index, $cosine_similarity,
-          $weighted_magnitude, $weighted_magnitude_other,
-          $weighted_dot_product, $weighted_cosine_similarity
+          $other_donor_size, $intersect, $union, $jaccard_index,
+          $cosine_similarity, $weighted_cosine_similarity
         );
         print '  </tr>' . "\n";
         $maxRows--;
