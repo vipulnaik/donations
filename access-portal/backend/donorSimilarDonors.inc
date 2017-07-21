@@ -51,7 +51,10 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
   } else {
     print '<p>The following table uses the ' .
       '<a href="https://en.wikipedia.org/wiki/Jaccard_index">' .
-      'Jaccard index</a> to compare the similarity of donors.</p>' . "\n";
+      'Jaccard index</a> and ' .
+      '<a href="https://en.wikipedia.org/wiki/Cosine_similarity">' .
+      'cosine similarity</a>' .
+      ' to compare the similarity of donors.</p>' . "\n";
     print '<table id="myTableDonorSimilarDonors" class="tablesorter">' . "\n";
     print '<thead>' . "\n";
     print '  <tr>' . "\n";
@@ -84,13 +87,13 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
         printf('    <td><a href="/donor.php?donor=%s">%s</a></td>' . "\n",
                urlencode($other_donor), $other_donor);
         printf(
-          "    <td>%s</td>\n" .
-          "    <td>%s</td>\n" .
-          "    <td>%s</td>\n" .
-          "    <td>%s</td>\n" .
-          "    <td>%s</td>\n" .
-          "    <td>%s</td>\n" .
-          "    <td>%s</td>\n",
+          '    <td align="right">%s</td>' . "\n" .
+          '    <td align="right">%s</td>' . "\n" .
+          '    <td align="right">%s</td>' . "\n" .
+          '    <td align="right">%s</td>' . "\n" .
+          '    <td align="right">%s</td>' . "\n" .
+          '    <td align="right">%s</td>' . "\n" .
+          '    <td align="right">%s</td>' . "\n",
           $donor_size, $other_donor_size, $intersect, $union,
           $magnitude_product, $jaccard_index, $cosine_similarity
         );
