@@ -1,10 +1,10 @@
 -- Modified from https://stackoverflow.com/a/36823694/3422337
 select
-    similarity.donor,
-    similarity.donor_size,
-    similarity.other_donor_size,
-    similarity.intersect,
-    similarity.union,
+    similarity.`donor`,
+    similarity.`donor_size`,
+    similarity.`other_donor_size`,
+    similarity.`intersect`,
+    similarity.`union`,
     round(sqrt(similarity.donor_size) * sqrt(similarity.other_donor_size), 4)
         as magnitude_product,
     round(similarity.intersect/similarity.union, 4) as jaccard_index,
@@ -21,17 +21,17 @@ from (
                 select distinct(donee) from donations
                 where donor = 'Open Philanthropy Project'
             )
-        ) as 'intersect',
+        ) as `intersect`,
         (select count(distinct donee) from donations
             where donor = 'Open Philanthropy Project'
             or donor = other_donors.donor
-        ) as 'union',
+        ) as `union`,
         (select count(distinct donee) from donations
             where donor = 'Open Philanthropy Project'
-        ) as 'donor_size',
+        ) as `donor_size`,
         (select count(distinct donee) from donations
             where donor = other_donors.donor
-        ) as 'other_donor_size',
+        ) as `other_donor_size`,
         (select sqrt(sum(sqsums.s))
             from (
                 select power(sum(amount),2) as s
@@ -39,7 +39,7 @@ from (
                 where donor = 'Open Philanthropy Project'
                 group by donee
             ) as sqsums
-        ) as 'weighted_magnitude',
+        ) as `weighted_magnitude`,
         (select sqrt(sum(sqsums.s))
             from (
                 select power(sum(amount),2) as s
@@ -47,8 +47,8 @@ from (
                 where donor = other_donors.donor
                 group by donee
             ) as sqsums
-        ) as 'weighted_magnitude_other',
-        (1) as 'weighted_dot_product'
+        ) as `weighted_magnitude_other`,
+        (1) as `weighted_dot_product`
     from (
         select distinct(donor) from donations
         where donor != 'Open Philanthropy Project'
