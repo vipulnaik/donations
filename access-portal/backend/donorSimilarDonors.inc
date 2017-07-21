@@ -49,8 +49,10 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
   while (mysqli_stmt_fetch($stmt) && $maxRows > 0) {
     if ($jaccard_index > 0) {
       print '  <tr>' . "\n";
-      printf("    <td>%s</td>\n    <td>%s</td>\n" .
-             "    <td>%s</td>\n    <td>%s</td>\n", $other_donor,
+      printf('    <td><a href="/donor.php?donor=%s">%s</a></td>' . "\n",
+             urlencode($other_donor), $other_donor);
+      printf("    <td>%s</td>\n" .
+             "    <td>%s</td>\n    <td>%s</td>\n",
              $intersect, $union, $jaccard_index);
       print '  </tr>' . "\n";
       $maxRows--;
