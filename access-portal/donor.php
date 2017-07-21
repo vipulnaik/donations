@@ -43,6 +43,7 @@ print '<li><a href="#donorDocumentList">Donor document list</a></li>';
 print '<li><a href="#donorDonationList">Donor donation list</a></li>';
 print '</ul>';
 
+include ("backend/donorSimilarDonors.inc");
 include ("backend/donorInfo.inc");
 include ("backend/donorDonationAmountsByCauseAreaAndYear.inc");
 include ("backend/donorDonationAmountsByDoneeAndYear.inc");
