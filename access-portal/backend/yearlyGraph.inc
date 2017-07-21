@@ -1,14 +1,16 @@
 <?php
 
-function yearlyGraphs($years, $donees, $yearDonationAmount, $donationAmountByDoneeAndYear, $generateGraphCmdBase, $imagesPath, $donor) {
+function yearlyGraphs($years, $group, $yearDonationAmount,
+    $donationAmountByGroupAndYear, $generateGraphCmdBase, $imagesPath, $donor,
+    $graphIdentifier) {
   $cumulativeTotal = 0;
-  $cumulativeForDonee = array();
+  $cumulativeForGroup = array();
   $dataForGraph = "Year";
   $dataForCumulativeGraph = "Year";
 
-  foreach ($donees as $donee) {
-    $dataForGraph .= "|$donee";
-    $dataForCumulativeGraph .= "|$donee";
+  foreach ($group as $i) {
+    $dataForGraph .= "|$i";
+    $dataForCumulativeGraph .= "|$i";
   }
   $dataForGraph .= "|Total\n";
   $dataForCumulativeGraph .= "|Total\n";
@@ -18,16 +20,16 @@ function yearlyGraphs($years, $donees, $yearDonationAmount, $donationAmountByDon
     if ($yearDonationAmount[$year] > 0) {
       $dataForGraph .= "$year";
       $dataForCumulativeGraph .= "$year";
-      foreach ($donees as $donee) {
-        if (!isset($cumulativeForDonee[$donee])) {
-          $cumulativeForDonee[$donee] = 0;
+      foreach ($group as $i) {
+        if (!isset($cumulativeForGroup[$i])) {
+          $cumulativeForGroup[$i] = 0;
         }
-        $cumulativeForDonee[$donee] +=
-          $donationAmountByDoneeAndYear[$donee][$year];
+        $cumulativeForGroup[$i] +=
+          $donationAmountByGroupAndYear[$i][$year];
         $dataForGraph .= "|" .
-          sprintf("%d", $donationAmountByDoneeAndYear[$donee][$year]);
+          sprintf("%d", $donationAmountByGroupAndYear[$i][$year]);
         $dataForCumulativeGraph .= "|" .
-          sprintf("%d", $cumulativeForDonee[$donee]);
+          sprintf("%d", $cumulativeForGroup[$i]);
       }
       $cumulativeTotal += $yearDonationAmount[$year];
       $dataForGraph .= "|" . sprintf("%d", $yearDonationAmount[$year]) . "\n";
@@ -38,12 +40,12 @@ function yearlyGraphs($years, $donees, $yearDonationAmount, $donationAmountByDon
   /* Populate the totals row */
   $dataForGraph .= "Total";
   $dataForCumulativeGraph .= "Total";
-  foreach ($donees as $donee) {
-    if (!isset($cumulativeForDonee[$donee])) {
-      $cumulativeForDonee[$donee] = 0;
+  foreach ($group as $i) {
+    if (!isset($cumulativeForGroup[$i])) {
+      $cumulativeForGroup[$i] = 0;
     }
-    $dataForGraph .= "|" . sprintf("%d", $cumulativeForDonee[$donee]);
-    $dataForCumulativeGraph .= "|" . sprintf("%d", $cumulativeForDonee[$donee]);
+    $dataForGraph .= "|" . sprintf("%d", $cumulativeForGroup[$i]);
+    $dataForCumulativeGraph .= "|" . sprintf("%d", $cumulativeForGroup[$i]);
   }
   $dataForGraph .= "|" . sprintf("%d", $cumulativeTotal) . "\n";
   $dataForCumulativeGraph .= "|" . sprintf("%d", $cumulativeTotal) . "\n";
@@ -53,7 +55,7 @@ function yearlyGraphs($years, $donees, $yearDonationAmount, $donationAmountByDon
   /* if (isset($causeAreaFilterString) and $causeAreaFilterString != '') { */
   /*   $permalinkUrlBase .= "&cause_area_filter=".urlencode($causeAreaFilterString); */
   /* } */
-  $permalinkUrl = $permalinkUrlBase . "#donorDonationAmountsByDoneeAndYear";
+  $permalinkUrl = $permalinkUrlBase . $graphIdentifier;
   $fileName = hash("md5", $permalinkUrl);
   $filePathBase = $imagesPath . $fileName;
   $dataHasChanged= false;
