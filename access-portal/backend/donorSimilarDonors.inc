@@ -27,16 +27,34 @@ from (
 order by jaccard_index desc;
 EOD;
 
-print "$donorSimilarityQuery";
+/* print "$donorSimilarityQuery"; */
 
 if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
   $stmt->bind_param("sss", $donor, $donor, $donor);
   $stmt->execute();
   $stmt->bind_result($other_donor, $intersect, $union, $jaccard_index);
-  print "JACCARD INDEX GOES HERE:\n";
-  while (mysqli_stmt_fetch($stmt)) {
-    printf("%s %s<br/>\n", $other_donor, $jaccard_index);
+  print '<h4>Similarity to other donors</h4>' . "\n";
+  print '<table class="tablesorter">' . "\n";
+  print '<thead>' . "\n";
+  print '  <tr>' . "\n";
+  print '    <th>Donor</th>' . "\n";
+  print '    <th>Jaccard similarity</th>';
+  print '  </tr>' . "\n";
+  print '</thead>' . "\n";
+  print '<tbody>' . "\n";
+
+  $maxRows = 30;
+  while (mysqli_stmt_fetch($stmt) && $maxRows > 0) {
+    if ($jaccard_index > 0) {
+      print '  <tr>' . "\n";
+      printf("    <td>%s</td>\n    <td>%s</td>\n", $other_donor,
+             $jaccard_index);
+      print '  </tr>' . "\n";
+      $maxRows--;
+    }
   }
-  print "JACCARD INDEX IS ABOVE HERE\n";
+
+  print '</tbody>' . "\n";
+  print '</table>' . "\n";
 }
 ?>
