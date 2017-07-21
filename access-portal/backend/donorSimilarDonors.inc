@@ -39,7 +39,6 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
   if ((! $result) || ($result->num_rows <= 0)) {
     printf("<p>Sorry, we couldn't find any similar donors.</p>");
   } else {
-    printf("%s", $result->num_rows);
     print '<p>The following table uses the ' .
       '<a href="https://en.wikipedia.org/wiki/Jaccard_index">' .
       'Jaccard index</a> to compare the similarity of donors.</p>' . "\n";
