@@ -11,8 +11,10 @@ def donees(f):
 
         donee = line.strip().lower()
         donee = donee.replace('.', '')
-        donee = donee.replace(' and ', ' & ')
-        donee = donee.replace('&', '')
+        donee = donee.replace(' and ', ' ')
+        donee = donee.replace(' & ', ' ')
+        donee = donee.replace('-', ' ')
+        donee = donee.replace(': ', ' ')
         donee = re.sub(r",? inc\.?", "", donee).strip()
         donee = re.sub(r",? llc\.?", "", donee).strip()
         if donee.endswith(" foundation"):
