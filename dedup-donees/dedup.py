@@ -1,28 +1,27 @@
 #!/usr/bin/env python3
 import re
+import sys
 
 
-def donees(filename):
-    donees = []
+def donees(f):
+    donees = {}
 
-    with open(filename, "r") as f:
-        for line in f:
-            d = line.strip().lower()
-            d = d.replace('.', '')
-            d = d.replace(' and ', '&')
-            d = d.replace('&', '')
+    for line in f:
+        original = line.rstrip()
+        donee = line.strip().lower()
+        donee = donee.replace('.', '')
+        donee = donee.replace(' and ', ' & ')
+        donee = donee.replace('&', '')
 
-            d = re.sub(r",? inc\.?", "", d).strip()
-            d = re.sub(r",? llc\.?", "", d).strip()
+        donee = re.sub(r",? inc\.?", "", donee).strip()
+        donee = re.sub(r",? llc\.?", "", donee).strip()
 
-            # if d in donees:
-            #     print(d)
-            donees.append(d)
-    return donees
+        if donee in donees:
+            # This is a duplicate, so show what it is
+            donees[donee].append(original)
+            print(donee, donees[donee])
+        else:
+            donees[donee] = [original]
 
-# print(len(donees("temp")))
-print(len(set(donees("temp"))))
-# print(len(donees("temp2")))
-print(len(set(donees("temp2"))))
 
-print(set(donees("temp2")).difference(set(donees("temp"))))
+donees(sys.stdin)
