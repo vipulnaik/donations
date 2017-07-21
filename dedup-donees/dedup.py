@@ -4,24 +4,31 @@ import sys
 
 
 def donees(f):
-    donees = {}
+    result = {}
 
     for line in f:
         original = line.rstrip()
+
         donee = line.strip().lower()
         donee = donee.replace('.', '')
         donee = donee.replace(' and ', ' & ')
         donee = donee.replace('&', '')
-
         donee = re.sub(r",? inc\.?", "", donee).strip()
         donee = re.sub(r",? llc\.?", "", donee).strip()
+        if donee.endswith(" foundation"):
+            donee = donee[:-len(" foundation")]
 
-        if donee in donees:
-            # This is a duplicate, so show what it is
-            donees[donee].append(original)
-            print(donee, donees[donee])
+        if donee in result:
+            result[donee].append(original)
         else:
-            donees[donee] = [original]
+            result[donee] = [original]
+
+    return result
 
 
-donees(sys.stdin)
+if __name__ == "__main__":
+    d = donees(sys.stdin)
+    for donee in d:
+        if len(d[donee]) > 1:
+            print(donee + ":", d[donee])
+
