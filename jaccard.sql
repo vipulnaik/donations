@@ -3,7 +3,9 @@ select
     jaccard.donor,
     jaccard.intersect,
     jaccard.union,
-    jaccard.intersect/jaccard.union as jaccard_index
+    jaccard.intersect/jaccard.union as jaccard_index,
+    jaccard.intersect / (sqrt(jaccard.donor_size) *
+        sqrt(jaccard.other_donor_size)) as cosine_similarity
 from (
     select
         other_donors.donor as donor,
@@ -17,7 +19,13 @@ from (
         (select count(distinct donee) from donations
             where donor = 'Open Philanthropy Project'
             or donor = other_donors.donor
-        ) as 'union'
+        ) as 'union',
+        (select count(distinct donee) from donations
+            where donor = 'Open Philanthropy Project'
+        ) as 'donor_size',
+        (select count(distinct donee) from donations
+            where donor = other_donors.donor
+        ) as 'other_donor_size'
     from (
         select distinct(donor) from donations
         where donor != 'Open Philanthropy Project'
