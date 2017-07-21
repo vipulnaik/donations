@@ -8,10 +8,10 @@ from (
     select
         other_donors.donor as donor,
         (select count(distinct donee) from donations
-            where donor = 'Open Philanthropy Project'
+            where donor = other_donors.donor
             and donee in (
                 select distinct(donee) from donations
-                where donor = other_donors.donor
+                where donor = 'Open Philanthropy Project'
             )
         ) as 'intersect',
         (select count(distinct donee) from donations
