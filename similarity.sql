@@ -9,7 +9,9 @@ select
         as magnitude_product,
     round(similarity.intersect/similarity.union, 4) as jaccard_index,
     round(similarity.intersect / (sqrt(similarity.donor_size) *
-        sqrt(similarity.other_donor_size)), 4) as cosine_similarity
+        sqrt(similarity.other_donor_size)), 4) as cosine_similarity,
+    similarity.weighted_magnitude,
+    similarity.weighted_magnitude_other
 from (
     select
         other_donors.donor as donor,
@@ -29,7 +31,20 @@ from (
         ) as 'donor_size',
         (select count(distinct donee) from donations
             where donor = other_donors.donor
-        ) as 'other_donor_size'
+        ) as 'other_donor_size',
+        (select sqrt(sum(sqsums.s)) from (
+                select power(sum(amount),2) as s from donations
+                where donor = 'Open Philanthropy Project'
+                group by donee
+            ) as sqsums) as 'weighted_magnitude',
+        (select sqrt(sum(power(amount, 2))) from donations
+            where donor = 'Open Philanthropy Project'
+        ) as 'weighted_magnitude',
+        (select sqrt(sum(power(amount, 2))) from donations
+            where donor = other_donors.donor
+        ) as 'weighted_magnitude_other',
+        ( from donations
+            group by donee) as 'weighted_dot_product'
     from (
         select distinct(donor) from donations
         where donor != 'Open Philanthropy Project'
