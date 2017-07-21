@@ -24,8 +24,7 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
         if (!isset($cumulativeForGroup[$i])) {
           $cumulativeForGroup[$i] = 0;
         }
-        $cumulativeForGroup[$i] +=
-          $donationAmountByGroupAndYear[$i][$year];
+        $cumulativeForGroup[$i] += $donationAmountByGroupAndYear[$i][$year];
         $dataForGraph .= "|" .
           sprintf("%d", $donationAmountByGroupAndYear[$i][$year]);
         $dataForCumulativeGraph .= "|" .
@@ -53,7 +52,8 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
   $permalinkUrlBase = "https://donations.vipulnaik.com/donor.php?donor=" .
     urlencode($donor);
   if (isset($causeAreaFilterString) and $causeAreaFilterString != '') {
-    $permalinkUrlBase .= "&cause_area_filter=".urlencode($causeAreaFilterString);
+    $permalinkUrlBase .= "&cause_area_filter=" .
+      urlencode($causeAreaFilterString);
   }
   $permalinkUrl = $permalinkUrlBase . $graphIdentifier;
   $fileName = hash("md5", $permalinkUrl);
@@ -85,17 +85,22 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
   $filePathBaseCumulative = $imagesPath . $fileNameCumulative;
   $dataHasChangedCumulative = false;
   if (! file_exists($filePathBaseCumulative . ".csv")) {
-    file_put_contents($filePathBaseCumulative . ".csv", $dataForCumulativeGraph);
+    file_put_contents($filePathBaseCumulative . ".csv",
+      $dataForCumulativeGraph);
     $dataHasChangedCumulative = true;
   } else {
     $previousOutput = file_get_contents($filePathBaseCumulative . ".csv");
     if ($previousOutput != $dataForCumulativeGraph) {
       $dataHasChangedCumulative = true;
-      file_put_contents($filePathBaseCumulative . ".csv", $dataForCumulativeGraph);
+      file_put_contents($filePathBaseCumulative . ".csv",
+        $dataForCumulativeGraph);
     }
   }
-  $cmdToExecuteCumulative = $generateGraphCmdBase . " " . $filePathBaseCumulative . ".csv " . $filePathBaseCumulative . "-timeseries.png";
-  if ($dataHasChangedCumulative or ! file_exists($filePathBaseCumulative . "-timeseries.png")) {
+  $cmdToExecuteCumulative = $generateGraphCmdBase . " " .
+    $filePathBaseCumulative . ".csv " . $filePathBaseCumulative .
+    "-timeseries.png";
+  if ($dataHasChangedCumulative or ! file_exists($filePathBaseCumulative .
+      "-timeseries.png")) {
     if (file_exists($filePathBaseCumulative . "-timeseries.png")) {
       exec("rm ".$filePathBaseCumulative . "-timeseries.png");
     }
