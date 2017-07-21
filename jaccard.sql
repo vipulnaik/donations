@@ -23,4 +23,5 @@ from (
         where donor != 'Open Philanthropy Project'
     ) as other_donors
 ) as jaccard
+having jaccard_index > 0
 order by jaccard_index desc;
