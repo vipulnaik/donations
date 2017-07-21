@@ -6,11 +6,11 @@ select
     similarity.other_donor_size,
     similarity.intersect,
     similarity.union,
-    sqrt(similarity.donor_size) * sqrt(similarity.other_donor_size)
+    round(sqrt(similarity.donor_size) * sqrt(similarity.other_donor_size), 4)
         as magnitude_product,
-    similarity.intersect/similarity.union as jaccard_index,
-    similarity.intersect / (sqrt(similarity.donor_size) *
-        sqrt(similarity.other_donor_size)) as cosine_similarity
+    round(similarity.intersect/similarity.union, 4) as jaccard_index,
+    round(similarity.intersect / (sqrt(similarity.donor_size) *
+        sqrt(similarity.other_donor_size)), 4) as cosine_similarity
 from (
     select
         other_donors.donor as donor,
