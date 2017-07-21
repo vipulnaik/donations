@@ -32,19 +32,23 @@ from (
         (select count(distinct donee) from donations
             where donor = other_donors.donor
         ) as 'other_donor_size',
-        (select sqrt(sum(sqsums.s)) from (
-                select power(sum(amount),2) as s from donations
+        (select sqrt(sum(sqsums.s))
+            from (
+                select power(sum(amount),2) as s
+                from donations
                 where donor = 'Open Philanthropy Project'
                 group by donee
-            ) as sqsums) as 'weighted_magnitude',
-        (select sqrt(sum(power(amount, 2))) from donations
-            where donor = 'Open Philanthropy Project'
+            ) as sqsums
         ) as 'weighted_magnitude',
-        (select sqrt(sum(power(amount, 2))) from donations
-            where donor = other_donors.donor
+        (select sqrt(sum(sqsums.s))
+            from (
+                select power(sum(amount),2) as s
+                from donations
+                where donor = other_donors.donor
+                group by donee
+            ) as sqsums
         ) as 'weighted_magnitude_other',
-        ( from donations
-            group by donee) as 'weighted_dot_product'
+        (1) as 'weighted_dot_product'
     from (
         select distinct(donor) from donations
         where donor != 'Open Philanthropy Project'
