@@ -127,7 +127,16 @@ print "</tfoot>\n";
 print "</table>";
 
 include_once('backend/yearlyGraph.inc');
-$graphs = yearlyGraphs($years, $donees, $yearDonationAmount, $donationAmountByDoneeAndYear, $generateGraphCmdBase, $imagesPath, $donor);
+$graphs = yearlyGraphs(
+  $years,
+  $donees,
+  $yearDonationAmount,
+  $donationAmountByDoneeAndYear,
+  $generateGraphCmdBase,
+  $imagesPath,
+  $donor,
+  "#donorDonationAmountsByDoneeAndYear"
+);
 
 print "<p><strong>Graph of spending by donee and year (incremental, not cumulative)</strong></p>";
 print '<img src="/images/'.$graphs[0].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
