@@ -30,6 +30,7 @@ print '<script>$(document).ready(function()
         $("#myTableDonorDonationAmountsByCauseAreaAndYear").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorDocumentList").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorDonationList").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonorSimilarDonors").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
 print "<h3>$donor donations made $causeAreaFilterStringHelper</h3>";
@@ -41,6 +42,7 @@ print '<li><a href="#donorDonationAmountsByCauseAreaAndYear">Donor donation amou
 print '<li><a href="#donorDonationAmountsByDoneeAndYear">Donor donation amounts by donee and year</a></li>';
 print '<li><a href="#donorDocumentList">Donor document list</a></li>';
 print '<li><a href="#donorDonationList">Donor donation list</a></li>';
+print '<li><a href="#donorSimilarDonors">Similar donors</a></li>';
 print '</ul>';
 
 include ("backend/donorInfo.inc");
@@ -48,5 +50,6 @@ include ("backend/donorDonationAmountsByCauseAreaAndYear.inc");
 include ("backend/donorDonationAmountsByDoneeAndYear.inc");
 include ("backend/donorDocumentList.inc");
 include ("backend/donorDonationList.inc");
+include ("backend/donorSimilarDonors.inc");
 print '</body>';
 ?>

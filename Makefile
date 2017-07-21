@@ -16,7 +16,7 @@ init:
 	mysql $(MYSQL_ARGS) -e "create database $(DATABASE);"
 
 # To update this section, paste the output of:
-#     find . -type f -iname '*.sql' -not -path "./dedup-donees/*" | sort | sed 's/^\.\//\tmysql $(MYSQL_ARGS) $(DATABASE) < /'
+#     find ./sql -type f -iname '*.sql' | sort | sed 's/^\.\//\tmysql $(MYSQL_ARGS) $(DATABASE) < /'
 # Then move the SQL files ending in "-schema" to the top. In Vim you can
 # visually select the .sql lines:
 #     '<,'>g/-schema/m'<-1
