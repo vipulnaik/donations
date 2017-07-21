@@ -42,11 +42,11 @@ from (
         ) as `weighted_magnitude`,
         (select sqrt(sum(sqsums.s))
             from (
-                select power(sum(amount),2) as s
+                select donor,power(sum(amount),1) as s
                 from donations
-                where donor = other_donors.donor
-                group by donee
+                group by donee, donor
             ) as sqsums
+            where donor = other_donors.donor
         ) as `weighted_magnitude_other`,
         (1) as `weighted_dot_product`
     from (
