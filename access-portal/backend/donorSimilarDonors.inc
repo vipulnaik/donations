@@ -1,10 +1,16 @@
 <?php
 $donorSimilarityQuery = <<<'EOD'
 select
-    jaccard.donor,
-    jaccard.intersect,
-    jaccard.union,
-    jaccard.intersect/jaccard.union as jaccard_index
+    similarity.donor,
+    similarity.donor_size,
+    similarity.other_donor_size,
+    similarity.intersect,
+    similarity.union,
+    sqrt(similarity.donor_size) * sqrt(similarity.other_donor_size)
+        as magnitude_product,
+    similarity.intersect/similarity.union as jaccard_index,
+    similarity.intersect / (sqrt(similarity.donor_size) *
+        sqrt(similarity.other_donor_size)) as cosine_similarity
 from (
     select
         other_donors.donor as donor,
@@ -18,20 +24,24 @@ from (
         (select count(distinct donee) from donations
             where donor = ?
             or donor = other_donors.donor
-        ) as 'union'
+        ) as 'union',
+        (select count(distinct donee) from donations
+            where donor = ?
+        ) as 'donor_size',
+        (select count(distinct donee) from donations
+            where donor = other_donors.donor
+        ) as 'other_donor_size'
     from (
         select distinct(donor) from donations
         where donor != ?
     ) as other_donors
-) as jaccard
+) as similarity
 having jaccard_index > 0
 order by jaccard_index desc;
 EOD;
 
-/* print "$donorSimilarityQuery"; */
-
 if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
-  $stmt->bind_param("sss", $donor, $donor, $donor);
+  $stmt->bind_param("ssss", $donor, $donor, $donor, $donor);
   $stmt->execute();
   $result = $stmt->get_result();
 
@@ -46,9 +56,13 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
     print '<thead>' . "\n";
     print '  <tr>' . "\n";
     print '    <th>Donor</th>' . "\n";
+    print '    <th>Donor size</th>' . "\n";
+    print '    <th>Other donor size</th>' . "\n";
     print '    <th>Number of donees in common (intersect)</th>' . "\n";
     print '    <th>Union size</th>' . "\n";
-    print '    <th>Jaccard similarity</th>';
+    print '    <th>Magnitude product</th>' . "\n";
+    print '    <th>Jaccard similarity</th>' . "\n";
+    print '    <th>Cosine similarity</th>';
     print '  </tr>' . "\n";
     print '</thead>' . "\n";
     print '<tbody>' . "\n";
@@ -57,17 +71,29 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
     /* $stmt->bind_result($other_donor, $intersect, $union, $jaccard_index); */
     while (($row = $result->fetch_row()) && $maxRows > 0) {
       $other_donor = $row[0];
-      $intersect = $row[1];
-      $union = $row[2];
-      $jaccard_index = $row[3];
+      $donor_size = $row[1];
+      $other_donor_size = $row[2];
+      $intersect = $row[3];
+      $union = $row[4];
+      $magnitude_product = $row[5];
+      $jaccard_index = $row[6];
+      $cosine_similarity = $row[7];
 
       if ($jaccard_index > 0) {
         print '  <tr>' . "\n";
         printf('    <td><a href="/donor.php?donor=%s">%s</a></td>' . "\n",
                urlencode($other_donor), $other_donor);
-        printf("    <td>%s</td>\n" .
-               "    <td>%s</td>\n    <td>%s</td>\n",
-               $intersect, $union, $jaccard_index);
+        printf(
+          "    <td>%s</td>\n" .
+          "    <td>%s</td>\n" .
+          "    <td>%s</td>\n" .
+          "    <td>%s</td>\n" .
+          "    <td>%s</td>\n" .
+          "    <td>%s</td>\n" .
+          "    <td>%s</td>\n",
+          $donor_size, $other_donor_size, $intersect, $union,
+          $magnitude_product, $jaccard_index, $cosine_similarity
+        );
         print '  </tr>' . "\n";
         $maxRows--;
       }
