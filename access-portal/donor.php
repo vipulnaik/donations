@@ -30,6 +30,7 @@ print '<script>$(document).ready(function()
         $("#myTableDonorDonationAmountsByCauseAreaAndYear").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorDocumentList").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorDonationList").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonorSimilarDonors").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
 print "<h3>$donor donations made $causeAreaFilterStringHelper</h3>";
