@@ -13,10 +13,12 @@ def donees(f):
         donee = re.sub(r"the regents of (the )?", "", donee).strip()
         donee = donee.replace('.', '')
         donee = donee.replace(' and ', ' ')
+        donee = donee.replace(' at ', ' ')
         donee = donee.replace(' & ', ' ')
         donee = donee.replace('-', ' ')
         donee = donee.replace(': ', ' ')
-        donee = re.sub(r"(,? (inc|llc|nfp|institute|fund|foundation))+$",
+        donee = re.sub(r"(,? (inc|llc|nfp|institute|fund|foundation"
+                       r"|headquarters|hq))+$",
                        "", donee).strip()
 
         donee = donee.replace("institutes", "institute")
