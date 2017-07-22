@@ -23,7 +23,7 @@ def donees(f):
             "the", "and", "at", "of", "for", "inc", "llc", "nfp", "institute",
             "fund", "foundation", "headquarters", "hq", "regents?",
             "institutes?", "ltd", "limited", "gte", "co", r"a\.?g\.?", "fund",
-            r"a\.?c\.?"
+            r"a\.?c\.?", "trustees?",
         ]
         donee = re.sub(r"\b(" + "|".join(words) + r")\b", " ", donee).strip()
 
