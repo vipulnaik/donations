@@ -13,6 +13,7 @@ def donees(f):
         donee = re.sub(r"the regents of (the )?", "", donee).strip()
         donee = donee.replace('.', '')
         donee = donee.replace(' and ', ' ')
+        donee = re.sub(r"\bthe\b", " ", donee).strip()
         donee = donee.replace(' at ', ' ')
         donee = donee.replace(' & ', ' ')
         donee = donee.replace('-', ' ')
