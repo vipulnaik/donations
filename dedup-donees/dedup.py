@@ -18,13 +18,13 @@ def donees(f):
         original = line.rstrip()
 
         donee = line.strip().lower()
-        donee = re.sub(r"the regents of (the )?", "", donee).strip()
 
-        words = ["the", "and", "at", "of", "inc", "llc", "nfp", "institute",
-                 "fund", "foundation", "headquarters", "hq"]
+        words = [
+            "the", "and", "at", "of", "for", "inc", "llc", "nfp", "institute",
+            "fund", "foundation", "headquarters", "hq", "regent", "regents",
+            "institute", "institutes",
+        ]
         donee = re.sub(r"\b(" + "|".join(words) + r")\b", " ", donee).strip()
-
-        donee = donee.replace("institutes", "institute")
 
         bad_chars = ['.', '&', '-', ':', ',', ' ']
         for c in bad_chars:
