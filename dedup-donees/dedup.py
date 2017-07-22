@@ -19,18 +19,16 @@ def donees(f):
 
         donee = line.strip().lower()
         donee = re.sub(r"the regents of (the )?", "", donee).strip()
-        donee = donee.replace('.', '')
-        donee = re.sub(r"\b(the|and|at|of)\b", " ", donee).strip()
-        donee = donee.replace(' & ', ' ')
-        donee = donee.replace('-', ' ')
-        donee = donee.replace(': ', ' ')
-        donee = re.sub(r"(,? (inc|llc|nfp|institute|fund|foundation"
-                       r"|headquarters|hq))+$",
-                       "", donee).strip()
+
+        words = ["the", "and", "at", "of", "inc", "llc", "nfp", "institute",
+                 "fund", "foundation", "headquarters", "hq"]
+        donee = re.sub(r"\b(" + "|".join(words) + r")\b", " ", donee).strip()
 
         donee = donee.replace("institutes", "institute")
-        donee = donee.replace(',', '')
-        donee = donee.replace(' ', "")
+
+        bad_chars = ['.', '&', '-', ':', ',', ' ']
+        for c in bad_chars:
+            donee = donee.replace(c, "")
 
         if donee in result:
             result[donee].append(original)
