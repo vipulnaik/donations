@@ -35,6 +35,7 @@ print '<li><a href="#donationAmountsByDonorAndYear">Donation amounts by donor an
 print '<li><a href="#donationAmountsByDoneeAndYear">Donation amounts by donee and year</a></li>';
 print '</ul>';
 
+include_once('backend/yearlyGraph.inc');
 include ("backend/donationAmountsByCauseAreaAndYear.inc");
 include ("backend/donationAmountsByDonorAndYear.inc");
 include ("backend/donationAmountsByDoneeAndYear.inc");
