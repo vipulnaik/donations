@@ -133,7 +133,7 @@ $graphs = yearlyGraphs(
   $donationAmountByDoneeAndYear,
   $generateGraphCmdBase,
   $imagesPath,
-  $donor,
+  "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor),
   "#donorDonationAmountsByDoneeAndYear"
 );
 

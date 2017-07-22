@@ -1,8 +1,8 @@
 <?php
 
 function yearlyGraphs($years, $group, $yearDonationAmount,
-    $donationAmountByGroupAndYear, $generateGraphCmdBase, $imagesPath, $donor,
-    $graphIdentifier) {
+    $donationAmountByGroupAndYear, $generateGraphCmdBase, $imagesPath,
+    $permalinkUrlBase, $graphIdentifier) {
   $cumulativeTotal = 0;
   $cumulativeForGroup = array();
   $dataForGraph = "Year";
@@ -49,8 +49,6 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
   $dataForGraph .= "|" . sprintf("%d", $cumulativeTotal) . "\n";
   $dataForCumulativeGraph .= "|" . sprintf("%d", $cumulativeTotal) . "\n";
 
-  $permalinkUrlBase = "https://donations.vipulnaik.com/donor.php?donor=" .
-    urlencode($donor);
   if (isset($causeAreaFilterString) and $causeAreaFilterString != '') {
     $permalinkUrlBase .= "&cause_area_filter=" .
       urlencode($causeAreaFilterString);

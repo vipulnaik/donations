@@ -106,7 +106,7 @@ $graphs = yearlyGraphs(
   $donationAmountByCauseAreaAndYear,
   $generateGraphCmdBase,
   $imagesPath,
-  $donor,
+  "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor),
    "#donorDonationAmountsByCauseAreaAndYear"
 );
 
