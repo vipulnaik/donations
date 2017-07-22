@@ -22,11 +22,11 @@ def donees(f):
         words = [
             "the", "and", "at", "of", "for", "inc", "llc", "nfp", "institute",
             "fund", "foundation", "headquarters", "hq", "regents?",
-            "institutes?",
+            "institutes?", "ltd", "gte", "co", r"a\.?g\.?", "fund",
         ]
         donee = re.sub(r"\b(" + "|".join(words) + r")\b", " ", donee).strip()
 
-        bad_chars = ['.', '&', '-', ':', ',', ' ']
+        bad_chars = ['.', '&', '-', ':', ',', '/', ' ']
         for c in bad_chars:
             donee = donee.replace(c, "")
 
