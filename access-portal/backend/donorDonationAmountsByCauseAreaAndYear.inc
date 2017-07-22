@@ -99,105 +99,20 @@ print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
 
-$dataForGraph = "Year";
-$dataForCumulativeGraph = "Year";
-foreach ($causeAreas as $causeArea) {
-  $dataForGraph .= "|$causeArea";
-  $dataForCumulativeGraph .= "|$causeArea";
-}
-$dataForGraph .= "|Total\n";
-$dataForCumulativeGraph .= "|Total\n";
-
-foreach (array_reverse($years) as $year) {
-  if ($yearDonationAmount[$year] > 0) {
-    $dataForGraph .= "$year";
-    $dataForCumulativeGraph .= "$year";
-    foreach ($causeAreas as $causeArea) {
-      if (!isset($cumulativeForCauseArea[$causeArea])) {
-        $cumulativeForCauseArea[$causeArea] = 0;
-      }
-      $cumulativeForCauseArea[$causeArea] += $donationAmountByCauseAreaAndYear[$causeArea][$year];
-      $dataForGraph .= "|".sprintf("%d",$donationAmountByCauseAreaAndYear[$causeArea][$year]);
-      $dataForCumulativeGraph .= "|".sprintf("%d",$cumulativeForCauseArea[$causeArea]);
-    }
-    $cumulativeTotal += $yearDonationAmount[$year];
-    $dataForGraph .= "|".sprintf("%d",$yearDonationAmount[$year])."\n";
-    $dataForCumulativeGraph .= "|".sprintf("%d",$cumulativeTotal)."\n";
-  }
-}
-
-$dataForGraph .= "Total";
-$dataForCumulativeGraph .= "Total";
-foreach ($causeAreas as $causeArea) {
-  if (!isset($cumulativeForCauseArea[$causeArea])) {
-    $cumulativeForCauseArea[$causeArea] = 0;
-  }
-  $dataForGraph .= "|".sprintf("%d",$cumulativeForCauseArea[$causeArea]);
-  $dataForCumulativeGraph .= "|".sprintf("%d",$cumulativeForCauseArea[$causeArea]);  
-}
-$dataForGraph .= "|".sprintf("%d",$cumulativeTotal)."\n";
-$dataForCumulativeGraph .= "|".sprintf("%d",$cumulativeTotal)."\n";
-$permalinkUrlBase = "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor);
-if (isset($causeAreaFilterString) and $causeAreaFilterString != '') {
-  $permalinkUrlBase .= "&cause_area_filter=".urlencode($causeAreaFilterString);
-}
-$permalinkUrl = $permalinkUrlBase . "#donorDonationAmountsByCauseAreaAndYear";
-$fileName = hash("md5",$permalinkUrl);
-$filePathBase = $imagesPath . $fileName;
-$dataHasChanged = false;
-if (file_exists($filePathBase . ".csv") == false) {
-  # print "<br/>There is no file with the CSV $filePathBase . csv, so we are writing it out<br/>";
-  file_put_contents($filePathBase . ".csv", $dataForGraph);
-  $dataHasChanged = true;
-} else {
-  $previousOutput = file_get_contents($filePathBase . ".csv");
-  if ($previousOutput != $dataForGraph) {
-    # print "<br/>We have a cached file but the underlying data has changed<br/><br/>";
-    $dataHasChanged = true;
-    file_put_contents($filePathBase . ".csv", $dataForGraph);
-  } else {
-    # print "<br/>The cached file contents match the existing data<br/><br/>";
-  }
-}
-$cmdToExecute = $generateGraphCmdBase . " " . $filePathBase . ".csv " . $filePathBase . "-timeseries.png";
-if ($dataHasChanged == true or file_exists($filePathBase . "-timeseries.png") == false) {
-  if (file_exists($filePathBase . "-timeseries.png") == true) {
-    exec("rm ".$filePathBase . "-timeseries.png");
-  }
-  exec($cmdToExecute);
-}
-
-# Cumulative version
-$fileNameCumulative = hash("md5",$permalinkUrl . "-cumulative");
-$filePathBaseCumulative = $imagesPath . $fileNameCumulative;
-$dataHasChangedCumulative = false;
-if (file_exists($filePathBaseCumulative . ".csv") == false) {
-  # print "<br/>There is no file with the CSV $filePathBaseCumulative . csv, so we are writing it out<br/>";
-  file_put_contents($filePathBaseCumulative . ".csv", $dataForCumulativeGraph);
-  $dataHasChangedCumulative = true;
-} else {
-  $previousOutput = file_get_contents($filePathBaseCumulative . ".csv");
-  if ($previousOutput != $dataForGraphCumulative) {
-    # print "<br/>We have a cached file but the underlying data has changed<br/><br/>";
-    $dataHasChangedCumulative = true;
-    file_put_contents($filePathBaseCumulative . ".csv", $dataForCumulativeGraph);
-  } else {
-    # print "<br/>The cached file contents match the existing data<br/><br/>";
-  }
-}
-$cmdToExecuteCumulative = $generateGraphCmdBase . " " . $filePathBaseCumulative . ".csv " . $filePathBaseCumulative . "-timeseries.png";
-if ($dataHasChangedCumulative == true or file_exists($filePathBaseCumulative . "-timeseries.png") == false) {
-  if (file_exists($filePathBaseCumulative . "-timeseries.png") == true) {
-    exec("rm ".$filePathBaseCumulative . "-timeseries.png");
-  }
-  exec($cmdToExecuteCumulative);
-}
-
-
+$graphs = yearlyGraphs(
+  $years,
+  $causeAreas,
+  $yearDonationAmount,
+  $donationAmountByCauseAreaAndYear,
+  $generateGraphCmdBase,
+  $imagesPath,
+  "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor),
+  "#donorDonationAmountsByCauseAreaAndYear"
+);
 
 print "<p><strong>Graph of spending by cause area and year (incremental, not cumulative)</strong></p>";
-print '<img src="/images/'.$fileName.'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
+print '<img src="/images/'.$graphs[0].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
 
 print "<p><strong>Graph of spending by cause area and year (cumulative)</strong></p>";
-print '<img src="/images/'.$fileNameCumulative.'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
+print '<img src="/images/'.$graphs[1].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
 

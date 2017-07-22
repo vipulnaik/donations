@@ -136,3 +136,20 @@ foreach ($years as $year) {
 print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
+
+$graphs = yearlyGraphs(
+  $years,
+  $donees,
+  $yearDonationAmount,
+  $donationAmountByDoneeAndYear,
+  $generateGraphCmdBase,
+  $imagesPath,
+  "https://donations.vipulnaik.com/index.php",
+  "#donationAmountsByDoneeAndYear"
+);
+
+print "<p><strong>Graph of spending by donee and year (incremental, not cumulative)</strong></p>";
+print '<img src="/images/'.$graphs[0].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
+
+print "<p><strong>Graph of spending by donee and year (cumulative)</strong></p>";
+print '<img src="/images/'.$graphs[1].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';

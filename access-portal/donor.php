@@ -45,6 +45,7 @@ print '<li><a href="#donorDonationList">Donor donation list</a></li>';
 print '<li><a href="#donorSimilarDonors">Similar donors</a></li>';
 print '</ul>';
 
+include_once('backend/yearlyGraph.inc');
 include ("backend/donorInfo.inc");
 include ("backend/donorDonationAmountsByCauseAreaAndYear.inc");
 include ("backend/donorDonationAmountsByDoneeAndYear.inc");
