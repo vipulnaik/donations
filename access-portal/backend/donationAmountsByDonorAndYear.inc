@@ -92,3 +92,20 @@ foreach ($years as $year) {
 print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>\n";
+
+$graphs = yearlyGraphs(
+  $years,
+  $donors,
+  $yearDonationAmount,
+  $donationAmountByDonorAndYear,
+  $generateGraphCmdBase,
+  $imagesPath,
+  "https://donations.vipulnaik.com/index.php",
+  "#donationAmountsByDonorAndYear"
+);
+
+print "<p><strong>Graph of spending by donor and year (incremental, not cumulative)</strong></p>";
+print '<img src="/images/'.$graphs[0].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
+
+print "<p><strong>Graph of spending by donor and year (cumulative)</strong></p>";
+print '<img src="/images/'.$graphs[1].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
