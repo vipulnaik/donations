@@ -13,7 +13,6 @@ print '<th>Donation date</th>';
 print '<th>Cause area</th>';
 print '<th>URL</th>';
 print '<th>Influencer</th>';
-print '<th>Employer match</th>';
 print '<th>Notes</th>';
 print '</tr>';
 print "</thead>\n<tbody>\n";
@@ -57,14 +56,57 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   } else {
     print '<td>--</td>';
   }  
-  if ($row['employer_match'] != '') {
-    if ($row['matching_employer'] != '') {
-      print '<td align="right"><element title="Matched by '.$row['matching_employer'].'">'.number_format($row['employer_match'],2).'</element></td>';
-    }
-  } else {
-    print '<td>--</td>';
+
+  /* Build up the JSON-like key-value pairs in the notes column */
+  $notes_key_val_pairs = array();
+  if ($val = $row['affected_regions']) {
+    array_push($notes_key_val_pairs, sprintf("affected regions: %s", $val));
   }
-  print '<td>'.cleanNotes($row['notes']).'</td>';
+  if ($val = $row['affected_countries']) {
+    array_push($notes_key_val_pairs, sprintf("affected countries: %s", $val));
+  }
+  if ($val = $row['affected_states']) {
+    array_push($notes_key_val_pairs, sprintf("affected states: %s", $val));
+  }
+  if ($val = $row['affected_cities']) {
+    array_push($notes_key_val_pairs, sprintf("affected cities: %s", $val));
+  }
+  if (($val = $row['employer_match']) && ($me = $row['matching_employer'])) {
+    array_push(
+      $notes_key_val_pairs,
+      sprintf("Employer match: %s matched %s", $me, number_format($val, 2))
+    );
+  }
+  if ($val = $row['donation_announcement_date']) {
+    $precision = $row['donation_announcement_date_precision'];
+    if ($precision == 'month') {
+      $val = substr($val, 0, 7);
+    } else if ($precision == 'year' or $precision == 'multi-year') {
+      $val = substr($val, 0, 4);
+    }
+    if ($url = $row['donation_announcement_url']) {
+      array_push(
+        $notes_key_val_pairs,
+        sprintf('announced: <a href="%s">%s</a>', $url, $val)
+      );
+    } else {
+      array_push($notes_key_val_pairs, "announced: " . $val);
+    }
+  }
+
+  $notes =  trim(cleanNotes($row['notes']));
+  $notes_key_val_string = trim(implode('; ', $notes_key_val_pairs));
+
+  /* Add a period to complete the sentence if necessary */
+  if ($notes && substr($notes, -1) != '.') {
+    $notes .= '. ';
+  } else {
+    $notes .= ' ';
+  }
+  if ($notes_key_val_string) {
+    $notes_key_val_string = ucfirst($notes_key_val_string) . '. ';
+  }
+  print '    <td>' . $notes . $notes_key_val_string . '</td>' . "\n";
   print '</tr>';
 }
 
