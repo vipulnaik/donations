@@ -74,6 +74,22 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
       sprintf("Employer match: %s matched %s", $me, number_format($val, 2))
     );
   }
+  if ($val = $row['donation_announcement_date']) {
+    $precision = $row['donation_announcement_date_precision'];
+    if ($precision == 'month') {
+      $val = substr($val, 0, 7);
+    } else if ($precision == 'year' or $precision == 'multi-year') {
+      $val = substr($val, 0, 4);
+    }
+    if ($url = $row['donation_announcement_url']) {
+      array_push(
+        $notes_key_val_pairs,
+        sprintf('Announced: <a href="%s">%s</a>', $url, $val)
+      );
+    } else {
+      array_push($notes_key_val_pairs, "Announced: " . $val);
+    }
+  }
 
   $notes =  trim(cleanNotes($row['notes']));
   $notes_key_val_string = trim(implode('; ', $notes_key_val_pairs));
