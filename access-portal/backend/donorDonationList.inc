@@ -13,7 +13,6 @@ print '<th>Donation date</th>';
 print '<th>Cause area</th>';
 print '<th>URL</th>';
 print '<th>Influencer</th>';
-print '<th>Employer match</th>';
 print '<th>Notes</th>';
 print '</tr>';
 print "</thead>\n<tbody>\n";
@@ -57,14 +56,34 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   } else {
     print '<td>--</td>';
   }  
-  if ($row['employer_match'] != '') {
-    if ($row['matching_employer'] != '') {
-      print '<td align="right"><element title="Matched by '.$row['matching_employer'].'">'.number_format($row['employer_match'],2).'</element></td>';
-    }
-  } else {
-    print '<td>--</td>';
+
+  /* Build up the JSON-like key-value pairs in the notes column */
+  $notes_key_val_pairs = array();
+  if ($val = $row['affected_countries']) {
+    array_push($notes_key_val_pairs, sprintf("Affected countries: %s", $val));
   }
-  print '<td>'.cleanNotes($row['notes']).'</td>';
+  if ($val = $row['affected_regions']) {
+    array_push($notes_key_val_pairs, sprintf("Affected regions: %s", $val));
+  }
+  if ($val = $row['affected_states']) {
+    array_push($notes_key_val_pairs, sprintf("Affected states: %s", $val));
+  }
+  if (($val = $row['employer_match']) && ($me = $row['matching_employer'])) {
+    array_push(
+      $notes_key_val_pairs,
+      sprintf("Employer match: %s matched %s", $me, number_format($val, 2))
+    );
+  }
+
+  $notes =  trim(cleanNotes($row['notes']));
+  $notes_key_val_string = trim(implode('; ', $notes_key_val_pairs));
+  if ($notes) {
+    $notes .= '. ';
+  }
+  if ($notes_key_val_string) {
+    $notes_key_val_string .= '. ';
+  }
+  print '    <td>' . $notes . $notes_key_val_string . '</td>' . "\n";
   print '</tr>';
 }
 
