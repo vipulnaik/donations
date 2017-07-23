@@ -59,14 +59,17 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
 
   /* Build up the JSON-like key-value pairs in the notes column */
   $notes_key_val_pairs = array();
-  if ($val = $row['affected_countries']) {
-    array_push($notes_key_val_pairs, sprintf("affected countries: %s", $val));
-  }
   if ($val = $row['affected_regions']) {
     array_push($notes_key_val_pairs, sprintf("affected regions: %s", $val));
   }
+  if ($val = $row['affected_countries']) {
+    array_push($notes_key_val_pairs, sprintf("affected countries: %s", $val));
+  }
   if ($val = $row['affected_states']) {
     array_push($notes_key_val_pairs, sprintf("affected states: %s", $val));
+  }
+  if ($val = $row['affected_cities']) {
+    array_push($notes_key_val_pairs, sprintf("affected cities: %s", $val));
   }
   if (($val = $row['employer_match']) && ($me = $row['matching_employer'])) {
     array_push(
