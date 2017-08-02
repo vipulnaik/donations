@@ -49,10 +49,6 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
   $dataForGraph .= "|" . sprintf("%d", $cumulativeTotal) . "\n";
   $dataForCumulativeGraph .= "|" . sprintf("%d", $cumulativeTotal) . "\n";
 
-  if (isset($causeAreaFilterString) and $causeAreaFilterString != '') {
-    $permalinkUrlBase .= "&cause_area_filter=" .
-      urlencode($causeAreaFilterString);
-  }
   $permalinkUrl = $permalinkUrlBase . $graphIdentifier;
   $fileName = hash("md5", $permalinkUrl);
   $filePathBase = $imagesPath . $fileName;

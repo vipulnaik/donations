@@ -99,6 +99,12 @@ print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
 
+$permalinkUrl = "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor);
+
+if ($causeAreaFilterString != '') {
+  $permalinkUrl .= '&cause_area_filter='.urlencode($causeAreaFilterString);
+}
+
 $graphs = yearlyGraphs(
   $years,
   $causeAreas,
@@ -106,7 +112,7 @@ $graphs = yearlyGraphs(
   $donationAmountByCauseAreaAndYear,
   $generateGraphCmdBase,
   $imagesPath,
-  "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor),
+  $permalinkUrl,
   "#donorDonationAmountsByCauseAreaAndYear"
 );
 
