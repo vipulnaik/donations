@@ -97,3 +97,9 @@ clean_table_sorting:
 	rm -f access-portal/bg.gif
 	rm -f access-portal/asc.gif
 	rm -f access-portal/desc.gif
+
+.PHONY: compute_similarity
+compute_similarity:
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists similarity;"
+	mysql $(MYSQL_ARGS) $(DATABASE) < similarity-schema.sql
+	php -f compute_similarity.php
