@@ -54,7 +54,7 @@ print "</thead>\n<tbody>\n";
 
 foreach ($influencers as $influencer) {
   print "  <tr>\n";
-  print "    <td>".'<a href="/?cause_area_filter='.urlencode($influencer).'">'."$influencer</a></td>\n";
+  print "    <td>$influencer</td>\n";
   print '    <td align="right"><strong>'.number_format($influencerDonationAmount[$influencer],2)."</strong></td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] != 0) {

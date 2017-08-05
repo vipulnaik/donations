@@ -54,7 +54,7 @@ print "</thead>\n<tbody>\n";
 
 foreach ($countries as $country) {
   print "  <tr>\n";
-  print "    <td>".'<a href="/?cause_area_filter='.urlencode($country).'">'."$country</a></td>\n";
+  print "    <td>$country</td>\n";
   print '    <td align="right"><strong>'.number_format($countryDonationAmount[$country],2)."</strong></td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] != 0) {
