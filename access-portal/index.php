@@ -22,8 +22,10 @@ print '<body>';
 print '<script>$(document).ready(function()
     {
         $("#myTableDonationAmountsByCauseAreaAndYear").tablesorter({textExtraction: stripCommas});
-        $("#myTableDonationAmountsByDonorAndYear").tablesorter({textExtraction: stripCommas});	
-        $("#myTableDonationAmountsByDoneeAndYear").tablesorter({textExtraction: stripCommas});	
+        $("#myTableDonationAmountsByDonorAndYear").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonationAmountsByDoneeAndYear").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonationAmountsByInfluencerAndYear").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonationAmountsByCountryAndYear").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
 print "<h3>Donations recorded by Vipul Naik $causeAreaFilterStringHelper</h3>";
@@ -33,12 +35,17 @@ print '<ul>';
 print '<li><a href="#donationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</a></li>';
 print '<li><a href="#donationAmountsByDonorAndYear">Donation amounts by donor and year</a></li>';
 print '<li><a href="#donationAmountsByDoneeAndYear">Donation amounts by donee and year</a></li>';
+print '<li><a href="#donationAmountsByInfluencerAndYear">Donation amounts by influencer and year</a></li>';
+print '<li><a href="#donationAmountsByCountryAndYear">Donation amounts by country and year</a></li>';
+
 print '</ul>';
 
 include_once('backend/yearlyGraph.inc');
 include ("backend/donationAmountsByCauseAreaAndYear.inc");
 include ("backend/donationAmountsByDonorAndYear.inc");
 include ("backend/donationAmountsByDoneeAndYear.inc");
+include ("backend/donationAmountsByInfluencerAndYear.inc");
+include ("backend/donationAmountsByCountryAndYear.inc");
 
 print '</body>';
 ?>
