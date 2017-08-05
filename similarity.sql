@@ -1,47 +1,41 @@
 -- Modified from https://stackoverflow.com/a/36823694/3422337
+truncate table similarity;
+
+insert into similarity
 select
-    similarity.`donor`,
-    similarity.`donor_size`,
-    similarity.`other_donor_size`,
-    similarity.`intersect`,
-    similarity.`union`,
-    round(sqrt(similarity.donor_size) * sqrt(similarity.other_donor_size), 4)
-        as magnitude_product,
-    round(similarity.intersect/similarity.union, 4) as jaccard_index,
-    round(similarity.intersect / (sqrt(similarity.donor_size) *
-        sqrt(similarity.other_donor_size)), 4) as cosine_similarity,
-    round(similarity.weighted_magnitude, 4) as weighted_magnitude,
-    round(similarity.weighted_magnitude_other, 4) as weighted_magnitude_other,
-    round(similarity.weighted_dot_product, 4) as weighted_dot_product,
-    round(similarity.weighted_dot_product / (similarity.weighted_magnitude *
-        similarity.weighted_magnitude_other), 4) as weighted_cosine_similarity
+    sim.first_donor,
+    sim.second_donor,
+    sim.`first_donor_size`,
+    sim.`second_donor_size`,
+    sim.`union_size`,
+    sim.first_donor_size + sim.second_donor_size - sim.union_size as intersect_size,
+    round((sim.first_donor_size + sim.second_donor_size - sim.union_size) /
+        sim.union_size, 4) as jaccard_index,
+    round((sim.first_donor_size + sim.second_donor_size - sim.union_size) /
+        (sqrt(sim.first_donor_size) * sqrt(sim.second_donor_size)), 4) as cosine_sim,
+    round(sim.weighted_dot_product / (sim.weighted_magnitude *
+        sim.weighted_magnitude_other), 4) as weighted_cosine_similarity
 from (
     select
-        other_donors.donor as donor,
+        d1.donor as first_donor,
+        d2.donor as second_donor,
         (select count(distinct donee) from donations
-            where donor = other_donors.donor
-            and donee in (
-                select distinct(donee) from donations
-                where donor = 'Open Philanthropy Project'
-            )
-        ) as `intersect`,
+            where donor = d1.donor
+            or donor = d2.donor
+        ) as `union_size`,
         (select count(distinct donee) from donations
-            where donor = 'Open Philanthropy Project'
-            or donor = other_donors.donor
-        ) as `union`,
+            where donor = d1.donor
+        ) as `first_donor_size`,
         (select count(distinct donee) from donations
-            where donor = 'Open Philanthropy Project'
-        ) as `donor_size`,
-        (select count(distinct donee) from donations
-            where donor = other_donors.donor
-        ) as `other_donor_size`,
+            where donor = d2.donor
+        ) as `second_donor_size`,
         (select sqrt(sum(sqsums.s))
             from (
-                select power(sum(amount),2) as s
+                select donor,power(sum(amount),2) as s
                 from donations
-                where donor = 'Open Philanthropy Project'
-                group by donee
+                group by donee, donor
             ) as sqsums
+            where donor = d1.donor
         ) as `weighted_magnitude`,
         (select sqrt(sum(sqsums.s))
             from (
@@ -49,7 +43,7 @@ from (
                 from donations
                 group by donee, donor
             ) as sqsums
-            where donor = other_donors.donor
+            where donor = d2.donor
         ) as `weighted_magnitude_other`,
         (select sum(sums1.s * sums2.s)
             from (
@@ -61,12 +55,14 @@ from (
                 from donations
                 group by donee, donor
             ) as sums2 on sums1.donee = sums2.donee
-            where donor1 = 'Open Philanthropy Project' and donor2 = other_donors.donor
+            where donor1 = d1.donor and donor2 = d2.donor
         ) as `weighted_dot_product`
     from (
         select distinct(donor) from donations
-        where donor != 'Open Philanthropy Project'
-    ) as other_donors
-) as similarity
+    ) as d1, (
+        select distinct(donor) from donations
+    ) as d2
+    where d1.donor < d2.donor
+) as sim
 having jaccard_index > 0
 order by jaccard_index desc;

@@ -28,6 +28,15 @@ Once the database is ready, you can run the site locally:
 
 Now you can visit `http://localhost:8000/index.php` in your browser.
 
+To show the similarity table, the values must be precomputed. To do that, first
+run (this only needs to be run once):
+
+    make reset_similarity
+
+Then each time the donations data changes, run:
+
+    make compute_similarity
+
 For table sorting:
 
     make fetch_table_sorting
