@@ -39,6 +39,7 @@ include_once('backend/yearlyGraph.inc');
 include ("backend/donationAmountsByCauseAreaAndYear.inc");
 include ("backend/donationAmountsByDonorAndYear.inc");
 include ("backend/donationAmountsByDoneeAndYear.inc");
+include ("backend/donationAmountsByInfluencerAndYear.inc");
 
 print '</body>';
 ?>
