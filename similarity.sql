@@ -7,17 +7,12 @@ select
     sim.`second_donor_size`,
     sim.`union_size`,
     sim.first_donor_size + sim.second_donor_size - sim.union_size as intersect_size,
-    -- round(sqrt(similarity.donor_size) * sqrt(similarity.other_donor_size), 4)
-    --     as magnitude_product,
-    round((sim.first_donor_size + sim.second_donor_size - sim.union_size)/sim.union_size, 4) as jaccard_index,
-    round((sim.first_donor_size + sim.second_donor_size - sim.union_size) / (sqrt(sim.first_donor_size) *
-        sqrt(sim.second_donor_size)), 4) as cosine_sim,
-    1.0
-    -- round(similarity.weighted_magnitude, 4) as weighted_magnitude,
-    -- round(similarity.weighted_magnitude_other, 4) as weighted_magnitude_other,
-    -- round(similarity.weighted_dot_product, 4) as weighted_dot_product,
-    -- round(similarity.weighted_dot_product / (similarity.weighted_magnitude *
-    --     similarity.weighted_magnitude_other), 4) as weighted_cosine_similarity
+    round((sim.first_donor_size + sim.second_donor_size - sim.union_size) /
+        sim.union_size, 4) as jaccard_index,
+    round((sim.first_donor_size + sim.second_donor_size - sim.union_size) /
+        (sqrt(sim.first_donor_size) * sqrt(sim.second_donor_size)), 4) as cosine_sim,
+    round(sim.weighted_dot_product / (sim.weighted_magnitude *
+        sim.weighted_magnitude_other), 4) as weighted_cosine_similarity
 from (
     select
         d1.donor as first_donor,
