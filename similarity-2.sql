@@ -32,7 +32,7 @@ from donor_donee_pairs left join donor_donee_pairs_2 on donor_donee_pairs.donee 
 create temporary table donor_summary as select
   donor,
   count(distinct donee) as donee_count,
-  sum(power(total_donation, 2)) as weighted_magnitude
+  sqrt(sum(power(total_donation, 2))) as weighted_magnitude
 from donor_donee_pairs group by donor;
 
 create temporary table donor_summary_2 as select * from donor_summary;
