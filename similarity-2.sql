@@ -1,7 +1,5 @@
 -- Modified from https://stackoverflow.com/a/36823694/3422337
 
-truncate table similarity;
-
 drop temporary table if exists donor_donee_pairs;
 
 drop temporary table if exists donor_donee_pairs_2;
@@ -63,6 +61,8 @@ from
     sim_pre.first_donor = donor_summary.donor
   left join donor_summary_2 on
     sim_pre.second_donor = donor_summary_2.donor;
+
+truncate table similarity;
 
 insert into similarity
 select
