@@ -1,5 +1,5 @@
 create table similarity (
-    similarity_id int(11) not null auto_increment primary key,
+    -- similarity_id int(11) not null auto_increment primary key,
     first_donor varchar(100),
     second_donor varchar(100),
     first_donor_distinct_donees int(11),

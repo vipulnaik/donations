@@ -1,20 +1,23 @@
 -- Modified from https://stackoverflow.com/a/36823694/3422337
+insert into similarity
 select
+    'Open Philanthropy Project',
     similarity.`donor`,
     similarity.`donor_size`,
     similarity.`other_donor_size`,
     similarity.`intersect`,
     similarity.`union`,
-    round(sqrt(similarity.donor_size) * sqrt(similarity.other_donor_size), 4)
-        as magnitude_product,
+    -- round(sqrt(similarity.donor_size) * sqrt(similarity.other_donor_size), 4)
+    --     as magnitude_product,
     round(similarity.intersect/similarity.union, 4) as jaccard_index,
     round(similarity.intersect / (sqrt(similarity.donor_size) *
         sqrt(similarity.other_donor_size)), 4) as cosine_similarity,
-    round(similarity.weighted_magnitude, 4) as weighted_magnitude,
-    round(similarity.weighted_magnitude_other, 4) as weighted_magnitude_other,
-    round(similarity.weighted_dot_product, 4) as weighted_dot_product,
-    round(similarity.weighted_dot_product / (similarity.weighted_magnitude *
-        similarity.weighted_magnitude_other), 4) as weighted_cosine_similarity
+    1.0
+    -- round(similarity.weighted_magnitude, 4) as weighted_magnitude,
+    -- round(similarity.weighted_magnitude_other, 4) as weighted_magnitude_other,
+    -- round(similarity.weighted_dot_product, 4) as weighted_dot_product,
+    -- round(similarity.weighted_dot_product / (similarity.weighted_magnitude *
+    --     similarity.weighted_magnitude_other), 4) as weighted_cosine_similarity
 from (
     select
         other_donors.donor as donor,
