@@ -43,7 +43,7 @@ print '<table id="myTableDoneeDonationAmountsByDonorAndYear" class="tablesorter"
 print "<thead>\n";
 print "  <tr>\n    <th>Donor</th>\n";
 foreach ($years as $year) {
-  if ($yearDonationAmount[$year] > 0) {
+  if ($yearDonationAmount[$year] != 0) {
     print "    <th>$year</th>\n";
   }
 }
@@ -54,7 +54,7 @@ foreach ($donors as $donor) {
   print "  <tr>\n";
   print '    <td><a href="/donor.php?donor='.urlencode($donor).'">'.$donor.'</a></td>'."\n";
   foreach ($years as $year) {
-    if ($yearDonationAmount[$year] > 0) {
+    if ($yearDonationAmount[$year] != 0) {
       print '    <td align="right">'.number_format($donationAmountByDonorAndYear[$donor][$year],2).'</td>'."\n";
     }
   }
@@ -67,7 +67,7 @@ print "<tfoot>\n";
 print "  <tr>\n    <td><strong>Total</strong></td>\n";
 
 foreach ($years as $year) {
-  if ($yearDonationAmount[$year] > 0) {
+  if ($yearDonationAmount[$year] != 0) {
     print '    <td align="right"><strong>'.number_format($yearDonationAmount[$year],2)."</strong></td>\n";
   }
 }

@@ -62,7 +62,7 @@ print "	 <th>Number of donations</th>\n";
 print "	 <th>Number of donees</th>\n";
 print "    <th>Total</th>\n";
 foreach ($years as $year) {
-  if ($yearDonationAmount[$year] > 0) {
+  if ($yearDonationAmount[$year] != 0) {
     print "    <th>$year</th>\n";
   }
 }
@@ -75,7 +75,7 @@ foreach ($causeAreas as $causeArea) {
   print '    <td align="right">'.$numDoneesByCauseArea[$causeArea]."</td>\n";
   print '    <td align="right"><strong>'.number_format($causeAreaDonationAmount[$causeArea],2)."</strong></td>\n";
   foreach ($years as $year) {
-    if ($yearDonationAmount[$year] > 0) {
+    if ($yearDonationAmount[$year] != 0) {
       print '    <td align="right"><a title="'.sprintf("%d",$numDonationsByCauseAreaAndYear[$causeArea][$year]).' donations to '.sprintf("%d",$numDoneesByCauseAreaAndYear[$causeArea][$year]).' distinct donees">'.number_format($donationAmountByCauseAreaAndYear[$causeArea][$year],2)."</a></td>\n";
     }
   }
@@ -90,7 +90,7 @@ print '    <td align="right"><strong>'.$totalNumDistinctDonees."</strong></td>\n
 print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
 
 foreach ($years as $year) {
-  if ($yearDonationAmount[$year] > 0) {
+  if ($yearDonationAmount[$year] != 0) {
     print '    <td align="right"><strong>'.number_format($yearDonationAmount[$year],2)."</strong></td>\n";
   }
 }

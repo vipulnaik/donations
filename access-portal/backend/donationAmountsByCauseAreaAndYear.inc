@@ -44,7 +44,7 @@ print "<thead>\n";
 print "  <tr><th>Cause area</th>\n";
 print "    <th>Total</th>\n";
 foreach ($years as $year) {
-  if ($yearDonationAmount[$year] > 0) {
+  if ($yearDonationAmount[$year] != 0) {
     print "    <th>$year</th>\n";
   }
 }
@@ -56,7 +56,7 @@ foreach ($causeAreas as $causeArea) {
   print "    <td>".'<a href="/?cause_area_filter='.urlencode($causeArea).'">'."$causeArea</a></td>\n";
   print '    <td align="right"><strong>'.number_format($causeAreaDonationAmount[$causeArea],2)."</strong></td>\n";
   foreach ($years as $year) {
-    if ($yearDonationAmount[$year] > 0) {
+    if ($yearDonationAmount[$year] != 0) {
       print '    <td align="right">'.number_format($donationAmountByCauseAreaAndYear[$causeArea][$year],2)."</td>\n";
     }
   }
@@ -69,7 +69,7 @@ print "  <tr>\n    <td><strong>Total</strong></td>\n";
 
 print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
 foreach ($years as $year) {
-  if ($yearDonationAmount[$year] > 0) {
+  if ($yearDonationAmount[$year] != 0) {
     print '    <td align="right"><strong>'.number_format($yearDonationAmount[$year],2)."</strong></td>\n";
   }
 }

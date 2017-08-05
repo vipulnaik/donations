@@ -17,7 +17,7 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
 
   /* Populate all the yearly rows */
   foreach (array_reverse($years) as $year) {
-    if ($yearDonationAmount[$year] > 0) {
+    if ($yearDonationAmount[$year] != 0) {
       $dataForGraph .= "$year";
       $dataForCumulativeGraph .= "$year";
       foreach ($group as $i) {

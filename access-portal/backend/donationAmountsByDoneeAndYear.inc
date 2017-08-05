@@ -61,7 +61,7 @@ print "<thead>\n";
 print "  <tr>\n    <th>Donee</th>\n	<th>Cause area</th>\n	<th>Metadata</th>\n	<th>Number of donors</th>\n";
 print "    <th>Total</th>\n";
 foreach ($years as $year) {
-  if ($yearDonationAmount[$year] > 0) {
+  if ($yearDonationAmount[$year] != 0) {
     print "    <th>$year</th>\n";
   }
 }
@@ -111,7 +111,7 @@ foreach ($donees as $donee) {
   print '    <td align="right">'.$numDonorsByDonee[$donee]."</td>\n";
   print '    <td align="right"><strong>'.number_format($doneeDonationAmount[$donee],2)."</strong></td>\n";
   foreach ($years as $year) {
-    if ($yearDonationAmount[$year] > 0) {
+    if ($yearDonationAmount[$year] != 0) {
       print '    <td align="right">'.number_format($donationAmountByDoneeAndYear[$donee][$year],2)."</td>\n";
     }
   }
@@ -128,7 +128,7 @@ print '	 <td align="center">--</td>'."\n";
 print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
 
 foreach ($years as $year) {
-  if ($yearDonationAmount[$year] > 0) {
+  if ($yearDonationAmount[$year] != 0) {
     print '    <td align="right"><strong>'.number_format($yearDonationAmount[$year],2)."</strong></td>\n";
   }
 }
