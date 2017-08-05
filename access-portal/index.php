@@ -33,6 +33,9 @@ print '<ul>';
 print '<li><a href="#donationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</a></li>';
 print '<li><a href="#donationAmountsByDonorAndYear">Donation amounts by donor and year</a></li>';
 print '<li><a href="#donationAmountsByDoneeAndYear">Donation amounts by donee and year</a></li>';
+print '<li><a href="#donationAmountsByInfluencerAndYear">Donation amounts by influencer and year</a></li>';
+print '<li><a href="#donationAmountsByCountryAndYear">Donation amounts by country and year</a></li>';
+
 print '</ul>';
 
 include_once('backend/yearlyGraph.inc');
@@ -40,6 +43,7 @@ include ("backend/donationAmountsByCauseAreaAndYear.inc");
 include ("backend/donationAmountsByDonorAndYear.inc");
 include ("backend/donationAmountsByDoneeAndYear.inc");
 include ("backend/donationAmountsByInfluencerAndYear.inc");
+include ("backend/donationAmountsByCountryAndYear.inc");
 
 print '</body>';
 ?>
