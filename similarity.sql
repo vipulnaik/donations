@@ -1,4 +1,6 @@
 -- Modified from https://stackoverflow.com/a/36823694/3422337
+truncate table similarity;
+
 insert into similarity
 select
     sim.first_donor,
