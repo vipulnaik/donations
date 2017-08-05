@@ -1,17 +1,17 @@
 -- Modified from https://stackoverflow.com/a/36823694/3422337
 insert into similarity
 select
-    'Open Philanthropy Project',
-    similarity.`donor`,
-    similarity.`donor_size`,
-    similarity.`other_donor_size`,
-    similarity.`intersect_size`,
-    similarity.`union_size`,
+    sim.first_donor,
+    sim.second_donor,
+    sim.`first_donor_size`,
+    sim.`second_donor_size`,
+    sim.`union_size`,
+    sim.first_donor_size + sim.second_donor_size - sim.union_size as intersect_size,
     -- round(sqrt(similarity.donor_size) * sqrt(similarity.other_donor_size), 4)
     --     as magnitude_product,
-    round(similarity.intersect_size/similarity.union_size, 4) as jaccard_index,
-    round(similarity.intersect_size / (sqrt(similarity.donor_size) *
-        sqrt(similarity.other_donor_size)), 4) as cosine_similarity,
+    round(sim.intersect_size/sim.union_size, 4) as jaccard_index,
+    round(sim.intersect_size / (sqrt(sim.donor_size) *
+        sqrt(sim.other_donor_size)), 4) as cosine_sim,
     1.0
     -- round(similarity.weighted_magnitude, 4) as weighted_magnitude,
     -- round(similarity.weighted_magnitude_other, 4) as weighted_magnitude_other,
@@ -20,29 +20,23 @@ select
     --     similarity.weighted_magnitude_other), 4) as weighted_cosine_similarity
 from (
     select
-        other_donors.donor as donor,
+        d1.donor as first_donor,
+        d2.donor as second_donor,
         (select count(distinct donee) from donations
-            where donor = other_donors.donor
-            and donee in (
-                select distinct(donee) from donations
-                where donor = 'Open Philanthropy Project'
-            )
-        ) as `intersect_size`,
-        (select count(distinct donee) from donations
-            where donor = 'Open Philanthropy Project'
-            or donor = other_donors.donor
+            where donor = d1.donor
+            or donor = d2.donor
         ) as `union_size`,
         (select count(distinct donee) from donations
-            where donor = 'Open Philanthropy Project'
-        ) as `donor_size`,
+            where donor = d1.donor
+        ) as `first_donor_size`,
         (select count(distinct donee) from donations
-            where donor = other_donors.donor
-        ) as `other_donor_size`,
+            where donor = d2.donor
+        ) as `second_donor_size`,
         (select sqrt(sum(sqsums.s))
             from (
                 select power(sum(amount),2) as s
                 from donations
-                where donor = 'Open Philanthropy Project'
+                where donor = d1.donor
                 group by donee
             ) as sqsums
         ) as `weighted_magnitude`,
@@ -52,7 +46,7 @@ from (
                 from donations
                 group by donee, donor
             ) as sqsums
-            where donor = other_donors.donor
+            where donor = d2.donor
         ) as `weighted_magnitude_other`,
         (select sum(sums1.s * sums2.s)
             from (
@@ -64,12 +58,14 @@ from (
                 from donations
                 group by donee, donor
             ) as sums2 on sums1.donee = sums2.donee
-            where donor1 = 'Open Philanthropy Project' and donor2 = other_donors.donor
+            where donor1 = d1.donor and donor2 = d2.donor
         ) as `weighted_dot_product`
     from (
         select distinct(donor) from donations
-        where donor != 'Open Philanthropy Project'
-    ) as other_donors
-) as similarity
+    ) as d1, (
+        select distinct(donor) from donations
+    ) as d2
+    where d1.donor < d2.donor
+) as sim
 having jaccard_index > 0
 order by jaccard_index desc;
