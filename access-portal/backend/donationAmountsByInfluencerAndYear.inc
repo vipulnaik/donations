@@ -30,15 +30,15 @@ for ($i=0; $i < $influencerAndYearResult -> num_rows; $i++) {
   $grandTotalDonationAmount += $row['amount'];
 }
 
-function cmpCauseAreasByAmount($firstCauseArea, $secondCauseArea) {
+function cmpInfluencerByAmount($firstInfluencer, $secondInfluencer) {
   global $influencerDonationAmount;
-  if (intval($influencerDonationAmount[$firstCauseArea]) == intval($influencerDonationAmount[$secondCauseArea])) {
+  if (intval($influencerDonationAmount[$firstInfluencer]) == intval($influencerDonationAmount[$secondInfluencer])) {
     return 0;
   }
-  return (intval($influencerDonationAmount[$firstCauseArea]) > intval($influencerDonationAmount[$secondCauseArea])) ? -1 : 1;
+  return (intval($influencerDonationAmount[$firstInfluencer]) > intval($influencerDonationAmount[$secondInfluencer])) ? -1 : 1;
 }
 
-usort($influencers, "cmpCauseAreasByAmount");
+usort($influencers, "cmpInfluencerByAmount");
 
 print '<table id="myTableDonationAmountsByInfluencerAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
