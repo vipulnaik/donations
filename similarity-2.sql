@@ -50,6 +50,8 @@ create temporary table sim as select
   first_donor,
   second_donor,
   union_size,
+  donor_summary.donee_count + donor_summary_2.donee_count - union_size
+      as intersect_size,
   weighted_dot_product,
   donor_summary.donee_count as first_donor_size,
   donor_summary.weighted_magnitude as weighted_magnitude,
@@ -71,11 +73,12 @@ select
   `first_donor_size`,
   `second_donor_size`,
   `union_size`,
-  first_donor_size + second_donor_size - union_size as intersect_size,
-  round((first_donor_size + second_donor_size - union_size) /
-        union_size, 4) as jaccard_index,
-  round((first_donor_size + second_donor_size - union_size) /
+  intersect_size,
+  round(intersect_size / union_size, 4) as jaccard_index,
+  round(intersect_size /
         (sqrt(first_donor_size) * sqrt(second_donor_size)), 4) as cosine_sim,
-  round(weighted_dot_product / (weighted_magnitude *
-        weighted_magnitude_other), 4) as weighted_cosine_similarity
-from sim where weighted_magnitude > 0 and weighted_magnitude_other > 0 and weighted_dot_product > 0 and first_donor != second_donor;
+  if(weighted_magnitude = 0 or weighted_magnitude_other = 0,
+     NULL,
+     round(weighted_dot_product / (weighted_magnitude *
+        weighted_magnitude_other), 4)) as weighted_cosine_similarity
+from sim where intersect_size > 0 and first_donor != second_donor;
