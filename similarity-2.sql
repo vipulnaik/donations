@@ -1,5 +1,7 @@
 -- Modified from https://stackoverflow.com/a/36823694/3422337
 
+truncate table similarity;
+
 drop temporary table if exists donor_donee_pairs;
 
 drop temporary table if exists donor_donee_pairs_2;
