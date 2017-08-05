@@ -9,9 +9,9 @@ select
     sim.first_donor_size + sim.second_donor_size - sim.union_size as intersect_size,
     -- round(sqrt(similarity.donor_size) * sqrt(similarity.other_donor_size), 4)
     --     as magnitude_product,
-    round(sim.intersect_size/sim.union_size, 4) as jaccard_index,
-    round(sim.intersect_size / (sqrt(sim.donor_size) *
-        sqrt(sim.other_donor_size)), 4) as cosine_sim,
+    round((sim.first_donor_size + sim.second_donor_size - sim.union_size)/sim.union_size, 4) as jaccard_index,
+    round((sim.first_donor_size + sim.second_donor_size - sim.union_size) / (sqrt(sim.first_donor_size) *
+        sqrt(sim.second_donor_size)), 4) as cosine_sim,
     1.0
     -- round(similarity.weighted_magnitude, 4) as weighted_magnitude,
     -- round(similarity.weighted_magnitude_other, 4) as weighted_magnitude_other,
@@ -34,11 +34,11 @@ from (
         ) as `second_donor_size`,
         (select sqrt(sum(sqsums.s))
             from (
-                select power(sum(amount),2) as s
+                select donor,power(sum(amount),2) as s
                 from donations
-                where donor = d1.donor
-                group by donee
+                group by donee, donor
             ) as sqsums
+            where donor = d1.donor
         ) as `weighted_magnitude`,
         (select sqrt(sum(sqsums.s))
             from (
