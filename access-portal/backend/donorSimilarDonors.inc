@@ -4,7 +4,7 @@ select first_donor, second_donor, first_donor_size, second_donor_size,
     intersect_size, union_size,
     jaccard_index, cosine_similarity, weighted_cosine_similarity
 from similarity
-where first_donor = ? or second_donor = ?
+where first_donor = ?
 order by jaccard_index desc;
 EOD;
 
@@ -13,7 +13,7 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
    * The number of occurrences of "s" in the string below, as well as the
    * number of occurrences of $donor, must match the number of occurrences of
    * "?" in the query stored in $donorSimilarityQuery above. */
-  $stmt->bind_param("ssssss", $donor, $donor, $donor, $donor, $donor, $donor);
+  $stmt->bind_param("s", $donor);
   $stmt->execute();
   $result = $stmt->get_result();
 
@@ -48,18 +48,11 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
     print '<tbody>' . "\n";
 
     while (($row = $result->fetch_row()) && $maxRows > 0) {
-      if ($row[0] == $donor) {
-        $other = $row[1];
-        $other_size = $row[3];
-      } else{
-        $other = $row[0];
-        $other_size = $row[2];
-      }
-
-      if ($jaccard_index > 0) {
+      /* Print if jaccard index is positive */
+      if ($row[6] > 0) {
         print '  <tr>' . "\n";
         printf('    <td><a href="/donor.php?donor=%s">%s</a></td>' . "\n",
-               urlencode($row[0]), $row[0]);
+               urlencode($row[1]), $row[1]);
         printf(
           '    <td align="right">%s</td>' . "\n" .
           '    <td align="right">%s</td>' . "\n" .
@@ -67,7 +60,7 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
           '    <td align="right">%s</td>' . "\n" .
           '    <td align="right">%s</td>' . "\n" .
           '    <td align="right">%s</td>' . "\n",
-          $row[
+          $row[3], $row[4], $row[5], $row[6], $row[7], $row[8]
         );
         print '  </tr>' . "\n";
         $maxRows--;
@@ -78,5 +71,8 @@ if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
     print '</tbody>' . "\n";
     print '</table>' . "\n";
   }
+} else {
+  /* Enable this for debugging */
+  /* print 'failed: ' . $mysqli->error; */
 }
 ?>
