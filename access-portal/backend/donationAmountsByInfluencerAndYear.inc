@@ -2,12 +2,21 @@
 
 print '<h4 id="donationAmountsByInfluencerAndYear">Donation amounts by influencer and year</h4>';
 
-$influencerQuery = "select influencer from donations where influencer is not NULL group by influencer";
-$influencerResult = $mysqli -> query($influencerQuery);
-$influencers = array();
-for ($i = 0; $i < $influencerResult -> num_rows; $i++) {
-  $row = $influencerResult -> fetch_assoc();
-  array_push($influencers, $row['influencer']);
+$influencerQuery = "select influencer from donations where influencer is not NULL";
+if ($causeAreaFilterString != '') {
+  $influencerQuery .= " and cause_area REGEXP ?";
+}
+$influencerQuery .= " group by influencer";
+if ($stmt = $mysqli->prepare($influencerQuery)) {
+  if ($causeAreaFilterString != '') {
+    $stmt->bind_param("s", $causeAreaFilterString);
+  }
+  $stmt->execute();
+  $result = $stmt->get_result();
+  $influencers = array();
+  while ($row = $result->fetch_assoc()) {
+    array_push($influencers, $row['influencer']);
+  }
 }
 
 $grandTotalDonationAmount = 0;
@@ -19,15 +28,30 @@ foreach($influencers as $influencer) {
   }
 }
 
-$influencerAndYearQuery = "select influencer, year(donation_date) as year, sum(amount) as amount from donations where influencer is not NULL group by influencer, year(donation_date)";
-$influencerAndYearResult = $mysqli -> query($influencerAndYearQuery);
-
-for ($i=0; $i < $influencerAndYearResult -> num_rows; $i++) {
-  $row = $influencerAndYearResult -> fetch_assoc();
-  $donationAmountByInfluencerAndYear[$row['influencer']][$row['year']] = $row['amount'];
-  $influencerDonationAmount[$row['influencer']] += $row['amount'];
-  $yearDonationAmount[$row['year']] += $row['amount'];
-  $grandTotalDonationAmount += $row['amount'];
+$influencerAndYearQuery = <<<'EOD'
+    select
+        influencer,
+        year(donation_date) as year,
+        sum(amount) as amount
+    from donations
+    where influencer is not NULL
+EOD;
+if ($causeAreaFilterString != '') {
+  $influencerAndYearQuery .= " and cause_area REGEXP ?";
+}
+$influencerAndYearQuery .= " group by influencer, year(donation_date)";
+if ($stmt = $mysqli->prepare($influencerAndYearQuery)) {
+  if ($causeAreaFilterString != '') {
+    $stmt->bind_param("s", $causeAreaFilterString);
+  }
+  $stmt->execute();
+  $result = $stmt->get_result();
+  while ($row = $result->fetch_assoc()) {
+    $donationAmountByInfluencerAndYear[$row['influencer']][$row['year']] = $row['amount'];
+    $influencerDonationAmount[$row['influencer']] += $row['amount'];
+    $yearDonationAmount[$row['year']] += $row['amount'];
+    $grandTotalDonationAmount += $row['amount'];
+  }
 }
 
 function cmpInfluencerByAmount($firstInfluencer, $secondInfluencer) {
