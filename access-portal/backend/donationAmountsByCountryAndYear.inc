@@ -5,7 +5,7 @@ yearlyGroupings(
   $generateGraphCmdBase,
   $imagesPath,
   $years,
-  $donor,
+  "",
   "country",
   "affected_countries",
   $causeAreaFilterString
