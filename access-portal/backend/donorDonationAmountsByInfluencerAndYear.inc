@@ -11,10 +11,17 @@ EOD;
 if ($causeAreaFilterString != '') {
   $totalNumDistinctDoneesQuery .= " and cause_area REGEXP ?";
 }
-$totalNumDistinctDoneesResult = $mysqli -> query($totalNumDistinctDoneesQuery);
-for ($i = 0; $i < $totalNumDistinctDoneesResult -> num_rows; $i++) {
-  $row = $totalNumDistinctDoneesResult -> fetch_assoc();
-  $totalNumDistinctDonees = $row['numDonees'];
+if ($stmt = $mysqli->prepare($totalNumDistinctDoneesQuery)) {
+  if ($causeAreaFilterString != '') {
+    $stmt->bind_param("ss", $donor, $causeAreaFilterString);
+  } else {
+    $stmt->bind_param("s", $donor);
+  }
+  $stmt->execute();
+  $result = $stmt->get_result();
+  while ($row = $result->fetch_assoc()) {
+    $totalNumDistinctDonees = $row['numDonees'];
+  }
 }
 
 $influencerQuery = <<<'EOD'
@@ -53,6 +60,8 @@ foreach($influencers as $influencer) {
   foreach($years as $year) {
     $yearDonationAmount[$year] = 0;
     $donationAmountByInfluencerAndYear[$influencer][$year] = 0;
+    $numDoneesByInfluencerAndYear[$influencer][$year] = 0;
+    $numDonationsByInfluencerAndYear[$influencer][$year] = 0;
   }
 }
 
