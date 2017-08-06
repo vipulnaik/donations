@@ -1,8 +1,7 @@
 <?php
 
 function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
-    $donor,
-    $groupName, $groupSqlCol, $causeAreaFilterString) {
+    $donor, $groupName, $groupSqlCol, $causeAreaFilterString) {
 
   if ($donor != '') {
     $donorString = "donor";
