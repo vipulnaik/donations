@@ -41,11 +41,12 @@ print '<li><a href="#donationAmountsByCountryAndYear">Donation amounts by countr
 print '</ul>';
 
 include_once('backend/yearlyGraph.inc');
+include_once('backend/yearlyGroupings.inc');
 include ("backend/donationAmountsByCauseAreaAndYear.inc");
 include ("backend/donationAmountsByDonorAndYear.inc");
 include ("backend/donationAmountsByDoneeAndYear.inc");
-include ("backend/donationAmountsByInfluencerAndYear.inc");
-include ("backend/donationAmountsByCountryAndYear.inc");
+include ("backend/donationAmountsByinfluencerAndYear.inc");
+include ("backend/donationAmountsBycountryAndYear.inc");
 
 print '</body>';
 ?>
