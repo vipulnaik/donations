@@ -3,19 +3,23 @@
 function distinctDonees($mysqli, $causeAreaFilterString, $donor,
     $classifiedString) {
 
-  $totalNumDistinctDoneesQuery = <<<'EOD'
+  $query = <<<'EOD'
       select
           count(distinct donee) as numDonees
           from donations
 EOD;
-  if ($donor != '' && $causeAreaFilterString != '') {
-    $totalNumDistinctDoneesQuery .= " where donor = ? and cause_area REGEXP ?";
-  } else if ($donor != '') {
-    $totalNumDistinctDoneesQuery .= " where donor = ?";
-  } else if ($causeAreaFilterString != '') {
-    $totalNumDistinctDoneesQuery .= " where cause_area REGEXP ?";
+  if ($classifiedString) {
+    $query .= " where $classifiedString";
+  } else {
+    $query .= " where TRUE";
   }
-  if ($stmt = $mysqli->prepare($totalNumDistinctDoneesQuery)) {
+  if ($donor != '') {
+    $query .= " and donor = ?";
+  }
+  if ($causeAreaFilterString != '') {
+    $query .= " and cause_area REGEXP ?";
+  }
+  if ($stmt = $mysqli->prepare($query)) {
     if ($donor != '' && $causeAreaFilterString != '') {
       $stmt->bind_param("ss", $donor, $causeAreaFilterString);
     } else if ($donor != '') {
