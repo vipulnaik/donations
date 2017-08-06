@@ -161,7 +161,7 @@ EOD;
     print '<table id="myTableDonorDonationAmountsByGroupAndYear" '
       . 'class="tablesorter">' . "\n";
     print "<thead>\n";
-    print "  <tr>\n  <th>$groupName</th>\n";
+    print "  <tr>\n  <th>" . ucfirst($groupName) . "</th>\n";
     print "  <th>Number of donations</th>\n";
     print "  <th>Number of donees</th>\n";
     print "    <th>Total</th>\n";
@@ -199,6 +199,27 @@ EOD;
 
     print "</tbody>\n";
     print "<tfoot>\n";
+
+    print "  <tr>\n";
+    print '    <td><strong>Classified total' . "</strong></td>\n";
+    print '    <td align="right"><strong>';
+    print "</strong></td>\n";
+    print '    <td align="right"><strong>';
+    print distinctDonees($mysqli, $causeAreaFilterString, $donor,
+      "$groupSqlCol is not NULL");
+    print "</strong></td>\n";
+    print "  </tr>\n";
+
+    print "  <tr>\n";
+    print '    <td><strong>Unclassified total' . "</strong></td>\n";
+    print '    <td align="right"><strong>';
+    print "</strong></td>\n";
+    print '    <td align="right"><strong>';
+    print distinctDonees($mysqli, $causeAreaFilterString, $donor,
+      "$groupSqlCol is NULL");
+    print "</strong></td>\n";
+    print "  </tr>\n";
+
     print "  <tr>\n    <td><strong>Total</strong></td>\n";
     print '    <td align="right"><strong>' . $grandTotalNumDonations
       . "</strong></td>\n";
