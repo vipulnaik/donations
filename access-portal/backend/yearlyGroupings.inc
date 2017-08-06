@@ -49,11 +49,14 @@ function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
 
   $groupQuery = <<<EOD
       select
-          $groupSqlCol,
+          case when $groupSqlCol is NULL
+              then 'Unclassified'
+              else $groupSqlCol
+              end as $groupSqlCol,
           count(distinct donee) as numDonees,
           count(*) as numDonations
       from donations
-      where $groupSqlCol is not NULL
+      where TRUE
 EOD;
   if ($donor != '') {
     $groupQuery .= " and donor = ?";
@@ -103,13 +106,16 @@ EOD;
 
   $groupAndYearQuery = <<<EOD
       select
-          $groupSqlCol,
+          case when $groupSqlCol is NULL
+              then 'Unclassified'
+              else $groupSqlCol
+              end as $groupSqlCol,
           count(distinct donee) as numDonees,
           count(*) as numDonations,
           year(donation_date) as year,
           sum(amount) as amount
       from donations
-      where $groupSqlCol is not NULL
+      where TRUE
 EOD;
   if ($donor != '') {
     $groupAndYearQuery .= " and donor = ?";
