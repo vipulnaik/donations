@@ -1,8 +1,8 @@
 <?php
 
 function yearlyGroupings($years, $group, $groupSqlCol, $causeAreaFilterString) {
-  print '<h4 id="donorDonationAmountsByGroupAndYear">'
-    . 'Donation amounts by group and year</h4>';
+  print '<h4 id="donorDonationAmountsBy' . $group . 'AndYear">'
+    . "Donation amounts by $group and year</h4>";
 
   $totalNumDistinctDoneesQuery = <<<'EOD'
       select
@@ -36,7 +36,7 @@ EOD;
   if ($causeAreaFilterString != '') {
     $groupQuery .= " and cause_area REGEXP ?";
   }
-  $groupQuery .= " group by group";
+  $groupQuery .= " group by $group";
 
   if ($stmt = $mysqli->prepare($groupQuery)) {
     if ($causeAreaFilterString != '') {
@@ -49,9 +49,9 @@ EOD;
     $groups = array();
     $grandTotalNumDonations = 0;
     while ($row = $result->fetch_assoc()) {
-      array_push($groups, $row['group']);
-      $numDoneesByGroup[$row['group']] = $row['numDonees'];
-      $numDonationsByGroup[$row['group']] = $row['numDonations'];
+      array_push($groups, $row[$group]);
+      $numDoneesByGroup[$row[$group]] = $row['numDonees'];
+      $numDonationsByGroup[$row[$group]] = $row['numDonations'];
       $grandTotalNumDonations += $row['numDonations'];
     }
   }
@@ -66,20 +66,20 @@ EOD;
     }
   }
 
-  $groupAndYearQuery = <<<'EOD'
+  $groupAndYearQuery = <<<EOD
       select
-          group,
+          $group,
           count(distinct donee) as numDonees,
           count(*) as numDonations,
           year(donation_date) as year,
           sum(amount) as amount
       from donations
-      where group is not NULL and donor = ?
+      where $group is not NULL and donor = ?
 EOD;
   if ($causeAreaFilterString != '') {
     $groupAndYearQuery .= " and cause_area REGEXP ?";
   }
-  $groupAndYearQuery .= " group by group, year(donation_date)";
+  $groupAndYearQuery .= " group by $group, year(donation_date)";
 
   if ($stmt = $mysqli->prepare($groupAndYearQuery)) {
     if ($causeAreaFilterString != '') {
@@ -90,13 +90,13 @@ EOD;
     $stmt->execute();
     $result = $stmt->get_result();
     while ($row = $result->fetch_assoc()) {
-      $donationAmountByGroupAndYear[$row['group']][$row['year']] =
+      $donationAmountByGroupAndYear[$row[$group]][$row['year']] =
         $row['amount'];
-      $numDoneesByGroupAndYear[$row['group']][$row['year']] =
+      $numDoneesByGroupAndYear[$row[$group]][$row['year']] =
         $row['numDonees'];
-      $numDonationsByGroupAndYear[$row['group']][$row['year']] =
+      $numDonationsByGroupAndYear[$row[$group]][$row['year']] =
         $row['numDonations'];
-      $groupDonationAmount[$row['group']] += $row['amount'];
+      $groupDonationAmount[$row[$group]] += $row['amount'];
       $yearDonationAmount[$row['year']] += $row['amount'];
       $grandTotalDonationAmount += $row['amount'];
     }
