@@ -35,8 +35,8 @@ print '<ul>';
 print '<li><a href="#donationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</a></li>';
 print '<li><a href="#donationAmountsByDonorAndYear">Donation amounts by donor and year</a></li>';
 print '<li><a href="#donationAmountsByDoneeAndYear">Donation amounts by donee and year</a></li>';
-print '<li><a href="#donationAmountsByinfluencerAndYear">Donation amounts by influencer and year</a></li>';
-print '<li><a href="#donationAmountsBycountryAndYear">Donation amounts by country and year</a></li>';
+print '<li><a href="#DonationAmountsByinfluencerAndYear">Donation amounts by influencer and year</a></li>';
+print '<li><a href="#DonationAmountsBycountryAndYear">Donation amounts by country and year</a></li>';
 
 print '</ul>';
 
