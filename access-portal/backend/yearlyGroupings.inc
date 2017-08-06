@@ -138,95 +138,100 @@ EOD;
     return intval($groupDonationAmount[$b]) - intval($groupDonationAmount[$a]);
   });
 
-  print "<p>If you hover over a cell for a given $groupName and year, "
-    . "you will get a tooltip with the number of donees and the number of "
-    . "donations.</p>\n";
+  if (sizeof($groupMembers) > 0) {
 
-  print "<p>Note: Cause area classification used here may not match that used "
-    . "by donor for all cases.</p>\n";
+    print "<p>If you hover over a cell for a given $groupName and year, "
+      . "you will get a tooltip with the number of donees and the number of "
+      . "donations.</p>\n";
 
-  print '<table id="myTableDonorDonationAmountsByGroupAndYear" '
-    . 'class="tablesorter">' . "\n";
-  print "<thead>\n";
-  print "  <tr>\n  <th>$groupName</th>\n";
-  print "  <th>Number of donations</th>\n";
-  print "  <th>Number of donees</th>\n";
-  print "    <th>Total</th>\n";
-  foreach ($years as $year) {
-    if ($yearDonationAmount[$year] != 0) {
-      print "    <th>$year</th>\n";
-    }
-  }
-  print "</tr>\n</thead>\n<tbody>\n";
+    print "<p>Note: Cause area classification used here may not match that used "
+      . "by donor for all cases.</p>\n";
 
-  foreach ($groupMembers as $g) {
-    print "  <tr>\n";
-    print "    <td>$g</td>\n";
-    print '    <td align="right">' . $numDonationsByGroup[$g]
-      . "</td>\n";
-    print '    <td align="right">' . $numDoneesByGroup[$g]
-      . "</td>\n";
-    print '    <td align="right"><strong>'
-      . number_format($groupDonationAmount[$g], 2)
-      . "</strong></td>\n";
+    print '<table id="myTableDonorDonationAmountsByGroupAndYear" '
+      . 'class="tablesorter">' . "\n";
+    print "<thead>\n";
+    print "  <tr>\n  <th>$groupName</th>\n";
+    print "  <th>Number of donations</th>\n";
+    print "  <th>Number of donees</th>\n";
+    print "    <th>Total</th>\n";
     foreach ($years as $year) {
       if ($yearDonationAmount[$year] != 0) {
-        print '    <td align="right"><a title="'
-          . sprintf("%d", $numDonationsByGroupAndYear[$g][$year])
-          . ' donations to '
-          . sprintf("%d", $numDoneesByGroupAndYear[$g][$year])
-          . ' distinct donees">'
-          . number_format($donationAmountByGroupAndYear[$g][$year],
-            2)
-          . "</a></td>\n";
+        print "    <th>$year</th>\n";
       }
     }
-    print "  </tr>\n";
-  }
+    print "</tr>\n</thead>\n<tbody>\n";
 
-  print "</tbody>\n";
-  print "<tfoot>\n";
-  print "  <tr>\n    <td><strong>Total</strong></td>\n";
-  print '    <td align="right"><strong>'.$grandTotalNumDonations."</strong></td>\n";
-  print '    <td align="right"><strong>'.$totalNumDistinctDonees."</strong></td>\n";
-  print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
-
-  foreach ($years as $year) {
-    if ($yearDonationAmount[$year] != 0) {
-      print '    <td align="right"><strong>'.number_format($yearDonationAmount[$year],2)."</strong></td>\n";
+    foreach ($groupMembers as $g) {
+      print "  <tr>\n";
+      print "    <td>$g</td>\n";
+      print '    <td align="right">' . $numDonationsByGroup[$g]
+        . "</td>\n";
+      print '    <td align="right">' . $numDoneesByGroup[$g]
+        . "</td>\n";
+      print '    <td align="right"><strong>'
+        . number_format($groupDonationAmount[$g], 2)
+        . "</strong></td>\n";
+      foreach ($years as $year) {
+        if ($yearDonationAmount[$year] != 0) {
+          print '    <td align="right"><a title="'
+            . sprintf("%d", $numDonationsByGroupAndYear[$g][$year])
+            . ' donations to '
+            . sprintf("%d", $numDoneesByGroupAndYear[$g][$year])
+            . ' distinct donees">'
+            . number_format($donationAmountByGroupAndYear[$g][$year],
+              2)
+            . "</a></td>\n";
+        }
+      }
+      print "  </tr>\n";
     }
-  }
 
-  print "  </tr>\n";
-  print "</tfoot>\n";
-  print "</table>";
+    print "</tbody>\n";
+    print "<tfoot>\n";
+    print "  <tr>\n    <td><strong>Total</strong></td>\n";
+    print '    <td align="right"><strong>'.$grandTotalNumDonations."</strong></td>\n";
+    print '    <td align="right"><strong>'.$totalNumDistinctDonees."</strong></td>\n";
+    print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
 
-  if ($donor != '') {
-    $permalinkUrlBase = "https://donations.vipulnaik.com/donor.php?donor="
-      . urlencode($donor);
+    foreach ($years as $year) {
+      if ($yearDonationAmount[$year] != 0) {
+        print '    <td align="right"><strong>'.number_format($yearDonationAmount[$year],2)."</strong></td>\n";
+      }
+    }
+
+    print "  </tr>\n";
+    print "</tfoot>\n";
+    print "</table>";
+
+    if ($donor != '') {
+      $permalinkUrlBase = "https://donations.vipulnaik.com/donor.php?donor="
+        . urlencode($donor);
+    } else {
+      $permalinkUrlBase = "https://donations.vipulnaik.com/index.php";
+    }
+
+    if ($causeAreaFilterString != '') {
+      $permalinkUrlBase .= '&cause_area_filter='.urlencode($causeAreaFilterString);
+    }
+
+    $graphs = yearlyGraphs(
+      $years,
+      $groupMembers,
+      $yearDonationAmount,
+      $donationAmountByGroupAndYear,
+      $generateGraphCmdBase,
+      $imagesPath,
+      $permalinkUrlBase,
+      "#" . $donorString . "DonationAmountsBy" . $groupName . "AndYear"
+    );
+
+    print "<p><strong>Graph of spending by $groupName and year (incremental, not cumulative)</strong></p>";
+    print '<img src="/images/'.$graphs[0].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
+
+    print "<p><strong>Graph of spending by $groupName and year (cumulative)</strong></p>";
+    print '<img src="/images/'.$graphs[1].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
   } else {
-    $permalinkUrlBase = "https://donations.vipulnaik.com/index.php";
+    print "Sorry, we couldn't find any $groupName information.";
   }
-
-  if ($causeAreaFilterString != '') {
-    $permalinkUrlBase .= '&cause_area_filter='.urlencode($causeAreaFilterString);
-  }
-
-  $graphs = yearlyGraphs(
-    $years,
-    $groupMembers,
-    $yearDonationAmount,
-    $donationAmountByGroupAndYear,
-    $generateGraphCmdBase,
-    $imagesPath,
-    $permalinkUrlBase,
-    "#" . $donorString . "DonationAmountsBy" . $groupName . "AndYear"
-  );
-
-  print "<p><strong>Graph of spending by $groupName and year (incremental, not cumulative)</strong></p>";
-  print '<img src="/images/'.$graphs[0].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
-
-  print "<p><strong>Graph of spending by $groupName and year (cumulative)</strong></p>";
-  print '<img src="/images/'.$graphs[1].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
 }
 ?>
