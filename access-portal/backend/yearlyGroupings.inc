@@ -47,6 +47,8 @@ EOD;
     $stmt->execute();
     $result = $stmt->get_result();
     $groups = array();
+    $numDoneesByGroup = array();
+    $numDonationsByGroup = array();
     $grandTotalNumDonations = 0;
     while ($row = $result->fetch_assoc()) {
       array_push($groups, $row[$group]);
@@ -55,7 +57,13 @@ EOD;
       $grandTotalNumDonations += $row['numDonations'];
     }
   }
+
   $grandTotalDonationAmount = 0;
+  $groupDonationAmount = array();
+  $yearDonationAmount = array();
+  $donationAmountByGroupAndYear = array();
+  $numDoneesByGroupAndYear = array();
+  $numDonationsByGroupAndYear = array();
   foreach($groups as $group) {
     $groupDonationAmount[$group] = 0;
     foreach($years as $year) {
