@@ -32,6 +32,7 @@ EOD;
     while ($row = $result->fetch_assoc()) {
       $totalNumDistinctDonees = $row['numDonees'];
     }
+    return $totalNumDistinctDonees;
   }
 }
 
