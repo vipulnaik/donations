@@ -1,6 +1,7 @@
 <?php
 
-print '<h4 id="donorDonationAmountsByInfluencerAndYear">Donation amounts by influencer and year</h4>';
+print '<h4 id="donorDonationAmountsByInfluencerAndYear">'
+  . 'Donation amounts by influencer and year</h4>';
 
 $totalNumDistinctDoneesQuery = <<<'EOD'
     select
@@ -93,21 +94,27 @@ if ($stmt = $mysqli->prepare($influencerAndYearQuery)) {
 
 function cmpInfluencersByAmount($firstInfluencer, $secondInfluencer) {
   global $influencerDonationAmount;
-  if (intval($influencerDonationAmount[$firstInfluencer]) == intval($influencerDonationAmount[$secondInfluencer])) {
+  if (intval($influencerDonationAmount[$firstInfluencer]) ==
+      intval($influencerDonationAmount[$secondInfluencer])) {
     return 0;
   }
-  return (intval($influencerDonationAmount[$firstInfluencer]) > intval($influencerDonationAmount[$secondInfluencer])) ? -1 : 1;
+  return (intval($influencerDonationAmount[$firstInfluencer]) >
+    intval($influencerDonationAmount[$secondInfluencer])) ? -1 : 1;
 }
 
 usort($influencers, "cmpInfluencersByAmount");
 
-print "<p>If you hover over a cell for a given influencer and year, you will get a tooltip with the number of donees and the number of donations.</p>\n";
+print "<p>If you hover over a cell for a given influencer and year, "
+  . "you will get a tooltip with the number of donees and the number of "
+  . "donations.</p>\n";
 
-print "<p>Note: Cause area classification used here may not match that used by donor for all cases.</p>\n";
+print "<p>Note: Cause area classification used here may not match that used "
+  . "by donor for all cases.</p>\n";
 
-print '<table id="myTableDonorDonationAmountsByInfluencerAndYear" class="tablesorter">'."\n";
+print '<table id="myTableDonorDonationAmountsByInfluencerAndYear" '
+  . 'class="tablesorter">' . "\n";
 print "<thead>\n";
-print "  <tr><th>Influencer</th>\n";
+print "  <tr>\n  <th>Influencer</th>\n";
 print "  <th>Number of donations</th>\n";
 print "  <th>Number of donees</th>\n";
 print "    <th>Total</th>\n";
@@ -120,13 +127,24 @@ print "</tr>\n</thead>\n<tbody>\n";
 
 foreach ($influencers as $influencer) {
   print "  <tr>\n";
-  print "    <td>".'<a href="/?cause_area_filter='.urlencode($influencer).'">'."$influencer</a> (".'<a href="/donor.php?donor='.urlencode($donor).'&cause_area_filter='.urlencode($influencer).'">filter this donor</a>'.")</td>\n";
-  print '    <td align="right">'.$numDonationsByInfluencer[$influencer]."</td>\n";
-  print '    <td align="right">'.$numDoneesByInfluencer[$influencer]."</td>\n";
-  print '    <td align="right"><strong>'.number_format($influencerDonationAmount[$influencer],2)."</strong></td>\n";
+  print "    <td>$influencer</td>\n";
+  print '    <td align="right">' . $numDonationsByInfluencer[$influencer]
+    . "</td>\n";
+  print '    <td align="right">' . $numDoneesByInfluencer[$influencer]
+    . "</td>\n";
+  print '    <td align="right"><strong>'
+    . number_format($influencerDonationAmount[$influencer], 2)
+    . "</strong></td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] != 0) {
-      print '    <td align="right"><a title="'.sprintf("%d",$numDonationsByInfluencerAndYear[$influencer][$year]).' donations to '.sprintf("%d",$numDoneesByInfluencerAndYear[$influencer][$year]).' distinct donees">'.number_format($donationAmountByInfluencerAndYear[$influencer][$year],2)."</a></td>\n";
+      print '    <td align="right"><a title="'
+        . sprintf("%d", $numDonationsByInfluencerAndYear[$influencer][$year])
+        . ' donations to '
+        . sprintf("%d", $numDoneesByInfluencerAndYear[$influencer][$year])
+        . ' distinct donees">'
+        . number_format($donationAmountByInfluencerAndYear[$influencer][$year],
+          2)
+        . "</a></td>\n";
     }
   }
   print "  </tr>\n";
