@@ -9,8 +9,8 @@ function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
   } else {
     $donorString = '';
   }
-  print '<h4 id="' . $donorString . 'DonationAmountsBy' . $groupName . 'AndYear">'
-    . "Donation amounts by $groupName and year</h4>";
+  print '<h4 id="' . $donorString . 'DonationAmountsBy' . $groupName
+    . 'AndYear">' . "Donation amounts by $groupName and year</h4>";
 
   $totalNumDistinctDoneesQuery = <<<'EOD'
       select
@@ -144,8 +144,8 @@ EOD;
       . "you will get a tooltip with the number of donees and the number of "
       . "donations.</p>\n";
 
-    print "<p>Note: Cause area classification used here may not match that used "
-      . "by donor for all cases.</p>\n";
+    print "<p>Note: Cause area classification used here may not match that "
+      ."used by donor for all cases.</p>\n";
 
     print '<table id="myTableDonorDonationAmountsByGroupAndYear" '
       . 'class="tablesorter">' . "\n";
@@ -189,13 +189,17 @@ EOD;
     print "</tbody>\n";
     print "<tfoot>\n";
     print "  <tr>\n    <td><strong>Total</strong></td>\n";
-    print '    <td align="right"><strong>'.$grandTotalNumDonations."</strong></td>\n";
-    print '    <td align="right"><strong>'.$totalNumDistinctDonees."</strong></td>\n";
-    print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
+    print '    <td align="right"><strong>' . $grandTotalNumDonations
+      . "</strong></td>\n";
+    print '    <td align="right"><strong>' . $totalNumDistinctDonees
+      . "</strong></td>\n";
+    print '    <td align="right"><strong>'
+      . number_format($grandTotalDonationAmount,2) . "</strong></td>\n";
 
     foreach ($years as $year) {
       if ($yearDonationAmount[$year] != 0) {
-        print '    <td align="right"><strong>'.number_format($yearDonationAmount[$year],2)."</strong></td>\n";
+        print '    <td align="right"><strong>'
+          . number_format($yearDonationAmount[$year],2) . "</strong></td>\n";
       }
     }
 
@@ -211,7 +215,8 @@ EOD;
     }
 
     if ($causeAreaFilterString != '') {
-      $permalinkUrlBase .= '&cause_area_filter='.urlencode($causeAreaFilterString);
+      $permalinkUrlBase .=
+        '&cause_area_filter=' . urlencode($causeAreaFilterString);
     }
 
     $graphs = yearlyGraphs(
@@ -225,11 +230,15 @@ EOD;
       "#" . $donorString . "DonationAmountsBy" . $groupName . "AndYear"
     );
 
-    print "<p><strong>Graph of spending by $groupName and year (incremental, not cumulative)</strong></p>";
-    print '<img src="/images/'.$graphs[0].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
+    print "<p><strong>Graph of spending by $groupName and year "
+      . "(incremental, not cumulative)</strong></p>";
+    print '<img src="/images/' . $graphs[0] . '-timeseries.png" '
+      . 'alt="Graph of spending should have loaded here"></img>';
 
-    print "<p><strong>Graph of spending by $groupName and year (cumulative)</strong></p>";
-    print '<img src="/images/'.$graphs[1].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
+    print "<p><strong>Graph of spending by $groupName and year "
+      . "(cumulative)</strong></p>";
+    print '<img src="/images/' . $graphs[1] . '-timeseries.png" '
+      . 'alt="Graph of spending should have loaded here"></img>';
   } else {
     print "Sorry, we couldn't find any $groupName information.";
   }
