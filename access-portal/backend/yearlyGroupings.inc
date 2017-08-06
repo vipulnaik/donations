@@ -89,15 +89,19 @@ EOD;
   }
 
   $grandTotalDonationAmount = 0;
+  $classifiedTotalDonationAmount = 0;
   $groupDonationAmount = array();
   $yearDonationAmount = array();
+  $classifiedYearDonationAmount = array();
   $donationAmountByGroupAndYear = array();
   $numDoneesByGroupAndYear = array();
   $numDonationsByGroupAndYear = array();
+  $classifiedNumDonations = 0;
   foreach($groupMembers as $g) {
     $groupDonationAmount[$g] = 0;
     foreach($years as $year) {
       $yearDonationAmount[$year] = 0;
+      $classifiedYearDonationAmount[$year] = 0;
       $donationAmountByGroupAndYear[$g][$year] = 0;
       $numDoneesByGroupAndYear[$g][$year] = 0;
       $numDonationsByGroupAndYear[$g][$year] = 0;
@@ -145,6 +149,12 @@ EOD;
       $groupDonationAmount[$row[$groupSqlCol]] += $row['amount'];
       $yearDonationAmount[$row['year']] += $row['amount'];
       $grandTotalDonationAmount += $row['amount'];
+      if ($row[$groupSqlCol] != 'Unclassified') {
+        $classifiedTotalDonationAmount += $row['amount'];
+        $classifiedYearDonationAmount[$row['year']] += $row['amount'];
+        $classifiedNumDonations += $row['numDonations'];
+      } else {
+      }
     }
   }
 
@@ -206,22 +216,21 @@ EOD;
     /* Classified total */
     print "  <tr>\n";
     print '    <td><strong>Classified total' . "</strong></td>\n";
-    print '    <td align="right"><strong>' . $grandTotalNumDonations
-      . "</strong></td>\n";
-    print "</strong></td>\n";
+    print '    <td align="right"><strong>';
+    print $classifiedNumDonations . '</strong></td>';
     print '    <td align="right"><strong>';
     print distinctDonees($mysqli, $causeAreaFilterString, $donor,
       "$groupSqlCol is not NULL");
     print "</strong></td>\n";
-    print '    <td align="right"><strong>'
-      . number_format($grandTotalDonationAmount,2) . "</strong></td>\n";
-
+    print '    <td align="right"><strong>' . $classifiedTotalDonationAmount
+      . '</strong></td>';
     foreach ($years as $year) {
       if ($yearDonationAmount[$year] != 0) {
         print '    <td align="right"><strong>'
           . number_format($yearDonationAmount[$year],2) . "</strong></td>\n";
       }
     }
+
     print "  </tr>\n";
 
     /* Unclassified total */
@@ -238,9 +247,18 @@ EOD;
     /* Grand total */
     print "  <tr>\n";
     print "    <td><strong>Total</strong></td>\n";
-    print "    <td></td>";
+    print '    <td align="right"><strong>' . $grandTotalNumDonations
+      . "</strong></td>\n";
     print '    <td align="right"><strong>' . distinctDonees($mysqli,
       $causeAreaFilterString, $donor, "") . "</strong></td>\n";
+    print '    <td align="right"><strong>'
+      . number_format($grandTotalDonationAmount,2) . "</strong></td>\n";
+    foreach ($years as $year) {
+      if ($yearDonationAmount[$year] != 0) {
+        print '    <td align="right"><strong>'
+          . number_format($yearDonationAmount[$year],2) . "</strong></td>\n";
+      }
+    }
     print "  </tr>\n";
 
     print "</tfoot>\n";
