@@ -1,8 +1,10 @@
 <?php
 
-function yearlyGroupings($years, $group, $groupSqlCol, $causeAreaFilterString) {
-  print '<h4 id="donorDonationAmountsBy' . $group . 'AndYear">'
-    . "Donation amounts by $group and year</h4>";
+function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
+    $donor,
+    $groupName, $groupSqlCol, $causeAreaFilterString) {
+  print '<h4 id="donorDonationAmountsBy' . $groupName . 'AndYear">'
+    . "Donation amounts by $groupName and year</h4>";
 
   $totalNumDistinctDoneesQuery = <<<'EOD'
       select
@@ -36,7 +38,7 @@ EOD;
   if ($causeAreaFilterString != '') {
     $groupQuery .= " and cause_area REGEXP ?";
   }
-  $groupQuery .= " group by $group";
+  $groupQuery .= " group by $groupSqlCol";
 
   if ($stmt = $mysqli->prepare($groupQuery)) {
     if ($causeAreaFilterString != '') {
@@ -46,14 +48,14 @@ EOD;
     }
     $stmt->execute();
     $result = $stmt->get_result();
-    $groups = array();
+    $groupMembers = array();
     $numDoneesByGroup = array();
     $numDonationsByGroup = array();
     $grandTotalNumDonations = 0;
     while ($row = $result->fetch_assoc()) {
-      array_push($groups, $row[$group]);
-      $numDoneesByGroup[$row[$group]] = $row['numDonees'];
-      $numDonationsByGroup[$row[$group]] = $row['numDonations'];
+      array_push($groupMembers, $row[$groupSqlCol]);
+      $numDoneesByGroup[$row[$groupSqlCol]] = $row['numDonees'];
+      $numDonationsByGroup[$row[$groupSqlCol]] = $row['numDonations'];
       $grandTotalNumDonations += $row['numDonations'];
     }
   }
@@ -64,30 +66,30 @@ EOD;
   $donationAmountByGroupAndYear = array();
   $numDoneesByGroupAndYear = array();
   $numDonationsByGroupAndYear = array();
-  foreach($groups as $group) {
-    $groupDonationAmount[$group] = 0;
+  foreach($groupMembers as $g) {
+    $groupDonationAmount[$g] = 0;
     foreach($years as $year) {
       $yearDonationAmount[$year] = 0;
-      $donationAmountByGroupAndYear[$group][$year] = 0;
-      $numDoneesByGroupAndYear[$group][$year] = 0;
-      $numDonationsByGroupAndYear[$group][$year] = 0;
+      $donationAmountByGroupAndYear[$g][$year] = 0;
+      $numDoneesByGroupAndYear[$g][$year] = 0;
+      $numDonationsByGroupAndYear[$g][$year] = 0;
     }
   }
 
   $groupAndYearQuery = <<<EOD
       select
-          $group,
+          $groupSqlCol,
           count(distinct donee) as numDonees,
           count(*) as numDonations,
           year(donation_date) as year,
           sum(amount) as amount
       from donations
-      where $group is not NULL and donor = ?
+      where $groupSqlCol is not NULL and donor = ?
 EOD;
   if ($causeAreaFilterString != '') {
     $groupAndYearQuery .= " and cause_area REGEXP ?";
   }
-  $groupAndYearQuery .= " group by $group, year(donation_date)";
+  $groupAndYearQuery .= " group by $groupSqlCol, year(donation_date)";
 
   if ($stmt = $mysqli->prepare($groupAndYearQuery)) {
     if ($causeAreaFilterString != '') {
@@ -98,31 +100,33 @@ EOD;
     $stmt->execute();
     $result = $stmt->get_result();
     while ($row = $result->fetch_assoc()) {
-      $donationAmountByGroupAndYear[$row[$group]][$row['year']] =
+      $donationAmountByGroupAndYear[$row[$groupSqlCol]][$row['year']] =
         $row['amount'];
-      $numDoneesByGroupAndYear[$row[$group]][$row['year']] =
+      $numDoneesByGroupAndYear[$row[$groupSqlCol]][$row['year']] =
         $row['numDonees'];
-      $numDonationsByGroupAndYear[$row[$group]][$row['year']] =
+      $numDonationsByGroupAndYear[$row[$groupSqlCol]][$row['year']] =
         $row['numDonations'];
-      $groupDonationAmount[$row[$group]] += $row['amount'];
+      $groupDonationAmount[$row[$groupSqlCol]] += $row['amount'];
       $yearDonationAmount[$row['year']] += $row['amount'];
       $grandTotalDonationAmount += $row['amount'];
     }
   }
 
-  function cmpGroupsByAmount($firstGroup, $secondGroup) {
-    global $groupDonationAmount;
-    if (intval($groupDonationAmount[$firstGroup]) ==
-        intval($groupDonationAmount[$secondGroup])) {
-      return 0;
-    }
-    return (intval($groupDonationAmount[$firstGroup]) >
-      intval($groupDonationAmount[$secondGroup])) ? -1 : 1;
-  }
+  /* function cmpGroupsByAmount($firstGroup, $secondGroup) { */
+  /*   global $groupDonationAmount; */
+  /*   if (intval($groupDonationAmount[$firstGroup]) == */
+  /*       intval($groupDonationAmount[$secondGroup])) { */
+  /*     return 0; */
+  /*   } */
+  /*   return (intval($groupDonationAmount[$firstGroup]) > */
+  /*     intval($groupDonationAmount[$secondGroup])) ? -1 : 1; */
+  /* } */
 
-  usort($groups, "cmpGroupsByAmount");
+  usort($groupMembers, function($a, $b) use ($groupDonationAmount) {
+    return intval($groupDonationAmount[$b]) - intval($groupDonationAmount[$a]);
+  });
 
-  print "<p>If you hover over a cell for a given $group and year, "
+  print "<p>If you hover over a cell for a given $groupName and year, "
     . "you will get a tooltip with the number of donees and the number of "
     . "donations.</p>\n";
 
@@ -132,7 +136,7 @@ EOD;
   print '<table id="myTableDonorDonationAmountsByGroupAndYear" '
     . 'class="tablesorter">' . "\n";
   print "<thead>\n";
-  print "  <tr>\n  <th>$group</th>\n";
+  print "  <tr>\n  <th>$groupName</th>\n";
   print "  <th>Number of donations</th>\n";
   print "  <th>Number of donees</th>\n";
   print "    <th>Total</th>\n";
@@ -143,24 +147,24 @@ EOD;
   }
   print "</tr>\n</thead>\n<tbody>\n";
 
-  foreach ($groups as $group) {
+  foreach ($groupMembers as $g) {
     print "  <tr>\n";
-    print "    <td>$group</td>\n";
-    print '    <td align="right">' . $numDonationsByGroup[$group]
+    print "    <td>$g</td>\n";
+    print '    <td align="right">' . $numDonationsByGroup[$g]
       . "</td>\n";
-    print '    <td align="right">' . $numDoneesByGroup[$group]
+    print '    <td align="right">' . $numDoneesByGroup[$g]
       . "</td>\n";
     print '    <td align="right"><strong>'
-      . number_format($groupDonationAmount[$group], 2)
+      . number_format($groupDonationAmount[$g], 2)
       . "</strong></td>\n";
     foreach ($years as $year) {
       if ($yearDonationAmount[$year] != 0) {
         print '    <td align="right"><a title="'
-          . sprintf("%d", $numDonationsByGroupAndYear[$group][$year])
+          . sprintf("%d", $numDonationsByGroupAndYear[$g][$year])
           . ' donations to '
-          . sprintf("%d", $numDoneesByGroupAndYear[$group][$year])
+          . sprintf("%d", $numDoneesByGroupAndYear[$g][$year])
           . ' distinct donees">'
-          . number_format($donationAmountByGroupAndYear[$group][$year],
+          . number_format($donationAmountByGroupAndYear[$g][$year],
             2)
           . "</a></td>\n";
       }
@@ -193,7 +197,7 @@ EOD;
 
   $graphs = yearlyGraphs(
     $years,
-    $groups,
+    $groupMembers,
     $yearDonationAmount,
     $donationAmountByGroupAndYear,
     $generateGraphCmdBase,
@@ -202,10 +206,10 @@ EOD;
     "#donorDonationAmountsByGroupAndYear"
   );
 
-  print "<p><strong>Graph of spending by $group and year (incremental, not cumulative)</strong></p>";
+  print "<p><strong>Graph of spending by $groupName and year (incremental, not cumulative)</strong></p>";
   print '<img src="/images/'.$graphs[0].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
 
-  print "<p><strong>Graph of spending by $group and year (cumulative)</strong></p>";
+  print "<p><strong>Graph of spending by $groupName and year (cumulative)</strong></p>";
   print '<img src="/images/'.$graphs[1].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
 }
 ?>
