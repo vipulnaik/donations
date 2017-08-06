@@ -47,9 +47,6 @@ function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
   print '<h4 id="' . $donorString . 'DonationAmountsBy' . $groupName
     . 'AndYear">' . "Donation amounts by $groupName and year</h4>";
 
-  $totalNumDistinctDonees = distinctDonees($mysqli, $causeAreaFilterString,
-    $donor, "");
-
   $groupQuery = <<<EOD
       select
           $groupSqlCol,
@@ -223,8 +220,9 @@ EOD;
     print "  <tr>\n    <td><strong>Total</strong></td>\n";
     print '    <td align="right"><strong>' . $grandTotalNumDonations
       . "</strong></td>\n";
-    print '    <td align="right"><strong>' . $totalNumDistinctDonees
-      . "</strong></td>\n";
+    print '    <td align="right"><strong>' . distinctDonees($mysqli,
+      $causeAreaFilterString, $donor, "") . "</strong></td>\n";
+
     print '    <td align="right"><strong>'
       . number_format($grandTotalDonationAmount,2) . "</strong></td>\n";
 
