@@ -1,15 +1,7 @@
 <?php
 
-function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
-    $donor, $groupName, $groupSqlCol, $causeAreaFilterString) {
-
-  if ($donor != '') {
-    $donorString = "donor";
-  } else {
-    $donorString = '';
-  }
-  print '<h4 id="' . $donorString . 'DonationAmountsBy' . $groupName
-    . 'AndYear">' . "Donation amounts by $groupName and year</h4>";
+function distinctDonees($mysqli, $causeAreaFilterString, $donor,
+    $classifiedString) {
 
   $totalNumDistinctDoneesQuery = <<<'EOD'
       select
@@ -37,6 +29,21 @@ EOD;
       $totalNumDistinctDonees = $row['numDonees'];
     }
   }
+}
+
+function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
+    $donor, $groupName, $groupSqlCol, $causeAreaFilterString) {
+
+  if ($donor != '') {
+    $donorString = "donor";
+  } else {
+    $donorString = '';
+  }
+  print '<h4 id="' . $donorString . 'DonationAmountsBy' . $groupName
+    . 'AndYear">' . "Donation amounts by $groupName and year</h4>";
+
+  $totalNumDistinctDonees = distinctDonees($mysqli, $causeAreaFilterString,
+    $donor, "");
 
   $groupQuery = <<<EOD
       select
