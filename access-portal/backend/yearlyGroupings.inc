@@ -12,29 +12,30 @@ function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
   print '<h4 id="' . $donorString . 'DonationAmountsBy' . $groupName . 'AndYear">'
     . "Donation amounts by $groupName and year</h4>";
 
-  if ($donor != '') {
-    $totalNumDistinctDoneesQuery = <<<'EOD'
-        select
-            count(distinct donee) as numDonees
-            from donations where donor = ?
+  $totalNumDistinctDoneesQuery = <<<'EOD'
+      select
+          count(distinct donee) as numDonees
+          from donations
 EOD;
-    if ($donor != '') {
-      $groupQuery .= " and donor = ?";
+  if ($donor != '' && $causeAreaFilterString != '') {
+    $groupQuery .= " where donor = ? and cause_area REGEXP ?";
+  } else if ($donor != '') {
+    $groupQuery .= " where donor = ?";
+  } else if ($causeAreaFilterString != '') {
+    $groupQuery .= " where cause_area REGEXP ?";
+  }
+  if ($stmt = $mysqli->prepare($totalNumDistinctDoneesQuery)) {
+    if ($donor != '' && $causeAreaFilterString != '') {
+      $stmt->bind_param("ss", $donor, $causeAreaFilterString);
+    } else if ($donor != '') {
+      $stmt->bind_param("s", $donor);
+    } else if ($causeAreaFilterString != '') {
+      $stmt->bind_param("s", $causeAreaFilterString);
     }
-    if ($causeAreaFilterString != '') {
-      $groupQuery .= " and cause_area REGEXP ?";
-    }
-    if ($stmt = $mysqli->prepare($totalNumDistinctDoneesQuery)) {
-      if ($causeAreaFilterString != '') {
-        $stmt->bind_param("ss", $donor, $causeAreaFilterString);
-      } else {
-        $stmt->bind_param("s", $donor);
-      }
-      $stmt->execute();
-      $result = $stmt->get_result();
-      while ($row = $result->fetch_assoc()) {
-        $totalNumDistinctDonees = $row['numDonees'];
-      }
+    $stmt->execute();
+    $result = $stmt->get_result();
+    while ($row = $result->fetch_assoc()) {
+      $totalNumDistinctDonees = $row['numDonees'];
     }
   }
 
