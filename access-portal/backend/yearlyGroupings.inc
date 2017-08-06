@@ -18,11 +18,11 @@ function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
           from donations
 EOD;
   if ($donor != '' && $causeAreaFilterString != '') {
-    $groupQuery .= " where donor = ? and cause_area REGEXP ?";
+    $totalNumDistinctDoneesQuery .= " where donor = ? and cause_area REGEXP ?";
   } else if ($donor != '') {
-    $groupQuery .= " where donor = ?";
+    $totalNumDistinctDoneesQuery .= " where donor = ?";
   } else if ($causeAreaFilterString != '') {
-    $groupQuery .= " where cause_area REGEXP ?";
+    $totalNumDistinctDoneesQuery .= " where cause_area REGEXP ?";
   }
   if ($stmt = $mysqli->prepare($totalNumDistinctDoneesQuery)) {
     if ($donor != '' && $causeAreaFilterString != '') {
@@ -104,7 +104,7 @@ EOD;
       where $groupSqlCol is not NULL
 EOD;
   if ($donor != '') {
-    $groupQuery .= " and donor = ?";
+    $groupAndYearQuery .= " and donor = ?";
   }
   if ($causeAreaFilterString != '') {
     $groupAndYearQuery .= " and cause_area REGEXP ?";
