@@ -112,16 +112,6 @@ EOD;
     }
   }
 
-  /* function cmpGroupsByAmount($firstGroup, $secondGroup) { */
-  /*   global $groupDonationAmount; */
-  /*   if (intval($groupDonationAmount[$firstGroup]) == */
-  /*       intval($groupDonationAmount[$secondGroup])) { */
-  /*     return 0; */
-  /*   } */
-  /*   return (intval($groupDonationAmount[$firstGroup]) > */
-  /*     intval($groupDonationAmount[$secondGroup])) ? -1 : 1; */
-  /* } */
-
   usort($groupMembers, function($a, $b) use ($groupDonationAmount) {
     return intval($groupDonationAmount[$b]) - intval($groupDonationAmount[$a]);
   });
