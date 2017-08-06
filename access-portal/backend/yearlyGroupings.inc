@@ -30,9 +30,9 @@ EOD;
     $stmt->execute();
     $result = $stmt->get_result();
     while ($row = $result->fetch_assoc()) {
-      $totalNumDistinctDonees = $row['numDonees'];
+      $numDonees = $row['numDonees'];
     }
-    return $totalNumDistinctDonees;
+    return $numDonees;
   }
 }
 
