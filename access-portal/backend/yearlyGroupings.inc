@@ -3,27 +3,38 @@
 function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
     $donor,
     $groupName, $groupSqlCol, $causeAreaFilterString) {
-  print '<h4 id="donorDonationAmountsBy' . $groupName . 'AndYear">'
+
+  if ($donor != '') {
+    $donorString = "donor";
+  } else {
+    $donorString = '';
+  }
+  print '<h4 id="' . $donorString . 'DonationAmountsBy' . $groupName . 'AndYear">'
     . "Donation amounts by $groupName and year</h4>";
 
-  $totalNumDistinctDoneesQuery = <<<'EOD'
-      select
-          count(distinct donee) as numDonees
-          from donations where donor = ?
+  if ($donor != '') {
+    $totalNumDistinctDoneesQuery = <<<'EOD'
+        select
+            count(distinct donee) as numDonees
+            from donations where donor = ?
 EOD;
-  if ($causeAreaFilterString != '') {
-    $totalNumDistinctDoneesQuery .= " and cause_area REGEXP ?";
-  }
-  if ($stmt = $mysqli->prepare($totalNumDistinctDoneesQuery)) {
-    if ($causeAreaFilterString != '') {
-      $stmt->bind_param("ss", $donor, $causeAreaFilterString);
-    } else {
-      $stmt->bind_param("s", $donor);
+    if ($donor != '') {
+      $groupQuery .= " and donor = ?";
     }
-    $stmt->execute();
-    $result = $stmt->get_result();
-    while ($row = $result->fetch_assoc()) {
-      $totalNumDistinctDonees = $row['numDonees'];
+    if ($causeAreaFilterString != '') {
+      $groupQuery .= " and cause_area REGEXP ?";
+    }
+    if ($stmt = $mysqli->prepare($totalNumDistinctDoneesQuery)) {
+      if ($causeAreaFilterString != '') {
+        $stmt->bind_param("ss", $donor, $causeAreaFilterString);
+      } else {
+        $stmt->bind_param("s", $donor);
+      }
+      $stmt->execute();
+      $result = $stmt->get_result();
+      while ($row = $result->fetch_assoc()) {
+        $totalNumDistinctDonees = $row['numDonees'];
+      }
     }
   }
 
@@ -33,18 +44,23 @@ EOD;
           count(distinct donee) as numDonees,
           count(*) as numDonations
       from donations
-      where $groupSqlCol is not NULL and donor = ?
+      where $groupSqlCol is not NULL
 EOD;
+  if ($donor != '') {
+    $groupQuery .= " and donor = ?";
+  }
   if ($causeAreaFilterString != '') {
     $groupQuery .= " and cause_area REGEXP ?";
   }
   $groupQuery .= " group by $groupSqlCol";
 
   if ($stmt = $mysqli->prepare($groupQuery)) {
-    if ($causeAreaFilterString != '') {
+    if ($donor != '' && $causeAreaFilterString != '') {
       $stmt->bind_param("ss", $donor, $causeAreaFilterString);
-    } else {
+    } else if ($donor != '') {
       $stmt->bind_param("s", $donor);
+    } else if ($causeAreaFilterString != '') {
+      $stmt->bind_param("s", $causeAreaFilterString);
     }
     $stmt->execute();
     $result = $stmt->get_result();
@@ -84,18 +100,23 @@ EOD;
           year(donation_date) as year,
           sum(amount) as amount
       from donations
-      where $groupSqlCol is not NULL and donor = ?
+      where $groupSqlCol is not NULL
 EOD;
+  if ($donor != '') {
+    $groupQuery .= " and donor = ?";
+  }
   if ($causeAreaFilterString != '') {
     $groupAndYearQuery .= " and cause_area REGEXP ?";
   }
   $groupAndYearQuery .= " group by $groupSqlCol, year(donation_date)";
 
   if ($stmt = $mysqli->prepare($groupAndYearQuery)) {
-    if ($causeAreaFilterString != '') {
+    if ($donor != '' && $causeAreaFilterString != '') {
       $stmt->bind_param("ss", $donor, $causeAreaFilterString);
-    } else {
+    } else if ($donor != '') {
       $stmt->bind_param("s", $donor);
+    } else if ($causeAreaFilterString != '') {
+      $stmt->bind_param("s", $causeAreaFilterString);
     }
     $stmt->execute();
     $result = $stmt->get_result();
@@ -179,7 +200,12 @@ EOD;
   print "</tfoot>\n";
   print "</table>";
 
-  $permalinkUrlBase = "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor);
+  if ($donor != '') {
+    $permalinkUrlBase = "https://donations.vipulnaik.com/donor.php?donor="
+      . urlencode($donor);
+  } else {
+    $permalinkUrlBase = "https://donations.vipulnaik.com/index.php";
+  }
 
   if ($causeAreaFilterString != '') {
     $permalinkUrlBase .= '&cause_area_filter='.urlencode($causeAreaFilterString);
@@ -193,7 +219,7 @@ EOD;
     $generateGraphCmdBase,
     $imagesPath,
     $permalinkUrlBase,
-    "#donorDonationAmountsByGroupAndYear"
+    "#" . $donorString . "DonationAmountsBy" . $groupName . "AndYear"
   );
 
   print "<p><strong>Graph of spending by $groupName and year (incremental, not cumulative)</strong></p>";
