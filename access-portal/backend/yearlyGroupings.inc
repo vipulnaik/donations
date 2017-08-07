@@ -88,12 +88,13 @@ EOD;
     $stmt->execute();
     $result = $stmt->get_result();
     while ($row = $result->fetch_assoc()) {
-      array_push($groupMembers, $row[$groupSqlCol]);
-      $data[$row[$groupSqlCol]]['Total']['numDonations'] = $row['numDonations'];
-      $data[$row[$groupSqlCol]]['Total']['numDonees'] = $row['numDonees'];
+      $col = $row[$groupSqlCol];
+      array_push($groupMembers, $col);
+      $data[$col]['Total']['numDonations'] = $row['numDonations'];
+      $data[$col]['Total']['numDonees'] = $row['numDonees'];
       $data['Total']['Total']['numDonations'] += $row['numDonations'];
       $data['Total']['Total']['numDonees'] += $row['numDonees'];
-      if ($row[$groupSqlCol] != 'Unclassified') {
+      if ($col != 'Unclassified') {
         $data['Classified']['Total']['numDonations'] = $row['numDonations'];
         /* We have to get the Classified numDonees separately */
       }
