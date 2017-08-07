@@ -47,9 +47,9 @@ function printFooterRow($data, $years, $rowName, $rowLabel) {
   print '    <td align="right"><strong>'
     . number_format($data['amount'][$rowName]['Total'], 2) . '</strong></td>';
   foreach ($years as $year) {
-    if ($data['amount']['Total'][$year] != 0) {
+    if ($data['amount']['Classified'][$year] != 0) {
       print '    <td align="right"><strong>'
-        . number_format($data['amount']['Total'][$year], 2)
+        . number_format($data['amount'][$rowName][$year], 2)
         . "</strong></td>\n";
     }
   }
@@ -66,7 +66,6 @@ function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
   foreach ($groupMembers as $g) {
     $data['numDonations'][$g]['Total'] = 0;
     $data['numDonees'][$g]['Total'] = 0;
-    $data['amount'][$g]['Total'] = 0;
   }
 
   if ($donor != '') {
@@ -212,7 +211,7 @@ EOD;
     print "  <th>Number of donees</th>\n";
     print "    <th>Total</th>\n";
     foreach ($years as $year) {
-      if ($data['amount']['Total'][$year] != 0) {
+      if ($data['amount']['Classified'][$year] != 0) {
         print "    <th>$year</th>\n";
       }
     }
@@ -230,7 +229,7 @@ EOD;
           . number_format($data['amount'][$g]['Total'], 2)
           . "</strong></td>\n";
         foreach ($years as $year) {
-          if ($data['amount']['Total'][$year] != 0) {
+          if ($data['amount']['Classified'][$year] != 0) {
             print '    <td align="right"><a title="'
               . sprintf("%d", $data['numDonations'][$g][$year])
               . ' donations to '
