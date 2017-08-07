@@ -141,20 +141,22 @@ EOD;
     $stmt->execute();
     $result = $stmt->get_result();
     while ($row = $result->fetch_assoc()) {
-      $data[$row[$groupSqlCol]][$year]['amount'] = $row['amount'];
-      $data[$row[$groupSqlCol]][$year]['numDonations'] = $row['numDonations'];
-      $data[$row[$groupSqlCol]][$year]['numDonees'] = $row['numDonees'];
+      $col = $row[$groupSqlCol];
+      $y = $row['year'];
+      $data[$col][$y]['amount'] = $row['amount'];
+      $data[$col][$y]['numDonations'] = $row['numDonations'];
+      $data[$col][$y]['numDonees'] = $row['numDonees'];
 
-      $data[$row[$groupSqlCol]]['Total']['amount'] += $row['amount'];
+      $data[$col]['Total']['amount'] += $row['amount'];
 
-      $data['Total'][$year]['numDonations'] += $row['numDonations'];
-      $data['Total'][$year]['numDonees'] += $row['numDonees'];
-      $data['Total'][$year]['amount'] += $row['amount'];
+      $data['Total'][$y]['numDonations'] += $row['numDonations'];
+      $data['Total'][$y]['numDonees'] += $row['numDonees'];
+      $data['Total'][$y]['amount'] += $row['amount'];
 
-      if ($row[$groupSqlCol] != 'Unclassified') {
-        $data['Classified'][$year]['amount'] += $row['amount'];
-        $data['Classified'][$year]['numDonations'] += $row['numDonations'];
-        $data['Classified'][$year]['numDonees'] += $row['numDonees'];
+      if ($col != 'Unclassified') {
+        $data['Classified'][$y]['amount'] += $row['amount'];
+        $data['Classified'][$y]['numDonations'] += $row['numDonations'];
+        $data['Classified'][$y]['numDonees'] += $row['numDonees'];
       }
     }
   }
@@ -162,6 +164,7 @@ EOD;
   usort($groupMembers, function($a, $b) use ($data) {
     return intval($data[$b]['Total']['amount']) - intval($data[$a]['Total']['amount']);
   });
+
 
   if (sizeof($groupMembers) > 0) {
 
