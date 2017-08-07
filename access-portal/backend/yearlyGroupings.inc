@@ -62,7 +62,7 @@ function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
    * $data['amount']['United States'][2015] if the grouping is country. All the
    * data will be stored here and pulled out when printing the table. */
   $data = array();
-  $groupMembers = array("Classified", "Total");
+  $groupMembers = array("Classified", "Unclassified", "Total");
   foreach ($groupMembers as $g) {
     $data['numDonations'][$g]['Total'] = 0;
     $data['numDonees'][$g]['Total'] = 0;
@@ -107,7 +107,9 @@ EOD;
     $result = $stmt->get_result();
     while ($row = $result->fetch_assoc()) {
       $col = $row[$groupSqlCol];
-      array_push($groupMembers, $col);
+      if ($col != 'Unclassified') {
+        array_push($groupMembers, $col);
+      }
 
       $data['numDonations'][$col]['Total'] = $row['numDonations'];
       $data['numDonees'][$col]['Total'] = $row['numDonees'];
