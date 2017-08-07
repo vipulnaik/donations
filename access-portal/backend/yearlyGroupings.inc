@@ -59,7 +59,7 @@ function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
     $donor, $groupName, $groupSqlCol, $causeAreaFilterString,
     $groupMemberLink) {
 
-  /* This array is three-dimensional with group BY year BY value, e.g.
+  /* This array is three-dimensional with value BY group BY year, e.g.
    * $data['amount']['United States'][2015] if the grouping is country. All the
    * data will be stored here and pulled out when printing the table. */
   $data = array();
