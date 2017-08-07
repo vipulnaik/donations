@@ -193,7 +193,8 @@ EOD;
   }
 
   usort($groupMembers, function($a, $b) use ($data) {
-    return intval($data['amount'][$b]['Total']) - intval($data['amount'][$a]['Total']);
+    return intval($data['amount'][$b]['Total'])
+      - intval($data['amount'][$a]['Total']);
   });
 
 
@@ -224,7 +225,8 @@ EOD;
       if ($g != 'Total' && $g != 'Classified' && $g != 'Unclassified') {
         print "  <tr>\n";
         if ($groupMemberLink) {
-          print "    <td>" . sprintf($groupMemberLink, urlencode($g), $g) . "</td>\n";
+          print "    <td>" . sprintf($groupMemberLink, urlencode($g), $g)
+            . "</td>\n";
         } else {
           print "    <td>$g</td>\n";
         }
