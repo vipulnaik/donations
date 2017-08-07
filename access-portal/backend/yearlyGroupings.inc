@@ -109,14 +109,20 @@ EOD;
     while ($row = $result->fetch_assoc()) {
       $col = $row[$groupSqlCol];
       array_push($groupMembers, $col);
+
       $data['numDonations'][$col]['Total'] = $row['numDonations'];
       $data['numDonees'][$col]['Total'] = $row['numDonees'];
+
       $data['numDonations']['Total']['Total'] += $row['numDonations'];
       $data['numDonees']['Total']['Total'] += $row['numDonees'];
+
       if ($col != 'Unclassified') {
-        $data['numDonations']['Classified']['Total'] = $row['numDonations'];
+        $data['numDonations']['Classified']['Total'] += $row['numDonations'];
         /* We have to get the Classified numDonees separately */
       }
+
+      /* Unclassified is included in the SQL query result so we don't need to
+       * separately set values for that. */
     }
   }
 
@@ -163,6 +169,7 @@ EOD;
     while ($row = $result->fetch_assoc()) {
       $col = $row[$groupSqlCol];
       $y = $row['year'];
+
       $data['amount'][$col][$y] = $row['amount'];
       $data['numDonations'][$col][$y] = $row['numDonations'];
       $data['numDonees'][$col][$y] = $row['numDonees'];
@@ -172,11 +179,13 @@ EOD;
       $data['numDonations']['Total'][$y] += $row['numDonations'];
       $data['numDonees']['Total'][$y] += $row['numDonees'];
       $data['amount']['Total'][$y] += $row['amount'];
+      $data['amount']['Total']['Total'] += $row['amount'];
 
       if ($col != 'Unclassified') {
         $data['amount']['Classified'][$y] += $row['amount'];
         $data['numDonations']['Classified'][$y] += $row['numDonations'];
         $data['numDonees']['Classified'][$y] += $row['numDonees'];
+        $data['amount']['Classified']['Total'] += $row['amount'];
       }
     }
   }
