@@ -36,6 +36,25 @@ EOD;
   }
 }
 
+function printFooterRow($data, $years, $rowName, $rowLabel) {
+  print "  <tr>\n";
+  print "    <td><strong>$rowLabel</strong></td>\n";
+  print '    <td align="right"><strong>'
+    . $data['numDonations'][$rowName]['Total'] . '</strong></td>' . "\n";
+  print '    <td align="right"><strong>'
+    . $data['numDonees'][$rowName]['Total'];
+  print "</strong></td>\n";
+  print '    <td align="right"><strong>'
+    . number_format($data['amount'][$rowName]['Total'], 2) . '</strong></td>';
+  foreach ($years as $year) {
+    if ($data['amount']['Total'][$year] != 0) {
+      print '    <td align="right"><strong>'
+        . number_format($data['amount']['Total'][$year], 2)
+        . "</strong></td>\n";
+    }
+  }
+}
+
 function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
     $donor, $groupName, $groupSqlCol, $causeAreaFilterString) {
 
@@ -191,80 +210,41 @@ EOD;
     print "</tr>\n</thead>\n<tbody>\n";
 
     foreach ($groupMembers as $g) {
-      print "  <tr>\n";
-      print "    <td>$g</td>\n";
-      print '    <td align="right">' . $data['numDonations'][$g]['Total']
-        . "</td>\n";
-      print '    <td align="right">' . $data['numDonees'][$g]['Total']
-        . "</td>\n";
-      print '    <td align="right"><strong>'
-        . number_format($data['amount'][$g]['Total'], 2)
-        . "</strong></td>\n";
-      foreach ($years as $year) {
-        if ($data['amount']['Total'][$year] != 0) {
-          print '    <td align="right"><a title="'
-            . sprintf("%d", $data['numDonations'][$g][$year])
-            . ' donations to '
-            . sprintf("%d", $data['numDonees'][$g][$year])
-            . ' distinct donees">'
-            . number_format($data['amount'][$g][$year],
-              2)
-            . "</a></td>\n";
+      if ($g != 'Total' && $g != 'Classified' && $g != 'Unclassified') {
+        print "  <tr>\n";
+        print "    <td>$g</td>\n";
+        print '    <td align="right">' . $data['numDonations'][$g]['Total']
+          . "</td>\n";
+        print '    <td align="right">' . $data['numDonees'][$g]['Total']
+          . "</td>\n";
+        print '    <td align="right"><strong>'
+          . number_format($data['amount'][$g]['Total'], 2)
+          . "</strong></td>\n";
+        foreach ($years as $year) {
+          if ($data['amount']['Total'][$year] != 0) {
+            print '    <td align="right"><a title="'
+              . sprintf("%d", $data['numDonations'][$g][$year])
+              . ' donations to '
+              . sprintf("%d", $data['numDonees'][$g][$year])
+              . ' distinct donees">'
+              . number_format($data['amount'][$g][$year],
+                2)
+              . "</a></td>\n";
+          }
         }
+        print "  </tr>\n";
       }
-      print "  </tr>\n";
     }
 
     print "</tbody>\n";
     print "<tfoot>\n";
 
-    /* Classified total */
-    print "  <tr>\n";
-    print '    <td><strong>Classified total' . "</strong></td>\n";
-    print '    <td align="right"><strong>';
-    print $data['numDonations']['Classified']['Total'] . '</strong></td>';
-    print '    <td align="right"><strong>';
-    print distinctDonees($mysqli, $causeAreaFilterString, $donor,
-      "$groupSqlCol is not NULL");
-    print "</strong></td>\n";
-    print '    <td align="right"><strong>' . $data['amount']['Classified']['Total']
-      . '</strong></td>';
-    foreach ($years as $year) {
-      if ($data['amount']['Total'][$year] != 0) {
-        print '    <td align="right"><strong>'
-          . number_format($data['amount']['Total'][$year],2) . "</strong></td>\n";
-      }
-    }
+    $data['numDonees']['Classified']['Total'] = distinctDonees($mysqli,
+      $causeAreaFilterString, $donor, "$groupSqlCol is not NULL");
 
-    print "  </tr>\n";
-
-    /* Unclassified total */
-    print "  <tr>\n";
-    print '    <td><strong>Unclassified total' . "</strong></td>\n";
-    print '    <td align="right"><strong>';
-    print "</strong></td>\n";
-    print '    <td align="right"><strong>';
-    print distinctDonees($mysqli, $causeAreaFilterString, $donor,
-      "$groupSqlCol is NULL");
-    print "</strong></td>\n";
-    print "  </tr>\n";
-
-    /* Grand total */
-    print "  <tr>\n";
-    print "    <td><strong>Total</strong></td>\n";
-    print '    <td align="right"><strong>' . $data['amount']['Total']['Total']
-      . "</strong></td>\n";
-    print '    <td align="right"><strong>' . distinctDonees($mysqli,
-      $causeAreaFilterString, $donor, "") . "</strong></td>\n";
-    print '    <td align="right"><strong>'
-      . number_format($data['amount']['Total']['Total'], 2) . "</strong></td>\n";
-    foreach ($years as $year) {
-      if ($data['amount']['Total'][$year] != 0) {
-        print '    <td align="right"><strong>'
-          . number_format($data['amount']['Total'][$year],2) . "</strong></td>\n";
-      }
-    }
-    print "  </tr>\n";
+    printFooterRow($data, $years, 'Classified', "Classified total");
+    printFooterRow($data, $years, 'Unclassified', "Unclassified total");
+    printFooterRow($data, $years, 'Total', "Total");
 
     print "</tfoot>\n";
     print "</table>";
