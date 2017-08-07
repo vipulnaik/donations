@@ -9,6 +9,7 @@ reset:
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donors;"
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists gifts;"
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists money_moved;"
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists disclosures;"
 
 .PHONY: init
 init:
@@ -25,6 +26,8 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees-schema.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/disclosures/disclosures-schema.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/disclosures/open-phil-disclosures.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/80k-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ace-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cfar-docs.sql
