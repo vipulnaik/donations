@@ -8,5 +8,6 @@ yearlyGroupings(
   "",
   "country",
   "affected_countries",
-  $causeAreaFilterString
+  $causeAreaFilterString,
+  ""
 );

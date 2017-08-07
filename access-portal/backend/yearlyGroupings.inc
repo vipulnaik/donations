@@ -56,7 +56,8 @@ function printFooterRow($data, $years, $rowName, $rowLabel) {
 }
 
 function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
-    $donor, $groupName, $groupSqlCol, $causeAreaFilterString) {
+    $donor, $groupName, $groupSqlCol, $causeAreaFilterString,
+    $groupMemberLink) {
 
   /* This array is three-dimensional with group BY year BY value, e.g.
    * $data['amount']['United States'][2015] if the grouping is country. All the
@@ -222,7 +223,11 @@ EOD;
     foreach ($groupMembers as $g) {
       if ($g != 'Total' && $g != 'Classified' && $g != 'Unclassified') {
         print "  <tr>\n";
-        print "    <td>$g</td>\n";
+        if ($groupMemberLink) {
+          print "    <td>" . sprintf($groupMemberLink, urlencode($g), $g) . "</td>\n";
+        } else {
+          print "    <td>$g</td>\n";
+        }
         print '    <td align="right">' . $data['numDonations'][$g]['Total']
           . "</td>\n";
         print '    <td align="right">' . $data['numDonees'][$g]['Total']
