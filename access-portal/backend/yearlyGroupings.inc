@@ -56,9 +56,10 @@ function printFooterRow($data, $years, $rowName, $rowLabel) {
 }
 
 function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
-    $donor, $groupName, $groupSqlCol, $causeAreaFilterString) {
+    $donor, $groupName, $groupSqlCol, $causeAreaFilterString,
+    $groupMemberLink) {
 
-  /* This array is three-dimensional with group BY year BY value, e.g.
+  /* This array is three-dimensional with value BY group BY year, e.g.
    * $data['amount']['United States'][2015] if the grouping is country. All the
    * data will be stored here and pulled out when printing the table. */
   $data = array();
@@ -192,7 +193,8 @@ EOD;
   }
 
   usort($groupMembers, function($a, $b) use ($data) {
-    return intval($data['amount'][$b]['Total']) - intval($data['amount'][$a]['Total']);
+    return intval($data['amount'][$b]['Total'])
+      - intval($data['amount'][$a]['Total']);
   });
 
 
@@ -222,7 +224,12 @@ EOD;
     foreach ($groupMembers as $g) {
       if ($g != 'Total' && $g != 'Classified' && $g != 'Unclassified') {
         print "  <tr>\n";
-        print "    <td>$g</td>\n";
+        if ($groupMemberLink) {
+          print "    <td>" . sprintf($groupMemberLink, urlencode($g), $g)
+            . "</td>\n";
+        } else {
+          print "    <td>$g</td>\n";
+        }
         print '    <td align="right">' . $data['numDonations'][$g]['Total']
           . "</td>\n";
         print '    <td align="right">' . $data['numDonees'][$g]['Total']
@@ -273,7 +280,11 @@ EOD;
 
     $graphs = yearlyGraphs(
       $years,
-      $groupMembers,
+      /* Send without 'Total', since yearlyGraphs() constructs the Total on its
+       * own. It's only necessary to delete the 'Total' value from $groupMembers
+       * since the other arrays are accessed by key, and since the Total key
+       * isn't passed, they won't be accessed. */
+      array_diff($groupMembers, array('Total')),
       $data['amount']['Total'],
       $data['amount'],
       $generateGraphCmdBase,
