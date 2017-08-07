@@ -273,7 +273,11 @@ EOD;
 
     $graphs = yearlyGraphs(
       $years,
-      $groupMembers,
+      /* Send without 'Total', since yearlyGraphs() constructs the Total on its
+       * own. It's only necessary to delete the 'Total' value from $groupMembers
+       * since the other arrays are accessed by key, and since the Total key
+       * isn't passed, they won't be accessed. */
+      array_diff($groupMembers, array('Total')),
       $data['amount']['Total'],
       $data['amount'],
       $generateGraphCmdBase,
