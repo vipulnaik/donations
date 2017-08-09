@@ -1,3 +1,8 @@
+-- Below, "POLGTO" means "path of length greater than one". It means a
+-- disclosure entry should be added in place of the comment, but because the
+-- existing relationship is a path of length greater than one (which we haven't
+-- decided how to deal with), only a comment is added for now.
+
 insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
     ('Open Philanthropy Project', '80,000 Hours', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support', '2017-03-01', 'Nick Beckstead', NULL, 'Professional', 'Beckstead is a board member of Centre for Effective Altruism, the parent organization of 80,000 Hours.')
     ,('Open Philanthropy Project', '80,000 Hours', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support', '2017-03-01', NULL, NULL, 'Professional', 'A number of professional ties.')
@@ -44,10 +49,10 @@ insert into disclosures(donor, donee, url, donation_url, donation_date, donor_si
     ('Open Philanthropy Project', 'Future of Humanity Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-humanity-institute-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-humanity-institute-general-support', '2017-03-01', 'Nick Beckstead', NULL, 'Professional', 'Nick previously worked as a Research Fellow at FHI.')
     ,('Open Philanthropy Project', 'Future of Humanity Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-humanity-institute-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-humanity-institute-general-support', '2017-03-01', 'Daniel Dewey', NULL, 'Professional', 'Daniel previously worked as a Research Fellow at FHI.')
     ,('Open Philanthropy Project', 'Future of Humanity Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-humanity-institute-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-humanity-institute-general-support', '2017-03-01', 'Nick Beckstead', NULL, 'Professional', 'Nick is an FHI Research Associate (unpaid).')
-    -- Nick (Open Phil) <-> CEA <-> Toby Ord (FHI)
-    -- Nick (Open Phil) <-> CEA <-> Niel Bowerman (FHI)
+    -- POLGTO: Nick (Open Phil) <-> CEA <-> Toby Ord (FHI)
+    -- POLGTO: Nick (Open Phil) <-> CEA <-> Niel Bowerman (FHI)
     ,('Open Philanthropy Project', 'Future of Humanity Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-humanity-institute-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-humanity-institute-general-support', '2017-03-01', 'Carl Shulman', 'Carl Shulman', 'Professional', 'Carl consults for Open Philanthropy and is a Research Associate (paid) at FHI.')
-    -- Luke <-> MIRI <-> FHI
+    -- POLGTO: Luke <-> MIRI <-> FHI
 ;
 
 insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
@@ -59,8 +64,8 @@ insert into disclosures(donor, donee, url, donation_url, donation_date, donor_si
 ;
 
 -- insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
-    -- Nick <-> FHI <-> Hanson
-    -- Daniel <-> FHI <-> Hanson
+    -- POLGTO: Nick <-> FHI <-> Hanson
+    -- POLGTO: Daniel <-> FHI <-> Hanson
     -- ('Open Philanthropy Project', 'George Mason University', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/george-mason-university-research-future-artificial-intelligence-scenarios#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/george-mason-university-research-future-artificial-intelligence-scenarios', '2016-06-01', 'Nick Beckstead', NULL, 'Personal', 'This applicant to the RFP is a long-time donor and fan of GiveWell.')
 -- ;
 
@@ -79,4 +84,22 @@ insert into disclosures(donor, donee, url, donation_url, donation_date, donor_si
 
 insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
     ('Open Philanthropy Project', 'Humane Society International', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-international-east-asian-and-oie-projects', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-international-east-asian-and-oie-projects', '2017-03-01', 'Lewis Bollard', NULL, 'Professional', 'Lewis previously worked for the Humane Society of the United States.')
+
+    ,('Open Philanthropy Project', 'Humane Society International', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-international-india-animal-welfare-reform', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-international-india-animal-welfare-reform', '2017-05-01', 'Lewis Bollard', NULL, 'Professional', 'Lewis previously worked for the Humane Society of the United States.')
+
+    ,('Open Philanthropy Project', 'Humane Society International', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-united-states-corporate-cage-free-campaigns#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-united-states-corporate-cage-free-campaigns', '2016-02-01', 'Lewis Bollard', NULL, 'Professional', 'Lewis previously worked for the Humane Society of the United States.')
+    ,('Open Philanthropy Project', 'Humane Society International', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-united-states-corporate-cage-free-campaigns#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-united-states-corporate-cage-free-campaigns', '2016-02-01', 'Lewis Bollard', 'Paul Shapiro', 'Friendship', 'The two are close friends.')
+    ,('Open Philanthropy Project', 'Humane Society International', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-united-states-corporate-cage-free-campaigns#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-united-states-corporate-cage-free-campaigns', '2016-02-01', 'Lewis Bollard', 'Josh Balk', 'Friendship', 'The two are close friends.')
+;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', 'International Genetically Engineered Machine Foundation', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/igem-synthetic-biology-safety-and-security#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/igem-synthetic-biology-safety-and-security', '2016-05-01', 'Kevin Esvelt', 'Kevin Esvelt', 'Professional', 'Advisor to both organizations.')
+;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', 'Machine Intelligence Research Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support', '2016-08-01', 'Paul Christiano', 'Paul Christiano', 'Professional', 'Paul is a technical advisor to Open Philanthropy, was a MIRI Research Associate (unpaid), and has collaborated with MIRI.')
+    ,('Open Philanthropy Project', 'Machine Intelligence Research Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support', '2016-08-01', 'Paul Christiano', 'Nate Soares', 'Personal', 'The two live in the same house.')
+    -- POLGTO: Paul <-> SPARC <-> MIRI
+    ,('Open Philanthropy Project', 'Machine Intelligence Research Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support', '2016-08-01', 'Jacob Steinhardt', 'Nate Soares', 'Personal', 'The two live in the same house.')
+    -- POLGTO: Jacob <-> SPARC <-> MIRI
 ;
