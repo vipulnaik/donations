@@ -1,3 +1,31 @@
 insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', '80,000 Hours', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support', '2017-03-01', 'Nick Beckstead', NULL, 'Professional', 'Beckstead is a board member of Centre for Effective Altruism, the parent organization of 80,000 Hours.')
+    ,('Open Philanthropy Project', '80,000 Hours', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support', '2017-03-01', NULL, NULL, 'Professional', 'A number of professional ties.')
+    ,('Open Philanthropy Project', '80,000 Hours', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support', '2017-03-01', NULL, NULL, 'Social', 'A number of social ties.')
+;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', 'Accountable Justice Project', 'http://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/accountable-justice-project-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/accountable-justice-project-general-support', '2016-04-01', 'Chloe Cockburn', 'Rob Smith', 'Academic', 'Attended the same law school together, but had not maintained contact prior to grant.')
+;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', 'American Civil Liberties Union of Northern California', 'http://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/aclu-nor-cal-prosecutorial-accountability', 'http://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/aclu-nor-cal-prosecutorial-accountability', '2017-02-01', 'Chloe Cockburn', NULL, 'Professional', 'Chloe previously worked at the national ACLU, but has no special relationship to the ACLU of Northern California.')
+;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', 'American Civil Liberties Union Foundation of Oregon', 'http://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/american-civil-liberties-union-foundation-oregon-prosecutorial-accountability', 'http://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/american-civil-liberties-union-foundation-oregon-prosecutorial-accountability', '2017-03-01', 'Chloe Cockburn', NULL, 'Professional', 'Chloe previously worked at the national ACLU.')
+;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', 'California Renters Legal Advocacy and Education Fund', 'http://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-renters-legal-advocacy-and-education-fund-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-renters-legal-advocacy-and-education-fund-general-support', '2016-06-01', 'Alexander Berger', NULL, 'Personal', 'Alexander has been somewhat involved with SF Bay Area Renters’ Federation in a personal capacity.')
+;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
     ('Open Philanthropy Project', 'Center for Applied Rationality', 'http://www.openphilanthropy.org/giving/grants/center-applied-rationality-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/giving/grants/center-applied-rationality-general-support', '2016-07-01', 'Luke Muehlhauser', 'Julia Galef', 'Romantic relationship', NULL)
+    ,('Open Philanthropy Project', 'Center for Applied Rationality', 'http://www.openphilanthropy.org/giving/grants/center-applied-rationality-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/giving/grants/center-applied-rationality-general-support', '2016-07-01', 'Carl Shulman', 'Anna Salamon', 'Marriage', NULL)
+    ,('Open Philanthropy Project', 'Center for Applied Rationality', 'http://www.openphilanthropy.org/giving/grants/center-applied-rationality-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/giving/grants/center-applied-rationality-general-support', '2016-07-01', NULL, NULL, 'Other', 'A number of GiveWell or Open Philanthropy Project employees have attended CFAR workshops.')
+;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', 'Center for Applied Rationality', 'http://www.openphilanthropy.org/giving/grants/center-applied-rationality-sparc#Relationship_disclosures', 'http://www.openphilanthropy.org/giving/grants/center-applied-rationality-sparc', '2016-06-01', 'Jacob Steinhardt', 'Jacob Steinhardt', 'Professional', 'Jacob is a technical advisor to Open Philanthropy''s program on potential risks from advanced artificial intelligence and one of the key people involved in running SPARC.')
 ;
