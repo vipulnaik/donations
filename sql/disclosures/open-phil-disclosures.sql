@@ -53,4 +53,30 @@ insert into disclosures(donor, donee, url, donation_url, donation_date, donor_si
 insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
     ('Open Philanthropy Project', 'Future of Life Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction', '2015-08-01', 'Nick Beckstead', 'Daniel Dewey', 'Friendship', NULL)
     ,('Open Philanthropy Project', 'Future of Life Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction', '2015-08-01', 'Nick Beckstead', 'Daniel Dewey', 'Professional', 'The two are former coworkers.')
+    ,('Open Philanthropy Project', 'Future of Life Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction', '2015-08-01', NULL, NULL, 'Personal', 'This applicant to the RFP is a long-time donor and fan of GiveWell.')
+    ,('Open Philanthropy Project', 'Future of Life Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction', '2015-08-01', NULL, NULL, 'Personal', 'This applicant to the RFP is a long-time donor and fan of GiveWell.')
+    -- TODO there's more here
+;
+
+-- insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    -- Nick <-> FHI <-> Hanson
+    -- Daniel <-> FHI <-> Hanson
+    -- ('Open Philanthropy Project', 'George Mason University', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/george-mason-university-research-future-artificial-intelligence-scenarios#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/george-mason-university-research-future-artificial-intelligence-scenarios', '2016-06-01', 'Nick Beckstead', NULL, 'Personal', 'This applicant to the RFP is a long-time donor and fan of GiveWell.')
+-- ;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', 'Global Animal Partnership', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-animal-partnership-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-animal-partnership-general-support', '2016-04-01', 'Lewis Bollard', 'Wayne Pacelle', 'Friendship', NULL)
+    ,('Open Philanthropy Project', 'Global Animal Partnership', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-animal-partnership-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-animal-partnership-general-support', '2016-04-01', 'Lewis Bollard', 'Wayne Pacelle', 'Professional', 'Lewis previously worked for Wayne.')
+;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', 'Harvard University', 'http://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/harvard-university-program-criminal-justice-policy-and-management#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/harvard-university-program-criminal-justice-policy-and-management', '2016-07-01', 'Chloe Cockburn', 'Vincent Schiraldi', 'Professional', 'Regular contact as colleagues in the field.')
+;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', 'Harvard University', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/miscellaneous/harvard-university-solar-geoengineering-research-program#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/miscellaneous/harvard-university-solar-geoengineering-research-program', '2016-12-01', 'Claire Zabel', 'David Keith', 'Professional', 'Intermittent collaboration since 2014, including Claire''s employment at David Keith''s lab and collaboration on a small research project.')
+;
+
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
+    ('Open Philanthropy Project', 'Humane Society International', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-international-east-asian-and-oie-projects', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-international-east-asian-and-oie-projects', '2017-03-01', 'Lewis Bollard', NULL, 'Professional', 'Lewis previously worked for the Humane Society of the United States.')
 ;
