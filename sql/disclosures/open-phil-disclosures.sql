@@ -60,7 +60,12 @@ insert into disclosures(donor, donee, url, donation_url, donation_date, donor_si
     ,('Open Philanthropy Project', 'Future of Life Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction', '2015-08-01', 'Nick Beckstead', 'Daniel Dewey', 'Professional', 'The two are former coworkers.')
     ,('Open Philanthropy Project', 'Future of Life Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction', '2015-08-01', NULL, NULL, 'Personal', 'This applicant to the RFP is a long-time donor and fan of GiveWell.')
     ,('Open Philanthropy Project', 'Future of Life Institute', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/future-life-institute-artificial-intelligence-risk-reduction', '2015-08-01', NULL, NULL, 'Personal', 'This applicant to the RFP is a long-time donor and fan of GiveWell.')
-    -- TODO there's more here
+    -- POLGTO: Five applicants (FHI) <-> Nick Beckstead (FHI) <-> Nick Beckstead (FLI) <-> Nick Beckstead (Open Phil)
+    -- POLGTO: Nick (Open Phil) <-> Nick (CEA) <-> Two proposals (CEA) <-> Two proposals (FLI)
+    -- POLGTO: Helen (Open Phil) <-[same house]-> Nate (MIRI) <-> Two proposals (MIRI) <-> Two proposals (FLI)
+    -- POLGTO: Ben Hoffman (Open Phil) <-[same house]-> Nate (MIRI) <-> Two proposals (MIRI) <-> Two proposals (FLI)
+    -- POLGTO: Luke (Open Phil) <-> Luke (MIRI) <-> Two proposals (MIRI) <-> Two proposals (FLI)
+    -- POLGTO: Proposals (Y) <-> X (Y) <-> X <-> Z (Open Phil)
 ;
 
 -- insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
