@@ -1,3 +1,17 @@
+-- Each chain in the relationship is of the form:
+--     A (B) ↔ C (D)
+-- Where A and C are individuals and B and D are organizations. The chain means
+-- that a relationship extends between B and D because of the relationship
+-- between A and C. This can happen in one of the following ways:
+-- 1. A=C. This means that the same individual is or was part of both
+--    organizations.
+-- 2. B=D. This means that A and C have a relationship by virtue of being part
+--    of the same organization.
+-- 3. A has a relationship with C for some other reason than merely being part
+--    of the same organization.
+-- When full_relationship is NULL, it is the trivial relationship:
+--     donor_side_name (donor) ↔ donee_side_name (donee)
+
 -- Below, "POLGTO" means "path of length greater than one". It means a
 -- disclosure entry should be added in place of the comment, but because the
 -- existing relationship is a path of length greater than one (which we haven't
