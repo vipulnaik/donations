@@ -10,5 +10,6 @@ create table disclosures (
   relationship_nature enum('Romantic relationship', 'Friendship', 'Personal', 'Professional', 'Marriage', 'Social', 'Academic'),
   notes varchar(2000),
   cardinality int(11) default 1,
+  intermediary varchar(2000),
   index disclosure_key(donor, donee, url, donation_date)
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
