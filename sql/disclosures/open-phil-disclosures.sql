@@ -68,11 +68,10 @@ insert into disclosures(donor, donee, url, donation_url, donation_date, donor_si
     -- POLGTO: Proposals (Y) <-> X (Y) <-> X <-> Z (Open Phil)
 ;
 
--- insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
-    -- POLGTO: Nick <-> FHI <-> Hanson
-    -- POLGTO: Daniel <-> FHI <-> Hanson
-    -- ('Open Philanthropy Project', 'George Mason University', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/george-mason-university-research-future-artificial-intelligence-scenarios#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/george-mason-university-research-future-artificial-intelligence-scenarios', '2016-06-01', 'Nick Beckstead', NULL, 'Personal', 'This applicant to the RFP is a long-time donor and fan of GiveWell.')
--- ;
+insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes, intermediary) values
+    ('Open Philanthropy Project', 'George Mason University', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/george-mason-university-research-future-artificial-intelligence-scenarios#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/george-mason-university-research-future-artificial-intelligence-scenarios', '2016-06-01', 'Nick Beckstead', 'Robin Hanson', 'Professional', NULL, 'Nick Beckstead (Open Philanthropy Project) ↔ Nick Beckstead (Future of Humanity Institute) ↔ Robin Hanson (Future of Humanity Institute)')
+    ,('Open Philanthropy Project', 'George Mason University', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/george-mason-university-research-future-artificial-intelligence-scenarios#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/george-mason-university-research-future-artificial-intelligence-scenarios', '2016-06-01', 'Daniel Dewey', 'Robin Hanson', 'Professional', NULL, 'Daniel Dewey (Open Philanthropy Project) ↔ Daniel Dewey (Future of Humanity Institute) ↔ Robin Hanson (Future of Humanity Institute)')
+;
 
 insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
     ('Open Philanthropy Project', 'Global Animal Partnership', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-animal-partnership-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-animal-partnership-general-support', '2016-04-01', 'Lewis Bollard', 'Wayne Pacelle', 'Friendship', NULL)
