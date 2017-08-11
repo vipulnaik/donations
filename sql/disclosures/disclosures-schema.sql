@@ -2,7 +2,7 @@ create table disclosures (
   disclosure_id int(11) not null auto_increment primary key,
   donor varchar(100),
   donee varchar(200),
-  url varchar(200),
+  url varchar(300),
   donation_url varchar(200),
   donation_date date,
   donor_side_name varchar(100),
