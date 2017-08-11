@@ -186,12 +186,33 @@ while ($row = $r->fetch_assoc()) {
     ($data['numDonations']['Classified'][$y] ?? 0) + $row['numDonations'];
 }
 
+$data['amount']['Unclassified']['Total'] =
+  ($data['amount']['Total']['Total'])
+  - ($data['amount']['Classified']['Total']);
+$data['numDonees']['Unclassified']['Total'] =
+  ($data['numDonees']['Total']['Total'])
+  - ($data['numDonees']['Classified']['Total']);
+$data['numDonations']['Unclassified']['Total'] =
+  ($data['numDonations']['Total']['Total'])
+  - ($data['numDonations']['Classified']['Total']);
+
+# print '<pre>';
+# print_r($data);
+# print '</pre>';
+
 $groupMembers = array_keys($data['amount']);
 
 usort($groupMembers, function($a, $b) use ($data) {
   return intval($data['amount'][$b]['Total'] ?? 0)
     - intval($data['amount'][$a]['Total'] ?? 0);
 });
+
+print "<p>If you hover over a cell for a given donor side name and year, "
+  . "you will get a tooltip with the number of donees and the number of "
+  . "donations.</p>\n";
+
+print "<p>Note: Cause area classification used here may not match that "
+  ."used by donor for all cases.</p>\n";
 
 print '<table class="tablesorter">' . "\n";
 print "<thead>\n";
@@ -222,8 +243,12 @@ foreach ($groupMembers as $g) {
       . "</strong></td>\n";
     foreach ($years as $y) {
       if (($data['amount']['Classified'][$y] ?? 0) != 0) {
-        print '    <td align="right">'
-          . number_format($data['amount'][$g][$y] ?? 0, 2) . "</td>\n";
+        print '    <td align="right"><a title="'
+          . ($data['numDonations'][$g][$y] ?? 0)
+          . ' donations to '
+          . ($data['numDonees'][$g][$y] ?? 0)
+          . ' distinct donees">'
+          . number_format($data['amount'][$g][$y] ?? 0, 2) . "</a></td>\n";
       }
     }
     print "  </tr>\n";
@@ -233,8 +258,8 @@ print'</tbody>';
 
 print "<tfoot>\n";
 printFooterRow($data, $years, 'Classified', "Classified total");
+printFooterRow($data, $years, 'Unclassified', "Unclassified total");
 printFooterRow($data, $years, 'Total', "Total");
-# printFooterRow($data, $years, 'U', "Classified total");
 print "</tfoot>\n";
 
 print '</table>';
