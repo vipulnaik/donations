@@ -1,8 +1,20 @@
 # Clarification on "classified" and "unclassified" totals
 
-Several tables on the donations portal have rows labels "classified total" and
+Several tables on the donations portal have rows labeled "classified total" and
 "unclassified total". This document explains what they mean and when they add
 up to what.
+
+## Meaning
+
+These rows show up in tables that have groupings (e.g. cause area, influencer,
+country, disclosures). If a donation can be associated with a group member, it
+is "classified"; otherwise it is "unclassified".
+
+As such, these terms have nothing to do with the
+[confidential nature](https://en.wikipedia.org/wiki/Classified_information)
+of the donations (all donation information is gathered from public sources).
+
+## Summing up columns
 
 - In general, classified total + unclassified total ≥ total.
 - For number of donees, classified total + unclassified total ≥ total. Equality
