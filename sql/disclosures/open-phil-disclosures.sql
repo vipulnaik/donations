@@ -1,26 +1,3 @@
--- Each chain in the relationship is of the form:
---     A (B) ↔ C (D)
--- Where A and C are individuals and B and D are organizations. The chain means
--- that a relationship extends between B and D because of the relationship
--- between A and C. This can happen in one of the following ways:
--- 1. A=C. This means that the same individual is or was part of both
---    organizations.
--- 2. B=D. This means that A and C have a relationship by virtue of being part
---    of the same organization.
--- 3. A has a relationship with C for some other reason than merely being part
---    of the same organization.
--- 4. B and D are organizations that are close for some reason other than a
---    relationship between individuals, or because there are many relationships
---    between individuals. For instance, one organization could be the parent
---    of the other.
--- When full_relationship is NULL, it is the trivial relationship:
---     donor_side_name (donor) ↔ donee_side_name (donee)
-
--- Below, "POLGTO" means "path of length greater than one". It means a
--- disclosure entry should be added in place of the comment, but because the
--- existing relationship is a path of length greater than one (which we haven't
--- decided how to deal with), only a comment is added for now.
-
 insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes, full_relationship) values
     ('Open Philanthropy Project', '80,000 Hours', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support', '2017-03-01', 'Nick Beckstead', NULL, 'Professional', 'Beckstead is a board member of Centre for Effective Altruism, the parent organization of 80,000 Hours.', 'Nick Beckstead (Open Philanthropy Project) ↔ Nick Beckstead (Centre for Effective Altruism) ↔ (80,000 Hours)')
     ,('Open Philanthropy Project', '80,000 Hours', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support#Relationship_disclosures', 'http://www.openphilanthropy.org/giving/grants/80000-hours-general-support', '2017-03-01', NULL, NULL, 'Professional', 'A number of professional ties.', NULL)
