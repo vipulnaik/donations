@@ -133,32 +133,29 @@ $query = <<<EOD
         and d1.donee=donations.donee
         and d1.donation_date=donations.donation_date
         and d1.donation_url=donations.url
-    group by
-        d1.donor_side_name,
-        year(donations.donation_date)
 EOD;
 
-if ($stmt = $mysqli->prepare($query)) {
-  $stmt->execute();
-  $result = $stmt->get_result();
-  while ($row = $result->fetch_assoc()) {
-    $g = $row['donor_side_name'];
-    $y = $row['year'];
+$r = filteredDonorCauseArea($mysqli, $query,
+  "group by d1.donor_side_name, year(donations.donation_date)",
+  $donor, $causeAreaFilterString);
 
-    $data['amount'][$g][$y] = $row['amount'];
-    $data['numDonees'][$g][$y] = $row['numDonees'];
-    $data['numDonations'][$g][$y] = $row['numDonations'];
+while ($row = $r->fetch_assoc()) {
+  $g = $row['donor_side_name'];
+  $y = $row['year'];
 
-    $data['amount'][$g]['Classified'] =
-      ($data['amount'][$g]['Classified'] ?? 0) + $row['amount'];
+  $data['amount'][$g][$y] = $row['amount'];
+  $data['numDonees'][$g][$y] = $row['numDonees'];
+  $data['numDonations'][$g][$y] = $row['numDonations'];
 
-    $data['amount']['Classified'][$y] =
-      ($data['amount']['Classified'][$y] ?? 0) + $row['amount'];
-    $data['numDonees']['Classified'][$y] =
-      ($data['numDonees']['Classified'][$y] ?? 0) + $row['numDonees'];
-    $data['numDonations']['Classified'][$y] =
-      ($data['numDonations']['Classified'][$y] ?? 0) + $row['numDonations'];
-  }
+  $data['amount'][$g]['Classified'] =
+    ($data['amount'][$g]['Classified'] ?? 0) + $row['amount'];
+
+  $data['amount']['Classified'][$y] =
+    ($data['amount']['Classified'][$y] ?? 0) + $row['amount'];
+  $data['numDonees']['Classified'][$y] =
+    ($data['numDonees']['Classified'][$y] ?? 0) + $row['numDonees'];
+  $data['numDonations']['Classified'][$y] =
+    ($data['numDonations']['Classified'][$y] ?? 0) + $row['numDonations'];
 }
 
 $groupMembers = array_keys($data['amount']);
