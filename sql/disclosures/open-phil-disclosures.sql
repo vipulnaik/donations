@@ -62,7 +62,7 @@ insert into disclosures(donor, donee, url, donation_url, donation_date, donor_si
 ;
 
 insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
-    ('Open Philanthropy Project', 'Johns Hopkins Center for Health Security', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/center-health-security-biosecurity-global-health-security-and-global-catastrophic#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/center-health-security-biosecurity-global-health-security-and-global-catastrophic', '2017-01-01', 'Jaime Yassif', 'Tom Inglesby', 'Professional', 'Lives in a shared house.')
+    ('Open Philanthropy Project', 'Johns Hopkins Center for Health Security', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/center-health-security-biosecurity-global-health-security-and-global-catastrophic#Relationship_disclosures', 'http://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/center-health-security-biosecurity-global-health-security-and-global-catastrophic', '2017-01-01', 'Jaime Yassif', 'Tom Inglesby', 'Professional', 'Tom Inglesby was one of Jaime Yassif’s references when applying for her job at Open Philanthropy.')
 ;
 
 insert into disclosures(donor, donee, url, donation_url, donation_date, donor_side_name, donee_side_name, relationship_nature, notes) values
