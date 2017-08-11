@@ -25,7 +25,11 @@ of the donations (all donation information is gathered from public sources).
 - For donation amount, classified total + unclassified total = total.
   Equality is guaranteed because each donation is classified xor unclassified.
 
-For groupings, the relevant question is whether each donation can be associated
+For groupings, an additional question is whether summing up a column using
+values from each group member row (i.e. a row that *isn't* one of "classified
+total", "unclassified total", or "total") will equal the "classified total"
+row.
+Here the relevant question is whether each donation can be associated
 with just one group member (cause area, influencer, country list – these are
 just strings rather than actual lists) or with multiple group members
 (`donor_side_name` of disclosures). In the former case, adding up an amounts,
