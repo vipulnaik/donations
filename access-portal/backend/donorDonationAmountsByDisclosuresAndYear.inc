@@ -1,7 +1,5 @@
 <?php
 
-$data = array();
-
 /* Stick in donor and cause area filtering into the query. query1 is the
  * beginning of the query ("select ... from ...") and query2 is the last part
  * ("group by ..."). Return a mysqli result.
@@ -37,6 +35,8 @@ function filteredDonorCauseArea($mysqli, $query1, $query2, $donor,
   }
 }
 
+$data = array();
+
 $query = <<<EOD
     select count(distinct donee) as numDonees
     from donations
@@ -45,6 +45,31 @@ $r = filteredDonorCauseArea($mysqli, $query, "", $donor, $causeAreaFilterString)
 while ($row = $r->fetch_assoc()) {
   $data['numDonees']['Total']['Total'] = $row['numDonees'];
 }
+
+$query = <<<EOD
+    select
+        count(*) as numDonations,
+        count(distinct donations.donee) as numDonees,
+        sum(amount) as amount
+    from (
+        select
+            donor,
+            donee,
+            donation_url,
+            donation_date
+        from disclosures
+        group by
+            donor,
+            donee,
+            donation_url,
+            donation_date
+    ) as d1
+    left join donations on
+        d1.donation_url=donations.url
+        and d1.donor=donations.donor
+        and d1.donee=donations.donee
+        and d1.donation_date=donations.donation_date
+EOD;
 
 $query = <<<EOD
     select
@@ -147,8 +172,8 @@ while ($row = $r->fetch_assoc()) {
   $data['numDonees'][$g][$y] = $row['numDonees'];
   $data['numDonations'][$g][$y] = $row['numDonations'];
 
-  $data['amount'][$g]['Classified'] =
-    ($data['amount'][$g]['Classified'] ?? 0) + $row['amount'];
+  $data['amount'][$g]['Total'] =
+    ($data['amount'][$g]['Total'] ?? 0) + $row['amount'];
 
   $data['amount']['Classified'][$y] =
     ($data['amount']['Classified'][$y] ?? 0) + $row['amount'];
@@ -156,6 +181,9 @@ while ($row = $r->fetch_assoc()) {
     ($data['numDonees']['Classified'][$y] ?? 0) + $row['numDonees'];
   $data['numDonations']['Classified'][$y] =
     ($data['numDonations']['Classified'][$y] ?? 0) + $row['numDonations'];
+
+  $data['amount']['Classified']['Total'] =
+    ($data['amount']['Classified']['Total'] ?? 0) + $row['amount'];
 }
 
 $groupMembers = array_keys($data['amount']);
@@ -182,21 +210,24 @@ print "</thead>\n";
 
 print "<tbody>\n";
 foreach ($groupMembers as $g) {
-  print "  <tr>\n";
-  print "    <td>$g</td>\n";
-  print '    <td align="right">'
-    . ($data['numDonations'][$g]['Total'] ?? 0) . "</td>\n";
-  print '    <td align="right">'
-    . ($data['numDonees'][$g]['Total'] ?? 0) . "</td>\n";
-  print '    <td align="right">'
-    . number_format($data['amount'][$g]['numDonees'] ?? 0, 2) . "</td>\n";
-  foreach ($years as $y) {
-    if (($data['amount']['Classified'][$y] ?? 0) != 0) {
-      print '    <td align="right">'
-        . number_format($data['amount'][$g][$y] ?? 0, 2) . "</td>\n";
+  if ($g != 'Total' && $g != 'Classified' && $g != 'Unclassified') {
+    print "  <tr>\n";
+    print "    <td>$g</td>\n";
+    print '    <td align="right">'
+      . ($data['numDonations'][$g]['Total'] ?? 0) . "</td>\n";
+    print '    <td align="right">'
+      . ($data['numDonees'][$g]['Total'] ?? 0) . "</td>\n";
+    print '    <td align="right"><strong>'
+      . number_format($data['amount'][$g]['Total'] ?? 0, 2)
+      . "</strong></td>\n";
+    foreach ($years as $y) {
+      if (($data['amount']['Classified'][$y] ?? 0) != 0) {
+        print '    <td align="right">'
+          . number_format($data['amount'][$g][$y] ?? 0, 2) . "</td>\n";
+      }
     }
+    print "  </tr>\n";
   }
-  print "  </tr>\n";
 }
 print'</tbody>';
 
