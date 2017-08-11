@@ -3,6 +3,45 @@
 $data = array();
 
 $query = <<<EOD
+    select count(distinct donee) as numDonees
+    from donations
+EOD;
+
+if ($stmt = $mysqli->prepare($query)) {
+  $stmt->execute();
+  $result = $stmt->get_result();
+  while ($row = $result->fetch_assoc()) {
+    $data['numDonees']['Total']['Total'] = $row['numDonees'];
+  }
+}
+
+$query = <<<EOD
+    select
+        count(distinct donee) as numDonees,
+        count(*) as numDonations,
+        year(donation_date) as year,
+        sum(amount) as amount
+    from donations
+    group by year(donation_date)
+EOD;
+
+if ($stmt = $mysqli->prepare($query)) {
+  $stmt->execute();
+  $result = $stmt->get_result();
+  while ($row = $result->fetch_assoc()) {
+    $y = $row['year'];
+    $data['amount']['Total'][$y] = $row['amount'];
+    $data['numDonees']['Total'][$y] = $row['numDonees'];
+    $data['numDonations']['Total'][$y] = $row['numDonations'];
+
+    $data['amount']['Total']['Total'] =
+     ($data['amount']['Total']['Total'] ?? 0) + $row['amount'];
+    $data['numDonations']['Total']['Total'] =
+     ($data['numDonations']['Total']['Total'] ?? 0) + $row['numDonations'];
+  }
+}
+
+$query = <<<EOD
     select
         case when d1.donor_side_name is NULL
             then 'Unknown, generic, or multiple'
@@ -139,12 +178,9 @@ foreach ($groupMembers as $g) {
 print'</tbody>';
 
 print "<tfoot>\n";
-print "  <tr>\n";
-print '    <td align="right"><strong>'
-  . $data['numDonations']['Classified']['Total'] . "</strong></td>";
-print '    <td align="right"><strong>'
-  . $data['numDonees']['Classified']['Total'] . "</strong></td>";
-print "  </tr>\n";
+printFooterRow($data, $years, 'Classified', "Classified total");
+printFooterRow($data, $years, 'Total', "Total");
+# printFooterRow($data, $years, 'U', "Classified total");
 print "</tfoot>\n";
 
 print '</table>';
