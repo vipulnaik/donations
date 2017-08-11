@@ -7,7 +7,7 @@ create table disclosures (
   donation_date date,
   donor_side_name varchar(100),
   donee_side_name varchar(100),
-  relationship_nature enum('Romantic relationship', 'Friendship', 'Personal', 'Professional', 'Marriage', 'Social', 'Academic'),
+  relationship_nature enum('Romantic relationship', 'Friendship', 'Personal', 'Professional', 'Marriage', 'Social', 'Academic', 'Hybrid'),
   notes varchar(2000),
   cardinality int(11) default 1,
   full_relationship varchar(2000),
