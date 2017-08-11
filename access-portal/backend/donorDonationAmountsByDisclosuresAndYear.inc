@@ -2,17 +2,48 @@
 
 $data = array();
 
+/* Stick in donor and cause area filtering into the query. query1 is the
+ * beginning of the query ("select ... from ...") and query2 is the last part
+ * ("group by ..."). Return a mysqli result.
+ */
+function filteredDonorCauseArea($mysqli, $query1, $query2, $donor,
+    $causeAreaFilterString) {
+
+  $query = $query1;
+
+  if ($donor && $causeAreaFilterString) {
+    $query .= " where donations.donor = ? and donations.cause_area REGEXP ?";
+  } else if ($donor) {
+    $query .= " where donations.donor = ?";
+  } else if ($causeAreaFilterString) {
+    $query .= " where donations.cause_area REGEXP ?";
+  }
+
+  $query .= " " . $query2;
+
+  if ($stmt = $mysqli->prepare($query)) {
+    if ($donor && $causeAreaFilterString) {
+      $stmt->bind_param("ss", $donor, $causeAreaFilterString);
+    } else if ($donor) {
+      $stmt->bind_param("s", $donor);
+    } else if ($causeAreaFilterString) {
+      $stmt->bind_param("s", $causeAreaFilterString);
+    }
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result;
+  } else {
+    print 'DEBUG: ' . $mysqli->error;
+  }
+}
+
 $query = <<<EOD
     select count(distinct donee) as numDonees
     from donations
 EOD;
-
-if ($stmt = $mysqli->prepare($query)) {
-  $stmt->execute();
-  $result = $stmt->get_result();
-  while ($row = $result->fetch_assoc()) {
-    $data['numDonees']['Total']['Total'] = $row['numDonees'];
-  }
+$r = filteredDonorCauseArea($mysqli, $query, "", $donor, $causeAreaFilterString);
+while ($row = $r->fetch_assoc()) {
+  $data['numDonees']['Total']['Total'] = $row['numDonees'];
 }
 
 $query = <<<EOD
@@ -22,23 +53,21 @@ $query = <<<EOD
         year(donation_date) as year,
         sum(amount) as amount
     from donations
-    group by year(donation_date)
 EOD;
 
-if ($stmt = $mysqli->prepare($query)) {
-  $stmt->execute();
-  $result = $stmt->get_result();
-  while ($row = $result->fetch_assoc()) {
-    $y = $row['year'];
-    $data['amount']['Total'][$y] = $row['amount'];
-    $data['numDonees']['Total'][$y] = $row['numDonees'];
-    $data['numDonations']['Total'][$y] = $row['numDonations'];
+$r = filteredDonorCauseArea($mysqli, $query, "group by year(donation_date)",
+  $donor, $causeAreaFilterString);
 
-    $data['amount']['Total']['Total'] =
-     ($data['amount']['Total']['Total'] ?? 0) + $row['amount'];
-    $data['numDonations']['Total']['Total'] =
-     ($data['numDonations']['Total']['Total'] ?? 0) + $row['numDonations'];
-  }
+while ($row = $r->fetch_assoc()) {
+  $y = $row['year'];
+  $data['amount']['Total'][$y] = $row['amount'];
+  $data['numDonees']['Total'][$y] = $row['numDonees'];
+  $data['numDonations']['Total'][$y] = $row['numDonations'];
+
+  $data['amount']['Total']['Total'] =
+   ($data['amount']['Total']['Total'] ?? 0) + $row['amount'];
+  $data['numDonations']['Total']['Total'] =
+   ($data['numDonations']['Total']['Total'] ?? 0) + $row['numDonations'];
 }
 
 $query = <<<EOD
@@ -63,24 +92,21 @@ $query = <<<EOD
         and d1.donee=donations.donee
         and d1.donation_date=donations.donation_date
         and d1.donation_url=donations.url
-    group by
-        d1.donor_side_name
 EOD;
 
-if ($stmt = $mysqli->prepare($query)) {
-  $stmt->execute();
-  $result = $stmt->get_result();
-  while ($row = $result->fetch_assoc()) {
-    $g = $row['donor_side_name'];
+$r = filteredDonorCauseArea($mysqli, $query, "group by d1.donor_side_name",
+  $donor, $causeAreaFilterString);
 
-    $data['numDonees'][$g]['Total'] = $row['numDonees'];
-    $data['numDonations'][$g]['Total'] = $row['numDonations'];
+while ($row = $r->fetch_assoc()) {
+  $g = $row['donor_side_name'];
 
-    $data['numDonations']['Classified']['Total'] =
-      ($data['numDonations']['Classified']['Total'] ?? 0) + $row['numDonations'];
-    $data['numDonees']['Classified']['Total'] =
-      ($data['numDonees']['Classified']['Total'] ?? 0) + $row['numDonees'];
-  }
+  $data['numDonees'][$g]['Total'] = $row['numDonees'];
+  $data['numDonations'][$g]['Total'] = $row['numDonations'];
+
+  $data['numDonations']['Classified']['Total'] =
+    ($data['numDonations']['Classified']['Total'] ?? 0) + $row['numDonations'];
+  $data['numDonees']['Classified']['Total'] =
+    ($data['numDonees']['Classified']['Total'] ?? 0) + $row['numDonees'];
 }
 
 $query = <<<EOD
