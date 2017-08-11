@@ -71,6 +71,14 @@ $query = <<<EOD
         and d1.donation_date=donations.donation_date
 EOD;
 
+$r = filteredDonorCauseArea($mysqli, $query, "", $donor,
+  $causeAreaFilterString);
+while ($row = $r->fetch_assoc()) {
+  $data['amount']['Classified']['Total'] = $row['amount'];
+  $data['numDonees']['Classified']['Total'] = $row['numDonees'];
+  $data['numDonations']['Classified']['Total'] = $row['numDonations'];
+}
+
 $query = <<<EOD
     select
         count(distinct donee) as numDonees,
@@ -127,11 +135,6 @@ while ($row = $r->fetch_assoc()) {
 
   $data['numDonees'][$g]['Total'] = $row['numDonees'];
   $data['numDonations'][$g]['Total'] = $row['numDonations'];
-
-  $data['numDonations']['Classified']['Total'] =
-    ($data['numDonations']['Classified']['Total'] ?? 0) + $row['numDonations'];
-  $data['numDonees']['Classified']['Total'] =
-    ($data['numDonees']['Classified']['Total'] ?? 0) + $row['numDonees'];
 }
 
 $query = <<<EOD
@@ -181,16 +184,13 @@ while ($row = $r->fetch_assoc()) {
     ($data['numDonees']['Classified'][$y] ?? 0) + $row['numDonees'];
   $data['numDonations']['Classified'][$y] =
     ($data['numDonations']['Classified'][$y] ?? 0) + $row['numDonations'];
-
-  $data['amount']['Classified']['Total'] =
-    ($data['amount']['Classified']['Total'] ?? 0) + $row['amount'];
 }
 
 $groupMembers = array_keys($data['amount']);
 
 usort($groupMembers, function($a, $b) use ($data) {
-  return intval($data['amount'][$b]['Classified'] ?? 0)
-    - intval($data['amount'][$a]['Classified'] ?? 0);
+  return intval($data['amount'][$b]['Total'] ?? 0)
+    - intval($data['amount'][$a]['Total'] ?? 0);
 });
 
 print '<table class="tablesorter">' . "\n";
