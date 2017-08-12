@@ -224,6 +224,38 @@ while ($row = $r->fetch_assoc()) {
     ($data['amount'][$g]['Total'] ?? 0) + $row['amount'];
 }
 
+$query = <<<EOD
+    select
+        count(distinct d1.donee) as numDonees
+    from (
+        select
+            donee,
+            (donor, donee, url, donation_date) in (
+                select
+                    donor,
+                    donee,
+                    donation_url,
+                    donation_date
+                from disclosures
+                group by
+                    donor,
+                    donee,
+                    donation_url,
+                    donation_date
+            ) as disclosed
+        from donations
+EOD;
+$r = filteredDonorCauseArea(
+  $mysqli,
+  $query,
+  ") as d1 where d1.disclosed=0",
+  $donor,
+  $causeAreaFilterString
+);
+while ($row = $r->fetch_assoc()) {
+  $data['numDonees']['Unclassified']['Total'] = $row['numDonees'];
+}
+
 /* Calculate missing unclassified values */
 $data['amount']['Unclassified']['Total'] =
   ($data['amount']['Total']['Total'])
