@@ -221,11 +221,11 @@ function printYearlyGroupedHtmlTable(
   $imagesPath
 ) {
 
+  $donorString = $donor ? "donor" : "";
   print '<h4 id="' . $donorString . 'DonationAmountsBy' . ucfirst($groupName)
     . 'AndYear">' . "Donation amounts by $groupName and year</h4>";
 
   if (($data['amount']['Classified']['Total'] ?? 0) > 0) {
-    $donorString = $donor ? "donor" : "";
 
     print "<p>If you hover over a cell for a given $groupName and year, "
       . "you will get a tooltip with the number of donees and the number of "
