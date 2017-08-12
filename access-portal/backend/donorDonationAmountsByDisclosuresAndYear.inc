@@ -258,11 +258,11 @@ while ($row = $r->fetch_assoc()) {
 
 /* Calculate missing unclassified values */
 $data['amount']['Unclassified']['Total'] =
-  ($data['amount']['Total']['Total'])
-  - ($data['amount']['Classified']['Total']);
+  ($data['amount']['Total']['Total'] ?? 0)
+  - ($data['amount']['Classified']['Total'] ?? 0);
 $data['numDonations']['Unclassified']['Total'] =
-  ($data['numDonations']['Total']['Total'])
-  - ($data['numDonations']['Classified']['Total']);
+  ($data['numDonations']['Total']['Total'] ?? 0)
+  - ($data['numDonations']['Classified']['Total'] ?? 0);
 foreach ($years as $y) {
   if (($data['amount']['Classified'][$y] ?? 0) != 0) {
     $data['amount']['Unclassified'][$y] =
@@ -282,61 +282,14 @@ usort($groupMembers, function($a, $b) use ($data) {
     - intval($data['amount'][$a]['Total'] ?? 0);
 });
 
-print "<p>If you hover over a cell for a given donor side name and year, "
-  . "you will get a tooltip with the number of donees and the number of "
-  . "donations.</p>\n";
-
-print "<p>Note: Cause area classification used here may not match that "
-  ."used by donor for all cases.</p>\n";
-
-print '<table class="tablesorter">' . "\n";
-print "<thead>\n";
-print "  <tr>\n";
-print "    <th>Donor side name</th>\n";
-print "    <th>Number of donations</th>\n";
-print "    <th>Number of donees</th>\n";
-print "    <th>Total</th>\n";
-foreach ($years as $y) {
-  if (($data['amount']['Classified'][$y] ?? 0) != 0) {
-    print "    <th>$y</th>\n";
-  }
-}
-print "  </tr>\n";
-print "</thead>\n";
-
-print "<tbody>\n";
-foreach ($groupMembers as $g) {
-  if ($g != 'Total' && $g != 'Classified' && $g != 'Unclassified') {
-    print "  <tr>\n";
-    print "    <td>$g</td>\n";
-    print '    <td align="right">'
-      . ($data['numDonations'][$g]['Total'] ?? 0) . "</td>\n";
-    print '    <td align="right">'
-      . ($data['numDonees'][$g]['Total'] ?? 0) . "</td>\n";
-    print '    <td align="right"><strong>'
-      . number_format($data['amount'][$g]['Total'] ?? 0, 2)
-      . "</strong></td>\n";
-    foreach ($years as $y) {
-      if (($data['amount']['Classified'][$y] ?? 0) != 0) {
-        print '    <td align="right"><a title="'
-          . ($data['numDonations'][$g][$y] ?? 0)
-          . ' donations to '
-          . ($data['numDonees'][$g][$y] ?? 0)
-          . ' distinct donees">'
-          . number_format($data['amount'][$g][$y] ?? 0, 2) . "</a></td>\n";
-      }
-    }
-    print "  </tr>\n";
-  }
-}
-print "</tbody>\n";
-
-print "<tfoot>\n";
-printFooterRow($data, $years, 'Classified', "Classified total");
-printFooterRow($data, $years, 'Unclassified', "Unclassified total");
-printFooterRow($data, $years, 'Total', "Total");
-print "</tfoot>\n";
-
-print "</table>\n";
+printYearlyGroupedHtmlTable(
+  $data,
+  "disclosures",
+  $groupMembers,
+  "",
+  $years,
+  $causeAreaFilterString,
+  $donor ? "donor" : ""
+);
 
 ?>
