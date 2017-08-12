@@ -37,6 +37,7 @@ function filteredDonorCauseArea($mysqli, $query1, $query2, $donor,
 
 $data = array();
 
+/* Fill data for total row total donees cell */
 $query = <<<EOD
     select count(distinct donee) as numDonees
     from donations
@@ -46,6 +47,7 @@ while ($row = $r->fetch_assoc()) {
   $data['numDonees']['Total']['Total'] = $row['numDonees'];
 }
 
+/* Fill data for classified row's total cells */
 $query = <<<EOD
     select
         count(*) as numDonations,
@@ -79,6 +81,7 @@ while ($row = $r->fetch_assoc()) {
   $data['numDonations']['Classified']['Total'] = $row['numDonations'];
 }
 
+/* Fill data for total row except for total donees cell */
 $query = <<<EOD
     select
         count(distinct donee) as numDonees,
@@ -103,6 +106,8 @@ while ($row = $r->fetch_assoc()) {
    ($data['numDonations']['Total']['Total'] ?? 0) + $row['numDonations'];
 }
 
+/* Fill data for individual donor side name rows, for total donees and
+ * donations */
 $query = <<<EOD
     select
         case when d1.donor_side_name is NULL
@@ -137,6 +142,8 @@ while ($row = $r->fetch_assoc()) {
   $data['numDonations'][$g]['Total'] = $row['numDonations'];
 }
 
+/* Fill in data for individual donor side name rows, for yearly cells and total
+ * by year. Also fill in data for classified yearly cells. */
 $query = <<<EOD
     select
         case when d1.donor_side_name is NULL
@@ -178,6 +185,7 @@ while ($row = $r->fetch_assoc()) {
   $data['amount'][$g]['Total'] =
     ($data['amount'][$g]['Total'] ?? 0) + $row['amount'];
 
+  # can't do this!
   $data['amount']['Classified'][$y] =
     ($data['amount']['Classified'][$y] ?? 0) + $row['amount'];
   $data['numDonees']['Classified'][$y] =
@@ -186,15 +194,20 @@ while ($row = $r->fetch_assoc()) {
     ($data['numDonations']['Classified'][$y] ?? 0) + $row['numDonations'];
 }
 
+/* Calculate missing unclassified values */
 $data['amount']['Unclassified']['Total'] =
   ($data['amount']['Total']['Total'])
   - ($data['amount']['Classified']['Total']);
-$data['numDonees']['Unclassified']['Total'] =
-  ($data['numDonees']['Total']['Total'])
-  - ($data['numDonees']['Classified']['Total']);
 $data['numDonations']['Unclassified']['Total'] =
   ($data['numDonations']['Total']['Total'])
   - ($data['numDonations']['Classified']['Total']);
+foreach ($years as $y) {
+  if (($data['amount']['Classified'][$y] ?? 0) != 0) {
+    $data['amount']['Unclassified'][$y] =
+      ($data['amount']['Total'][$y] ?? 0)
+      - ($data['amount']['Classified'][$y] ?? 0);
+  }
+}
 
 # print '<pre>';
 # print_r($data);
