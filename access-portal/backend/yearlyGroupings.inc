@@ -195,11 +195,35 @@ EOD;
     }
   }
 
+  $data['numDonees']['Classified']['Total'] = distinctDonees($mysqli,
+    $causeAreaFilterString, $donor, "$groupSqlCol is not NULL");
+
   usort($groupMembers, function($a, $b) use ($data) {
     return intval($data['amount'][$b]['Total'])
       - intval($data['amount'][$a]['Total']);
   });
 
+  printYearlyGroupedHtmlTable(
+    $data,
+    $groupName,
+    $groupMembers,
+    $groupMemberLink,
+    $years,
+    $causeAreaFilterString,
+    $donorString
+  );
+
+}
+
+function printYearlyGroupedHtmlTable(
+  $data,
+  $groupName,
+  $groupMembers,
+  $groupMemberLink,
+  $years,
+  $causeAreaFilterString,
+  $donorString
+) {
 
   if (sizeof($groupMembers) > 0) {
 
@@ -258,9 +282,6 @@ EOD;
 
     print "</tbody>\n";
     print "<tfoot>\n";
-
-    $data['numDonees']['Classified']['Total'] = distinctDonees($mysqli,
-      $causeAreaFilterString, $donor, "$groupSqlCol is not NULL");
 
     printFooterRow($data, $years, 'Classified', "Classified total");
     printFooterRow($data, $years, 'Unclassified', "Unclassified total");
