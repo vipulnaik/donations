@@ -50,8 +50,9 @@ while ($row = $r->fetch_assoc()) {
 /* Fill data for classified row's total cells */
 $query = <<<EOD
     select
+        year(donations.donation_date) as year,
         count(*) as numDonations,
-        count(distinct donations.donee) as numDonees,
+        -- count(distinct donations.donee) as numDonees,
         sum(amount) as amount
     from (
         select
@@ -73,12 +74,21 @@ $query = <<<EOD
         and d1.donation_date=donations.donation_date
 EOD;
 
-$r = filteredDonorCauseArea($mysqli, $query, "", $donor,
-  $causeAreaFilterString);
+$r = filteredDonorCauseArea(
+  $mysqli,
+  $query,
+  "group by year(donations.donation_date)",
+  $donor,
+  $causeAreaFilterString
+);
 while ($row = $r->fetch_assoc()) {
-  $data['amount']['Classified']['Total'] = $row['amount'];
-  $data['numDonees']['Classified']['Total'] = $row['numDonees'];
-  $data['numDonations']['Classified']['Total'] = $row['numDonations'];
+  $y = $row['year'];
+  $data['amount']['Classified'][$y] = $row['amount'];
+
+  $data['amount']['Classified']['Total'] =
+   ($data['amount']['Classified']['Total'] ?? 0) + $row['amount'];
+  $data['numDonations']['Classified']['Total'] =
+   ($data['numDonations']['Classified']['Total'] ?? 0) +  $row['numDonations'];
 }
 
 /* Fill data for total row except for total donees cell */
@@ -184,14 +194,6 @@ while ($row = $r->fetch_assoc()) {
 
   $data['amount'][$g]['Total'] =
     ($data['amount'][$g]['Total'] ?? 0) + $row['amount'];
-
-  # can't do this!
-  $data['amount']['Classified'][$y] =
-    ($data['amount']['Classified'][$y] ?? 0) + $row['amount'];
-  $data['numDonees']['Classified'][$y] =
-    ($data['numDonees']['Classified'][$y] ?? 0) + $row['numDonees'];
-  $data['numDonations']['Classified'][$y] =
-    ($data['numDonations']['Classified'][$y] ?? 0) + $row['numDonations'];
 }
 
 /* Calculate missing unclassified values */
