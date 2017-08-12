@@ -291,8 +291,7 @@ printYearlyGroupedHtmlTable(
   $causeAreaFilterString,
   $donor,
   $generateGraphCmdBase,
-  $imagesPath,
-  $donor ? "donor" : ""
+  $imagesPath
 );
 
 ?>
