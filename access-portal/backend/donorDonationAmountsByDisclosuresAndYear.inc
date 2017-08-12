@@ -289,6 +289,9 @@ printYearlyGroupedHtmlTable(
   "",
   $years,
   $causeAreaFilterString,
+  $donor,
+  $generateGraphCmdBase,
+  $imagesPath,
   $donor ? "donor" : ""
 );
 

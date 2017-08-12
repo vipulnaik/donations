@@ -210,6 +210,9 @@ EOD;
     $groupMemberLink,
     $years,
     $causeAreaFilterString,
+    $donor,
+    $generateGraphCmdBase,
+    $imagesPath,
     $donorString
   );
 
@@ -222,6 +225,9 @@ function printYearlyGroupedHtmlTable(
   $groupMemberLink,
   $years,
   $causeAreaFilterString,
+  $donor,
+  $generateGraphCmdBase,
+  $imagesPath,
   $donorString
 ) {
 
