@@ -111,6 +111,7 @@ EOD;
       $data['numDonees'][$col]['Total'] = $row['numDonees'];
 
       $data['numDonations']['Total']['Total'] += $row['numDonations'];
+      /* FIXME -- this is wrong */
       $data['numDonees']['Total']['Total'] += $row['numDonees'];
 
       if ($col != 'Unclassified') {
@@ -222,7 +223,8 @@ function printYearlyGroupedHtmlTable(
 ) {
 
   $donorString = $donor ? "donor" : "";
-  print '<h4 id="' . $donorString . 'DonationAmountsBy' . ucfirst($groupName)
+  print '<h4 id="' . $donorString . ($donorString ? 'Donation' : 'donation')
+    . 'AmountsBy' . ucfirst($groupName)
     . 'AndYear">' . "Donation amounts by $groupName and year</h4>";
 
   if (($data['amount']['Classified']['Total'] ?? 0) > 0) {
