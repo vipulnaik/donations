@@ -45,7 +45,10 @@ select
     donations_focus_area_summary.numDonations as numDonations,
     coalesce(disclosed_donations_focus_area_summary.numDonations,0) as `disclosed numDonations`,
     donations_focus_area_summary.numDonees as numDonees,
-    coalesce(disclosed_donations_focus_area_summary.numDonees,0) as `disclosed numDonees`
+    coalesce(disclosed_donations_focus_area_summary.numDonees,0) as `disclosed numDonees`,
+    coalesce(disclosed_donations_focus_area_summary.amount,0) / donations_focus_area_summary.amount as `amount % disclosed`,
+    coalesce(disclosed_donations_focus_area_summary.numDonations,0) / donations_focus_area_summary.numDonations as `donations % disclosed`,
+    coalesce(disclosed_donations_focus_area_summary.numDonees,0) / donations_focus_area_summary.numDonees as `donees % disclosed`
 from donations_focus_area_summary
 left join disclosed_donations_focus_area_summary on
     donations_focus_area_summary.focus_area = disclosed_donations_focus_area_summary.focus_area;
