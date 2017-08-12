@@ -329,7 +329,7 @@ foreach ($groupMembers as $g) {
     print "  </tr>\n";
   }
 }
-print'</tbody>';
+print "</tbody>\n";
 
 print "<tfoot>\n";
 printFooterRow($data, $years, 'Classified', "Classified total");
@@ -337,6 +337,6 @@ printFooterRow($data, $years, 'Unclassified', "Unclassified total");
 printFooterRow($data, $years, 'Total', "Total");
 print "</tfoot>\n";
 
-print '</table>';
+print "</table>\n";
 
 ?>

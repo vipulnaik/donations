@@ -40,19 +40,22 @@ function printFooterRow($data, $years, $rowName, $rowLabel) {
   print "  <tr>\n";
   print "    <td><strong>$rowLabel</strong></td>\n";
   print '    <td align="right"><strong>'
-    . $data['numDonations'][$rowName]['Total'] . '</strong></td>' . "\n";
+    . ($data['numDonations'][$rowName]['Total'] ?? 0)
+    . "</strong></td>\n";
   print '    <td align="right"><strong>'
-    . $data['numDonees'][$rowName]['Total'];
-  print "</strong></td>\n";
+    . ($data['numDonees'][$rowName]['Total'] ?? 0)
+    . "</strong></td>\n";
   print '    <td align="right"><strong>'
-    . number_format($data['amount'][$rowName]['Total'], 2) . '</strong></td>';
+    . number_format($data['amount'][$rowName]['Total'] ?? 0, 2)
+    . "</strong></td>\n";
   foreach ($years as $year) {
-    if ($data['amount']['Classified'][$year] != 0) {
+    if (($data['amount']['Classified'][$year] ?? 0) != 0) {
       print '    <td align="right"><strong>'
-        . number_format($data['amount'][$rowName][$year], 2)
+        . number_format($data['amount'][$rowName][$year] ?? 0, 2)
         . "</strong></td>\n";
     }
   }
+  print "  </tr>\n";
 }
 
 function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
