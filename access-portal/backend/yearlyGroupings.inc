@@ -335,7 +335,7 @@ function printYearlyGroupedHtmlTable(
     print '<img src="/images/' . $graphs[1] . '-timeseries.png" '
       . 'alt="Graph of spending should have loaded here"></img>';
   } else {
-    print "Sorry, we couldn't find any $groupName information.";
+    print "<p>Sorry, we couldn't find any $groupName information.</p>\n";
   }
 }
 ?>
