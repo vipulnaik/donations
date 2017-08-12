@@ -26,6 +26,7 @@ print '<script>$(document).ready(function()
         $("#myTableDonationAmountsByDoneeAndYear").tablesorter({textExtraction: stripCommas});
         $("#myTableDonationAmountsByInfluencerAndYear").tablesorter({textExtraction: stripCommas});
         $("#myTableDonationAmountsByCountryAndYear").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonationAmountsByDisclosuresAndYear").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
 print "<h3>Donations recorded by Vipul Naik $causeAreaFilterStringHelper</h3>";

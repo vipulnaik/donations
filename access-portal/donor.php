@@ -28,6 +28,9 @@ print '<script>$(document).ready(function()
         $("#myTableDonorInfo").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorDonationAmountsByDoneeAndYear").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorDonationAmountsByCauseAreaAndYear").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonorDonationAmountsByInfluencerAndYear").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonorDonationAmountsByCountryAndYear").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonorDonationAmountsByDisclosuresAndYear").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorDocumentList").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorDonationList").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorSimilarDonors").tablesorter({textExtraction: stripCommas});
