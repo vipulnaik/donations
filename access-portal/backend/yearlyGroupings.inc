@@ -225,7 +225,7 @@ function printYearlyGroupedHtmlTable(
   $donorString
 ) {
 
-  if (sizeof($groupMembers) > 0) {
+  if (($data['amount']['Classified']['Total'] ?? 0) > 0) {
 
     print "<p>If you hover over a cell for a given $groupName and year, "
       . "you will get a tooltip with the number of donees and the number of "
@@ -234,20 +234,24 @@ function printYearlyGroupedHtmlTable(
     print "<p>Note: Cause area classification used here may not match that "
       ."used by donor for all cases.</p>\n";
 
-    print '<table id="myTableDonorDonationAmountsByGroupAndYear" '
+    print '<table id="myTable' . ucfirst($donorString)
+      . 'DonationAmountsBy' . ucfirst($groupName) . 'AndYear" '
       . 'class="tablesorter">' . "\n";
     print "<thead>\n";
-    print "  <tr>\n  <th>" . ucfirst($groupName) . "</th>\n";
-    print "  <th>Number of donations</th>\n";
-    print "  <th>Number of donees</th>\n";
+    print "  <tr>\n";
+    print "    <th>" . ucfirst($groupName) . "</th>\n";
+    print "    <th>Number of donations</th>\n";
+    print "    <th>Number of donees</th>\n";
     print "    <th>Total</th>\n";
-    foreach ($years as $year) {
-      if ($data['amount']['Classified'][$year] != 0) {
-        print "    <th>$year</th>\n";
+    foreach ($years as $y) {
+      if (($data['amount']['Classified'][$y] ?? 0) != 0) {
+        print "    <th>$y</th>\n";
       }
     }
-    print "</tr>\n</thead>\n<tbody>\n";
+    print "  </tr>\n";
+    print "</thead>\n";
 
+    print "<tbody>\n";
     foreach ($groupMembers as $g) {
       if ($g != 'Total' && $g != 'Classified' && $g != 'Unclassified') {
         print "  <tr>\n";
@@ -257,37 +261,35 @@ function printYearlyGroupedHtmlTable(
         } else {
           print "    <td>$g</td>\n";
         }
-        print '    <td align="right">' . $data['numDonations'][$g]['Total']
-          . "</td>\n";
-        print '    <td align="right">' . $data['numDonees'][$g]['Total']
-          . "</td>\n";
+        print '    <td align="right">'
+          . ($data['numDonations'][$g]['Total'] ?? 0) . "</td>\n";
+        print '    <td align="right">'
+          . ($data['numDonees'][$g]['Total'] ?? 0) . "</td>\n";
         print '    <td align="right"><strong>'
-          . number_format($data['amount'][$g]['Total'], 2)
+          . number_format($data['amount'][$g]['Total'] ?? 0, 2)
           . "</strong></td>\n";
-        foreach ($years as $year) {
-          if ($data['amount']['Classified'][$year] != 0) {
+        foreach ($years as $y) {
+          if (($data['amount']['Classified'][$y] ?? 0) != 0) {
             print '    <td align="right"><a title="'
-              . sprintf("%d", $data['numDonations'][$g][$year])
+              . sprintf("%d", $data['numDonations'][$g][$y] ?? 0)
               . ' donations to '
-              . sprintf("%d", $data['numDonees'][$g][$year])
+              . sprintf("%d", $data['numDonees'][$g][$y] ?? 0)
               . ' distinct donees">'
-              . number_format($data['amount'][$g][$year],
-                2)
+              . number_format($data['amount'][$g][$y] ?? 0, 2)
               . "</a></td>\n";
           }
         }
         print "  </tr>\n";
       }
     }
-
     print "</tbody>\n";
-    print "<tfoot>\n";
 
+    print "<tfoot>\n";
     printFooterRow($data, $years, 'Classified', "Classified total");
     printFooterRow($data, $years, 'Unclassified', "Unclassified total");
     printFooterRow($data, $years, 'Total', "Total");
-
     print "</tfoot>\n";
+
     print "</table>";
 
     if ($donor != '') {
@@ -314,7 +316,7 @@ function printYearlyGroupedHtmlTable(
       $generateGraphCmdBase,
       $imagesPath,
       $permalinkUrlBase,
-      "#" . $donorString . "DonationAmountsBy" . $groupName . "AndYear"
+      "#" . $donorString . "DonationAmountsBy" . ucfirst($groupName) . "AndYear"
     );
 
     print "<p><strong>Graph of spending by $groupName and year "
