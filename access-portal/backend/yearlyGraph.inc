@@ -17,18 +17,18 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
 
   /* Populate all the yearly rows */
   foreach (array_reverse($years) as $year) {
-    if ($yearDonationAmount[$year] != 0) {
+    if (($yearDonationAmount[$year] ?? 0) != 0) {
       $dataForGraph .= "$year";
       $dataForCumulativeGraph .= "$year";
       foreach ($group as $i) {
         if (!isset($cumulativeForGroup[$i])) {
           $cumulativeForGroup[$i] = 0;
         }
-        $cumulativeForGroup[$i] += $donationAmountByGroupAndYear[$i][$year];
+        $cumulativeForGroup[$i] += ($donationAmountByGroupAndYear[$i][$year] ?? 0);
         $dataForGraph .= "|" .
-          sprintf("%d", $donationAmountByGroupAndYear[$i][$year]);
+          sprintf("%d", $donationAmountByGroupAndYear[$i][$year] ?? 0);
         $dataForCumulativeGraph .= "|" .
-          sprintf("%d", $cumulativeForGroup[$i]);
+          sprintf("%d", $cumulativeForGroup[$i] ?? 0);
       }
       $cumulativeTotal += $yearDonationAmount[$year];
       $dataForGraph .= "|" . sprintf("%d", $yearDonationAmount[$year]) . "\n";
