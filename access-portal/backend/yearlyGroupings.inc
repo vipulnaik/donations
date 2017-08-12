@@ -111,8 +111,6 @@ EOD;
       $data['numDonees'][$col]['Total'] = $row['numDonees'];
 
       $data['numDonations']['Total']['Total'] += $row['numDonations'];
-      /* FIXME -- this is wrong */
-      $data['numDonees']['Total']['Total'] += $row['numDonees'];
 
       if ($col != 'Unclassified') {
         $data['numDonations']['Classified']['Total'] += $row['numDonations'];
@@ -190,6 +188,8 @@ EOD;
 
   $data['numDonees']['Classified']['Total'] = distinctDonees($mysqli,
     $causeAreaFilterString, $donor, "$groupSqlCol is not NULL");
+  $data['numDonees']['Total']['Total'] = distinctDonees($mysqli,
+    $causeAreaFilterString, $donor, "");
 
   usort($groupMembers, function($a, $b) use ($data) {
     return intval($data['amount'][$b]['Total'])
