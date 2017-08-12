@@ -4,8 +4,6 @@ Minor wrap-up
   custom notes at top of table. This can include warnings on data
   meaning and interpretation.
 
-* Move SQL tables out of root folder, put in sql/, make sure Makefile is updated.
-
 * Add tables such as cause area X influencer, cause area X country, cause area X disclosures
 
 Next projects
