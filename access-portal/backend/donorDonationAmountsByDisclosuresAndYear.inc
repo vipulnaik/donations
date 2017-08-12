@@ -47,12 +47,40 @@ while ($row = $r->fetch_assoc()) {
   $data['numDonees']['Total']['Total'] = $row['numDonees'];
 }
 
-/* Fill data for classified row's total cells */
+/* Fill data for classified row total donees */
+$query = <<<EOD
+    select
+        count(distinct donations.donee) as numDonees
+    from (
+        select
+            donor,
+            donee,
+            donation_url,
+            donation_date
+        from disclosures
+        group by
+            donor,
+            donee,
+            donation_url,
+            donation_date
+    ) as d1
+    left join donations on
+        d1.donation_url=donations.url
+        and d1.donor=donations.donor
+        and d1.donee=donations.donee
+        and d1.donation_date=donations.donation_date
+EOD;
+$r = filteredDonorCauseArea($mysqli, $query, "", $donor,
+  $causeAreaFilterString);
+while ($row = $r->fetch_assoc()) {
+  $data['numDonees']['Classified']['Total'] = $row['numDonees'];
+}
+
+/* Fill data for classified row's total cells except total donees */
 $query = <<<EOD
     select
         year(donations.donation_date) as year,
         count(*) as numDonations,
-        -- count(distinct donations.donee) as numDonees,
         sum(amount) as amount
     from (
         select
