@@ -50,6 +50,7 @@ print '</ul>';
 
 include_once('backend/yearlyGraph.inc');
 include_once('backend/yearlyGroupings.inc');
+include_once('backend/yearlyDisclosures.inc');
 include ("backend/donorInfo.inc");
 include ("backend/donorDonationAmountsByCauseAreaAndYear.inc");
 include ("backend/donorDonationAmountsByDoneeAndYear.inc");
