@@ -1,9 +1,5 @@
 Minor wrap-up
 
-* In function Issa created, customized header message that can provide
-  custom notes at top of table. This can include warnings on data
-  meaning and interpretation.
-
 * Add tables such as cause area X influencer, cause area X country, cause area X disclosures
 
 * There are still a bunch of `PHP Notice:  Undefined offset:` warnings when

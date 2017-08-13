@@ -300,7 +300,8 @@ EOD;
     $causeAreaFilterString,
     $donor,
     $generateGraphCmdBase,
-    $imagesPath
+    $imagesPath,
+    ""
   );
 }
 

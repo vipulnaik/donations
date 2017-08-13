@@ -205,7 +205,8 @@ EOD;
     $causeAreaFilterString,
     $donor,
     $generateGraphCmdBase,
-    $imagesPath
+    $imagesPath,
+    ""
   );
 
 }
@@ -219,7 +220,8 @@ function printYearlyGroupedHtmlTable(
   $causeAreaFilterString,
   $donor,
   $generateGraphCmdBase,
-  $imagesPath
+  $imagesPath,
+  $customHtmlMessage
 ) {
 
   $donorString = $donor ? "donor" : "";
@@ -233,8 +235,11 @@ function printYearlyGroupedHtmlTable(
       . "you will get a tooltip with the number of donees and the number of "
       . "donations.</p>\n";
 
-    print "<p>Note: Cause area classification used here may not match that "
-      ."used by donor for all cases.</p>\n";
+    print "<p>For the meaning of “classified” and “unclassified”, see the "
+      . '<a href="https://github.com/vipulnaik/donations/blob/master/classified-and-unclassified.md">'
+      . "page clarifying this</a>.</p>\n";
+
+    print $customHtmlMessage;
 
     print '<table id="myTable' . ucfirst($donorString)
       . 'DonationAmountsBy' . ucfirst($groupName) . 'AndYear" '
