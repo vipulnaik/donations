@@ -1,3 +1,7 @@
+# -- Relationship disclosure policy change
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('http://www.openphilanthropy.org/about/relationship-disclosure-policy','Relationship Disclosure Policy','2017-08-30',NULL,NULL,'Open Philanthropy Project','Open Philanthropy Project',NULL,'Miscellaneous commentary',NULL,'The document, announced on a mailing list at https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/4-0KIw2aVmQ (2017-08-30) describes a change in relationship disclosure policy on grant pages published by the Open Philanthropy Project. Relationship disclosures would now no longer be included on grant pages');
+
 # -- Separation from GiveWell
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('http://www.openphilanthropy.org/blog/open-philanthropy-project-now-independent-organization','The Open Philanthropy Project Is Now an Independent Organization','2017-06-12',NULL,'Holden Karnofsky','Open Philanthropy Project','Open Philanthropy Project,Good Ventures',NULL,'Status change',NULL,'The Open Philanthropy Project announces that it is now a separate entity from GiveWell, and that it has incorporated as a LLC. The change was effective 2017-06-01. See http://blog.givewell.org/2017/06/12/separating-givewell-open-philanthropy-project/ for the complementary post on the GiveWell blog');
