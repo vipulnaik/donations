@@ -3,6 +3,10 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     payment_modality, match_eligible, goal_amount, influencer, employer_match,
     matching_employer, special_donation_reason)
     values
+    ('Patrick Brinich-Langlois','Effective Altruism Funds',20000,NULL,'2017-08-28','day','donation log','Effective altruism/far future','http://www.patbl.com/misc/other/donations/','Donation earmarked for the Long-Term Future Fund managed by Nick Beckstead', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Patrick Brinich-Langlois','The Humane League',117.32,NULL,'2017-08-12','day','donation log','Animal welfare/factory farming','http://www.patbl.com/misc/other/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Patrick Brinich-Langlois','Effective Altruism Funds',7500,NULL,'2017-03-25','day','donation log','Effective altruism/far future','http://www.patbl.com/misc/other/donations/','Donation earmarked for the Long-Term Future Fund managed by Nick Beckstead', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Patrick Brinich-Langlois','Effective Altruism Funds',7500,NULL,'2017-03-25','day','donation log','Effective altruism/movement growth','http://www.patbl.com/misc/other/donations/','Donation earmarked for the Effective Altruism Community Fund managed by Nick Beckstead', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Patrick Brinich-Langlois','EA Giving Group',10055.55,NULL,'2016-12-30','day','donation log',NULL,'http://www.patbl.com/misc/other/donations/','Chose amount to reach donation goal total of 55555.55', NULL, NULL, 55555.55, NULL, NULL, NULL, NULL),
     ('Patrick Brinich-Langlois','EA Giving Group',15000,NULL,'2016-11-05','day','donation log',NULL,'http://www.patbl.com/misc/other/donations/',NULL, NULL, NULL, 55555.55, NULL, NULL, NULL, NULL),
     ('Patrick Brinich-Langlois','EA Giving Group',10000,NULL,'2016-07-04','day','donation log',NULL,'http://www.patbl.com/misc/other/donations/',NULL, NULL, NULL, 55555.55, NULL, NULL, NULL, NULL),
