@@ -22,15 +22,7 @@ include_once("backend/globalVariables/lists.inc");
 print '<body>';
 print '<script>$(document).ready(function()
     {
-        $("#myTableDonorInfo").tablesorter({textExtraction: stripCommas});
-        $("#myTableDonorDonationAmountsByDoneeAndYear").tablesorter({textExtraction: stripCommas});
-        $("#myTableDonorDonationAmountsByCauseAreaAndYear").tablesorter({textExtraction: stripCommas});
-        $("#myTableDonorDonationAmountsByInfluencerAndYear").tablesorter({textExtraction: stripCommas});
-        $("#myTableDonorDonationAmountsByCountryAndYear").tablesorter({textExtraction: stripCommas});
-        $("#myTableDonorDonationAmountsByDisclosuresAndYear").tablesorter({textExtraction: stripCommas});
-        $("#myTableDonorDocumentList").tablesorter({textExtraction: stripCommas});
-        $("#myTableDonorDonationList").tablesorter({textExtraction: stripCommas});
-        $("#myTableDonorSimilarDonors").tablesorter({textExtraction: stripCommas});
+        $("table").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
 print "<h3>$donor donations made to $donee $causeAreaFilterStringHelper</h3>";
