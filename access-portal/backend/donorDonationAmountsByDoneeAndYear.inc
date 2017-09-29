@@ -68,7 +68,11 @@ print "</tr>\n</thead>\n<tbody>\n";
 
 foreach ($donees as $donee) {
   print "  <tr>\n";
-  print '    <td><a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a></td>'."\n";
+  print '    <td><a href="/donee.php?donee=' . urlencode($donee) . '">'
+    . $donee . '</a>'
+    . ' (<a href="/donorDonee.php?donor=' . urlencode($donor) . "&amp;donee="
+    . urlencode($donee) . '">filter this donor</a>)'
+    . '</td>'."\n";
   print '    <td>'.(isset($causeAreaForDonee[$donee]) ? $causeAreaForDonee[$donee] : "").'</td>'."\n";
   print '    <td>';
   if (isset($facebookUsername[$donee]) && $facebookUsername[$donee] != '') {
