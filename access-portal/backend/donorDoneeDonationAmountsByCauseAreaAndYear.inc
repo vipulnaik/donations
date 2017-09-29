@@ -2,9 +2,15 @@
 
 print '<h4 id="donorDonationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</h4>';
 
-$causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area,count(*) as numDonations from donations where donor = ? and donee = ? group by substring_index(cause_area,'/',1)";
+$causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area,count(*) as numDonations from donations where donor = ? and donee = ?"
+  . ($causeAreaFilterString ? " and cause_area REGEXP ?" : "")
+  . " group by substring_index(cause_area,'/',1)";
 if ($stmt = $mysqli->prepare($causeAreaQuery)) {
-  $stmt->bind_param("ss", $donor, $donee);
+  if ($causeAreaFilterString) {
+    $stmt->bind_param("sss", $donor, $donee, $causeAreaFilterString);
+  } else {
+    $stmt->bind_param("ss", $donor, $donee);
+  }
   $stmt->execute();
 }
 
@@ -27,9 +33,15 @@ foreach($causeAreas as $causeArea) {
 }
 
 /* $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(distinct donee) as numDonees, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor=".'"'.str_replace('"','\"',$donor).'"'." $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1), year(donation_date)"; */
-$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor = ? and donee = ? group by substring_index(cause_area,'/',1), year(donation_date)";
+$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor = ? and donee = ?"
+  . ($causeAreaFilterString ? " and cause_area REGEXP ?" : "")
+  . " group by substring_index(cause_area,'/',1), year(donation_date)";
 if ($stmt = $mysqli->prepare($causeAreaAndYearQuery)) {
-  $stmt->bind_param("ss", $donor, $donee);
+  if ($causeAreaFilterString) {
+    $stmt->bind_param("sss", $donor, $donee, $causeAreaFilterString);
+  } else {
+    $stmt->bind_param("ss", $donor, $donee);
+  }
   $stmt->execute();
 }
 
