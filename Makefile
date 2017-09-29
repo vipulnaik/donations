@@ -48,6 +48,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donor-lottery.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ea-funds.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ea-survey.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/elie-hassenfeld-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/elizabeth-van-nostrand-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/gates-foundation-grants.sql
