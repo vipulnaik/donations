@@ -10,9 +10,13 @@ if (!empty($_REQUEST['donee'])) {
 }
 if (!empty($_REQUEST['cause_area_filter'])) {
   $causeAreaFilterString = $_REQUEST['cause_area_filter'];
+} else {
+  $causeAreaFilterString = '';
 }
 
-print "<title>$donor donations made to $donee $causeAreaFilterStringHelper</title>";
+print "<title>$donor donations made to $donee"
+  . ($causeAreaFilterString ? " (filtered to cause areas matching $causeAreaFilterString)" : '')
+  . "</title>";
 include_once('analytics.inc');
 include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
@@ -29,7 +33,9 @@ print '<script>$(document).ready(function()
         $("table").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
-print "<h3>$donor donations made to $donee $causeAreaFilterStringHelper</h3>";
+print "<h3>$donor donations made to $donee"
+  . ($causeAreaFilterString ? " (filtered to cause areas matching $causeAreaFilterString)" : '')
+ . "</h3>";
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
