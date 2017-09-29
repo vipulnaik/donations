@@ -105,20 +105,23 @@ if ($causeAreaFilterString != '') {
   $permalinkUrlBase .= '&cause_area_filter='.urlencode($causeAreaFilterString);
 }
 
-$graphs = yearlyGraphs(
-  $years,
-  $causeAreas,
-  $yearDonationAmount,
-  $donationAmountByCauseAreaAndYear,
-  $generateGraphCmdBase,
-  $imagesPath,
-  $permalinkUrlBase,
-  "#donorDonationAmountsByCauseAreaAndYear"
-);
+if (count(array_filter($yearDonationAmount)) > 1) {
+  $graphs = yearlyGraphs(
+    $years,
+    $causeAreas,
+    $yearDonationAmount,
+    $donationAmountByCauseAreaAndYear,
+    $generateGraphCmdBase,
+    $imagesPath,
+    $permalinkUrlBase,
+    "#donorDonationAmountsByCauseAreaAndYear"
+  );
 
-print "<p><strong>Graph of spending by cause area and year (incremental, not cumulative)</strong></p>";
-print '<img src="/images/'.$graphs[0].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
+  print "<p><strong>Graph of spending by cause area and year (incremental, not cumulative)</strong></p>";
+  print '<img src="/images/'.$graphs[0].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
 
-print "<p><strong>Graph of spending by cause area and year (cumulative)</strong></p>";
-print '<img src="/images/'.$graphs[1].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
-
+  print "<p><strong>Graph of spending by cause area and year (cumulative)</strong></p>";
+  print '<img src="/images/'.$graphs[1].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
+} else {
+  print "<p>Skipping spending graph as there is fewer than one year’s worth of donations.</p>\n";
+}

@@ -311,30 +311,35 @@ function printYearlyGroupedHtmlTable(
         '&cause_area_filter=' . urlencode($causeAreaFilterString);
     }
 
-    $graphs = yearlyGraphs(
-      $years,
-      /* Send without 'Total', since yearlyGraphs() constructs the Total on its
-       * own. It's only necessary to delete the 'Total' value from $groupMembers
-       * since the other arrays are accessed by key, and since the Total key
-       * isn't passed, they won't be accessed. */
-      array_diff($groupMembers, array('Total')),
-      $data['amount']['Total'],
-      $data['amount'],
-      $generateGraphCmdBase,
-      $imagesPath,
-      $permalinkUrlBase,
-      "#" . $donorString . "DonationAmountsBy" . ucfirst($groupName) . "AndYear"
-    );
+    /* Subtract one to compensate for presence of "Total" entry */
+    if (count(array_filter($data['amount']['Classified'])) - 1 > 1) {
+      $graphs = yearlyGraphs(
+        $years,
+        /* Send without 'Total', since yearlyGraphs() constructs the Total on its
+         * own. It's only necessary to delete the 'Total' value from $groupMembers
+         * since the other arrays are accessed by key, and since the Total key
+         * isn't passed, they won't be accessed. */
+        array_diff($groupMembers, array('Total')),
+        $data['amount']['Total'],
+        $data['amount'],
+        $generateGraphCmdBase,
+        $imagesPath,
+        $permalinkUrlBase,
+        "#" . $donorString . "DonationAmountsBy" . ucfirst($groupName) . "AndYear"
+      );
 
-    print "<p><strong>Graph of spending by $groupName and year "
-      . "(incremental, not cumulative)</strong></p>";
-    print '<img src="/images/' . $graphs[0] . '-timeseries.png" '
-      . 'alt="Graph of spending should have loaded here"></img>';
+      print "<p><strong>Graph of spending by $groupName and year "
+        . "(incremental, not cumulative)</strong></p>";
+      print '<img src="/images/' . $graphs[0] . '-timeseries.png" '
+        . 'alt="Graph of spending should have loaded here"></img>';
 
-    print "<p><strong>Graph of spending by $groupName and year "
-      . "(cumulative)</strong></p>";
-    print '<img src="/images/' . $graphs[1] . '-timeseries.png" '
-      . 'alt="Graph of spending should have loaded here"></img>';
+      print "<p><strong>Graph of spending by $groupName and year "
+        . "(cumulative)</strong></p>";
+      print '<img src="/images/' . $graphs[1] . '-timeseries.png" '
+        . 'alt="Graph of spending should have loaded here"></img>';
+    } else {
+      print "<p>Skipping spending graph as there is fewer than one year’s worth of donations.</p>\n";
+    }
   } else {
     print "<p>Sorry, we couldn't find any $groupName information.</p>\n";
   }
