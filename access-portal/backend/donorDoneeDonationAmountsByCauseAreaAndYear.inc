@@ -19,7 +19,6 @@ $causeAreas = array();
 $grandTotalNumDonations = 0;
 while ($row = $causeAreaResult->fetch_assoc()) {
   array_push($causeAreas, $row['cause_area']);
-  $numDoneesByCauseArea[$row['cause_area']] = $row['numDonees'];
   $numDonationsByCauseArea[$row['cause_area']] = $row['numDonations'];
   $grandTotalNumDonations += $row['numDonations'];
 }
@@ -49,7 +48,6 @@ $causeAreaAndYearResult = $stmt->get_result();
 
 while ($row = $causeAreaAndYearResult->fetch_assoc()) {
   $donationAmountByCauseAreaAndYear[$row['cause_area']][$row['year']] = $row['amount'];
-  $numDoneesByCauseAreaAndYear[$row['cause_area']][$row['year']] = $row['numDonees'];
   $numDonationsByCauseAreaAndYear[$row['cause_area']][$row['year']] = $row['numDonations'];
   $causeAreaDonationAmount[$row['cause_area']] += $row['amount'];
   $yearDonationAmount[$row['year']] += $row['amount'];
@@ -89,7 +87,7 @@ foreach ($causeAreas as $causeArea) {
   print '    <td align="right"><strong>'.number_format($causeAreaDonationAmount[$causeArea],2)."</strong></td>\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] != 0) {
-      print '    <td align="right"><a title="'.sprintf("%d",$numDonationsByCauseAreaAndYear[$causeArea][$year]).' donations to '.sprintf("%d",$numDoneesByCauseAreaAndYear[$causeArea][$year]).' distinct donees">'.number_format($donationAmountByCauseAreaAndYear[$causeArea][$year],2)."</a></td>\n";
+      print '    <td align="right"><a title="'.sprintf("%d",$numDonationsByCauseAreaAndYear[$causeArea][$year]).' donations">'.number_format($donationAmountByCauseAreaAndYear[$causeArea][$year],2)."</a></td>\n";
     }
   }
   print "  </tr>\n";
