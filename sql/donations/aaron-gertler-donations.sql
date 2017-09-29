@@ -4,7 +4,7 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     matching_employer)
     values
     ('Aaron Gertler', 'Donor lottery', 500.00, NULL, '2016-12-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'See http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/ for more details', NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Aaron Gertler', 'Centre for Effective Altruism', 750.00, NULL, '2016-12-15', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'My end-of-year donation. $750 went to CEA, which runs a number of useful EA projects.', NULL, NULL, NULL, NULL, NULL, NULL),
+    ('Aaron Gertler', 'Centre for Effective Altruism', 750.00, NULL, '2016-12-15', 'day', 'donation log', 'Effective altruism/movement growth', 'http://aarongertler.net/donations/', 'My end-of-year donation. $750 went to CEA, which runs a number of useful EA projects.', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Aaron Gertler', 'Against Malaria Foundation, Innovations for Poverty Action, Environmental Defense Fund', 350.00, NULL, '2016-12-06', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'My share of donations from a Giving Game co-sponsored by The Life You Can Save.', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Aaron Gertler', 'GiveWell', 750.00, NULL, '2016-09-10', 'day', 'donation log', NULL, 'http://aarongertler.net/donations/', 'Operational funding', NULL, NULL, NULL, NULL, NULL, NULL),
     ('Aaron Gertler', 'Against Malaria Foundation', 500.00, NULL, '2016-07-12', 'day', 'donation log', 'Global health/malaria', 'http://aarongertler.net/donations/', 'In support of a friend’s campaign.', NULL, NULL, NULL, NULL, NULL, NULL),
