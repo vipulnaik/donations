@@ -15,7 +15,7 @@ if ($stmt = $mysqli->prepare($donorDocumentSelectQuery)) {
 
 $donorDocumentSelectResult = $stmt->get_result();
 if ($donorDocumentSelectResult -> num_rows > 0) {
-  print '<h4 id="donorDocumentList">Full list of documents in reverse chronological order ('.($donorDocumentSelectResult -> num_rows)." documents)</h4>\n";
+  print '<h4 id="donorDoneeDocumentList">Full list of documents in reverse chronological order ('.($donorDocumentSelectResult -> num_rows)." documents)</h4>\n";
   print "\n";
   print '<table id="myTableDonorDocumentList" class="tablesorter">'."\n";
   print "  <thead>\n";

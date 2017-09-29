@@ -12,7 +12,7 @@ if ($stmt = $mysqli->prepare($query)) {
   $result = $stmt->get_result();
 }
 
-print '<h4 id="donorDonationList">Full list of donations in reverse chronological order ('.($result -> num_rows).' donations)</h4>';
+print '<h4 id="donorDoneeDonationList">Full list of donations in reverse chronological order ('.($result -> num_rows).' donations)</h4>';
 
 print '<table id="myTableDonorDonationList" class="tablesorter">'."\n";
 print "<thead>\n";

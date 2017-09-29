@@ -1,6 +1,6 @@
 <?php
 
-print '<h4 id="donorDonationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</h4>';
+print '<h4 id="donorDoneeDonationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</h4>';
 
 $causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area,count(*) as numDonations from donations where donor = ? and donee = ?"
   . ($causeAreaFilterString ? " and cause_area REGEXP ?" : "")
