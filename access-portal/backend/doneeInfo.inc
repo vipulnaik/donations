@@ -63,7 +63,7 @@ if ($doneeSelectResult -> num_rows == 0) {
     print '<tr><td>Instagram username</td><td><a href="https://www.instagram.com/'.$row['instagram_username'].'">'.$row['instagram_username'].'</a></td></tr>';
   }
   if (isset($row['tumblr_subdomain']) && $row['tumblr_subdomain'] != '') {
-    print '<tr><td>Tumblr subdomain</td><td><a href="'.$row['tumblr_subdomain'].'.tumblr.com">'.$row['tumblr_subdomain'].'</a></td></tr>';
+    print '<tr><td>Tumblr subdomain</td><td><a href="http://'.$row['tumblr_subdomain'].'.tumblr.com">'.$row['tumblr_subdomain'].'</a></td></tr>';
   }
   if (isset($row['medium_username']) && $row['medium_username'] != '') {
     print '<tr><td>Medium username</td><td><a href="https://www.medium.com/@'.$row['medium_username'].'">'.$row['medium_username'].'</a></td></tr>';
