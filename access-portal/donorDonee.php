@@ -8,11 +8,15 @@ $donee = 'GiveDirectly';
 if (!empty($_REQUEST['donee'])) {
   $donee = $_REQUEST['donee'];
 }
+if (!empty($_REQUEST['cause_area_filter'])) {
+  $causeAreaFilterString = $_REQUEST['cause_area_filter'];
+}
 
 print "<title>$donor donations made to $donee $causeAreaFilterStringHelper</title>";
 include_once('analytics.inc');
 include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
+include_once('backend/yearlyGraph.inc');
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
 print '<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>'."\n";
 print '<script type="text/javascript" src="./jquery.tablesorter.js"></script>'."\n";
@@ -31,13 +35,17 @@ print '<h4>Table of contents</h4>';
 print '<ul>';
 print '<li><a href="#donorInfo">Basic donor info</a></li>';
 print '<li><a href="#doneeInfo">Basic donee info</a></li>';
-print '<li><a href="#donorDocumentList">Donor document list</a></li>';
-print '<li><a href="#donorDonationList">Donor donation list</a></li>';
+print '<li><a href="#donorDoneeDonationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</a></li>';
+print '<li><a href="#donorDoneeDonationList">Donor donation list</a></li>';
+print '<li><a href="#donorDoneeDocumentList">Donor document list</a></li>';
 print '</ul>';
 
 include ("backend/donorInfo.inc");
 include ("backend/doneeInfo.inc");
+include ("backend/donorDoneeDonationAmountsByCauseAreaAndYear.inc");
 include ("backend/donorDoneeDonationList.inc");
+include ("backend/donorDoneeDocumentList.inc");
+
 
 print '</body>';
 ?>
