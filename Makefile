@@ -101,6 +101,15 @@ clean_table_sorting:
 	rm -f access-portal/asc.gif
 	rm -f access-portal/desc.gif
 
+.PHONY: fetch_anchorjs
+fetch_anchorjs:
+	curl -Lo access-portal/anchor.min.js \
+		'https://raw.githubusercontent.com/bryanbraun/anchorjs/master/anchor.min.js'
+
+.PHONY: clean_anchorjs
+clean_anchorjs:
+	rm -f access-portal/anchor.min.js
+
 .PHONY: compute_similarity_php
 compute_similarity_php:
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists similarity;"

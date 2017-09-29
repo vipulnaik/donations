@@ -1,5 +1,5 @@
 <?php
-print '<!doctype html public "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" >';
+include_once('doctype.inc');
 $donor = 'Vipul Naik';
 if (!empty($_REQUEST['donor'])) {
   $donor = $_REQUEST['donor'];
@@ -63,5 +63,6 @@ include ("backend/donorDonationAmountsByCountryAndYear.inc");
 include ("backend/donorDocumentList.inc");
 include ("backend/donorDonationList.inc");
 include ("backend/donorSimilarDonors.inc");
+include_once('anchorjs.inc');
 print '</body>';
 ?>

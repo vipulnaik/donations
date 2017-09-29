@@ -43,3 +43,9 @@ For table sorting:
 
 This will fetch the necessary files to allow tables to be sorted.
 To remove these files, run `make clean_table_sorting`.
+
+For [AnchorJS](https://github.com/bryanbraun/anchorjs):
+
+    make fetch_anchorjs
+
+To remove AnchorJS, run `make clean_anchorjs`.
