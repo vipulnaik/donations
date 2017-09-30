@@ -4,7 +4,7 @@ create table donations (
     donee varchar(200),
     amount float(14,2),
     amount_original_currency float(14,2),
-    original_currency enum('AUD','BRL','BTC','CAD','CHF','CZK','DKK','ETH','EUR','GBP','NOK','NZD','SEK','SGD','USD','XRP','ZAR'),
+    original_currency enum('AUD','BRL','BTC','CAD','CHF','CZK','DKK','ETH','EUR','GBP','NOK','NZD','SEK','SGD','USD','XRP','ZAR') DEFAULT 'USD',
     currency_conversion_date date,
     currency_conversion_basis enum('donor calculation','donee calculation','Peter Hurford'),
     fraction float(3, 2),
