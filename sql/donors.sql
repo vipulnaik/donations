@@ -12,6 +12,9 @@ create table donors (
     launch_date date,
     launch_date_precision enum('day','month','year','multi-year'),
     launch_date_url varchar(200),
+    philosophy_url varchar(200), # -- URL to grant/giving philosophy
+    grant_application_process_url varchar(200),
+    foundation_center_url varchar(200),
     youtube_username varchar(100),
     instagram_username varchar(100),
     tumblr_subdomain varchar(100),
