@@ -4,7 +4,7 @@ $influencer = 'GiveWell';
 if (!empty($_REQUEST['influencer'])) {
   $influencer = $_REQUEST['influencer'];
 }
-print "<title>$donor donations made</title>";
+print "<title>$influencer money moved</title>";
 include_once('analytics.inc');
 include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
