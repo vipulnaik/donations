@@ -29,6 +29,26 @@ print '<li><a href="#influencerDocumentList">Influencer document list</a></li>';
 print '<li><a href="#influencerMoneyMovedList">Influencer money moved list</a></li>';
 print '</ul>';
 
+if ($stmt = $mysqli->prepare("select donor from donations where donor = ?")) {
+  $stmt->bind_param("s", $influencer);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  if ($result->num_rows > 0) {
+    print '<p><a href="/donor.php?donor=' . urlencode($influencer)
+      . '">This entity is also a donor<a/>.</p>' . "\n";
+  }
+}
+
+if ($stmt = $mysqli->prepare("select donee from donations where donee = ?")) {
+  $stmt->bind_param("s", $influencer);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  if ($result->num_rows > 0) {
+    print '<p><a href="/donee.php?donee=' . urlencode($influencer)
+      . '">This entity is also a donee<a/>.</p>' . "\n";
+  }
+}
+
 include ("backend/influencerDocumentList.inc");
 include ("backend/influencerMoneyMovedList.inc");
 include_once("anchorjs.inc");

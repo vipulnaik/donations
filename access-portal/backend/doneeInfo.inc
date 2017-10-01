@@ -82,4 +82,25 @@ if ($doneeSelectResult -> num_rows == 0) {
   }
   print "</tbody>\n</table>\n";
 }
+
+if ($stmt = $mysqli->prepare("select donor from donations where donor = ?")) {
+  $stmt->bind_param("s", $donee);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  if ($result->num_rows > 0) {
+    print '<p><a href="/donor.php?donor=' . urlencode($donee)
+      . '">This entity is also a donor<a/>.</p>' . "\n";
+  }
+}
+
+if ($stmt = $mysqli->prepare("select influencer from money_moved where influencer = ?")) {
+  $stmt->bind_param("s", $donee);
+  $stmt->execute();
+  $result = $stmt->get_result();
+  if ($result->num_rows > 0) {
+    print '<p><a href="/influencer.php?influencer=' . urlencode($donee)
+      . '">This entity has also influenced donations by others<a/>.</p>' . "\n";
+  }
+}
+
 ?>
