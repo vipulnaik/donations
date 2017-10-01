@@ -38,4 +38,12 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Ajeya Cotra','A political campaign',2700,0.55,'2016-10-01','month','date of donation announced in announcement','Politics/United States','http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/','Target of donation not specified, but this donation was in mid-October, in the runup to the November 2016 United States presidential and legislative elections. Also, amount not explicitly specified, but inferred from 55-45 split in donations and knowledge of donor lottery amount from http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/ Note also that political campaign donations are capped at 2700 USD in the United States.',NULL,NULL,NULL,NULL,NULL,NULL),
     ('Ajeya Cotra', 'Donor lottery', 2200.00, 0.45, '2016-12-07', 'day', 'transaction', NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', 'Reasoning explained more in http://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/ (go to section for Ajeya Cotra)', NULL, NULL, NULL, NULL, NULL, NULL);
 
-
+# -- The Oxford Prioritisation Project grant
+insert into donations(donor, donee, amount, fraction, donation_date,
+    donation_date_precision, donation_date_basis, cause_area, url, notes,
+    payment_modality, match_eligible, goal_amount, influencer, employer_match,
+    matching_employer, amount_original_currency, original_currency,
+    currency_conversion_date, currency_conversion_basis,
+    donation_announcement_date, donation_announcement_date_precision,
+    donation_announcement_url) values
+    ('Oxford Prioritisation Project', '80000 Hours', 12934, NULL, '2017-05-09', 'day', 'date of donation announcement', 'Effective altruism/movement growth', 'https://oxpr.io/blog/2017/5/20/four-quantiative-models-aggregation-and-final-decision', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 10000, 'GBP', '2017-05-09', 'Bloomberg', '2017-05-09', 'day', 'https://www.facebook.com/events/336092186805365/');
