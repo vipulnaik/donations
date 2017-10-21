@@ -1,6 +1,7 @@
 <?php
 $query = "select * from donations where donor = ? and donee = ?"
-  . ($causeAreaFilterString ? " and cause_area REGEXP ?" : "");
+  . ($causeAreaFilterString ? " and cause_area REGEXP ?" : "")
+  . " order by donation_date desc";
 
 if ($stmt = $mysqli->prepare($query)) {
   if ($causeAreaFilterString) {
