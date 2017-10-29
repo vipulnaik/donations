@@ -60,16 +60,16 @@ if ($donorSelectResult -> num_rows == 0) {
   if (isset($row['predictionbook_username']) && $row['predictionbook_username'] != '') {
     print '<tr><td>PredictionBook username</td><td><a href="https://predictionbook.com/users/'.$row['predictionbook_username'].'">'.$row['predictionbook_username'].'</a></td></tr>';
   }
-  if (isset($row['donations_data_update_regularity'] && $row['donations_data_update_regularity'] != '') {
+  if (isset($row['donations_data_update_regularity']) && $row['donations_data_update_regularity'] != '') {
     print '<tr><td>Regularity with which donor updates donations data</td><td>'.$row['donations_data_update_regularity'].'</td></tr>';
   }
-  if (isset($row['donations_data_dlw_update_regularity'] && $row['donations_data_dlw_update_regularity'] != '') {
+  if (isset($row['donations_data_dlw_update_regularity']) && $row['donations_data_dlw_update_regularity'] != '') {
     print '<tr><td>Regularity with which Donations List Website updates donations data (after donor update)</td><td>'.$row['donations_data_dlw_update_regularity'].'</td></tr>';
   }
-  if (isset($row['donations_data_update_lag'] && $row['donations_data_update_lag'] != '') {
+  if (isset($row['donations_data_update_lag']) && $row['donations_data_update_lag'] != '') {
     print '<tr><td>Lag with which donor updates donations data</td><td>'.$row['donations_data_update_lag'].'</td></tr>';
   }
-  if (isset($row['donations_data_dlw_update_lag'] && $row['donations_data_dlw_update_lag'] != '') {
+  if (isset($row['donations_data_dlw_update_lag']) && $row['donations_data_dlw_update_lag'] != '') {
     print '<tr><td>Lag with which Donations List Website updates donations data (after donor update)</td><td>'.$row['donations_data_dlw_update_lag'].'</td></tr>';
   }
 
