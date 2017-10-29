@@ -1,3 +1,8 @@
+# -- GiveWell discretionary regranting
+
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('https://blog.givewell.org/2016/12/19/discretionary-grant-making-and-implications-for-donor-agency/','Discretionary grant making and implications for donor agency','2016-12-19',NULL,'Andrew Martin','GiveWell','GiveWell discretionary regranting','Against Malaria Foundation, Schistosomiasis Control Initiative','Broad donor strategy',NULL,'Explains the difference between giving GiveWell money to grant at its own discretion and donating to current GiveWell top and standout charities');
+
 # -- GiveWell discussions of potential future top charities and reviews of cause areas
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('https://blog.givewell.org/2017/05/11/update-on-our-views-on-cataract-surgery/','Update on our views on cataract surgery','2017-05-11',NULL,'Catherine Hollander','GiveWell',NULL,NULL,'Review of current state of cause area','Global health/cataracy surgery','The document discusses uncertainty around funding cataract surgery, specifically around whether it is talent-constrained or funding-constrained, and other questions around marginal impact and quantification');

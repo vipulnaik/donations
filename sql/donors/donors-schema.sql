@@ -39,5 +39,6 @@ create table donors (
     donations_data_dlw_update_regularity enum('continuous updates','monthly refresh','quarterly refresh','annual refresh','irregular'),
     donations_data_update_lag enum('none','days','months','years'),
     donations_data_dlw_update_lag enum('none','days','months','years'),
+    dlw_data_processing_script varchar(100),
     unique key donor(`donor`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
