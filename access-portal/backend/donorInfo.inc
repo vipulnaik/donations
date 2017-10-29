@@ -79,10 +79,11 @@ if ($donorSelectResult -> num_rows == 0) {
     print '<tr><td>Lag with which Donations List Website updates donations data (after donor update)</td><td>'.$row['donations_data_dlw_update_lag'].'</td></tr>';
   }
 
-  if ($row['notes'] != '') {
-    print '<tr><td>Notes</td><td>'.$row['notes'].'</td></tr>';
-  }
   print "</tbody>\n</table>\n";
+}
+
+if (isset($row['notes']) && $row['notes'] != '') {
+    print '<p><b>Notes</b>'.cleanNotes($row['notes']).'</p>';
 }
 
 if ($stmt = $mysqli->prepare("select donee from donations where donee = ?")) {

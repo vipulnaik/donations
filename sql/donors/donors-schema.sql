@@ -26,7 +26,7 @@ create table donors (
     website varchar(100),
     donations_url varchar(1000),
     income int(12),
-    notes varchar(2000) default null,
+    notes varchar(5000) default null,
     twitter_username varchar(40),
     lesswrong_username varchar(40),
     eaf_username varchar(40),
