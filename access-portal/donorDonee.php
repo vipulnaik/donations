@@ -47,7 +47,9 @@ print '<li><a href="#donorDoneeDocumentList">Donor document list</a></li>';
 print '</ul>';
 
 include ("backend/donorInfo.inc");
+print '<p><a href="/donor.php?donor='.urlencode($donor).'">Full donor page for donor $donor</a></p>'."\n";
 include ("backend/doneeInfo.inc");
+print '<p><a href="/donee.php?donee='.urlencode($donee).'">Full donee page for donee $donee</a></p>'."\n";
 include ("backend/donorDoneeDonationAmountsByCauseAreaAndYear.inc");
 include ("backend/donorDoneeDonationList.inc");
 include ("backend/donorDoneeDocumentList.inc");
