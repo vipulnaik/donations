@@ -83,7 +83,7 @@ if ($donorSelectResult -> num_rows == 0) {
 }
 
 if (isset($row['notes']) && $row['notes'] != '') {
-    print '<p><b>Notes</b>'.cleanNotes($row['notes']).'</p>';
+    print '<p><b>Notes</b>: '.cleanNotes($row['notes']).'</p>';
 }
 
 if ($stmt = $mysqli->prepare("select donee from donations where donee = ?")) {
