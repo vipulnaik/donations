@@ -60,6 +60,12 @@ if ($donorSelectResult -> num_rows == 0) {
   if (isset($row['predictionbook_username']) && $row['predictionbook_username'] != '') {
     print '<tr><td>PredictionBook username</td><td><a href="https://predictionbook.com/users/'.$row['predictionbook_username'].'">'.$row['predictionbook_username'].'</a></td></tr>';
   }
+  if (isset($row['philosophy_url']) && $row['philosophy_url'] != '') {
+    print '<tr><td>Page on philosophy informing donations</td><td><a href="'.$row['philosophy_url'].'">'.$row['philosophy_url'].'</a></td></tr>';
+  }
+  if (isset($row['grant_application_process_url']) && $row['grant_application_process_url'] != '') {
+    print '<tr><td>Grant application process page</td><td><a href="'.$row['grant_application_process_url'].'">'.$row['grant_application_process_url'].'</a></td></tr>';
+  }
   if (isset($row['donations_data_update_regularity']) && $row['donations_data_update_regularity'] != '') {
     print '<tr><td>Regularity with which donor updates donations data</td><td>'.$row['donations_data_update_regularity'].'</td></tr>';
   }
