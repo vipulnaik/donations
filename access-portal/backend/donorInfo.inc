@@ -97,23 +97,23 @@ if ($donorSelectResult -> num_rows == 0) {
 }
 
 if (isset($row['brief_history']) && $row['brief_history'] != '') {
-    print '<p><b>Brief history</b>: '.cleanNotes($row['brief_history]).'</p>';
+    print '<p><b>Brief history</b>: '.cleanNotes($row['brief_history']).'</p>';
 }
 
 if (isset($row['brief_donor_focus_notes']) && $row['brief_donor_focus_notes'] != '') {
-    print '<p><b>Brief notes on broad donor philosophy and major focus areas</b>: '.cleanNotes($row['brief_donor_focus_notes]).'</p>';
+    print '<p><b>Brief notes on broad donor philosophy and major focus areas</b>: '.cleanNotes($row['brief_donor_focus_notes']).'</p>';
 }
 
 if (isset($row['grant_decision_logistics_notes']) && $row['grant_decision_logistics_notes'] != '') {
-    print '<p><b>Notes on grant decision logistics</b>: '.cleanNotes($row['grant_decision_logistics_notes]).'</p>';
+    print '<p><b>Notes on grant decision logistics</b>: '.cleanNotes($row['grant_decision_logistics_notes']).'</p>';
 }
 
 if (isset($row['grant_publication_logistics_notes']) && $row['grant_publication_logistics_notes'] != '') {
-    print '<p><b>Notes on grant publication logistics</b>: '.cleanNotes($row['grant_publication_logistics_notes]).'</p>';
+    print '<p><b>Notes on grant publication logistics</b>: '.cleanNotes($row['grant_publication_logistics_notes']).'</p>';
 }
 
 if (isset($row['grant_financing_notes']) && $row['grant_publication_logistics_notes'] != '') {
-    print '<p><b>Notes on grant financing</b>: '.cleanNotes($row['grant_financing_notes]).'</p>';
+    print '<p><b>Notes on grant financing</b>: '.cleanNotes($row['grant_financing_notes']).'</p>';
 }
 
 if (isset($row['notes']) && $row['notes'] != '') {
