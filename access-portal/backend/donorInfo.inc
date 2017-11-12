@@ -16,6 +16,12 @@ if ($donorSelectResult -> num_rows == 0) {
   if (isset($row['affiliated_orgs']) && $row['affiliated_orgs'] != '') {
     print "<tr><td>Affiliated organizations (current or former; restricted to potential donees or others relevant to donation decisions)</td><td>".explodeDoneeCsv($row['affiliated_orgs']).'</td></tr>';
   }
+  if (isset($row['wikipedia_page']) && $row['wikipedia_page'] != '') {
+    print '<tr><td>Wikipedia page</td><td><a href="'.$row['wikipedia_page'].'">'.$row['wikipedia_page'].'</a></td></tr>';
+  }
+  if (isset($row['best_overview_url']) && $row['best_overview_url'] != '') {
+    print '<tr><td>Best overview URL</td><td><a href="'.$row['best_overview_url'].'">'.$row['best_overview_url'].'</a></td></tr>';
+  }
   if (isset($row['facebook_username']) && $row['facebook_username'] != '') {
     $facebook_username = $row['facebook_username'];
     $facebook_url = 'https://www.facebook.com/'.$facebook_username;
@@ -90,8 +96,28 @@ if ($donorSelectResult -> num_rows == 0) {
   print "</tbody>\n</table>\n";
 }
 
+if (isset($row['brief_history']) && $row['brief_history'] != '') {
+    print '<p><b>Brief history</b>: '.cleanNotes($row['brief_history]).'</p>';
+}
+
+if (isset($row['brief_donor_focus_notes']) && $row['brief_donor_focus_notes'] != '') {
+    print '<p><b>Brief notes on broad donor philosophy and major focus areas</b>: '.cleanNotes($row['brief_donor_focus_notes]).'</p>';
+}
+
+if (isset($row['grant_decision_logistics_notes']) && $row['grant_decision_logistics_notes'] != '') {
+    print '<p><b>Notes on grant decision logistics</b>: '.cleanNotes($row['grant_decision_logistics_notes]).'</p>';
+}
+
+if (isset($row['grant_publication_logistics_notes']) && $row['grant_publication_logistics_notes'] != '') {
+    print '<p><b>Notes on grant publication logistics</b>: '.cleanNotes($row['grant_publication_logistics_notes]).'</p>';
+}
+
+if (isset($row['grant_financing_notes']) && $row['grant_publication_logistics_notes'] != '') {
+    print '<p><b>Notes on grant financing</b>: '.cleanNotes($row['grant_financing_notes]).'</p>';
+}
+
 if (isset($row['notes']) && $row['notes'] != '') {
-    print '<p><b>Notes</b>: '.cleanNotes($row['notes']).'</p>';
+    print '<p><b>Miscellaneous notes</b>: '.cleanNotes($row['notes']).'</p>';
 }
 
 if ($stmt = $mysqli->prepare("select donee from donations where donee = ?")) {
