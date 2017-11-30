@@ -5,6 +5,10 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 # -- Separation from GiveWell
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('https://www.openphilanthropy.org/blog/open-philanthropy-project-now-independent-organization','The Open Philanthropy Project Is Now an Independent Organization','2017-06-12',NULL,'Holden Karnofsky','Open Philanthropy Project','Open Philanthropy Project,Good Ventures',NULL,'Status change',NULL,'The Open Philanthropy Project announces that it is now a separate entity from GiveWell, and that it has incorporated as a LLC. The change was effective 2017-06-01. See https://blog.givewell.org/2017/06/12/separating-givewell-open-philanthropy-project/ for the complementary post on the GiveWell blog');
+
+# -- Open Phil scientific research
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('https://www.openphilanthropy.org/blog/update-investigating-neglected-goals-biological-research','Update on Investigating Neglected Goals in Biological Research','2017-11-30',NULL,'Nick Beckstead','Open Philanthropy Project','Open Philanthropy Project,Good Ventures/not recommended by GiveWell or Open Philanthropy Project','Target Malaria','Broad donor strategy','Scientific research,Global health,Biosecurity and pandemic preparedness,Agriculture','The blog post describes the way the Open Philanthropy Project is identifying neglected goals in biological research. Previously the hope was to investigate sub-areas deeply and produce write-ups. Now, the approach is more "opportunistic": rather than do public write-ups, staff look out for good opportunities for shovel-ready or highly promising grants in the specific topics identified as having strong potential');
   
 # -- Open Phil moral patienthood
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
