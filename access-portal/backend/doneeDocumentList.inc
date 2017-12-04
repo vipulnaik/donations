@@ -1,6 +1,6 @@
 <?php
 
-$doneeDocumentSelectQuery = "select * from documents where affected_donees REGEXP '$donee' order by publication_date desc";
+$doneeDocumentSelectQuery = "select * from documents where affected_donees REGEXP ".'"'.str_replace('"','\"',$donee).'"'."  or publisher = ".'"'.str_replace('"','\"',$donee).'"'." order by publication_date desc";
 $doneeDocumentSelectResult = $mysqli -> query($doneeDocumentSelectQuery);
 if ($doneeDocumentSelectResult -> num_rows > 0) {
   print '<h4 id="doneeDocumentList">Full list of documents in reverse chronological order ('.($doneeDocumentSelectResult -> num_rows).' documents)</h4>';
