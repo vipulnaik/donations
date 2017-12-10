@@ -72,6 +72,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/vipul-naik-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-discretionary-regranting.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-incubation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-givewell-support.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-grants-to-givewell-top-charities.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-not-givewell-or-open-phil.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees.sql
