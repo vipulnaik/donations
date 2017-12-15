@@ -1,0 +1,3 @@
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('http://effective-altruism.com/ea/1ig/four_organizations_eas_should_fully_fund_for_2018/','Four Organizations EAs Should Fully Fund for 2018','2017-12-12',NULL,'Peter Hurford','Effective Altruism Forum','Peter Hurford','Charity Science Health,Rethink Charity,Sentience Institute,Wild-Animal Suffering Research','Donation suggestion list',NULL,'Peter Hurford makes the case to donate to four organizations that he plans to donate to in 2018, based on the promise of their programs as well as their room for more funding');
+

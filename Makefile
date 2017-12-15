@@ -32,12 +32,13 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/80k-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ace-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cfar-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/charity-science-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/dickens-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/charity-science-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-funds-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/givewell-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gwwc-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/hurford-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/miri-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/open-phil-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/oxprio.sql
