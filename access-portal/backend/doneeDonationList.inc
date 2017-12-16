@@ -21,7 +21,14 @@ for($i = 0; $i < $doneeDonationSelectResult -> num_rows; $i++) {
   print '<tr>';
   print '<td><a href="/donor.php?donor='.urlencode($row['donor']).'">'.$row['donor'].'</a></td>';
   if ($row['amount'] != '') {
-    print '<td align="right">'.number_format($row['amount'],2).'</td>';
+    if ($row['amount_original_currency'] && $row['original_currency']) {
+      $originalCurr = ' title="'
+        . number_format($row['amount_original_currency'],2)
+        . ' ' . $row['original_currency'] . '"';
+    } else {
+      $originalCurr = "";
+    }
+    print '<td align="right"' . $originalCurr . '>'.number_format($row['amount'],2).'</td>';
   } else {
     print '<td>--</td>';
   }

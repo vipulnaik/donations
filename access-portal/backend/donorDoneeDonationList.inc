@@ -30,7 +30,14 @@ print "</thead>\n<tbody>\n";
 while ($row = $result->fetch_assoc()) {
   print '<tr>';
   if ($row['amount'] != '') {
-    print '<td align="right">'.number_format($row['amount'],2).'</td>';
+    if ($row['amount_original_currency'] && $row['original_currency']) {
+      $originalCurr = ' title="'
+        . number_format($row['amount_original_currency'],2)
+        . ' ' . $row['original_currency'] . '"';
+    } else {
+      $originalCurr = "";
+    }
+    print '<td align="right"' . $originalCurr . '>'.number_format($row['amount'],2).'</td>';
   } else {
     print '<td>--</td>';
   }
