@@ -46,7 +46,7 @@ create table cause_area_sim_pre as select
   first_donor,
   second_donor,
   (select count(distinct donee) from cause_area_donor_donee_pairs
-     where donor in (first_donor, second_donor)
+     where donor in (first_donor, second_donor) and cause_area=cause_area_two_donors_one_donee.cause_area
    ) as `union_size`,
   sum(first_donor_total * second_donor_total) as weighted_dot_product
 from cause_area_two_donors_one_donee group by first_donor, second_donor, cause_area;
