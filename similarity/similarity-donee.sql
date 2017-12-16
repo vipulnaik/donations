@@ -21,9 +21,9 @@ create table donee_similarity_donor_donee_pairs as select donor, donee, coalesce
 create table donee_similarity_donor_donee_pairs_2 as select * from donee_similarity_donor_donee_pairs;
 
 create table donee_similarity_two_donees_one_donor as select
-  donee_similarity_donor_donee_pairs.donor as first_donee,
-  donee_similarity_donor_donee_pairs_2.donor as second_donee,
-  donee_similarity_donor_donee_pairs.donee as donor,
+  donee_similarity_donor_donee_pairs.donee as first_donee,
+  donee_similarity_donor_donee_pairs_2.donee as second_donee,
+  donee_similarity_donor_donee_pairs.donor as donor,
   donee_similarity_donor_donee_pairs.total_donation as first_donee_total,
   donee_similarity_donor_donee_pairs_2.total_donation as second_donee_total,
   donee_similarity_donor_donee_pairs.num_donations as first_num_donations,
