@@ -1,3 +1,7 @@
+# This is the cause area based similarity computation.  It is
+# similar to similarity/similarity-3.sql, except now we have to
+# keep track of the cause area at each step.
+
 -- Modified from https://stackoverflow.com/a/36823694/3422337
 
 drop table if exists cause_area_donor_donee_pairs;
