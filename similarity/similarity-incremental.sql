@@ -5,8 +5,6 @@ delimiter $$
 create procedure updateSimilarity(dnr varchar(100))
 begin
     delete from donor_donee_pairs where donor=dnr;
-    delete from donor_donee_pairs_2 where donor=dnr;
-
     insert into donor_donee_pairs (donor, donee, total_donation, num_donations)
     select
         donor,
@@ -15,6 +13,7 @@ begin
         count(*) as num_donations
     from donations where donor=dnr group by donor, donee;
 
+    delete from donor_donee_pairs_2 where donor=dnr;
     insert into donor_donee_pairs_2 (donor, donee, total_donation, num_donations)
     select
         donor,
