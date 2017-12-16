@@ -74,7 +74,7 @@ begin
     from cause_area_donor_donee_pairs where donor=dnr group by donor, cause_area;
 
     delete from cause_area_sim_pre where first_donor=dnr or second_donor=dnr;
-    insert into sim_pre (
+    insert into cause_area_sim_pre (
         cause_area,
         first_donor,
         second_donor,
@@ -94,7 +94,7 @@ begin
     group by first_donor, second_donor, cause_area;
 
     delete from cause_area_sim where first_donor=dnr or second_donor=dnr;
-    insert into sim (
+    insert into cause_area_sim (
         cause_area,
         first_donor,
         second_donor,
