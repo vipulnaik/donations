@@ -4,15 +4,17 @@ drop table if exists donee_similarity_donor_donee_pairs;
 
 drop table if exists donee_similarity_donor_donee_pairs_2;
 
-drop table if exists donee_similarity_two_donors_one_donee;
+drop table if exists donee_similarity_two_donees_one_donor;
 
-drop table if exists donee_similarity_donor_summary;
+drop table if exists donee_similarity_donee_summary;
 
-drop table if exists donee_similarity_donor_summary_2;
+drop table if exists donee_similarity_donee_summary_2;
 
 drop table if exists donee_similarity_sim_pre;
 
 drop table if exists donee_similarity_sim;
+
+drop table if exists donee_similarity_similarity;
 
 create table donee_similarity_donor_donee_pairs as select donor, donee, coalesce(sum(amount), 0) as total_donation, count(*) as num_donations from donations group by donor, donee;
 
@@ -64,9 +66,7 @@ from
   left join donee_similarity_donee_summary_2 on
     donee_similarity_sim_pre.second_donee = donee_similarity_donee_summary_2.donee;
 
-truncate table donee_similarity_similarity;
-
-insert into donee_similarity_similarity
+create table donee_similarity_similarity as
 select
   first_donee,
   second_donee,
