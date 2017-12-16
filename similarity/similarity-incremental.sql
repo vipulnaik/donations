@@ -44,7 +44,24 @@ begin
     from donor_donee_pairs
     left join donor_donee_pairs_2 on
         donor_donee_pairs.donee = donor_donee_pairs_2.donee
-        and (donor_donee_pairs.donor=dnr or donor_donee_pairs_2.donor=dnr);
+        and (donor_donee_pairs.donor=dnr or donor_donee_pairs_2.donor=dnr)
+    where donor_donee_pairs.donor=dnr;
+
+    delete from donor_summary where donor=dnr;
+    insert into donor_summary (donor, donee_count, weighted_magnitude)
+    select
+        donor,
+        count(distinct donee) as donee_count,
+        sqrt(sum(power(total_donation, 2))) as weighted_magnitude
+    from donor_donee_pairs where donor=dnr group by donor;
+
+    delete from donor_summary_2 where donor=dnr;
+    insert into donor_summary_2 (donor, donee_count, weighted_magnitude)
+    select
+        donor,
+        count(distinct donee) as donee_count,
+        sqrt(sum(power(total_donation, 2))) as weighted_magnitude
+    from donor_donee_pairs where donor=dnr group by donor;
 
 
 end$$
