@@ -1,19 +1,35 @@
 <?php
-$donorSimilarityQuery = <<<'EOD'
-select first_donor, second_donor, first_donor_size, second_donor_size,
-    intersect_size, union_size,
-    jaccard_index, cosine_similarity, weighted_cosine_similarity
-from similarity
-where first_donor = ?
-order by jaccard_index desc;
+if ($_REQUEST['cause_area_filter']) {
+  $donorSimilarityQuery = <<<'EOD'
+      select first_donor, second_donor, first_donor_size, second_donor_size,
+          intersect_size, union_size,
+          jaccard_index, cosine_similarity, weighted_cosine_similarity
+      from cause_area_similarity
+      where first_donor = ?
+            and cause_area = ?
+      order by jaccard_index desc;
 EOD;
+} else {
+  $donorSimilarityQuery = <<<'EOD'
+      select first_donor, second_donor, first_donor_size, second_donor_size,
+          intersect_size, union_size,
+          jaccard_index, cosine_similarity, weighted_cosine_similarity
+      from similarity
+      where first_donor = ?
+      order by jaccard_index desc;
+EOD;
+}
 
 if ($stmt = $mysqli->prepare($donorSimilarityQuery)) {
   /*
    * The number of occurrences of "s" in the string below, as well as the
    * number of occurrences of $donor, must match the number of occurrences of
    * "?" in the query stored in $donorSimilarityQuery above. */
-  $stmt->bind_param("s", $donor);
+  if ($_REQUEST['cause_area_filter']) {
+    $stmt->bind_param("ss", $donor, $_REQUEST['cause_area_filter']);
+  } else {
+    $stmt->bind_param("s", $donor);
+  }
   $stmt->execute();
   $result = $stmt->get_result();
 
