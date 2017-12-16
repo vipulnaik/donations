@@ -45,7 +45,7 @@ begin
     left join donor_donee_pairs_2 on
         donor_donee_pairs.donee = donor_donee_pairs_2.donee
         and (donor_donee_pairs.donor=dnr or donor_donee_pairs_2.donor=dnr)
-    where donor_donee_pairs.donor=dnr;
+    where donor_donee_pairs.donor=dnr or donor_donee_pairs_2.donor=dnr;
 
     delete from donor_summary where donor=dnr;
     insert into donor_summary (donor, donee_count, weighted_magnitude)
