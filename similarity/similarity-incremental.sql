@@ -43,6 +43,9 @@ begin
     from donor_donee_pairs
     left join donor_donee_pairs_2 on
         donor_donee_pairs.donee = donor_donee_pairs_2.donee
+        # yes, we already have the following condition in the "where" clause
+        # below, but having it here in addition seems to make the
+        # procedure run faster
         and (donor_donee_pairs.donor=dnr or donor_donee_pairs_2.donor=dnr)
     where donor_donee_pairs.donor=dnr or donor_donee_pairs_2.donor=dnr;
 
