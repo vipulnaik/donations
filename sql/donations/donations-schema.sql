@@ -9,7 +9,7 @@ create table donations (
     currency_conversion_basis enum('donor calculation','donee calculation','Peter Hurford','Bloomberg'),
     fraction float(3, 2),
     donation_date date,
-    donation_date_precision enum('day','month','year','multi-year'),
+    donation_date_precision enum('day','month','quarter','year','multi-year'),
     donation_date_basis enum('transaction','donation log','date of donation announced in announcement','date of donation announcement','donee contributor list', 'IATI','Effective Altruism Survey'),
     cause_area varchar(100),
     url varchar(200),

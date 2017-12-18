@@ -35,7 +35,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   if ($row['donation_date'] != '') {
     $donation_date = $row['donation_date'];
     $donation_date_precision = $row['donation_date_precision'];
-    if ($donation_date_precision == 'month') {
+    if ($donation_date_precision == 'month' or $donation_date_precision == 'quarter') {
       $donation_date = substr($donation_date,0,7);
     } else if ($donation_date_precision == 'year' or $donation_date_precision == 'multi-year') {
       $donation_date = substr($donation_date,0,4);
