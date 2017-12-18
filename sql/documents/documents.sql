@@ -1,11 +1,9 @@
-# -- Donor lottery Carl salesmanship
+# -- CEA donation case
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('http://effective-altruism.com/ea/14d/donor_lotteries_demonstration_and_faq/','Donor lotteries: demonstration and FAQ','2016-12-07','2017-01-11','Carl Shulman','Effective Altruism Forum','Timothy Telleen-Lawton,Gregory Lewis,Ajeya Cotra,Rohin Shah,Helen Toner,Nicole Ross,Howie Lempel,Rebecca Raible,Pablo Stafforini,Aaron Gertler,Brayden McLean,Benjamin Hoffman,Catherine Olsson,Eric Herboso,Ian David Moss,Glenn Willen,Jacob Steinhardt,Brandon Reinhart','Donor lottery','Donee donation case',NULL,'Carl Shulman announces a donor lottery coordinated/sponsored by Paul Christiano, and provides a FAQ discussing questions people might have for participating in the lottery'),
-  ('http://effective-altruism.com/ea/15g/small_donors_can_plan_to_make_better_bets_than/','Risk-neutral donors should plan to make bets at the margin at least as well as giga-donors in expectation','2016-12-31',NULL,'Carl Shulman','Effective Altruism Forum',NULL,'Donor lottery','Miscellaneous commentary',NULL,'Carl Shulman argues that using a "donate to a giga-donor or its marginal charities" approach, a donor should be able to do at least as well as a giga-donor, if risk-neutral. This post comes while Shulman has been promoting a donor lottery sponsored by Paul Christiano, which is inspired by thinking Shulman articulates in the post');
-  
-# -- Donee donation cases: other
+  ('http://effective-altruism.com/ea/14p/cea_is_fundraising_winter_2016/','CEA is Fundraising! (Winter 2016)','2016-12-06',NULL,'William MacAskill','Centre for Effective Altruism',NULL,'Centre for Effective Altruism','Donee donation case','Effective altruism/movement growth','CEA makes its case to be funded in 2016');
+
+# -- TLYCS donation case
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('http://effective-altruism.com/ea/14p/cea_is_fundraising_winter_2016/','CEA is Fundraising! (Winter 2016)','2016-12-06',NULL,'William MacAskill','Centre for Effective Altruism',NULL,'Centre for Effective Altruism','Donee donation case','Effective altruism/movement growth','CEA makes its case to be funded in 2016'),
   ('http://effective-altruism.com/ea/19k/the_life_you_can_saves_2016_annual_report/',"The Life You Can Save's 2016 Annual Report",# '
    '2017-04-26',NULL,'Jon Behar','The Life You Can Save',NULL,'The Life You Can Save','Donee donation case','Effective altruism/movement growth/fundraising','TLYCS provides an annual report of money moved and influenced');
 
@@ -55,4 +53,9 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('http://effective-altruism.com/ea/1ik/sentience_institute_2017_accomplishments_2018/','Sentience Institute 2017 Accomplishments, 2018 Plans, and Room for Funding','2017-12-14',NULL,'Kelly Witwicki','Sentience Institute',NULL,'Sentience Institute','Donee donation case','Animal welfare','The blog post provides an update on the activities of the Sentience Institute since its launch June 2017, its plans for 2018, and its estimate of its own room for more funding ($185,000)');
+
+# -- Effective Altruism Foundation docs
+
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('http://effective-altruism.com/ea/1in/effective_altruism_foundation_update_plans_for/','Effective Altruism Foundation update: Plans for 2018 and room for more funding','2017-12-15',NULL,'Jonas Vollmer','Effective Altruism Foundation',NULL,'Effective Altruism Foundation,Raising for Effective Giving,Foundational Research Institute,Wild-Animal Suffering Research','Donee donation case','Effective altruism/movement growth/s-risk reduction','The document describes the 2018 plan and room for more funding of the Effective Altruism Foundation. Subsidiaries include Raising for Effective Giving, Foundational Research Institute, and Wild-Animal Suffering Research, Also cross-posted at https://ea-foundation.org/blog/our-plans-for-2018/ (own blog)');
 
