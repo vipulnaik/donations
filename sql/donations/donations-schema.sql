@@ -7,7 +7,7 @@ create table donations (
     original_currency enum('AUD','BRL','BTC','CAD','CHF','CZK','DKK','ETH','EUR','GBP','NOK','NZD','SEK','SGD','USD','XRP','ZAR') DEFAULT 'USD',
     currency_conversion_date date,
     currency_conversion_basis enum('donor calculation','donee calculation','Peter Hurford','Bloomberg'),
-    fraction float(3, 2),
+    fraction float(5, 4),
     donation_date date,
     donation_date_precision enum('day','month','quarter','year','multi-year'),
     donation_date_basis enum('transaction','donation log','date of donation announced in announcement','date of donation announcement','donee contributor list', 'IATI','Effective Altruism Survey'),
