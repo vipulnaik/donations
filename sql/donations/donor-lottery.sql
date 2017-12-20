@@ -1,3 +1,5 @@
+# -- 2016 donor lottery (Paul Christiano and Carl Shulman)
+
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis,
     cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer)
     values
@@ -15,3 +17,18 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
     ('Ian David Moss', 'Donor lottery', 2500.00, NULL, '2016-12-31','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Glenn Willen', 'Donor lottery', 500.00, NULL, '2017-01-02','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Brandon Reinhart', 'Donor lottery', 5000.00, NULL, '2017-01-08','day', 'transaction',  NULL, 'http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+# -- 2017 donor lottery (coordinated by CEA)
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, url, notes)
+    values
+    ('Paul Christiano', 'Donor lottery', 97.50, '2017-12-16', 'day', 'transaction', 'https://app.effectivealtruism.org/lotteries/31553453298138','See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery'),
+    ('JP Addison','Donor lottery',12000, '2017-12-16', 'day', 'transaction', 'https://app.effectivealtruism.org/lotteries/31553453298138','See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery'),
+    ('Sam Deere','Donor lottery',195.30, '2017-12-16', 'day', 'transaction', 'https://app.effectivealtruism.org/lotteries/31553453298138','See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery'),
+    ('Kevin Watkinson','Donor lottery',19.44,'2017-12-16', 'day', 'transaction','https://app.effectivealtruism.org/lotteries/31553453298138','See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery'),
+    ('Ajeya Cotra','Donor lottery', 16463,'2017-12-16', 'day', 'transaction','https://app.effectivealtruism.org/lotteries/31553453298138','See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery'),
+    ('Eric Herboso','Donor lottery',19.26,'2017-12-16', 'day', 'transaction','https://app.effectivealtruism.org/lotteries/31553453298138','See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery'),
+    ('Sören Mindermann','Donor lottery',2664.71,'2017-12-16', 'day', 'transaction','https://app.effectivealtruism.org/lotteries/31553453298138','See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery'),
+    ('Rohin Shah','Donor lottery',10540,'2017-12-17','day', 'transaction','https://app.effectivealtruism.org/lotteries/31553453298138','See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery'),
+    ('Robert Yaman','Donor lottery',97.50,'2017-12-18','day', 'transaction','https://app.effectivealtruism.org/lotteries/31553453298138','See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery'),
+    ('Julio Banfi','Donor lottery',19.26,'2017-12-18','day', 'transaction','https://app.effectivealtruism.org/lotteries/31553453298138','See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery');
