@@ -54,3 +54,8 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('http://effective-altruism.com/ea/1in/effective_altruism_foundation_update_plans_for/','Effective Altruism Foundation update: Plans for 2018 and room for more funding','2017-12-15',NULL,'Jonas Vollmer','Effective Altruism Foundation',NULL,'Effective Altruism Foundation,Raising for Effective Giving,Foundational Research Institute,Wild-Animal Suffering Research','Donee donation case','Effective altruism/movement growth/s-risk reduction','The document describes the 2018 plan and room for more funding of the Effective Altruism Foundation. Subsidiaries include Raising for Effective Giving, Foundational Research Institute, and Wild-Animal Suffering Research, Also cross-posted at https://ea-foundation.org/blog/our-plans-for-2018/ (own blog)');
 
+# -- Global Priorities Institute docs
+
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('http://effective-altruism.com/ea/1ij/new_releases_global_priorities_institute_research/','New releases: Global Priorities Institute research agenda and posts we’re hiring for','2017-12-14',NULL,'Michelle Hutchinson','Global Priorities Institute',NULL,'Global Priorities Institute','Donee periodic update','Cause prioritization','Hutchinson reports on the progress and plans for the Global Priorities Institute, housed at Oxford University, and also describes the posts it is hiring for');
+
