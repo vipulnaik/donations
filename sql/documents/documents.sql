@@ -23,7 +23,7 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 # -- OpenAI
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('https://slatestarcodex.com/2015/12/17/should-ai-be-open/','Should AI Be Open?','2015-12-17',NULL,'Scott Alexander','Slate Star Codex',NULL,'OpenAI','Evaluator review of donee','AI risk','Scott Alexander draws a parallel between "open" AI and open nuclear weapons, to highlight that openness is not necessarily good here. Plus a lot of general rambling'),
-  ('http://lesswrong.com/r/discussion/lw/oul/openai_makes_humanity_less_safe/','OpenAI makes humanity less safe','2017-04-03',NULL,'Ben Hoffman','LessWrong','Open Philanthropy Project','OpenAI','Evaluator review of donee','AI risk','Hoffman argues that OpenAI is good intentions gone awry, and is critical of the Open Philanthropy Project donation to OpenAI');
+  ('http://lesswrong.com/r/discussion/lw/oul/openai_makes_humanity_less_safe/','OpenAI makes humanity less safe','2017-04-03',NULL,'Benjamin Hoffman','LessWrong','Open Philanthropy Project','OpenAI','Evaluator review of donee','AI risk','Hoffman argues that OpenAI is good intentions gone awry, and is critical of the Open Philanthropy Project donation to OpenAI');
 
 # -- Older stuff on Deworm the World Initiative
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
