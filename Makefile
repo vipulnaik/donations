@@ -46,9 +46,11 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/oxprio.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/rethink-charity-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/aaron-gertler-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ajeya-cotra-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/alexander-berger-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/arnold-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ben-kuhn-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/blake-borgeson-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/brian-tomasik-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donor-lottery.sql
@@ -58,6 +60,11 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/elie-hassenfeld-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/elizabeth-van-nostrand-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/gates-foundation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-discretionary-regranting.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-incubation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-givewell-support.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-grants-to-givewell-top-charities.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-not-givewell-or-open-phil.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/google-org.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/haseeb-qureshi-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/holden-karnofsky-donations.sql
@@ -73,12 +80,8 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/pablo-stafforini-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/patrick-brinich-langlois-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/peter-hurford-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/sophie-monahan-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/vipul-naik-donations.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-discretionary-regranting.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-incubation-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-givewell-support.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-grants-to-givewell-top-charities.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-not-givewell-or-open-phil.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/social-media-mass-grab.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/individual-donors.sql
