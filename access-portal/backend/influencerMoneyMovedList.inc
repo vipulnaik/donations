@@ -5,8 +5,8 @@ $influencerMoneyMovedSelectResult = $mysqli -> query($influencerMoneyMovedSelect
 if ($influencerMoneyMovedSelectResult -> num_rows > 0) {
   print '<h4 id="influencerMoneyMovedList">Money moved infomation for influencer '.$influencer.' ('.($influencerMoneyMovedSelectResult -> num_rows).' rows)</h4>';
   print '<table id="myTableInfluencerMoneyMovedList" class="tablesorter">'."\n";
-  print "<tr>\n";
   print "<thead>\n";
+  print "<tr>\n";
   print "   <th>Identified donees</th>\n";
   print "   <th>Identified donors</th>\n";
   print "   <th>Amount (current USD)</th>\n";
