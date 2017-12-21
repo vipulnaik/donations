@@ -18,7 +18,7 @@ print '<body>';
 print '<script>$(document).ready(function()
     {
         $("#myTableInfluencerDocumentList").tablesorter({textExtraction: stripCommas});
-        $("#myTableMoneyMovedList").tablesorter({textExtraction: stripCommas});
+        $("#myTableInfluencerMoneyMovedList").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
 print "<h3>$influencer money moved</h3>";
