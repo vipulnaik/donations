@@ -1,7 +1,3 @@
-insert into donations(donor, donee, amount, fraction, donation_date,
-    donation_date_precision, donation_date_basis, cause_area, url, notes,
-    payment_modality, match_eligible, goal_amount, influencer, employer_match,
-    matching_employer, amount_original_currency, original_currency) values
-    ('Joey Savoie','Against Malaria Foundation, Deworm the World, GiveDirectly, The Humane League, Schistosomiasis Control Initiative (SCI), Vegan Outreach, Effective fundraising',NULL,NULL,'2013-01-01','year','donation log','Global health and poverty','https://eahub.org/user/joey-savoie',NULL,NULL,NULL,NULL,NULL,NULL,NULL,6000,'CAD')
-    ,('Joey Savoie','Various',NULL,NULL,'2013-01-01','multi-year','donation log',NULL,'https://eahub.org/user/joey-savoie','Donations before 2013',NULL,NULL,NULL,NULL,NULL,NULL,19000,'CAD')
-;
+insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, amount_original_currency, original_currency) values
+  ('Joey Savoie','Against Malaria Foundation,Deworm the World,GiveDirectly,The Humane League,Schistosomiasis Control Initiative,Vegan Outreach,Effective fundraising',6000,NULL,'2013-01-01','year','donation log','Global health and poverty','https://eahub.org/user/joey-savoie','The original amount is in Canadian dollars (CAD) but since the exact date is not included, we are just using a 1:1 conversion rate, which is a reasonable approximation of the conversion rate',6000,'CAD'),
+  ('Joey Savoie','Various',19000,NULL,'2013-01-01','multi-year','donation log',NULL,'https://eahub.org/user/joey-savoie','Donations before 2013. The original amount is in Canadian dollars (CAD) but since the exact date is not included, we are just using a 1:1 conversion rate, which is a reasonable approximation of the conversion rate',19000,'CAD');
