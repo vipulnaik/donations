@@ -6,6 +6,7 @@ if ($influencerMoneyMovedSelectResult -> num_rows > 0) {
   print '<h4 id="influencerMoneyMovedList">Money moved infomation for influencer '.$influencer.' ('.($influencerMoneyMovedSelectResult -> num_rows).' rows)</h4>';
   print '<table id="myTableInfluencerMoneyMovedList" class="tablesorter">'."\n";
   print "<tr>\n";
+  print "<thead>\n";
   print "   <th>Identified donees</th>\n";
   print "   <th>Identified donors</th>\n";
   print "   <th>Amount (current USD)</th>\n";
@@ -14,6 +15,8 @@ if ($influencerMoneyMovedSelectResult -> num_rows > 0) {
   print "   <th>Document</th>\n";
   print "   <th>Notes</th>\n";
   print "</tr>\n";
+  print "</thead>\n";
+  print "<tbody>\n";
   for ($i=0; $i < $influencerMoneyMovedSelectResult -> num_rows; $i++) {
     $moneyMovedRow = $influencerMoneyMovedSelectResult -> fetch_assoc();
     print "<tr>\n";
@@ -30,5 +33,7 @@ if ($influencerMoneyMovedSelectResult -> num_rows > 0) {
     print "    <td>".cleanNotes($moneyMovedRow['notes'])."</td>\n";
     print "</tr>\n";
   }
+  print "</tbody>\n";
+  print "</table>\n";
 }
 ?>
