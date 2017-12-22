@@ -54,6 +54,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/blake-borgeson-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/brian-tomasik-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/catherine-hollander-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/chelsea-tabart-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donor-lottery.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ea-funds.sql
