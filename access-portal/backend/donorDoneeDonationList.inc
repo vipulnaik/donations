@@ -94,7 +94,7 @@ while ($row = $result->fetch_assoc()) {
     );
   }
   if ($val = $row['fraction']) {
-    array_push($notes_key_val_pairs, sprintf("Percentage of total: %.2f", $val * 100) . '%');
+    array_push($notes_key_val_pairs, sprintf("Percentage of total donor spend in the corresponding batch of donations: %.2f", $val * 100) . '%');
   }
   if ($val = $row['donation_announcement_date']) {
     $precision = $row['donation_announcement_date_precision'];
