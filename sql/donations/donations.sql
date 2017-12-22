@@ -6,12 +6,7 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes) values
   ('Jacob Trefethen','Environmental Data and Governance Initiative',NULL,1.0,'2017-01-16','day','date of donation announcement','Environmentalism/watchdog','http://effective-altruism.com/ea/16b/why_i_donated_to_the_environmental_data/','Donation made to small nonprofit based on inside information and close contact with the organization, making it easier to evaluate');
 
-# -- Andrew Martin donations
-insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes) values
-  ('Andrew Martin','GiveWell top charities',NULL,1.0,'2017-12-11','day','date of donation announcement','Global health and cash transfers','https://blog.givewell.org/2017/12/11/staff-members-personal-donations-for-giving-season-2017/#Andrew','Donor decided to grant to GiveWell for regranting, rather than directly donating to top charities, because of his belief in the importance of the flexibility GiveWell gets to provide funding to whichever charities have the most pressing funding needs');
-
 # -- Chelsea Tabart donations
-
 
 # -- The Oxford Prioritisation Project grant
 insert into donations(donor, donee, amount, fraction, donation_date,
