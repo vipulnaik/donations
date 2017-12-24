@@ -42,12 +42,13 @@ usort($donors, "cmpDonorsByAmount");
 print '<table id="myTableDoneeDonationAmountsByDonorAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
 print "  <tr>\n    <th>Donor</th>\n";
-print "    <th>Total</th>\n  </tr>\n";
+print "    <th>Total</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] != 0) {
     print "    <th>$year</th>\n";
   }
 }
+print "    </tr>\n";
 print "</thead>\n<tbody>\n";
 
 foreach ($donors as $donor) {
