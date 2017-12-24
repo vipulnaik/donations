@@ -20,6 +20,6 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   # -- 2017
   ('Alexander Berger','GiveWell top charities',NULL,0.8,'2017-12-18','day','date of donation announcement','Global health and cash transfers','https://www.openphilanthropy.org/blog/staff-members-personal-donations-giving-season-2017#Alexander','Same allocation as in 2016, for same reasons','GiveWell'),
   ('Alexander Berger','GiveWell',NULL,0.05,'2017-12-18','day','date of donation announcement','Charity evaluator','https://www.openphilanthropy.org/blog/staff-members-personal-donations-giving-season-2017#Alexander','Same allocation as in 2016, for same reasons','GiveWell'),
-  ('Alexander Berger','GiveDirectly',NULL,0.05,'2017-12-18','day','date of donation announcement','Charity evaluator','https://www.openphilanthropy.org/blog/staff-members-personal-donations-giving-season-2017#Alexander','Same allocation as in 2016, for same reasons','GiveWell');
+  ('Alexander Berger','GiveDirectly',NULL,0.05,'2017-12-18','day','date of donation announcement','Cash transfers','https://www.openphilanthropy.org/blog/staff-members-personal-donations-giving-season-2017#Alexander','Same allocation as in 2016, for same reasons','GiveWell');
   #  -- 10% to as-yet-unspecified animal welfare charities recommended by Lewis Bollard
 
