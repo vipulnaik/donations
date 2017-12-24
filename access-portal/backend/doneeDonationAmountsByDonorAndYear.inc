@@ -42,12 +42,12 @@ usort($donors, "cmpDonorsByAmount");
 print '<table id="myTableDoneeDonationAmountsByDonorAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
 print "  <tr>\n    <th>Donor</th>\n";
+print "    <th>Total</th>\n  </tr>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] != 0) {
     print "    <th>$year</th>\n";
   }
 }
-print "    <th>Total</th>\n  </tr>\n";
 print "</thead>\n<tbody>\n";
 
 foreach ($donors as $donor) {
@@ -57,12 +57,12 @@ foreach ($donors as $donor) {
     . ' (<a href="/donorDonee.php?donor=' . urlencode($donor) . '&amp;donee='
     . urlencode($donee) . '">filter this donee</a>)'
     .'</td>'."\n";
+  print '    <td align="right"><strong>'.number_format($donorDonationAmount[$donor],2).'</strong></td>'."\n";
   foreach ($years as $year) {
     if ($yearDonationAmount[$year] != 0) {
       print '    <td align="right">'.number_format($donationAmountByDonorAndYear[$donor][$year],2).'</td>'."\n";
     }
   }
-  print '    <td align="right"><strong>'.number_format($donorDonationAmount[$donor],2).'</strong></td>'."\n";
   print "  </tr>\n";
 }
 
