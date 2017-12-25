@@ -1,0 +1,5 @@
+# -- WAS Research docs
+
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('http://effective-altruism.com/ea/1i4/wildanimal_suffering_researchs_plans_for_2018_and/','Wild-Animal Suffering Research’s Plans for 2018 and RFMF','2017-12-06',NULL,'Tobias Pulver','Effective Altruism Forum',NULL,'Wild-Animal Suffering Research','Donee donation case','Animal welfare/wild animal suffering','The post describes the planned activities of Wild-Animal Suffering Research (WASR) for the years 2018 to 2020, and estimates room for more funding for minimum and maximum growth of $100,173 and $161,205 respectively'),
+  ('http://www.zachgroff.com/2017/12/why-i-am-donating-to-wild-animal.html','Why I am Donating to Wild Animal Suffering Research','2017-12-21',NULL,'Zach Groff',NULL,'Zach Groff','Wild-Animal Suffering Research','Single donation documentation','Animal welfare/wild animal suffering','The post describes why the donor is interested in wild animal suffering, and why he considers the donee organization particularly promising');

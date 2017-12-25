@@ -40,11 +40,6 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('http://effective-altruism.com/ea/1e8/should_eas_think_twice_before_donating_to_gfi/','Should EAs think twice before donating to GFI?','2017-08-31',NULL,'Kevin Watkinson','Effective Altruism Forum','Open Philanthropy Project','The Good Food Institute','Third-party case against donation','Animal welfare','The post argues against donations to The Good Food Institute, noting its limited track record as well as the huge amount of funding it is already receiving from the Open Philanthropy Project. This post is made shortly after an exchange between the post author (Kevin Watkinson) and Holden Karnofsky of the Open Philanthropy Project in http://www.openphilanthropy.org/blog/march-2017-open-thread?page=1#comment-305 (the open thread of the Open Philanthropy Project). The post also critiques Animal Charity Evaluators (ACE) for a positive assessment of GFI, and comments include a response from an ACE employee and an ACE board member (neither in an official capacity)');
 
-# -- WAS Research docs
-
-insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('http://effective-altruism.com/ea/1i4/wildanimal_suffering_researchs_plans_for_2018_and/','Wild-Animal Suffering Research’s Plans for 2018 and RFMF','2017-12-06',NULL,'Tobias Pulver','Effective Altruism Forum',NULL,'Wild-Animal Suffering Research','Donee donation case','Animal welfare/wild animal suffering','The post describes the planned activities of Wild-Animal Suffering Research (WASR) for the years 2018 to 2020, and estimates room for more funding for minimum and maximum growth of $100,173 and $161,205 respectively');
-
 # -- Sentience Institute docs
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values

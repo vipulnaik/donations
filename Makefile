@@ -45,6 +45,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/open-phil-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/oxprio.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/rethink-charity-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/was-research-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/aaron-gertler-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ajeya-cotra-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/alexander-berger-donations.sql
