@@ -3,6 +3,7 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     payment_modality, match_eligible, goal_amount, influencer, employer_match,
     matching_employer, special_donation_reason)
     values
+    ('Patrick Brinich-Langlois','Machine Intelligence Research Institute',3000,NULL,'2017-12-10','day','donation log','AI risk','http://www.patbl.com/misc/other/donations/',NULL,NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Patrick Brinich-Langlois','Effective Altruism Funds',20000,NULL,'2017-08-28','day','donation log','Effective altruism/far future','http://www.patbl.com/misc/other/donations/','Donation earmarked for the Long-Term Future Fund managed by Nick Beckstead', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Patrick Brinich-Langlois','The Humane League',117.32,NULL,'2017-08-12','day','donation log','Animal welfare/factory farming','http://www.patbl.com/misc/other/donations/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
     ('Patrick Brinich-Langlois','Effective Altruism Funds',7500,NULL,'2017-03-25','day','donation log','Effective altruism/far future','http://www.patbl.com/misc/other/donations/','Donation earmarked for the Long-Term Future Fund managed by Nick Beckstead', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
