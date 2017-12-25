@@ -96,7 +96,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/social-media-mass-grab.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/aiwatch-update.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/individual-donors.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/private-foundations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/private-foundations-and-subsidiaries.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/aiwatch-update.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/gifts.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved.sql
