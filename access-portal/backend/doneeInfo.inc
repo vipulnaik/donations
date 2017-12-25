@@ -78,7 +78,7 @@ if ($doneeSelectResult -> num_rows == 0) {
     print '<tr><td>Timelines wiki page</td><td><a href="'.$row['timelines_wiki_page'].'">'.$row['timelines_wiki_page'].'</a></td></tr>';
   }
   if (isset($row['aiwatch']) && $row['aiwatch'] == "1") {
-    $aiwatch_url = 'https://aiwatch.issarice.com/?organization='.urlencode($row['donor']);
+    $aiwatch_url = 'https://aiwatch.issarice.com/?organization='.urlencode($row['donee']);
     print '<tr><td>AI Watch page</td><td><a href="'.$aiwatch_url.'">'.$aiwatch_url.'</a></td></tr>';
   }
   if ($row['notes'] != '') {
