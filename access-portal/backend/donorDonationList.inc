@@ -19,7 +19,10 @@ print "</thead>\n<tbody>\n";
 for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   $row = $donorDonationSelectResult -> fetch_assoc();
   print '<tr>';
-  print '<td><a href="/donee.php?donee='.urlencode($row['donee']).'">'.$row['donee'].'</a></td>';
+  print '<td><a href="/donee.php?donee='.urlencode($row['donee']).'">'.$row['donee'].'</a>';
+  if (isset($row['donation_earmark'])) {
+    print ' (Earmark: '.$row['donation_earmark'].')'; 
+  }
   if ($row['amount'] != '') {
     if ($row['amount_original_currency'] && $row['original_currency']) {
       $originalCurr = ' title="'
@@ -66,9 +69,6 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
 
   /* Build up the JSON-like key-value pairs in the notes column */
   $notes_key_val_pairs = array();
-  if ($val = $row['donation_earmark']) {
-    array_push($notes_key_val_pairs, sprintf("earmark: %s", $val));
-  }
   if ($val = $row['affected_regions']) {
     array_push($notes_key_val_pairs, sprintf("affected regions: %s", $val));
   }
