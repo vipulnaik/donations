@@ -66,6 +66,9 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
 
   /* Build up the JSON-like key-value pairs in the notes column */
   $notes_key_val_pairs = array();
+  if ($val = $row['donation_earmark']) {
+    array_push($notes_key_val_pairs, sprintf("earmark: %s", $val));
+  }
   if ($val = $row['affected_regions']) {
     array_push($notes_key_val_pairs, sprintf("affected regions: %s", $val));
   }
