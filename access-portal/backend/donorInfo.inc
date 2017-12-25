@@ -93,7 +93,7 @@ if ($donorSelectResult -> num_rows == 0) {
   } else {
     print '<tr><td>Data entry method on Donations List Website</td><td>Manual (no scripts used)</td></tr>';
   }
-  if (isset($row['aiwatch']) && $row['aiwatch'] == "true" && isset($row['donor_type'])) {
+  if (isset($row['aiwatch']) && $row['aiwatch'] == "1" && isset($row['donor_type'])) {
     $aiwatch_url = 'https://aiwatch.issarice.com';
     if ($row['donor_type'] == "Individual") {
       $aiwatch_url = 'https://aiwatch.issarice.com/?person='.urlencode($row['donor']);
