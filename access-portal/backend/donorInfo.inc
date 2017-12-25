@@ -93,6 +93,15 @@ if ($donorSelectResult -> num_rows == 0) {
   } else {
     print '<tr><td>Data entry method on Donations List Website</td><td>Manual (no scripts used)</td></tr>';
   }
+  if (isset($row['aiwatch']) && $row['aiwatch'] == "true" && isset($row['donor_type'])) {
+    $aiwatch_url = 'https://aiwatch.issarice.com';
+    if ($row['donor_type'] == "Individual") {
+      $aiwatch_url = 'https://aiwatch.issarice.com/?person='.urlencode($row['donor']);
+    } else if ($row['donor_type'] == "Private foundation" or $row['donor_type'] == "Subsidiary") {
+      $aiwatch_url = 'https://aiwatch.issarice.com/?organization='.urlencode($row['donor']);
+    }
+    print '<tr><td>AI Watch page</td><td><a href="'.$aiwatch_url.'">'.$aiwatch_url.'</a></td></tr>';
+  }
   print "</tbody>\n</table>\n";
 }
 
