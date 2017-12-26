@@ -26,7 +26,9 @@ insert into donors(donor, country, facebook_username, website, donations_url, le
   ('Scott Dickey','United States','scottcdickey',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
   ('Ethan Dickinson','United States','ethancd',NULL,NULL,NULL,'ethancdickinson',NULL,NULL,'ethan-dickinson',NULL,NULL,NULL,NULL,NULL),
   ('Leif K-Brooks','United States','eurleif',NULL,NULL,NULL,'leif-k-brooks-a073b951',NULL,NULL,NULL,NULL,'leifkb',NULL,NULL,NULL),
-  ('Alexei Andreev','United States','alexei.andreev.3',NULL,NULL,'Alexei','alexei-andreev-90079428',NULL,NULL,'alexei-andreev',NULL,'andreevalexei', NULL, NULL, NULL);
+  ('Alexei Andreev','United States','alexei.andreev.3',NULL,NULL,'Alexei','alexei-andreev-90079428',NULL,NULL,'alexei-andreev',NULL,'andreevalexei', NULL, NULL, NULL),
+  ('Sebastian Hagen','Ireland','https://www.facebook.com/profile.php?id=100009727575538',NULL, NULL, NULL, 'sebastian-hagen-3244a7', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+  
   
 insert into donors(donor, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username) values
   ('Aaron Gertler', 'United States', 'aaron.gertler', 'http://aarongertler.net/', 'http://aarongertler.net/donations/','aarongertler','aarongertler',NULL,'aarongertler','aaron-gertler','aarongertler','aarongertler'),
