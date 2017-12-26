@@ -19,6 +19,17 @@ foreach($donees as $donee) {
 
 $doneeMetadataQuery = "select * from donees $causeAreaFilterQueryComponent;";
 $doneeMetadataResult = $mysqli -> query($doneeMetadataQuery);
+$website = array();
+$facebookUsername = array();
+$lesswrongUsername = array();
+$linkedinUsername = array();
+$twitterUsername = array()
+$givewellReview = array();
+$causeAreaForDonee = array();
+$charityNavigatorPag = array();
+$guidestarPage = array();
+$timelinesWikipage = array();
+
 for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
   $row = $doneeMetadataResult -> fetch_assoc();
   $facebookUsername[$row['donee']] = $row['facebook_username'];

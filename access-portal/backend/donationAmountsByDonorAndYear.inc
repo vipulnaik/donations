@@ -26,8 +26,15 @@ foreach($donors as $donor) {
   }
 }
 
-$donorMetadataQuery = "select * from dononrs;";
+$donorMetadataQuery = "select * from donors;";
 $donorMetadataResult = $mysqli -> query($donorMetadataQuery);
+$donorType = array();
+$website = array();
+$facebookUsername = array();
+$lesswrongUsername = array();
+$linkedinUsername = array();
+$twitterUsername = array()
+
 for ($i = 0; $i < $donorMetadataResult -> num_rows; $i++) {
   $row = $donorMetadataResult -> fetch_assoc();
   $donorType[$row['donor']] = $row['donor_type'];
