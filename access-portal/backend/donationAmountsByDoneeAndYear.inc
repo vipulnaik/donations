@@ -49,11 +49,11 @@ $doneeAndYearResult = $mysqli -> query($doneeAndYearQuery);
 for ($i=0; $i < $doneeAndYearResult -> num_rows; $i++) {
   $row = $doneeAndYearResult -> fetch_assoc();
   $donationAmountByDoneeAndYear[$row['donee']][$row['year']] = $row['amount'];
-  if (!isset($doneeDonationAmount[$row['donee']]) {
+  if (!isset($doneeDonationAmount[$row['donee']])) {
     $doneeDonationAmount[$row['donee']] = 0;
   }
   $doneeDonationAmount[$row['donee']] += $row['amount'];
-  if (!isset($yearDonationAmount[$row['year']]) {
+  if (!isset($yearDonationAmount[$row['year']])) {
     $yearDonationAmount[$row['year']] = 0;
   }
   $yearDonationAmount[$row['year']] += $row['amount'];
