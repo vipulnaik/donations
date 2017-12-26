@@ -26,6 +26,18 @@ foreach($donors as $donor) {
   }
 }
 
+$donorMetadataQuery = "select * from dononrs;";
+$donorMetadataResult = $mysqli -> query($donorMetadataQuery);
+for ($i = 0; $i < $donorMetadataResult -> num_rows; $i++) {
+  $row = $donorMetadataResult -> fetch_assoc();
+  $donorType[$row['donor]] = $row['donor_type'];
+  $website[$row['donor']] = $row['website'];
+  $facebookUsername[$row['donor']] = $row['facebook_username'];
+  $lesswrongUsername[$row['donor']] = $row['lesswrong_username'];
+  $linkedinUsername[$row['donor']] = $row['linkedin_username'];
+  $twitterUsername[$row['donor']] = $row['twitter_username'];
+}
+
 $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent group by donor, year(donation_date)";
 $donorAndYearResult = $mysqli -> query($donorAndYearQuery);
 
@@ -51,7 +63,7 @@ print '<h4 id="donationAmountsByDonorAndYear">Donation amounts by donor and year
 
 print '<table id="myTableDonationAmountsByDonorAndYear" class="tablesorter">'."\n";
 print "<thead>\n";
-print "  <tr>\n    <th>Donor</th>\n	<th>Number of donations</th>\n	<th>Number of donees</th>";
+print "  <tr>\n    <th>Donor</th>\n    <th>Metadata</th>\n	<th>Number of donations</th>\n	<th>Number of donees</th>";
 print "    <th>Total</th>\n";
 foreach ($years as $year) {
   if ($yearDonationAmount[$year] != 0) {
@@ -64,6 +76,35 @@ print "</thead>\n<tbody>\n";
 foreach ($donors as $donor) {
   print "  <tr>\n";
   print '    <td><a href="/donor.php?donor='.urlencode($donor).'">'.$donor.'</a></td>'."\n";
+  print '    <td>';
+  if (array_key_exists($donor, $facebookUsername) and $facebookUsername[$donor] != '') {
+    $facebook_username = $facebookUsername[$donor];
+    $facebook_url = 'https://www.facebook.com/'.$facebook_username;
+    if (substr($facebook_username, 0, 4) == "http") {
+      $facebook_url = $facebook_username;
+    }
+    print '<a href="'.$facebook_url.'">FB</a> ';
+  }
+  if (array_key_exists($donor, $twitterUsername) and $twitterUsername[$donor] != '') {
+    print '<a href="https://twitter.com/'.$twitterUsername[$donor].'">Tw</a> ';
+  }
+  if (array_key_exists($donor, $wikipediaPage) and $wikipediaPage[$donor] != '') {
+    print '<a href="'.$wikipediaPage[$donor].'">WP</a> ';
+  }
+  if (array_key_exists($donor, $website) and $website[$donor] != '') {
+    print '<a href="'.$website[$donor].'">Site</a> ';
+  }
+  if (array_key_exists($donor, $linkedinUsername) and $linkedinUsername[$donor] != '') {
+    $linkedin_username = $row['linkedin_username'];
+    if ($donorType[$donor] == "Individual" or $donorType[$donor] == "Couple") {
+      $linkedin_url = 'https://www.linkedin.com/in/' . $linkedin_username;
+    } else {
+      $linkedin_url = 'https://www.linkedin.com/company/' . $linkedin_username;
+    }
+    print '<a href="'.$linkedin_url.'">LI</a>';
+  }
+  print "</td>\n";
+  
   print '    <td align="right">'.$numDonations[$donor]."</td>\n";
   print '    <td align="right">'.$numDonees[$donor]."</td>\n";
   print '    <td align="right"><strong>'.number_format($donorDonationAmount[$donor],2).'</strong></td>'."\n";
@@ -78,6 +119,7 @@ foreach ($donors as $donor) {
 print "</tbody>\n";
 print "<tfoot>\n";
 print "  <tr>\n    <td><strong>Total</strong></td>\n";
+print '  <td align="center"><strong>--</strong><td>'."\n";
 print '	 <td align="right"><strong>'.$grandTotalNumDonations.'</strong></td>'."\n";
 print '	 <td align="right"><strong>'.$totalNumDistinctDonees.'</strong></td>'."\n";
 
