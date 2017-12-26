@@ -33,7 +33,7 @@ $website = array();
 $facebookUsername = array();
 $lesswrongUsername = array();
 $linkedinUsername = array();
-$twitterUsername = array()
+$twitterUsername = array();
 
 for ($i = 0; $i < $donorMetadataResult -> num_rows; $i++) {
   $row = $donorMetadataResult -> fetch_assoc();
