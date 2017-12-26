@@ -102,7 +102,7 @@ foreach ($donors as $donor) {
     print '<a href="'.$website[$donor].'">Site</a> ';
   }
   if (array_key_exists($donor, $linkedinUsername) and $linkedinUsername[$donor] != '') {
-    $linkedin_username = $row['linkedin_username'];
+    $linkedin_username = $linkedinUsername[$donor];
     if ($donorType[$donor] == "Individual" or $donorType[$donor] == "Couple") {
       $linkedin_url = 'https://www.linkedin.com/in/' . $linkedin_username;
     } else {
