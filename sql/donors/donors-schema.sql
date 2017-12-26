@@ -41,6 +41,7 @@ create table donors (
     patreon_username varchar(40),
     predictionbook_username varchar(40),
     github_username varchar(40),
+    reddit_username varchar(40),
     donations_data_update_regularity enum('continuous updates','monthly refresh','quarterly refresh','annual refresh','irregular'),
     donations_data_dlw_update_regularity enum('continuous updates','monthly refresh','quarterly refresh','annual refresh','irregular'),
     donations_data_update_lag enum('none','days','months','years'),
