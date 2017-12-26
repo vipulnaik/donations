@@ -34,6 +34,7 @@ $facebookUsername = array();
 $lesswrongUsername = array();
 $linkedinUsername = array();
 $twitterUsername = array();
+$wikipediaPage = array();
 
 for ($i = 0; $i < $donorMetadataResult -> num_rows; $i++) {
   $row = $donorMetadataResult -> fetch_assoc();
@@ -43,6 +44,7 @@ for ($i = 0; $i < $donorMetadataResult -> num_rows; $i++) {
   $lesswrongUsername[$row['donor']] = $row['lesswrong_username'];
   $linkedinUsername[$row['donor']] = $row['linkedin_username'];
   $twitterUsername[$row['donor']] = $row['twitter_username'];
+  $wikipediaPage[$row['donor']] = $row['wikipedia_page'];
 }
 
 $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent group by donor, year(donation_date)";
