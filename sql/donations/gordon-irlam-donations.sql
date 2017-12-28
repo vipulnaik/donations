@@ -15,10 +15,41 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   # -- 2003 donations: http://www.gricf.org/2003-report.html
   ('Gordon Irlam','Sustainable Sciences Institute',1100,'2003-01-01','year','donation log',NULL,'http://www.gricf.org/2003-report.html',NULL),
   ('Gordon Irlam','HealthGAP Coalition',1000,'2003-01-01','year','donation log','Global health','http://www.gricf.org/2003-report.html','c/o Mobilization Against AIDS'),
-  ('Gordon Irlam','Institute for One World Health',1000,'2003-01-01','year','donation log',NULL,'http://www.gricf.org/2003-report.html',NULL),
+  ('Gordon Irlam','Institute for One World Health',1000,'2003-01-01','year','donation log','Global health','http://www.gricf.org/2003-report.html',NULL),
   ('Gordon Irlam','Grameen Technology Center',1000,'2003-01-01','year','donation log',NULL,'http://www.gricf.org/2003-report.html','c/o Grameen Foundation USA'),
   ('Gordon Irlam','Global Health Council',250,'2003-01-01','year','donation log','Global health','http://www.gricf.org/2003-report.html',NULL),
   ('Gordon Irlam',"Association for India's Development", # '
    100,'2003-01-01','year','donation log',NULL,'http://www.gricf.org/2003-report.html',NULL),
-   ('Gordon Irlam','African Immigrants Social and Cultural Services',100,'2003-01-01','year','donation log',NULL,'http://www.gricf.org/2003-report.html',NULL),
-   ('Gordon Irlam','Microbicides as an Alternative Solution',100,'2003-01-01','year','donation log',NULL,'http://www.gricf.org/2003-report.html','c/o SFF-CIF'); # -- 2003 not yet complete
+  ('Gordon Irlam','African Immigrants Social and Cultural Services',100,'2003-01-01','year','donation log',NULL,'http://www.gricf.org/2003-report.html',NULL),
+  ('Gordon Irlam','Microbicides as an Alternative Solution',100,'2003-01-01','year','donation log',NULL,'http://www.gricf.org/2003-report.html','c/o SFF-CIF'),
+  ('Gordon Irlam','American Foundation for AIDS Research',100,'2003-01-01','year','donation log','Global health/STD control including HIV/AIDS','http://www.gricf.org/2003-report.html',NULL),
+  ('Gordon Irlam','Grammen Foundation USA',100,'2003-01-01','year','donation log',NULL,'http://www.gricf.org/2003-report.html',NULL),
+  ('Gordon Irlam','RESULTS Educational Fund',100,'2003-01-01','year','donation log','Education','http://www.gricf.org/2003-report.html',NULL),
+  ('Gordon Irlam','International Development Exchange',100,'2003-01-01','year','donation log',NULL,'http://www.gricf.org/2003-report.html',NULL),
+  ('Gordon Irlam','Bay Area International Development Organizations',100,'2003-01-01','year','donation log',NULL,'http://www.gricf.org/2003-report.html', 'c/o Tides'),
+  ('Gordon Irlam','Grantmakers Without Borders', 100, '2003-01-01', 'year', 'donation log', NULL, 'http://www.gricf.org/2003-report.html', 'c/o Tides'),
+  ('Gordon Irlam','Upper Nile Institute for Appropriate Technology', 100, '2003-01-01', 'year', 'donation log', NULL, 'http://www.gricf.org/2003-report.html', 'c/o FPA'),
+  # -- 2004 donations
+  ('Gordon Irlam','Consumer Project on Technology', 1000, '2004-01-01', 'year', 'donation log', NULL, 'http://www.gricf.org/2004-report.html', 'c/o Essential Information'),
+  ('Gordon Irlam','RESULTS Educational Fund',1000,'2004-01-01','year','donation log','Education','http://www.gricf.org/2004-report.html',NULL),
+  ('Gordon Irlam','Treatment Action Campaign',500,'2004-01-01','year','donation log',NULL,'http://www.gricf.org/2004-report.html','c/o South Africa Development Fund'),
+  ('Gordon Irlam','HealthGAP Coalition',500,'2004-01-01','year','donation log','Global health/STD control using HIV/AIDS','http://www.gricf.org/2004-report.html','c/o Mobilization Against AIDS'),
+  ('Gordon Irlam',"Association for India's Development", # '
+   500,'2004-01-01','year','donation log',NULL,'http://www.gricf.org/2004-report.html',NULL),
+  ('Gordon Irlam','Global Health Council',250,'2004-01-01','year','donation log','Global health','http://www.gricf.org/2004-report.html',NULL),
+  ('Gordon Irlam','Grantmakers Without Borders',100,'2004-01-01','year','donation log',NULL,'http://www.gricf.org/2004-report.html','c/o Tides'),
+  ('Gordon Irlam','International AIDS Vaccine Initiative',100,'2004-01-01','year','donation log','Global health/STD control including HIV/AIDS','http://www.gricf.org/2004-report.html',NULL),
+  ('Gordon Irlam','AIDS Vaccine Advocacy Coalition',100,'2004-01-01','year','donation log','Global health/STD control including HIV/AIDS','http://www.gricf.org/2004-report.html',NULL),
+  ('Gordon Irlam','Microbicides as an Alternative Solution',100,'2004-01-01','year','donation log',NULL,'http://www.gricf.org/2004-report.html','c/o SFF-CIF'),
+  ('Gordon Irlam','Institute for One World Health',100,'2004-01-01','year','donation log','Global health','http://www.gricf.org/2004-report.html',NULL),
+  ('Gordon Irlam','Sustainable Sciences Institute',100,'2004-01-01','year','donation log',NULL,'http://www.gricf.org/2004-report.html',NULL),
+  # -- 2005 donations
+  ('Gordon Irlam',"Association for India's Development", # '
+   1000,'2004-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html',NULL),
+   ('Gordon Irlam','International Development Exchange',1500,'2005-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html',NULL),
+   ('Gordon Irlam','Consumer Project on Technology', 500, '2005-01-01', 'year', 'donation log', NULL, 'http://www.gricf.org/2005-report.html', 'c/o Essential Information'),
+  ('Gordon Irlam','HealthGAP Coalition',500,'2005-01-01','year','donation log','Global health/STD control using HIV/AIDS','http://www.gricf.org/2005-report.html','c/o Mobilization Against AIDS'),
+  ('Gordon Irlam','RESULTS Educational Fund',500,'2005-01-01','year','donation log','Education','http://www.gricf.org/2005-report.html',NULL),
+   ('Gordon Irlam','Oxfam Campaign',500,'2005-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html',NULL),
+  ('Gordon Irlam','Treatment Action Campaign',500,'2005-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html','c/o South Africa Development Fund');
+  
