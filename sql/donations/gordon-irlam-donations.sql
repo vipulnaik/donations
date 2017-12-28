@@ -45,11 +45,85 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Gordon Irlam','Sustainable Sciences Institute',100,'2004-01-01','year','donation log',NULL,'http://www.gricf.org/2004-report.html',NULL),
   # -- 2005 donations
   ('Gordon Irlam',"Association for India's Development", # '
-   1000,'2004-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html',NULL),
+   1000,'2005-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html',NULL),
    ('Gordon Irlam','International Development Exchange',1500,'2005-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html',NULL),
    ('Gordon Irlam','Consumer Project on Technology', 500, '2005-01-01', 'year', 'donation log', NULL, 'http://www.gricf.org/2005-report.html', 'c/o Essential Information'),
   ('Gordon Irlam','HealthGAP Coalition',500,'2005-01-01','year','donation log','Global health/STD control using HIV/AIDS','http://www.gricf.org/2005-report.html','c/o Mobilization Against AIDS'),
   ('Gordon Irlam','RESULTS Educational Fund',500,'2005-01-01','year','donation log','Education','http://www.gricf.org/2005-report.html',NULL),
    ('Gordon Irlam','Oxfam Campaign',500,'2005-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html',NULL),
   ('Gordon Irlam','Treatment Action Campaign',500,'2005-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html','c/o South Africa Development Fund');
-  
+  # -- 2006 donations
+  ('Gordon Irlam','RESULTS Educational Fund',10000,'2006-01-01','year','donation log','Education','http://www.gricf.org/2006-report.html',NULL),
+  ('Gordon Irlam','Consumer Project on Technology',5000,'2006-01-01','year','donation log',NULL,'http://www.gricf.org/2006-report.html','c/o Essential Information'),
+  ('Gordon Irlam','ActionAid USA',1000,'2006-01-01','year','donation log',NULL,'http://www.gricf.org/2006-report.html',NULL),
+  ('Gordon Irlam','Center for Policy Analysis',1000,'2006-01-01','year','donation log',NULL,'http://www.gricf.org/2006-report.html',NULL),
+  ('Gordon Irlam','HealthGAP Coalition',1000,'2006-01-01','year','donation log','Global health/STD control using HIV/AIDS','http://www.gricf.org/2006-report.html',NULL),
+  ('Gordon Irlam','Institute for One World Health',1000,'2006-01-01','year','donation log','Global health','http://www.gricf.org/2006-report.html',NULL),
+  ('Gordon Irlam','African Immigrants Social and Cultural Services',500,'2006-01-01','year','donation log',NULL,'http://www.gricf.org/2006-report.html',NULL),
+  ('Gordon Irlam','Survivors International',500,'2006-01-01','year','donation log',NULL,'http://www.gricf.org/2006-report.html',NULL),
+  ('Gordon Irlam','Grantmakers Without Borders',250,'2006-01-01','year','donation log',NULL,'http://www.gricf.org/2006-report.html','c/o Tides'),
+  ('Gordon Irlam','Global Health Council',180,'2006-01-01','year','donation log','Global health','http://www.gricf.org/2006-report.html',NULL),
+  # -- 2007 donations
+  ('Gordon Irlam','RESULTS Educational Fund',10000,'2007-01-01','year','donation log','Education','http://www.gricf.org/2007-report.html',NULL),
+  ('Gordon Irlam','Knowledge Ecology International',10000,'2007-01-01','year','donation log',NULL,'http://www.gricf.org/2007-report.html',NULL),
+  ('Gordon Irlam','Foundation for Hospices in Sub-Saharan Africa',4000,'2007-01-01','year','donation log',NULL,'http://www.gricf.org/2007-report.html',NULL),
+  ('Gordon Irlam','Direct Relief International',2500,'2007-01-01','year','donation log',NULL,'http://www.gricf.org/2007-report.html',NULL),
+  ('Gordon Irlam','Helderberg Hospice',2500,'2007-01-01','year','donation log',NULL,'http://www.gricf.org/2007-report.html','c/o Hospice of Western Reserve'),
+  ('Gordon Irlam','Internation Association for Hosprice and Palliative Care',2500,'2007-01-01','year','donation log',NULL,'http://www.gricf.org/2007-report.html',NULL),
+  ('Gordon Irlam','International Association for the Study of Pain',2500,'2007-01-01','year','donation log',NULL,'http://www.gricf.org/2007-report.html',NULL),
+  ('Gordon Irlam','Center for Policy Analysis',1000,'2007-01-01','year','donation log',NULL,'http://www.gricf.org/2007-report.html',NULL),
+  ('Gordon Irlam','International Development Exchange',1000,'2007-01-01','year','donation log',NULL,'http://www.gricf.org/2007-report.html',NULL),
+  ('Gordon Irlam',"Association for India's Development", # '
+   1000,'2007-01-01','year','donation log',NULL,'http://www.gricf.org/2007-report.html',NULL),
+  ('Gordon Irlam','Health GAP',1000,'2007-01-01','year','donation log','Global health','http://www.gricf.org/2007-report.html',NULL),
+  ('Gordon Irlam','Institute for One World Health',1000,'2007-01-01','year','donation log','Global health','http://www.gricf.org/2007-report.html',NULL),
+  ('Gordon Irlam','COLT-USA',1000,'2007-01-01','year','donation log',NULL,'http://www.gricf.org/2007-report.html','c/o Follow Your Dream'),
+  # -- 2008 donations
+  ('Gordon Irlam','Health GAP',60000,'2008-01-01','year','donation log','Global health','http://www.gricf.org/2008-report.html',NULL),
+  ('Gordon Irlam','Institute for One World Health',35000,'2008-01-01','year','donation log','Global health','http://www.gricf.org/2008-report.html',NULL),
+  ('Gordon Irlam','Knowledge Ecology International',10000,'2008-01-01','year','donation log',NULL,'http://www.gricf.org/2008-report.html',NULL),
+  ('Gordon Irlam','RESULTS Educational Fund',10000,'2008-01-01','year','donation log','Education','http://www.gricf.org/2008-report.html',NULL),
+  ('Gordon Irlam','Center for Policy Analysis',1000,'2008-01-01','year','donation log',NULL,'http://www.gricf.org/2008-report.html',NULL),
+  ('Gordon Irlam','COLT-USA',1000,'2008-01-01','year','donation log',NULL,'http://www.gricf.org/2008-report.html','c/o Follow Your Dream'),
+  ('Gordon Irlam','Grantmakers Without Borders',250,'2008--01-01','year','donation log',NULL,'http://www.gricf.org/2008-report.html',NULL),
+  # -- 2009 donations
+  ('Gordon Irlam','RESULTS Educational Fund',35000,'2009-01-01','year','donation log','Education','http://www.gricf.org/2009-report.html',NULL),
+  ('Gordon Irlam','Institute for One World Health',25000,'2009-01-01','year','donation log','Global health','http://www.gricf.org/2009-report.html',NULL),
+  ('Gordon Irlam','Knowledge Ecology International',5000,'2009-01-01','year','donation log',NULL,'http://www.gricf.org/2009-report.html',NULL),
+  ('Gordon Irlam','Health GAP',5000,'2009-01-01','year','donation log','Global health','http://www.gricf.org/2009-report.html',NULL),
+  ('Gordon Irlam','Kids International Dental Services',1000,'2009-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2009-report.html',NULL),
+  ('Gordon Irlam','Grantmakers Without Borders',500,'2009-01-01','year','donation log',NULL,'http://www.gricf.org/2009-report.html',NULL),
+  ('Gordon Irlam','PeaceJam',100,'2009-01-01','year','donation log',NULL,'http://www.gricf.org/2009-report.html',NULL),
+  # -- 2010 donations
+  ('Gordon Irlam','RESULTS Educational Fund',50000,'2010-01-01','year','donation log',NULL,'http://www.gricf.org/2010-report.html',NULL),
+  ('Gordon Irlam','Institute for One World Health',20000,'2010-01-01','year','donation log',NULL,'http://www.gricf.org/2010-report.html',NULL),
+  ('Gordon Irlam','Knowledge Ecology International',5000,'2010-01-01','year','donation log',NULL,'http://www.gricf.org/2010-report.html',NULL),
+  ('Gordon Irlam','Kids International Dental Services',1000,'2010-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2010-report.html',NULL),
+  ('Gordon Irlam','Grantmakers Without Borders',250,'2010-01-01','year','donation log',NULL,'http://www.gricf.org/2010-report.html',NULL),
+  # -- 2011 donations
+  ('Gordon Irlam','Keep Antibiotics Working',50000,'2011-01-01','year','donation log',NULL,'http://www.gricf.org/2011-report.html','c/o Food Animal Concerns Trust'),
+  ('Gordon Irlam','RESULTS Educational Fund',25000,'2011-01-01','year','donation log','Education','http://www.gricf.org/2011-report.html',NULL),
+  ('Gordon Irlam','Institute for One World Health',20000,'2011-01-01','year','donation log','Global health','http://www.gricf.org/2011-report.html',NULL),
+  ('Gordon Irlam','Knowledge Ecology International',5000,'2011-01-01','year','donation log',NULL,'http://www.gricf.org/2011-report.html',NULL),
+  ('Gordon Irlam','Kids International Dental Services',3000,'2011-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2011-report.html',NULL),
+  ('Gordon Irlam','Grantmakers Without Borders',250,'2011-01-01','year','donation log',NULL,'http://www.gricf.org/2011-report.html',NULL),
+  # -- 2012 donations
+  ('Gordon Irlam','RESULTS Educational Fund',75000,'2012-01-01','year','donation log','Education','http://www.gricf.org/2012-report.html',NULL),
+  ('Gordon Irlam','Keep Antibiotics Working',25000,'2012-01-01','year','donation log',NULL,'http://www.gricf.org/2012-report.html','c/o Food Animal Concerns Trust'),
+  ('Gordon Irlam','Institute for One World Health',20000,'2012-01-01','year','donation log','Global health','http://www.gricf.org/2012-report.html',NULL),
+  ('Gordon Irlam','Knowledge Ecology International',5000,'2012-01-01','year','donation log',NULL,'http://www.gricf.org/2012-report.html',NULL),
+  ('Gordon Irlam','Kids International Dental Services',3000,'2012-01-01','year','donation log',NULL,'http://www.gricf.org/2012-report.html',NULL),
+  # -- 2013 donations
+  ('Gordon Irlam','Keep Antibiotics Working',25000,'2013-01-01','year','donation log',NULL,'http://www.gricf.org/2013-report.html','c/o Food Animal Concerns Trust'),
+  ('Gordon Irlam','Knowledge Ecology International',10000,'2013-01-01','year','donation log',NULL,'http://www.gricf.org/2013-report.html',NULL),
+  ('Gordon Irlam','Machine Intelligence Research Institute',5000,'2013-01-01','year','donation log','AI risk','http://www.gricf.org/2013-report.html',NULL),
+  ('Gordon Irlam','Kids International Dental Services',3000,'2013-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2013-report.html',NULL),
+  # -- 2014 donations
+  ('Gordon Irlam','RESULTS Educational Fund',108597,'2014-01-01','year','donation log','Education','http://www.gricf.org/2014-report.html',NULL),
+  ('Gordon Irlam','Keep Antibiotics Working',25000,'2014-01-01','year','donation log',NULL,'http://www.gricf.org/2014-report.html','c/o Food Animal Concerns Trust'),
+  ('Gordon Irlam','Knowledge Ecology International',20000,'2014-01-01','year','donation log',NULL,'http://www.gricf.org/2014-report.html',NULL),
+  ('Gordon Irlam','Machine Intelligence Research Institute',10000,'2014-01-01','year','donation log','AI risk','http://www.gricf.org/2014-report.html',NULL),
+  ('Gordon Irlam','Kids International Dental Services',3000,'2014-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2014-report.html',NULL),
+  # -- 2015 donations
+  ('Gordon Irlam','RESULTS Educational Fund',70969,'2015-01-01','year','donation log','Education','http://www.gricf.org/2015-report.html',NULL); # -- more 2015 donations to be added
+
