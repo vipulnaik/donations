@@ -8,3 +8,7 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('http://effective-altruism.com/ea/15d/why_donate_to_80000_hours/','Why donate to 80,000 Hours','2016-12-24',NULL,'Benjamin Todd','80000 Hours',NULL,'80000 Hours','Donee donation case','Effective altruism/movement growth','Makes the case for 80000 Hours to be funded by effective altruists (and posted on the Effective Altruism Forum). Supplements their annual review https://80000hours.org/2016/12/annual-review-dec-2016 that provides the underlying data and narrative; however, the case made here explicitly focuses on argumentation appealing to EAs, and makes a clearer ask');
   
+# -- Periodic updates
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('https://80000hours.org/2017/12/annual-review/','Annual review December 2017','2017-12-24',NULL,'Benjamin Todd','80000 Hours',NULL,'80000 Hours','Donee periodic update','Career coaching/life guidance','80000 Hours reviews its efforts in 2017 to push more people toward priority paths, both through writeups and through personalized coaching. Also announced at http://effective-altruism.com/ea/1j1/80000_hours_annual_review_released/');
+
