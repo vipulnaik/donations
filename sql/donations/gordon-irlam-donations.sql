@@ -51,7 +51,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Gordon Irlam','HealthGAP Coalition',500,'2005-01-01','year','donation log','Global health/STD control using HIV/AIDS','http://www.gricf.org/2005-report.html','c/o Mobilization Against AIDS'),
   ('Gordon Irlam','RESULTS Educational Fund',500,'2005-01-01','year','donation log','Education','http://www.gricf.org/2005-report.html',NULL),
    ('Gordon Irlam','Oxfam Campaign',500,'2005-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html',NULL),
-  ('Gordon Irlam','Treatment Action Campaign',500,'2005-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html','c/o South Africa Development Fund');
+  ('Gordon Irlam','Treatment Action Campaign',500,'2005-01-01','year','donation log',NULL,'http://www.gricf.org/2005-report.html','c/o South Africa Development Fund'),
   # -- 2006 donations
   ('Gordon Irlam','RESULTS Educational Fund',10000,'2006-01-01','year','donation log','Education','http://www.gricf.org/2006-report.html',NULL),
   ('Gordon Irlam','Consumer Project on Technology',5000,'2006-01-01','year','donation log',NULL,'http://www.gricf.org/2006-report.html','c/o Essential Information'),
@@ -95,10 +95,10 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Gordon Irlam','Grantmakers Without Borders',500,'2009-01-01','year','donation log',NULL,'http://www.gricf.org/2009-report.html',NULL),
   ('Gordon Irlam','PeaceJam',100,'2009-01-01','year','donation log',NULL,'http://www.gricf.org/2009-report.html',NULL),
   # -- 2010 donations
-  ('Gordon Irlam','RESULTS Educational Fund',50000,'2010-01-01','year','donation log',NULL,'http://www.gricf.org/2010-report.html',NULL),
-  ('Gordon Irlam','Institute for One World Health',20000,'2010-01-01','year','donation log',NULL,'http://www.gricf.org/2010-report.html',NULL),
+  ('Gordon Irlam','RESULTS Educational Fund',50000,'2010-01-01','year','donation log','Education','http://www.gricf.org/2010-report.html',NULL),
+  ('Gordon Irlam','Institute for One World Health',20000,'2010-01-01','year','donation log','Global health','http://www.gricf.org/2010-report.html',NULL),
   ('Gordon Irlam','Knowledge Ecology International',5000,'2010-01-01','year','donation log',NULL,'http://www.gricf.org/2010-report.html',NULL),
-  ('Gordon Irlam','Kids International Dental Services',1000,'2010-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2010-report.html',NULL),
+  ('Gordon Irlam','Kids International Dental Services',2000,'2010-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2010-report.html',NULL),
   ('Gordon Irlam','Grantmakers Without Borders',250,'2010-01-01','year','donation log',NULL,'http://www.gricf.org/2010-report.html',NULL),
   # -- 2011 donations
   ('Gordon Irlam','Keep Antibiotics Working',50000,'2011-01-01','year','donation log',NULL,'http://www.gricf.org/2011-report.html','c/o Food Animal Concerns Trust'),
