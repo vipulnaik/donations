@@ -72,6 +72,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-grants-to-givewell-top-charities.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-not-givewell-or-open-phil.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/google-org.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/gordon-irlam-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/haseeb-qureshi-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/holden-karnofsky-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/isabel-arjmand-donations.sql
@@ -91,6 +92,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/peter-hurford-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/public-welfare-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/rebecca-raible-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/robert-yaman-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/sophie-monahan-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/vipul-naik-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees.sql

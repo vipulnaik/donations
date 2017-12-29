@@ -1,7 +1,8 @@
 insert into donations(donor, donee, amount, fraction, donation_date,
     donation_date_precision, donation_date_basis, cause_area, url, notes,
     payment_modality, match_eligible, goal_amount, influencer, employer_match,
-    matching_employer) values 
+    matching_employer) values
+    ('Haseeb Qureshi','GiveDirectly', 25000, 1.0, '2013-01-01', 'year', 'donation log', 'Cash transfers', 'https://eahub.org/user/haseeb-qureshi', NULL, NULL, NULL, 25000, NULL, NULL, NULL),
     ('Haseeb Qureshi','Against Malaria Foundation', 5300, 0.25, '2015-01-01','year','date of donation announced in announcement','Global health/malaria','http://haseebq.com/my-first-year-earning-to-give-a-retrospective/','Highlighted low-cost bednets and GiveWell recommendation',NULL,NULL,21200,'GiveWell',NULL,NULL),
     ('Haseeb Qureshi','Rethink Charity', 5300, 0.25, '2015-01-01','year','date of donation announced in announcement','Effective altruism/movement growth','http://haseebq.com/my-first-year-earning-to-give-a-retrospective/','Highlighted work creating EA Forum and EA Hub and new project of LEAN',NULL,NULL,21200,'GiveWell',NULL,NULL),
     ('Haseeb Qureshi','Centre for Effective Altruism', 10600, 0.5, '2015-01-01','year','date of donation announced in announcement','Effective altruism/movement growth','http://haseebq.com/my-first-year-earning-to-give-a-retrospective/','Money was for the EA Outreach team run by Kerry Vaughan and Tyler Alterman, that was responsible for running EA Global',NULL,NULL,21200,'GiveWell',NULL,NULL),
