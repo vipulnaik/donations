@@ -126,7 +126,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Gordon Irlam','Kids International Dental Services',3000,'2014-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2014-report.html',NULL),
   # -- 2015 donations
   ('Gordon Irlam','RESULTS Educational Fund',70969,'2015-01-01','year','donation log','Education','http://www.gricf.org/2015-report.html',NULL),
-  ('Gordon Irlam','Giving What We Can',50000,'2015-01-01','year','donation log',NULL,'http://www.gricf.org/2015-report.html','c/o Centre for Effective Altruism USA'),
+  ('Gordon Irlam','Centre for Effective Altruism',50000,'2015-01-01','year','donation log',NULL,'http://www.gricf.org/2015-report.html','For Giving What We Can. c/o Centre for Effective Altruism USA'),
   ('Gordon Irlam','Keep Antibiotics Working',10000,'2015-01-01','year','donation log',NULL,'http://www.gricf.org/2015-report.html','c/o Food Animal Concerns Trust'),
   ('Gordon Irlam','Knowledge Ecology International',10000,'2015-01-01','year','donation log',NULL,'http://www.gricf.org/2015-report.html',NULL),
   ('Gordon Irlam','Machine Intelligence Research Institute',10000,'2015-01-01','year','donation log','AI risk','http://www.gricf.org/2015-report.html',NULL),
