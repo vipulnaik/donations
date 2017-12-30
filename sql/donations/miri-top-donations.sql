@@ -4,7 +4,6 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     matching_employer)
     values
     ('Jaan Tallinn','Machine Intelligence Research Institute',604500,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Top donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Loren Merritt','Machine Intelligence Research Institute',500000,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','2nd highest donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
     ('Edwin Evans','Machine Intelligence Research Institute',409530,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','3rd highest individual donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
     ('Richard Schwall','Machine Intelligence Research Institute',307608,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Major donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
     ('Jonathan Weissman','Machine Intelligence Research Institute',131290,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Major donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
