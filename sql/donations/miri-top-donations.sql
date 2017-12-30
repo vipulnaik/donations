@@ -3,6 +3,7 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     payment_modality, match_eligible, goal_amount, influencer, employer_match,
     matching_employer)
     values
+    # -- Removed Loren Merritt, Gordon Irlam, and maybe some others
     ('Jaan Tallinn','Machine Intelligence Research Institute',604500,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Top donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
     ('Edwin Evans','Machine Intelligence Research Institute',409530,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','3rd highest individual donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
     ('Richard Schwall','Machine Intelligence Research Institute',307608,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Major donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
@@ -19,7 +20,6 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     ('Luke Stebbing','Machine Intelligence Research Institute',40000,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Major donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
     ('Michael Cohen','Machine Intelligence Research Institute',39359,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Major donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
     ('Mikko Rauhala','Machine Intelligence Research Institute',39345,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Major donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
-    ('Gordon Irlam','Machine Intelligence Research Institute',15000,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Major donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
     ('Scott Worley','Machine Intelligence Research Institute',35019,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Major donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
     ('Scott Siskind','Machine Intelligence Research Institute',28500,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Major donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
     ('Jeremy Schlatter','Machine Intelligence Research Institute',28411,NULL,'2015-01-01','multi-year','donee contributor list','AI risk','https://intelligence.org/topdonors/','Major donor to MIRI in 2015',NULL, NULL, NULL, NULL, NULL, NULL),
