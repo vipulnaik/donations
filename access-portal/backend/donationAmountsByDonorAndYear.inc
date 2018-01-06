@@ -128,7 +128,7 @@ foreach ($donors as $donor) {
 print "</tbody>\n";
 print "<tfoot>\n";
 print "  <tr>\n    <td><strong>Total</strong></td>\n";
-print '  <td align="center"><strong>--</strong><td>'."\n";
+print '  <td align="center"><strong>--</strong></td>'."\n";
 print '	 <td align="right"><strong>'.$grandTotalNumDonations.'</strong></td>'."\n";
 print '	 <td align="right"><strong>'.$totalNumDistinctDonees.'</strong></td>'."\n";
 
