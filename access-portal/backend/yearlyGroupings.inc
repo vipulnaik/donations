@@ -211,6 +211,15 @@ EOD;
 
 }
 
+function camelCaseStripSpace($str) {
+  $result = "";
+  $words = explode(" ", $str);
+  foreach ($words as $w) {
+    $result .= ucfirst($w);
+  }
+  return $result;
+}
+
 function printYearlyGroupedHtmlTable(
   $data,
   $groupName,
@@ -226,7 +235,7 @@ function printYearlyGroupedHtmlTable(
 
   $donorString = $donor ? "donor" : "";
   print '<h4 id="' . $donorString . ($donorString ? 'Donation' : 'donation')
-    . 'AmountsBy' . ucfirst($groupName)
+    . 'AmountsBy' . camelCaseStripSpace($groupName)
     . 'AndYear">' . "Donation amounts by $groupName and year</h4>";
 
   if (($data['amount']['Classified']['Total'] ?? 0) > 0) {
