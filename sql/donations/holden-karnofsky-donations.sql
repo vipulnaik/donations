@@ -8,7 +8,7 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   # -- 2015
   ('Holden Karnofsky','Against Malaria Foundation',NULL,1.0,'2015-12-09','day','date of donation announcement','Global health/malaria','https://blog.givewell.org/2015/12/09/staff-members-personal-donations-for-giving-season-2015/','Though not directly involved with top charity selection, found the top charity vetting process much more convincing this year, and placed more confidence in cost-effectiveness estimates. Considered other top charities seriously','GiveWell'),
   # -- 2016
-  ('Holden Karnofsky','A political campaign',NULL,NULL,'2016-12-09','day','date of donation announcement','Politics/United States','https://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/','States "Earlier this year, I gave to a political campaign that I considered important and high-impact per dollar. This falls under (a) because there are per-individual contribution limits." Details of political campaign not specified, but 2016 is a presidential election year in the United States',NULL),
+  ('Holden Karnofsky','A political campaign',NULL,NULL,'2016-12-09','day','date of donation announcement','Politics/United States','https://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/','States "Earlier this year, I gave to a political campaign that I considered important and high-impact per dollar. This falls under (a) because there are per-individual contribution limits." Details of political campaign not specified, but 2016 is a presidential election year in the United States',NULL);
   # -- Did not donate in 2017, see https://www.openphilanthropy.org/blog/staff-members-personal-donations-giving-season-2017#Holden
 
 
