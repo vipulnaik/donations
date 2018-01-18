@@ -2,9 +2,10 @@
 insert into donations(donor, donee, amount, fraction, donation_date,
     donation_date_precision, donation_date_basis, cause_area, url, notes,
     payment_modality, match_eligible, goal_amount, influencer, employer_match,
-    matching_employer) values 
+    matching_employer) values
    ('Brian Tomasik','Natural Resources Defense Council',NULL,NULL,'2004-01-01','multi-year','donation log','Animal welfare/environmentalism','http://reducing-suffering.org/my-donations-past-and-present/','Donations to this and similar organizations environmentalist orgs; belief that environment/natural preservation is related to animal welfare; since repudiated', NULL, NULL, NULL, NULL, NULL, NULL),
    ('Brian Tomasik','Vegan Outreach',NULL,1.0,'2005-01-01','multi-year','donation log','Animal welfare/diet change/veganism','http://reducing-suffering.org/my-donations-past-and-present/','Monthly donations from 2005 to 2007', NULL, NULL, NULL, 'Vegan Outreach', NULL, NULL),
+   ('Brian Tomasik','Machine Intelligence Research Institute',12000.0,1.0,'2008-01-01','year','donation log','AI risk','http://reducing-suffering.org/my-donations-past-and-present/',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
    ('Brian Tomasik','Machine Intelligence Research Institute',12000,1.0,'2009-01-01','year','donation log','AI risk/suffering reduction','http://reducing-suffering.org/my-donations-past-and-present/','Donation earmarked for suffering reduction work that would not have happened counterfactually; at the time, the organization was called the Singularity Institute for Artificial Intelligence (SIAI)',NULL,NULL,NULL,NULL,12000,'Microsoft'),
    ('Brian Tomasik','Vegan Outreach',12000,1.0,'2010-01-01','year','donation log','Animal welfare/diet change/veganism','http://reducing-suffering.org/my-donations-past-and-present/','Stopped MIRI donations due to concern of insufficient suffering focus; excited about Vegan Outreach for long-term benefits of raising profile of animal suffering',NULL,NULL,NULL,NULL,12000,'Microsoft'),
    ('Brian Tomasik','Vegan Outreach',12000,1.0,'2011-01-01','year','donation log','Animal welfare/diet change/veganism','http://reducing-suffering.org/my-donations-past-and-present/','Same reasons as in 2010',NULL,NULL,NULL,NULL,12000,'Microsoft'),
