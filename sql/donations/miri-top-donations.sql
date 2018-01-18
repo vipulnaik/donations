@@ -275,4 +275,5 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
     ,('Xerxes Dotiwalla','Machine Intelligence Research Institute',1350.0,'2018-01-17','year','donee contributor list','AI risk','https://web.archive.org/web/20180117010054/https://intelligence.org/topcontributors/',NULL)
     ,('Zvi Mowshowitz','Machine Intelligence Research Institute',5010.0,'2015-01-17','multi-year','donee contributor list','AI risk','https://web.archive.org/web/20150117213932/https://intelligence.org/donortools/topdonors.php',NULL)
     ,('Zvi Mowshowitz','Machine Intelligence Research Institute',10000.0,'2017-12-23','year','donee contributor list','AI risk','https://web.archive.org/web/20171223071315/https://intelligence.org/topcontributors/',NULL)
+    ,('Berkeley Existential Risk Initiative','Machine Intelligence Research Institute',200000.0,'2018-01-18','day','donee contributor list','AI risk','https://web.archive.org/web/20180118031109/https://intelligence.org/topcontributors/','See blog announcement at http://existence.org/2018/01/11/activity-update-december-2017.html')
 ;
