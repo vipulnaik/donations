@@ -17,7 +17,7 @@ insert into donations (donor, donee, amount, donation_date,
     donor_cause_area_url, notes, affected_countries,
     affected_regions, amount_original_currency, original_currency,
     currency_conversion_date, currency_conversion_basis) values
-    ('Michael Dello-Iacovo',"Purchasing Peter Singer's books for giveaways",128.73993095512083,'2016-01-04','day','donation log','FIXME','http://www.michaeldello.com/donations-log/','FIXME',NULL,'FIXME','FIXME') # -- '
+    ('Michael Dello-Iacovo',"Purchasing Peter Singer's books for giveaways",128.73993095512083,'2016-01-04','day','donation log','FIXME','http://www.michaeldello.com/donations-log/','FIXME',NULL,'FIXME','FIXME')
     ,('Michael Dello-Iacovo','The Life You Can Save Adelaide',130.05890903526893,'2016-04-13','day','donation log','FIXME','http://www.michaeldello.com/donations-log/','FIXME','Purchasing food for An Evening with Peter Singer.','FIXME','FIXME')
     ,('Michael Dello-Iacovo','Good Food Institute',44656.14766299494,'2016-11-29','day','donation log','FIXME','http://www.michaeldello.com/donations-log/','FIXME','Based on the recommendations of Michael Dickens','FIXME','FIXME')
     ,('Michael Dello-Iacovo','Against Malaria Foundation',6159.057664177381,'2016-04-18','day','donation log','FIXME','http://www.michaeldello.com/donations-log/','FIXME','Dollar matching for the Run for EA. Played a role in raising $36,000 (not all of which was counterfactual).','FIXME','FIXME')
