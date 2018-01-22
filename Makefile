@@ -65,6 +65,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ea-survey.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/elie-hassenfeld-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/elizabeth-van-nostrand-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ford-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/founders-pledge-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/gates-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-discretionary-regranting.sql
@@ -83,9 +84,12 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/joey-savoie-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/josh-rosenberg-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/loren-merritt-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/macarthur-foundation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/mcdowell-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/michael-dello-iovaco-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/michael-dickens-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/miri-top-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/nathan-cummings-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/neil-sinhababu-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/nick-beckstead-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/old-givewell-donations.sql
