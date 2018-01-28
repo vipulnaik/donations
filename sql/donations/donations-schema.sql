@@ -26,7 +26,7 @@ create table donations (
     affected_countries varchar(2000),
     affected_states varchar(200),
     affected_cities varchar(200),
-    affected_regions varchar(200),
+    affected_regions varchar(2000),
     donation_announcement_date date,
     donation_announcement_date_precision enum('day','month','year','multi-year'),
     donation_announcement_url varchar(200)
