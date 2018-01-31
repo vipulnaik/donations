@@ -108,6 +108,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
   'The £500,000 budget for the first year of Effective Altruism Grants was part of the Centre for Effective Altruism budget, and the costs are covered by the Open Philanthropy Project grant https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support and a couple of other private donors, as described at http://effective-altruism.com/ea/1fc/effective_altruism_grants_project_update/',
   NULL),
 
+  ('MacArthur Foundation','private foundation','United States','macarthurfdn','https://www.macfound.org/','https://www.macfound.org/grants/',NULL,NULL,NULL,NULL,NULL,NULL,'macfound',NULL,'https://www.macfound.org/about/how-we-work/','https://www.macfound.org/info-grantseekers/',NULL,NULL,NULL,NULL,NULL,'https://github.com/riceissa/macarthur-foundation','https://en.wikipedia.org/wiki/John_D._and_Catherine_T._MacArthur_Foundation','https://www.macfound.org/about/our-history/',NULL,NULL,NULL,NULL,NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
