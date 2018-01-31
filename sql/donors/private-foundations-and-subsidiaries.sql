@@ -118,6 +118,10 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Bauman Foundation','Private foundation','United States',NULL,'https://www.baumanfoundation.org/','https://www.baumanfoundation.org/grants/search',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'https://www.baumanfoundation.org/node/55',NULL,NULL,NULL,NULL,NULL,'https://github.com/riceissa/bauman-foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
+  ('Unbound Philanthropy','Private foundation','United States',NULL,'https://www.unboundphilanthropy.org','https://www.unboundphilanthropy.org/who-we-fund',NULL,'unbound-philanthropy',NULL,NULL,NULL,NULL,NULL,NULL,'https://www.unboundphilanthropy.org/our-mission-and-vision','https://www.unboundphilanthropy.org/selection-process',NULL,NULL,NULL,NULL,'https://github.com/riceissa/unbound-philanthropy',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
+  ('Templeton Foundation','Private foundation','United States','TempletonFoundation','https://www.templeton.org/','https://www.templeton.org/grants',NULL,NULL,NULL,NULL,NULL,NULL,'templeton_fdn',NULL,'https://www.templeton.org/about/vision-mission-impact','https://www.templeton.org/grants/apply-for-grant',NULL,NULL,NULL,NULL,'https://github.com/riceissa/templeton-foundation','https://en.wikipedia.org/wiki/John_Templeton_Foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
