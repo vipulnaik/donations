@@ -106,7 +106,11 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
   'For 2017, applications had to be made before a deadline. Of the 722 applications received, 413 (57%) were rejected. The second round involved taking the remaining applications and assessing applicants based on their track record, values, and plans. This assessment adhered to a rubric, weighting each category in accordance with its predictive power for project success. 63 candidates passed this round and had three 10-minute interviews, and 22 of them were selected. However, EA Grants is moving in 2018 to a rolling basis for urgent grants and a quarterly basis for other grants, according to https://www.centreforeffectivealtruism.org/blog/cea-s-2017-review-and-2018-plans/',
   'For 2017, all grants were published in a spreadsheet https://docs.google.com/spreadsheets/d/1iBy--zMyIiTgybYRUQZIm11WKGQZcixaCmIaysRmGvk but the long-term plan for sharing grants data is not clear',
   'The £500,000 budget for the first year of Effective Altruism Grants was part of the Centre for Effective Altruism budget, and the costs are covered by the Open Philanthropy Project grant https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support and a couple of other private donors, as described at http://effective-altruism.com/ea/1fc/effective_altruism_grants_project_update/',
-  NULL);
+  NULL),
+
+  ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
+  'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
+  NULL, NULL, NULL, NULL, NULL);
 
 
 # -- insert into donors(donor, donor_type, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username, predictionbook_username, philosophy_url, grant_application_process_url, donations_data_update_regularity, donations_data_dlw_update_regularity, donations_data_update_lag, donations_data_dlw_update_lag, dlw_data_processing_script, wikipedia_page,best_overview_url,brief_history,brief_donor_focus_notes,grant_decision_logistics_notes,grant_publication_logistics_notes,grant_financing_notes,notes) values
