@@ -114,6 +114,10 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Ford Foundation','Private foundation','United States','FordFoundation','https://www.fordfoundation.org','https://www.fordfoundation.org/work/our-grants/',NULL,'ford-foundation',NULL,NULL,NULL,NULL,'FordFoundation',NULL,'https://www.fordfoundation.org/about-us/mission/','https://www.fordfoundation.org/work/our-grants/idea-submission/',NULL,NULL,NULL,NULL,'https://github.com/riceissa/ford-foundation','https://en.wikipedia.org/wiki/Ford_Foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
+  ('Wellcome Trust','Private foundation','United Kingdom','wellcometrust','https://wellcome.ac.uk/','https://wellcome.ac.uk/funding/managing-grant/grants-awarded',NULL,'wellcome-trust',NULL,NULL,NULL,NULL,'wellcometrust',NULL,'https://wellcome.ac.uk/about-us/our-strategy','https://wellcome.ac.uk/funding#im-looking-for-funding',NULL,NULL,NULL,NULL,'https://github.com/riceissa/wellcome-trust','https://en.wikipedia.org/wiki/Wellcome_Trust',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
+  ('Bauman Foundation','Private foundation','United States',NULL,'https://www.baumanfoundation.org/','https://www.baumanfoundation.org/grants/search',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'https://www.baumanfoundation.org/node/55',NULL,NULL,NULL,NULL,NULL,'https://github.com/riceissa/bauman-foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
