@@ -122,6 +122,10 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Templeton Foundation','Private foundation','United States','TempletonFoundation','https://www.templeton.org/','https://www.templeton.org/grants',NULL,NULL,NULL,NULL,NULL,NULL,'templeton_fdn',NULL,'https://www.templeton.org/about/vision-mission-impact','https://www.templeton.org/grants/apply-for-grant',NULL,NULL,NULL,NULL,'https://github.com/riceissa/templeton-foundation','https://en.wikipedia.org/wiki/John_Templeton_Foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
+  ('McDowell Foundation','Private foundation','United States','themcdowellfoundation','http://www.mcdowellfoundation.org/','http://www.mcdowellfoundation.org/our-grants',NULL,NULL,NULL,NULL,NULL,NULL,'mcdowell_fdn',NULL,'http://www.mcdowellfoundation.org/about','http://www.mcdowellfoundation.org/applying-for-grants',NULL,NULL,NULL,NULL,'https://github.com/riceissa/mcdowell-foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
+  ('Nathan Cummings Foundation','Private foundation','United States','NathanCummingsFoundation','http://www.nathancummings.org/','http://www.nathancummings.org/what-we-fund/grants',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'http://www.nathancummings.org/about-the-foundation/mission-statement','http://www.nathancummings.org/how-apply',NULL,NULL,NULL,NULL,'https://github.com/riceissa/nathan-cummings-foundation','https://en.wikipedia.org/wiki/Nathan_Cummings_Foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
