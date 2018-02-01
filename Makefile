@@ -160,4 +160,5 @@ reset_similarity:
 
 .PHONY: compute_similarity
 compute_similarity:
-	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-2.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-3.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-4.sql
