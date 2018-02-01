@@ -126,6 +126,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Nathan Cummings Foundation','Private foundation','United States','NathanCummingsFoundation','http://www.nathancummings.org/','http://www.nathancummings.org/what-we-fund/grants',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'http://www.nathancummings.org/about-the-foundation/mission-statement','http://www.nathancummings.org/how-apply',NULL,NULL,NULL,NULL,'https://github.com/riceissa/nathan-cummings-foundation','https://en.wikipedia.org/wiki/Nathan_Cummings_Foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
+  ('Theiss Research','Private foundation','United States',NULL,'http://www.theissresearch.org/','https://web.archive.org/web/20160630004923/http://theissresearch.org/organization/grants.php',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
