@@ -9,5 +9,6 @@ yearlyGroupings(
   "country",
   "affected_countries",
   $causeAreaFilterString,
-  ""
+  "",
+  ($_REQUEST['display'] == "full" ? -1 : 30)
 );

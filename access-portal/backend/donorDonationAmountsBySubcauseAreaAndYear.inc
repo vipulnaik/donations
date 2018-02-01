@@ -9,7 +9,8 @@ yearlyGroupings(
   "subcause area",
   "cause_area",
   $causeAreaFilterString,
-  ""
+  "",
+  ($_REQUEST['display'] == "full" ? -1 : 30)
 );
 
 ?>

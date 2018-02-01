@@ -60,7 +60,7 @@ function printFooterRow($data, $years, $rowName, $rowLabel) {
 
 function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
     $donor, $groupName, $groupSqlCol, $causeAreaFilterString,
-    $groupMemberLink) {
+    $groupMemberLink, $limit) {
 
   /* This array is three-dimensional with value BY group BY year, e.g.
    * $data['amount']['United States'][2015] if the grouping is country. All the
@@ -195,7 +195,9 @@ EOD;
     return intval($data['amount'][$b]['Total'])
       - intval($data['amount'][$a]['Total']);
   });
-  $groupMembers = array_slice($groupMembers, 0, 30);
+  if ($limit > 0) {
+    $groupMembers = array_slice($groupMembers, 0, $limit);
+  }
 
   printYearlyGroupedHtmlTable(
     $data,

@@ -1,6 +1,10 @@
 <?php
 
-$doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee order by sum(amount) desc limit 30;";
+if (($_REQUEST['display'] ?? '') == "full") {
+  $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee;";
+} else {
+  $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee order by sum(amount) desc limit 30;";
+}
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();
 for ($i = 0; $i < $doneeResult -> num_rows; $i++) {

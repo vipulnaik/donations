@@ -2,7 +2,11 @@
 
 print '<h4 id="donationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</h4>';
 
-$causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area from donations $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1) order by sum(amount) desc limit 30";
+if (($_REQUEST['display'] ?? '') == "full") {
+  $causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area from donations $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1)";
+} else {
+  $causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area from donations $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1) order by sum(amount) desc limit 30";
+}
 $causeAreaResult = $mysqli -> query($causeAreaQuery);
 $causeAreas = array();
 for ($i = 0; $i < $causeAreaResult -> num_rows; $i++) {
@@ -18,10 +22,14 @@ foreach($causeAreas as $causeArea) {
   }
 }
 
-if ($causeAreaFilterQueryComponent) {
-  $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent and substring_index(cause_area,'/',1) in (select * from (select substring_index(cause_area,'/',1) from donations $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1) order by sum(amount) desc limit 30) as x) group by substring_index(cause_area,'/',1), year(donation_date)";
+if (($_REQUEST['display'] ?? '') == "full") {
+  $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1), year(donation_date)";
 } else {
-  $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where substring_index(cause_area,'/',1) in (select * from (select substring_index(cause_area,'/',1) from donations group by substring_index(cause_area,'/',1) order by sum(amount) desc limit 30) as x) group by substring_index(cause_area,'/',1), year(donation_date)";
+  if ($causeAreaFilterQueryComponent) {
+    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent and substring_index(cause_area,'/',1) in (select * from (select substring_index(cause_area,'/',1) from donations $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1) order by sum(amount) desc limit 30) as x) group by substring_index(cause_area,'/',1), year(donation_date)";
+  } else {
+    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where substring_index(cause_area,'/',1) in (select * from (select substring_index(cause_area,'/',1) from donations group by substring_index(cause_area,'/',1) order by sum(amount) desc limit 30) as x) group by substring_index(cause_area,'/',1), year(donation_date)";
+  }
 }
 $causeAreaAndYearResult = $mysqli -> query($causeAreaAndYearQuery);
 
