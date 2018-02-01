@@ -195,6 +195,7 @@ EOD;
     return intval($data['amount'][$b]['Total'])
       - intval($data['amount'][$a]['Total']);
   });
+  $groupMembers = array_slice($groupMembers, 0, 30);
 
   printYearlyGroupedHtmlTable(
     $data,
