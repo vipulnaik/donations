@@ -1,7 +1,7 @@
 <?php
 
 function distinctDonees($mysqli, $causeAreaFilterString, $donor,
-    $classifiedString) {
+    $classifiedString, $donorRestriction = "") {
 
   $query = <<<'EOD'
       select
@@ -12,6 +12,9 @@ EOD;
     $query .= " where $classifiedString";
   } else {
     $query .= " where TRUE";
+  }
+  if ($donorRestriction) {
+    $query .= " and $donorRestriction";
   }
   if ($donor != '') {
     $query .= " and donor = ?";
@@ -70,8 +73,8 @@ function printFooterRow($data, $years, $rowName, $rowLabel) {
  *                                 elements to show. This is only in effect if
  *                                 greater than zero.
  * @param string $donorRestriction A string describing how the donors in the
- *                                 queries are restricted. This should fill in
- *                                 the "?" in "... from donors where ?".
+ *                                 queries are restricted. This should be part
+ *                                 of a "where" clause in SQL.
  */
 function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
     $donor, $groupName, $groupSqlCol, $causeAreaFilterString,
@@ -98,6 +101,9 @@ function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
       from donations
       where TRUE
 EOD;
+  if ($donorRestriction) {
+    $groupQuery .= " and $donorRestriction";
+  }
   if ($donor != '') {
     $groupQuery .= " and donor = ?";
   }
@@ -159,6 +165,9 @@ EOD;
       from donations
       where TRUE
 EOD;
+  if ($donorRestriction) {
+    $groupQuery .= " and $donorRestriction";
+  }
   if ($donor != '') {
     $groupAndYearQuery .= " and donor = ?";
   }
@@ -202,9 +211,10 @@ EOD;
   }
 
   $data['numDonees']['Classified']['Total'] = distinctDonees($mysqli,
-    $causeAreaFilterString, $donor, "$groupSqlCol is not NULL");
+    $causeAreaFilterString, $donor, "$groupSqlCol is not NULL",
+    $donorRestriction);
   $data['numDonees']['Total']['Total'] = distinctDonees($mysqli,
-    $causeAreaFilterString, $donor, "");
+    $causeAreaFilterString, $donor, "", $donorRestriction);
 
   usort($groupMembers, function($a, $b) use ($data) {
     return intval($data['amount'][$b]['Total'])
