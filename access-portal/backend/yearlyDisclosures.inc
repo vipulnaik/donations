@@ -1,20 +1,25 @@
 <?php
 
-/* Stick in donor and cause area filtering into the query. query1 is the
+/**
+ * Stick in donor and cause area filtering into the query. query1 is the
  * beginning of the query ("select ... from ...") and query2 is the last part
  * ("group by ..."). Return a mysqli result.
  */
 function filteredDonorCauseArea($mysqli, $query1, $query2, $donor,
-    $causeAreaFilterString) {
+    $causeAreaFilterString, $donorRestriction = "") {
 
-  $query = $query1;
+  $query = $query1 . " where TRUE";
 
   if ($donor && $causeAreaFilterString) {
-    $query .= " where donations.donor = ? and donations.cause_area REGEXP ?";
+    $query .= " and donations.donor = ? and donations.cause_area REGEXP ?";
   } else if ($donor) {
-    $query .= " where donations.donor = ?";
+    $query .= " and donations.donor = ?";
   } else if ($causeAreaFilterString) {
-    $query .= " where donations.cause_area REGEXP ?";
+    $query .= " and donations.cause_area REGEXP ?";
+  }
+
+  if ($donorRestriction) {
+    $query .= " and $donorRestriction";
   }
 
   $query .= " " . $query2;
@@ -31,17 +36,28 @@ function filteredDonorCauseArea($mysqli, $query1, $query2, $donor,
     $result = $stmt->get_result();
     return $result;
   } else {
-    print 'DEBUG: ' . $mysqli->error;
+    print "<pre>";
+    print 'DEBUG: ' . $mysqli->error . "\n";
+    print "DEBUG: Query was: " . $query . "\n";
+    print "</pre>\n";
   }
 }
 
+/**
+ * Produce yearly groupings for disclosures. This is like yearlyGroupings, but
+ * for disclosures specifically, because for disclosures the classified total
+ * differs from the sum of the group members (see
+ * https://github.com/vipulnaik/donations/blob/master/classified-and-unclassified.md#classified-total-vs-sum-of-group-members-blue
+ * for more information).
+ */
 function disclosuresYearlyGroupings(
   $mysqli,
   $generateGraphCmdBase,
   $imagesPath,
   $years,
   $donor,
-  $causeAreaFilterString
+  $causeAreaFilterString,
+  $donorRestriction
 ) {
 
   $data = array();
@@ -51,7 +67,8 @@ function disclosuresYearlyGroupings(
       select count(distinct donee) as numDonees
       from donations
 EOD;
-  $r = filteredDonorCauseArea($mysqli, $query, "", $donor, $causeAreaFilterString);
+  $r = filteredDonorCauseArea($mysqli, $query, "", $donor,
+    $causeAreaFilterString, $donorRestriction);
   while ($row = $r->fetch_assoc()) {
     $data['numDonees']['Total']['Total'] = $row['numDonees'];
   }
@@ -80,7 +97,7 @@ EOD;
           and d1.donation_date=donations.donation_date
 EOD;
   $r = filteredDonorCauseArea($mysqli, $query, "", $donor,
-    $causeAreaFilterString);
+    $causeAreaFilterString, $donorRestriction);
   while ($row = $r->fetch_assoc()) {
     $data['numDonees']['Classified']['Total'] = $row['numDonees'];
   }
@@ -116,7 +133,8 @@ EOD;
     $query,
     "group by year(donations.donation_date)",
     $donor,
-    $causeAreaFilterString
+    $causeAreaFilterString,
+    $donorRestriction
   );
   while ($row = $r->fetch_assoc()) {
     $y = $row['year'];
@@ -139,7 +157,7 @@ EOD;
 EOD;
 
   $r = filteredDonorCauseArea($mysqli, $query, "group by year(donation_date)",
-    $donor, $causeAreaFilterString);
+    $donor, $causeAreaFilterString, $donorRestriction);
 
   while ($row = $r->fetch_assoc()) {
     $y = $row['year'];
@@ -180,7 +198,7 @@ EOD;
 EOD;
 
   $r = filteredDonorCauseArea($mysqli, $query, "group by d1.donor_side_name",
-    $donor, $causeAreaFilterString);
+    $donor, $causeAreaFilterString, $donorRestriction);
 
   while ($row = $r->fetch_assoc()) {
     $g = $row['donor_side_name'];
@@ -219,7 +237,7 @@ EOD;
 
   $r = filteredDonorCauseArea($mysqli, $query,
     "group by d1.donor_side_name, year(donations.donation_date)",
-    $donor, $causeAreaFilterString);
+    $donor, $causeAreaFilterString, $donorRestriction);
 
   while ($row = $r->fetch_assoc()) {
     $g = $row['donor_side_name'];
@@ -259,7 +277,8 @@ EOD;
     $query,
     ") as d1 where d1.disclosed=0",
     $donor,
-    $causeAreaFilterString
+    $causeAreaFilterString,
+    $donorRestriction
   );
   while ($row = $r->fetch_assoc()) {
     $data['numDonees']['Unclassified']['Total'] = $row['numDonees'];
