@@ -58,9 +58,24 @@ function printFooterRow($data, $years, $rowName, $rowLabel) {
   print "  </tr>\n";
 }
 
+/**
+ * Produce a yearly grouping in terms of $groupName (corresponding to
+ * $groupSqlCol in the donations table), and print an HTML table of the
+ * grouping. Use this method only if the classified total should equal the sum
+ * of the group members (see
+ * https://github.com/vipulnaik/donations/blob/master/classified-and-unclassified.md#classified-total-vs-sum-of-group-members-blue
+ * for more information).
+ *
+ * @param int    $limit            A number giving the maximum possible group
+ *                                 elements to show. This is only in effect if
+ *                                 greater than zero.
+ * @param string $donorRestriction A string describing how the donors in the
+ *                                 queries are restricted. This should fill in
+ *                                 the "?" in "... from donors where ?".
+ */
 function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
     $donor, $groupName, $groupSqlCol, $causeAreaFilterString,
-    $groupMemberLink, $limit) {
+    $groupMemberLink, $limit = -1, $donorRestriction = "") {
 
   /* This array is three-dimensional with value BY group BY year, e.g.
    * $data['amount']['United States'][2015] if the grouping is country. All the
