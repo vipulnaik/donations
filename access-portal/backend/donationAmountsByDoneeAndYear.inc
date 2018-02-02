@@ -2,6 +2,12 @@
 
 if (($_REQUEST['display'] ?? '') == "full") {
   $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee;";
+} else if (($_REQUEST['display'] ?? '') == "individual-scale") {
+  if ($causeAreaFilterQueryComponent) {
+    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee;";
+  } else {
+    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee;";
+  }
 } else {
   $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee order by sum(amount) desc limit 30;";
 }
@@ -47,7 +53,15 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
   $timelinesWikiPage[$row['donee']] = $row['timelines_wiki_page'];
 }
 
-$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent group by donee, year(donation_date)";
+if (($_REQUEST['display'] ?? '') == "individual-scale") {
+  if ($causeAreaFilterQueryComponent) {
+    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee, year(donation_date)";
+  } else {
+    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee, year(donation_date)";
+  }
+} else {
+  $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent group by donee, year(donation_date)";
+}
 $doneeAndYearResult = $mysqli -> query($doneeAndYearQuery);
 
 for ($i=0; $i < $doneeAndYearResult -> num_rows; $i++) {
