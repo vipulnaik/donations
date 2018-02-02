@@ -166,7 +166,7 @@ EOD;
       where TRUE
 EOD;
   if ($donorRestriction) {
-    $groupQuery .= " and $donorRestriction";
+    $groupAndYearQuery .= " and $donorRestriction";
   }
   if ($donor != '') {
     $groupAndYearQuery .= " and donor = ?";
