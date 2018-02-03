@@ -20,6 +20,7 @@ print "<title>$donor donations made to $donee"
 include_once('analytics.inc');
 include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
+include_once('backend/cachingFunctions.inc');
 include_once('backend/yearlyGraph.inc');
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
 print '<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>'."\n";
@@ -46,13 +47,20 @@ print '<li><a href="#donorDoneeDonationList">Donor donation list</a></li>';
 print '<li><a href="#donorDoneeDocumentList">Donor document list</a></li>';
 print '</ul>';
 
-include ("backend/donorInfo.inc");
-print '<p><a href="/donor.php?donor='.urlencode($donor).'">Full donor page for donor '.$donor.'</a></p>'."\n";
-include ("backend/doneeInfo.inc");
-print '<p><a href="/donee.php?donee='.urlencode($donee).'">Full donee page for donee '.$donee.'</a></p>'."\n";
-include ("backend/donorDoneeDonationAmountsByCauseAreaAndYear.inc");
-include ("backend/donorDoneeDonationList.inc");
-include ("backend/donorDoneeDocumentList.inc");
+$cache_location = "cache/" . md5($_SERVER['REQUEST_URI']) . ".html";
+if (needToRegenerate($cache_location)) {
+  ob_start();
+  include ("backend/donorInfo.inc");
+  print '<p><a href="/donor.php?donor='.urlencode($donor).'">Full donor page for donor '.$donor.'</a></p>'."\n";
+  include ("backend/doneeInfo.inc");
+  print '<p><a href="/donee.php?donee='.urlencode($donee).'">Full donee page for donee '.$donee.'</a></p>'."\n";
+  include ("backend/donorDoneeDonationAmountsByCauseAreaAndYear.inc");
+  include ("backend/donorDoneeDonationList.inc");
+  include ("backend/donorDoneeDocumentList.inc");
+  $output = ob_get_clean();
+  file_put_contents($cache_location, $output);
+}
+include($cache_location);
 
 include_once("anchorjs.inc");
 print '</body>';
