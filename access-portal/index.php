@@ -50,7 +50,6 @@ include ("backend/donationAmountsByDonorAndYear.inc");
 include ("backend/donationAmountsByDoneeAndYear.inc");
 include ("backend/donationAmountsByInfluencerAndYear.inc");
 include ("backend/donationAmountsByCountryAndYear.inc");
-include ("backend/donationAmountsByDisclosuresAndYear.inc");
 
 include_once("anchorjs.inc");
 print '</body>';
