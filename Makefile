@@ -10,6 +10,9 @@ reset:
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists gifts;"
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists money_moved;"
 	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists disclosures;"
+	rm -fr access-portal/cache
+	mkdir -p access-portal/cache
+	touch access-portal/cache/DB_LAST_UPDATE_TRACKER
 
 .PHONY: init
 init:
