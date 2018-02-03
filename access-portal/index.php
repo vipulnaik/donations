@@ -3,6 +3,7 @@ include_once('doctype.inc');
 include_once('analytics.inc');
 include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
+include_once('backend/cachingFunctions.inc');
 $causeAreaFilterString = '';
 $causeAreaFilterStringHelper = '';
 $causeAreaFilterQueryComponent = "";
@@ -42,14 +43,23 @@ print '<li><a href="#donationAmountsByDisclosuresAndYear">Donation amounts by di
 
 print '</ul>';
 
-include_once('backend/yearlyGraph.inc');
-include_once('backend/yearlyGroupings.inc');
-include_once('backend/yearlyDisclosures.inc');
-include ("backend/donationAmountsByCauseAreaAndYear.inc");
-include ("backend/donationAmountsByDonorAndYear.inc");
-include ("backend/donationAmountsByDoneeAndYear.inc");
-include ("backend/donationAmountsByInfluencerAndYear.inc");
-include ("backend/donationAmountsByCountryAndYear.inc");
+$cache_location = "cache/" . md5($_SERVER['REQUEST_URI']) . ".html";
+if (needToRegenerate($cache_location)) {
+  ob_start();
+
+  include_once('backend/yearlyGraph.inc');
+  include_once('backend/yearlyGroupings.inc');
+  include_once('backend/yearlyDisclosures.inc');
+  include ("backend/donationAmountsByCauseAreaAndYear.inc");
+  include ("backend/donationAmountsByDonorAndYear.inc");
+  include ("backend/donationAmountsByDoneeAndYear.inc");
+  include ("backend/donationAmountsByInfluencerAndYear.inc");
+  include ("backend/donationAmountsByCountryAndYear.inc");
+
+  $output = ob_get_clean();
+  file_put_contents($cache_location, $output);
+}
+include($cache_location);
 
 include_once("anchorjs.inc");
 print '</body>';
