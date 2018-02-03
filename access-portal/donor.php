@@ -16,6 +16,7 @@ print "<title>$donor donations made $causeAreaFilterStringHelper</title>";
 include_once('analytics.inc');
 include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
+include_once('backend/cachingFunctions.inc');
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
 print '<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>'."\n";
 print '<script type="text/javascript" src="./jquery.tablesorter.js"></script>'."\n";
@@ -52,19 +53,26 @@ print '<li><a href="#donorDonationList">Donor donation list</a></li>';
 print '<li><a href="#donorSimilarDonors">Similar donors</a></li>';
 print '</ul>';
 
-include_once('backend/yearlyGraph.inc');
-include_once('backend/yearlyGroupings.inc');
-include_once('backend/yearlyDisclosures.inc');
-include ("backend/donorInfo.inc");
-include ("backend/donorDonationAmountsByCauseAreaAndYear.inc");
-include ("backend/donorDonationAmountsBySubcauseAreaAndYear.inc");
-include ("backend/donorDonationAmountsByDoneeAndYear.inc");
-include ("backend/donorDonationAmountsByInfluencerAndYear.inc");
-include ("backend/donorDonationAmountsByDisclosuresAndYear.inc");
-include ("backend/donorDonationAmountsByCountryAndYear.inc");
-include ("backend/donorDocumentList.inc");
-include ("backend/donorDonationList.inc");
-include ("backend/donorSimilarDonors.inc");
+$cache_location = "cache/" . md5($_SERVER['REQUEST_URI']) . ".html";
+if (needToRegenerate($cache_location)) {
+  ob_start();
+  include_once('backend/yearlyGraph.inc');
+  include_once('backend/yearlyGroupings.inc');
+  include_once('backend/yearlyDisclosures.inc');
+  include ("backend/donorInfo.inc");
+  include ("backend/donorDonationAmountsByCauseAreaAndYear.inc");
+  include ("backend/donorDonationAmountsBySubcauseAreaAndYear.inc");
+  include ("backend/donorDonationAmountsByDoneeAndYear.inc");
+  include ("backend/donorDonationAmountsByInfluencerAndYear.inc");
+  include ("backend/donorDonationAmountsByDisclosuresAndYear.inc");
+  include ("backend/donorDonationAmountsByCountryAndYear.inc");
+  include ("backend/donorDocumentList.inc");
+  include ("backend/donorDonationList.inc");
+  include ("backend/donorSimilarDonors.inc");
+  $output = ob_get_clean();
+  file_put_contents($cache_location, $output);
+}
+include($cache_location);
 include_once('anchorjs.inc');
 print '</body>';
 ?>
