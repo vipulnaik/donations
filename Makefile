@@ -165,3 +165,11 @@ reset_similarity:
 compute_similarity:
 	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-3.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-4.sql
+
+.PHONY: build_cache
+build_cache:
+	curl --silent 'https://donations.vipulnaik.com/' > /dev/null
+	curl --silent 'https://donations.vipulnaik.com/?display=individual-scale' > /dev/null
+	curl --silent 'https://donations.vipulnaik.com/donor.php?donor=Open+Philanthropy+Project' > /dev/null
+	curl --silent 'https://donations.vipulnaik.com/donee.php?donee=Machine+Intelligence+Research+Institute' > /dev/null
+	curl --silent 'https://donations.vipulnaik.com/?display=full' > /dev/null
