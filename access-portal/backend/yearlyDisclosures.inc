@@ -57,7 +57,7 @@ function disclosuresYearlyGroupings(
   $years,
   $donor,
   $causeAreaFilterString,
-  $donorRestriction
+  $donorRestriction = ""
 ) {
 
   $data = array();
