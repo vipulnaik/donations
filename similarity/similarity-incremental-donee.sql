@@ -2,7 +2,7 @@ drop procedure if exists updateSimilarityDonee;
 
 delimiter $$
 
-create procedure updateSimilarityDonee(dne varchar(100))
+create procedure updateSimilarityDonee(dne varchar(200))
 begin
     select concat(now(), "\tdoing ", dne) as '';
 
