@@ -4,6 +4,28 @@ delimiter $$
 
 create procedure updateSimilarityDonee(dne varchar(100))
 begin
+    select concat(now(), "\tdoing ", dne) as '';
+
+    # BEGIN testing
+    delete from donor_donee_pairs where donee=dne;
+    insert into donor_donee_pairs (donor, donee, total_donation, num_donations)
+    select
+        donor,
+        donee,
+        coalesce(sum(amount), 0) as total_donation,
+        count(*) as num_donations
+    from donations where donee=dne group by donor, donee;
+
+    delete from donor_donee_pairs_2 where donee=dne;
+    insert into donor_donee_pairs_2 (donor, donee, total_donation, num_donations)
+    select
+        donor,
+        donee,
+        coalesce(sum(amount), 0) as total_donation,
+        count(*) as num_donations
+    from donations where donee=dne group by donor, donee;
+    # END testing
+
     delete from two_donees_one_donor where first_donee=dne or second_donee=dne;
     insert into two_donees_one_donor (
         first_donee,

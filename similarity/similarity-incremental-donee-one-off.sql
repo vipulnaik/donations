@@ -7,6 +7,18 @@ drop table if exists donee_similarity;
 
 set @dne = "Machine Intelligence Research Institute" COLLATE utf8_unicode_ci;
 
+# BEGIN testing
+create table donor_donee_pairs as
+select
+    donor,
+    donee,
+    coalesce(sum(amount), 0) as total_donation,
+    count(*) as num_donations
+from donations where donee=@dne group by donor, donee;
+
+create table donor_donee_pairs_2 as select * from donor_donee_pairs;
+# END testing
+
 create table two_donees_one_donor as
 select
     donor_donee_pairs.donee as first_donee,
