@@ -61,7 +61,8 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/catherine-hollander-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/chelsea-tabart-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donor-lottery.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donor-lottery-2016.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donor-lottery-2017-cea.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ea-funds.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ea-giving-group.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ea-grants.sql
