@@ -70,6 +70,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/elie-hassenfeld-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/elizabeth-van-nostrand-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ford-foundation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/foundational-questions-institute-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/founders-pledge-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/gates-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-discretionary-regranting.sql
