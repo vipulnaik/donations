@@ -61,7 +61,8 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/catherine-hollander-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/chelsea-tabart-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donor-lottery.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donor-lottery-2016.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donor-lottery-2017-cea.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ea-funds.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ea-giving-group.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ea-grants.sql
@@ -69,6 +70,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/elie-hassenfeld-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/elizabeth-van-nostrand-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ford-foundation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/foundational-questions-institute-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/founders-pledge-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/gates-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-discretionary-regranting.sql
@@ -106,6 +108,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/rebecca-raible-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/robert-yaman-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/sophie-monahan-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/templeton-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/unbound-philanthropy-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/vipul-naik-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees.sql
