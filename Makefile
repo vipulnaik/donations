@@ -72,6 +72,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ford-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/foundational-questions-institute-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/founders-pledge-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/future-of-life-institute-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/gates-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-discretionary-regranting.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/givewell-incubation-grants.sql
