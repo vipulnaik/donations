@@ -109,6 +109,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/public-welfare-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/rebecca-raible-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/robert-yaman-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/sloan-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/sophie-monahan-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/templeton-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/unbound-philanthropy-grants.sql
