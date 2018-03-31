@@ -54,7 +54,7 @@ insert into donors(donor, country, facebook_username, website, donations_url, le
   ('Jacob Steinhardt', 'United States', 'jacob.steinhardt', NULL, NULL, 'jsteinhardt','jacob-steinhardt-a30437bb',NULL,'jsteinhardt',NULL,'jsteinha','jacobsteinhardt'),
   ('Michael Dickens', 'United States', 'michael.j.dickens', 'http://mdickens.me/', 'http://mdickens.me/donations/', 'MTGandP','michael-dickens-a4173255',NULL, 'MichaelDickens','michael-dickens','michaeldickens',NULL),
   ('Nicole Ross', 'United States', 'nicolejamesross', NULL, NULL, NULL,'nicole-ross-184a6142','GiveWell|Open Philanthropy Project', NULL, NULL, NULL, NULL),
-  ('Pablo Stafforini', 'United Kingdom', 'stafforini', 'http://www.stafforini.com', 'http://www.stafforini.com/blog/donations/', NULL,'stafforini','Centre for Effective Altruism|80000 Hours',NULL,'pablo-stafforini', NULL,'stafforini'),
+  ('Pablo Stafforini', 'United Kingdom', 'stafforini', 'http://www.stafforini.com', 'http://www.stafforini.com/blog/donations/', NULL,'stafforini','Centre for Effective Altruism|80,000 Hours',NULL,'pablo-stafforini', NULL,'stafforini'),
   ('Rebecca Raible', 'United States', 'rebecca.paobur.raible', NULL, NULL, NULL,'rebeccaraible','GiveWell','rebecca_raible','rebecca-raible',NULL,'RebeccaRaible'),
   ('Rohin Shah', 'United States', 'rohinmshah', 'http://rohinshah.com/', NULL, NULL,'rohin-shah-76405832',NULL,'rohinmshah','rohin-shah','rohinmshah', NULL), 
   ('Timothy Telleen-Lawton', 'United States', 'TimTL', NULL, NULL, NULL,'timothytl','GiveWell',NULL,'timothy-telleen-lawton',NULL,'timtl'),

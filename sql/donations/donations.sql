@@ -14,7 +14,7 @@ insert into donations(donor, donee, amount, fraction, donation_date,
     currency_conversion_date, currency_conversion_basis,
     donation_announcement_date, donation_announcement_date_precision,
     donation_announcement_url) values
-    ('Oxford Prioritisation Project', '80000 Hours', 12934, NULL, '2017-05-09', 'day', 'date of donation announcement', 'Effective altruism/movement growth', 'https://oxpr.io/blog/2017/5/20/four-quantiative-models-aggregation-and-final-decision', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 10000, 'GBP', '2017-05-09', 'Bloomberg', '2017-05-09', 'day', 'https://www.facebook.com/events/336092186805365/');
+    ('Oxford Prioritisation Project', '80,000 Hours', 12934, NULL, '2017-05-09', 'day', 'date of donation announcement', 'Effective altruism/movement growth', 'https://oxpr.io/blog/2017/5/20/four-quantiative-models-aggregation-and-final-decision', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 10000, 'GBP', '2017-05-09', 'Bloomberg', '2017-05-09', 'day', 'https://www.facebook.com/events/336092186805365/');
 
 # -- Also includes GiveWell and Open Phil donors who have only one year of donation information
 

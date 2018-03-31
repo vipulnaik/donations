@@ -36,7 +36,7 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   ('Jeff Kaufman and Julia Wise', 'Against Malaria Foundation', 400, NULL, '2013-02-08', 'day', 'donation log', 'Global health/malaria', 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
   ('Jeff Kaufman and Julia Wise', 'Against Malaria Foundation', 6000, NULL, '2013-02-04', 'day', 'donation log', 'Global health/malaria', 'https://www.jefftk.com/donations', NULL, NULL, true, NULL, NULL, 5800, 'Google'),
   ('Jeff Kaufman and Julia Wise', 'Giving What We Can', 4200, NULL, '2012-11-17', 'day', 'donation log', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-  ('Jeff Kaufman and Julia Wise', '80000 Hours', 21053, NULL, '2012-11-07', 'day', 'donation log', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+  ('Jeff Kaufman and Julia Wise', '80,000 Hours', 21053, NULL, '2012-11-07', 'day', 'donation log', NULL, 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
   ('Jeff Kaufman and Julia Wise', 'Against Malaria Foundation', 19000, NULL, '2012-09-18', 'day', 'donation log', 'Global health/malaria', 'https://www.jefftk.com/donations', NULL, NULL, true, NULL, NULL, 12000, 'Google'),
   ('Jeff Kaufman and Julia Wise', 'Against Malaria Foundation', 150, NULL, '2012-07-07', 'day', 'donation log', 'Global health/malaria', 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
   ('Jeff Kaufman and Julia Wise', 'Schistosomiasis Control Initiative', 31, NULL, '2012-05-28', 'day', 'donation log', 'Global health/deworming', 'https://www.jefftk.com/donations', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
