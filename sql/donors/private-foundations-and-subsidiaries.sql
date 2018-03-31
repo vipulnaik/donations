@@ -29,7 +29,7 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
    NULL,
    NULL),
    
-  ('Open Philanthropy Project','Private foundation','United States','openphilanthropy','https://www.openphilanthropy.org/','https://www.openphilanthropy.org/giving/grants',NULL,NULL,'GiveWell,Good Ventures',NULL,NULL,NULL,'open_phil','OpenPhilUnofficial','https://www.openphilanthropy.org/about/vision-and-values','https://www.openphilanthropy.org/giving/guide-for-grant-seekers','continuous updates','continuous updates', 'months', 'days', NULL,
+  ('Open Philanthropy Project','Private foundation','United States','openphilanthropy','https://www.openphilanthropy.org/','https://www.openphilanthropy.org/giving/grants',NULL,NULL,'GiveWell|Good Ventures',NULL,NULL,NULL,'open_phil','OpenPhilUnofficial','https://www.openphilanthropy.org/about/vision-and-values','https://www.openphilanthropy.org/giving/guide-for-grant-seekers','continuous updates','continuous updates', 'months', 'days', NULL,
   NULL,
   'https://causeprioritization.org/Open%20Philanthropy%20Project',
   'The Open Philanthropy Project (Open Phil for short) spun off from GiveWell, starting as GiveWell Labs in 2011, beginning to make strong progress in 2013, and formally separating from GiveWell in June 2017',
@@ -50,7 +50,7 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
   NULL,
   'The foundation was included because it has been mentioned by the Open Philanthropy Project as one of the important funders of criminal justice reform in the United States, see for instance https://www.openphilanthropy.org/focus/us-policy/criminal-justice-reform/criminal-justice-reform-strategy'),
 
-  ('GiveWell Incubation Grants','Subsidiary','United States',NULL,'https://www.givewell.org/research/incubation-grants','https://www.givewell.org/research/incubation-grants',NULL,NULL,'GiveWell,Good Ventures',NULL,NULL,NULL,NULL,NULL,NULL,NULL, 'continuous updates', 'continuous updates', 'months', 'days', NULL,
+  ('GiveWell Incubation Grants','Subsidiary','United States',NULL,'https://www.givewell.org/research/incubation-grants','https://www.givewell.org/research/incubation-grants',NULL,NULL,'GiveWell|Good Ventures',NULL,NULL,NULL,NULL,NULL,NULL,NULL, 'continuous updates', 'continuous updates', 'months', 'days', NULL,
   NULL,
   'https://www.givewell.org/research/incubation-grants',
   'GiveWell Incubation Grants start off as GiveWell Experimental, with the goal of supporting the growth and discovery of future GiveWell top charities',
@@ -60,7 +60,7 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
   'After GiveWell decides on a grant, the grant is recommended to the Open Philanthropy Project, which in turn recommends to Good Ventures to fund the grant. Historically, grant requests were made directly to Good Ventures, and even now, in practice, the intermediate role of the Open Philanthropy Project is mostly just a formality. For these reasons, the cross-posting of the grants to the Open Philanthropy Project and Good Ventures pages is not of substantive interest to us. Even though the grants are listed in the Open Philanthropy Project database, they are not included in Open Philanthropy Project self-reports of how much grant money they decided on',
   'List last checked for completeness and accuracy on 2017-12-24'),
 
-  ('Good Ventures/GiveWell top and standout charities','Subsidiary','United States',NULL,NULL,NULL,NULL,NULL,'GiveWell,Good Ventures,Open Philanthropy Project',NULL,NULL,NULL,NULL,NULL,NULL,NULL, 'continuous updates', 'continuous updates', 'months', 'days', NULL,
+  ('Good Ventures/GiveWell top and standout charities','Subsidiary','United States',NULL,NULL,NULL,NULL,NULL,'GiveWell|Good Ventures|Open Philanthropy Project',NULL,NULL,NULL,NULL,NULL,NULL,NULL, 'continuous updates', 'continuous updates', 'months', 'days', NULL,
    NULL,
    NULL,
    'Starting in 2011, when GiveWell first started working with Good Ventures, Good Ventures has been making grants to GiveWell top and standout charities. Over time, they have worked more closely together on deciding the amounts to be granted, and incorporating these into the room for more funding that is communicated to other donors. The grants are almost always announced along with the year-end recommendation refresh in late November. Starting 2016, the decision of "how much in total to allocate" was moved over to the Open Philanthropy Project, and the grants began being listed in the Open Philanthropy Project database. The decision on how to split the allocation between specific top and standout charities remains with GiveWell',
