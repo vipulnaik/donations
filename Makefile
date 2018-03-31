@@ -57,6 +57,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/andrew-martin-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/arnold-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/ben-kuhn-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/beri-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/blake-borgeson-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/brian-tomasik-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/catherine-hollander-donations.sql
@@ -91,12 +92,14 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/jeff-kaufman-and-julia-wise-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/joey-savoie-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/josh-rosenberg-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/knight-foundation-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/loren-merritt-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/macarthur-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/mcdowell-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/michael-dello-iovaco-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/michael-dickens-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/miri-top-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/mulago-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/nathan-cummings-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/neil-sinhababu-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/nick-beckstead-donations.sql
@@ -113,6 +116,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/sloan-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/sophie-monahan-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/templeton-foundation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/theiss-research.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/unbound-philanthropy-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/vipul-naik-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/vitalik-buterin-donations.sql
