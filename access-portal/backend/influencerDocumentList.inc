@@ -25,7 +25,7 @@ if ($influencerDocumentSelectResult -> num_rows > 0) {
     print '<td>'.$row['publication_date'].'</td>';
     if ($row['author'] != '') {
       # Change this to check if author is in list
-      print '<td>'.explodeDonorCsv($row['author']).'</td>';
+      print '<td>'.explodeDonorPsv($row['author']).'</td>';
     } else {
       print '<td></td>';
     }
@@ -33,8 +33,8 @@ if ($influencerDocumentSelectResult -> num_rows > 0) {
     # Link to publisher as donor or donor?
     print '<td>'.$row['publisher'].'</td>';
 
-    print '<td>'.explodeDonorCsv($row['affected_donors']).'</td>';
-    print '<td>'.explodeDoneeCsv($row['affected_donees']).'</td>';
+    print '<td>'.explodeDonorPsv($row['affected_donors']).'</td>';
+    print '<td>'.explodeDoneePsv($row['affected_donees']).'</td>';
     print '<td>'.$row['document_scope'].'</td>';
     print '<td>'.cleanNotes($row['notes']).'</td>';
     print '</tr>';

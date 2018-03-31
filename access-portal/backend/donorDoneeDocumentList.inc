@@ -37,7 +37,7 @@ if ($donorDocumentSelectResult -> num_rows > 0) {
     print '      <td>'.$row['publication_date']."</td>\n";
     if ($row['author'] != '') {
       # Change this to check if author is in list
-      print '      <td>'.explodeDonorCsv($row['author'])."</td>\n";
+      print '      <td>'.explodeDonorPsv($row['author'])."</td>\n";
     } else {
       print "      <td></td>\n";
     }
@@ -45,8 +45,8 @@ if ($donorDocumentSelectResult -> num_rows > 0) {
     # Link to publisher as donor or donor?
     print '      <td>'.$row['publisher']."</td>\n";
 
-    print '      <td>'.explodeDonorCsv($row['affected_donors'])."</td>\n";
-    print '      <td>'.explodeDoneeCsv($row['affected_donees'])."</td>\n";
+    print '      <td>'.explodeDonorPsv($row['affected_donors'])."</td>\n";
+    print '      <td>'.explodeDoneePsv($row['affected_donees'])."</td>\n";
     print '      <td>'.$row['document_scope']."</td>\n";
     print '      <td>'.$row['cause_area']."</td>\n";
     print '      <td>'.cleanNotes($row['notes'])."</td>\n";

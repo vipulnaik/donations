@@ -21,6 +21,14 @@ function explodeDoneeCsv($doneeCsv) {
   return explodeDoneeCharSepValues($doneeCsv, ",");
 }
 
+function explodeDonorPsv($donorPsv) {
+  return explodeDonorCharSepValues($donorCsv, "|");
+}
+
+function explodeDoneePsv($doneePsv) {
+  return explodeDoneeCharSepValues($doneeCsv, "|");
+}
+
 function explodeDonorCharSepValues($donorCsv, string $char) {
   $donorsList = explode($char,$donorCsv);
   $formattedString = '';

@@ -14,7 +14,7 @@ if ($donorSelectResult -> num_rows == 0) {
   print "</thead>\n<tbody>\n";
   print "<tr>\n    <td>Country</td>\n    <td>".$row['country']."</td>\n</tr>\n";
   if (isset($row['affiliated_orgs']) && $row['affiliated_orgs'] != '') {
-    print "<tr><td>Affiliated organizations (current or former; restricted to potential donees or others relevant to donation decisions)</td><td>".explodeDoneeCsv($row['affiliated_orgs']).'</td></tr>';
+    print "<tr><td>Affiliated organizations (current or former; restricted to potential donees or others relevant to donation decisions)</td><td>".explodeDoneePsv($row['affiliated_orgs']).'</td></tr>';
   }
   if (isset($row['wikipedia_page']) && $row['wikipedia_page'] != '') {
     print '<tr><td>Wikipedia page</td><td><a href="'.$row['wikipedia_page'].'">'.$row['wikipedia_page'].'</a></td></tr>';
