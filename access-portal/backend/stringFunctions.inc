@@ -22,11 +22,11 @@ function explodeDoneeCsv($doneeCsv) {
 }
 
 function explodeDonorPsv($donorPsv) {
-  return explodeDonorCharSepValues($donorCsv, "|");
+  return explodeDonorCharSepValues($donorPsv, "|");
 }
 
 function explodeDoneePsv($doneePsv) {
-  return explodeDoneeCharSepValues($doneeCsv, "|");
+  return explodeDoneeCharSepValues($doneePsv, "|");
 }
 
 function explodeDonorCharSepValues($donorCsv, string $char) {
