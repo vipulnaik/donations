@@ -114,6 +114,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/templeton-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/unbound-philanthropy-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/vipul-naik-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/vitalik-buterin-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/wellcome-trust-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/social-media-mass-grab.sql
