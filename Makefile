@@ -82,6 +82,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/good-ventures-not-givewell-or-open-phil.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/google-org.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/gordon-irlam-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/gwern-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/haseeb-qureshi-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/hewlett-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/holden-karnofsky-donations.sql
