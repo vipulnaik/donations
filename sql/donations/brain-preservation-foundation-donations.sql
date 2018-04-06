@@ -1,0 +1,18 @@
+# This file is manually edited.
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes) values
+    ('Saar Wilf','Brain Preservation Foundation',100000.0,'2010-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the Prize Fund.')
+    ,('Androklis Polymenis','Brain Preservation Foundation',43000.0,'2014-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the General Fund.')
+    ,('Steve Aoki','Brain Preservation Foundation',33000.0,'2014-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the General Fund.')
+    ,('John Smart','Brain Preservation Foundation',5000.0,'2011-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the Prize Fund.')
+    ,('Daniel Crevier','Brain Preservation Foundation',5000.0,'2012-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the Evaluation Fund.')
+    ,('Robin Hanson','Brain Preservation Foundation',5000.0,'2012-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the Evaluation Fund.')
+    ,('Art Shaposhnikov','Brain Preservation Foundation',5000.0,'2013-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the Evaluation Fund.')
+    ,('Ben Scarlato','Brain Preservation Foundation',5000.0,'2014-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the General Fund.')
+    ,('Ken Hayworth','Brain Preservation Foundation',2500.0,'2012-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the General Fund.')
+    ,('Ken Hayworth','Brain Preservation Foundation',1000.0,'2011-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the Prize Fund.')
+    ,('Benjamin Hoffman','Brain Preservation Foundation',1000.0,'2012-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the Evaluation Fund.')
+    ,('Edgar W. Swank','Brain Preservation Foundation',1000.0,'2012-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the General Fund.')
+    ,('Michael Cerullo','Brain Preservation Foundation',1000.0,'2014-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the General Fund.')
+    ,('Adam Grant','Brain Preservation Foundation',1000.0,'2015-01-01','year','donee contributor list','Life sciences','https://archive.is/2018.04.06-190728/http://www.brainpreservation.org/donors/','Donation given specifically to the Endowment Fund.')
+;
