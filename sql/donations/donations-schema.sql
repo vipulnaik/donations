@@ -30,5 +30,6 @@ create table donations (
     donation_announcement_date date,
     donation_announcement_date_precision enum('day','month','year','multi-year'),
     donation_announcement_url varchar(200),
-    predictions varchar(2000)
+    predictions varchar(2000),
+    is_contractwork tinyint(1) default 0
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

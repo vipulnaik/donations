@@ -1,4 +1,12 @@
+# -- Contract work "donations"
+
+insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, special_donation_reason, affected_countries, is_contractwork) values
+  ('Peter Hurford','Unspecified recipient',435,NULL,'2014-12-14','day','donation log','Animal welfare', 'http://peterhurford.com/other/donations.html', 'Contracted some veg advocacy research', NULL, NULL, 1),
+  ('Peter Hurford','Elizabeth Van Nostrand',150,NULL,'2017-07-22','day','donation log','Global health/mental health','http://peterhurford.com/other/donations.html','Part of a payment for work published in a series of blog posts starting with http://effective-altruism.com/ea/1ha/mental_health_shallow_review/ by http://effective-altruism.com/user/Elizabeth/', NULL, NULL, 1);
+
+# -- Real donations (excluding contract work)
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, special_donation_reason, affected_countries) values
+  ('Peter Hurford', 'Wikimedia Foundation', 5, NULL, '2011-12-31', 'day', 'donation log', NULL, NULL, NULL, NULL, 'United States'), # -- this was deleted from the donations list but is included in a soon-to-be-published blog post about Peter's donation history
   ('Peter Hurford', 'Obama for America', 5, NULL, '2011-12-31', 'day', 'donation log', 'Politics', 'http://peterhurford.com/other/donations.html', NULL, NULL, 'United States'),
   ('Peter Hurford', 'Against Malaria Foundation', 10, NULL, '2011-12-31', 'day', 'donation log', 'Global health/malaria', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
   ('Peter Hurford', 'Obama for America', 20, NULL, '2012-03-31', 'day', 'donation log', 'Politics', 'http://peterhurford.com/other/donations.html', NULL, NULL, 'United States'),
