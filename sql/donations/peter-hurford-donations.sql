@@ -18,9 +18,9 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
 # -- Real donations (excluding contract work)
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, special_donation_reason, affected_countries) values
   ('Peter Hurford', 'Wikimedia Foundation', 5, NULL, '2011-12-31', 'day', 'donation log', NULL, NULL, NULL, NULL, 'United States'), # -- this was deleted from the donations list but is included in a soon-to-be-published blog post about Peter's donation history
-  ('Peter Hurford', 'Obama for America', 5, NULL, '2011-12-31', 'day', 'donation log', 'Politics', 'http://peterhurford.com/other/donations.html', NULL, NULL, 'United States'),
+  ('Peter Hurford', 'Obama for America', 5, NULL, '2011-12-31', 'day', 'donation log', 'Politics/presidential election', 'http://peterhurford.com/other/donations.html', NULL, NULL, 'United States'),
   ('Peter Hurford', 'Against Malaria Foundation', 10, NULL, '2011-12-31', 'day', 'donation log', 'Global health/malaria', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
-  ('Peter Hurford', 'Obama for America', 20, NULL, '2012-03-31', 'day', 'donation log', 'Politics', 'http://peterhurford.com/other/donations.html', NULL, NULL, 'United States'),
+  ('Peter Hurford', 'Obama for America', 20, NULL, '2012-03-31', 'day', 'donation log', 'Politics/presidential election', 'http://peterhurford.com/other/donations.html', NULL, NULL, 'United States'),
   ('Peter Hurford', 'Obama for America', 20, NULL, '2012-04-30', 'day', 'donation log', 'Politics/presidential election', 'http://peterhurford.com/other/donations.html', NULL, NULL, 'United States'),
   ('Peter Hurford', 'Against Malaria Foundation', 200, NULL, '2012-04-10', 'day', 'donation log', 'Global health/malaria', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
   ('Peter Hurford', 'Against Malaria Foundation', 123, NULL, '2012-05-10', 'day', 'donation log', 'Global health/malaria', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
