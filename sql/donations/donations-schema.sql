@@ -21,7 +21,7 @@ create table donations (
     influencer varchar(1000),
     employer_match float(14,2),
     matching_employer varchar(100),
-    special_donation_reason enum('Giving Game','Compensation to charity for effort','Committed periodic donation','Fundraiser/Gift','Hat tip','One-off opportunity', 'Offset'),
+    special_donation_reason enum('Giving Game','Compensation to charity for effort','Committed periodic donation','Fundraiser/Gift','Hat tip','One-off opportunity', 'Offset','Prize to charity of choice'),
     donation_earmark varchar(100),
     affected_countries varchar(2000),
     affected_states varchar(200),

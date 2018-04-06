@@ -6,6 +6,9 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes) values
   ('Jacob Trefethen','Environmental Data and Governance Initiative',NULL,1.0,'2017-01-16','day','date of donation announcement','Environmentalism/watchdog','http://effective-altruism.com/ea/16b/why_i_donated_to_the_environmental_data/','Donation made to small nonprofit based on inside information and close contact with the organization, making it easier to evaluate');
 
+insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, special_donation_reason) values
+  ('Joshua Zelinsky','Internet Archive',20.0,NULL,'2011-08-21','day','date of donation announced in announcement','Digital preservation','https://www.lesswrong.com/posts/eD6TZm2r25HzYzZzY/spaced-repetition-literature-review-prize-and-the-winner-is#RydGTnYufdjxzvDKW','Charity chosen by Gwern Branwen, who won the spaced repetition literature review prize.','Prize to charity of choice');
+
 # -- The Oxford Prioritisation Project grant
 insert into donations(donor, donee, amount, fraction, donation_date,
     donation_date_precision, donation_date_basis, cause_area, url, notes,
