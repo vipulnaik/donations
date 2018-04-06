@@ -72,7 +72,8 @@ insert into donors(donor, country, facebook_username, website, donations_url, le
   ('Elie Hassenfeld','United States','elie.hassenfeld',NULL,NULL,NULL,'elie-hassenfeld-92072a9','GiveWell|Open Philanthropy Project',NULL,NULL,NULL,'eliehassenfeld'),
   ('Alexander Berger','United States','alexander.is','http://marginalchange.blogspot.com/',NULL,NULL,'alexander-berger-58906098','GiveWell|Open Philanthropy Project',NULL,NULL,NULL,'albrgr'),
   ('Josh Rosenberg','United States','jhrosenberg',NULL,NULL,NULL,'josh-rosenberg-07590626','GiveWell|Open Philanthropy Project',NULL,NULL,NULL,NULL),
-  ('Sophie Monahan','United States','sophical',NULL,NULL,NULL,'sophie-monahan-8160a9a2','GiveWell|Open Philanthropy Project',NULL,NULL,NULL,NULL);
+  ('Sophie Monahan','United States','sophical',NULL,NULL,NULL,'sophie-monahan-8160a9a2','GiveWell|Open Philanthropy Project',NULL,NULL,NULL,NULL),
+  ('Gwern Branwen','United States','gwern.branwen','http://www.gwern.net/',NULL,'gwern',NULL,NULL,'gwern',NULL,'gwern','gwern');
 
 insert into donors(donor, donor_type, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username, predictionbook_username, philosophy_url, grant_application_process_url, donations_data_update_regularity, donations_data_dlw_update_regularity, donations_data_update_lag, donations_data_dlw_update_lag, dlw_data_processing_script, wikipedia_page,best_overview_url,brief_history,brief_donor_focus_notes,grant_decision_logistics_notes,grant_publication_logistics_notes,grant_financing_notes,notes) values
   ('Michael Dello-Iacovo','Individual','Australia','michael.dello','http://www.michaeldello.com','http://www.michaeldello.com/donations-log/',NULL,NULL,NULL,NULL,NULL,NULL,'MichaelDello',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'https://github.com/riceissa/michaeldello-donations',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
