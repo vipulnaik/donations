@@ -90,6 +90,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/holden-karnofsky-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/isabel-arjmand-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/jacob-steinhardt-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/jason-ketola-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/jeff-kaufman-and-julia-wise-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/joey-savoie-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/josh-rosenberg-donations.sql
