@@ -48,7 +48,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Aaron Gertler','Yale Effective Altruists',300,'2014-10-22','day','donation log','Effective altruism/movement growth','http://aarongertler.net/donations-all-years/','Initial funds for a nonprofit founded by him. Spent on operating costs and advocacy work', NULL, NULL),
   ('Aaron Gertler','GiveWell',125,'2014-09-30','day','donation log','Charity evaluator','http://aarongertler.net/donations-all-years/','Monthly donation', 1.0, 125),
   ('Aaron Gertler','GiveWell',38,'2014-09-07','day','donation log','Charity evaluator','http://aarongertler.net/donations-all-years/','Monthly donation', 1.0, 38),
-  ('Aaron Gertler','Machine Intelligence Research Institute',100,'2014-08-01','day','donation log','AI risk','http://aarongertler.net/donations-all-years/','Monthly donation', NULL, NULL),
+  ('Aaron Gertler','Machine Intelligence Research Institute',100,'2014-08-01','day','donation log','AI safety','http://aarongertler.net/donations-all-years/','Monthly donation', NULL, NULL),
   ('Aaron Gertler','GiveWell',152,'2014-07-23','day','donation log','Charity evaluator','http://aarongertler.net/donations-all-years/','Monthly donation', 1.0, 152),
   ('Aaron Gertler','GiveWell',150,'2014-07-03','day','donation log','Charity evaluator','http://aarongertler.net/donations-all-years/','Monthly donation', 1.0, 150),
   ('Aaron Gertler','GiveWell',20,'2014-06-05','day','donation log','Charity evaluator','http://aarongertler.net/donations-all-years/','Gift for a friend',NULL,NULL),

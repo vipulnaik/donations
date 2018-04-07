@@ -116,26 +116,26 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   # -- 2013 donations
   ('Gordon Irlam','Keep Antibiotics Working',25000,'2013-01-01','year','donation log','Global health/antibiotic resistance','http://www.gricf.org/2013-report.html','http://www.beguide.org/antibiotic-resistance.html','c/o Food Animal Concerns Trust'),
   ('Gordon Irlam','Knowledge Ecology International',10000,'2013-01-01','year','donation log',NULL,'http://www.gricf.org/2013-report.html',NULL,NULL),
-  ('Gordon Irlam','Machine Intelligence Research Institute',5000,'2013-01-01','year','donation log','AI risk','http://www.gricf.org/2013-report.html','http://www.beguide.org/hostile-artificial-intelligence.html',NULL),
+  ('Gordon Irlam','Machine Intelligence Research Institute',5000,'2013-01-01','year','donation log','AI safety','http://www.gricf.org/2013-report.html','http://www.beguide.org/hostile-artificial-intelligence.html',NULL),
   ('Gordon Irlam','Kids International Dental Services',3000,'2013-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2013-report.html',NULL,NULL),
   # -- 2014 donations
   ('Gordon Irlam','RESULTS Educational Fund',108597,'2014-01-01','year','donation log','Education','http://www.gricf.org/2014-report.html',NULL,NULL),
   ('Gordon Irlam','Keep Antibiotics Working',25000,'2014-01-01','year','donation log','Global health/antibiotic resistance','http://www.gricf.org/2014-report.html','http://www.beguide.org/antibiotic-resistance.html','c/o Food Animal Concerns Trust'),
   ('Gordon Irlam','Knowledge Ecology International',20000,'2014-01-01','year','donation log',NULL,'http://www.gricf.org/2014-report.html',NULL,NULL),
-  ('Gordon Irlam','Machine Intelligence Research Institute',10000,'2014-01-01','year','donation log','AI risk','http://www.gricf.org/2014-report.html','http://www.beguide.org/hostile-artificial-intelligence.html',NULL),
+  ('Gordon Irlam','Machine Intelligence Research Institute',10000,'2014-01-01','year','donation log','AI safety','http://www.gricf.org/2014-report.html','http://www.beguide.org/hostile-artificial-intelligence.html',NULL),
   ('Gordon Irlam','Kids International Dental Services',3000,'2014-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2014-report.html',NULL,NULL),
   # -- 2015 donations
   ('Gordon Irlam','RESULTS Educational Fund',70969,'2015-01-01','year','donation log','Education','http://www.gricf.org/2015-report.html',NULL,NULL),
   ('Gordon Irlam','Centre for Effective Altruism',50000,'2015-01-01','year','donation log',NULL,'http://www.gricf.org/2015-report.html',NULL,'For Giving What We Can. c/o Centre for Effective Altruism USA'),
   ('Gordon Irlam','Keep Antibiotics Working',10000,'2015-01-01','year','donation log','Global health/antibiotic resistance','http://www.gricf.org/2015-report.html','http://www.beguide.org/antibiotic-resistance.html','c/o Food Animal Concerns Trust'),
   ('Gordon Irlam','Knowledge Ecology International',10000,'2015-01-01','year','donation log',NULL,'http://www.gricf.org/2015-report.html',NULL,NULL),
-  ('Gordon Irlam','Machine Intelligence Research Institute',10000,'2015-01-01','year','donation log','AI risk','http://www.gricf.org/2015-report.html','http://www.beguide.org/hostile-artificial-intelligence.html',NULL),
+  ('Gordon Irlam','Machine Intelligence Research Institute',10000,'2015-01-01','year','donation log','AI safety','http://www.gricf.org/2015-report.html','http://www.beguide.org/hostile-artificial-intelligence.html',NULL),
   ('Gordon Irlam','Kids International Dental Services',3000,'2015-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2015-report.html',NULL,NULL),
   # -- 2016 donations
   ('Gordon Irlam','Future of Humanity Institute',120000,'2016-01-01','year','donation log','Global catastrophic risks/AI risk/Biosecurity and pandemic preparedness','http://www.gricf.org/2016-report.html','http://www.beguide.org/hostile-artificial-intelligence.html',NULL),
   ('Gordon Irlam','RESULTS Educational Fund',79203,'2016-01-01','year','donation log','Education','http://www.gricf.org/2016-report.html',NULL,NULL),
   ('Gordon Irlam','Global Catastrophic Risk Institute',16043,'2016-01-01','year','donation log','Global catastrophic risks','http://www.gricf.org/2016-report.html','http://www.beguide.org/hostile-artificial-intelligence.html','c/o Social & Environmental Entrepreneurs'),
   ('Gordon Irlam','Knowledge Ecology International',10000,'2016-01-01','year','donation log',NULL,'http://www.gricf.org/2016-report.html',NULL,NULL),
-  ('Gordon Irlam','Machine Intelligence Research Institute',10000,'2016-01-01','year','donation log','AI risk','http://www.gricf.org/2016-report.html','http://www.beguide.org/hostile-artificial-intelligence.html',NULL),
+  ('Gordon Irlam','Machine Intelligence Research Institute',10000,'2016-01-01','year','donation log','AI safety','http://www.gricf.org/2016-report.html','http://www.beguide.org/hostile-artificial-intelligence.html',NULL),
   ('Gordon Irlam','Kids International Dental Services',3000,'2016-01-01','year','donation log','Global health/dental health','http://www.gricf.org/2016-report.html',NULL,NULL);
 

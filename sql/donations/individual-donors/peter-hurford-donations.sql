@@ -29,7 +29,7 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   ('Peter Hurford', 'Centre for Effective Altruism', 1700, NULL, '2013-07-04', 'day', 'donation log', 'Effective altruism/movement growth', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
   ('Peter Hurford', '80,000 Hours', 80, NULL, '2013-12-12', 'day', 'donation log', 'Effective altruism/movement growth', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
   ('Peter Hurford', 'Schistosomiasis Control Initiative', 33, NULL, '2013-12-22', 'day', 'donation log', 'Global health/deworming', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
-  ('Peter Hurford', 'Machine Intelligence Research Institute', 90, NULL, '2014-05-06', 'day', 'donation log', 'AI risk', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
+  ('Peter Hurford', 'Machine Intelligence Research Institute', 90, NULL, '2014-05-06', 'day', 'donation log', 'AI safety', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
   ('Peter Hurford', 'GiveDirectly', 46, NULL, '2014-06-17', 'day', 'donation log', 'Cash transfers', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
   ('Peter Hurford', 'Charity Science Outreach', 1000, NULL, '2014-06-12', 'day', 'donation log', 'Effective altruism/meta/outreach', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
   ('Peter Hurford', 'Charity Science Outreach', 1000, NULL, '2014-08-15', 'day', 'donation log', 'Effective altruism/meta/outreach', 'http://peterhurford.com/other/donations.html', NULL, NULL, NULL),
