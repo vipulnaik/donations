@@ -31,14 +31,7 @@ at <a href="https://github.com/vipulnaik/donations">vipulnaik/donations</a>.</p>
 <p>Issa's contributions to the code can be seen by looking
 at <a href="https://github.com/vipulnaik/donations/commits?author=riceissa">his
 commit history</a>. To see a list of his payments for this work, go
-to <a href="https://contractwork.vipulnaik.com/worker.php?worker=Issa+Rice#workerTaskList">his
-worker task list</a>, sort by the "Task venue" column, and look at all
-the tasks with venue "Donations list website". You can also see the
-grand total broken down by year in the row for "Donations list
-website" in the table
-at <a href="https://contractwork.vipulnaik.com/worker.php?worker=Issa+Rice#workerTaskPaymentsDueByVenueAndYear">Worker
-task payments due by venue and year</a>. As of end October 2017, the
-grand total spent for Issa's contributions is $1385. With the
+to <a href="https://contractwork.vipulnaik.com/venue.php?venue=Donations+list+website&matching=exact">the contract work page listing all financially compensated tasks for the Donations List Website</a>. With the
 exception
 of <a href="https://contractwork.vipulnaik.com/tasks.php?receptacle=Donation+amounts+by+disclosures+and+year&matching=exact">one
 task commissioned by Peter Hurford</a>, all other work on the site was
