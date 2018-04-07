@@ -130,6 +130,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Sloan Foundation','Private foundation','United States','sloanfoundation','https://sloan.org/','https://sloan.org/grants-database',NULL,NULL,NULL,NULL,NULL,NULL,'SloanFoundation',NULL,'https://sloan.org/about#mission','https://sloan.org/grants/apply',NULL,NULL,NULL,NULL,'https://github.com/riceissa/sloan-foundation','https://en.wikipedia.org/wiki/Alfred_P._Sloan_Foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
+  ('Atlantic Philanthropies','Private foundation','United States','TheAtlanticPhilanthropies','https://www.atlanticphilanthropies.org/','http://www.atlanticphilanthropies.org/grants',NULL,NULL,NULL,NULL,NULL,NULL,'atlantic',NULL,'https://www.atlanticphilanthropies.org/insights/atlantic-insights',NULL,NULL,NULL,NULL,NULL,NULL,'https://en.wikipedia.org/wiki/Atlantic_Philanthropies',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
