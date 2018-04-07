@@ -132,6 +132,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Atlantic Philanthropies','Private foundation','United States','TheAtlanticPhilanthropies','https://www.atlanticphilanthropies.org/','http://www.atlanticphilanthropies.org/grants',NULL,NULL,NULL,NULL,NULL,NULL,'atlantic',NULL,'https://www.atlanticphilanthropies.org/insights/atlantic-insights',NULL,NULL,NULL,NULL,NULL,NULL,'https://en.wikipedia.org/wiki/Atlantic_Philanthropies',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
+  ('Berkeley Existential Risk Initiative',NULL,'United States','Berkeley-Existential-Risk-Initiative-1875638366085846','http://existence.org/',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
