@@ -132,7 +132,7 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Atlantic Philanthropies','Private foundation','United States','TheAtlanticPhilanthropies','https://www.atlanticphilanthropies.org/','http://www.atlanticphilanthropies.org/grants',NULL,NULL,NULL,NULL,NULL,NULL,'atlantic',NULL,'https://www.atlanticphilanthropies.org/insights/atlantic-insights',NULL,NULL,NULL,NULL,NULL,NULL,'https://en.wikipedia.org/wiki/Atlantic_Philanthropies',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
-  ('Berkeley Existential Risk Initiative',NULL,'United States','Berkeley-Existential-Risk-Initiative-1875638366085846','http://existence.org/',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+  ('Berkeley Existential Risk Initiative','Subsidiary','United States','Berkeley-Existential-Risk-Initiative-1875638366085846','http://existence.org/',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
   ('Foundational Questions Institute',NULL,'United States',NULL,'https://fqxi.org/','https://fqxi.org/grants',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'https://fqxi.org/about',NULL,NULL,NULL,NULL,NULL,'https://github.com/riceissa/fqxi-grants','https://en.wikipedia.org/wiki/Foundational_Questions_Institute',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
