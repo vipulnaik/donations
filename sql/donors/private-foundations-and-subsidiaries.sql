@@ -134,6 +134,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Berkeley Existential Risk Initiative',NULL,'United States','Berkeley-Existential-Risk-Initiative-1875638366085846','http://existence.org/',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
+  ('Foundational Questions Institute',NULL,'United States',NULL,'https://fqxi.org/','https://fqxi.org/grants',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'https://fqxi.org/about',NULL,NULL,NULL,NULL,NULL,'https://github.com/riceissa/fqxi-grants','https://en.wikipedia.org/wiki/Foundational_Questions_Institute',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
