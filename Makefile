@@ -57,7 +57,6 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2017-cea.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/miri-top-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/arnold-foundation-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/beri-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ford-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ea-giving-group.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/foundational-questions-institute-grants.sql
@@ -78,6 +77,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/theiss-research.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/unbound-philanthropy-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/wellcome-trust-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/beri-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/givewell-discretionary-regranting.sql
