@@ -138,6 +138,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Mulago Foundation','Private foundation','United States',NULL,'http://mulagofoundation.org/','http://mulagofoundation.org/who-we-fund',NULL,'mulago-foundation',NULL,NULL,NULL,NULL,NULL,NULL,'http://mulagofoundation.org/how-we-fund',NULL,NULL,NULL,NULL,NULL,'https://github.com/riceissa/mulago','https://en.wikipedia.org/wiki/Mulago_Foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
+  ('Knight Foundation','Private foundation','United States','knightfdn','https://knightfoundation.org/','https://knightfoundation.org/grants',NULL,NULL,NULL,NULL,NULL,NULL,'knightfdn',NULL,'https://knightfoundation.org/about','https://knightfoundation.org/apply/',NULL,NULL,NULL,NULL,'https://github.com/riceissa/knight-foundation','https://en.wikipedia.org/wiki/John_S._and_James_L._Knight_Foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
