@@ -1,5 +1,5 @@
-# Donors tracked elsewhere: Loren Merritt, Gordon Irlam, Open Philanthropy
-# Project, Robert Yaman, and possibly some others.
+# -- Donors tracked elsewhere: Loren Merritt, Gordon Irlam, Open Philanthropy
+# -- Project, Robert Yaman, Zvi Mowshowitz, Ben Hoskin, and possibly some others.
 insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,notes) values
     ('Adam Weissman','Machine Intelligence Research Institute',10000.0,'2015-01-17','multi-year','donee contributor list','AI safety','https://web.archive.org/web/20150117213932/https://intelligence.org/donortools/topdonors.php',NULL)
     ,('Alan Chang','Machine Intelligence Research Institute',18000.0,'2017-09-29','year','donee contributor list','AI safety','https://web.archive.org/web/20170929195133/https://intelligence.org/topcontributors/',NULL)
@@ -13,11 +13,6 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
     ,('Austin Peña','Machine Intelligence Research Institute',9929.0,'2017-09-29','year','donee contributor list','AI safety','https://web.archive.org/web/20170929195133/https://intelligence.org/topcontributors/',NULL)
     ,('Austin Peña','Machine Intelligence Research Institute',1034.0,'2017-12-23','year','donee contributor list','AI safety','https://web.archive.org/web/20171223071315/https://intelligence.org/topcontributors/',NULL)
     ,('Austin Peña','Machine Intelligence Research Institute',26554.0,'2018-01-17','year','donee contributor list','AI safety','https://web.archive.org/web/20180117010054/https://intelligence.org/topcontributors/',NULL)
-    ,('Ben Hoskin','Machine Intelligence Research Institute',32728.0,'2016-01-15','year','donee contributor list','AI safety','https://web.archive.org/web/20160115172820/https://intelligence.org/donortools/topdonors.php',NULL)
-    ,('Ben Hoskin','Machine Intelligence Research Institute',20000.0,'2017-02-04','year','donee contributor list','AI safety','https://web.archive.org/web/20170204024838/https://intelligence.org/topdonors/','See post http://effective-altruism.com/ea/14w/2017_ai_risk_literature_review_and_charity/ assessing research')
-    ,('Ben Hoskin','Machine Intelligence Research Institute',5000.0,'2017-04-12','year','donee contributor list','AI safety','https://web.archive.org/web/20170412043722/https://intelligence.org/topcontributors/',NULL)
-    ,('Ben Hoskin','Machine Intelligence Research Institute',5000.0,'2017-06-27','year','donee contributor list','AI safety','https://web.archive.org/web/20170627074344/https://intelligence.org/topcontributors/',NULL)
-    ,('Ben Hoskin','Machine Intelligence Research Institute',31481.0,'2018-01-17','year','donee contributor list','AI safety','https://web.archive.org/web/20180117010054/https://intelligence.org/topcontributors/',NULL)
     ,('Benjamin Goldhaber','Machine Intelligence Research Institute',12250.0,'2017-02-04','year','donee contributor list','AI safety','https://web.archive.org/web/20170204024838/https://intelligence.org/topdonors/',NULL)
     ,('Benjamin Goldhaber','Machine Intelligence Research Institute',1375.0,'2017-04-12','year','donee contributor list','AI safety','https://web.archive.org/web/20170412043722/https://intelligence.org/topcontributors/',NULL)
     ,('Benjamin Goldhaber','Machine Intelligence Research Institute',3625.0,'2017-06-27','year','donee contributor list','AI safety','https://web.archive.org/web/20170627074344/https://intelligence.org/topcontributors/',NULL)
@@ -272,8 +267,6 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
     ,('Wolf Tivy','Machine Intelligence Research Institute',16758.0,'2015-01-17','multi-year','donee contributor list','AI safety','https://web.archive.org/web/20150117213932/https://intelligence.org/donortools/topdonors.php',NULL)
     ,('Xerxes Dotiwalla','Machine Intelligence Research Institute',7350.0,'2017-12-23','year','donee contributor list','AI safety','https://web.archive.org/web/20171223071315/https://intelligence.org/topcontributors/',NULL)
     ,('Xerxes Dotiwalla','Machine Intelligence Research Institute',1350.0,'2018-01-17','year','donee contributor list','AI safety','https://web.archive.org/web/20180117010054/https://intelligence.org/topcontributors/',NULL)
-    ,('Zvi Mowshowitz','Machine Intelligence Research Institute',5010.0,'2015-01-17','multi-year','donee contributor list','AI safety','https://web.archive.org/web/20150117213932/https://intelligence.org/donortools/topdonors.php',NULL)
-    ,('Zvi Mowshowitz','Machine Intelligence Research Institute',10000.0,'2017-12-23','year','donee contributor list','AI safety','https://web.archive.org/web/20171223071315/https://intelligence.org/topcontributors/',NULL)
     ,('Berkeley Existential Risk Initiative','Machine Intelligence Research Institute',200000.0,'2018-01-18','day','donee contributor list','AI safety','https://web.archive.org/web/20180118031109/https://intelligence.org/topcontributors/','See blog announcement at http://existence.org/2018/01/11/activity-update-december-2017.html')
 ;
 
@@ -326,5 +319,4 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
     ,('Sergejs Silko','Machine Intelligence Research Institute',18200.0,'2018-04-07','year','donee contributor list','AI safety','https://intelligence.org/topcontributors/',NULL)
     ,('Simon Sáfár','Machine Intelligence Research Institute',3131.0,'2018-04-07','year','donee contributor list','AI safety','https://intelligence.org/topcontributors/',NULL)
     ,('Victoria Krakovna','Machine Intelligence Research Institute',2801.0,'2018-04-07','year','donee contributor list','AI safety','https://intelligence.org/topcontributors/',NULL)
-    ,('Zvi Mowshowitz','Machine Intelligence Research Institute',10000.0,'2018-04-07','year','donee contributor list','AI safety','https://intelligence.org/topcontributors/',NULL)
 ;

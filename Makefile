@@ -89,6 +89,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/ajeya-cotra-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/alexander-berger-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/andrew-martin-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/ben-hoskin-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/ben-kuhn-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/blake-borgeson-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/brian-tomasik-donations.sql
@@ -123,6 +124,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/sophie-monahan-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/vipul-naik-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/vitalik-buterin-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/zvi-mowshowitz-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/social-media-mass-grab.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/aiwatch-update.sql
