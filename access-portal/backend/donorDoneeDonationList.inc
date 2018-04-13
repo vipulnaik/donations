@@ -68,10 +68,10 @@ while ($row = $result->fetch_assoc()) {
     print '<td>--</td>';
   }
   if ($row['influencer'] != '') {
-    print '<td align="right"><a href="/donor.php?donor='.urlencode($row['influencer']).'">'.$row['influencer'].'</a></td>';
+    print '<td align="right">' . explodeDonorPsv($row['influencer']) . '</td>';
   } else {
     print '<td>--</td>';
-  }  
+  }
 
   /* Build up the JSON-like key-value pairs in the notes column */
   $notes_key_val_pairs = array();
