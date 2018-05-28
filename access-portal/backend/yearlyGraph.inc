@@ -53,7 +53,7 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
   $fileName = hash("md5", $permalinkUrl);
   $filePathBase = $imagesPath . $fileName;
   $dataHasChanged= false;
-  if (file_exists(! $filePathBase . ".csv")) {
+  if (!file_exists($filePathBase . ".csv")) {
     file_put_contents($filePathBase . ".csv", $dataForGraph);
     $dataHasChanged = true;
   } else {
