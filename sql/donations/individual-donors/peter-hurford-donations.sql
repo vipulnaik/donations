@@ -1,6 +1,6 @@
 # -- Donations made by others via Peter
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, special_donation_reason, affected_countries) values
-  ('Ellie Raison','No Means No Worldwide',6986,NULL,'2018-05-18','day','donation log','Sexual violence','http://peterhurford.com/other/donations.html','Money sent via Peter Hurford to be eligible for tax deduction benefits','Giving Game',NULL);
+  ('Ellie Raison','No Means No Worldwide',6986,NULL,'2018-05-18','day','donation log','Sexual violence','http://peterhurford.com/other/donations.html','Money sent via Peter Hurford to be eligible for tax deduction benefits. Money donated due to a Giving Game, discussed at more length in the blog post http://effective-altruism.com/ea/1fe/the_effective_altruism_equality_and_justice/','Giving Game',NULL);
 
 # -- Contract work "donations"
 
