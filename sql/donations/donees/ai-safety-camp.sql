@@ -1,0 +1,11 @@
+# The EUR to USD conversion was done using Bloomberg data from
+# 2018-06-08 (a day after the post was published). On this day,
+# 1 EUR = 1.1769 USD.
+insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,notes,amount_original_currency,original_currency,currency_conversion_date,currency_conversion_basis) values
+    ('Lotta and Claes Linsefors','AI Safety Camp',4707.6,'2018-06-07','day','donee contributor list','AI safety','https://www.lesswrong.com/posts/KerENNLyiqQ5ew7Kz/the-first-ai-safety-camp-and-onwards','The actual donation probably happened sometime between February and June 2018.',4000,'EUR','2018-06-08','Bloomberg')
+    ,('Greg Colbourn','AI Safety Camp',4036.767,'2018-06-07','day','donee contributor list','AI safety','https://www.lesswrong.com/posts/KerENNLyiqQ5ew7Kz/the-first-ai-safety-camp-and-onwards','The actual donation probably happened sometime between February and June 2018.',3430,'EUR','2018-06-08','Bloomberg')
+    ,('Machine Intelligence Research Institute','AI Safety Camp',3793.1487,'2018-06-07','day','donee contributor list','AI safety','https://www.lesswrong.com/posts/KerENNLyiqQ5ew7Kz/the-first-ai-safety-camp-and-onwards','The actual donation probably happened sometime between February and June 2018.',3223,'EUR','2018-06-08','Bloomberg')
+    ,('Centre for Effective Altruism','AI Safety Camp',3484.8009,'2018-06-07','day','donee contributor list','AI safety','https://www.lesswrong.com/posts/KerENNLyiqQ5ew7Kz/the-first-ai-safety-camp-and-onwards','The actual donation probably happened sometime between February and June 2018.',2961,'EUR','2018-06-08','Bloomberg')
+    ,('Karol Kubicki','AI Safety Camp',58.845,'2018-06-07','day','donee contributor list','AI safety','https://www.lesswrong.com/posts/KerENNLyiqQ5ew7Kz/the-first-ai-safety-camp-and-onwards','The actual donation probably happened sometime between February and June 2018.',50,'EUR','2018-06-08','Bloomberg')
+    ,('Tom McGrath','AI Safety Camp',48.2529,'2018-06-07','day','donee contributor list','AI safety','https://www.lesswrong.com/posts/KerENNLyiqQ5ew7Kz/the-first-ai-safety-camp-and-onwards','The actual donation probably happened sometime between February and June 2018.',41,'EUR','2018-06-08','Bloomberg')
+;

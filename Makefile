@@ -54,6 +54,8 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/was-research-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/wmf-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/ai-safety-camp.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/brain-preservation-foundation-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2016.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2017-cea.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/miri-top-donations.sql
