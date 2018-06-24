@@ -40,6 +40,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cfar-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/charity-science-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/criminal-justice-reform-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/czi-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/dickens-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/donor-lottery-docs.sql
