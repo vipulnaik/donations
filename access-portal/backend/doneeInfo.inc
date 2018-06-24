@@ -77,9 +77,9 @@ if ($doneeSelectResult -> num_rows == 0) {
   if (isset($row['timelines_wiki_page']) && $row['timelines_wiki_page'] != '') {
     print '<tr><td>Timelines wiki page</td><td><a href="'.$row['timelines_wiki_page'].'">'.$row['timelines_wiki_page'].'</a></td></tr>';
   }
-  if (isset($row['aiwatch']) && $row['aiwatch'] == "1") {
-    $aiwatch_url = 'https://aiwatch.issarice.com/?organization='.urlencode($row['donee']);
-    print '<tr><td>AI Watch page</td><td><a href="'.$aiwatch_url.'">'.$aiwatch_url.'</a></td></tr>';
+  if (isset($row['orgwatch']) && $row['orgwatch'] == "1") {
+    $orgwatch_url = 'https://orgwatch.issarice.com/?organization='.urlencode($row['donee']);
+    print '<tr><td>Org Watch page</td><td><a href="'.$orgwatch_url.'">'.$orgwatch_url.'</a></td></tr>';
   }
   if ($row['notes'] != '') {
     print '<tr><td>Notes</td><td>'.$row['notes'].'</td></tr>';

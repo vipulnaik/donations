@@ -47,6 +47,6 @@ create table donors (
     donations_data_update_lag enum('none','days','months','years'),
     donations_data_dlw_update_lag enum('none','days','months','years'),
     dlw_data_processing_script varchar(100),
-    aiwatch boolean default false,
+    orgwatch boolean default false,
     unique key donor(`donor`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
