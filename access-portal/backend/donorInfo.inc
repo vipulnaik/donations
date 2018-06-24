@@ -100,7 +100,7 @@ if ($donorSelectResult -> num_rows == 0) {
     } else if ($row['donor_type'] == "Private foundation" or $row['donor_type'] == "Subsidiary") {
       $orgwatch_url = 'https://orgwatch.issarice.com/?organization='.urlencode($row['donor']);
     }
-    print '<tr><td>Orgg Watch page</td><td><a href="'.$orgwatch_url.'">'.$orgwatch_url.'</a></td></tr>';
+    print '<tr><td>Org Watch page</td><td><a href="'.$orgwatch_url.'">'.$orgwatch_url.'</a></td></tr>';
   }
   print "</tbody>\n</table>\n";
 }
