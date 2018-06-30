@@ -7,7 +7,7 @@
 <p><strong>Donations List Website</strong> is a minimalistic website
 with a razor-like focus on understanding donations, donors, donees,
 and the thoughts and discussions that go alongside donation
-decisions. The site is slated for official launch in December 2018,
+decisions. The site is slated for official launch in December 2019,
 and is currently very much in beta.</p>
 
 <h3>Table of contents</h3>
