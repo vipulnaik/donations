@@ -15,4 +15,15 @@ curl http://www.arnoldfoundation.org/grants/ > index.html
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/arnold-foundation-grants.sql
 
+### Barr Foundation
+
+From the [Barr Foundation repo](https://github.com/riceissa/barr-foundation) directory:
+
+```bash
+./scrape.py  # saves in data.csv
+./proc.py > out.sql
+```
+
+The copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/barr-foundation-grants.sql
+
 ## Individual donors
