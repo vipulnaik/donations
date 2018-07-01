@@ -2,6 +2,26 @@
 
 Issue tracking this page: https://github.com/vipulnaik/donations/issues/52
 
+## Table of contents
+
+- [Foundations](#foundations)
+  - [Arnold Foundation](#arnold-foundation)
+  - [Barr Foundation](#barr-foundation)
+  - [Dell Foundation](#dell-foundation)
+  - [EA Giving Group](#ea-giving-group)
+  - [Ford Foundation](#ford-foundation)
+  - [Foundational Questions Institute (FQXi)](#foundational-questions-institute-fqxi)
+  - [Future Justice Fund](#future-justice-fund)
+  - [Future of Life Institute](#future-of-life-institute)
+  - [Gates Foundation](#gates-foundation)
+  - [Google.org](#googleorg)
+  - [Hewlett Foundation](#hewlette-foundation)
+  - [Knight Foundation](#knight-foundation)
+  - [MacArthur Foundation](#macarthur-foundation)
+  - [Barbara McDowell and Gerald S. Hartman Foundation](#barbara-mcdowell-and-gerald-s-hartman-foundation)
+  - [Mulago](#mulago)
+- [Individual donors](#individual-donors)
+
 ## Foundations
 
 ### Arnold Foundation
