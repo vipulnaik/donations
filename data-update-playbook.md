@@ -20,6 +20,16 @@ Issue tracking this page: https://github.com/vipulnaik/donations/issues/52
   - [MacArthur Foundation](#macarthur-foundation)
   - [Barbara McDowell and Gerald S. Hartman Foundation](#barbara-mcdowell-and-gerald-s-hartman-foundation)
   - [Mulago](#mulago)
+  - [Nathan Cummings Foundation](#nathan-cummings-foundation)
+  - [Open Philanthropy Project](#open-philanthropy-project)
+  - [Pineapple Fund](#pineapple-fund)
+  - [Public Welfare Foundation](#public-welfare-foundation)
+  - [Sloan Foundation](#sloan-foundation)
+  - [Stone Family Foundation](#stone-family-foundation)
+  - [Templeton Foundation](#templeton-foundation)
+  - [Theiss Research](#theiss-research)
+  - [Unbound Philanthropy](#unbound-philanthropy)
+  - [Wellcome Trust](#wellcome-trust)
 - [Individual donors](#individual-donors)
 
 ## Foundations
@@ -231,7 +241,7 @@ Then run:
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/public-welfare-foundation-grants.sql
 
-### Sloan Foundation Grants
+### Sloan Foundation
 
 Navigate to the [Sloan Foundation Grants repo](https://github.com/riceissa/sloan-foundation) directory.
 
