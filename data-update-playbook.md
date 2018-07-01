@@ -195,4 +195,56 @@ Then run the following:
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/mulago-foundation-grants.sql
 
+### Nathan Cummings Foundation
+
+Navigate to the [Nathan Cummings Foundation repo](https://github.com/riceissa/nathan-cummings-foundation) directory.
+
+This one is pretty complicated. It will probably involve uploading a PDF to Google Docs and converting to a plain text data file, manually cleaning that file, and running the appropriate processing script on that file. See https://github.com/riceissa/nathan-cummings-foundation for more information.
+
+### Open Philanthropy Project
+
+Vipul takes care of this.
+
+### Pineapple Fund
+
+This was a one-off fund that has finished giving out all its money, so there shouldn't be anything to do.
+
+But, just in case, check:
+
+- https://pineapplefund.org/
+- https://www.google.com/search?q=pineapple%20fund
+- https://en.wikipedia.org/wiki/Pineapple_Fund
+
+For reference, the processing script is at https://github.com/riceissa/pineapple-fund
+
+### Public Welfare Foundation
+
+Navigate to the [Public Welfare Foundation repo](https://github.com/riceissa/public-welfare-foundation) directory.
+
+Get new data and store in `data.html`; the steps are described at https://github.com/riceissa/public-welfare-foundation#getting-datahtml
+
+Then run:
+
+```bash
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/public-welfare-foundation-grants.sql
+
+### Sloan Foundation Grants
+
+Navigate to the [Sloan Foundation Grants repo](https://github.com/riceissa/sloan-foundation) directory.
+
+Get new data and save it to `data.html`. The data is _probably_ at https://sloan.org/grants-database?dynamic=0&order_by=approved_at&order_by_direction=desc&limit=2000&page=1 assuming the website hasn't changed. See the [repo readme](https://github.com/riceissa/sloan-foundation/blob/master/README.md) for more info.
+
+Then run:
+
+```bash
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/sloan-foundation-grants.sql
+
+### Stone Family Foundation
+
 ## Individual donors
