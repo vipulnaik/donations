@@ -134,4 +134,45 @@ Run the following:
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/knight-foundation-grants.sql
 
+### MacArthur Foundation
+
+Navigate to the [MacArthur Foundation repo](https://github.com/riceissa/macarthur-foundation) directory.
+
+Run the following:
+
+```bash
+./scrape.py  # overwrites data.csv
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/macarthur-foundation-grants.sql
+
+### Barbara McDowell and Gerald S. Hartman Foundation
+
+Navigate to the [Barbara McDowell and Gerald S. Hartman Foundation grants data repo](https://github.com/riceissa/mcdowell-foundation) directory.
+
+Run the following:
+
+```bash
+./scrape.py  # overwrites data.csv
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/mcdowell-foundation-grants.sql
+
+### Mulago
+
+Navigate to the [Mulago grants repo](https://github.com/riceissa/mulago) directory.
+
+Go to http://mulagofoundation.org/portfolio and save it as `who-we-fund.html`. Note: this might be in a different format since the last time the script ran, because the location of the "who we fund" page has changed. See [this comment](https://github.com/vipulnaik/donations/issues/46#issuecomment-401624626) for more.
+
+Then run the following:
+
+```bash
+./scrape.py  # uses who-we-fund.html and overwrites data.csv
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/mulago-foundation-grants.sql
+
 ## Individual donors
