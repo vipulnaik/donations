@@ -96,6 +96,42 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Future of Life Institute
 
+Navigate to the [FLI grants repo](https://github.com/riceissa/fli-grants) directory.
 
+Check if a new round of grants have been awarded. It's not clear if the 2015 grants script will work.
+
+### Gates Foundation
+
+I think this is just for IATI data and we decided not to do the whole foundation (due to limited data access through their website).
+
+### Google.org
+
+This was all manual, and automation work began but has stalled. See https://github.com/vipulnaik/donations/issues/47
+
+### Hewlett Foundation
+
+Navigate to the [Hewlett Foundation repo](https://github.com/riceissa/hewlett-foundation) directory.
+
+Run the following:
+
+```bash
+./scrape.py  # overwrites data.csv
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/hewlett-foundation-grants.sql
+
+### Knight Foundation
+
+Navigate to the [Knight Foundation grants repo](https://github.com/riceissa/knight-foundation) directory.
+
+Run the following:
+
+```bash
+./scrape.py  # overwrites data.csv
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/knight-foundation-grants.sql
 
 ## Individual donors
