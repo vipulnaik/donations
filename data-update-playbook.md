@@ -40,4 +40,62 @@ Then run:
 
 Then _append_ (don't override) some subset of `out.sql` to <https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/dell-foundation-grants.sql>. This one is a little tricky because I think Dell Foundation keeps tossing out older grants, so we have to check which grants are new. There isn't a script that does this yet.
 
+### EA Giving Group
+
+There is no official central location for updates to this, so just keep an eye out for mentions of it, I guess.
+
+### Ford Foundation
+
+Navigate to the [Ford Foundation repo](https://github.com/riceissa/ford-foundation) directory.
+
+Go to https://www.fordfoundation.org/work/our-grants/grants-database/grants-all
+
+Change the years in the "Year" column to the whole range (2006 to the present year).
+
+Then click "download CSV" and save as `grants2.csv`.
+
+Now run:
+
+```bash
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/ford-foundation-grants.sql
+
+### Foundational Questions Institute (FQXi)
+
+Navigate to the [FQXi repo](https://github.com/riceissa/fqxi-grants) directory.
+
+Go to https://fqxi.org/grants and see if there is a grants page for a new year of grants. If there isn't, there is nothing to do. If there is, download the page source and place it in the `data` directory.
+
+Edit `proc.py` to add this new file to the `DATA` list. (Um, this should probably be done automatically by searching the file system...)
+
+Then run:
+
+```bash
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/foundational-questions-institute-grants.sql
+
+### Future Justice Fund
+
+Navigate to the [Future Justice Fund repo](https://github.com/riceissa/future-justice-fund) directory.
+
+Look on the FJF website for new grants. The two focus areas that were present at the time of first data collection are listed at https://github.com/vipulnaik/donations/issues/59#issue-326887796 but there might be more focus areas by now.
+
+Manually edit `data.txt` to add the new grants. You'll have to manually diff this, sorry!
+
+Then run:
+
+```bash
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/future-justice-fund-grants.sql
+
+### Future of Life Institute
+
+
+
 ## Individual donors
