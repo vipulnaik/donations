@@ -247,4 +247,78 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Stone Family Foundation
 
+Navigate to the [Stone Family Foundation repo](https://github.com/riceissa/stone-family-foundation) directory.
+
+There is no central listing of grants, so check the website, especially the pages listed in [this comment](https://github.com/vipulnaik/donations/issues/55#issue-326765897). Manually edit `data.txt` to add any new grants.
+
+Then run:
+
+```bash
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/stone-family-foundation-grants.sql
+
+### Templeton Foundation
+
+Navigate to the [Templeton Foundation repo](https://github.com/riceissa/templeton-foundation) directory.
+
+Get new data using the steps at https://github.com/riceissa/templeton-foundation#steps-to-get-the-data
+
+Then run:
+
+```bash
+./proc.py > out.sql
+```
+
+(The repo historically named the SQL files `out-YYYY-MM-DD.sql` to make diffing across time easier, so you might want to follow that convention.)
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/templeton-foundation-grants.sql
+
+### Theiss Research
+
+I think this was entered manually, with no separate repository. The data comes from a single Internet Archive snapshot, so updates are unlikely.
+
+See https://github.com/vipulnaik/donations/issues/38 for the original issue.
+
+The data is at https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/theiss-research.sql
+
+You might want to look around in case there is some new location with new data.
+
+### Unbound Philanthropy
+
+Navigate to the [Unbound Philanthropy repo](https://github.com/riceissa/unbound-philanthropy) directory.
+
+Get the new spreadsheet. It is probably listed at the bottom of https://www.unboundphilanthropy.org/who-we-fund
+
+Open the spreadsheet in LibreOffice and save as `data.csv`. More details at https://github.com/riceissa/unbound-philanthropy
+
+**NOTE: the processing script for this uses the old Fixer.io API, which has been deprecated. You'll have to update the script to use the new API before you run it.**
+
+Then run:
+
+```bash
+./proc.py > out.sql
+```
+
+Now copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/unbound-philanthropy-grants.sql
+
+### Wellcome Trust
+
+Navigate to the [Wellcome Trust repo](https://github.com/riceissa/wellcome-trust) directory.
+
+Find the latest spreadsheet at https://wellcome.ac.uk/funding/grants-awarded
+
+Export to CSV using instructions at https://github.com/riceissa/wellcome-trust
+
+**NOTE: the processing script for this uses the old Fixer.io API, which has been deprecated. You'll have to update the script to use the new API before you run it.**
+
+Then run:
+
+```bash
+./proc.py > out.sql
+```
+
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/wellcome-trust-grants.sql
+
 ## Individual donors
