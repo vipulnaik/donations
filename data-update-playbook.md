@@ -335,6 +335,14 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ## Individual donors
 
+For individual donors, a helpful MySQL query to run is the following:
+
+```mysql
+select distinct(url) from donations where donor='NAME';
+```
+
+This will reveal where the current donations data are coming from.
+
 ### Aaron Gertler
 
 Check https://aarongertler.net/donations-all-years/ and update https://github.com/vipulnaik/donations/blob/master/sql/donations/individual-donors/aaron-gertler-donations.sql
@@ -375,4 +383,56 @@ Check http://reducing-suffering.org/my-donations-past-and-present/ and update ht
 
 Current donations are all from GiveWell and Open Phil staff donations posts.
 
+### Chelsea Tabart
 
+Current donations are all from GiveWell and Open Phil staff donations posts.
+
+### EA Survey
+
+This requires getting new survey data, probably from Peter Hurford.
+
+### Elie Hassenfeld
+
+Current donations are all from GiveWell and Open Phil staff donations posts.
+
+### Elizabeth Van Nostrand
+
+Check https://acesounderglass.com/ for new donations posts.
+
+### Founders Pledge
+
+???
+
+### Gordon Irlam
+
+Check http://www.gricf.org/annual-report.html for new annual reports and add to https://github.com/vipulnaik/donations/blob/master/sql/donations/individual-donors/gordon-irlam-donations.sql
+
+### Haseeb Qureshi
+
+Donations collected from various sources.
+
+There will probably be a donations post at http://haseebq.com/ at the beginning/end of a year.
+
+### Helen Toner
+
+Current sources are Open Phil staff donations and a donor lottery.
+
+### Holden Karnofsky
+
+Current donations are all from GiveWell and Open Phil staff donations posts.
+
+### Isabel Arjmand
+
+Current donations are all from GiveWell and Open Phil staff donations posts.
+
+### Jacob Steinhardt
+
+Current donations are from various sources.
+
+Run the following query for hints:
+
+```mysql
+select distinct(url) from donations where donor='Jacob Steinhardt';
+```
+
+### 
