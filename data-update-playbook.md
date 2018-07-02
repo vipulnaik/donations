@@ -2,6 +2,8 @@
 
 Issue tracking this page: https://github.com/vipulnaik/donations/issues/52
 
+General caution: Websites and data formats change all the time. If a script fails to run, be prepared to fix it or find someone to fix it.
+
 ## Table of contents
 
 - [Foundations](#foundations)
@@ -332,3 +334,45 @@ Then run:
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/wellcome-trust-grants.sql
 
 ## Individual donors
+
+### Aaron Gertler
+
+Check https://aarongertler.net/donations-all-years/ and update https://github.com/vipulnaik/donations/blob/master/sql/donations/individual-donors/aaron-gertler-donations.sql
+
+### Ajeya Cotra
+
+Donations are scattered. Current sources are:
+
+- EA Hub
+- GiveWell staff donations post
+- Donor lottery
+
+### Alexander Berger
+
+Current donations are all from GiveWell and Open Phil staff donations posts.
+
+### Andrew Martin
+
+Current donations are all from GiveWell and Open Phil staff donations posts.
+
+### Ben Hoskin
+
+Current donations are all from MIRI's top contributors page, but see EA Forum for potentially new AI risk literature reviews.
+
+### Ben Kuhn
+
+Check https://www.benkuhn.net/ea/ and update https://github.com/vipulnaik/donations/blob/master/sql/donations/individual-donors/ben-kuhn-donations.sql
+
+### Blake Borgeson
+
+Current donations are mostly from MIRI's top contributors page.
+
+### Brian Tomasik
+
+Check http://reducing-suffering.org/my-donations-past-and-present/ and update https://github.com/vipulnaik/donations/blob/master/sql/donations/individual-donors/brian-tomasik-donations.sql
+
+### Catherine Hollander
+
+Current donations are all from GiveWell and Open Phil staff donations posts.
+
+
