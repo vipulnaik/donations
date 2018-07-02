@@ -435,4 +435,24 @@ Run the following query for hints:
 select distinct(url) from donations where donor='Jacob Steinhardt';
 ```
 
-### 
+### James Snowden
+
+Current donations are all from GiveWell and Open Phil staff donations posts.
+
+### Jason Ketola
+
+Current donations are from various sources.
+
+Run the following query for hints:
+
+```mysql
+select distinct(url) from donations where donor='Jason Ketola';
+```
+
+### Jeff Kaufman and Julia Wise
+
+Check https://www.jefftk.com/donations and update https://github.com/vipulnaik/donations/blob/master/sql/donations/individual-donors/jeff-kaufman-and-julia-wise-donations.sql
+
+### Joey Savoie
+
+Current data are from https://eahub.org/user/joey-savoie
