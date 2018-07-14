@@ -35,7 +35,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('GiveWell discretionary regranting','Deworm the World Initiative',20000,'2014-08-01','month','donation log','Global health/deworming','https://www.givewell.org/about/FAQ/discretionary-grantmaking','Grant uses money donated between April and June 2014',NULL,100000,0.2),
   
   ('GiveWell discretionary regranting','GiveDirectly',110000,'2014-05-01','month','donation log','Cash transfers','https://www.givewell.org/about/FAQ/discretionary-grantmaking','Grant uses money donated between January and March 2014',NULL,200000,0.55),
-  ('GiveWell discretionary regranting','Schistosomasis Control Initiative',80000,'2014-05-01','month','donation log','Global health/deworming','https://www.givewell.org/about/FAQ/discretionary-grantmaking','Grant uses money donated between January and March 2014',NULL,200000,0.4),
+  ('GiveWell discretionary regranting','Schistosomiasis Control Initiative',80000,'2014-05-01','month','donation log','Global health/deworming','https://www.givewell.org/about/FAQ/discretionary-grantmaking','Grant uses money donated between January and March 2014',NULL,200000,0.4),
   ('GiveWell discretionary regranting','Deworm the World Initiative',10000,'2014-05-01','month','donation log','Global health/deworming','https://www.givewell.org/about/FAQ/discretionary-grantmaking','Grant uses money donated between January and March 2014',NULL,200000,0.05);
 
 
