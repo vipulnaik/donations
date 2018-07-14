@@ -63,6 +63,14 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Donor lottery](#donor-lottery)
    * [MIRI top donors](#miri-top-donors)
 * [Subsidiaries](#subsidiaries)
+   * [Berkeley Existential Risk Initiative](#berkeley-existential-risk-initiative)
+   * [EA Funds](#ea-funds)
+   * [EA Grants](#ea-grants)
+   * [GiveWell discretionary regranting](#givewell-discretionary-regranting)
+   * [GiveWell Incubation Grants](#givewell-incubation-grants)
+   * [Good Ventures/GiveWell support](#good-venturesgivewell-support)
+   * [Good Ventures/GiveWell top and standout charities](#good-venturesgivewell-top-and-standout-charities)
+   * [Good Ventures/not recommended by GiveWell or Open Philanthropy Project](#good-venturesnot-recommended-by-givewell-or-open-philanthropy-project)
 
 ## Foundations
 
@@ -564,6 +572,9 @@ The next step depends on when the update was last done:
 Check http://existence.org/grants as well as the [BERI
 blog](http://existence.org/blog). Then update
 https://github.com/vipulnaik/donations/blob/master/sql/donations/subsidiaries/beri-grants.sql
+
+Some of the donations should be recorded elsewhere; see the comment at
+the top of the file.
 
 ### EA Funds
 
