@@ -140,6 +140,20 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Knight Foundation','Private foundation','United States','knightfdn','https://knightfoundation.org/','https://knightfoundation.org/grants',NULL,NULL,NULL,NULL,NULL,NULL,'knightfdn',NULL,'https://knightfoundation.org/about','https://knightfoundation.org/apply/',NULL,NULL,NULL,NULL,'https://github.com/riceissa/knight-foundation','https://en.wikipedia.org/wiki/John_S._and_James_L._Knight_Foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
+  ('Skoll Foundation','Private foundation','United States',NULL,'http://skoll.org/','http://skoll.org/community/awardees/',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'http://skoll.org/about/about-skoll/',NULL,NULL,NULL,NULL,NULL,NULL,'https://en.wikipedia.org/wiki/Skoll_Foundation',NULL,NULL,NULL,NULL,NULL,'See http://skoll.org/about/financials/',NULL),
+
+  ('Children''s Investment Fund Foundation','Private foundation','United Kingdom',NULL,'https://ciff.org/','https://ciff.org/grant-portfolio/',NULL,'children''s-investment-fund-foundation-ciff-',NULL,NULL,NULL,NULL,'ciffchild',NULL,'https://ciff.org/about-us/our-approach-and-values/',NULL,NULL,NULL,NULL,NULL,NULL,'https://en.wikipedia.org/wiki/The_Children%27s_Investment_Fund_Foundation',NULL,NULL,NULL,NULL,NULL,'See https://ciff.org/about-us/finances/ and https://ciff.org/about-us/endowment/',NULL),
+
+  ('Stone Family Foundation','Private foundation','United Kingdom',NULL,'http://www.thesff.com/','https://github.com/vipulnaik/donations/issues/55#issue-326765897',NULL,NULL,NULL,NULL,NULL,NULL,'StoneFamilyFdn',NULL,'http://www.thesff.com/about/',NULL,NULL,NULL,NULL,NULL,'https://github.com/riceissa/stone-family-foundation','https://en.wikipedia.org/wiki/Stone_Family_Foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
+  ('Douglas B. Marshall Jr. Family Foundation','Private foundation','United States',NULL,'http://www.dbmjr.org/','http://www.dbmjr.org/recent_grants.htm',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'http://www.dbmjr.org/mission_statement.htm','http://www.dbmjr.org/grant_guidelines.htm',NULL,NULL,NULL,NULL,'https://github.com/riceissa/dbmjr',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
+  ('Barr Foundation','Private foundation','United States','BarrFdn','https://www.barrfoundation.org/','https://www.barrfoundation.org/grantmaking/grants',NULL,NULL,NULL,NULL,NULL,NULL,'BarrFdn',NULL,'https://www.barrfoundation.org/how-we-work',NULL,NULL,NULL,NULL,NULL,'https://github.com/riceissa/barr-foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
+  ('Michael and Susan Dell Foundation','Private foundation','United States','dellfamilyfoundation','https://www.msdf.org/','https://www.msdf.org/funding/',NULL,NULL,NULL,NULL,NULL,NULL,'msdf_foundation',NULL,'https://www.msdf.org/about/how-we-work/',NULL,NULL,NULL,NULL,NULL,'https://github.com/riceissa/dell-foundation','https://en.wikipedia.org/wiki/Michael_%26_Susan_Dell_Foundation',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
+  ('Chan Zuckerberg Initiative','Private foundation','United States','chanzuckerberginitiative','https://www.chanzuckerberg.com/',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'https://www.chanzuckerberg.com/about',NULL,NULL,NULL,NULL,NULL,NULL,'https://en.wikipedia.org/wiki/Chan_Zuckerberg_Initiative',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
