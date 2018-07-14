@@ -483,4 +483,44 @@ directory.
 
 The next step depends on what one is trying to do:
 
-- 
+- If the previous update to the MIRI top donors SQL file was recent
+  (maybe up to four months ago), then the incremental scraper
+  (`scrape.py`) can be used.
+
+  Before running the script, navigate to
+  https://web.archive.org/save/https://intelligence.org/topcontributors/
+  so that the state of the page as of the time of update is saved on
+  the Internet Archive. Once saved, add the resulting snapshot URL to
+  the `SNAPSHOTS` list in `scrape2.py` (not `scrape.py`). (We won't be
+  running `scrape2.py`, but this way we have a record of which
+  snapshots we've used.)
+
+  Now run `make reset && make read` or similar to load in all the
+  donations data into MySQL. We need this step because the script will
+  be comparing the state of the top donors page against the database.
+
+  Now run:
+
+  ```bash
+  ./scrape.py > out.sql
+  ```
+
+  Now _append_ the contents of `out.sql` to
+  [`miri-top-donations.sql`](https://github.com/vipulnaik/donations/blob/master/sql/donations/donees/miri-top-donations.sql).
+
+- If the previous update was a longer time ago, the historical scraper
+  (`scrape2.py`) should be used, with all the intervening snapshots
+  (at ~3 month increments) added to the list `SNAPSHOTS` defined in
+  that script.
+
+  Now run:
+
+  ```bash
+  ./scrape2.py > out.sql
+  ```
+
+  Then look through `out.sql` to find where the new donations begin
+  (everything from the time when the last update was done _should_ be
+  new, but you may want to do a manual diff just in case). Copy the
+  contents of `out.sql` starting from this point into
+  [`miri-top-donations.sql`](https://github.com/vipulnaik/donations/blob/master/sql/donations/donees/miri-top-donations.sql).
