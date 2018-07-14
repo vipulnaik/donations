@@ -559,3 +559,50 @@ The next step depends on when the update was last done:
 
 ## Subsidiaries
 
+### Berkeley Existential Risk Initiative
+
+Check http://existence.org/grants as well as the [BERI
+blog](http://existence.org/blog). Then update
+https://github.com/vipulnaik/donations/blob/master/sql/donations/subsidiaries/beri-grants.sql
+
+### EA Funds
+
+Check https://app.effectivealtruism.org/funds/ and update
+https://github.com/vipulnaik/donations/blob/master/sql/donations/subsidiaries/ea-funds.sql
+
+Vipul does this so I'm not sure how exactly it works.
+
+### EA Grants
+
+For the initial round, the grants were given in a Google Doc. It's not
+clear when newer grants will be announced or what format they will
+come in.  Just keep an eye on the EA Forum, I guess.
+
+### GiveWell discretionary regranting
+
+Check https://www.givewell.org/about/FAQ/discretionary-grantmaking and
+update
+https://github.com/vipulnaik/donations/blob/master/sql/donations/subsidiaries/givewell-discretionary-regranting.sql
+
+### GiveWell Incubation Grants
+
+Check https://www.givewell.org/research/incubation-grants and update
+https://github.com/vipulnaik/donations/blob/master/sql/donations/subsidiaries/givewell-incubation-grants.sql
+
+### Good Ventures/GiveWell support
+
+Check http://www.goodventures.org/our-portfolio/grants-database
+(probably the CSV is easiest), then update
+https://github.com/vipulnaik/donations/blob/master/sql/donations/subsidiaries/good-ventures-givewell-support.sql
+
+### Good Ventures/GiveWell top and standout charities
+
+Vipul does this and I'm not sure how. Maybe by checking the GV grants
+database?
+
+### Good Ventures/not recommended by GiveWell or Open Philanthropy Project
+
+Vipul does this and I'm not sure how. Maybe by checking the GV grants
+database?
+
+
