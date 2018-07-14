@@ -481,7 +481,7 @@ Navigate to the [MIRI top contributors
 repository](https://github.com/riceissa/miri-top-contributors)
 directory.
 
-The next step depends on what one is trying to do:
+The next step depends on when the update was last done:
 
 - If the previous update to the MIRI top donors SQL file was recent
   (maybe up to four months ago), then the incremental scraper
@@ -511,7 +511,9 @@ The next step depends on what one is trying to do:
 - If the previous update was a longer time ago, the historical scraper
   (`scrape2.py`) should be used, with all the intervening snapshots
   (at ~3 month increments) added to the list `SNAPSHOTS` defined in
-  that script.
+  that script. You should also navigate to
+  https://web.archive.org/save/https://intelligence.org/topcontributors/
+  to save the current version of the page.
 
   Now run:
 
