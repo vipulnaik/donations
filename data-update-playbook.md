@@ -456,3 +456,31 @@ Check https://www.jefftk.com/donations and update https://github.com/vipulnaik/d
 ### Joey Savoie
 
 Current data are from https://eahub.org/user/joey-savoie
+
+## Donees
+
+### AI Safety Camp
+
+The initial round of donations was found on a LessWrong post, and it's
+not clear where to find later donations.
+
+### Brain Preservation Foundation
+
+Check http://www.brainpreservation.org/donors/ and update
+https://github.com/vipulnaik/donations/blob/master/sql/donations/donees/brain-preservation-foundation-donations.sql
+
+### Donor lottery
+
+It depends on who is hosting the donor lottery for the year, but it is
+probably Centre for Effective Altruism, so check
+https://app.effectivealtruism.org/lotteries/
+
+### MIRI top donors
+
+Navigate to the [MIRI top contributors
+repository](https://github.com/riceissa/miri-top-contributors)
+directory.
+
+The next step depends on what one is trying to do:
+
+- 
