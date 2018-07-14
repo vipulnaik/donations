@@ -1,0 +1,18 @@
+Here are the maximum row counts for each table in similarity/similarity-donee.sql.
+"donees" is the number of donees and "donors" is the number of donors.
+
+donors = 334
+donees = 18388
+
+donee_similarity_donor_donee_pairs: donors * donees
+    Actual: 21047
+donee_similarity_donor_donee_pairs_2: donors * donees
+    Actual: 21047
+donee_similarity_two_donees_one_donor: donors * donees^2
+donee_similarity_donee_summary: donees
+donee_similarity_donee_summary_2: donees
+donee_similarity_sim_pre: donees^2 (but subquery requires running through
+                                    2*donors, so maybe more like
+                                    2*donors*donees^2)
+donee_similarity_sim: donees^2
+donee_similarity_similarity: donees^2
