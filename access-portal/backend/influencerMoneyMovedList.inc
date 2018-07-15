@@ -6,13 +6,13 @@ if ($stmt = $mysqli->prepare($query)) {
   $stmt->execute();
   $result = $stmt->get_result();
 }
-$amount_claimed_num_rows = $result->num_rows;
-$amount_claimed = array();
+$amountClaimedNumRows = $result->num_rows;
+$amountClaimed = array();
 while ($row = $result->fetch_assoc()) {
-  $amount_claimed[$row['identified_donees']][$row['identified_donors']][$row['start_date']][$row['end_date']]['amount_claimed'] = $row['amount'];
-  $amount_claimed[$row['identified_donees']][$row['identified_donors']][$row['start_date']][$row['end_date']]['document_url'] = $row['document_url'];
-  $amount_claimed[$row['identified_donees']][$row['identified_donors']][$row['start_date']][$row['end_date']]['document_title'] = $row['document_title'];
-  $amount_claimed[$row['identified_donees']][$row['identified_donors']][$row['start_date']][$row['end_date']]['notes'] = $row['notes'];
+  $amountClaimed[$row['identified_donees']][$row['identified_donors']][$row['start_date']][$row['end_date']]['amount_claimed'] = $row['amount'];
+  $amountClaimed[$row['identified_donees']][$row['identified_donors']][$row['start_date']][$row['end_date']]['document_url'] = $row['document_url'];
+  $amountClaimed[$row['identified_donees']][$row['identified_donors']][$row['start_date']][$row['end_date']]['document_title'] = $row['document_title'];
+  $amountClaimed[$row['identified_donees']][$row['identified_donors']][$row['start_date']][$row['end_date']]['notes'] = $row['notes'];
 }
 
 $query = "select donor, donee, sum(amount) as amount_accounted, donation_date from donations where influencer = ? group by donor, donee, donation_date";
@@ -21,7 +21,7 @@ if ($stmt = $mysqli->prepare($query)) {
   $stmt->execute();
   $result = $stmt->get_result();
 }
-$amounts_accounted = array();
+$amountAccounted = array();
 while ($row = $result->fetch_assoc()) {
   // Tracks whether this (donor, donee, donation_date) combination has been
   // sorted into one of the money_moved rows
@@ -29,16 +29,16 @@ while ($row = $result->fetch_assoc()) {
 
   // First, we try to match against a (donee, donor, date range) combination
   // from money_moved
-  foreach ($amount_claimed as $donee => $donees) {
+  foreach ($amountClaimed as $donee => $donees) {
     if ($row['donee'] === $donee) {
       foreach ($donees as $donor => $donors) {
         if ($row['donor'] === $donor) {
-          foreach ($donors as $start_date => $start_dates) {
-            foreach ($start_dates as $end_date => $end_dates) {
-              if ($row['donation_date'] >= $start_date && $row['donation_date'] < $end_date) {
+          foreach ($donors as $startDate => $startDates) {
+            foreach ($startDates as $endDate => $endDates) {
+              if ($row['donation_date'] >= $startDate && $row['donation_date'] < $endDate) {
                 // We have a match for (donee, donor, date range), so store the
                 // amount
-                $amount_accounted[$donee][$donor][$start_date][$end_date] = $row['amount_accounted'];
+                $amountAccounted[$donee][$donor][$startDate][$endDate] = $row['amount_accounted'];
                 $stored = true;
               }
             }
@@ -51,21 +51,21 @@ while ($row = $result->fetch_assoc()) {
   if (!$stored) {
     // We couldn't match against a (donee, donor, date range) from money_moved,
     // so now we try to match against a (donee, date range) from money_moved
-    foreach ($amount_claimed as $donee => $donees) {
+    foreach ($amountClaimed as $donee => $donees) {
       if ($row['donee'] === $donee) {
         // This is where the "All donors other than ones specified" amount is
         // stored
-        $all_other_donors_bucket = $donees[''];
-        foreach ($all_other_donors_bucket as $start_date => $start_dates) {
-          foreach ($start_dates as $end_date => $end_dates) {
-            if ($row['donation_date'] >= $start_date && $row['donation_date'] < $end_date) {
+        $allOtherDonorsBucket = $donees[''];
+        foreach ($allOtherDonorsBucket as $startDate => $startDates) {
+          foreach ($startDates as $endDate => $endDates) {
+            if ($row['donation_date'] >= $startDate && $row['donation_date'] < $endDate) {
               // We have a match. We don't want to store under the donor name,
               // but rather under '' because that's where the "all other" donor
               // is stored.
-              if (isset($amount_accounted[$donee][''][$start_date][$end_date])) {
-                $amount_accounted[$donee][''][$start_date][$end_date] += $row['amount_accounted'];
+              if (isset($amountAccounted[$donee][''][$startDate][$endDate])) {
+                $amountAccounted[$donee][''][$startDate][$endDate] += $row['amount_accounted'];
               } else {
-                $amount_accounted[$donee][''][$start_date][$end_date] = $row['amount_accounted'];
+                $amountAccounted[$donee][''][$startDate][$endDate] = $row['amount_accounted'];
               }
               $stored = true;
             }
@@ -78,16 +78,16 @@ while ($row = $result->fetch_assoc()) {
   if (!$stored) {
     // We couldn't match against either a (donee, donor, date range) or a
     // (donee, date range) combination, so it does in the "everything else" row
-    if (isset($amount_accounted[''][''][''][''])) {
-      $amount_accounted[''][''][''][''] += $row['amount_accounted'];
+    if (isset($amountAccounted[''][''][''][''])) {
+      $amountAccounted[''][''][''][''] += $row['amount_accounted'];
     } else {
-      $amount_accounted[''][''][''][''] = $row['amount_accounted'];
+      $amountAccounted[''][''][''][''] = $row['amount_accounted'];
     }
   }
 }
 
-if ($amount_claimed_num_rows > 0) {
-  print '<h4 id="influencerMoneyMovedList">Money moved infomation for influencer '.$influencer.' (' . $amount_claimed_num_rows . ' rows)</h4>';
+if ($amountClaimedNumRows > 0) {
+  print '<h4 id="influencerMoneyMovedList">Money moved infomation for influencer '.$influencer.' (' . $amountClaimedNumRows . ' rows)</h4>';
   print '<table id="myTableInfluencerMoneyMovedList" class="tablesorter">'."\n";
   print "<thead>\n";
   print "<tr>\n";
@@ -102,10 +102,10 @@ if ($amount_claimed_num_rows > 0) {
   print "</tr>\n";
   print "</thead>\n";
   print "<tbody>\n";
-  foreach ($amount_claimed as $donee => $inner1) {
+  foreach ($amountClaimed as $donee => $inner1) {
     foreach ($inner1 as $donor => $inner2) {
-      foreach ($inner2 as $start_date => $inner3) {
-        foreach ($inner3 as $end_date => $inner4) {
+      foreach ($inner2 as $startDate => $inner3) {
+        foreach ($inner3 as $endDate => $inner4) {
           if ($inner4['amount_claimed'] > 0) {
             print "<tr>\n";
             print "    <td>".$donee."</td>\n";
@@ -114,10 +114,10 @@ if ($amount_claimed_num_rows > 0) {
             } else {
               print "    <td>All donors other than ones specified</td>\n";
             }
-            print '    <td style="text-align: right;">' . number_format($amount_accounted[$donee][$donor][$start_date][$end_date] ?? 0, 2) . '</td>';
+            print '    <td style="text-align: right;">' . number_format($amountAccounted[$donee][$donor][$startDate][$endDate] ?? 0, 2) . '</td>';
             print '    <td style="text-align: right;">'.number_format($inner4['amount_claimed'],2)."</td>\n";
-            print "    <td>".$start_date."</td>\n";
-            print "    <td>".$end_date."</td>\n";
+            print "    <td>".$startDate."</td>\n";
+            print "    <td>".$endDate."</td>\n";
             print '    <td><a href="'.$inner4['document_url'].'">'.$inner4['document_title'].'</a></td>'."\n";
             print "    <td>".cleanNotes($inner4['notes'])."</td>\n";
             print "</tr>\n";
@@ -126,11 +126,11 @@ if ($amount_claimed_num_rows > 0) {
       }
     }
   }
-  if (isset($amount_accounted[''][''][''][''])) {
+  if (isset($amountAccounted[''][''][''][''])) {
     print "<tr>\n";
     print "    <td>All other donees than ones specified</td>\n";
     print "    <td>All other donors than ones specified</td>\n";
-    print '    <td style="text-align: right;">' . number_format($amount_accounted[''][''][''][''], 2) . "</td>\n";
+    print '    <td style="text-align: right;">' . number_format($amountAccounted[''][''][''][''], 2) . "</td>\n";
     print '    <td style="text-align: right;">--</td>' . "\n";
     print "    <td>--</td>\n";
     print "    <td>--</td>\n";
