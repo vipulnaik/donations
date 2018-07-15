@@ -39,7 +39,7 @@ if (needToRegenerate($cache_location)) {
     $result = $stmt->get_result();
     if ($result->num_rows > 0) {
       print '<p><a href="/donor.php?donor=' . urlencode($influencer)
-        . '">This entity is also a donor<a/>.</p>' . "\n";
+        . '">This entity is also a donor</a>.</p>' . "\n";
     }
   }
 
@@ -49,7 +49,7 @@ if (needToRegenerate($cache_location)) {
     $result = $stmt->get_result();
     if ($result->num_rows > 0) {
       print '<p><a href="/donee.php?donee=' . urlencode($influencer)
-        . '">This entity is also a donee<a/>.</p>' . "\n";
+        . '">This entity is also a donee</a>.</p>' . "\n";
     }
   }
 
@@ -60,5 +60,6 @@ if (needToRegenerate($cache_location)) {
 }
 include($cache_location);
 include_once("anchorjs.inc");
-print '</body>';
+print "</body>\n";
+print "</html>\n";
 ?>
