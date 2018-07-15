@@ -48,7 +48,11 @@ while ($row = $result->fetch_assoc()) {
               if ($row['donation_date'] >= $startDate && $row['donation_date'] < $endDate) {
                 // We have a match for (donee, donor, date range), so store the
                 // amount
-                $amountAccounted[$donee][$donor][$startDate][$endDate] = $row['amount_accounted'];
+                if (isset($amountAccounted[$donee][$donor][$startDate][$endDate])) {
+                  $amountAccounted[$donee][$donor][$startDate][$endDate] += $row['amount_accounted'];
+                } else {
+                  $amountAccounted[$donee][$donor][$startDate][$endDate] = $row['amount_accounted'];
+                }
                 $stored = true;
               }
             }
@@ -70,8 +74,8 @@ while ($row = $result->fetch_assoc()) {
           foreach ($startDates as $endDate => $endDates) {
             if ($row['donation_date'] >= $startDate && $row['donation_date'] < $endDate) {
               // We have a match. We don't want to store under the donor name,
-              // but rather under '' because that's where the "all other" donor
-              // is stored.
+              // but rather under '' because we want to sum the donation
+              // amounts of all the other donors.
               if (isset($amountAccounted[$donee][''][$startDate][$endDate])) {
                 $amountAccounted[$donee][''][$startDate][$endDate] += $row['amount_accounted'];
               } else {
@@ -87,7 +91,9 @@ while ($row = $result->fetch_assoc()) {
 
   if (!$stored) {
     // We couldn't match against either a (donee, donor, date range) or a
-    // (donee, date range) combination, so it does in the "everything else" row
+    // (donee, date range) combination, so it goes in the "everything else" row
+    // (All other donees than ones specified, All other donors than ones
+    // specified)
     if (isset($amountAccounted[''][''][''][''])) {
       $amountAccounted[''][''][''][''] += $row['amount_accounted'];
     } else {
