@@ -1,5 +1,10 @@
 <?php
 
+// The "amount claimed" is the amount of influence claimed according to the
+// money_moved table. Below we store this information in the multidimensional
+// array $amountClaimed, which is accessed in the order (donee, donor, start
+// date, end date) and has the values "amount_claimed", "document_url",
+// "document_title" and "notes".
 $query = "select * from money_moved where influencer = ? order by start_date desc";
 if ($stmt = $mysqli->prepare($query)) {
   $stmt->bind_param("s", $influencer);
@@ -15,6 +20,11 @@ while ($row = $result->fetch_assoc()) {
   $amountClaimed[$row['identified_donees']][$row['identified_donors']][$row['start_date']][$row['end_date']]['notes'] = $row['notes'];
 }
 
+// The "amount accounted" is the amount of influence accounted for via the
+// donations table. Below we store this information in $amountAccounted in a
+// format similar to $amountClaimed. The tricky part is that the donations
+// table does not store donations in the same format as the money_moved table,
+// so we have to do some grouping.
 $query = "select donor, donee, sum(amount) as amount_accounted, donation_date from donations where influencer = ? group by donor, donee, donation_date";
 if ($stmt = $mysqli->prepare($query)) {
   $stmt->bind_param("s", $influencer);
