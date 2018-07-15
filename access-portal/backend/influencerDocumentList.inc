@@ -5,7 +5,7 @@ $influencerDocumentSelectResult = $mysqli -> query($influencerDocumentSelectQuer
 if ($influencerDocumentSelectResult -> num_rows > 0) {
   print '<h4 id="influencerDocumentList">Full list of documents in reverse chronological order ('.($influencerDocumentSelectResult -> num_rows).' documents)</h4>';
   print "\n";
-  print '<table id="myTableInfluencerDocumentList" class="tablesorter">'."\n"; 
+  print '<table id="myTableInfluencerDocumentList" class="tablesorter">'."\n";
   print "<thead>\n";
   print '<tr>';
   print '<th>Title (URL linked)</th>';
