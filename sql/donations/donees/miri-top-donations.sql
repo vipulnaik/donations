@@ -1,5 +1,5 @@
 # -- Donors tracked elsewhere: Loren Merritt, Gordon Irlam, Open Philanthropy
-# -- Project, Robert Yaman, Zvi Mowshowitz, Ben Hoskin, and possibly some others.
+# -- Project, BERI, Robert Yaman, Zvi Mowshowitz, Ben Hoskin, and possibly some others.
 insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,notes) values
     ('Adam Weissman','Machine Intelligence Research Institute',10000.0,'2015-01-17','multi-year','donee contributor list','AI safety','https://web.archive.org/web/20150117213932/https://intelligence.org/donortools/topdonors.php',NULL)
     ,('Alan Chang','Machine Intelligence Research Institute',18000.0,'2017-09-29','year','donee contributor list','AI safety','https://web.archive.org/web/20170929195133/https://intelligence.org/topcontributors/',NULL)
@@ -266,7 +266,6 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
     ,('Wolf Tivy','Machine Intelligence Research Institute',16758.0,'2015-01-17','multi-year','donee contributor list','AI safety','https://web.archive.org/web/20150117213932/https://intelligence.org/donortools/topdonors.php',NULL)
     ,('Xerxes Dotiwalla','Machine Intelligence Research Institute',7350.0,'2017-12-23','year','donee contributor list','AI safety','https://web.archive.org/web/20171223071315/https://intelligence.org/topcontributors/',NULL)
     ,('Xerxes Dotiwalla','Machine Intelligence Research Institute',1350.0,'2018-01-17','year','donee contributor list','AI safety','https://web.archive.org/web/20180117010054/https://intelligence.org/topcontributors/',NULL)
-    ,('Berkeley Existential Risk Initiative','Machine Intelligence Research Institute',200000.0,'2018-01-18','day','donee contributor list','AI safety','https://web.archive.org/web/20180118031109/https://intelligence.org/topcontributors/','See blog announcement at http://existence.org/2018/01/11/activity-update-december-2017.html')
 ;
 
 # Generated using incremental scraper (https://github.com/riceissa/miri-top-contributors/blob/master/scrape.py) on 2018-04-07.
