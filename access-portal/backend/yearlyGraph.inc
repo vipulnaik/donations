@@ -9,8 +9,8 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
   $dataForCumulativeGraph = "Year";
 
   foreach ($group as $i) {
-    $dataForGraph .= "|$i";
-    $dataForCumulativeGraph .= "|$i";
+    $dataForGraph .= "|" . preg_replace("/\\|/", ", ", $i);
+    $dataForCumulativeGraph .= "|" . preg_replace("/\\|/", ", ", $i);
   }
   $dataForGraph .= "|Total\n";
   $dataForCumulativeGraph .= "|Total\n";
