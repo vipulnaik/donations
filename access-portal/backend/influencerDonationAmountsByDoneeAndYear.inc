@@ -11,9 +11,17 @@ function linkDonors(string $donorList, string $donee) {
   return implode(", ", $donors);
 }
 
-// TODO do cause area filter
-if ($stmt = $mysqli->prepare("select donee, group_concat(distinct donor order by donor separator '|') as donor_list from donations where influencer regexp ? group by donee")) {
-  $stmt->bind_param("s", $influencer);
+$query = "select donee, group_concat(distinct donor order by donor separator '|') as donor_list from donations where influencer regexp ?";
+$paramStr = "s";
+$params = array($influencer);
+if ($_REQUEST['cause_area_filter'] ?? '') {
+  $query .= " and cause_area regexp ?";
+  $paramStr .= "s";
+  $params[] = $_REQUEST['cause_area_filter'];
+}
+$query .= " group by donee";
+if ($stmt = $mysqli->prepare($query)) {
+  $stmt->bind_param($paramStr, ...$params);
   $stmt->execute();
   $result = $stmt->get_result();
 }
@@ -52,9 +60,17 @@ while ($row = $result->fetch_assoc()) {
 }
 
 // Query yearly donation data
-// TODO do cause area filter
-if ($stmt = $mysqli->prepare("select donee, year(donation_date) as year, sum(amount) as amount from donations where influencer regexp ? group by donee, year(donation_date)")) {
-  $stmt->bind_param("s", $influencer);
+$query = "select donee, year(donation_date) as year, sum(amount) as amount from donations where influencer regexp ?";
+$params = array($influencer);
+$paramStr = "s";
+if ($_REQUEST['cause_area_filter'] ?? '') {
+  $query .= " and cause_area regexp ?";
+  $paramStr .= "s";
+  $params[] = $_REQUEST['cause_area_filter'];
+}
+$query .= " group by donee, year(donation_date)";
+if ($stmt = $mysqli->prepare($query)) {
+  $stmt->bind_param($paramStr, ...$params);
   $stmt->execute();
   $result = $stmt->get_result();
 }
