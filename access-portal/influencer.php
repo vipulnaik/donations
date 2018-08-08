@@ -21,6 +21,7 @@ print '<script>$(document).ready(function()
         $("#myTableInfluencerDocumentList").tablesorter({textExtraction: stripCommas});
         $("#myTableInfluencerMoneyMovedList").tablesorter({textExtraction: stripCommas});
         $("#myTableInfluencerDonationList").tablesorter({textExtraction: stripCommas});
+        $("#myTableInfluencerDonationAmountsByDoneeAndYear").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
 print "<h3>$influencer money moved</h3>";
@@ -30,6 +31,7 @@ print '<ul>';
 print '<li><a href="#influencerDocumentList">Influencer document list</a></li>';
 print '<li><a href="#influencerMoneyMovedList">Influencer money moved list</a></li>';
 print '<li><a href="#influencerDonationList">Influencer donation list</a></li>';
+print '<li><a href="#influencerDonationAmountsByDoneeAndYear">Influencer donation amounts by donee and year</a></li>';
 print '</ul>';
 
 $cache_location = "cache/" . md5($_SERVER['REQUEST_URI']) . ".html";
@@ -58,6 +60,7 @@ if (needToRegenerate($cache_location)) {
   include ("backend/influencerDocumentList.inc");
   include ("backend/influencerMoneyMovedList.inc");
   include ("backend/influencerDonationList.inc");
+  include ("backend/influencerDonationAmountsByDoneeAndYear.inc");
   $output = ob_get_clean();
   file_put_contents($cache_location, $output);
 }
