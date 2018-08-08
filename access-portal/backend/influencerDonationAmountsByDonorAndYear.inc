@@ -106,7 +106,7 @@ foreach ($donors as $donor) {
 
 print "</tbody>\n";
 print "<tfoot>\n";
-print "  <tr>\n    <td><strong>Total</strong></td>\n";
+print "  <tr>\n    <td><strong>Total</strong></td>\n".'<td align="center">--</td>';
 
 print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2).'</strong></td>'."\n";
 
