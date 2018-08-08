@@ -165,4 +165,30 @@ print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
 
+$permalinkUrlBase = "https://donations.vipulnaik.com/influencer.php?influencer=" . urlencode($influencer);
+
+if ($causeAreaFilterString != '') {
+  $permalinkUrlBase .= '&cause_area_filter='.urlencode($causeAreaFilterString);
+}
+
+if (count(array_filter($yearDonationAmount)) > 1) {
+  $graphs = yearlyGraphs(
+    $years,
+    $donees,
+    $yearDonationAmount,
+    $donationAmountByDoneeAndYear,
+    $generateGraphCmdBase,
+    $imagesPath,
+    $permalinkUrlBase,
+    "#influencerDonationAmountsByDoneeAndYear"
+  );
+
+  print "<p><strong>Graph of spending by donee and year (incremental, not cumulative)</strong></p>";
+  print '<img src="/images/'.$graphs[0].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
+
+  print "<p><strong>Graph of spending by donee and year (cumulative)</strong></p>";
+  print '<img src="/images/'.$graphs[1].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
+} else {
+  print "<p>Skipping spending graph as there is fewer than one year’s worth of donations.</p>\n";
+}
 ?>
