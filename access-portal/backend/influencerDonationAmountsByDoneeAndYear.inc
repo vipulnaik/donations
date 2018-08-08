@@ -1,9 +1,11 @@
 <?php
 
-function linkDonors(string $donorList) {
-  $donors = array_map(function ($donor) {
+function linkDonors(string $donorList, string $donee) {
+  $donors = array_map(function ($donor) use ($donee) {
                         return '<a href="/donor.php?donor=' . urlencode($donor)
-                          . '">' . htmlspecialchars($donor) . '</a>';
+                          . '">' . htmlspecialchars($donor) . '</a>'
+                          . ' (<a href="/donorDonee.php?donor=' . urlencode($donor)
+                          . "&amp;donee=" . urlencode($donee) . '">filter this donor</a>)';
                       },
                       explode("|", $donorList));
   return implode(", ", $donors);
@@ -89,11 +91,8 @@ print "</tr>\n</thead>\n<tbody>\n";
 foreach ($donees as $donee) {
   print "  <tr>\n";
   print '    <td><a href="/donee.php?donee=' . urlencode($donee) . '">'
-    . $donee . '</a>'
-    . ' (<a href="/donorDonee.php?donor=' . urlencode($donor) . "&amp;donee="
-    . urlencode($donee) . '">filter this donor</a>)'
-    . '</td>'."\n";
-  print '    <td>' . linkDonors($donorsByDonee[$donee]) . '</td>' . "\n";
+    . $donee . '</a></td>'."\n";
+  print '    <td>' . linkDonors($donorsByDonee[$donee], $donee) . '</td>' . "\n";
   print '    <td>'.(isset($causeAreaForDonee[$donee]) ? $causeAreaForDonee[$donee] : "").'</td>'."\n";
   print '    <td>';
   if (isset($facebookUsername[$donee]) && $facebookUsername[$donee] != '') {
