@@ -36,7 +36,6 @@ foreach($donees as $donee) {
 
 // Query donee metadata
 if ($stmt = $mysqli->prepare("select * from donees")) {
-  $stmt->bind_param("s", $influencer);
   $stmt->execute();
   $result = $stmt->get_result();
 }
