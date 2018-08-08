@@ -122,4 +122,6 @@ while ($row = $result->fetch_assoc()) {
   print '    <td>' . $notes . $notes_key_val_string . '</td>' . "\n";
   print '</tr>';
 }
+print "  </tbody>\n";
+print "</table>\n";
 ?>
