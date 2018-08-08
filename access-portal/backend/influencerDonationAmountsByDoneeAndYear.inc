@@ -1,7 +1,16 @@
 <?php
 
+function linkDonors(string $donorList) {
+  $donors = array_map(function ($donor) {
+                        return '<a href="/donor.php?donor=' . urlencode($donor)
+                          . '">' . htmlspecialchars($donor) . '</a>';
+                      },
+                      explode("|", $donorList));
+  return implode(", ", $donors);
+}
+
 // TODO do cause area filter
-if ($stmt = $mysqli->prepare("select donee, group_concat(donor) as donor_list from donations where influencer regexp ? group by donee")) {
+if ($stmt = $mysqli->prepare("select donee, group_concat(distinct donor order by donor separator '|') as donor_list from donations where influencer regexp ? group by donee")) {
   $stmt->bind_param("s", $influencer);
   $stmt->execute();
   $result = $stmt->get_result();
@@ -84,7 +93,7 @@ foreach ($donees as $donee) {
     . ' (<a href="/donorDonee.php?donor=' . urlencode($donor) . "&amp;donee="
     . urlencode($donee) . '">filter this donor</a>)'
     . '</td>'."\n";
-  print '    <td>' . $donorsByDonee[$donee] . '</td>' . "\n";
+  print '    <td>' . linkDonors($donorsByDonee[$donee]) . '</td>' . "\n";
   print '    <td>'.(isset($causeAreaForDonee[$donee]) ? $causeAreaForDonee[$donee] : "").'</td>'."\n";
   print '    <td>';
   if (isset($facebookUsername[$donee]) && $facebookUsername[$donee] != '') {
