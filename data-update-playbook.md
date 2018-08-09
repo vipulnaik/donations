@@ -191,6 +191,14 @@ Run the following:
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/hewlett-foundation-grants.sql
 
+### Kellogg Foundation
+
+Navigate to the [Kellogg Foundation repo](https://github.com/riceissa/kellogg-foundation)
+directory.
+
+Run the commands listed at:
+https://github.com/riceissa/kellogg-foundation#getting-data-and-generating-sql-file
+
 ### Knight Foundation
 
 Navigate to the [Knight Foundation grants repo](https://github.com/riceissa/knight-foundation) directory.
@@ -203,6 +211,14 @@ Run the following:
 ```
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/knight-foundation-grants.sql
+
+### Lilly Endowment
+
+Navigate to the [Lilly Endowment grants repo](https://github.com/riceissa/lilly-endowment)
+directory.
+
+Run the commands listed at
+https://github.com/riceissa/lilly-endowment#how-to-get-new-data-and-generate-the-sql-statements
 
 ### MacArthur Foundation
 
@@ -352,6 +368,14 @@ Then run:
 ```
 
 Now copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/unbound-philanthropy-grants.sql
+
+### Knut and Alice Wallenberg Foundation
+
+Navigate to the [Knut and Alice Wallenberg Foundation repo](https://github.com/riceissa/kaw-wallenberg-foundation)
+directory.
+
+Do the steps listed at
+https://github.com/riceissa/kaw-wallenberg-foundation#how-to-get-data-and-generate-the-sql-file
 
 ### Wellcome Trust
 
