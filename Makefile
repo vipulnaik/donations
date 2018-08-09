@@ -88,6 +88,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/templeton-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/theiss-research.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/unbound-philanthropy-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/wallenberg-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/wellcome-trust-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/beri-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds.sql
