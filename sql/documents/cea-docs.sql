@@ -12,3 +12,8 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('https://www.centreforeffectivealtruism.org/blog/cea-s-2017-review-and-2018-plans/','CEA’s 2017 Review and 2018 Plans','2017-12-18','2017-12-19','Larissa Hesketh-Rowe','Centre for Effective Altruism','Effective Altruism Grants','Centre for Effective Altruism','Donee periodic update','Effective altruism/movement-building','The Centre for Effective Altruism reports on its progress in 2017 and describes its plans for 2018. It posts its org chart, describing the five teams (Individual Outreach, Community, Research, Tech, and Operations, and describes the progress and plans for each of the teams. Cross-posted to the Effective Altruism Forum at http://effective-altruism.com/ea/1ir/centre_for_effective_altruism_cea_2017_review_and/');
 
+# -- CEA misc commentary
+
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('http://effective-altruism.com/ea/1s0/cea_on_community_building_representativeness_and/','CEA on community building, representativeness, and the EA Summit','2018-12-15',NULL,'Lariss Hesketh-Rowe|Kerry Vaughan','Effective Altruism Forum','Centre for Effective Altruism','Centre for Effective Altruism','Miscellaneous commentary','Effective altruism/movement-building','CEA describes its current take on community building, explaining that it is focusing more on the most engaged donors, but is financially supporting other initiatives focused on more broad-based community-building');
+
