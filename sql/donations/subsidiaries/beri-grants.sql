@@ -1,6 +1,5 @@
 # Grants to BERI and grants BERI has given out
 # Grants covered elsewhere:
-# - BERI grants to MIRI
 # - EA Funds/Giving Group grants to BERI
 # - Open Philanthropy grant to BERI
 
