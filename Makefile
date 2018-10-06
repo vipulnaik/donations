@@ -37,6 +37,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ace-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/animal-equality-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/beri-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/berkeley-reach.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cea-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cfar-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/charity-science-docs.sql
@@ -51,6 +52,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/givewell-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gwwc-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/hurford-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/lw2-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/mfa-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/miri-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/one-for-the-world-docs.sql
