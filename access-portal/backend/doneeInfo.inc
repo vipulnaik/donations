@@ -81,6 +81,23 @@ if ($doneeSelectResult -> num_rows == 0) {
     $orgwatch_url = 'https://orgwatch.issarice.com/?organization='.urlencode($row['donee']);
     print '<tr><td>Org Watch page</td><td><a href="'.$orgwatch_url.'">'.$orgwatch_url.'</a></td></tr>';
   }
+  if (isset($row['key_people']) && $row['key_people'] != '') {
+    print '<tr><td>Key people</td><td>'.$row['key_people'].'</td></tr>';
+  }
+  if (isset($row['launch_date']) && $row['launch_date'] != '') {
+    $launch_date = $row['launch_date'];
+    $launch_date_precision = $row['launch_date_precision'];
+    if ($launch_date_precision == 'month' or $launch_date_precision == 'quarter') {
+      $launch_date = substr($launch_date,0,7);
+    } else if ($launch_date_precision == 'year' or $launch_date_precision == 'multi-year') {
+      $launch_date = substr($launch_date,0,4);
+    }
+    if (isset($row['launch_date_url']) && $row['launch_date_url'] != '') {
+      $launch_date = '<a href="' . $row['launch_date_url'] . '">' . $launch_date . '</a>';
+    }
+
+    print '<tr><td>Launch date</td><td>'.$launch_date.'</td></tr>';
+  }
   if ($row['notes'] != '') {
     print '<tr><td>Notes</td><td>'.cleanNotes($row['notes']).'</td></tr>';
   }
