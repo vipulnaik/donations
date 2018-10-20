@@ -82,7 +82,7 @@ if ($doneeSelectResult -> num_rows == 0) {
     print '<tr><td>Org Watch page</td><td><a href="'.$orgwatch_url.'">'.$orgwatch_url.'</a></td></tr>';
   }
   if ($row['notes'] != '') {
-    print '<tr><td>Notes</td><td>'.$row['notes'].'</td></tr>';
+    print '<tr><td>Notes</td><td>'.cleanNotes($row['notes']).'</td></tr>';
   }
   print "</tbody>\n</table>\n";
 }
