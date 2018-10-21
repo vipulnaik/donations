@@ -6,7 +6,7 @@ create table donees (
     country varchar(40), # -- Country of main activity
     bay_area boolean, # -- Whether the person currently lives in the San Francisco Bay Area
     facebook_username varchar(100),
-    website varchar(100),
+    website varchar(150),
     donate_page varchar(200),
     donor_list_page varchar(200),
     transparency_and_financials_page varchar(200),
