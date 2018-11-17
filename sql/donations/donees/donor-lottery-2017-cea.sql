@@ -40,5 +40,5 @@ insert into donations(donor, influencer, donee, amount, donation_date, donation_
     ('Donor lottery','Adam Gleave','Alliance to Feed the Earth in Disasters',70000,'2018-11-12','day','date of donation announcement','https://forum.effectivealtruism.org/posts/SYeJnv9vYzq9oQMbQ/2017-donor-lottery-report',NULL)
     ,('Donor lottery','Adam Gleave','Global Catastrophic Risk Institute',20000,'2018-11-12','day','date of donation announcement','https://forum.effectivealtruism.org/posts/SYeJnv9vYzq9oQMbQ/2017-donor-lottery-report',NULL)
     ,('Donor lottery','Adam Gleave','AI Impacts',5000,'2018-11-12','day','date of donation announcement','https://forum.effectivealtruism.org/posts/SYeJnv9vYzq9oQMbQ/2017-donor-lottery-report',NULL)
-    ,('Donor lottery','Adam Gleave','Wild Animal Suffering Research',5000,'2018-11-12','day','date of donation announcement','https://forum.effectivealtruism.org/posts/SYeJnv9vYzq9oQMbQ/2017-donor-lottery-report',NULL)
+    ,('Donor lottery','Adam Gleave','Wild-Animal Suffering Research',5000,'2018-11-12','day','date of donation announcement','https://forum.effectivealtruism.org/posts/SYeJnv9vYzq9oQMbQ/2017-donor-lottery-report',NULL)
 ;
