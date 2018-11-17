@@ -34,3 +34,11 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
     ,('Aaron Tucker','Donor lottery',2045.3,'2018-01-18','day','transaction','https://app.effectivealtruism.org/lotteries/31553453298138','Block 2, [352,183,296,894–374,671,608,215]. See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery.')
     ,('Benefactor','Donor lottery',65924.0,'2018-01-24','day','transaction','https://app.effectivealtruism.org/lotteries/31553453298138','Block 2, [374,671,608,216–1,099,511,627,775]. See https://app.effectivealtruism.org/lotteries for general background; see http://effective-altruism.com/ea/1ip/announcing_the_2017_donor_lottery/ for the blog post announcing this lottery.')
 ;
+
+# The following are donations decided by the lottery winner
+insert into donations(donor, influencer, donee, amount, donation_date, donation_date_precision, donation_date_basis, url, notes) values
+    ('Donor lottery','Adam Gleave','ALLFED',70000,'2018-11-12','day','date of donation announcement','https://forum.effectivealtruism.org/posts/SYeJnv9vYzq9oQMbQ/2017-donor-lottery-report',NULL)
+    ,('Donor lottery','Adam Gleave','Global Catastrophic Risk Institute',20000,'2018-11-12','day','date of donation announcement','https://forum.effectivealtruism.org/posts/SYeJnv9vYzq9oQMbQ/2017-donor-lottery-report',NULL)
+    ,('Donor lottery','Adam Gleave','AI Impacts',5000,'2018-11-12','day','date of donation announcement','https://forum.effectivealtruism.org/posts/SYeJnv9vYzq9oQMbQ/2017-donor-lottery-report',NULL)
+    ,('Donor lottery','Adam Gleave','Wild Animal Suffering Research',5000,'2018-11-12','day','date of donation announcement','https://forum.effectivealtruism.org/posts/SYeJnv9vYzq9oQMbQ/2017-donor-lottery-report',NULL)
+;
