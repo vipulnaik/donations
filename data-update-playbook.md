@@ -247,6 +247,8 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Barbara McDowell and Gerald S. Hartman Foundation
 
+Last attempted and successful update: 2018-11-23
+
 Navigate to the [Barbara McDowell and Gerald S. Hartman Foundation grants data repo](https://github.com/riceissa/mcdowell-foundation) directory.
 
 Run the following:
