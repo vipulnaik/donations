@@ -192,7 +192,8 @@ This was all manual, and automation work began but has stalled. See https://gith
 
 ### Hewlett Foundation
 
-Last attempted update: 2018-11-23 (problems discovered due to site format changes; script being fixed)
+Last attempted update: 2018-11-23 (script went into infinite loop due
+to site format changes; Issa will fix script)
 
 Navigate to the [Hewlett Foundation repo](https://github.com/riceissa/hewlett-foundation) directory.
 
@@ -238,6 +239,9 @@ https://github.com/riceissa/lilly-endowment#how-to-get-new-data-and-generate-the
 
 ### MacArthur Foundation
 
+Last attempted update: 2018-11-23 (ran into problems -- script threw
+error; communicated to Issa)
+
 Navigate to the [MacArthur Foundation repo](https://github.com/riceissa/macarthur-foundation) directory.
 
 Run the following:
@@ -266,7 +270,8 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Mulago
 
-Last attempted update: 2018-11-23 (problems detected due to format changes)
+Last attempted update: 2018-11-23 (CSV generated is empty due to sit
+format changes; Issa will look into it)
 
 Navigate to the [Mulago grants repo](https://github.com/riceissa/mulago) directory.
 
