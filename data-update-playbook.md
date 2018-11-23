@@ -313,6 +313,8 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Sloan Foundation
 
+Last attempted and successful update: 2018-11-23
+
 Navigate to the [Sloan Foundation Grants repo](https://github.com/riceissa/sloan-foundation) directory.
 
 Get new data and save it to `data.html`. The data is _probably_ at https://sloan.org/grants-database?dynamic=0&order_by=approved_at&order_by_direction=desc&limit=2000&page=1 assuming the website hasn't changed. See the [repo readme](https://github.com/riceissa/sloan-foundation/blob/master/README.md) for more info.
