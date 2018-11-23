@@ -182,6 +182,8 @@ Check if a new round of grants have been awarded. It's not clear if the 2015 gra
 
 ### Gates Foundation
 
+GitHub issue for fixes that need to be made before the next run: [#73](https://github.com/vipulnaik/donations/issues/73)
+
 I think this is just for IATI data and we decided not to do the whole foundation (due to limited data access through their website).
 
 ### Google.org
@@ -189,6 +191,8 @@ I think this is just for IATI data and we decided not to do the whole foundation
 This was all manual, and automation work began but has stalled. See https://github.com/vipulnaik/donations/issues/47
 
 ### Hewlett Foundation
+
+Last attempted update: 2018-11-23 (problems discovered due to site format changes; script being fixed)
 
 Navigate to the [Hewlett Foundation repo](https://github.com/riceissa/hewlett-foundation) directory.
 
@@ -261,6 +265,8 @@ Run the following:
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/mcdowell-foundation-grants.sql
 
 ### Mulago
+
+Last attempted update: 2018-11-23 (problems detected due to format changes)
 
 Navigate to the [Mulago grants repo](https://github.com/riceissa/mulago) directory.
 
