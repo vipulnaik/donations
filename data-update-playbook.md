@@ -211,6 +211,8 @@ https://github.com/riceissa/kellogg-foundation#getting-data-and-generating-sql-f
 
 ### Knight Foundation
 
+Last attempted and successful update: 2018-11-23
+
 Navigate to the [Knight Foundation grants repo](https://github.com/riceissa/knight-foundation) directory.
 
 Run the following:

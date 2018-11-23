@@ -22,7 +22,7 @@ create table donations (
     employer_match float(14,2),
     matching_employer varchar(100),
     special_donation_reason enum('Giving Game','Compensation to charity for effort','Committed periodic donation','Fundraiser/Gift','Hat tip','One-off opportunity', 'Offset','Prize to charity of choice'),
-    donation_earmark varchar(100),
+    donation_earmark varchar(2000),
     affected_countries varchar(2000),
     affected_states varchar(300),
     affected_cities varchar(300),
