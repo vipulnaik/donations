@@ -76,11 +76,8 @@ General caution: Websites and data formats change all the time. If a script fail
 
 ### Arnold Foundation
 
-Last attempted update: 2018-11-23 (it ran but did not produce any
-updates to index.html or out.sql, even though we should expect
-updates)
-
-Last successful update: 2018-05-26
+Last attempted and successful update: 2018-11-23 (covers data till
+September 30, 2018)
 
 From the [Arnold Foundation repo](https://github.com/riceissa/arnold-foundation-grants) directory:
 
