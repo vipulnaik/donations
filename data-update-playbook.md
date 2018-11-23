@@ -86,7 +86,8 @@ From the [Arnold Foundation repo](https://github.com/riceissa/arnold-foundation-
 
 ```bash
 curl http://www.arnoldfoundation.org/grants/ > index.html
-./loop.py > out.sql
+./fetch_page.py index.html > grants-with-multiyear.tsv
+./loop.py grants-with-multiyear.tsv > out.sql
 ```
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/arnold-foundation-grants.sql
