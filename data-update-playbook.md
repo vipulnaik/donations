@@ -76,6 +76,12 @@ General caution: Websites and data formats change all the time. If a script fail
 
 ### Arnold Foundation
 
+Last attempted update: 2018-11-23 (it ran but did not produce any
+updates to index.html or out.sql, even though we should expect
+updates)
+
+Last successful update: 2018-05-26
+
 From the [Arnold Foundation repo](https://github.com/riceissa/arnold-foundation-grants) directory:
 
 ```bash
@@ -86,6 +92,8 @@ curl http://www.arnoldfoundation.org/grants/ > index.html
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/arnold-foundation-grants.sql
 
 ### Barr Foundation
+
+Last attempted and successful update: 2018-11-23
 
 From the [Barr Foundation repo](https://github.com/riceissa/barr-foundation) directory:
 
