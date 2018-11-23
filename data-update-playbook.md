@@ -144,6 +144,8 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Foundational Questions Institute (FQXi)
 
+Last attempted and successful update: 2018-11-23
+
 Navigate to the [FQXi repo](https://github.com/riceissa/fqxi-grants) directory.
 
 Go to https://fqxi.org/grants and see if there is a grants page for a new year of grants. If there isn't, there is nothing to do. If there is, download the page source and place it in the `data` directory.
