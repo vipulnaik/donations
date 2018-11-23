@@ -124,6 +124,8 @@ There is no official central location for updates to this, so just keep an eye o
 
 ### Ford Foundation
 
+Last attempted and successful update: 2018-11-23
+
 Navigate to the [Ford Foundation repo](https://github.com/riceissa/ford-foundation) directory.
 
 Go to https://www.fordfoundation.org/work/our-grants/grants-database/grants-all
