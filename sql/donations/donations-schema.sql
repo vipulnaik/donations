@@ -12,7 +12,7 @@ create table donations (
     donation_date_precision enum('day','month','quarter','year','multi-year'),
     donation_date_basis enum('transaction','donation log','date of donation announced in announcement','date of donation announcement','donee contributor list', 'IATI','Effective Altruism Survey'),
     cause_area varchar(100),
-    url varchar(200),
+    url varchar(300),
     donor_cause_area_url varchar(200),
     notes varchar(2000) DEFAULT NULL,
     payment_modality varchar(100),
