@@ -192,8 +192,7 @@ This was all manual, and automation work began but has stalled. See https://gith
 
 ### Hewlett Foundation
 
-Last attempted update: 2018-11-23 (script went into infinite loop due
-to site format changes; Issa will fix script)
+Last attempted and successful update: 2018-11-23
 
 Navigate to the [Hewlett Foundation repo](https://github.com/riceissa/hewlett-foundation) directory.
 
