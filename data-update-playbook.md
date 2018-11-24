@@ -182,9 +182,9 @@ Check if a new round of grants have been awarded. It's not clear if the 2015 gra
 
 ### Gates Foundation
 
-GitHub issue for fixes that need to be made before the next run: [#73](https://github.com/vipulnaik/donations/issues/73)
+Last attempted and successful update: 2018-11-23
 
-I think this is just for IATI data and we decided not to do the whole foundation (due to limited data access through their website).
+Follow the instructions in the [gates-foundation-iati-processing README](https://github.com/riceissa/gates-foundation-iati-processing/) and then copy the output file (out.sql) to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/gates-foundation-grants.sql
 
 ### Google.org
 
