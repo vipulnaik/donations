@@ -41,3 +41,20 @@ insert into donations (donor, donee, donation_earmark,
     ,('Future of Life Institute','Rice University','Moshe Vardi',69000.0,'2015-09-01','day','donation log','AI safety','http://futureoflife.org/AI/2015awardees#Vardi',NULL,'A conference and education grant. Project title: Moshe Vardi.',NULL,NULL,NULL,NULL)
     ,('Future of Life Institute','Stanford University','Jacob Steinhardt',88050.0,'2015-09-01','day','donation log','AI safety','http://futureoflife.org/AI/2015awardees#Steinhardt',NULL,'A conference and education grant. Project title: Jacob Steinhardt.',NULL,NULL,NULL,NULL)
 ;
+
+insert into donations (donor, donee, donation_earmark,
+        amount, donation_date,
+        donation_date_precision, donation_date_basis, cause_area, url,
+        donor_cause_area_url, notes, affected_countries, affected_states,
+        affected_cities, affected_regions) values
+    ('Future of Life Institute','Yale University','Allan Dafoe',276000.0,'2018-09-01','day','donation log','AI safety','http://futureoflife.org/2018-ai-grant-recipients#Dafoe',NULL,'A project grant. Project title: Allan Dafoe.',NULL,NULL,NULL,NULL)
+    ,('Future of Life Institute','Stanford University','Stefano Ermon',100000.0,'2018-09-01','day','donation log','AI safety','http://futureoflife.org/2018-ai-grant-recipients#Ermon',NULL,'A project grant. Project title: Stefano Ermon.',NULL,NULL,NULL,NULL)
+    ,('Future of Life Institute','Oxford University','Owain Evans',225000.0,'2018-09-01','day','donation log','AI safety','http://futureoflife.org/2018-ai-grant-recipients#Evans',NULL,'A project grant. Project title: Owain Evans.',NULL,NULL,NULL,NULL)
+    ,('Future of Life Institute','Teesside University','The Anh Han',224747.0,'2018-09-01','day','donation log','AI safety','http://futureoflife.org/2018-ai-grant-recipients#Han',NULL,'A project grant. Project title: The Anh Han.',NULL,NULL,NULL,NULL)
+    ,('Future of Life Institute','University of Cambridge','Jose Hernandez-Orallo',220000.0,'2018-09-01','day','donation log','AI safety','http://futureoflife.org/2018-ai-grant-recipients#Hernandez',NULL,'A project grant. Project title: Jose Hernandez-Orallo.',NULL,NULL,NULL,NULL)
+    ,('Future of Life Institute','Australian National University','Marcus Hutter',276000.0,'2018-09-01','day','donation log','AI safety','http://futureoflife.org/2018-ai-grant-recipients#Hutter',NULL,'A project grant. Project title: Marcus Hutter.',NULL,NULL,NULL,NULL)
+    ,('Future of Life Institute','Smith College','James Miller',78289.0,'2018-09-01','day','donation log','AI safety','http://futureoflife.org/2018-ai-grant-recipients#Miller',NULL,'A project grant. Project title: James Miller.',NULL,NULL,NULL,NULL)
+    ,('Future of Life Institute','Stanford University','Dorsa Sadigh',250000.0,'2018-09-01','day','donation log','AI safety','http://futureoflife.org/2018-ai-grant-recipients#Sadigh',NULL,'A project grant. Project title: Dorsa Sadigh.',NULL,NULL,NULL,NULL)
+    ,('Future of Life Institute','University of Texas','Peter Stone',200000.0,'2018-09-01','day','donation log','AI safety','http://futureoflife.org/2018-ai-grant-recipients#Stone',NULL,'A project grant. Project title: Peter Stone.',NULL,NULL,NULL,NULL)
+    ,('Future of Life Institute','MIT','Josh Tenenbaum',150000.0,'2018-09-01','day','donation log','AI safety','http://futureoflife.org/2018-ai-grant-recipients#Tenenbaum',NULL,'A project grant. Project title: Josh Tenenbaum.',NULL,NULL,NULL,NULL)
+;
