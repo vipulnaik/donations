@@ -176,7 +176,8 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Future of Life Institute
 
-Last attempted and successful update: 2018-11-23
+Last attempted and successful update: 2018-11-23 (url transition HTTP
+-> HTTPS on 2018-11-24)
 
 Navigate to the [FLI grants repo](https://github.com/riceissa/fli-grants) directory.
 
