@@ -203,7 +203,7 @@ carefully check the relevant git diffs.
 
 ### Gates Foundation
 
-Last attempted and successful update: 2018-11-23
+Last attempted and successful update: 2018-11-23 (rename done 2018-11-24)
 
 Follow the instructions in the [gates-foundation-iati-processing README](https://github.com/riceissa/gates-foundation-iati-processing/) and then copy the output file (out.sql) to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/gates-foundation-grants.sql
 
