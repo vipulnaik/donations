@@ -200,11 +200,17 @@ Navigate to the [Hewlett Foundation repo](https://github.com/riceissa/hewlett-fo
 Run the following:
 
 ```bash
-./scrape.py  # overwrites data.csv
-./proc.py > out.sql
+# Get today's date
+today=$(date -Idate)
+
+# Get new data; this takes maybe 30 minutes
+./scrape.py data-$today.csv
+
+# Convert CSV to SQL
+./proc.py data-$today.csv > out-$today.sql
 ```
 
-Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/hewlett-foundation-grants.sql
+Then copy `out-YYYY-MM-DD.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/hewlett-foundation-grants.sql
 
 ### Kellogg Foundation
 
