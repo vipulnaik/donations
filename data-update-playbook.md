@@ -176,9 +176,30 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Future of Life Institute
 
+Last attempted and successful update: 2018-11-23
+
 Navigate to the [FLI grants repo](https://github.com/riceissa/fli-grants) directory.
 
-Check if a new round of grants have been awarded. It's not clear if the 2015 grants script will work.
+Check if grants have been awarded for a new year (as of now, there are existing scripts for 2015 and 2018).
+
+If there are grants for a new year, save the raw data for that year
+(HTML file) in the file YYYY-grants.html, then copy proc_2018.py to a
+script proc_YYYY.py for the new year and edit the dates and script structure as needed.
+
+Now run:
+
+./proc_YYYY.py >> out.sql
+
+Note the use of >> instead of > to append.
+
+Once you have out.sql you should copy it over to
+https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/future-of-life-institute-grants.sql
+and then do a careful git diff to make sure it works as expected.
+
+There is one subtlety: a few grants may have been manually massaged
+due to multiple data sources referencing that grant. It may therefore
+be more prudent to just copy over the grants for the new year, or to
+carefully check the relevant git diffs.
 
 ### Gates Foundation
 
