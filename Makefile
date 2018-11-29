@@ -99,6 +99,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/wallenberg-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/wellcome-trust-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/beri-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/eaf-fund.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/givewell-discretionary-regranting.sql
