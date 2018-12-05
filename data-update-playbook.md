@@ -271,12 +271,7 @@ error; communicated to Issa)
 
 Navigate to the [MacArthur Foundation repo](https://github.com/riceissa/macarthur-foundation) directory.
 
-Run the following:
-
-```bash
-./scrape.py  # overwrites data.csv
-./proc.py > out.sql
-```
+Follow the instructions at https://github.com/riceissa/macarthur-foundation#instructions-for-doing-a-run
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/macarthur-foundation-grants.sql
 
