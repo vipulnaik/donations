@@ -16,6 +16,7 @@ and is currently very much in beta.</p>
   <li><p><a href="#behind-the-curtain">Behind the curtain</a></p></li>
   <li><p><a href="#how-we-built-data">How we built data</a></p></li>
   <li><p><a href="#reliability-concerns">Reliability concerns</a></p></li>
+  <li><p><a href="#playing-with-the-data">Playing with the data</a></p></li>
 </ul>
 
 <h3 id="behind-the-curtain">Behind the curtain</h3>
@@ -107,3 +108,15 @@ evaluated on a case-by-case basis.</p>
 accuracy, privacy, or usability of data, please email
 vipulnaik1@gmail.com to share your concerns. All your feedback will be
 considered before we officially launch the site.</p>
+
+<h3 id="#playing-with-the-data">Playing with the data</h3>
+
+<p>A tutorial for the data
+is <a href="https://github.com/vipulnaik/donations#tutorial">available
+in the README on GitHub</a>. The tutorial was also posted, along with
+a request for feedback, to
+the <a href="https://forum.effectivealtruism.org/posts/A7NWTjnWZPmjyLdtT/donations-list-website-tutorial-and-request-for-feedback">Effective Altruism Forum</a>.</p>
+
+<p>Pageview data for this site is available at monthly granularity
+at <a href="https://analytics.vipulnaik.com/">analytics.vipulnaik.com</a>.</p>
+
