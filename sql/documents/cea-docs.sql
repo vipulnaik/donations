@@ -1,6 +1,7 @@
 # -- CEA donation case
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('http://effective-altruism.com/ea/14p/cea_is_fundraising_winter_2016/','CEA is Fundraising! (Winter 2016)','2016-12-06',NULL,'William MacAskill','Centre for Effective Altruism',NULL,'Centre for Effective Altruism','Donee donation case','Effective altruism/movement growth','CEA makes its case to be funded in 2016');
+  ('https://www.centreforeffectivealtruism.org/blog/fundraising-2019/','CEA is Fundraising for 2019','2018-11-27','2018-12-05','Larissa Hesketh-Rowe','Centre for Effective Altruism',NULL,'Centre for Effective Altruism','Donee donation case','Effective altruism/movement growth','CEA announces it is fundraising for its 2019 budget, and makes the case for donating to it. The post also includes some updates on how CEA has been doing, but it is not the main post for a review of work and plans for the next year; that post is deferred to early 2019'),
+  ('https://forum.effectivealtruism.org/posts/fM6Qv7aAe7FJGDC3D/cea-is-fundraising-winter-2016','CEA is Fundraising! (Winter 2016)','2016-12-06',NULL,'William MacAskill','Centre for Effective Altruism',NULL,'Centre for Effective Altruism','Donee donation case','Effective altruism/movement growth','CEA makes its case to be funded in 2016');
 
 # -- CEA donation documentations
 
@@ -15,5 +16,5 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 # -- CEA misc commentary
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('http://effective-altruism.com/ea/1s0/cea_on_community_building_representativeness_and/','CEA on community building, representativeness, and the EA Summit','2018-12-15',NULL,'Lariss Hesketh-Rowe|Kerry Vaughan','Effective Altruism Forum','Centre for Effective Altruism','Centre for Effective Altruism','Miscellaneous commentary','Effective altruism/movement-building','CEA describes its current take on community building, explaining that it is focusing more on the most engaged donors, but is financially supporting other initiatives focused on more broad-based community-building');
+  ('https://forum.effectivealtruism.org/posts/awS28gHCM9GBmhcAA/cea-on-community-building-representativeness-and-the-ea','CEA on community building, representativeness, and the EA Summit','2018-12-15',NULL,'Lariss Hesketh-Rowe|Kerry Vaughan','Effective Altruism Forum','Centre for Effective Altruism','Centre for Effective Altruism','Miscellaneous commentary','Effective altruism/movement-building','CEA describes its current take on community building, explaining that it is focusing more on the most engaged donors, but is financially supporting other initiatives focused on more broad-based community-building');
 
