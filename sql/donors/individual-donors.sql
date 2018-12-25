@@ -52,7 +52,6 @@ insert into donors(donor, country, facebook_username, website, donations_url, le
 
 
 insert into donors(donor, donor_type, country, facebook_username, website, donations_url, lesswrong_username, linkedin_username,affiliated_orgs,eaf_username, eahub_username,github_username,twitter_username) values
-  ('Aaron Gertler', 'Individual', 'United States', 'aaron.gertler', 'https://aarongertler.net/', 'https://aarongertler.net/donations/','aarongertler','aarongertler',NULL,'aarongertler','aaron-gertler','aarongertler','aarongertler'),
   ('Ajeya Cotra', 'Individual', 'United States', 'https://www.facebook.com/profile.php?id=1638572396','https://ajeyac.wordpress.com', 'no single location; https://eahub.org/user/ajeya-cotra, https://blog.givewell.org/2016/12/09/staff-members-personal-donations-giving-season-2016/, http://effective-altruism.com/ea/14d/donor_lotteries_a_stepbystep_guide_for_mall/',NULL,'ajeya-cotra-90942b8b','Open Philanthropy Project',NULL,'ajeya-cotra',NULL,NULL),
   ('Ben Kuhn', 'Individual', 'United States', 'ben.s.kuhn', 'http://www.benkuhn.net/', 'http://www.benkuhn.net/ea/','benkuhn', 'benskuhn',NULL,NULL,'ben-kuhn','benkuhn','benskuhn'),
   ('Benjamin Hoffman', 'Individual', 'United States', 'benjamin.r.hoffman', 'http://benjaminrosshoffman.com/', NULL,'Benquo','benjaminrhoffman','GiveWell','BenHoffman','ben-hoffman',NULL, NULL),
@@ -85,6 +84,7 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
   ('Alexander Berger', 'Individual','United States','alexander.is','http://marginalchange.blogspot.com/',NULL,NULL,'alexander-berger-58906098','GiveWell|Open Philanthropy Project',NULL,NULL,NULL,'albrgr'),
   ('Josh Rosenberg', 'Individual','United States','jhrosenberg',NULL,NULL,NULL,'josh-rosenberg-07590626','GiveWell|Open Philanthropy Project',NULL,NULL,NULL,NULL),
   ('Sophie Monahan', 'Individual','United States','sophical',NULL,NULL,NULL,'sophie-monahan-8160a9a2','GiveWell|Open Philanthropy Project',NULL,NULL,NULL,NULL),
+  ('Luke Ding', 'Individual', 'United Kingdom'/* https://www.givingwhatwecan.org/person/luke-ding/ */, 'luke.ding.50', NULL, NULL, NULL, 'luke-ding-7991a97b', 'Giving What We Can', NULL, NULL, NULL, NULL),
   ('Vitalik Buterin','Individual','Switzerland'/* From https://about.me/vitalik_buterin ; there is at least one page saying he has since moved to Singapore (https://steemit.com/news/@aliceev/vitalik-buterin-moved-from-switzerland-to-asia-singapore-and-what-about-the-swiss-office-of-the-etherium) but I can't find any sources in that page */,NULL,'https://vitalik.ca/',NULL,NULL,NULL,NULL,NULL,NULL,'vbuterin','VitalikButerin'),
   ('Gwern Branwen', 'Individual','United States','gwern.branwen','http://www.gwern.net/',NULL,'gwern',NULL,NULL,'gwern',NULL,'gwern','gwern');
 
