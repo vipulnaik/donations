@@ -291,8 +291,7 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Mulago
 
-Last attempted and successful update: 2018-12-30 (turned out nothing had changed since the previous iteration)
-format changes; Issa will look into it)
+Last attempted and successful update: 2018-11-29 (actual insertion done 2018-12-30)
 
 Navigate to the [Mulago grants repo](https://github.com/riceissa/mulago) directory.
 
