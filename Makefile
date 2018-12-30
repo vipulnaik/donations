@@ -55,6 +55,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/givewell-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gwwc-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/hurford-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/life-extension-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/lw2-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/mfa-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/miri-docs.sql
