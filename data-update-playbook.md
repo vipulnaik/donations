@@ -266,8 +266,7 @@ https://github.com/riceissa/lilly-endowment#how-to-get-new-data-and-generate-the
 
 ### MacArthur Foundation
 
-Last attempted update: 2018-11-23 (ran into problems -- script threw
-error; communicated to Issa)
+Last attempted and successful update: 2018-11-28 (data), 2018-12-30 (actual insertion)
 
 Navigate to the [MacArthur Foundation repo](https://github.com/riceissa/macarthur-foundation) directory.
 
@@ -292,7 +291,7 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Mulago
 
-Last attempted update: 2018-11-23 (CSV generated is empty due to sit
+Last attempted and successful update: 2018-12-30 (turned out nothing had changed since the previous iteration)
 format changes; Issa will look into it)
 
 Navigate to the [Mulago grants repo](https://github.com/riceissa/mulago) directory.
