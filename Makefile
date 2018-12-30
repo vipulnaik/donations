@@ -36,6 +36,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/80k-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ace-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/aidgrade-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ai-safety-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/animal-equality-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/beri-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/berkeley-reach.sql
