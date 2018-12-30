@@ -1,0 +1,7 @@
+# -- Other donee updates
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('https://aiimpacts.org/occasional-update-july-5-2018/','Occasional update July 5 2018','2018-07-05',NULL,'Katja Grace','AI Impacts','Open Philanthropy Project|Anonymous','AI Impacts','Donee periodic update','AI safety','Katja Grace gives an update on the situation with AI Impacts, including recent funding received, personnel changes, and recent publicity.In particular, a $100,000 donation from the Open Philanthropy Project and a $39,000 anonymous donation are mentioned, and team members Tegan McCaslin, Justis Mills, consultant Carl Shulman, and departing member Michael Wulfsohn are mentioned'),
+  ('https://aiimpacts.org/recently-at-ai-impacts/','Recently at AI Impacts','2015-11-24',NULL,'Katja Grace','AI Impacts',NULL,'AI Impacts','Donee periodic update','AI safety','Katja Grace blogs with an update on new hires (Stephanie Zolayvar and John Salvatier) and new projects: the AI progress survey, AI researcher interviews, and bounty submissions'),
+  ('https://aiimpacts.org/supporting-ai-impacts/','Supporting AI Impacts','2015-05-21',NULL,'Katja Grace','AI Impacts',NULL,'AI Impacts','Donee donation case','AI safety','The blog post announces that AI Impacts now has a donations page at http://aiimpacts.org/donate/');
+
+
