@@ -35,7 +35,8 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 # -- Sentience Institute docs
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('http://effective-altruism.com/ea/1ik/sentience_institute_2017_accomplishments_2018/','Sentience Institute 2017 Accomplishments, 2018 Plans, and Room for Funding','2017-12-14',NULL,'Kelly Witwicki','Sentience Institute',NULL,'Sentience Institute','Donee donation case','Animal welfare','The blog post provides an update on the activities of the Sentience Institute since its launch June 2017, its plans for 2018, and its estimate of its own room for more funding ($185,000)');
+  ('http://effective-altruism.com/ea/1ik/sentience_institute_2017_accomplishments_2018/','Sentience Institute 2017 Accomplishments, 2018 Plans, and Room for Funding','2017-12-14',NULL,'Kelly Witwicki','Sentience Institute',NULL,'Sentience Institute','Donee donation case','Animal welfare','The blog post provides an update on the activities of the Sentience Institute since its launch June 2017, its plans for 2018, and its estimate of its own room for more funding ($185,000)'),
+  ('https://www.sentienceinstitute.org/blog/eoy2018','2018 End of Year Summary','2018-11-26',NULL,'Kelly Witwicki','Sentience Institute',NULL,'Sentience Institute','Donee periodic update','Animal welfare','The blog post provides an update on the activities of the Sentience Institute in 2018. It also outlines the financial situation: a 9-month runway and a target of raising at least $120,000; if they raise $180,000, they will hire one more team member. Cross-posted to the Effective Altruism Forum at https://forum.effectivealtruism.org/posts/EoYWz9SYm3LsqX9bh/sentience-institute-2018-end-of-year-summary (no comments)');
 
 # -- Effective Altruism Foundation docs
 
@@ -45,7 +46,19 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 # -- Global Priorities Institute docs
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('http://effective-altruism.com/ea/1ij/new_releases_global_priorities_institute_research/','New releases: Global Priorities Institute research agenda and posts we’re hiring for','2017-12-14',NULL,'Michelle Hutchinson','Global Priorities Institute',NULL,'Global Priorities Institute','Donee periodic update','Cause prioritization','Hutchinson reports on the progress and plans for the Global Priorities Institute, housed at Oxford University, and also describes the posts it is hiring for');
+  ('http://effective-altruism.com/ea/1ij/new_releases_global_priorities_institute_research/','New releases: Global Priorities Institute research agenda and posts we’re hiring for','2017-12-14',NULL,'Michelle Hutchinson','Global Priorities Institute',NULL,'Global Priorities Institute','Donee periodic update','Cause prioritization','Hutchinson reports on the progress and plans for the Global Priorities Institute, housed at Oxford University, and also describes the posts it is hiring for'),
+  ('https://forum.effectivealtruism.org/posts/EnPL9DPwCeKTfzYps/updates-from-the-global-priorities-institute-and-how-to-get','Updates from the Global Priorities Institute and how to get involved','2018-11-14',NULL,'Global Priorities Institute','Effective Altruism Forum',NULL,'Global Priorities Institute','Donee periodic update','Cause prioritization','The blog post gives an update on how the Global Priorities Institute has been doing, including its officially becoming an institute within Oxford University https://www.campaign.ox.ac.uk/news/new-global-priorities-institute-opens It also abstracts of GPI''s current working papers');
+
+# -- Global Catastrophic Risk Institute docs
+
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('http://gcrinstitute.org/summary-of-gcris-2018-2019-accomplishments-plans-and-fundraising/','Summary of GCRI’s 2018-2019 Accomplishments, Plans, and Fundraising','2018-12-12',NULL,'Seth Baum','Global Catastrophic Risk Institute',NULL,'Global Catastrophic Risk Institute','Donee periodic update','Global catastrophic risks','This is the summary post for a series of blog posts detailing the 2018 accomplishments, 2019 plans in terms of topics covered and organization development, and the 2018 and 2019 finances. Individual posts dealing with these topics are linked. A teaser post linking to this summary post is posted to the Effective Altruism Forum at https://forum.effectivealtruism.org/posts/J3T6mPN9JmY7htF5f/global-catastrophic-risk-institute-2018-2019-updates on 2018-12-17');
+
+# -- Forethought Foundation docs
+
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('https://forum.effectivealtruism.org/posts/vxwcxwiDKCnyHJhbz/announcing-the-new-forethought-foundation-for-global','Announcing the new Forethought Foundation for Global Priorities Research','2018-12-04',NULL,'William MacAskill','Effective Altruism Forum',NULL,'Forethough Foundation for Global Priorities Research|Global Priorities Institute|Centre for Effective Altruism','Launch','Cause prioritization','The blog post announces the launch of the Forethought Foundation for Global Priorities Research. The planned total budget for 2019 and 2020 is £1.12 million - £1.47 million, and a breakdown is provided in the post. The project will be incubated by the Centre for Effective Altruism, and its work is intended to complement the work of the Global Priorities Institute');
+
 
 # -- Miscellaneous job ads
 
