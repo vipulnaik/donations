@@ -52,9 +52,11 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/donor-lottery-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-funds-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-grants-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-hotel-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/evidence-action-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gfi-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/givewell-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gpi-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gwwc-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/hurford-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/life-extension-docs.sql
@@ -65,6 +67,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/open-phil-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/oxprio.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/rethink-charity-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/sentience-institute-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/thl-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/vegan-outreach-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/was-research-docs.sql
