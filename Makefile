@@ -51,6 +51,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/donor-lottery-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-funds-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-global-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-grants-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-hotel-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/education-docs.sql
@@ -73,6 +74,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/thl-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/vegan-outreach-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/was-research-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/wild-animal-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/wmf-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/ai-safety-camp.sql
