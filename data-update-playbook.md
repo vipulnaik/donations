@@ -296,7 +296,7 @@ Navigate to the [Andrew W. Mellon Foundation grants data repo](https://github.co
 
 Follow instructions [here](https://github.com/riceissa/mellon-foundation#instructions-for-doing-a-run).
 
-Then copy the SQL file to the appropriate place in the DLW repo.
+Then copy the SQL file to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/mellon-foundation-grants.sql
 
 ### Mulago
 
