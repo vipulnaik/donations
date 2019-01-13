@@ -154,6 +154,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Chan Zuckerberg Initiative','Private foundation','United States','chanzuckerberginitiative','https://www.chanzuckerberg.com/',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'https://www.chanzuckerberg.com/about',NULL,NULL,NULL,NULL,NULL,NULL,'https://en.wikipedia.org/wiki/Chan_Zuckerberg_Initiative',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
+  ('Andrew W. Mellon Foundation', 'Private foundation', 'United States', 'MellonFoundation', 'https://mellon.org/', 'https://mellon.org/grants/grants-database/', NULL, 'the-andrew-w--mellon-foundation', NULL, NULL, NULL, NULL, 'mellonfdn', NULL, 'https://mellon.org/about/mission/', 'https://mellon.org/grants/grantmaking-policies-and-guidelines/', NULL, NULL, NULL, NULL, 'https://github.com/riceissa/mellon-foundation', 'https://en.wikipedia.org/wiki/Andrew_W._Mellon_Foundation', NULL, 'https://mellon.org/about/history/', 'https://mellon.org/programs/', NULL, NULL, NULL, NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
