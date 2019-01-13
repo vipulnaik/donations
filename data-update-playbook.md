@@ -21,6 +21,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Knight Foundation](#knight-foundation)
    * [MacArthur Foundation](#macarthur-foundation)
    * [Barbara McDowell and Gerald S. Hartman Foundation](#barbara-mcdowell-and-gerald-s-hartman-foundation)
+   * [Andrew W. Mellon Foundation](#andrew-w-mellon-foundation)
    * [Mulago](#mulago)
    * [Nathan Cummings Foundation](#nathan-cummings-foundation)
    * [Open Philanthropy Project](#open-philanthropy-project)
