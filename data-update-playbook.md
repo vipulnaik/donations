@@ -289,6 +289,14 @@ Run the following:
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/mcdowell-foundation-grants.sql
 
+### Andrew W. Mellon Foundation
+
+Navigate to the [Andrew W. Mellon Foundation grants data repo](https://github.com/riceissa/mellon-foundation).
+
+Follow instructions [here](https://github.com/riceissa/mellon-foundation#instructions-for-doing-a-run).
+
+Then copy the SQL file to the appropriate place in the DLW repo.
+
 ### Mulago
 
 Last attempted and successful update: 2018-11-29 (actual insertion done 2018-12-30)
