@@ -213,6 +213,14 @@ Follow the instructions in the [gates-foundation-iati-processing README](https:/
 
 This was all manual, and automation work began but has stalled. See https://github.com/vipulnaik/donations/issues/47
 
+### Haas, Jr. Fund
+
+Navigate to the [Haas, Jr. Fund grants data repo](https://github.com/riceissa/haasjr-fund).
+
+Follow instructions [here](https://github.com/riceissa/haasjr-fund#instructions-for-doing-a-run).
+
+Then copy the SQL file to **location TBD**
+
 ### Hewlett Foundation
 
 Last attempted and successful update: 2018-11-23
