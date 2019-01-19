@@ -17,6 +17,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Future of Life Institute](#future-of-life-institute)
    * [Gates Foundation](#gates-foundation)
    * [Google.org](#googleorg)
+   * [Haas, Jr. Fund](#haas-jr-fund)
    * [Hewlett Foundation](#hewlett-foundation)
    * [Knight Foundation](#knight-foundation)
    * [MacArthur Foundation](#macarthur-foundation)
