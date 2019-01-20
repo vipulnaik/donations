@@ -158,6 +158,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Evelyn and Walter Haas, Jr. Fund', 'Private foundation', 'United States', 'haasjrfund', 'https://www.haasjr.org/', 'https://www.haasjr.org/grants', NULL, NULL, NULL, NULL, NULL, NULL, 'HaasJrFund', NULL, 'https://www.haasjr.org/about/mission-statement', 'https://www.haasjr.org/grants/for-grant-seekers', NULL, NULL, NULL, NULL, 'https://github.com/riceissa/haasjr-fund', 'https://en.wikipedia.org/wiki/Evelyn_and_Walter_Haas_Jr._Fund', NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 
+  ('Surdna Foundation', 'Private foundation', 'United States', NULL, 'https://surdna.org/', 'https://surdna.org/grants-database/', NULL, 'surdna-foundation', NULL, NULL, NULL, NULL, 'Surdna_Fndn', NULL, 'https://surdna.org/our-organization/vision-mission-values/', 'https://surdna.org/prospective-grantees/', NULL, NULL, NULL, NULL, 'https://github.com/riceissa/surdna-foundation', 'https://en.wikipedia.org/wiki/Surdna_Foundation', NULL, 'https://surdna.org/our-organization/our-history/', NULL, NULL, NULL, NULL, NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
