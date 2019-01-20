@@ -30,6 +30,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Public Welfare Foundation](#public-welfare-foundation)
    * [Sloan Foundation](#sloan-foundation)
    * [Stone Family Foundation](#stone-family-foundation)
+   * [Surdna Foundation](#surdna-foundation)
    * [Templeton Foundation](#templeton-foundation)
    * [Theiss Research](#theiss-research)
    * [Unbound Philanthropy](#unbound-philanthropy)
@@ -389,6 +390,14 @@ Then run:
 ```
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/stone-family-foundation-grants.sql
+
+### Surdna Foundation
+
+Navigate to the [Surdna Foundation](https://github.com/riceissa/surdna-foundation).
+
+Follow instructions [here](https://github.com/riceissa/surdna-foundation#instructions-for-doing-a-run).
+
+Then copy the SQL file to **location TBD**
 
 ### Templeton Foundation
 
