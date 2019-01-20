@@ -217,7 +217,7 @@ This was all manual, and automation work began but has stalled. See https://gith
 
 ### Haas, Jr. Fund
 
-Navigate to the [Haas, Jr. Fund grants data repo](https://github.com/riceissa/haasjr-fund).
+Navigate to the [Haas, Jr. Fund grants data repo](https://github.com/riceissa/haasjr-fund) directory.
 
 Follow instructions [here](https://github.com/riceissa/haasjr-fund#instructions-for-doing-a-run).
 
@@ -302,7 +302,7 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Andrew W. Mellon Foundation
 
-Navigate to the [Andrew W. Mellon Foundation grants data repo](https://github.com/riceissa/mellon-foundation).
+Navigate to the [Andrew W. Mellon Foundation grants data repo](https://github.com/riceissa/mellon-foundation) directory.
 
 Follow instructions [here](https://github.com/riceissa/mellon-foundation#instructions-for-doing-a-run).
 
@@ -393,7 +393,7 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Surdna Foundation
 
-Navigate to the [Surdna Foundation](https://github.com/riceissa/surdna-foundation).
+Navigate to the [Surdna Foundation repo](https://github.com/riceissa/surdna-foundation) directory.
 
 Follow instructions [here](https://github.com/riceissa/surdna-foundation#instructions-for-doing-a-run).
 
