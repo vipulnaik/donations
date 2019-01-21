@@ -36,6 +36,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Templeton Foundation](#templeton-foundation)
    * [Theiss Research](#theiss-research)
    * [Unbound Philanthropy](#unbound-philanthropy)
+   * [Walton Family Foundation](#walton-family-foundation)
    * [Wellcome Trust](#wellcome-trust)
 * [Individual donors](#individual-donors)
    * [Aaron Gertler](#aaron-gertler)
@@ -476,6 +477,18 @@ directory.
 
 Do the steps listed at
 https://github.com/riceissa/kaw-wallenberg-foundation#how-to-get-data-and-generate-the-sql-file
+
+### Walton Family Foundation
+
+Navigate to the [conservativetransparency.org processing
+repo](https://github.com/riceissa/conservativetransparency) directory.
+
+Go to http://conservativetransparency.org/donor/walton-family-foundation/ and
+download new CSV data by clicking on "Export CSV". Save this in the `data/`
+directory.
+
+Then run the processing script by following instructions at
+https://github.com/riceissa/conservativetransparency#instructions-for-doing-a-run
 
 ### Wellcome Trust
 

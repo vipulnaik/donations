@@ -164,6 +164,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Lynde and Harry Bradley Foundation', 'Private foundation', 'United States', NULL, 'http://bradleyfdn.org/', 'http://conservativetransparency.org/donor/the-lynde-and-harry-bradley-foundation/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'http://bradleyfdn.org/What-We-Do/Vision-Mission-and-Principles', 'http://bradleyfdn.org/How-We-Work-GrantMaking-Policies-Application-Procedure', NULL, NULL, NULL, NULL, 'https://github.com/riceissa/conservativetransparency', 'https://en.wikipedia.org/wiki/Bradley_Foundation', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 
+  ('Walton Family Foundation', 'Private foundation', 'United States', 'waltonfamilyfoundation', 'https://www.waltonfamilyfoundation.org/', 'http://conservativetransparency.org/donor/walton-family-foundation/', NULL, NULL, NULL, NULL, NULL, NULL, 'WaltonFamilyFdn', NULL, 'https://www.waltonfamilyfoundation.org/about-us', NULL /* "The foundation does not accept unsolicited requests for proposals." https://www.waltonfamilyfoundation.org/frequently-asked-questions */, NULL, NULL, NULL, NULL, 'https://github.com/riceissa/conservativetransparency', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
