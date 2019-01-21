@@ -12,6 +12,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Bradley Foundation](#bradley-foundation)
    * [Dell Foundation](#dell-foundation)
    * [EA Giving Group](#ea-giving-group)
+   * [Earhart Foundation](#earhart-foundation)
    * [Ford Foundation](#ford-foundation)
    * [Foundational Questions Institute (FQXi)](#foundational-questions-institute-fqxi)
    * [Future Justice Fund](#future-justice-fund)
@@ -137,6 +138,18 @@ Then _append_ (don't override) some subset of `out.sql` to <https://github.com/v
 ### EA Giving Group
 
 There is no official central location for updates to this, so just keep an eye out for mentions of it, I guess.
+
+### Earhart Foundation
+
+Navigate to the [conservativetransparency.org processing
+repo](https://github.com/riceissa/conservativetransparency) directory.
+
+Go to http://conservativetransparency.org/donor/earhart-foundation/ and
+download new CSV data by clicking on "Export CSV". Save this in the `data/`
+directory.
+
+Then run the processing script by following instructions at
+https://github.com/riceissa/conservativetransparency#instructions-for-doing-a-run
 
 ### Ford Foundation
 
