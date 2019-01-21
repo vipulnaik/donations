@@ -25,6 +25,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Andrew W. Mellon Foundation](#andrew-w-mellon-foundation)
    * [Mulago](#mulago)
    * [Nathan Cummings Foundation](#nathan-cummings-foundation)
+   * [Olin Foundation](#olin-foundation)
    * [Open Philanthropy Project](#open-philanthropy-project)
    * [Pineapple Fund](#pineapple-fund)
    * [Public Welfare Foundation](#public-welfare-foundation)
@@ -330,6 +331,18 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 Navigate to the [Nathan Cummings Foundation repo](https://github.com/riceissa/nathan-cummings-foundation) directory.
 
 This one is pretty complicated. It will probably involve uploading a PDF to Google Docs and converting to a plain text data file, manually cleaning that file, and running the appropriate processing script on that file. See https://github.com/riceissa/nathan-cummings-foundation for more information.
+
+### John M. Olin Foundation
+
+Navigate to the [conservativetransparency.org processing
+repo](https://github.com/riceissa/conservativetransparency) directory.
+
+Go to http://conservativetransparency.org/donor/john-m-olin-foundation/ and
+download new CSV data by clicking on "Export CSV". Save this in the `data/`
+directory.
+
+Then run the processing script by following instructions at
+https://github.com/riceissa/conservativetransparency#instructions-for-doing-a-run
 
 ### Open Philanthropy Project
 

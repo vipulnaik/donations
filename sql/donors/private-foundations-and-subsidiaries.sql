@@ -160,6 +160,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Surdna Foundation', 'Private foundation', 'United States', NULL, 'https://surdna.org/', 'https://surdna.org/grants-database/', NULL, 'surdna-foundation', NULL, NULL, NULL, NULL, 'Surdna_Fndn', NULL, 'https://surdna.org/our-organization/vision-mission-values/', 'https://surdna.org/prospective-grantees/', NULL, NULL, NULL, NULL, 'https://github.com/riceissa/surdna-foundation', 'https://en.wikipedia.org/wiki/Surdna_Foundation', NULL, 'https://surdna.org/our-organization/our-history/', NULL, NULL, NULL, NULL, NULL),
 
+  ('John M. Olin Foundation', 'Private foundation', 'United States', NULL, 'http://jmof.org/', 'http://conservativetransparency.org/donor/john-m-olin-foundation/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'http://jmof.org/history-purposes', 'http://jmof.org/application-procedure', NULL, NULL, NULL, NULL, 'https://github.com/riceissa/conservativetransparency', 'https://en.wikipedia.org/wiki/John_M._Olin_Foundation', NULL, NULL, NULL, 'http://jmof.org/grant-making-policies', NULL, NULL, NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
