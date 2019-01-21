@@ -249,7 +249,7 @@ Navigate to the [Haas, Jr. Fund grants data repo](https://github.com/riceissa/ha
 
 Follow instructions [here](https://github.com/riceissa/haasjr-fund#instructions-for-doing-a-run).
 
-Then copy the SQL file to **location TBD**
+Then copy the SQL file to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/haas-jr-fund-grants.sql
 
 ### Hewlett Foundation
 

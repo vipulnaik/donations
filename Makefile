@@ -94,6 +94,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/future-of-life-institute-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/gates-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/google-org.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/haas-jr-fund-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/hewlett-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/kellogg-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/knight-foundation-grants.sql
