@@ -10,9 +10,9 @@ if (($_REQUEST['display'] ?? '') == "full") {
   }
 } else {
   if ($causeAreaFilterQueryComponent) {
-    $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent and donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit 30) as x);";
+    $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent and donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit 50) as x);";
   } else {
-    $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where donor in (select * from (select donor from donations group by donor order by sum(amount) desc limit 30) as x);";
+    $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where donor in (select * from (select donor from donations group by donor order by sum(amount) desc limit 50) as x);";
   }
 }
 $totalNumDistinctDoneesResult = $mysqli -> query($totalNumDistinctDoneesQuery);
@@ -30,9 +30,9 @@ if (($_REQUEST['display'] ?? '') == "full") {
   }
 } else {
   if ($causeAreaFilterQueryComponent) {
-    $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent and donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit 30) as x) group by donor;";
+    $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent and donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit 50) as x) group by donor;";
   } else {
-    $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations where donor in (select * from (select donor from donations group by donor order by sum(amount) desc limit 30) as x) group by donor;";
+    $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations where donor in (select * from (select donor from donations group by donor order by sum(amount) desc limit 50) as x) group by donor;";
   }
 }
 $donorResult = $mysqli -> query($donorQuery);
@@ -59,7 +59,7 @@ if (($_REQUEST['display'] ?? '') == "full") {
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
   $donorMetadataQuery = "select * from donors where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple');";
 } else {
-  $donorMetadataQuery = "select * from donors where donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit 30) as x);";
+  $donorMetadataQuery = "select * from donors where donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit 50) as x);";
 }
 $donorMetadataResult = $mysqli -> query($donorMetadataQuery);
 $donorType = array();
@@ -91,9 +91,9 @@ if (($_REQUEST['display'] ?? '') == "full") {
   }
 } else {
   if ($causeAreaFilterQueryComponent) {
-    $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent and donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit 30) as x) group by donor, year(donation_date)";
+    $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent and donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit 50) as x) group by donor, year(donation_date)";
   } else {
-    $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donor in (select * from (select donor from donations group by donor order by sum(amount) desc limit 30) as x) group by donor, year(donation_date)";
+    $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donor in (select * from (select donor from donations group by donor order by sum(amount) desc limit 50) as x) group by donor, year(donation_date)";
   }
 }
 $donorAndYearResult = $mysqli -> query($donorAndYearQuery);

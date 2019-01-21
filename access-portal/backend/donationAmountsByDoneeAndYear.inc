@@ -9,7 +9,7 @@ if (($_REQUEST['display'] ?? '') == "full") {
     $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee;";
   }
 } else {
-  $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee order by sum(amount) desc limit 30;";
+  $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee order by sum(amount) desc limit 50;";
 }
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();
