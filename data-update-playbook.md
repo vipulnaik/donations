@@ -9,6 +9,7 @@ General caution: Websites and data formats change all the time. If a script fail
 * [Foundations](#foundations)
    * [Arnold Foundation](#arnold-foundation)
    * [Barr Foundation](#barr-foundation)
+   * [Bradley Foundation](#bradley-foundation)
    * [Dell Foundation](#dell-foundation)
    * [EA Giving Group](#ea-giving-group)
    * [Ford Foundation](#ford-foundation)
@@ -105,6 +106,18 @@ From the [Barr Foundation repo](https://github.com/riceissa/barr-foundation) dir
 ```
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/barr-foundation-grants.sql
+
+### Bradley Foundation
+
+Navigate to the [conservativetransparency.org processing
+repo](https://github.com/riceissa/conservativetransparency) directory.
+
+Go to http://conservativetransparency.org/donor/the-lynde-and-harry-bradley-foundation/ and
+download new CSV data by clicking on "Export CSV". Save this in the `data/`
+directory.
+
+Then run the processing script by following instructions at
+https://github.com/riceissa/conservativetransparency#instructions-for-doing-a-run
 
 ### Dell Foundation
 
