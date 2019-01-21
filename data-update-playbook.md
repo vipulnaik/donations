@@ -437,7 +437,7 @@ Navigate to the [Surdna Foundation repo](https://github.com/riceissa/surdna-foun
 
 Follow instructions [here](https://github.com/riceissa/surdna-foundation#instructions-for-doing-a-run).
 
-Then copy the SQL file to **location TBD**
+Then copy the SQL file to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/surdna-foundation-grants.sql
 
 ### Templeton Foundation
 
