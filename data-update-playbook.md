@@ -40,6 +40,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Unbound Philanthropy](#unbound-philanthropy)
    * [Walton Family Foundation](#walton-family-foundation)
    * [Wellcome Trust](#wellcome-trust)
+   * [William E. Simon Foundation](#william-e-simon-foundation)
 * [Individual donors](#individual-donors)
    * [Aaron Gertler](#aaron-gertler)
    * [Ajeya Cotra](#ajeya-cotra)
@@ -533,6 +534,18 @@ Then run:
 ```
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/wellcome-trust-grants.sql
+
+### William E. Simon Foundation
+
+Navigate to the [conservativetransparency.org processing
+repo](https://github.com/riceissa/conservativetransparency) directory.
+
+Go to http://conservativetransparency.org/donor/william-e-simon-foundation/ and
+download new CSV data by clicking on "Export CSV". Save this in the `data/`
+directory.
+
+Then run the processing script by following instructions at
+https://github.com/riceissa/conservativetransparency#instructions-for-doing-a-run
 
 ## Individual donors
 
