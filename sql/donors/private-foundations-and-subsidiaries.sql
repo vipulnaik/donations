@@ -174,6 +174,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('F. M. Kirby Foundation', 'Private foundation', 'United States', NULL, 'http://fmkirbyfoundation.org/', 'http://fmkirbyfoundation.org/grants/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'http://fmkirbyfoundation.org/about/', 'http://fmkirbyfoundation.org/apply/', NULL, NULL, NULL, NULL, 'https://github.com/riceissa/conservativetransparency', NULL, NULL, 'http://fmkirbyfoundation.org/about/', NULL, NULL, NULL, NULL, NULL),
 
+  ('Donors Trust', 'Donor-advised fund', 'United States', 'donorstrust', 'https://www.donorstrust.org/', 'http://conservativetransparency.org/donor/donorstrust/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://www.donorstrust.org/who-we-are/mission-principles/', NULL, NULL, NULL, NULL, NULL, 'https://github.com/riceissa/conservativetransparency', 'https://en.wikipedia.org/wiki/Donors_Trust', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);

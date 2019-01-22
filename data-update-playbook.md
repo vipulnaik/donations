@@ -11,6 +11,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Barr Foundation](#barr-foundation)
    * [Bradley Foundation](#bradley-foundation)
    * [Dell Foundation](#dell-foundation)
+   * [Donors Trust](#donors-trust)
    * [EA Giving Group](#ea-giving-group)
    * [Earhart Foundation](#earhart-foundation)
    * [F. M. Kirby Foundation](#f-m-kirby-foundation)
@@ -140,6 +141,18 @@ Then run:
 ```
 
 Then _append_ (don't override) some subset of `out.sql` to <https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/dell-foundation-grants.sql>. This one is a little tricky because I think Dell Foundation keeps tossing out older grants, so we have to check which grants are new. There isn't a script that does this yet.
+
+### Donors Trust
+
+Navigate to the [conservativetransparency.org processing
+repo](https://github.com/riceissa/conservativetransparency) directory.
+
+Go to http://conservativetransparency.org/donor/donorstrust/ and
+download new CSV data by clicking on "Export CSV". Save this in the `data/`
+directory.
+
+Then run the processing script by following instructions at
+https://github.com/riceissa/conservativetransparency#instructions-for-doing-a-run
 
 ### EA Giving Group
 
