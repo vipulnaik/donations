@@ -172,6 +172,8 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('William E. Simon Foundation', 'Private foundation', 'United States', NULL, 'http://www.wesimonfoundation.org/', 'http://conservativetransparency.org/donor/william-e-simon-foundation/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'http://www.wesimonfoundation.org/index.php?option=com_content&view=article&id=2&Itemid=118', 'http://www.wesimonfoundation.org/index.php?option=com_content&view=article&id=13&Itemid=110', NULL, NULL, NULL, NULL, 'https://github.com/riceissa/conservativetransparency', NULL, NULL, 'http://www.wesimonfoundation.org/index.php?option=com_content&view=article&id=8&Itemid=143', NULL, NULL, NULL, NULL, NULL),
 
+  ('F. M. Kirby Foundation', 'Private foundation', 'United States', NULL, 'http://fmkirbyfoundation.org/', 'http://fmkirbyfoundation.org/grants/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'http://fmkirbyfoundation.org/about/', 'http://fmkirbyfoundation.org/apply/', NULL, NULL, NULL, NULL, 'https://github.com/riceissa/conservativetransparency', NULL, NULL, 'http://fmkirbyfoundation.org/about/', NULL, NULL, NULL, NULL, NULL),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);

@@ -13,6 +13,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Dell Foundation](#dell-foundation)
    * [EA Giving Group](#ea-giving-group)
    * [Earhart Foundation](#earhart-foundation)
+   * [F. M. Kirby Foundation](#f-m-kirby-foundation)
    * [Ford Foundation](#ford-foundation)
    * [Foundational Questions Institute (FQXi)](#foundational-questions-institute-fqxi)
    * [Future Justice Fund](#future-justice-fund)
@@ -21,13 +22,15 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Google.org](#googleorg)
    * [Haas, Jr. Fund](#haas-jr-fund)
    * [Hewlett Foundation](#hewlett-foundation)
+   * [Kellogg Foundation](#kellogg-foundation)
    * [Knight Foundation](#knight-foundation)
+   * [Lilly Endowment](#lilly-endowment)
    * [MacArthur Foundation](#macarthur-foundation)
    * [Barbara McDowell and Gerald S. Hartman Foundation](#barbara-mcdowell-and-gerald-s-hartman-foundation)
    * [Andrew W. Mellon Foundation](#andrew-w-mellon-foundation)
    * [Mulago](#mulago)
    * [Nathan Cummings Foundation](#nathan-cummings-foundation)
-   * [Olin Foundation](#olin-foundation)
+   * [John M. Olin Foundation](#john-m-olin-foundation)
    * [Open Philanthropy Project](#open-philanthropy-project)
    * [Pineapple Fund](#pineapple-fund)
    * [Public Welfare Foundation](#public-welfare-foundation)
@@ -38,6 +41,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Templeton Foundation](#templeton-foundation)
    * [Theiss Research](#theiss-research)
    * [Unbound Philanthropy](#unbound-philanthropy)
+   * [Knut and Alice Wallenberg Foundation](#knut-and-alice-wallenberg-foundation)
    * [Walton Family Foundation](#walton-family-foundation)
    * [Wellcome Trust](#wellcome-trust)
    * [William E. Simon Foundation](#william-e-simon-foundation)
@@ -147,6 +151,18 @@ Navigate to the [conservativetransparency.org processing
 repo](https://github.com/riceissa/conservativetransparency) directory.
 
 Go to http://conservativetransparency.org/donor/earhart-foundation/ and
+download new CSV data by clicking on "Export CSV". Save this in the `data/`
+directory.
+
+Then run the processing script by following instructions at
+https://github.com/riceissa/conservativetransparency#instructions-for-doing-a-run
+
+### F. M. Kirby Foundation
+
+Navigate to the [conservativetransparency.org processing
+repo](https://github.com/riceissa/conservativetransparency) directory.
+
+Go to http://conservativetransparency.org/donor/f-m-kirby-foundation/ and
 download new CSV data by clicking on "Export CSV". Save this in the `data/`
 directory.
 
