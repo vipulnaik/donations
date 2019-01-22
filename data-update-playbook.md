@@ -32,6 +32,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Pineapple Fund](#pineapple-fund)
    * [Public Welfare Foundation](#public-welfare-foundation)
    * [Sloan Foundation](#sloan-foundation)
+   * [Smith Richardson Foundation](#smith-richardson-foundation)
    * [Stone Family Foundation](#stone-family-foundation)
    * [Surdna Foundation](#surdna-foundation)
    * [Templeton Foundation](#templeton-foundation)
@@ -416,6 +417,18 @@ Then run:
 ```
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/sloan-foundation-grants.sql
+
+### Smith Richardson Foundation
+
+Navigate to the [conservativetransparency.org processing
+repo](https://github.com/riceissa/conservativetransparency) directory.
+
+Go to http://conservativetransparency.org/donor/smith-richardson-foundation/ and
+download new CSV data by clicking on "Export CSV". Save this in the `data/`
+directory.
+
+Then run the processing script by following instructions at
+https://github.com/riceissa/conservativetransparency#instructions-for-doing-a-run
 
 ### Stone Family Foundation
 
