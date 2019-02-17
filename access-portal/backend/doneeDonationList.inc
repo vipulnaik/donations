@@ -9,6 +9,7 @@ print "<thead>\n";
 print '<tr>';
 print '<th>Donor</th>';
 print '<th>Amount (current USD)</th>';
+print '<th>Amount rank (out of '.count($amountList).')</th>';
 print '<th>Donation date</th>';
 print '<th>Cause area</th>';
 print '<th>URL</th>';
@@ -29,7 +30,9 @@ for($i = 0; $i < $doneeDonationSelectResult -> num_rows; $i++) {
       $originalCurr = "";
     }
     print '<td align="right"' . $originalCurr . '>'.number_format($row['amount'],2).'</td>';
+    print '<td align="right">'.(array_search($row['amount'], $amountList) + 1).'</td>';
   } else {
+    print '<td>--</td>';
     print '<td>--</td>';
   }
   if ($row['donation_date'] != '') {

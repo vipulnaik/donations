@@ -19,6 +19,7 @@ print '<body>';
 print '<script>$(document).ready(function()
     {
         $("#myTableDoneeInfo").tablesorter({textExtraction: stripCommas});
+        $("#myTableDoneeStatistics").tablesorter({textExtraction: stripCommas});
         $("#myTableDoneeDonationAmountsByDonorAndYear").tablesorter({textExtraction: stripCommas});
         $("#myTableDoneeDocumentList").tablesorter({textExtraction: stripCommas});
         $("#myTableDoneeDonationList").tablesorter({textExtraction: stripCommas});
@@ -29,6 +30,7 @@ include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
 print '<li><a href="#doneeInfo">Basic donee information</a></li>';
+print '<li><a href="#doneeStatistics">Donee donation statistics</a></li>';
 print '<li><a href="#doneeDonationAmountsByDonorAndYear">Donee donation amounts by donor and year</a></li>';
 print '<li><a href="#doneeDocumentList">Donee document list</a></li>';
 print '<li><a href="#doneeDonationList">Donee donation list</a></li>';
@@ -38,6 +40,7 @@ $cache_location = "cache/" . md5($_SERVER['REQUEST_URI']) . ".html";
 if (needToRegenerate($cache_location)) {
   ob_start();
   include ("backend/doneeInfo.inc");
+  include ("backend/doneeStatistics.inc");
   include ("backend/doneeDonationAmountsByDonorAndYear.inc");
   include ("backend/doneeDocumentList.inc");
   include ("backend/doneeDonationList.inc");
