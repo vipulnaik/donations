@@ -27,6 +27,7 @@ print '<body>';
 print '<script>$(document).ready(function()
     {
         $("#myTableDonorInfo").tablesorter({textExtraction: stripCommas});
+        $("#myTableDonorStatistics").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorDonationAmountsByDoneeAndYear").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorDonationAmountsByCauseAreaAndYear").tablesorter({textExtraction: stripCommas});
         $("#myTableDonorDonationAmountsByInfluencerAndYear").tablesorter({textExtraction: stripCommas});
@@ -42,6 +43,7 @@ include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
 print '<li><a href="#donorInfo">Basic donor info</a></li>';
+print '<li><a href="#donorStatistics">Donor statistics</a></li>';
 print '<li><a href="#donorDonationAmountsByCauseAreaAndYear">Donor donation amounts by cause area and year</a></li>';
 print '<li><a href="#donorDonationAmountsBySubcauseAreaAndYear">Donor donation amounts by subcause area and year</a></li>';
 print '<li><a href="#donorDonationAmountsByDoneeAndYear">Donor donation amounts by donee and year</a></li>';
@@ -60,6 +62,7 @@ if (needToRegenerate($cache_location)) {
   include_once('backend/yearlyGroupings.inc');
   include_once('backend/yearlyDisclosures.inc');
   include ("backend/donorInfo.inc");
+  include ("backend/donorStatistics.inc");
   include ("backend/donorDonationAmountsByCauseAreaAndYear.inc");
   include ("backend/donorDonationAmountsBySubcauseAreaAndYear.inc");
   include ("backend/donorDonationAmountsByDoneeAndYear.inc");
