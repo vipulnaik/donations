@@ -9,6 +9,7 @@ print "<thead>\n";
 print '<tr>';
 print '<th>Donee</th>';
 print '<th>Amount (current USD)</th>';
+print '<th>Amount rank (out of '. count($amountList) .')</th>';
 print '<th>Donation date</th>';
 print '<th>Cause area</th>';
 print '<th>URL</th>';
@@ -21,7 +22,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   print '<tr>';
   print '<td><a href="/donee.php?donee='.urlencode($row['donee']).'">'.$row['donee'].'</a>';
   if (isset($row['donation_earmark'])) {
-    print ' (Earmark: '.$row['donation_earmark'].')'; 
+    print ' (Earmark: '.$row['donation_earmark'].')';
   }
   if ($row['amount'] != '') {
     if ($row['amount_original_currency'] && $row['original_currency']) {
@@ -32,7 +33,9 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
       $originalCurr = "";
     }
     print '<td align="right"' . $originalCurr . '>'.number_format($row['amount'],2).'</td>';
+    print '<td align="right">'.(array_search($row['amount'], $amountList) + 1).'</td>';
   } else {
+    print '<td>--</td>';
     print '<td>--</td>';
   }
   if ($row['donation_date'] != '') {
