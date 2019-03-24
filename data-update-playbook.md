@@ -96,7 +96,7 @@ September 30, 2018)
 From the [Arnold Foundation repo](https://github.com/riceissa/arnold-foundation-grants) directory:
 
 ```bash
-curl http://www.arnoldfoundation.org/grants/ > index.html
+curl https://www.arnoldventures.org/grants/ > index.html
 ./fetch_page.py index.html > grants-with-multiyear.tsv
 ./loop.py grants-with-multiyear.tsv > out.sql
 ```
