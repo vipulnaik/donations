@@ -266,7 +266,7 @@ carefully check the relevant git diffs.
 
 ### Gates Foundation
 
-Last attempted and successful update: 2018-11-23 (rename done 2018-11-24)
+Last attempted and successful update: 2019-03-24
 
 Follow the instructions in the [gates-foundation-iati-processing README](https://github.com/riceissa/gates-foundation-iati-processing/) and then copy the output file (out.sql) to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/gates-foundation-grants.sql
 
@@ -313,7 +313,7 @@ https://github.com/riceissa/kellogg-foundation#getting-data-and-generating-sql-f
 
 ### Knight Foundation
 
-Last attempted and successful update: 2018-11-23
+Last attempted and successful update: 2019-03-24
 
 Navigate to the [Knight Foundation grants repo](https://github.com/riceissa/knight-foundation) directory.
 
@@ -346,7 +346,7 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 
 ### Barbara McDowell and Gerald S. Hartman Foundation
 
-Last attempted and successful update: 2018-11-23
+Last attempted and successful update: 2018-11-23 (verified on 2019-03-24 that no further updates)
 
 Navigate to the [Barbara McDowell and Gerald S. Hartman Foundation grants data repo](https://github.com/riceissa/mcdowell-foundation) directory.
 
