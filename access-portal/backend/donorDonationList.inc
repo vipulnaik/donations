@@ -33,7 +33,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
       $originalCurr = "";
     }
     print '<td align="right"' . $originalCurr . '>'.number_format($row['amount'],2).'</td>';
-    print '<td align="right">'.(array_search($row['amount'], $amountList) + 1).'</td>';
+    print '<td align="right">'.(array_search($row['amount'], array_reverse($amountList)) + 1).'</td>';
   } else {
     print '<td>--</td>';
     print '<td>--</td>';
