@@ -284,7 +284,7 @@ Then copy the SQL file to https://github.com/vipulnaik/donations/blob/master/sql
 
 ### Hewlett Foundation
 
-Last attempted and successful update: 2018-11-23
+Last attempted and successful update: 2019-03-28
 
 Navigate to the [Hewlett Foundation repo](https://github.com/riceissa/hewlett-foundation) directory.
 
