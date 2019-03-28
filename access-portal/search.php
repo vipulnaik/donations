@@ -19,20 +19,20 @@ include_once("backend/globalVariables/lists.inc");
 print '<body>';
 print '<script>$(document).ready(function()
     {
-        $("#myTableSearchDonationList").tablesorter({textExtraction: stripCommas});
         $("#myTableSearchDocumentList").tablesorter({textExtraction: stripCommas});
+        $("#myTableSearchDonationList").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
 print "<h3>All donations matching “" . htmlspecialchars($keyword) . "”</h3>\n";
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
-print '<li><a href="#searchDonationList">List of donations</a></li>';
 print '<li><a href="#searchDocumentList">List of documents</a></li>';
+print '<li><a href="#searchDonationList">List of donations</a></li>';
 print '</ul>';
 
-include ("backend/searchDonationList.inc");
 include ("backend/searchDocumentList.inc");
+include ("backend/searchDonationList.inc");
 
 include_once('anchorjs.inc');
 print '</body>';
