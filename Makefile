@@ -73,7 +73,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/sentience-institute-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/thl-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/vegan-outreach-docs.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/was-research-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/wild-animal-initiative-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/wild-animal-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/wmf-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
