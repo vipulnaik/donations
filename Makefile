@@ -81,6 +81,8 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/brain-preservation-foundation-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2016.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2017-cea.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2019-cea-100k.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2019-cea-500k.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/miri-top-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/one-for-the-world-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/arch-community-fund-grants.sql
