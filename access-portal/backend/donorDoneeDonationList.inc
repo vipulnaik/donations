@@ -19,6 +19,7 @@ print '<table id="myTableDonorDonationList" class="tablesorter">'."\n";
 print "<thead>\n";
 print '<tr>';
 print '<th>Amount (current USD)</th>';
+print '<th>Amount rank (out of '. count($amountList) .')</th>';
 print '<th>Donation date</th>';
 print '<th>Cause area</th>';
 print '<th>URL</th>';
@@ -38,6 +39,7 @@ while ($row = $result->fetch_assoc()) {
       $originalCurr = "";
     }
     print '<td align="right"' . $originalCurr . '>'.number_format($row['amount'],2).'</td>';
+    print '<td align="right">'.(array_search($row['amount'], array_reverse($amountList)) + 1).'</td>';
   } else {
     print '<td>--</td>';
   }
