@@ -23,10 +23,14 @@ function print_stats($amountList, $rowName) {
   echo "</tr>\n";
 }
 
-$query = "select donor,amount,substring_index(cause_area,'/',1) as cause_area from donations where donor = ? and donee = ? order by amount asc";
+$query = "select donor,amount,substring_index(cause_area,'/',1) as cause_area from donations where donor = ? and donee = ?" . ($causeAreaFilterString ? " and cause_area REGEXP ?" : "") . " order by amount asc";
 
 if ($stmt = $mysqli->prepare($query)) {
-  $stmt->bind_param("ss", $donor, $donee);
+  if ($causeAreaFilterString) {
+    $stmt->bind_param("sss", $donor, $donee, $causeAreaFilterString);
+  } else {
+    $stmt->bind_param("ss", $donor, $donee);
+  }
   $stmt->execute();
   $result = $stmt->get_result();
   $amountList = array();
