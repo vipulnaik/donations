@@ -44,7 +44,6 @@ if ($result->num_rows > 0) {
       print '<td align="right"' . $originalCurr . '>'.number_format($row['amount'],2).'</td>';
     } else {
       print '<td>--</td>';
-      print '<td>--</td>';
     }
     if ($row['donation_date'] != '') {
       $donation_date = $row['donation_date'];
