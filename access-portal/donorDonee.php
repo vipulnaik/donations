@@ -42,6 +42,7 @@ print '<h4>Table of contents</h4>';
 print '<ul>';
 print '<li><a href="#donorInfo">Basic donor info</a></li>';
 print '<li><a href="#doneeInfo">Basic donee info</a></li>';
+print '<li><a href="#donorDoneeStatistics">Donor&ndash;donee donation statistics</a></li>';
 print '<li><a href="#donorDoneeDonationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</a></li>';
 print '<li><a href="#donorDoneeDonationList">Donor donation list</a></li>';
 print '<li><a href="#donorDoneeDocumentList">Donor document list</a></li>';
@@ -54,6 +55,7 @@ if (needToRegenerate($cache_location)) {
   print '<p><a href="/donor.php?donor='.urlencode($donor).'">Full donor page for donor '.$donor.'</a></p>'."\n";
   include ("backend/doneeInfo.inc");
   print '<p><a href="/donee.php?donee='.urlencode($donee).'">Full donee page for donee '.$donee.'</a></p>'."\n";
+  include ("backend/donorDoneeStatistics.inc");
   include ("backend/donorDoneeDonationAmountsByCauseAreaAndYear.inc");
   include ("backend/donorDoneeDonationList.inc");
   include ("backend/donorDoneeDocumentList.inc");
