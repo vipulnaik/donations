@@ -23,8 +23,18 @@ function print_stats($amountList, $rowName) {
   echo "</tr>\n";
 }
 
-if ($stmt = $mysqli->prepare("select donor,amount,substring_index(cause_area,'/',1) as cause_area from donations where donor = ? order by amount asc")) {
-  $stmt->bind_param("s", $donor);
+if (!empty($_REQUEST['cause_area_filter'])) {
+  $query = "select donor,amount,substring_index(cause_area,'/',1) as cause_area from donations where donor = ? and cause_area REGEXP ? order by amount asc";
+} else {
+  $query = "select donor,amount,substring_index(cause_area,'/',1) as cause_area from donations where donor = ? order by amount asc";
+}
+
+if ($stmt = $mysqli->prepare($query)) {
+  if (!empty($_REQUEST['cause_area_filter'])) {
+    $stmt->bind_param("ss", $donor, $_REQUEST['cause_area_filter']);
+  } else {
+    $stmt->bind_param("s", $donor);
+  }
   $stmt->execute();
   $result = $stmt->get_result();
   $amountList = array();
