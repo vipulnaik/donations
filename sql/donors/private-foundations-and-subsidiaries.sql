@@ -176,6 +176,38 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
 
   ('Donors Trust', 'Donor-advised fund', 'United States', 'donorstrust', 'https://www.donorstrust.org/', 'http://conservativetransparency.org/donor/donorstrust/', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://www.donorstrust.org/who-we-are/mission-principles/', NULL, NULL, NULL, NULL, NULL, 'https://github.com/riceissa/conservativetransparency', 'https://en.wikipedia.org/wiki/Donors_Trust', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 
+  (
+    'Robert Bowne Foundation', /* donor */
+    'Private foundation', /* donor_type */
+    'United States', /* country */
+    NULL, /* facebook_username */
+    'https://www.robertbownefoundation.org/', /* website */
+    'https://www.robertbownefoundation.org/grants.php', /* donations_url */
+    NULL, /* lesswrong_username */
+    NULL, /* linkedin_username */
+    NULL, /* affiliated_orgs */
+    NULL, /* eaf_username */
+    NULL, /* eahub_username */
+    NULL, /* github_username */
+    NULL, /* twitter_username */
+    NULL, /* predictionbook_username */
+    'https://www.robertbownefoundation.org/about.php', /* philosophy_url */
+    NULL, /* grant_application_process_url */
+    NULL, /* donations_data_update_regularity */
+    NULL, /* donations_data_dlw_update_regularity */
+    NULL, /* donations_data_update_lag */
+    NULL, /* donations_data_dlw_update_lag */
+    'https://github.com/riceissa/robert-bowne-foundation', /* dlw_data_processing_script */
+    NULL, /* wikipedia_page */
+    NULL, /* best_overview_url */
+    NULL, /* brief_history */
+    NULL, /* brief_donor_focus_notes */
+    NULL, /* grant_decision_logistics_notes */
+    NULL, /* grant_publication_logistics_notes */
+    NULL, /* grant_financing_notes */
+    NULL /* notes */
+  ),
+
   ('Pineapple Fund',NULL,'United States',NULL,'https://pineapplefund.org/','https://pineapplefund.org/',NULL,NULL,NULL,NULL,NULL,'PineappleFund',NULL,NULL,NULL,NULL,'irregular',NULL,'days','months','https://github.com/riceissa/pineapple-fund','https://en.wikipedia.org/wiki/Pineapple_Fund',NULL,
   'The Pineapple Fund was announced in December 2017 by an anonymous individual.',
   NULL, NULL, NULL, NULL, NULL);
