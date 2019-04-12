@@ -35,6 +35,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Open Philanthropy Project](#open-philanthropy-project)
    * [Pineapple Fund](#pineapple-fund)
    * [Public Welfare Foundation](#public-welfare-foundation)
+   * [Robert Bowne Foundation](#robert-bowne-foundation)
    * [Sloan Foundation](#sloan-foundation)
    * [Smith Richardson Foundation](#smith-richardson-foundation)
    * [Stone Family Foundation](#stone-family-foundation)
@@ -431,6 +432,14 @@ Then run:
 ```
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/public-welfare-foundation-grants.sql
+
+### Robert Bowne Foundation
+
+Navigate to the [Robert Bowne Foundation repo](https://github.com/riceissa/robert-bowne-foundation) directory.
+
+Follow the instructions at https://github.com/riceissa/robert-bowne-foundation#instructions-for-running-the-scripts
+
+Then copy the output SQL file to TBD
 
 ### Sloan Foundation
 
