@@ -35,6 +35,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Open Philanthropy Project](#open-philanthropy-project)
    * [Pineapple Fund](#pineapple-fund)
    * [Public Welfare Foundation](#public-welfare-foundation)
+   * [Quixote Foundation](#quixote-foundation)
    * [Robert Bowne Foundation](#robert-bowne-foundation)
    * [Sloan Foundation](#sloan-foundation)
    * [Smith Richardson Foundation](#smith-richardson-foundation)
@@ -432,6 +433,14 @@ Then run:
 ```
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/public-welfare-foundation-grants.sql
+
+### Quixote Foundation
+
+Navigate to the [Quixote Foundation repo](https://github.com/riceissa/quixote-foundation) directory.
+
+Follow the instructions at https://github.com/riceissa/quixote-foundation#instructions-for-getting-sql-file
+
+Then copy the output SQL file to TBD
 
 ### Robert Bowne Foundation
 
