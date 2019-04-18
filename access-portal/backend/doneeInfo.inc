@@ -47,9 +47,6 @@ if ($doneeSelectResult -> num_rows == 0) {
   if (isset($row['lesswrong_username']) && $row['lesswrong_username'] != '') {
     print '<tr><td>LessWrong username</td><td><a href="http://lesswrong.com/user/'.$row['lesswrong_username'].'">'.$row['lesswrong_username'].'</a></td></tr>';
   }
-  if (isset($row['eahub_username']) && $row['eahub_username'] != '') {
-    print '<tr><td>Effective Altruism Hub</td><td><a href="https://eahub.org/charities/'.$row['eahub_username'].'">'.$row['eahub_username'].'</a></td></tr>';
-  }
   if (isset($row['wikipedia_page']) && $row['wikipedia_page'] != '') {
     print '<tr><td>Wikipedia page</td><td><a href="'.$row['wikipedia_page'].'">'.$row['wikipedia_page'].'</a></td></tr>';
   }
