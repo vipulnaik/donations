@@ -7,6 +7,7 @@ General caution: Websites and data formats change all the time. If a script fail
 ## Table of contents
 
 * [Foundations](#foundations)
+   * [Andrea &amp; Charles Bronfman Philanthropies](#andrea--charles-bronfman-philanthropies)
    * [Arnold Foundation](#arnold-foundation)
    * [Barr Foundation](#barr-foundation)
    * [Bradley Foundation](#bradley-foundation)
@@ -31,6 +32,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Andrew W. Mellon Foundation](#andrew-w-mellon-foundation)
    * [Mulago](#mulago)
    * [Nathan Cummings Foundation](#nathan-cummings-foundation)
+   * [John Merck Fund](#john-merck-fund)
    * [John M. Olin Foundation](#john-m-olin-foundation)
    * [Open Philanthropy Project](#open-philanthropy-project)
    * [Pineapple Fund](#pineapple-fund)
@@ -89,6 +91,14 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Good Ventures/not recommended by GiveWell or Open Philanthropy Project](#good-venturesnot-recommended-by-givewell-or-open-philanthropy-project)
 
 ## Foundations
+
+### Andrea & Charles Bronfman Philanthropies
+
+Navigate to the directory for https://github.com/riceissa/andrea-and-charles-bronfman-philanthropies
+
+Follow the instructions at https://github.com/riceissa/andrea-and-charles-bronfman-philanthropies#instructions-for-running-the-scripts
+
+Copy the resulting SQL file to DLW repo.
 
 ### Arnold Foundation
 
@@ -391,6 +401,15 @@ Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/do
 Navigate to the [Nathan Cummings Foundation repo](https://github.com/riceissa/nathan-cummings-foundation) directory.
 
 This one is pretty complicated. It will probably involve uploading a PDF to Google Docs and converting to a plain text data file, manually cleaning that file, and running the appropriate processing script on that file. See https://github.com/riceissa/nathan-cummings-foundation for more information.
+
+### John Merck Fund
+
+Navigate to the directory for https://github.com/riceissa/john-merck-fund
+
+Follow the instructions at https://github.com/riceissa/john-merck-fund#instructions-for-running-the-scripts
+to generate the SQL file.
+
+Copy the resulting SQL file to the DLW repo.
 
 ### John M. Olin Foundation
 
