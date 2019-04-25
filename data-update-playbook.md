@@ -443,13 +443,7 @@ For reference, the processing script is at https://github.com/riceissa/pineapple
 
 Navigate to the [Public Welfare Foundation repo](https://github.com/riceissa/public-welfare-foundation) directory.
 
-Get new data and store in `data.html`; the steps are described at https://github.com/riceissa/public-welfare-foundation#getting-datahtml
-
-Then run:
-
-```bash
-./proc.py > out.sql
-```
+Follow the directions at https://github.com/riceissa/public-welfare-foundation#instructions-new
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/public-welfare-foundation-grants.sql
 
