@@ -113,7 +113,16 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/mellon-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/mulago-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/nathan-cummings-foundation-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-phil-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy-project/open-phil-ai-safety-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy-project/open-phil-animal-welfare-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy-project/open-phil-biosecurity-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy-project/open-phil-criminal-justice-reform-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy-project/open-phil-land-use-reform-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy-project/open-phil-macroeconomic-stabilization-policy-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy-project/open-phil-migration-policy-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy-project/open-phil-other-gcr-and-security-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy-project/open-phil-other-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy-project/open-phil-scientific-research-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/pineapple-fund-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/public-welfare-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/sandler-foundation-grants.sql
