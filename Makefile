@@ -31,7 +31,9 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/donors-schema.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donor_donee_relationships/donor_donee_relationships-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/disclosures/disclosures-schema.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donor_donee_relationships/donor_donee_relationships.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/disclosures/open-phil-disclosures.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/80k-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ace-docs.sql
