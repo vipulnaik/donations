@@ -85,14 +85,14 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
     array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for selecting the donee:</strong> %s", trim(cleanNotes($val))));
   }
   if ($val = $row['donor_amount_reason']) {
-    val $amountNotes = trim(cleanNotes($val));
+    $amountNotes = trim(cleanNotes($val));
     if ($val2 = $row['fraction']) {
       $amountNotes .= "<br/>" . sprintf("Percentage of total donor spend in the corresponding batch of donations: %.2f", $val2 * 100) . '%';
     }
     array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for donating that amount (rather than a bigger or smaller amount):</strong> %s", $amountNotes));
   }
   if ($val = $row['donor_timing_reason']) {
-    val $timingNotes = trim(cleanNotes($val));
+    $timingNotes = trim(cleanNotes($val));
     if ($val2 = $row['intended_funding_timeframe_in_months']) {
       $timingNotes .= "<br/>" . sprintf("Intended funding timeframe in months: %s", $val2);
     }
