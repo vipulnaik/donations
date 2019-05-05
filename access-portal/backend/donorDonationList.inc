@@ -153,6 +153,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   }
   if ($notes_pre_key_val_string) {
     $notes_pre_key_val_string = $notes_pre_key_val_string + "<br/><strong>other notes:</strong> ";
+  }
   print '    <td>' . $notes_pre_key_val_string . $notes . $notes_key_val_string . '</td>' . "\n";
   print '</tr>';
 }
