@@ -138,7 +138,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
     }
   }
 
-  $notes_pre_key_val_string = trim(implode('<br/>', $notes_pre_key_val_pairs));
+  $notes_pre_key_val_string = trim(implode('<br/><br/>', $notes_pre_key_val_pairs));
   $notes =  trim(cleanNotes($row['notes']));
   $notes_key_val_string = trim(implode('; ', $notes_key_val_pairs));
 
@@ -152,7 +152,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
     $notes_key_val_string = ucfirst($notes_key_val_string) . '. ';
   }
   if ($notes_pre_key_val_string) {
-    $notes_pre_key_val_string = $notes_pre_key_val_string . "<br/><strong>other notes:</strong> ";
+    $notes_pre_key_val_string = $notes_pre_key_val_string . "<br/><br/><strong>other notes:</strong> ";
   }
   print '    <td>' . $notes_pre_key_val_string . $notes . $notes_key_val_string . '</td>' . "\n";
   print '</tr>';
