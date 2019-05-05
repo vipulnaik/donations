@@ -73,28 +73,28 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   /* Build up the JSON-like key-value pairs in the notes column */
   $notes_pre_key_val_pairs = array();
   if ($val = $row['donation_process']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>donation process:</strong> %s", $val));
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donation process:</strong> %s", $val));
   }
   if ($val = $row['intended_use_of_funds_category']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>intended use of funds (category):</strong> %s", $val));
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Intended use of funds (category):</strong> %s", $val));
   }
   if ($val = $row['intended_use_of_funds']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>intended use of funds:</strong> %s", $val));
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Intended use of funds:</strong> %s", $val));
   }
   if ($val = $row['donor_donee_reason']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>donor reason for selecting the donee:</strong> %s", trim(cleanNotes($val))));
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for selecting the donee:</strong> %s", trim(cleanNotes($val))));
   }
   if ($val = $row['donor_amount_reason']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>donor reason for donating that amount (rather than a bigger or smaller amount):</strong> %s", trim(cleanNotes($val))));
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for donating that amount (rather than a bigger or smaller amount):</strong> %s", trim(cleanNotes($val))));
   }
   if ($val = $row['donor_timing_reason']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>donor reason for donating at this time (rather than earlier or later):</strong> %s", trim(cleanNotes($val))));
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for donating at this time (rather than earlier or later):</strong> %s", trim(cleanNotes($val))));
   }
   if ($val = $row['donor_next_donation_thoughts']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>donor thoughts on making further donations to the donee:</strong> %s", trim(cleanNotes($val))));
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor thoughts on making further donations to the donee:</strong> %s", trim(cleanNotes($val))));
   }
   if ($val = $row['donor_retrospective']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>donor retrospective of the donation:</strong> %s", trim(cleanNotes($val))));
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor retrospective of the donation:</strong> %s", trim(cleanNotes($val))));
   }
   $notes_key_val_pairs = array();
   if ($val = $row['intended_funding_timeframe_in_months']) {
