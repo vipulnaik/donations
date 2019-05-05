@@ -131,7 +131,10 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/william-e-simon-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/beri-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/eaf-fund.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-animal-welfare.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-global-health-and-development.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-long-term-future.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-meta.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/givewell-discretionary-regranting.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/givewell-incubation-grants.sql
