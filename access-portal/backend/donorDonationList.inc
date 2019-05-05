@@ -71,7 +71,35 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   }
 
   /* Build up the JSON-like key-value pairs in the notes column */
+  $notes_pre_key_val_pairs = array();
+  if ($val = $row['donation_process']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>donation process:</strong> %s", $val));
+  }
+  if ($val = $row['intended_use_of_funds_category']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>intended use of funds (category):</strong> %s", $val));
+  }
+  if ($val = $row['intended_use_of_funds']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>intended use of funds:</strong> %s", $val));
+  }
+  if ($val = $row['donor_donee_reason']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>donor reason for selecting the donee:</strong> %s", trim(cleanNotes($val))));
+  }
+  if ($val = $row['donor_amount_reason']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>donor reason for donating that amount (rather than a bigger or smaller amount):</strong> %s", trim(cleanNotes($val))));
+  }
+  if ($val = $row['donor_timing_reason']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>donor reason for donating at this time (rather than earlier or later):</strong> %s", trim(cleanNotes($val))));
+  }
+  if ($val = $row['donor_next_donation_thoughts']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>donor thoughts on making further donations to the donee:</strong> %s", trim(cleanNotes($val))));
+  }
+  if ($val = $row['donor_retrospective']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>donor retrospective of the donation:</strong> %s", trim(cleanNotes($val))));
+  }
   $notes_key_val_pairs = array();
+  if ($val = $row['intended_funding_timeframe_in_months']) {
+    array_push($notes_key_val_pairs, sprintf("intended funding timeframe in months: %s", $val));
+  }
   if ($val = $row['affected_regions']) {
     array_push($notes_key_val_pairs, sprintf("affected regions: %s", $val));
   }
@@ -110,6 +138,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
     }
   }
 
+  $notes_pre_key_val_string = trim(implode('<br/>', $notes_pre_key_val_pairs));
   $notes =  trim(cleanNotes($row['notes']));
   $notes_key_val_string = trim(implode('; ', $notes_key_val_pairs));
 
@@ -122,7 +151,9 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   if ($notes_key_val_string) {
     $notes_key_val_string = ucfirst($notes_key_val_string) . '. ';
   }
-  print '    <td>' . $notes . $notes_key_val_string . '</td>' . "\n";
+  if ($notes_pre_key_val_string) {
+    $notes_pre_key_val_string = $notes_pre_key_val_string + "<br/><strong>other notes:</strong> ";
+  print '    <td>' . $notes_pre_key_val_string . $notes . $notes_key_val_string . '</td>' . "\n";
   print '</tr>';
 }
 
