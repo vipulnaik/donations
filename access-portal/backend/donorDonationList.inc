@@ -85,10 +85,18 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
     array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for selecting the donee:</strong> %s", trim(cleanNotes($val))));
   }
   if ($val = $row['donor_amount_reason']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for donating that amount (rather than a bigger or smaller amount):</strong> %s", trim(cleanNotes($val))));
+    val $amountNotes = trim(cleanNotes($val));
+    if ($val2 = $row['fraction']) {
+      $amountNotes .= "<br/>" . sprintf("Percentage of total donor spend in the corresponding batch of donations: %.2f", $val2 * 100) . '%';
+    }
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for donating that amount (rather than a bigger or smaller amount):</strong> %s", $amountNotes));
   }
   if ($val = $row['donor_timing_reason']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for donating at this time (rather than earlier or later):</strong> %s", trim(cleanNotes($val))));
+    val $timingNotes = trim(cleanNotes($val));
+    if ($val2 = $row['intended_funding_timeframe_in_months']) {
+      $timingNotes .= "<br/>" . sprintf("Intended funding timeframe in months: %s", $val2);
+    }
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for donating at this time (rather than earlier or later):</strong> %s", $timingNotes));
   }
   if ($val = $row['donor_next_donation_thoughts']) {
     array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor thoughts on making further donations to the donee:</strong> %s", trim(cleanNotes($val))));
@@ -97,7 +105,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
     array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor retrospective of the donation:</strong> %s", trim(cleanNotes($val))));
   }
   $notes_key_val_pairs = array();
-  if ($val = $row['intended_funding_timeframe_in_months']) {
+  if ($val = $row['intended_funding_timeframe_in_months'] && !($val2 = $row['donor_timing_reason'])) {
     array_push($notes_key_val_pairs, sprintf("intended funding timeframe in months: %s", $val));
   }
   if ($val = $row['affected_regions']) {
@@ -118,7 +126,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
       sprintf("Employer match: %s matched %s", $me, number_format($val, 2))
     );
   }
-  if ($val = $row['fraction']) {
+  if ($val = $row['fraction'] && !($val2 = $row['donor_amount_reason'])) {
     array_push($notes_key_val_pairs, sprintf("Percentage of total donor spend in the corresponding batch of donations: %.2f", $val * 100) . '%');
   }
   if ($val = $row['donation_announcement_date']) {
