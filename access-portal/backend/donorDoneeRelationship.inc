@@ -1,6 +1,6 @@
 <?php
 
-print '<h4>Donor–donee relationship</h4>';
+print '<h4 id="donorDoneeRelationship">Donor–donee relationship</h4>';
 
 $query = "select * from donor_donee_relationships where donor = ? and donee = ?";
 if ($stmt = $mysqli->prepare($query)) {
