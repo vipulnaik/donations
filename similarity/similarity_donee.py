@@ -15,10 +15,21 @@ print("NUM DONEES: " + str(len(DONEES)))
 count = 0
 for (first_donee,) in DONEES:
     count += 1
-    print("Donee number %s, Elapsed time: %s" % (count, time.time() - start_time,))
+    # print("Donee number %s, Elapsed time: %s" % (count, time.time() - start_time,))
     cursor.execute("""select donor, coalesce(sum(amount), 0) from donations where donee = %s group by donor""", (first_donee,))
     first_donee_dict = {donor: amount for (donor, amount) in cursor}
     first_donee_weighted_magnitude = math.sqrt(sum(map(lambda x: x**2, first_donee_dict.values())))
+
+    cursor.execute("""select distinct(donor) from donations where donee = %s""", (first_donee,))
+    donors_to_first_donee = cursor.fetchall()
+    candidate_donees = set()
+    for (dnr,) in donors_to_first_donee:
+        cursor.execute("""select distinct(donee) from donations where donor = %s""", (dnr,))
+        for (dne,) in cursor:
+            candidate_donees.add(dne)
+    print(first_donee, len(candidate_donees))
+    continue
+
 
     WEIGHTED_DOT_PRODUCTS = {}
     UNION_SIZES = {}
@@ -30,9 +41,13 @@ for (first_donee,) in DONEES:
     # cursor.execute("""select, donee, donor, coalesce(sum(amount), 0) as total_donation, count(*) as num_donations from donations where donee = %s group by donee, donor""", (first_donee,))
     # rows = cursor.fetchall()
 
-    cursor.execute("""select distinct(donee) from donations""")
-    donees = cursor.fetchall()
-    for (second_donee,) in donees:
+    # cursor.execute("""select distinct(donee) from donations""")
+    # donees = cursor.fetchall()
+    second_count = 0
+    # for (second_donee,) in donees:
+    for second_donee in candidate_donees:
+        second_count += 1
+        print("%s/%s, Elapsed time: %s" % (second_count, len(candidate_donees), time.time() - start_time,))
         cursor.execute("""select donor, coalesce(sum(amount), 0) from donations where donee = %s group by donor""", (second_donee,))
         second_donee_dict = {donor: amount for (donor, amount) in cursor}
         WEIGHTED_DOT_PRODUCTS[second_donee] = 0
@@ -46,7 +61,10 @@ for (first_donee,) in DONEES:
 
         assert len(first_donee_dict) + len(second_donee_dict) == UNION_SIZES[second_donee] + INTERSECT_SIZES[second_donee]
 
-        jaccard_index = INTERSECT_SIZES[second_donee] / UNION_SIZES[second_donee]
+        if UNION_SIZES[second_donee] != 0:
+            jaccard_index = INTERSECT_SIZES[second_donee] / UNION_SIZES[second_donee]
+        else:
+            jaccard_index = "null"
         if WEIGHTED_MAGNITUDES[second_donee] != 0 and first_donee_weighted_magnitude != 0:
             weighted_cosine_similarity = WEIGHTED_DOT_PRODUCTS[second_donee] / (WEIGHTED_MAGNITUDES[second_donee] * first_donee_weighted_magnitude)
         else:
