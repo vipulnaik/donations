@@ -40,10 +40,14 @@ for (second_donor,) in donors:
 
     jaccard_index = INTERSECT_SIZES[second_donor] / UNION_SIZES[second_donor]
     if WEIGHTED_MAGNITUDES[second_donor] != 0 and first_donor_weighted_magnitude != 0:
-        cosine_similarity = WEIGHTED_DOT_PRODUCTS[second_donor] / (WEIGHTED_MAGNITUDES[second_donor] * first_donor_weighted_magnitude)
+        weighted_cosine_similarity = WEIGHTED_DOT_PRODUCTS[second_donor] / (WEIGHTED_MAGNITUDES[second_donor] * first_donor_weighted_magnitude)
+    else:
+        weighted_cosine_similarity = "null"
+    if len(first_donor_dict) != 0 and len(second_donor_dict) != 0:
+        cosine_similarity = INTERSECT_SIZES[second_donor] / (math.sqrt(len(first_donor_dict)) * math.sqrt(len(second_donor_dict)))
     else:
         cosine_similarity = "null"
-    SIMILARITY_RESULT.append((second_donor, jaccard_index, cosine_similarity))
+    SIMILARITY_RESULT.append((second_donor, jaccard_index, cosine_similarity, weighted_cosine_similarity))
 
-for (second_donor, jaccard_index, cosine_similarity) in sorted(SIMILARITY_RESULT, key=lambda t: t[1]):
-    print("%s: Jaccard index=%s, Cosine similarity=%s" % (second_donor, jaccard_index, cosine_similarity))
+for (second_donor, jaccard_index, cosine_similarity, weighted_cosine_similarity) in sorted(SIMILARITY_RESULT, key=lambda t: t[1]):
+    print("%s: Jaccard index=%s, Cosine similarity=%s, Weighted cosine similarity=%s" % (second_donor, jaccard_index, cosine_similarity, weighted_cosine_similarity))
