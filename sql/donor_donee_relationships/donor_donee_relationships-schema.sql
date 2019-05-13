@@ -1,3 +1,5 @@
+drop table if exists donor_donee_relationships;
+
 create table donor_donee_relationships (
     donor_donee_relationship_id int(11) not null auto_increment primary key,
     donor varchar(100),
