@@ -15,7 +15,7 @@ create table donations (
     url varchar(400),
     donor_cause_area_url varchar(200),
     notes varchar(2000) DEFAULT NULL,
-    donation_process varchar(1000) DEFAULT NULL,
+    donation_process varchar(2500) DEFAULT NULL,
     intended_use_of_funds_category varchar(200) DEFAULT NULL,
     intended_use_of_funds varchar(1000) DEFAULT NULL,
     intended_funding_timeframe_in_months int(11) DEFAULT NULL,
