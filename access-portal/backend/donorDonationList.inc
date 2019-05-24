@@ -73,13 +73,13 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
   /* Build up the JSON-like key-value pairs in the notes column */
   $notes_pre_key_val_pairs = array();
   if ($val = $row['donation_process']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donation process:</strong> %s", $val));
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donation process:</strong> %s", trim(cleanNotes($val))));
   }
   if ($val = $row['intended_use_of_funds_category']) {
     array_push($notes_pre_key_val_pairs, sprintf("<strong>Intended use of funds (category):</strong> %s", $val));
   }
   if ($val = $row['intended_use_of_funds']) {
-    array_push($notes_pre_key_val_pairs, sprintf("<strong>Intended use of funds:</strong> %s", $val));
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Intended use of funds:</strong> %s", trim(cleanNotes($val))));
   }
   if ($val = $row['donor_donee_reason']) {
     array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for selecting the donee:</strong> %s", trim(cleanNotes($val))));
