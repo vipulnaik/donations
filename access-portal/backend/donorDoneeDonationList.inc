@@ -76,7 +76,43 @@ while ($row = $result->fetch_assoc()) {
   }
 
   /* Build up the JSON-like key-value pairs in the notes column */
+  $notes_pre_key_val_pairs = array();
+  if ($val = $row['donation_process']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donation process:</strong> %s", $val));
+  }
+  if ($val = $row['intended_use_of_funds_category']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Intended use of funds (category):</strong> %s", $val));
+  }
+  if ($val = $row['intended_use_of_funds']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Intended use of funds:</strong> %s", $val));
+  }
+  if ($val = $row['donor_donee_reason']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for selecting the donee:</strong> %s", trim(cleanNotes($val))));
+  }
+  if ($val = $row['donor_amount_reason']) {
+    $amountNotes = trim(cleanNotes($val));
+    if ($val2 = $row['fraction']) {
+      $amountNotes .= "<br/>" . sprintf("Percentage of total donor spend in the corresponding batch of donations: %.2f", $val2 * 100) . '%';
+    }
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for donating that amount (rather than a bigger or smaller amount):</strong> %s", $amountNotes));
+  }
+  if ($val = $row['donor_timing_reason']) {
+    $timingNotes = trim(cleanNotes($val));
+    if ($val2 = $row['intended_funding_timeframe_in_months']) {
+      $timingNotes .= "<br/>" . sprintf("Intended funding timeframe in months: %s", $val2);
+    }
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor reason for donating at this time (rather than earlier or later):</strong> %s", $timingNotes));
+  }
+  if ($val = $row['donor_next_donation_thoughts']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor thoughts on making further donations to the donee:</strong> %s", trim(cleanNotes($val))));
+  }
+  if ($val = $row['donor_retrospective']) {
+    array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor retrospective of the donation:</strong> %s", trim(cleanNotes($val))));
+  }
   $notes_key_val_pairs = array();
+  if ($val = $row['intended_funding_timeframe_in_months'] && !($val2 = $row['donor_timing_reason'])) {
+    array_push($notes_key_val_pairs, sprintf("intended funding timeframe in months: %s", $val));
+  }
   if ($val = $row['affected_regions']) {
     array_push($notes_key_val_pairs, sprintf("affected regions: %s", $val));
   }
@@ -95,7 +131,7 @@ while ($row = $result->fetch_assoc()) {
       sprintf("Employer match: %s matched %s", $me, number_format($val, 2))
     );
   }
-  if ($val = $row['fraction']) {
+  if ($val = $row['fraction'] && !($val2 = $row['donor_amount_reason'])) {
     array_push($notes_key_val_pairs, sprintf("Percentage of total donor spend in the corresponding batch of donations: %.2f", $val * 100) . '%');
   }
   if ($val = $row['donation_announcement_date']) {
@@ -115,6 +151,7 @@ while ($row = $result->fetch_assoc()) {
     }
   }
 
+  $notes_pre_key_val_string = trim(implode('<br/><br/>', $notes_pre_key_val_pairs));
   $notes =  trim(cleanNotes($row['notes']));
   $notes_key_val_string = trim(implode('; ', $notes_key_val_pairs));
 
@@ -127,7 +164,10 @@ while ($row = $result->fetch_assoc()) {
   if ($notes_key_val_string) {
     $notes_key_val_string = ucfirst($notes_key_val_string) . '. ';
   }
-  print '    <td>' . $notes . $notes_key_val_string . '</td>' . "\n";
+  if ($notes_pre_key_val_string) {
+    $notes_pre_key_val_string = $notes_pre_key_val_string . "<br/><br/><strong>Other notes:</strong> ";
+  }
+  print '    <td>' . $notes_pre_key_val_string . $notes . $notes_key_val_string . '</td>' . "\n";
   print '</tr>';
 }
 print "</tbody>\n</table>\n";
