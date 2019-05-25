@@ -6,9 +6,9 @@ print '<h4 id="searchDonationList">List of donations</h4>';
 
 $limit = 2000;
 
-$query = "select * from donations where notes regexp ? limit $limit";
+$query = "select * from donations where notes regexp ? or donation_process regexp ? or intended_use_of_funds regexp ? or donor_donee_reason regexp ? or donor_amount_reason regexp ? or donor_timing_reason regexp ? or donor_next_donation_thoughts regexp ? or donor_retrospective regexp ? limit $limit";
 if ($stmt = $mysqli->prepare($query)) {
-  $stmt->bind_param("s", $keyword);
+  $stmt->bind_param("s", $keyword, $keyword, $keyword, $keyword, $keyword, $keyword, $keyword, $keyword);
   $stmt->execute();
   $result = $stmt->get_result();
 }
