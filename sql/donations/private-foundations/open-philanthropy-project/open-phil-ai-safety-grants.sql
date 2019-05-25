@@ -38,7 +38,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant is mentioned by MIRI in https://intelligence.org/2018/09/01/summer-miri-updates/'),
   ('Open Philanthropy Project','Machine Intelligence Research Institute',2112500,'2019-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support-2019','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Claire Zabel|Committee for Effective Altruism Support','2019-04-02','day',NULL,NULL,
-  /* donation_process */ 'The decision of whether to donate seems to have follows the Open Philanthropy Project''s usual process, but the exact amount to donate was determined by the Committee for Effectlve Altruism Support using the process described at https://www.openphilanthropy.org/committee-effective-altruism-support',
+  /* donation_process */ 'The decision of whether to donate seems to have followed the Open Philanthropy Project''s usual process, but the exact amount to donate was determined by the Committee for Effectlve Altruism Support using the process described at https://www.openphilanthropy.org/committee-effective-altruism-support',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'MIRI plans to use these funds for ongoing research and activities related to AI safety. Planned activities include alignment research, a summer fellows program, computer scientist workshops, and internship programs.',
   /* intended_funding_timeframe_in_months */ '24',
