@@ -1,7 +1,19 @@
 <?php
 
-$donorDonationSelectQuery = "select * from donations where donor=".'"'.str_replace('"','\"',$donor).'"'." $causeAreaFilterQueryComponent order by donation_date desc, donation_announcement_date desc";
-$donorDonationSelectResult = $mysqli -> query($donorDonationSelectQuery);
+$query = "select * from donations where donor = ?"
+  . ($causeAreaFilterString ? " and cause_area REGEXP ?" : "")
+  . " order by donation_date desc";
+
+if ($stmt = $mysqli->prepare($query)) {
+  if ($causeAreaFilterString) {
+    $stmt->bind_param("ss", $donor, $causeAreaFilterString);
+  } else {
+    $stmt->bind_param("s", $donor);
+  }
+  $stmt->execute();
+  $donorDonationSelectResult = $stmt->get_result();
+}
+
 print '<h4 id="donorDonationList">Full list of donations in reverse chronological order ('.($donorDonationSelectResult -> num_rows).' donations)</h4>';
 print "\n";
 print '<table id="myTableDonorDonationList" class="tablesorter">'."\n";

@@ -1,7 +1,17 @@
 <?php
 
-$donorDocumentSelectQuery = "select * from documents where (affected_donors REGEXP ".'"'.str_replace('"','\"',$donor).'"'." or publisher = ".'"'.str_replace('"','\"',$donor).'"'." or author = ".'"'.str_replace('"','\"',$donor).'"'.") $causeAreaFilterQueryComponent order by publication_date desc";
+$query = "select * from documents where affected_donors REGEXP ? or publisher = ? or author = ?". ($causeAreaFilterString ? " and cause_area REGEXP ?" : "") . " order by publication_date desc";
 $donorDocumentSelectResult = $mysqli -> query($donorDocumentSelectQuery);
+if ($stmt = $mysqli->prepare($query)) {
+  if ($causeAreaFilterString) {
+    $stmt->bind_param("ssss", $donor, $donor, $donor, $causeAreaFilterString);
+  } else {
+    $stmt->bind_param("sss", $donor, $donor, $donor);
+  }
+  $stmt->execute();
+  $donorDocumentSelectResult = $stmt->get_result();
+}
+
 if ($donorDocumentSelectResult -> num_rows > 0) {
   print '<h4 id="donorDocumentList">Full list of documents in reverse chronological order ('.($donorDocumentSelectResult -> num_rows).' documents)</h4>';
   print "\n";

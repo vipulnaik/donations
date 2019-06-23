@@ -1,7 +1,17 @@
 <?php
 
-$doneeDocumentSelectQuery = "select * from documents where affected_donees REGEXP ".'"'.str_replace('"','\"',$donee).'"'."  or publisher = ".'"'.str_replace('"','\"',$donee).'"'." or author = ".'"'.str_replace('"','\"',$donee).'"'." order by publication_date desc";
+$query = "select * from documents where affected_donees REGEXP ? or publisher = ? or author = ?". ($causeAreaFilterString ? " and cause_area REGEXP ?" : "") . " order by publication_date desc";
 $doneeDocumentSelectResult = $mysqli -> query($doneeDocumentSelectQuery);
+if ($stmt = $mysqli->prepare($query)) {
+  if ($causeAreaFilterString) {
+    $stmt->bind_param("ssss", $donee, $donee, $donee, $causeAreaFilterString);
+  } else {
+    $stmt->bind_param("sss", $donee, $donee, $donee);
+  }
+  $stmt->execute();
+  $doneeDocumentSelectResult = $stmt->get_result();
+}
+
 if ($doneeDocumentSelectResult -> num_rows > 0) {
   print '<h4 id="doneeDocumentList">Full list of documents in reverse chronological order ('.($doneeDocumentSelectResult -> num_rows).' documents)</h4>';
   print "\n";

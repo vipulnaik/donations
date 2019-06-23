@@ -10,10 +10,10 @@ if ($stmt = $mysqli->prepare($query)) {
     $stmt->bind_param("ss", $donor, $donee);
   }
   $stmt->execute();
-  $result = $stmt->get_result();
+  $donorDoneeDonationSelectResult = $stmt->get_result();
 }
 
-print '<h4 id="donorDoneeDonationList">Full list of donations in reverse chronological order ('.($result -> num_rows).' donations)</h4>';
+print '<h4 id="donorDoneeDonationList">Full list of donations in reverse chronological order ('.($donorDoneeDonationSelectResult -> num_rows).' donations)</h4>';
 
 print '<table id="myTableDonorDonationList" class="tablesorter">'."\n";
 print "<thead>\n";
@@ -28,7 +28,7 @@ print '<th>Notes</th>';
 print '</tr>';
 print "</thead>\n<tbody>\n";
 
-while ($row = $result->fetch_assoc()) {
+while ($row = $donorDoneeDonationSelectResult->fetch_assoc()) {
   print '<tr>';
   if ($row['amount'] != '') {
     if ($row['amount_original_currency'] && $row['original_currency']) {
