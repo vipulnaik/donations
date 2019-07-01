@@ -52,6 +52,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/dickens-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/donor-lottery-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/earning-to-give-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-funds-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-global-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-grants-docs.sql
