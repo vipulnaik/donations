@@ -208,6 +208,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/aiwatch-update.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/gifts.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/givewell.sql
+        mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/giving-tuesday-facebook-match.sql
 
 .PHONY: fetch_table_sorting
 fetch_table_sorting:
