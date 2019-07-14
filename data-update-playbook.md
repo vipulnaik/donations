@@ -102,16 +102,9 @@ Copy the resulting SQL file to DLW repo.
 
 ### Arnold Foundation
 
-Last attempted and successful update: 2018-11-23 (covers data till
-September 30, 2018)
+Last attempted and successful update: 2019-04-13
 
-From the [Arnold Foundation repo](https://github.com/riceissa/arnold-foundation-grants) directory:
-
-```bash
-curl https://www.arnoldventures.org/grants/ > index.html
-./fetch_page.py index.html > grants-with-multiyear.tsv
-./loop.py grants-with-multiyear.tsv > out.sql
-```
+Follow the instructions at https://github.com/riceissa/arnold-foundation-grants/blob/master/README.md#new-instructions
 
 Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/arnold-foundation-grants.sql
 
