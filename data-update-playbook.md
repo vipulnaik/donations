@@ -446,7 +446,7 @@ Navigate to the [Quixote Foundation repo](https://github.com/riceissa/quixote-fo
 
 Follow the instructions at https://github.com/riceissa/quixote-foundation#instructions-for-getting-sql-file
 
-Then copy the output SQL file to TBD
+Then copy the output SQL file to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/public-welfare-foundation-grants.sql
 
 ### Robert Bowne Foundation
 
