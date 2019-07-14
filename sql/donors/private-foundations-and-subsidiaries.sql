@@ -19,7 +19,7 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
   NULL,
   NULL),
   
-  ('Arnold Ventures','Private foundation','United States','Laura-and-John-Arnold-Foundation-177757582300684','http://www.arnoldfoundation.org/','http://www.arnoldfoundation.org/grants/',NULL,NULL,NULL,NULL,NULL,NULL,'lja_foundation',NULL,NULL,NULL, 'quarterly refresh', 'quarterly refresh', 'months', 'days','https://github.com/riceissa/arnold-foundation-grants',
+  ('Arnold Ventures','Private foundation','United States','ArnoldVentures','https://www.arnoldventures.org/','https://www.arnoldventures.org/grants/',NULL,NULL,NULL,NULL,NULL,NULL,'lja_foundation',NULL,NULL,NULL, 'quarterly refresh', 'quarterly refresh', 'months', 'days','https://github.com/riceissa/arnold-foundation-grants',
   'https://en.wikipedia.org/wiki/Arnold_Ventures_LLC',
   'https://en.wikipedia.org/wiki/Arnold_Ventures_LLC',
   ' The foundation, started in 2008, has ramped up spending over time',
@@ -27,7 +27,7 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
   NULL,
   'Grants are published on the grants page, which is updated quarterly. There are no individual grant pages',
    NULL,
-   NULL),
+   'This was formerly the Laura and John Arnold Foundation (LJAF)'),
    
   ('Open Philanthropy Project','Private foundation','United States','openphilanthropy','https://www.openphilanthropy.org/','https://www.openphilanthropy.org/giving/grants',NULL,NULL,'GiveWell|Good Ventures',NULL,NULL,NULL,'open_phil','OpenPhilUnofficial','https://www.openphilanthropy.org/about/vision-and-values','https://www.openphilanthropy.org/giving/guide-for-grant-seekers','continuous updates','continuous updates', 'months', 'days', NULL,
   NULL,
