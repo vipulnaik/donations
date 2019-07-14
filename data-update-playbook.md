@@ -106,7 +106,7 @@ Last attempted and successful update: 2019-04-13
 
 Follow the instructions at https://github.com/riceissa/arnold-foundation-grants/blob/master/README.md#new-instructions
 
-Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/arnold-foundation-grants.sql
+Then copy `out.sql` to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/arnold-ventures-grants.sql
 
 ### Barr Foundation
 
@@ -454,7 +454,7 @@ Navigate to the [Robert Bowne Foundation repo](https://github.com/riceissa/rober
 
 Follow the instructions at https://github.com/riceissa/robert-bowne-foundation#instructions-for-running-the-scripts
 
-Then copy the output SQL file to TBD
+Then copy the output SQL file to https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/robert-bowne-foundation-grants.sql
 
 ### Sloan Foundation
 
