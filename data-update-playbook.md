@@ -98,7 +98,7 @@ Navigate to the directory for https://github.com/riceissa/andrea-and-charles-bro
 
 Follow the instructions at https://github.com/riceissa/andrea-and-charles-bronfman-philanthropies#instructions-for-running-the-scripts
 
-Copy the resulting SQL file to DLW repo.
+Copy the resulting SQL file to DLW repo at https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/andrea-and-charles-bronfman-philanthropies-grants.sql
 
 ### Arnold Foundation
 
