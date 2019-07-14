@@ -1,16 +1,3 @@
-create table money_moved(
-  move_id int(11) not null auto_increment primary key,
-  influencer varchar(100),
-  identified_donees varchar(200),
-  identified_donors varchar(200),
-  amount float(14,2),
-  start_date date,
-  end_date date,
-  document_url varchar(200),
-  document_title varchar(200),
-  notes varchar(1000)
-)  ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
 insert into money_moved(influencer, identified_donees, identified_donors, amount, start_date, end_date, document_url, document_title,notes) values
   ('GiveWell','Malaria Consortium','Good Ventures/GiveWell top and standout charities',27900000,'2017-02-01','2018-01-31','https://blog.givewell.org/2018/06/29/givewells-money-moved-and-web-traffic-in-2017/','GiveWell’s money moved and web traffic in 2017','All donations are documented; the actual donation url is http://www.goodventures.org/our-portfolio/grants/malaria-consortium-seasonal-malaria-chemoprevention-december-2017 and the recommendation to donate is at https://blog.givewell.org/2017/11/27/our-top-charities-for-giving-season-2017/'),
   ('GiveWell','Malaria Consortium',NULL,1224571,'2017-02-01','2018-01-31','https://blog.givewell.org/2018/06/29/givewells-money-moved-and-web-traffic-in-2017/','GiveWell’s money moved and web traffic in 2017','Totality of donations excluding those from Good Ventures'),

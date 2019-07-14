@@ -31,6 +31,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/donors-schema.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/money_moved-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donor_donee_relationships/donor_donee_relationships-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/disclosures/disclosures-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donor_donee_relationships/donor_donee_relationships.sql
@@ -206,7 +207,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/private-foundations-and-subsidiaries.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/aiwatch-update.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/gifts.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/givewell.sql
 
 .PHONY: fetch_table_sorting
 fetch_table_sorting:
