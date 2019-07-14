@@ -402,7 +402,7 @@ Navigate to the directory for https://github.com/riceissa/john-merck-fund
 Follow the instructions at https://github.com/riceissa/john-merck-fund#instructions-for-running-the-scripts
 to generate the SQL file.
 
-Copy the resulting SQL file to the DLW repo.
+Copy the resulting SQL file to the DLW repo at https://github.com/vipulnaik/donations/blob/master/sql/donations/private-foundations/john-merck-fund-grants.sql
 
 ### John M. Olin Foundation
 
