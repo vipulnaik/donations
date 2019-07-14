@@ -19,9 +19,9 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
   NULL,
   NULL),
   
-  ('Laura and John Arnold Foundation','Private foundation','United States','Laura-and-John-Arnold-Foundation-177757582300684','http://www.arnoldfoundation.org/','http://www.arnoldfoundation.org/grants/',NULL,NULL,NULL,NULL,NULL,NULL,'lja_foundation',NULL,NULL,NULL, 'quarterly refresh', 'quarterly refresh', 'months', 'days','https://github.com/riceissa/arnold-foundation-grants',
-  'https://en.wikipedia.org/wiki/Laura_and_John_Arnold_Foundation',
-  'https://en.wikipedia.org/wiki/Laura_and_John_Arnold_Foundation',
+  ('Arnold Ventures','Private foundation','United States','Laura-and-John-Arnold-Foundation-177757582300684','http://www.arnoldfoundation.org/','http://www.arnoldfoundation.org/grants/',NULL,NULL,NULL,NULL,NULL,NULL,'lja_foundation',NULL,NULL,NULL, 'quarterly refresh', 'quarterly refresh', 'months', 'days','https://github.com/riceissa/arnold-foundation-grants',
+  'https://en.wikipedia.org/wiki/Arnold_Ventures_LLC',
+  'https://en.wikipedia.org/wiki/Arnold_Ventures_LLC',
   ' The foundation, started in 2008, has ramped up spending over time',
   ' The foundation is making big bets in its focus areas of criminal justice reform, education (K-12), public accountability (pension reform, United States), and research integrity',
   NULL,
