@@ -45,8 +45,8 @@ print '<li><a href="#doneeInfo">Basic donee info</a></li>';
 print '<li><a href="#donorDoneeRelationship">Donor&ndash;donee relationship</a></li>';
 print '<li><a href="#donorDoneeStatistics">Donor&ndash;donee donation statistics</a></li>';
 print '<li><a href="#donorDoneeDonationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</a></li>';
-print '<li><a href="#donorDoneeDonationList">Donor donation list</a></li>';
-print '<li><a href="#donorDoneeDocumentList">Donor document list</a></li>';
+print '<li><a href="#donorDoneeDocumentList">Donor&ndash;donee document list</a></li>';
+print '<li><a href="#donorDoneeDonationList">Donor&ndash;donee donation list</a></li>';
 print '</ul>';
 
 $cache_location = "cache/" . md5($_SERVER['REQUEST_URI']) . ".html";
@@ -59,8 +59,8 @@ if (needToRegenerate($cache_location)) {
   include ("backend/donorDoneeRelationship.inc");
   include ("backend/donorDoneeStatistics.inc");
   include ("backend/donorDoneeDonationAmountsByCauseAreaAndYear.inc");
-  include ("backend/donorDoneeDonationList.inc");
   include ("backend/donorDoneeDocumentList.inc");
+  include ("backend/donorDoneeDonationList.inc");
   $output = ob_get_clean();
   file_put_contents($cache_location, $output);
 }
