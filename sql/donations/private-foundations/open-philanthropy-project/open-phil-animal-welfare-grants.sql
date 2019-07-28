@@ -59,10 +59,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing is not explicitly discussed, but it is likely because the timeframe for the earlier grants is ending',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL),
 
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
-  ('Open Philanthropy Project','The Humane League',1565000,'2019-03-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-league-open-wing-alliance-2019','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years to The Humane League to support program grants, events, and associated costs for the Open Wing Alliance. This funding will support members of the Open Wing Alliance who are working to secure corporate cage-free pledges and build an effective farm animal welfare movement in more nations. Follows the September 2017 support https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-league-open-wing-alliance-2017',NULL,'Lewis Bollard','2019-04-26','day',NULL,NULL);
+  ('Open Philanthropy Project','The Humane League',1565000,'2019-03-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-league-open-wing-alliance-2019','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-04-26','day',NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support program grants, events, and associated costs for the Open Wing Alliance. This funding will support members of the Open Wing Alliance who are working to secure corporate cage-free pledges and build an effective farm animal welfare movement in more nations.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'No explicit reasons given but likely the same as the reasons for the original September 2017 support https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-league-open-wing-alliance-2017',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing is not explicitly discussed, but it is likely because the timeframe for the earlier grants is ending',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy Project','Global Animal Partnership',500000,'2016-04-01','month','donation log','Animal welfare/factory farming/welfarism/rating system/United States','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-animal-partnership-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Supports improvements of the GAP 5-star rating system (used by companies such as Whole Foods)','United States','Lewis Bollard', NULL, NULL, NULL,NULL),
