@@ -72,6 +72,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing is not explicitly discussed, but it is likely because the timeframe for the earlier grants is ending',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy Project','The Humane League',750000,'2019-01-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-league-broiler-welfare-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-04-30','day',NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support corporate campaigns to improve the welfare of broiler chickens. Broiler chickens are the most numerous land farm animals. Broiler welfare campaigns seek to address these causes of suffering.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'Open Phil considers broiler chicken welfare a high-impact cause: "Broiler chickens are the most numerous land farm animals, with more than a billion alive at any time and approximately 9 billion slaughtered annually in the U.S. alone. Their welfare is impacted by genetics, overcrowding, inhumane slaughter, and environmental factors like chronic sleep deprivation due to lighting schedules optimized for growth." The Humane League is selected for reasons outlined in earlier grants, such as	the August 2018 general support https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-league-general-support-2018',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Likely based on funding needs and the using up of funds from previous grants. No explicit reasons for timing are given',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
