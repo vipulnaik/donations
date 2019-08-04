@@ -109,9 +109,14 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('https://www.openphilanthropy.org/research/cause-reports/macroeconomic-policy','Macroeconomic policy','2014-05-01',NULL,NULL,'Open Philanthropy Project','Open Philanthropy Project',NULL,'Review of current state of cause area','Macroeconomic stabilization policy','Initial findings from a medium-depth investigation into the current state of macroeconomic stabilization policy');
 
-# -- Open Phil global health
-# -- insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-# -- ('https://www.openphilanthropy.org/research/cause-reports/advocacy-improved-or-increased-us-foreign-aid','Advocacy for Improved or Increased U.S. Foreign Aid
+# -- Open Phil scientific research
+
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('https://www.openphilanthropy.org/blog/explaining-our-bet-sherlock-biosciences-innovations-viral-diagnostics','Explaining Our Bet on Sherlock Biosciences’ Innovations in Viral Diagnostics','2019-06-10',NULL,'Heather Youngs|Chris Somerville','Open Philanthropy Project','Open Philanthropy Project','Sherlock Biosciences','Single donation documentation','Scientific research','In this new-style blog post, the reasons for the Open Philanthropy Project grant https://www.openphilanthropy.org/focus/scientific-research/miscellaneous/sherlock-biosciences-research-viral-diagnostics to Sherlock Biosciences are explained in a conversational style. The conversation participants include Michael Levine (Communications Officer) and the grant investigators Chris Somerville and Heather Youngs');
+  
+-- Open Phil global health
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('https://www.openphilanthropy.org/research/cause-reports/advocacy-improved-or-increased-us-foreign-aid','Advocacy for Improved or Increased U.S. Foreign Aid',NULL,NULL,NULL,'Open Philanthropy Project','Open Philanthropy Project',NULL,'Review of current state of cause area','Global health and development','The Open Philanthropy Project reviews the current state of policy advocacy, in order to identify what a new funder (potentially, the Open Philanthropy Project) could do in the space');
 
 # -- Open Phil staff suggestions
 
