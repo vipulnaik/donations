@@ -126,6 +126,36 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+# -- Grants to Royal Veterinary College
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy project','Royal Veterinary College',130850,'2019-01-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/royal-vet-college-halal','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford','2019-05-23','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to investigate a more humane method of halal poultry slaughter. Controlled atmosphere slaughter techniques, which are among the most commonly used stunning systems, are not currently approved by halal authorities. Royal Veterinary College intends to use these funds to investigate a new method of stunning that would both be approved by halal authorities and allow chickens to be individually stunned',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says the grant would "potentially [reduce] suffering for more than 100 million chickens slaughtered in halal facilities in Europe each year."',
+  /* donor_amount_reason */ 'Grant of £100,000 ($130,850 at the time of conversion)',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+# -- Grants to Princeton University
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','Princeton University',170000,'2019-01-01','month','donation log','Animal welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/princeton-university-guo-peng','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Lewis Bollard','2019-05-23','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant, structured as a gift',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support the work of Shandong University Professor Guo Peng, a leading animal protection scholar in China, in collaboration with Professor Peter Singer of Princeton University. This award will support the translation of books on animal ethics and farm animal welfare issues into Mandarin Chinese',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says the project "could bolster animal ethics in Chinese universities, foster more attention on these issues, and eventually influence policy discussions."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 # -- Grants to Farm Forward
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
