@@ -195,6 +195,33 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
+  ('Open Philanthropy Project','FAI Farms',426000,'2019-04-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-tilapia-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-06-07','day',NULL,NULL,
+  /* donation_process */ 'The grant page says: "This project was supported through a contractor agreement. While we do not typically publish pages for contractor agreements, we chose to write about this funding because we view it as conceptually similar to an ordinary grant, despite its structure as a contract due to the recipient’s organizational form."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to develop welfare measures, best practice guidelines, and training materials to improve the welfare of farmed tilapia. FAI plans to research optimal stocking density, humane transport and slaughter methods, ways to minimize handling stress, and alternatives to mouth clipping of territorial male tilapia"',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy Project','FAI Farms',107200,'2019-04-01','month','donation log','Animal welfare/factory farming/chicken/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-cage-free-eggs-china','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Lewis Bollard','2019-06-07','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant made via the Open Philanthropy Action Fund. The grant page says: "This project was supported through a contractor agreement. While we do not typically publish pages for contractor agreements, we chose to write about this funding because we view it as conceptually similar to an ordinary grant, despite its structure as a contract due to the recipient’s organizational form."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support Chinese farm animal welfare auditor trainings, egg farm audits, and a cage-free conference. These projects will promote cage-free production in China, the world’s largest egg producer, and aim to reduce the suffering of egg-laying hens."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1);
+
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy Project','Global Animal Partnership',500000,'2016-04-01','month','donation log','Animal welfare/factory farming/welfarism/rating system/United States','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-animal-partnership-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Supports improvements of the GAP 5-star rating system (used by companies such as Whole Foods)','United States','Lewis Bollard', NULL, NULL, NULL,NULL),
   ('Open Philanthropy Project','Compassion in World Farming USA',550000,'2016-04-01','month','donation log','Animal welfare/factory farming/welfarism/United States','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/CIWF-USA-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant for general support, after organization was considered and rejected for cage-free campaign grant. Annual budget of organization was 450000. Followup conversation with Leah Garces (Executive Director) and Dawn Rotheram (Development Director) at https://www.openphilanthropy.org/sites/default/files/Leah_Garces_Dawn_Rotheram_11-08-16_%28public%29.pdf on 2016-11-08','United States','Lewis Bollard', '2016-07-06','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/bOG43Bv1UpY','https://predictionbook.com/predictions/185227|https://predictionbook.com/predictions/185228'),
