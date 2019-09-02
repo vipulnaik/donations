@@ -24,6 +24,20 @@ insert into donations(donor, donee, amount, donation_date,donation_date_precisio
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Employ America */
+insert into donations(donor, donee, amount, donation_date,donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, affected_countries,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','Employ America',300000,'2019-04-01','month','donation log','Macroecononic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/employ-america-start-up','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States','2019-05-29','day',NULL,NULL,
+  /* donation_process */ 'This is a total across two grants, one of which is being made by the Open Philanthropy Action Fund',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "to help launch Employ America and cover a six-month pilot period." The grant page says: "Employ America will focus on making the public and intellectual case for policies that support full employment and building a broader set of allies to further that goal, especially with an eye to the next economic downturn. In order to do so, it will produce research and analysis on the state of the labor market and current and potential macroeconomic policies and policymakers. It will be led by Sam Bell, who has previously consulted for us and our grantee Fed Up."',
+  /* intended_funding_timeframe_in_months */ 6,
+  /* donor_donee_reason */ 'The grant page says: "As labor market conditions have improved over the last few years, we’ve become less confident about the appropriate short term stance of monetary policy, but we continue to believe it is worthwhile to support research and advocacy like this, at least through the next recession."',
+  /* donor_amount_reason */ 'Amount likely determined based on how much is needed for an initial 6-month startup',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notets */ NULL);
+
 # -- Macroeconomic policy research/United States
 insert into donations(donor, donee, amount, donation_date,donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, influencer, affected_countries,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy Project','Center for Popular Democracy Action Fund',31500,'2016-10-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-popular-democracy-action-fund-fed-campaign-october-2016','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant to support the “Fed Up” campaign. The campaign aims to encourage more accommodative monetary policies and greater transparency and public engagement in the governance of the Federal Reserve, and specifically in the selection of regional Federal Reserve Bank presidents and leaders. Related to other grants made to the Center for Popular Democracy; see https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-popular-democracy-fed-campaign-2016. Grant financed by the Open Philanthropy Action Fund. As explained at https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/FrHyHKPNy-M the grant announcement was delayed till the Open Philanthropy Project was completely separate from GiveWell','Alexander Berger','United States','2018-01-19','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/FrHyHKPNy-M',NULL),
