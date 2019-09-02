@@ -1,6 +1,7 @@
-# -- Biosecurity and pandemic preparedness
+/* Biosecurity and pandemic preparedness */
 
-# -- Johns Hopkins Center for Health Security
+/* Johns Hopkins Center for Health Security  */
+
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url,influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy Project','Johns Hopkins Center for Health Security',2744000,'2016-10-01','month','donation log','Biosecurity and pandemic preparedness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/upmc-center-health-security-emerging-leaders-biosecurity-initiative','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity', 'Jaime Yassif', '2016-10-12', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/NXqvn6Yzlv0',NULL,
   /* donation_process */ NULL,
@@ -37,7 +38,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
-# -- Blue Ribbon Study Panel on Biodefense
+/* Blue Ribbon Study Panel on Biodefense */
+
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url,influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy Project','Blue Ribbon Study Panel on Biodefense',300000,'2015-04-01','month','donation log','Biosecurity and pandemic preparedness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/blue-ribbon-study-panel-biodefense-grant','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity', NULL, '2015-10-27', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/irJ3fjbOf0E',NULL,
   /* donation_process */ 'According to https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/blue-ribbon-study-panel-biodefense-grant#Our_process "We learned about this funding opportunity from Bruce Altevogt, who at the time was a senior program officer at the Institute of Medicine. Our investigation process for this grant included speaking with Dr. Robert Kadlec and other Study Panel staff about the Study Panel’s proposed activities and strategy, speaking with other potential funders about their thoughts on this opportunity, and having Open Philanthropy Project Program Officer Howie Lempel attend three of the Study Panel’s panel sessions."',
@@ -86,6 +88,24 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
+
+/* Biosecure Ltd */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url,influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
+  ('Open  Philanthropy Project','Biosecure Ltd',25000,'2018-12-01','month','donation log','Biosecurity and pandemic preparedness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/biosecure-campaign-against-bioweapons-research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Claire Zabel','2019-06-07','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant structured through a contractor agreement. The  grant page says: "While we do not typically publish pages for contractor agreements, we chose to write about this funding because we view it as conceptually similar to an ordinary grant, despite its structure as a contract due to the recipient’s organizational form."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grantee "intends to use these funds to explore different models for strengthening the societal norm against biological weapons and reducing the likelihood of an arms race involving biological weapons, as well as investigating the feasibility, costs, and potential benefits of the various models."',
+  /* intended_funding_timeframe_in_months*/ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ NULL);
+
+/* Other grants */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy Project','Center for International Security and Cooperation',643415,'2016-10-01','month','donation log','Biosecurity and pandemic preparedness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/center-international-security-and-cooperation-biosecurity-research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','In support of research by Megan Palmer. Her policy research is focused on developing ways to improve the governance of biological science and technology. One of the projects she intends to focus on in the next few years is a study of past, current and future iGEM competitions to better understand how to motivate young scientists and engineers to take biosafety and biosecurity seriously and how to instill those values in a way that lasts throughout their careers.', NULL, '2016-11-03', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/oXtlBRcvQmE',NULL),
