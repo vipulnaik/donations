@@ -1,6 +1,6 @@
 # -- Animal welfare/factory farming
 
-# -- Grants to The Humane League
+/* Grants to The Humane League */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy Project','The Humane League',1000000,'2016-02-01','month','donation log','Animal welfare/factory farming/chicken/cage-free campaign/United States','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-league-corporate-cage-free-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard', '2016-02-24', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/0KdemWC5p4E',NULL,
   /* donation_process */ 'The donation is part of a bunch of corporate cage-free campaign spending. See https://www.openphilanthropy.org/blog/initial-grants-support-corporate-cage-free-reforms for more background. The specific process for The Humane League is not discussed in detail; see https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-league-corporate-cage-free-campaigns#Our_process',
@@ -86,7 +86,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
-# -- Grants to Humane Society Legislative Fund
+/* Grants to Humane Society Legislative Fund */
+
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy Project','Humane Society Legislative Fund',525000,'2017-12-01','month','donation log','Animal welfare/factory farming/legislative standards','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/Humane-Society-Legislative-Fund-Opposing-King-Amendment','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard','2019-04-30','day',NULL,NULL,
   /* donation_process */ NULL,
@@ -100,7 +101,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Grant made via the Open Philanthropy Action Fund, because it is being used for lobbying purposes');
 
-# -- Grants to Compassion Over Killing
+/* Grants to Compassion Over Killing */
+
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy Project','Compassion Over Killing',500000,'2016-12-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-over-killing-us-broiler-welfare-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard', '2017-02-16', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/QnCMY45su7E',NULL,
   /* donation_process */ NULL,
@@ -126,7 +128,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
-# -- Grants to Royal Veterinary College
+/* Grants to Royal Veterinary College */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy project','Royal Veterinary College',130850,'2019-01-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/royal-vet-college-halal','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford','2019-05-23','day',NULL,NULL,
@@ -141,7 +143,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
-# -- Grants to Princeton University
+/* Grants to Princeton University */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy Project','Princeton University',170000,'2019-01-01','month','donation log','Animal welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/princeton-university-guo-peng','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Lewis Bollard','2019-05-23','day',NULL,NULL,
@@ -156,7 +158,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
-# -- Grants to Farm Forward
+/* Grants to Farm Forward */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy Project','Farm Forward',100000,'2017-01-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/farm-forward-broiler-chicken-welfare-advocacy','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard', '2017-03-30', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/h7o0EgIM2Ew',NULL,
@@ -195,6 +197,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to FAI Farms */
+
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
   ('Open Philanthropy Project','FAI Farms',426000,'2019-04-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-tilapia-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-06-07','day',NULL,NULL,
   /* donation_process */ 'The grant page says: "This project was supported through a contractor agreement. While we do not typically publish pages for contractor agreements, we chose to write about this funding because we view it as conceptually similar to an ordinary grant, despite its structure as a contract due to the recipient’s organizational form."',
@@ -221,6 +225,23 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL,
   /* is_contractwork */ 1);
+
+/* Grants to Family Farm Action */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','Family Farm Action',153000,'2017-12-01','month','donation log','Animal welfare/factory farming/legislative standards','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/family-farm-action-opposing-king-amendment','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard','2019-06-07','day',NULL,NULL,
+  /* donation_process */ 'Grant made by the Open Philanthropy Action Fund, because of the funding being used for lobbying efforts',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support efforts to defeat the Protect Interstate Commerce Act, also known as the King Amendment. The amendment, if enacted, would prevent states from imposing animal welfare standards on the sale of animal products produced in another state. FFA plans to conduct grassroots outreach to affected groups, especially family farmers."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Other grants (still in old format) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy Project','Global Animal Partnership',500000,'2016-04-01','month','donation log','Animal welfare/factory farming/welfarism/rating system/United States','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-animal-partnership-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Supports improvements of the GAP 5-star rating system (used by companies such as Whole Foods)','United States','Lewis Bollard', NULL, NULL, NULL,NULL),
