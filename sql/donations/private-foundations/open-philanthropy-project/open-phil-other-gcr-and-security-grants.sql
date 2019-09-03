@@ -34,7 +34,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy Project','Future of Humanity Institute',12051808.93,'2018-07-01','month','donation log','Global catastrophic risks','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/future-humanity-institute-work-on-global-catastrophic-risks','https://www.openphilanthropy.org/focus/global-catastrophic-risks','Nick Beckstead','2018-09-01','day',NULL,NULL,
   /* donation_process */ 'This is a series of awards totaling £13,428,434 ($16,200,062.78 USD at market rate on September 2, 2019); as of September 2, 2019, $12,051,808.93 of the amount has been allocated. ',
   /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant to support work on risks from advanced artificial intelligence, biosecurity and pandemic preparedness, and macrostrategy. The grant page says: "The largest pieces of the omnibus award package will allow FHI to recruit and hire for an education and training program led by Owen Cotton­ Barratt, and retain and attract talent in biosecurity research and FHI’s Governance of AI program."',
+  /* intended_use_of_funds */ 'Grant to support work on risks from advanced artificial intelligence, biosecurity and pandemic preparedness, and macrostrategy. The grant page says: "The largest pieces of the omnibus award package will allow FHI to recruit and hire for an education and training program led by Owen Cotton­Barratt, and retain and attract talent in biosecurity research and FHI’s Governance of AI program."',
   /* intended_funding_timeframe_in_months */ 36,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
