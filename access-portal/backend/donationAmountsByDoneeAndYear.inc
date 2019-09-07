@@ -1,5 +1,7 @@
 <?php
 
+$numDoneesToShowInLimitedView = 75;
+
 if (($_REQUEST['display'] ?? '') == "full") {
   $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee;";
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
@@ -9,7 +11,7 @@ if (($_REQUEST['display'] ?? '') == "full") {
     $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee;";
   }
 } else {
-  $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee order by sum(amount) desc limit 50;";
+  $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee order by sum(amount) desc limit $numDoneesToShowInLimitedView;";
 }
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();
