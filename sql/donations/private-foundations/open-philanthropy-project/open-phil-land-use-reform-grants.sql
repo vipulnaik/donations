@@ -50,7 +50,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/sightline-institute-housing-and-urban-development-2019 suggests that this grant would be considered a success',
   /* notes */ NULL),
 
-  ('Open Philanhtropy Project','Sightline Institute',150000,'2019-02-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/sightline-institute-housing-and-urban-development-2019','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States','Washington|Oregon',NULL,'Alexander Berger','2019-06-07','day',NULL,NULL,
+  ('Open Philanthropy Project','Sightline Institute',150000,'2019-02-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/sightline-institute-housing-and-urban-development-2019','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States','Washington|Oregon',NULL,'Alexander Berger','2019-06-07','day',NULL,NULL,
   /* donation_process */ 'Discretionary grant. Grant made by the Open Philanthropy Action Fund because the funds are to be used for lobbying',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support work on housing and land use." Grantee "plans to use these funds to support priority housing legislation in Washington and Oregon."',
