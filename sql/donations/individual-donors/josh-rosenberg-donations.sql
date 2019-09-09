@@ -13,6 +13,6 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   # -- 5% for animal welfare, unspecified target charity
   # -- 2017
   ('Josh Rosenberg','GiveWell top charities',NULL,0.8,'2017-12-11','day','date of donation announcement','Global health and cash transfers','https://blog.givewell.org/2017/12/11/staff-members-personal-donations-for-giving-season-2017/#Josh','Believes that these are among the most effective ways to help people, and knows the team has intensely scrutinized these giving opportunities','GiveWell',NULL),
-  ('Josh Rosenberg','Effective Altruism Funds: Long Term Future Fund',NULL,0.1,'2017-12-11','day','date of donation announcement','Global catastrophic risks/other long-term future','https://blog.givewell.org/2017/12/11/staff-members-personal-donations-for-giving-season-2017/#Josh','Believes money in the fund will be put to good use, and believes in the importance of future generations',NULL,NULL);
+  ('Josh Rosenberg','Effective Altruism Funds: Long-Term Future Fund',NULL,0.1,'2017-12-11','day','date of donation announcement','Global catastrophic risks/other long-term future','https://blog.givewell.org/2017/12/11/staff-members-personal-donations-for-giving-season-2017/#Josh','Believes money in the fund will be put to good use, and believes in the importance of future generations',NULL,NULL);
   # -- 10% for animal welfare, unspecified target charity
 
