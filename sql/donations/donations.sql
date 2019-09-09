@@ -10,14 +10,18 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   ('Joshua Zelinsky','Internet Archive',20.0,NULL,'2011-08-21','day','date of donation announced in announcement','Digital preservation','https://www.lesswrong.com/posts/eD6TZm2r25HzYzZzY/spaced-repetition-literature-review-prize-and-the-winner-is#RydGTnYufdjxzvDKW','Charity chosen by Gwern Branwen, who won the spaced repetition literature review prize.','Prize to charity of choice');
 
 # -- The Oxford Prioritisation Project grant
-insert into donations(donor, donee, amount, fraction, donation_date,
-    donation_date_precision, donation_date_basis, cause_area, url, notes,
-    payment_modality, match_eligible, goal_amount, influencer, employer_match,
-    matching_employer, amount_original_currency, original_currency,
-    currency_conversion_date, currency_conversion_basis,
-    donation_announcement_date, donation_announcement_date_precision,
-    donation_announcement_url) values
-    ('Oxford Prioritisation Project', '80,000 Hours', 12934, NULL, '2017-05-09', 'day', 'date of donation announcement', 'Effective altruism/movement growth', 'https://oxpr.io/blog/2017/5/20/four-quantiative-models-aggregation-and-final-decision', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 10000, 'GBP', '2017-05-09', 'Bloomberg', '2017-05-09', 'day', 'https://www.facebook.com/events/336092186805365/');
+insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer, amount_original_currency, original_currency, currency_conversion_date, currency_conversion_basis, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Oxford Prioritisation Project', '80,000 Hours', 12934, NULL, '2017-05-09', 'day', 'date of donation announcement', 'Effective altruism/movement growth', 'https://oxpr.io/blog/2017/5/20/four-quantiative-models-aggregation-and-final-decision', NULL, NULL, NULL, NULL, NULL, NULL, 10000, 'GBP', '2017-05-09', 'Bloomberg', '2017-05-09', 'day', 'https://www.facebook.com/events/336092186805365/',
+  /* donation_process */ 'The donation is the outcome of the Oxford Prioritisation Project, a months-long group project that looks at a number of donation targets to find the best one. The donation amount of 10,000 GBP was pre-determined. 80,000 Hours is the ultimate winner and gets the entire amount',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The selection of 80,000 Hours as the target for the donation is a result of a lengthy process of deliberation and comparison. The final stage of comparison includes four charities: 80,000 Hours, Machine Intelligence Research Institute, StrongMinds, and Animal Charity Evaluators. The final comparison is carried out though a quantitative analysis summarized at https://oxpr.io/blog/2017/5/20/expected-value-estimates-we-cautiously-took-literally The post describing the model for 80,000 Hours is at https://oxpr.io/blog/2017/5/13/a-model-of-80000-hours',
+  /* donor_amount_reason */ 'Amount (of 10,0000 GBP) determined at the outset of the Oxford Prioritisation Project, as the donation amount that the project seeks to allocate',
+  /* donor_timing_reason */ 'Timing determined by the end of the time period for the Oxford Prioritisation Project',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'See https://forum.effectivealtruism.org/posts/JfDW9LfcMFGXhLxTC/a-model-of-80-000-hours-oxford-prioritisation-project for a retrospective on the Oxford Prioritisation Project. 80,000 Hours is mentioned only once in the retrospective: "We would guess that the real costs of the £10,000 grant were low. At the outset, the probability was quite high that the money would eventually be granted to a high-impact organisation, with a cost-effectiveness not several times smaller than CEA’s counterfactual use of the money3. In fact, the grant was given to 80,000 Hours."',
+  /* notes */ NULL);
 
 # -- Also includes GiveWell and Open Phil donors who have only one year of donation information
 
