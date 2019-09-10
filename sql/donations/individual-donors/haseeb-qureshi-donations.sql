@@ -1,7 +1,4 @@
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer) values
-  ('Haseeb Qureshi', 'Against Malaria Foundation', 12650, 0.25, '2016-01-01','year','date of donation announced in announcement','Global health/malaria','http://haseebq.com/2016-donations-and-some-thoughts/','Highlighted rock-solid work at saving lives and the need to spend on surefire things in addition to speculative investments', NULL, NULL, 50600, 'GiveWell'),
-  ('Haseeb Qureshi', 'Rethink Charity',12650,0.25,'2016-01-01','year','date of donation announced in announcement','Effective altruism/movement growth','http://haseebq.com/2016-donations-and-some-thoughts/','Highlighted its projects including the Effective Altruism Forum', NULL, NULL, 50600,NULL),
-  ('Haseeb Qureshi', '80,000 Hours',25300, 0.5,'2016-01-01','year','date of donation announced in announcement','Effective altruism/movement growth','http://haseebq.com/2016-donations-and-some-thoughts/','Highlighted impact potential, significant growth, and personal anecdote of how it influenced the author', NULL, NULL, 50600,NULL),
   ('Haseeb Qureshi','Against Malaria Foundation',11340,0.25,'2017-01-01','year','date of donation announced in announcement','Global health/malaria','https://medium.freecodecamp.org/yearly-donations-and-why-you-should-give-now-not-later-cba890cabfbe','Donor called it "the same organization I donate to every year, and the #1 top ranked charity on Givewell for multiple years."',NULL,NULL,45370,NULL),
   ('Haseeb Qureshi','Alex Flint AI risk fund',34030,0.75,'2017-01-01','year','date of donation announced in announcement','AI safety','https://medium.freecodecamp.org/yearly-donations-and-why-you-should-give-now-not-later-cba890cabfbe','Donor said "I’m donating to a donor-advised fund to be donated to a promising AI safety charity. The fund is managed by my good friend Alex Flint, a computer vision PhD from Oxford who’s very well-versed in AI risk"',NULL,NULL,45370,NULL);
 
@@ -20,7 +17,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The donor would continue to donate to Against Malaria Foundation for the next two years; see https://haseebq.com/2016-donations-and-some-thoughts/ and https://medium.freecodecamp.org/yearly-donations-and-why-you-should-give-now-not-later-cba890cabfbe but would stop donating to it in 2018',
   /* notes */ NULL),
 
-  ('Haseeb Qureshi','Rethink Charity', 5300, '2015-01-01','year','date of donation announced in announcement','Effective altruism/movement growth','https://haseebq.com/my-first-year-earning-to-give-a-retrospective/',21200, 0.25, 'GiveWell', '2015-12-31','day','https://haseebq.com/my-first-year-earning-to-give-a-retrospective/',
+  ('Haseeb Qureshi','Rethink Charity', 5300, '2015-01-01','year','date of donation announced in announcement','Effective altruism/movement growth','https://haseebq.com/my-first-year-earning-to-give-a-retrospective/',21200, 0.25, NULL, '2015-12-31','day','https://haseebq.com/my-first-year-earning-to-give-a-retrospective/',
   /* donation_process */ 'The announcement post says: "In all I gave 33% of my pre-tax income, which since I started my job in June, amounts to $21,200 USD I donated to high-impact charities." The allocation of this $21,200 is based on analysis of the individual target charities',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'At the time of the donation, the donee is known as .impact (it would later rename itself to Rethink Charity). The announcement post calls it "a grassroots EA organization with which I’ve grown more involved over the last year. .impact is best known for creating a ton of EA infrastructure, including the EA Forums and EA Hub. Their latest project is LEAN, which helps to seed and support EA chapters all around the world, helping to foster the movement at the grassroots level."',
@@ -32,7 +29,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The donor would continue to make similar donations in later years: to Rethink Charity in 2016 https://haseebq.com/2016-donations-and-some-thoughts/and to the Local Effective Altruism Network in 2018 https://haseebq.com/2018-donations/',
   /* notes */ NULL),
 
-  ('Haseeb Qureshi','Centre for Effective Altruism', 10600,'2015-01-01','year','date of donation announced in announcement','Effective altruism/movement growth','https://haseebq.com/my-first-year-earning-to-give-a-retrospective/',21200, 0.5, 'GiveWell', '2015-12-31','day','https://haseebq.com/my-first-year-earning-to-give-a-retrospective/',
+  ('Haseeb Qureshi','Centre for Effective Altruism', 10600,'2015-01-01','year','date of donation announced in announcement','Effective altruism/movement growth','https://haseebq.com/my-first-year-earning-to-give-a-retrospective/',21200, 0.5, NULL, '2015-12-31','day','https://haseebq.com/my-first-year-earning-to-give-a-retrospective/',
   /* donation_process */ 'The announcement post says: "In all I gave 33% of my pre-tax income, which since I started my job in June, amounts to $21,200 USD I donated to high-impact charities." The allocation of this $21,200 is based on analysis of the individual target charities',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Donation for the EA Outreach team run by Kerry Vaughan and Tyler Alterman. The announcement post says: "EA Outreach was responsible for EA Global, the major EA conference this year at Google HQ, and have ambitious plans on how to grow the movement and influence more of the world toward evidence-based giving."'
@@ -42,5 +39,40 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'End-of-year round of donations of 33% of income in the year; this is part of the donor''s earning-to-give strategy',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL),
 
+  ('Haseeb Qureshi', 'Against Malaria Foundation', 12650, '2016-01-01','year','date of donation announced in announcement','Global health/malaria','https://haseebq.com/2016-donations-and-some-thoughts/',50600, 0.25, 'GiveWell','2017-01-29','day','https://haseebq.com/2016-donations-and-some-thoughts/',
+  /* donation_process */ 'The announcement post says: "In 2016, my donations totaled $50,600. My finances this year were little more complicated, but that was my best estimate of 33% of my pre-tax income. (That income does not include RSUs; whenever I can liquidate them, I will also donate 33% of their value.) Below are the organizations I donated to and why."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The announcement post says: "The Against Malaria Foundation distributes low-cost anti-mosquito bednets in parts of Africa that are ravaged by malaria."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The announcement post says: "AMF has been repeatedly ranked by Givewell as the dollar-for-dollar most impactful charity in the world. It’s important to make speculative and high-risk altruistic investments. But there is some straightforward value in just rewarding and spreading the word about organizations that rock at saving lives (and in the worst case, to have no doubt that one’s donations are having real positive impact). I also donated to them in 2015, and good chance I’ll donate again in 2017."',
+  /* donor_amount_reason */ 'The total amount the donor is giving away is $50,600, which is 33% of pre-tax income. The allocation of 25% to Against Malaria Foundation is likely determined by the needs of other recipients; it is also the same percentage as allocated in 2015',
+  /* donor_timing_reason */ 'End-of-year round of donations of 33% of income in the year; this is part of the donor''s earning-to-give strategy',
+  /* donor_next_donation_thoughts */ 'The announcement post says: "good chance I’ll donate again in 2017"',
+  /* donor_retrospective */ 'The donor would make a similar donation to Against Malaria Foundation in 2017 https://medium.freecodecamp.org/yearly-donations-and-why-you-should-give-now-not-later-cba890cabfbe',
+  /* notes */ NULL),
+
+  ('Haseeb Qureshi', 'Rethink Charity',12650,'2016-01-01','year','date of donation announced in announcement','Effective altruism/movement growth','https://haseebq.com/2016-donations-and-some-thoughts/',50600, 0.25, NULL,'2017-01-29','day','https://haseebq.com/2016-donations-and-some-thoughts/',
+  /* donation_process */ 'The announcement post says: "In 2016, my donations totaled $50,600. My finances this year were little more complicated, but that was my best estimate of 33% of my pre-tax income. (That income does not include RSUs; whenever I can liquidate them, I will also donate 33% of their value.) Below are the organizations I donated to and why."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The announcement post says: ".impact [the name of Rethink Charity at the time] is a grassroots EA organization that maintains a lot of Effective Altruism’s infrastructure, including the EA Forum (which I highly recommend). One of their most exciting projects is LEAN (Local Effective Altruism Network), which helps to seed and support university EA organizations."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The announcement post says: "One of their most exciting projects is LEAN (Local Effective Altruism Network), which helps to seed and support university EA organizations. [...] Young people have already shown that in many ways they are going to be the primary vector for change in this world. And as those young people come into power, I’d love to see more of them thinking rigorously about how to do good. In short, I think influencing more young people to think critically about effectiveness is one of our best levers for ensuring a positive future."',
+  /* donor_amount_reason */ 'The total amount the donor is giving away is $50,600, which is 33% of pre-tax income. The allocation of 25% to Rethink Charity is likely determined by the needs of other recipients; it is also the same percentage as allocated in 2015',
+  /* donor_timing_reason */ 'End-of-year round of donations of 33% of income in the year; this is part of the donor''s earning-to-give strategy',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The donor would make a similar grant to the Local Effective Altruism Network in 2018 https://haseebq.com/2018-donations/',
+  /* notes */ NULL),
+
+  ('Haseeb Qureshi', '80,000 Hours',25300,'2016-01-01','year','date of donation announced in announcement','Effective altruism/movement growth','http://haseebq.com/2016-donations-and-some-thoughts/',50600,0.5,NULL,'2017-01-29','day','https://haseebq.com/2016-donations-and-some-thoughts/',
+  /* donation_process */ 'The announcement post says: "In 2016, my donations totaled $50,600. My finances this year were little more complicated, but that was my best estimate of 33% of my pre-tax income. (That income does not include RSUs; whenever I can liquidate them, I will also donate 33% of their value.) Below are the organizations I donated to and why."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The announcement post says: "80K is an organization that advises young people on how to do the most good with their careers. They analyze different career paths, balancing career capital with altruistic aims."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The announcement post says: "80K actually strongly affected my own trajectory when I was considering career pursuits. Reading through their career guide on tech entrepreneurship influenced my original decision to enter into the tech industry. 80K has had had impressive growth and has done a lot of good for influencing more students on the path to altruistic lives. There’s a big talent gap in effective altruism right now, and 80K seems like the best investment for filling that gap. I’m excited to see what they can do in 2017."',
+  /* donor_amount_reason */ 'The total amount the donor is giving away is $50,600, which is 33% of pre-tax income. The allocation of 50% to 80,000 Hours is likely determined by the needs of other recipients; it is also consistent with the percentage allocated the previous year for EA Outreach',
+  /* donor_timing_reason */ 'End-of-year round of donations of 33% of income in the year; this is part of the donor''s earning-to-give strategy',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
