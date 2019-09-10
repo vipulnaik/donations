@@ -1,7 +1,3 @@
-insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer) values
-  ('Haseeb Qureshi','Against Malaria Foundation',11340,0.25,'2017-01-01','year','date of donation announced in announcement','Global health/malaria','https://medium.freecodecamp.org/yearly-donations-and-why-you-should-give-now-not-later-cba890cabfbe','Donor called it "the same organization I donate to every year, and the #1 top ranked charity on Givewell for multiple years."',NULL,NULL,45370,NULL),
-  ('Haseeb Qureshi','Alex Flint AI risk fund',34030,0.75,'2017-01-01','year','date of donation announced in announcement','AI safety','https://medium.freecodecamp.org/yearly-donations-and-why-you-should-give-now-not-later-cba890cabfbe','Donor said "I’m donating to a donor-advised fund to be donated to a promising AI safety charity. The fund is managed by my good friend Alex Flint, a computer vision PhD from Oxford who’s very well-versed in AI risk"',NULL,NULL,45370,NULL);
-
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, goal_amount, fraction, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Haseeb Qureshi','GiveDirectly', 25000, '2013-01-01', 'year', 'donation log', 'Cash transfers', 'https://eahub.org/user/haseeb-qureshi', 25000, 1.0, 'GiveWell', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 
@@ -32,7 +28,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Haseeb Qureshi','Centre for Effective Altruism', 10600,'2015-01-01','year','date of donation announced in announcement','Effective altruism/movement growth','https://haseebq.com/my-first-year-earning-to-give-a-retrospective/',21200, 0.5, NULL, '2015-12-31','day','https://haseebq.com/my-first-year-earning-to-give-a-retrospective/',
   /* donation_process */ 'The announcement post says: "In all I gave 33% of my pre-tax income, which since I started my job in June, amounts to $21,200 USD I donated to high-impact charities." The allocation of this $21,200 is based on analysis of the individual target charities',
   /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Donation for the EA Outreach team run by Kerry Vaughan and Tyler Alterman. The announcement post says: "EA Outreach was responsible for EA Global, the major EA conference this year at Google HQ, and have ambitious plans on how to grow the movement and influence more of the world toward evidence-based giving."'
+  /* intended_use_of_funds */ 'Donation for the EA Outreach team run by Kerry Vaughan and Tyler Alterman. The announcement post says: "EA Outreach was responsible for EA Global, the major EA conference this year at Google HQ, and have ambitious plans on how to grow the movement and influence more of the world toward evidence-based giving."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'The announcement post says: "[EA Outreach] have ambitious plans on how to grow the movement and influence more of the world toward evidence-based giving. I think the impact they could have is enormous, and so I decided to give them half of my donations this year."',
   /* donor_amount_reason */ 'The announcement post says: "In all I gave 33% of my pre-tax income, which since I started my job in June, amounts to $21,200 USD I donated to high-impact charities." EA Outreach gets 50% of this money; the amount it gets is likely constrained by the needs of other recipients',
@@ -72,6 +68,30 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'The announcement post says: "80K actually strongly affected my own trajectory when I was considering career pursuits. Reading through their career guide on tech entrepreneurship influenced my original decision to enter into the tech industry. 80K has had had impressive growth and has done a lot of good for influencing more students on the path to altruistic lives. There’s a big talent gap in effective altruism right now, and 80K seems like the best investment for filling that gap. I’m excited to see what they can do in 2017."',
   /* donor_amount_reason */ 'The total amount the donor is giving away is $50,600, which is 33% of pre-tax income. The allocation of 50% to 80,000 Hours is likely determined by the needs of other recipients; it is also consistent with the percentage allocated the previous year for EA Outreach',
+  /* donor_timing_reason */ 'End-of-year round of donations of 33% of income in the year; this is part of the donor''s earning-to-give strategy',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Haseeb Qureshi','Against Malaria Foundation',11340,'2017-01-01','year','date of donation announced in announcement','Global health/malaria','https://medium.freecodecamp.org/yearly-donations-and-why-you-should-give-now-not-later-cba890cabfbe',45370,0.25,'GiveWell','2017-12-31','day','https://www.freecodecamp.org/news/yearly-donations-and-why-you-should-give-now-not-later-cba890cabfbe/',
+  /* donation_prrocess */ 'The announcement post says that the donor is donating 33% of his pre-tax income, as usual. This money is being allocated between different charities, based on the donor''s assessment',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The announcement post says: "The Against Malaria Foundation is a non-profit that funds and distributes anti-malarial bednets in malaria-ravaged countries, primarily in Africa and Asia."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The annoucement post calls the donee "the same organization I donate to every year, and the #1 top ranked charity on Givewell for multiple years." It also says: "A single bednet can be funded and distributed for ~$4, making them perhaps the most cost-effective life-saving intervention in the world."',
+  /* donor_amount_reason */ 'The total amount the donor is giving awaay is $45,370, which is 33% of pre-tax income. The allocation of 25% to AMF is the same as the previous two years',
+  /* donor_timing_reason */ 'End-of-year round of donations of 33% of income in the year; this is part of the donor''s earning-to-give strategy',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Haseeb Qureshi','Alex Flint AI safety fund',34030,'2017-01-01','year','date of donation announced in announcement','Global health/malaria','https://medium.freecodecamp.org/yearly-donations-and-why-you-should-give-now-not-later-cba890cabfbe',45370,0.75,NULL,'2017-12-31','day','https://www.freecodecamp.org/news/yearly-donations-and-why-you-should-give-now-not-later-cba890cabfbe/',
+   /* donation_prrocess */ 'The announcement post says that the donor is donating 33% of his pre-tax income, as usual. This money is being allocated between different charities, based on the donor''s assessment',
+  /* intended_use_of_funds_category */ 'Regranting',
+  /* intended_use_of_funds */ 'The announcement post says: "The remaining 75% of my donations this year, $34,030, I’m donating to a donor-advised fund to be donated to a promising AI safety charity."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The annoucement post says: " The fund is managed by my good friend Alex Flint, a computer vision PhD from Oxford who’s very well-versed in AI risk (if you’d likewise want to donate to this fund, I can put you in touch with him). For those who are unfamiliar with AI safety, you might have heard folks Elon Musk, Stephen Hawking, and Sam Harris making pronouncements about the dangers of uncontrolled artificial general intelligence. AI is advancing rapidly, and it’s likely to grow and control more of the infrastructure of the world far faster than we can develop our understanding of how to make it safe. So far the world has invested an remarkably small amounts into thinking about how to make AIs more safe, and I think this will be an increasingly important problem as AI research advances."',
+  /* donor_amount_reason */ 'The total amount the donor is giving awaay is $45,370, which is 33% of pre-tax income. The allocation to the AI safety fund is what is left after taking out the 25% to Against Malaria Foundation (granting 25% to the Against Malaria Foundation has been an yearly fixture of Qureshi''s donations)',
   /* donor_timing_reason */ 'End-of-year round of donations of 33% of income in the year; this is part of the donor''s earning-to-give strategy',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
