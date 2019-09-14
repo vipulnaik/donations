@@ -61,6 +61,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-hotel-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/education-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/evidence-action-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/founders-pledge-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gfi-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/givewell-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gpi-docs.sql
