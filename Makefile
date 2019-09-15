@@ -74,6 +74,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/one-for-the-world-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/open-phil-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/oxprio.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/peter-thiel-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/rethink-charity-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/sandler-foundation-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/sentience-institute-docs.sql
