@@ -1,5 +1,3 @@
-# -- Effective altruism community
-
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, notes, affected_countries) values
   ('Effective Altruism Funds: Meta Fund','Effective Altruism Sweden',83264,'2018-01-14','day','donation log','Effective altruism/movement growth','https://app.effectivealtruism.org/funds/ea-community/payouts/1EjFHdfk3GmIeIaqquWgQI','https://app.effectivealtruism.org/funds/ea-community','Nick Beckstead',83264,1.0,'After the EA Grants Team made its selections, I discussed some applications that barely missed the cut with Will MacAskill. MacAskill recommended funding EA Sweden by Markus Anderljung given his track record of community-building at Cambridge and in Sweden, as well as a conversation that MacAskill had with Anderljung','Sweden'),
   ('Effective Altruism Funds: Meta Fund','Centre for Effective Altruism',56061,'2018-08-14','day','donation log','Effective altruism/movement growth','https://app.effectivealtruism.org/funds/ea-community/payouts/6M8SQFdecEm0WuAYweO2UQ','https://app.effectivealtruism.org/funds/ea-community','Nick Beckstead',526000,0.1066,'Funding from the Effective Altruism Community Fund; an accompanying payment from the Long-Term Future Fund of $162,537 was also made. Beckstead recommended that the grantee spend the money to save time and increase productivity of employees (for instance, by subsidizing childcare or electronics)',NULL),
@@ -17,7 +15,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Effective Altruism Funds: Meta Fund','Effective Altruism Geneva',18000,'2019-03-07','day','donation log','Cause prioritization','https://app.effectivealtruism.org/funds/ea-community/payouts/1hVfcvrzRbpXUWYht4bu3b','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage|Tara MacAulay',512000,0.0352,'Grant to run a policy research project to determine what prioritization models are appropriate to run under what circumstances',NULL),
   ('Effective Altruism Funds: Meta Fund','Effective Altruism Netherlands',17000,'2019-03-07','day','donation log','Effective altruism/fundraising','https://app.effectivealtruism.org/funds/ea-community/payouts/1hVfcvrzRbpXUWYht4bu3b','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage|Tara MacAulay',512000,0.0332,'Grant to help 35 charities that are either GiveWell-recommended or have received grants from the Open Philanthropy Project to achieve tax-deductible status in the Netherlands','Netherlands'),
   ('Effective Altruism Funds: Meta Fund','One for the World',15000,'2019-03-07','day','donation log','Effective altruism/fundraising','https://app.effectivealtruism.org/funds/ea-community/payouts/1hVfcvrzRbpXUWYht4bu3b','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage|Tara MacAulay',512000,0.0293,'Grant to support the creation and growth of chapters at undergraduate, MBA and law schools. Chapter leaders and student ambassadors encourage their classmates to commit to donating a percentage of their income upon graduation.',NULL),
-  ('Effective Altruism Funds: Meta Fund','Rethink Priorities',10000,'2019-03-07','day','donation log','Cause prioritization','https://app.effectivealtruism.org/funds/ea-community/payouts/1hVfcvrzRbpXUWYht4bu3b','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage|Tara MacAulay',512000,0.0195,'Grantee is currently focused on how to apply cost-effectiveness frameworks to uncertain domains, interventions aimed at animals welfare and understanding EA movement growth.',NULL),
   ('Effective Altruism Funds: Meta Fund','The Life You Can Save',10000,'2019-03-07','day','donation log','Effective altruism/movement growth','https://app.effectivealtruism.org/funds/ea-community/payouts/1hVfcvrzRbpXUWYht4bu3b','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage|Tara MacAulay',512000,0.0195,'Grant to support the tenth anniversary relaunch of Peter Singer''s book The Life You Can Save; grantee is the eponymous organization. Project has an immediate, one-off funding requirement and donor believes it has high upside, judging from the impact that the original book had',NULL);
 
 /* Grants to 80,000 Hours */
@@ -104,6 +101,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Rethink Priorities */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Effective Altruism Funds: Meta Fund','Rethink Priorities',10000,'2019-03-07','day','donation log','Cause prioritization/Animal welfare','https://app.effectivealtruism.org/funds/ea-community/payouts/1hVfcvrzRbpXUWYht4bu3b','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage|Tara MacAulay',512000,0.0195,NULL,NULL,
+  /* donation_process */ 'This is part of the March 2019 grant round from the EA Meta Fund, comprising "a mixture of larger grants to more established meta groups and smaller grants to fund both younger organizations and specific projects." The grant to 80,000 Hours falls under "younger organizations"',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "They [Rethink Priorities] intend to continue their focus on animal welfare research in 2019, and cover other areas such as improving mental health, strengthening the EA movement, reducing catastrophic risks, and improving the long-term future."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'Donor lists these reasons on the grant page: (1) Well-executed cause prioritisation research is very valuable. (2) Neutral-to-positive impression of published research by Rethink Priorities (RP). (3) Positive impression of adaptiveness and responsiveness to feedback of RP. (4) Exploratoryr value to encourage fund managers and others to investigate RP work. (5) Positive impression of RP''s idea of "undertaking commissioned research into neglected areas, where there is a specific need for independent evaluation." (6) Potential for RP to "act as a talent pipeline and provide valuable training, especially as future capacity for EA philanthropic advisory." (7) Unfilled funding gap of $120k for 2019',
+  /* donor_amount_reason */ 'The amount is much less than the funding gap of $120,000 for 2019. It is likely selected to be this small based on the experimental nature of the grant',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round, as well as grantee''s trajectory (it has only recently started publishing research)',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* July 2019 update (all grants to one-off grantees) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Effective Altruism Funds: Meta Fund','Effective Altruism Community Building Grants',120000,'2019-08-23','day','donation log','Effective altruism/movement growth','https://app.effectivealtruism.org/funds/ea-community/payouts/3pxoLG7aRWtETC1lECC6LK','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage',466000,0.269,NULL,NULL,
@@ -116,4 +127,64 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of grant round, as well as relative maturity of EA CBG and completion of its initial impact assessment',
   /* donor_next_donation_thoughts */ 'The grant page says: "In the future, if we continue to support EA CBG, we plan to dig deeper into their individual grant outcomes and to further discuss the evaluation process and evidence of impact with the CBG team."',
   /* donor_retrospective */ NULL,
-  /* notes */ 'The grant page says: "As part of our decision to write this grant, we have referred all our highest-potential community building grants to EA CBG."');
+  /* notes */ 'The grant page says: "As part of our decision to write this grant, we have referred all our highest-potential community building grants to EA CBG."'),
+
+  ('Effective Altruism Funds: Meta Fund','High Impact Policy Engine',40000,'2019-08-23','day','donation log','Effective altruism/movement growth','https://app.effectivealtruism.org/funds/ea-community/payouts/3pxoLG7aRWtETC1lECC6LK','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage',466000,0.0858,'United Kingdom',NULL,
+  /* donation_process */ 'Part of the July 2019 EA Meta Fund grants round. The grant page says: "7 of the 9 grantees in this round applied through this process." It is not clear whether HIPE is one of the 7 that applied',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support HIPE in its fundraising efforts to cover salary and travel costs for one full-time employee for 2 years in the IK government.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "If HIPE can demonstrate value to the UK government department (e.g., through improving policy-making, staff wellbeing, or staff retention), HIPE believes they would have a reasonably strong chance of being made a permanent project fully funded by the government." Further: "This grant is made experimentally, largely on the promise of the idea and the reputation of the two founding volunteers"',
+  /* donor_amount_reason */ 'Amount less than, but contributing a nontrivial fraction to, the two-year salary and travel costs for one full-time employee that it is for',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round, as well as by the opportunity that has been opened by the potential for a two-year job in the UK civil service if HIPE secures funding',
+  /* donor_next_donation_thoughts */ 'The grant page says: "Any further funding will be sensitive to the strength of their team in the future."',
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Effective Altruism Funds: Meta Fund','Generation Pledge',30000,'2019-08-23','day','donation log','Effective altruism/movement growth','https://app.effectivealtruism.org/funds/ea-community/payouts/3pxoLG7aRWtETC1lECC6LK','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage',466000,0.0644,NULL,NULL,
+  /* donation_process */ 'Part of the July 2019 EA Meta Fund grants round. The grant page says: "7 of the 9 grantees in this round applied through this process." It is not clear whether Generation Pledge is one of the 7 that applied',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "Generation Pledge mirrors the Founders Pledge model, but working with next gens rather than founders. The world''s ultra high net worth families collectively own $31.5 trillion. Several thousand next gens will inherit this wealth. Generation Pledge aims to support those next gens to maximise their social impact."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "[I]n the past few months they have grown their pledger community significantly. They have an expected pledge value of over $300 million, with a number of sensible discount factors applied. We think that these positive updates are enough to justify Generation Pledge being funded through to a later stage, where they will have the opportunity to prove they can turn these pledges into donations to effective charities."',
+  /* donor_amount_reason */ 'The grant page says: "This grant will contribute towards Generation Pledge''s immediate funding gap for 2019, giving them more runway to fundraise and further grow their pledger base."',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round, as well as by the progress made by Generation Pledge in getting $300 million pledged',
+  /* donor_next_donation_thoughts */ 'The grant page talks of a "later stage, where they will have the opportunity to prove they can turn these pledges into donations to effective charities." It is likely that Generation Pledge will be considered for further grants if it is able to turn donations to pledges',
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Effective Altruism Funds: Meta Fund','EA Coaching',23000,'2019-08-23','day','donation log','Effective altruism/movement growth','https://app.effectivealtruism.org/funds/ea-community/payouts/3pxoLG7aRWtETC1lECC6LK','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage',466000,0.0493,NULL,'Lynette Bye',
+  /* donation_process */ 'Part of the July 2019 EA Meta Fund grants round. The grant page says: "7 of the 9 grantees in this round applied through this process." It is not clear whether EA Coaching is one of the 7 that applied',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grantee is a productivity coaching organization, currently with just one person, Lynette Bye. The grant page says: "This grant will allow Lynette to offer coaching calls to people working at high-impact organizations at a highly subsidized rate, offer free coaching for select referrals from 80,000 Hours, and hire contractors to help create materials to scale her coaching."',
+  /* donor_donee_reason */ 'Grant based on Lynette''s impact evaluation https://effectivealtruismcoaching.com/results The grant page says: "Given the early-stage nature of her project, we found the results fairly compelling. A number of her clients working at high-impact organizations have reported significant increases in their hours of productive work." Also: "Lynette focuses on clients working in AI alignment and at high-impact "meta" organizations. She has previously worked with employees at FHI, the Open Philanthropy Project, CEA, CHAI, MIRI, DeepMind, and the Forethought Foundation, and she expects to continue to do so. Given that these organizations focus on particularly high-impact areas, we expect that increasing their productivity should be very valuable.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Effective Altruism Funds: Meta Fund','Rethink Charity',15000,'2019-08-23','day','donation log','Effective altruism/movement growth','https://app.effectivealtruism.org/funds/ea-community/payouts/3pxoLG7aRWtETC1lECC6LK','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage',466000,0.0322,NULL,NULL,
+  /* donation_process */ 'Part of the July 2019 EA Meta Fund grants round. The grant page says: "7 of the 9 grantees in this round applied through this process." It is not clear whether Rethink Charity is one of the 7 that applied',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to design and run an updated version ofthe EA Survey in 2019. The grant page says: "Rethink has been collaborating with CEA and other meta organizations to gather input on the 2019 survey. Like last year, Rethink will release anonymized data and summary survey output." There is an accompanying $5,000 grant to CEA, which will use the funding to pay Rethink for "bespoke analysis of the results."',
+  /* intended_funding_timeframe_in_months */ 12,
+  /* donor_donee_reason */ 'The grant page says: "[I]it is valuable to generate more empirical data to inform movement-building strategy. In particular, we are aware that some high-impact organizations consistently collaborate with the researchers who analyze the survey, in order to inform their organizational and community-building strategies. [...] Maintaining a sufficiently large survey and in-depth analysis seems like one of the better methods to generate data and insights [about the broad effective altruism movement]."'
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round. Also, the grant page says: "We think part of the benefit of the survey is ensuring data that is collected on a regular basis to allow for consistent year-on-year comparisons. Funding at this stage will allow the survey and analysis to be carried out this year in line with the annual publishing cycle."',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Effective Altruism Funds: Meta Fund','Centre for Effective Altruism',5000,'2019-08-23','day','donation log','Effective altruism/movement growth','https://app.effectivealtruism.org/funds/ea-community/payouts/3pxoLG7aRWtETC1lECC6LK','https://app.effectivealtruism.org/funds/ea-community','Luke Ding|Alex Foster|Denise Melchin|Matt Wage',466000,0.0107,NULL,NULL,
+  /* donation_process */ 'Part of the July 2019 EA Meta Fund grants round. The grant page says: "7 of the 9 grantees in this round applied through this process." CEA is not a direct grantee, but an intermediary for part of a grant; it did not apply in this application process',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant for CEA to use to pay Rethink Charity for "bespoke analysis of the results" of the 2019 EA Survey. This accompanies a separate $15,000 grant to Rethink Charity for the 2019 EA Survey.',
+  /* intended_funding_timeframe_in_months */ 12,
+  /* donor_donee_reason */ 'The grant page says: "This financial structure is meant to ensure that a significant fraction of Rethink''s analysis will be directly relevant to what CEA is looking to learn from the survey."',
+  /* donor_amount_reason */ 'The amount of $5,000, compared to $15,000 directly granted to Rethink Charity to conduct the survey, probably reflects the nature of power balance that the Meta Fund managers want to engineer between CEA and Rethink Charity, in terms of the extent to which they control the priorities of the EA Survey',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round. Also, the grant page says: "We think part of the benefit of the survey is ensuring data that is collected on a regular basis to allow for consistent year-on-year comparisons. Funding at this stage will allow the survey and analysis to be carried out this year in line with the annual publishing cycle."',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
