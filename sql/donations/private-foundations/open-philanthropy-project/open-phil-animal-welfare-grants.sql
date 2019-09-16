@@ -405,7 +405,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL
+  /* notes */ 'See also https://animalcharityevaluators.org/blog/on-receiving-a-grant-from-the-open-philanthropy-project/ on the ACE blog. It says "We feel that this grant is a reaffirmation of the value and impact of ACE’s work, and we are incredibly honored to have been selected." It says: "To those who may wonder if ACE will still be able to efficiently use additional donations, at this stage the answer is an emphatic yes." It links to https://animalcharityevaluators.org/about/background/goals-and-strategy/ fo the goals for 2017, and to https://animalcharityevaluators.org/blog/ace-fundraising-restrictions/ for its 2017 fundraising'
 );
 
 /* Other grants (still in old format) */
