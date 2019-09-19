@@ -215,7 +215,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/gifts.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/double-up-drive.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/givewell.sql
-        mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/giving-tuesday-facebook-match.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/giving-tuesday-facebook-match.sql
 
 .PHONY: fetch_table_sorting
 fetch_table_sorting:
