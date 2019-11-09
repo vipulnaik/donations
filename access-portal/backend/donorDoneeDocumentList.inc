@@ -33,7 +33,7 @@ if ($donorDocumentSelectResult -> num_rows > 0) {
   print "  </thead>\n  <tbody>\n";
   while ($row = $donorDocumentSelectResult->fetch_assoc()) {
     print "    <tr>\n";
-    print '      <td><a href="'.$row['url'].'">'.$row['title']."</a></td>\n";
+    print '      <td>'.printSmartLink($row['url'],$row['title']).'</td>';
     print '      <td>'.$row['publication_date']."</td>\n";
     if ($row['author'] != '') {
       # Change this to check if author is in list

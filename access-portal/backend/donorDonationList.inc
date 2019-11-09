@@ -72,7 +72,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
     print '<td>--</td>';
   }
   if ($row['url'] != '') {
-    print '<td><a href="'.$row['url'].'">'.$row['url'].'</a></td>';
+    print '<td>'.printSmartLink($row['url'],$row['url']).'</td>';
   } else {
     print '<td>--</td>';
   }
