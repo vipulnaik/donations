@@ -2,11 +2,11 @@
 
 function printSmartLink($url, $title) {
   $stringToPrint = '<a href="'.$url.'">'.$title.'</a>';
-  if (substr($url,0,31) == "https://www.lesswrong.com/posts") {
+  if (strlen($url) >= 32 and substr($url,0,31) == "https://www.lesswrong.com/posts") {
     $greaterWrongUrl = str_replace("https://www.lesswrong.com", "https://www.greaterwrong.com", $url);
     $readerUrl = str_replace("https://www.lesswrong.com", "https://lw2.issarice.com", $url);
     $stringToPrint .= ' (<a href="'.$greaterWrongUrl.'">GW</a>, <a href="'.$readerUrl.'">IR</a>)';
-  } else if (substr($url,0,41) == "https://forum.effectivealtruism.org/posts") {
+  } else if (strlen($url) >= 42 and substr($url,0,41) == "https://forum.effectivealtruism.org/posts") {
     $greaterWrongUrl = str_replace("https://forum.effectivealtruism.org", "https://ea.greaterwrong.com", $url);
     $readerUrl = str_replace("https://forum.effectivealtrruism.org", "https://eaforum.issarice.com", $url);
     $stringToPrint .= ' (<a href="'.$greaterWrongUrl.'">GW</a>, <a href="'.$readerUrl.'">IR</a>)';
