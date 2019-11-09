@@ -1,7 +1,6 @@
 <?php
 
 $query = "select * from documents where affected_donors REGEXP ? or publisher = ? or author = ?". ($causeAreaFilterString ? " and cause_area REGEXP ?" : "") . " order by publication_date desc";
-$donorDocumentSelectResult = $mysqli -> query($donorDocumentSelectQuery);
 if ($stmt = $mysqli->prepare($query)) {
   if ($causeAreaFilterString) {
     $stmt->bind_param("ssss", $donor, $donor, $donor, $causeAreaFilterString);
