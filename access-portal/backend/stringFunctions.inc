@@ -8,7 +8,7 @@ function printSmartLink($url, $title) {
     $stringToPrint .= ' (<a href="'.$greaterWrongUrl.'">GW</a>, <a href="'.$readerUrl.'">IR</a>)';
   } else if (strlen($url) >= 42 and substr($url,0,41) == "https://forum.effectivealtruism.org/posts") {
     $greaterWrongUrl = str_replace("https://forum.effectivealtruism.org", "https://ea.greaterwrong.com", $url);
-    $readerUrl = str_replace("https://forum.effectivealtrruism.org", "https://eaforum.issarice.com", $url);
+    $readerUrl = str_replace("https://forum.effectivealtruism.org", "https://eaforum.issarice.com", $url);
     $stringToPrint .= ' (<a href="'.$greaterWrongUrl.'">GW</a>, <a href="'.$readerUrl.'">IR</a>)';
   }
   return $stringToPrint;
