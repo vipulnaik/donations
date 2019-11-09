@@ -3,12 +3,12 @@
 function printSmartLink($url, $title) {
   print '<a href="'.$url.'">'.$title.'</a>';
   if (substr($url,0,31) == "https://www.lesswrong.com/posts") {
-    $greaterWrongUrl = str_replace("https://www.lesswrong.com", "https://www.greaterwrong.com", $url)
-    $readerUrl = str_replace("https://www.lesswrong.com", "https://lw2.issarice.com", $url)
+    $greaterWrongUrl = str_replace("https://www.lesswrong.com", "https://www.greaterwrong.com", $url);
+    $readerUrl = str_replace("https://www.lesswrong.com", "https://lw2.issarice.com", $url);
     print ' (<a href="'.$greaterWrongUrl.'">GW</a>, <a href="'.$readerUrl.'">IR</a>)';
   } else if (substr($url,0,41) == "https://forum.effectivealtruism.org/posts") {
-    $greaterWrongUrl = str_replace("https://forum.effectivealtruism.org", "https://ea.greaterwrong.com", $url)
-    $readerUrl = str_replace("https://forum.effectivealtrruism.org", "https://eaforum.issarice.com", $url)
+    $greaterWrongUrl = str_replace("https://forum.effectivealtruism.org", "https://ea.greaterwrong.com", $url);
+    $readerUrl = str_replace("https://forum.effectivealtrruism.org", "https://eaforum.issarice.com", $url);
     print ' (<a href="'.$greaterWrongUrl.'">GW</a>, <a href="'.$readerUrl.'">IR</a>)';
   }
 }
