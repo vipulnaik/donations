@@ -1,0 +1,3 @@
+/* Older stuff on Deworm the World Initiative */
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('http://endtheneglect.org/2011/01/spotlight-on-deworm-the-world/','Spotlight on Deworm the World','2011-01-26',NULL,'Alanna Shaikh','End the Neglect',NULL,'Deworm the World Initiative','Evaluator review of donee','Global health/deworming','Alanna Shaikh praises Deworm the World for working with existing groups rather than creating redundant, duplicative effort. This is still in the early days of the organization, before it goes under Innovations for Poverty Action and then Evidence Action');

@@ -18,10 +18,6 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
   ('https://medium.com/thinking-about-animals/thinking-behind-2017-donations-to-reduce-animal-use-9259253dbcbb','Thinking behind 2017 donations to reduce animal use','2017-12-31', NULL, 'Jason Ketola', NULL, NULL, 'New Harvest|The Good Food Institute|Plant Based Foods Association|Wild-Animal Suffering Research','Single donation documentation','Animal welfare','The document describes recent developments with The Good Food Institute, New Harvest, and other organizations, and why the author decided to donate to New Harvest'),
   ('https://jsteinhardt.wordpress.com/2016/12/28/donations-for-2016','Donations for 2016','2016-12-28',NULL,'Jacob Steinhardt',NULL,'Jacob Steinhardt','Donor lottery|GiveWell top charities|GiveDirectly|Blue Ribbon Study Panel|Carnegie Endowment for International Peace','Periodic donation list documentation','Biosecurity and pandemic preparedness,International relations,Global health and development','Explanation for donation choices, also mention experimental funding of smaller projects');
 
-/* Older stuff on Deworm the World Initiative */
-insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('http://endtheneglect.org/2011/01/spotlight-on-deworm-the-world/','Spotlight on Deworm the World','2011-01-26',NULL,'Alanna Shaikh','End the Neglect',NULL,'Deworm the World Initiative','Evaluator review of donee','Global health/deworming','Alanna Shaikh praises Deworm the World for working with existing groups rather than creating redundant, duplicative effort. This is still in the early days of the organization, before it goes under Innovations for Poverty Action and then Evidence Action');
-
 /* Other */
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
