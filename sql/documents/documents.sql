@@ -30,11 +30,6 @@ insert into documents(url,title,publication_date,modified_date,author,publisher,
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('http://effective-altruism.com/ea/1e8/should_eas_think_twice_before_donating_to_gfi/','Should EAs think twice before donating to GFI?','2017-08-31',NULL,'Kevin Watkinson','Effective Altruism Forum','Open Philanthropy Project','The Good Food Institute','Third-party case against donation','Animal welfare','The post argues against donations to The Good Food Institute, noting its limited track record as well as the huge amount of funding it is already receiving from the Open Philanthropy Project. This post is made shortly after an exchange between the post author (Kevin Watkinson) and Holden Karnofsky of the Open Philanthropy Project in http://www.openphilanthropy.org/blog/march-2017-open-thread?page=1#comment-305 (the open thread of the Open Philanthropy Project). The post also critiques Animal Charity Evaluators (ACE) for a positive assessment of GFI, and comments include a response from an ACE employee and an ACE board member (neither in an official capacity)');
 
-/* Forethought Foundation docs */
-
-insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
-  ('https://forum.effectivealtruism.org/posts/vxwcxwiDKCnyHJhbz/announcing-the-new-forethought-foundation-for-global','Announcing the new Forethought Foundation for Global Priorities Research','2018-12-04',NULL,'William MacAskill','Effective Altruism Forum',NULL,'Forethought Foundation for Global Priorities Research|Global Priorities Institute|Centre for Effective Altruism','Launch','Cause prioritization','The blog post announces the launch of the Forethought Foundation for Global Priorities Research. The planned total budget for 2019 and 2020 is £1.12 million - £1.47 million, and a breakdown is provided in the post. The project will be incubated by the Centre for Effective Altruism, and its work is intended to complement the work of the Global Priorities Institute');
-
 /* Miscellaneous job ads */
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values

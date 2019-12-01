@@ -1,0 +1,3 @@
+insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
+  ('https://forum.effectivealtruism.org/posts/igjJ3LrgrfWNm5Zzq/introducing-good-policies-a-new-charity-promoting-behaviour','Introducing Good Policies: A new charity promoting behaviour change interventions','2019-11-18',NULL,'Caleb Parikh','Good Policies',NULL,'Good Policies','Launch','Global health','The blog post announces the launch of Good Policies, a charity incubated by Charity Entrepreneurship that is focused on advocacy-based interventions to reduce noncommunicable diseases such as cardiovascular diseases, cancers, respiratory diseases, and diabetes. The initial focus is on reducing tobacco consumption');
+
