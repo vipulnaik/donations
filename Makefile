@@ -55,6 +55,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/deworm-the-world-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/dickens-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/donation-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/donor-lottery-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/earning-to-give-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ea-cbg-docs.sql
