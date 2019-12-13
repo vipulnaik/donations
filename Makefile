@@ -87,6 +87,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/rethink-priorities-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/sandler-foundation-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/sentience-institute-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/simon-knutsson-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/thl-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/vegan-outreach-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/wild-animal-initiative-docs.sql
