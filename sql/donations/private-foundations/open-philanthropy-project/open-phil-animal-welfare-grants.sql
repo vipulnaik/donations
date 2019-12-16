@@ -421,7 +421,37 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
-  
+
+/* We Animals grant(s) */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','We Animals',240000,'2019-02-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/we-animals-farm-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-07-18','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'According to the grant page, the grant is "to continue documenting the lives and experiences of farm animals. We Animals works with filmmakers, writers, and photographers to produce open-source media content that advocates and others can deploy in their campaigns. We Animals also intends to use some of the funds to support the Unbound Project, which recognizes and celebrates women at the forefront of animal advocacy."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Anima grant(s) */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','Anima',367222,'2019-04-01','month','donation log','Animal welfare/factory farming/movement growth','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/anima-movement-building','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-07-18','day',NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'According to the grant page, the grant is "to support a new project focused on building the farm animal welfare movement globally. The project will be run by Andrzej Pazgan and Laura Gough, will be initially housed at Anima International, and will launch with a focus on Eastern Europe. Early success there could lead to expansion to to Southeast Asia, the Middle East, and/or Africa."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "Our farm animal welfare team believes large portions of the world still have little organized farm animal welfare advocacy, and that the only support capacity that does exist in some regions is in the form of corporate cage-free advocacy, which may not be a good fit for all countries and activists. This project, by identifying promising groups, training them, coordinating them around campaigns, and funding them, could eventually increase farm animal welfare capacity globally."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The grant is denominated in euros; it is €325,494 ($367,222.33 at the time of conversion)');
+
 /* Other grants (still in old format) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
