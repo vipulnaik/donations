@@ -57,6 +57,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Ethan Alley donations */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','Ethan Alley',437800,'2019-05-01','month','donation log','Global catastrophic risks','https://www.openphilanthropy.org/focus/global-catastrophic-risks/scholarship-support-2019','https://www.openphilanthropy.org/focus/global-catastrophic-risks','Claire Zabel','2019-07-18','day',NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Living expenses during research project',
+  /* intended_use_of_funds */ 'The grant page says the grant is "over four years in scholarship funds support to Ethan Alley to pursue a PhD at the Massachusetts Institute of Technology. The funding is intended to be used for his tuition, fees, healthcare, and a living stipend during his degree program',
+  /* intended_funding_timeframe_in_months */ 48,
+  /* donor_donee_reason */ 'The grant page says the grant "is part of an effort to support value-aligned and qualified early-career researchers interested in global catastrophic risks."',
+  /* donor_amount_reason */ 'The grant page says: "The funding is intended to be used for his tuition, fees, healthcare, and a living stipend during his degree program [over four years]" so the amount is likely determined based on the sum of the costs of these over four years',
+  /* donor_timing_reason */ 'Likely determined by the start time of the grantee''s PhD program',
+  /* donor_next_donation_thoughts */ 'The grant page calls the grant "part of an effort to support value-aligned and qualified early-career researchers interested in global catastrophic risks" so it will likely be followed by other similar grants to other researchers',
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Global catastrophic risks donations */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy Project','Forum for Climate Engineering Assessment',76234,'2016-05-01','month','donation log','Global catastrophic risks/climate change/geoengineering','https://www.openphilanthropy.org/focus/global-catastrophic-risks/miscellaneous/american-university-forum-climate-engineering-assessment','https://www.openphilanthropy.org/focus/global-catastrophic-risks','Donation via American University. Detailed write-up available',NULL,NULL,'2016-05-27', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/NbFZzZizgz4',NULL),

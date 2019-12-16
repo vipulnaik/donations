@@ -138,6 +138,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Engineers Without Borders USA grant(s) */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','Engineers Without Borders USA',500000,'2019-05-01','month','donation log','Scientific research/human health and wellbeing','https://www.openphilanthropy.org/focus/scientific-research/human-health-and-wellbeing/engineers-without-borders-off-grid-refrigeration','https://www.openphilanthropy.org/focus/scientific-research/human-health-and-wellbeing','Heather Youngs|Chris Somerville','2019-07-19','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support the Affordable Off-Grid Refrigeration Challenge. The competition will seek to develop proof of concept prototypes for refrigerators and ice-makers that have the potential to provide sustainable and affordable refrigeration for off-grid, developing world communities. Engineers Without Borders USA believes that affordable off-grid refrigeration will help reduce illnesses and deaths from vaccine-preventable diseases, food poisoning, and malnutrition, and that making refrigeration more widely available will also diminish food waste, enable small farmers to grow higher value crops, and reduce the burden on women by eliminating the need to travel to the market daily for perishable food."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'Grant made for the goal of advancing human health and wellbeing, and likely for the same reasons that the grantee thinks the project has value, namely: "affordable off-grid refrigeration will help reduce illnesses and deaths from vaccine-preventable diseases, food poisoning, and malnutrition, and that making refrigeration more widely available will also diminish food waste, enable small farmers to grow higher value crops, and reduce the burden on women by eliminating the need to travel to the market daily for perishable food."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Other scientific research grants */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes,influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy Project','Rescuing Biomedical Research',299112,'2016-01-01','month','donation log','Scientific research','https://www.openphilanthropy.org/focus/scientific-research/miscellaneous/princeton-university-rescuing-biomedical-research','https://www.openphilanthropy.org/focus/scientific-research','Grantee is a project based in Princeton University. Goal is to establish a more “predictable and stable” federal budget for research, and to improve grant funding so that trainees are funded by dedicated training grants. Followup conversation with Shirley Tilghman of grantee organization at https://www.openphilanthropy.org/sites/default/files/Shirley_Tilghman_05-19-16_%28public%29.pdf on 2016-05-19 and with Christopher Pickett of grantee organization at https://www.openphilanthropy.org/sites/default/files/Christopher_Pickett_11-16-16_%28public%29.pdf on 2016-11-16', NULL, '2016-01-27','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/A73bjnZOIEk',NULL),

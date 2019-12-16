@@ -452,6 +452,36 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant is denominated in euros; it is €325,494 ($367,222.33 at the time of conversion)');
 
+/* New York University grant(s) */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','New York University',125840,'2019-03-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/nyu-becca-frank-fish-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-07-18','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'According to the grant page, the grant is "to support research scientist Becca Franks’ work on fish welfare. These funds will support projects including systematic reviews of the literature on aquaculture (farmed fish) welfare and general fish welfare, as well as research on curiosity, play, and positive emotions in fish."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Yale University grant(s) */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','Yale University',180000,'2019-03-01','month','donation log','Scientific research/human health and wellbeing','https://www.openphilanthropy.org/focus/scientific-research/human-health-and-wellbeing/yale-university-school-of-medicine-vascular-therapy','https://www.openphilanthropy.org/focus/scientific-research/human-health-and-wellbeing',NULL,'Chris Somerville|Heather Youngs','2019-07-18','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says that the grant is "to support research on the modification of vascular permeability by monoclonal antibodies against key regulatory proteins. Increased permeability might allow medicines to cross the blood-brain barrier and could accelerate the development of new therapies for neurogenerative diseases such as Alzheimer’s Disease, while decreased permeability could be useful in treating conditions such as swelling in stroke victims and sepsis."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Other grants (still in old format) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
