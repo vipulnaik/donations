@@ -124,6 +124,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */  NULL,
   /* notes */ NULL);
 
+/* Rita Allen Foundation */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','Rita Allen Foundation',495000,'2019-04-01','month','donation log','Scientific research/human health and wellbeing/pain studies','https://www.openphilanthropy.org/focus/scientific-research/miscellaneous/rita-allen-foundation-fellowship-support','https://www.openphilanthropy.org/focus/scientific-research','Chris Somerville|Heather Youngs','2019-06-26','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to provide three years in flexible support to three scholars  identified by the American Pain Society in collaboration with the Rita Allen Foundation as excellent researchers in the fields of pain, neuroscience, anesthesiology and neurology. The scholars are: Jordan McCall, assistant professor, Washington University St. Louis; Peter Grace, assistant professor, MD Anderson Center Texas; and Vivianne Tawfik, assistant professor, Stanford University.',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'Amount likely determined by the number of researchers being funded and the total cost of funding them for three years. No explicit discussion of reason for amount on the grant page',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Other scientific research grants */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes,influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy Project','Rescuing Biomedical Research',299112,'2016-01-01','month','donation log','Scientific research','https://www.openphilanthropy.org/focus/scientific-research/miscellaneous/princeton-university-rescuing-biomedical-research','https://www.openphilanthropy.org/focus/scientific-research','Grantee is a project based in Princeton University. Goal is to establish a more “predictable and stable” federal budget for research, and to improve grant funding so that trainees are funded by dedicated training grants. Followup conversation with Shirley Tilghman of grantee organization at https://www.openphilanthropy.org/sites/default/files/Shirley_Tilghman_05-19-16_%28public%29.pdf on 2016-05-19 and with Christopher Pickett of grantee organization at https://www.openphilanthropy.org/sites/default/files/Christopher_Pickett_11-16-16_%28public%29.pdf on 2016-11-16', NULL, '2016-01-27','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/A73bjnZOIEk',NULL),

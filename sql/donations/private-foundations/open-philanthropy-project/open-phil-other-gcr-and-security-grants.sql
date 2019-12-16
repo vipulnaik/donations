@@ -43,6 +43,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* MIT Media Lab grant(s) */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','MIT Media Lab',1000000,'2019-03-01','month','donation log','Global catastrophic risks|Global health|Animal welfare','https://www.openphilanthropy.org/focus/global-catastrophic-risks/miscellaneous/massachusetts-institute-technology-media-lab-kevin-esvelt','https://www.openphilanthropy.org/focus/global-catastrophic-risks','Claire Zabel','2019-06-26','day',NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of-funds */ 'Grant over two years to the MIT Media Lab to support the research of Professor Kevin Esvelt. Professor Esvelt plans to use this funding to conduct research on global catastrophic risks, global health, and animal welfare.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Global catastrophic risks donations */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy Project','Forum for Climate Engineering Assessment',76234,'2016-05-01','month','donation log','Global catastrophic risks/climate change/geoengineering','https://www.openphilanthropy.org/focus/global-catastrophic-risks/miscellaneous/american-university-forum-climate-engineering-assessment','https://www.openphilanthropy.org/focus/global-catastrophic-risks','Donation via American University. Detailed write-up available',NULL,NULL,'2016-05-27', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/NbFZzZizgz4',NULL),

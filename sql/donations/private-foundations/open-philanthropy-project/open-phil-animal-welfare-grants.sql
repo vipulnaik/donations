@@ -405,9 +405,23 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'See also https://animalcharityevaluators.org/blog/on-receiving-a-grant-from-the-open-philanthropy-project/ on the ACE blog. It says "We feel that this grant is a reaffirmation of the value and impact of ACE’s work, and we are incredibly honored to have been selected." It says: "To those who may wonder if ACE will still be able to efficiently use additional donations, at this stage the answer is an emphatic yes." It links to https://animalcharityevaluators.org/about/background/goals-and-strategy/ fo the goals for 2017, and to https://animalcharityevaluators.org/blog/ace-fundraising-restrictions/ for its 2017 fundraising'
-);
+  /* notes */ 'See also https://animalcharityevaluators.org/blog/on-receiving-a-grant-from-the-open-philanthropy-project/ on the ACE blog. It says "We feel that this grant is a reaffirmation of the value and impact of ACE’s work, and we are incredibly honored to have been selected." It says: "To those who may wonder if ACE will still be able to efficiently use additional donations, at this stage the answer is an emphatic yes." It links to https://animalcharityevaluators.org/about/background/goals-and-strategy/ fo the goals for 2017, and to https://animalcharityevaluators.org/blog/ace-fundraising-restrictions/ for its 2017 fundraising');
 
+/* Rethink Priorities grants */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','Rethink Priorities',200000,'2019-03-01','month','donation log','Animal welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rethink-priorities-farm-animal-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-07-18','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "This funding is intended to help Rethink Priorities produce research on potential and existing interventions like evaluating the efficacy of corporate campaigns and analyzing public support for various types of reform."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "We believe more high-quality research in this area would help us and other farm animal welfare funders compare future opportunities."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+  
 /* Other grants (still in old format) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
