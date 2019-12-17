@@ -1,6 +1,4 @@
-# -- Open Philanthropy Project, other areas
-
-# -- Grants to Project Peanut Butter
+/* Grants to Project Peanut Butter */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, affected_countries,affected_states,affected_cities,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy Project','Project Peanut Butter',724929,'2016-09-01','month','donation log','Global health/nutrition','https://www.openphilanthropy.org/giving/grants/project-peanut-butter-ready-use-therapeutic-food-rct',NULL,NULL,NULL,NULL, '2016-10-26', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/Oj3uALe_-TE',NULL,
   /* donation_process */ NULL,
@@ -13,6 +11,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
+
+/* Grants to Effective Altruism Foundation */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, affected_countries,affected_states,affected_cities,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','Effective Altruism Foundation',1000000,'2019-07-01','month','donation log','Effective altruism','https://www.openphilanthropy.org/giving/grants/effective-altruism-foundation-research-operations','Nick Beckstead|Claire Zabel',NULL,NULL,NULL,'2019-07-30','day',NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research and operations"',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says "A major purpose of this grant is to encourage and support EAF and our other grantees in the space in taking approaches to longtermism with greater emphasis on shared objectives between different value systems. We conceive of this grant as falling under our work aimed at growing and supporting the EA community." Earlier in the document, past reservations that Open Phil has had about EAF are described: "EAF is an organization whose values put a particular emphasis on trying to reduce the risks of future suffering. While preventing suffering is a value we share, we also believe that the speculative and suffering-focused nature of this work means that it needs to be communicated about carefully, and could be counterproductive otherwise. As a result, we have felt ambivalent about EAF’s work to date (despite feeling unambiguously positively about some of their projects)."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The grant would be discussed further by Simon Knutsson in his critical post https://www.simonknutsson.com/problems-in-effective-altruism-and-existential-risk-and-what-to-do-about-them/ that also includes discussion of guidelines that Nick Beckstead of the Open Philanthropy Project developed, and that EAF was now adopting and encouraging others to adopt. Knutsson sees the adoption of the guidelines as being linked to the grant money, due to both the timing matching and the language of the grant page. On separate pages, Knutsson publishes correspondence between him and people at Open Phil and EAF where he tried to get more specific information from the two organizations: https://www.simonknutsson.com/e-mail-exchange-with-the-open-philanthropy-project and https://www.simonknutsson.com/message-exchange-with-eaf/');
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, influencer, affected_countries,affected_states,affected_cities,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy Project','Associated Students of the University of California, Berkeley',10000,'2015-02-01','month','donation log','Effective altruism/movement growth','https://www.openphilanthropy.org/giving/grants/asuc-effective-altruists-berkeley-decal-university-course','Grant is for the Effective Altruists of Berkeley “DeCal” University Course to be held in Spring 2015. See http://files.givewell.org/files/conversations/Ajeya_Cotra_6-19-2015_(public).pdf for a followup conversation with Ajeya Cotra and Oliver Habryka (course architects), Rohin Shah and Davis Foote (Effective Altruists of Berkeley members), and Helen Toner and Catherine Hollander of the Open Philanthropy Project', NULL,'United States','California','Berkeley',NULL, NULL, NULL,NULL),
