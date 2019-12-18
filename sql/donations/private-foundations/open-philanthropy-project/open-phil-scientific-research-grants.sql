@@ -152,6 +152,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* CalTech grant(s) */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','California Institute of Technology',2000000,'2019-07-01','month','donation log','Scientific research/transformative basic science','https://www.openphilanthropy.org/focus/scientific-research/california-institute-technology-research-reproductive-biology-magdalena-zernicka-goetz','https://www.openphilanthropy.org/focus/scientific-research','Chris Somerville|Heather Youngs','2019-09-05','day',NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support research by Professor Magdalena Zernicka-Goetz on reproductive biology. Dr. Zernicka-Goetz’s proposed research would focus on understanding the molecular processes by which a single cell gives rise to all of the cell types and organ/tissue structures that comprise a fully developed embryo."',
+  /* intended_funding_timeframe_in_months */ 48,
+  /* donor_donee_reason */ 'The grant page says: "Progress in this area could eventually enable people with fertility challenges to have children and could eventually help reduce the incidence of a wide variety of high-burden disorders (such as heart disease, chronic pain, depression, and Alzheimer’s disease) and promote other positive outcomes. Dr. Zernicka-Goetz’s research is amongst the most promising our science team has encountered so far in this field."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Other scientific research grants */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes,influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy Project','Rescuing Biomedical Research',299112,'2016-01-01','month','donation log','Scientific research','https://www.openphilanthropy.org/focus/scientific-research/miscellaneous/princeton-university-rescuing-biomedical-research','https://www.openphilanthropy.org/focus/scientific-research','Grantee is a project based in Princeton University. Goal is to establish a more “predictable and stable” federal budget for research, and to improve grant funding so that trainees are funded by dedicated training grants. Followup conversation with Shirley Tilghman of grantee organization at https://www.openphilanthropy.org/sites/default/files/Shirley_Tilghman_05-19-16_%28public%29.pdf on 2016-05-19 and with Christopher Pickett of grantee organization at https://www.openphilanthropy.org/sites/default/files/Christopher_Pickett_11-16-16_%28public%29.pdf on 2016-11-16', NULL, '2016-01-27','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/A73bjnZOIEk',NULL),
