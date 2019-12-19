@@ -482,6 +482,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Global Food Partners grants */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy Project','Global Food Partners',3500000,'2019-09-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-food-partners-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-09-05','day',NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "Global Food Partners is a new organization, led by Elissa Lane, N.G. Jayasimha, and Sabina Garcia, that plans to focus primarily on helping companies implement animal welfare commitments in Asia. [...] Global Food Partners also plans to eventually use a portion of these funds to support work with companies seeking new pledges.',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ 'The grant page says: "Our farm animal welfare team believes this work [helping companies implement animal welfare commitments in Asia] will help ensure that corporate pledges are fulfilled.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'This is a founding grant, so timing likely determined by timing of the creation of the organization',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Other grants (still in old format) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
