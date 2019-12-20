@@ -5,10 +5,12 @@ $donorDocumentSelectQuery = "select * from documents where affected_donors REGEX
   . " order by publication_date desc";
 
 if ($stmt = $mysqli->prepare($donorDocumentSelectQuery)) {
+  $exactMatchDonorRegex = '(^|\\|)'.$donor.'(\\||$)';
+  $exactMatchDoneeRegex = '(^|\\|)'.$donee.'(\\||$)';
   if ($causeAreaFilterString) {
-    $stmt->bind_param("sss", $donor, $donee, $causeAreaFilterString);
+    $stmt->bind_param("sss", $exactMatchDonorRegex, $exactMatchDoneeRegex, $causeAreaFilterString);
   } else {
-    $stmt->bind_param("ss", $donor, $donee);
+    $stmt->bind_param("ss", $exactMatchDonorRegex, $exactMatchDoneeRegex);
   }
   $stmt->execute();
 }

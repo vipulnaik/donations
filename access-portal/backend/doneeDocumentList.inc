@@ -2,10 +2,11 @@
 
 $query = "select * from documents where affected_donees REGEXP ? or publisher = ? or author = ?". ($causeAreaFilterString ? " and cause_area REGEXP ?" : "") . " order by publication_date desc";
 if ($stmt = $mysqli->prepare($query)) {
+  $exactMatchDoneeRegex = '(^|\\|)'.$donee.'(\\||$)';
   if ($causeAreaFilterString) {
-    $stmt->bind_param("ssss", $donee, $donee, $donee, $causeAreaFilterString);
+    $stmt->bind_param("ssss", $exactMatchDoneeRegex, $donee, $donee, $causeAreaFilterString);
   } else {
-    $stmt->bind_param("sss", $donee, $donee, $donee);
+    $stmt->bind_param("sss", $exactMatchDoneeRegex, $donee, $donee);
   }
   $stmt->execute();
   $doneeDocumentSelectResult = $stmt->get_result();
