@@ -43,6 +43,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ai-safety-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/allfed-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/animal-equality-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/animal-ethics-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/beri-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/berkeley-reach.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/biomedical-research-docs.sql
