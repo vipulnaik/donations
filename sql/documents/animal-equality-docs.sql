@@ -1,4 +1,4 @@
-# -- Animal Charity Evaluators reviews
+/* Animal Charity Evaluators reviews */
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('https://animalcharityevaluators.org/charity-review/animal-equality/2014-dec/','ANIMAL EQUALITY. Archived Version: December, 2014','2014-12-01',NULL,NULL,'Animal Charity Evaluators',NULL,'Animal Equality','Evaluator review of donee','Animal welfare','Animal Charity Evaluators (ACE) publishes its first detailed review of Animal Equality. The stated strength is that the organization conducts undercover investigations very efficienctly, at a fraction of the cost that others do. The geographical diversity and lack of paid staff is also highlighted as a potential weakness for their long-term sustainability'),
