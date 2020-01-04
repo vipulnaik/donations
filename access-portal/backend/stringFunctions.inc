@@ -19,7 +19,7 @@ function cleanNotes($notes) {
   $augmentedNotes = "";
   foreach ($notesList as $notesWord) {
     if (substr($notesWord,0,4) == "http") {
-      $augmentedNotes = $augmentedNotes . printSmartLink($notesWord, $notesWord);
+      $augmentedNotes = $augmentedNotes . printSmartLink($notesWord, $notesWord). " ";
     } else {
       $augmentedNotes = $augmentedNotes . $notesWord . " ";
     }
