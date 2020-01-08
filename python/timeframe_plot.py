@@ -23,7 +23,8 @@ cnx = mysql.connector.connect(user=login.USER, database=login.DATABASE,
                               password=login.PASSWORD)
 cursor = cnx.cursor()
 
-def single_donor_single_donee(donor, donee):
+
+def single_donor_single_donee(output, donor, donee, cause_area=None):
     cursor.execute("""select intended_funding_timeframe_in_months,donation_date from donations where donor = %s and donee = %s""", (donor, donee))
     y = 1
     for intended_funding_timeframe_in_months, donation_date in cursor:
@@ -36,9 +37,10 @@ def single_donor_single_donee(donor, donee):
     plt.yticks(range(1,y))
     plt.xlabel("Date")
     plt.ylabel("Grant number")
-    plt.show()
+    plt.savefig(output)
 
-def single_donor_multiple_donees(donor):
+
+def single_donor_multiple_donees(output, donor, cause_area=None):
     cursor.execute("""select donee,intended_funding_timeframe_in_months,donation_date from donations where donor = %s and substring_index(cause_area,'/',1)='AI safety' """, (donor,))
     y = 1
     donees_seen = {}
@@ -56,9 +58,10 @@ def single_donor_multiple_donees(donor):
     plt.xlabel("Date")
     plt.ylabel("Donee")
     plt.tight_layout()
-    plt.show()
+    plt.savefig(output)
 
-def single_donee_multiple_donors(donee):
+
+def single_donee_multiple_donors(output, donee, cause_area=None):
     cursor.execute("""select donor,intended_funding_timeframe_in_months,donation_date from donations where donee = %s and amount > 100000""", (donee,))
     y = 1
     donor_ypos = {}
@@ -76,13 +79,9 @@ def single_donee_multiple_donors(donee):
     plt.xlabel("Date")
     plt.ylabel("Donor")
     plt.tight_layout()
-    plt.show()
+    plt.savefig(output)
 
 
-# single_donor_single_donee("Open Philanthropy Project", "Machine Intelligence Research Institute")
-# single_donor_single_donee("Open Philanthropy Project", "Center for Applied Rationality")
-# single_donor_multiple_donees("Open Philanthropy Project")
-# single_donee_multiple_donors("Machine Intelligence Research Institute")
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='plot donations and timeframes')
     parser.add_argument('--donor')
@@ -91,4 +90,11 @@ if __name__ == "__main__":
     parser.add_argument('--cause_area')
     args = parser.parse_args()
 
-    print(args.donor, args.donee, args.output, args.cause_area)
+    if args.donor and args.donee:
+        single_donor_single_donee(args.output, args.donor, args.donee, cause_area=args.cause_area)
+    elif args.donor:
+        single_donor_multiple_donees(args.output, args.donor, cause_area=args.cause_area)
+    elif args.donee:
+        single_donee_multiple_donors(args.output, args.donee, cause_area=args.cause_area)
+    else:
+        print("Please specify a donor and/or donee.", file=sys.stderr)
