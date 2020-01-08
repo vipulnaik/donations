@@ -2,6 +2,7 @@
 
 import sys
 import datetime
+import argparse
 import mysql.connector
 # import matplotlib
 # matplotlib.use('Agg')
@@ -82,3 +83,12 @@ def single_donee_multiple_donors(donee):
 # single_donor_single_donee("Open Philanthropy Project", "Center for Applied Rationality")
 # single_donor_multiple_donees("Open Philanthropy Project")
 # single_donee_multiple_donors("Machine Intelligence Research Institute")
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='plot donations and timeframes')
+    parser.add_argument('--donor')
+    parser.add_argument('--donee')
+    parser.add_argument('--output')
+    parser.add_argument('--cause_area')
+    args = parser.parse_args()
+
+    print(args.donor, args.donee, args.output, args.cause_area)
