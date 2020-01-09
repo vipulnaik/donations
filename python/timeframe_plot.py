@@ -3,6 +3,7 @@
 import sys
 import datetime
 import argparse
+import base64
 import mysql.connector
 # import matplotlib
 # matplotlib.use('Agg')
@@ -155,19 +156,39 @@ def single_donee_multiple_donors(output, donee):
     plt.savefig(output, bbox_inches="tight")
 
 
+def base64_to_string(x):
+    if x:
+        return base64.b64decode(x).decode('utf8')
+    else:
+        return x
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='plot donations and timeframes')
     parser.add_argument('--donor')
     parser.add_argument('--donee')
     parser.add_argument('--output')
     parser.add_argument('--cause_area')
+    parser.add_argument('--base64', action='store_true')
     args = parser.parse_args()
 
+    # If --base64 flag is given, interpret all arguments as base64-encoded strings
+    if args.base64:
+        donor = base64_to_string(args.donor)
+        donee = base64_to_string(args.donee)
+        output = base64_to_string(args.output)
+        cause_area = base64_to_string(args.cause_area)
+    else:
+        donor = args.donor
+        donee = args.donee
+        output = args.output
+        cause_area = args.cause_area
+
     if args.donor and args.donee:
-        single_donor_single_donee(args.output, args.donor, args.donee)
+        single_donor_single_donee(output, donor, donee)
     elif args.donor:
-        single_donor_multiple_donees(args.output, args.donor, cause_area=args.cause_area)
+        single_donor_multiple_donees(output, donor, cause_area=cause_area)
     elif args.donee:
-        single_donee_multiple_donors(args.output, args.donee)
+        single_donee_multiple_donors(output, donee)
     else:
         print("Please specify a donor and/or donee.", file=sys.stderr)
