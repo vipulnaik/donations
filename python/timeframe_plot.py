@@ -24,7 +24,7 @@ cnx = mysql.connector.connect(user=login.USER, database=login.DATABASE,
 cursor = cnx.cursor()
 
 
-def single_donor_single_donee(output, donor, donee, cause_area=None):
+def single_donor_single_donee(output, donor, donee):
     cursor.execute("""select intended_funding_timeframe_in_months,donation_date from donations where donor = %s and donee = %s""", (donor, donee))
     y = 1
     for intended_funding_timeframe_in_months, donation_date in cursor:
@@ -43,6 +43,11 @@ def single_donor_single_donee(output, donor, donee, cause_area=None):
 
 def single_donor_multiple_donees(output, donor, cause_area=None):
     if cause_area:
+        # We want to limit the donations to those given to the top 10 donees.
+        # So we use a subquery to find the top 10 donees, but MySQL doesn't
+        # support a limit clause inside a subquery, so we have to create dummy
+        # table name (called t here). See
+        # https://stackoverflow.com/a/51877655/3422337
         cursor.execute("""select
                             donee,
                             intended_funding_timeframe_in_months,
@@ -66,11 +71,6 @@ def single_donor_multiple_donees(output, donor, cause_area=None):
                             )
                             order by donation_date""", (donor, cause_area, donor, cause_area))
     else:
-        # We want to limit the donations to those given to the top 10 donees.
-        # So we use a subquery to find the top 10 donees, but MySQL doesn't
-        # support a limit clause inside a subquery, so we have to create dummy
-        # table name (called t here). See
-        # https://stackoverflow.com/a/51877655/3422337
         cursor.execute("""select
                             donee,
                             intended_funding_timeframe_in_months,
@@ -91,7 +91,7 @@ def single_donor_multiple_donees(output, donor, cause_area=None):
                             )
                           order by donation_date""", (donor, donor))
 
-    plt.figure(figsize=(10,5))
+    plt.figure(figsize=(12,5))
     y = 1
     donees_seen = {}
     for donee, intended_funding_timeframe_in_months, donation_date in cursor:
@@ -112,8 +112,29 @@ def single_donor_multiple_donees(output, donor, cause_area=None):
     plt.savefig(output, bbox_inches="tight")
 
 
-def single_donee_multiple_donors(output, donee, cause_area=None):
-    cursor.execute("""select donor,intended_funding_timeframe_in_months,donation_date from donations where donee = %s and amount > 100000""", (donee,))
+def single_donee_multiple_donors(output, donee):
+    # See comment in single_donor_multiple_donees for explanation of the
+    # subquery.
+    cursor.execute("""select
+                        donor,
+                        intended_funding_timeframe_in_months,
+                        donation_date
+                      from
+                        donations
+                      where
+                        donee = %s and
+                        donor in (
+                          select * from (
+                            select donor
+                            from donations
+                            where donee = %s
+                            group by donor
+                            order by sum(amount) desc
+                            limit 10
+                          ) as t
+                        )
+                      order by donation_date""", (donee, donee))
+    plt.figure(figsize=(12,5))
     y = 1
     donor_ypos = {}
     for donor, intended_funding_timeframe_in_months, donation_date in cursor:
@@ -127,10 +148,11 @@ def single_donee_multiple_donors(output, donee, cause_area=None):
     # yticks needs ticks (y positions) and the labels in separate lists, so we
     # "unzip" the dictionary into two lists
     plt.yticks(*zip(*[(donor_ypos[k], k) for k in donor_ypos]))
+    plt.xticks(rotation=45)
     plt.xlabel("Date")
     plt.ylabel("Donor")
     plt.tight_layout()
-    plt.savefig(output)
+    plt.savefig(output, bbox_inches="tight")
 
 
 if __name__ == "__main__":
@@ -142,10 +164,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.donor and args.donee:
-        single_donor_single_donee(args.output, args.donor, args.donee, cause_area=args.cause_area)
+        single_donor_single_donee(args.output, args.donor, args.donee)
     elif args.donor:
         single_donor_multiple_donees(args.output, args.donor, cause_area=args.cause_area)
     elif args.donee:
-        single_donee_multiple_donors(args.output, args.donee, cause_area=args.cause_area)
+        single_donee_multiple_donors(args.output, args.donee)
     else:
         print("Please specify a donor and/or donee.", file=sys.stderr)
