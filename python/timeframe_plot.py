@@ -35,9 +35,10 @@ def single_donor_single_donee(output, donor, donee, cause_area=None):
         y += 1
 
     plt.yticks(range(1,y))
+    plt.xticks(rotation=45)
     plt.xlabel("Date")
     plt.ylabel("Grant number")
-    plt.savefig(output)
+    plt.savefig(output, bbox_inches="tight")
 
 
 def single_donor_multiple_donees(output, donor, cause_area=None):
