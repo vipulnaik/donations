@@ -42,7 +42,56 @@ def single_donor_single_donee(output, donor, donee, cause_area=None):
 
 
 def single_donor_multiple_donees(output, donor, cause_area=None):
-    cursor.execute("""select donee,intended_funding_timeframe_in_months,donation_date from donations where donor = %s and substring_index(cause_area,'/',1)='AI safety' """, (donor,))
+    if cause_area:
+        cursor.execute("""select
+                            donee,
+                            intended_funding_timeframe_in_months,
+                            donation_date
+                          from
+                            donations
+                          where
+                            donor = %s and
+                            substring_index(cause_area,'/',1)=%s and
+                            donee in (
+                              select * from (
+                                select donee
+                                from donations
+                                where
+                                  donor = %s and
+                                  substring_index(cause_area,'/',1)=%s
+                                group by donee
+                                order by sum(amount) desc
+                                limit 10
+                              ) as t
+                            )
+                            order by donation_date""", (donor, cause_area, donor, cause_area))
+    else:
+        # We want to limit the donations to those given to the top 10 donees.
+        # So we use a subquery to find the top 10 donees, but MySQL doesn't
+        # support a limit clause inside a subquery, so we have to create dummy
+        # table name (called t here). See
+        # https://stackoverflow.com/a/51877655/3422337
+        cursor.execute("""select
+                            donee,
+                            intended_funding_timeframe_in_months,
+                            donation_date
+                          from
+                            donations
+                          where
+                            donor = %s and
+                            donee in (
+                              select * from (
+                                select donee
+                                from donations
+                                where donor = %s
+                                group by donee
+                                order by sum(amount) desc
+                                limit 10
+                              ) as t
+                            )
+                          order by donation_date""", (donor, donor))
+
+    plt.figure(figsize=(10,5))
     y = 1
     donees_seen = {}
     for donee, intended_funding_timeframe_in_months, donation_date in cursor:
@@ -56,10 +105,11 @@ def single_donor_multiple_donees(output, donor, cause_area=None):
     # yticks needs ticks (y positions) and the labels in separate lists, so we
     # "unzip" the dictionary into two lists
     plt.yticks(*zip(*[(donees_seen[k], k) for k in donees_seen]))
+    plt.xticks(rotation=45)
     plt.xlabel("Date")
     plt.ylabel("Donee")
     plt.tight_layout()
-    plt.savefig(output)
+    plt.savefig(output, bbox_inches="tight")
 
 
 def single_donee_multiple_donors(output, donee, cause_area=None):
