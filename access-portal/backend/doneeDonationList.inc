@@ -16,7 +16,7 @@ if ($stmt = $mysqli->prepare($query)) {
 
 print '<h4 id="doneeDonationList">Full list of donations in reverse chronological order ('.($doneeDonationSelectResult -> num_rows).' donations)</h4>';
 
-$timeframePlotFileName = hash("md5", $donee) . ".png";
+$timeframePlotFileName = hash("md5", "timeframe plot|donee:" . $donee) . "-timeframe.png";
 exec($generateTimeframeGraphCmdBase . " --donee " . escapeshellarg($donee) . " --output " . escapeshellarg($imagesPath . $timeframePlotFileName));
 print '<p>Graph of top 10 donors by amount, showing the timeframe of donations</p>';
 print '<img src="/images/' . $timeframePlotFileName .'" alt="Graph of donations and their timeframes"></img>';
