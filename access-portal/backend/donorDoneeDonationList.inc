@@ -17,9 +17,8 @@ print '<h4 id="donorDoneeDonationList">Full list of donations in reverse chronol
 
 $timeframePlotFileName = hash("md5", $donor . $donee) . ".png";
 exec($generateTimeframeGraphCmdBase . " --donor " . escapeshellarg($donor) . " --donee " . escapeshellarg($donee) . " --output " . escapeshellarg($imagesPath . $timeframePlotFileName));
-
+print '<p>Graph of all donations, showing the timeframe of donations</p>';
 print '<img src="/images/' . $timeframePlotFileName .'" alt="Graph of donations and their timeframes"></img>';
-
 
 print '<table id="myTableDonorDonationList" class="tablesorter">'."\n";
 print "<thead>\n";
