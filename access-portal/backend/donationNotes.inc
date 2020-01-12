@@ -89,7 +89,7 @@ if ($notes && substr($notes, -1) != '.') {
 if ($notes_key_val_string) {
   $notes_key_val_string = ucfirst($notes_key_val_string) . '. ';
 }
-if ($notes_pre_key_val_string && $notes_key_val_string) {
+if ($notes_pre_key_val_string && $notes) {
   $notes_pre_key_val_string = $notes_pre_key_val_string . "<br/><br/><strong>Other notes:</strong> ";
 }
 print '    <td>' . $notes_pre_key_val_string . $notes . $notes_key_val_string . '</td>' . "\n";
