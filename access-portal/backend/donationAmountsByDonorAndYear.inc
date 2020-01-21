@@ -3,16 +3,16 @@
 $numDonorsToShowInLimitedView = 75;
 
 if (($_REQUEST['display'] ?? '') == "full") {
-  $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent";
+  $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where cause_area REGEXP ? ";
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
-  if ($causeAreaFilterQueryComponent) {
-    $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple')";
+  if ($causeAreaFilterString) {
+    $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where cause_area REGEXP ? and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple')";
   } else {
     $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple')";
   }
 } else {
-  if ($causeAreaFilterQueryComponent) {
-    $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent and donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x);";
+  if ($causeAreaFilterString) {
+    $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where cause_area REGEXP ? and donor in (select * from (select donor from donations where cause_area REGEXP ? group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x);";
   } else {
     $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where donor in (select * from (select donor from donations group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x);";
   }
@@ -23,16 +23,16 @@ for ($i = 0; $i < $totalNumDistinctDoneesResult -> num_rows; $i++) {
   $totalNumDistinctDonees = $row['numDonees'];
 }
 if (($_REQUEST['display'] ?? '') == "full") {
-  $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent group by donor;";
+  $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations where cause_area REGEXP ? group by donor;";
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
-  if ($causeAreaFilterQueryComponent) {
-    $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donor;";
+  if ($causeAreaFilterString) {
+    $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations where cause_area REGEXP ? and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donor;";
   } else {
     $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donor;";
   }
 } else {
-  if ($causeAreaFilterQueryComponent) {
-    $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations $causeAreaFilterQueryComponent and donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x) group by donor;";
+  if ($causeAreaFilterString) {
+    $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations where cause_area REGEXP ? and donor in (select * from (select donor from donations where cause_area REGEXP ? group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x) group by donor;";
   } else {
     $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations where donor in (select * from (select donor from donations group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x) group by donor;";
   }
@@ -61,7 +61,7 @@ if (($_REQUEST['display'] ?? '') == "full") {
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
   $donorMetadataQuery = "select * from donors where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple');";
 } else {
-  $donorMetadataQuery = "select * from donors where donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x);";
+  $donorMetadataQuery = "select * from donors where donor in (select * from (select donor from donations where cause_area REGEXP ? group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x);";
 }
 $donorMetadataResult = $mysqli -> query($donorMetadataQuery);
 $donorType = array();
@@ -84,16 +84,16 @@ for ($i = 0; $i < $donorMetadataResult -> num_rows; $i++) {
 }
 
 if (($_REQUEST['display'] ?? '') == "full") {
-  $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent group by donor, year(donation_date)";
+  $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? group by donor, year(donation_date)";
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
-  if ($causeAreaFilterQueryComponent) {
-    $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donor, year(donation_date)";
+  if ($causeAreaFilterString) {
+    $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donor, year(donation_date)";
   } else {
     $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donor, year(donation_date)";
   }
 } else {
-  if ($causeAreaFilterQueryComponent) {
-    $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent and donor in (select * from (select donor from donations $causeAreaFilterQueryComponent group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x) group by donor, year(donation_date)";
+  if ($causeAreaFilterString) {
+    $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and donor in (select * from (select donor from donations where cause_area REGEXP ? group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x) group by donor, year(donation_date)";
   } else {
     $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donor in (select * from (select donor from donations group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x) group by donor, year(donation_date)";
   }
