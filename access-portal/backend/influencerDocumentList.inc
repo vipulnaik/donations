@@ -3,7 +3,7 @@
 $influencerDocumentSelectQuery = "select * from documents where author REGEXP ? or affected_donors REGEXP ? order by publication_date desc";
 $stmt = $mysqli->prepare($influencerDocumentSelectQuery);
 $stmt->bind_param("ss", $influencer, $influencer);
-$stmt->execute()
+$stmt->execute();
 $influencerDocumentSelectResult = $stmt->get_result();
 if ($influencerDocumentSelectResult -> num_rows > 0) {
   print '<h4 id="influencerDocumentList">Full list of documents in reverse chronological order ('.($influencerDocumentSelectResult -> num_rows).' documents)</h4>';
