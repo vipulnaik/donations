@@ -5,9 +5,13 @@ $numDonorsToShowInLimitedView = 75;
 $paramStr = "";
 $params = array();
 if (($_REQUEST['display'] ?? '') == "full") {
-  $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where cause_area REGEXP ? ";
-  $paramStr .= "s";
-  $params[] = $causeAreaFilterString;
+  if ($causeAreaFilterString) {
+    $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where cause_area REGEXP ? ";
+    $paramStr .= "s";
+    $params[] = $causeAreaFilterString;
+  } else {
+    $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations ";
+  }
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
   if ($causeAreaFilterString) {
     $totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where cause_area REGEXP ? and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple')";
@@ -39,9 +43,13 @@ for ($i = 0; $i < $totalNumDistinctDoneesResult -> num_rows; $i++) {
 $paramStr = "";
 $params = array();
 if (($_REQUEST['display'] ?? '') == "full") {
-  $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations where cause_area REGEXP ? group by donor;";
-  $paramStr .= "s";
-  $params[] = $causeAreaFilterString;
+  if ($causeAreaFilterString) {
+    $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations where cause_area REGEXP ? group by donor;";
+    $paramStr .= "s";
+    $params[] = $causeAreaFilterString;
+  } else {
+    $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations group by donor;";
+  }
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
   if ($causeAreaFilterString) {
     $donorQuery = "select donor,count(*) as numDonations, count(distinct donee) as numDonees from donations where cause_area REGEXP ? and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donor;";
@@ -91,9 +99,13 @@ if (($_REQUEST['display'] ?? '') == "full") {
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
   $donorMetadataQuery = "select * from donors where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple');";
 } else {
-  $donorMetadataQuery = "select * from donors where donor in (select * from (select donor from donations where cause_area REGEXP ? group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x);";
-  $paramStr .= "s";
-  $params[] = $causeAreaFilterString;
+  if ($causeAreaFilterString) {
+    $donorMetadataQuery = "select * from donors where donor in (select * from (select donor from donations where cause_area REGEXP ? group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x);";
+    $paramStr .= "s";
+    $params[] = $causeAreaFilterString;
+  } else {
+    $donorMetadataQuery = "select * from donors where donor in (select * from (select donor from donations group by donor order by sum(amount) desc limit $numDonorsToShowInLimitedView) as x);";
+  }
 }
 $stmt = $mysqli->prepare($donorMetadataQuery);
 if ($params) {
@@ -123,9 +135,13 @@ for ($i = 0; $i < $donorMetadataResult -> num_rows; $i++) {
 $paramStr = "";
 $params = array();
 if (($_REQUEST['display'] ?? '') == "full") {
-  $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? group by donor, year(donation_date)";
-  $paramStr .= "s";
-  $params[] = $causeAreaFilterString;
+  if ($causeAreaFilterString) {
+    $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? group by donor, year(donation_date)";
+    $paramStr .= "s";
+    $params[] = $causeAreaFilterString;
+  } else {
+    $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations group by donor, year(donation_date)";
+  }
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
   if ($causeAreaFilterString) {
     $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donor, year(donation_date)";
