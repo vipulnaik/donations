@@ -50,11 +50,11 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
 $paramStr = "";
 $params = array();
 $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor = ? ";
-$paramStr "s";
+$paramStr .= "s";
 $params[] = $donor;
 if ($causeAreaFilterString) {
   $doneeAndYearQuery .= " and cause_area REGEXP ?";
-  $paramStr "s";
+  $paramStr .= "s";
   $params[] = $causeAreaFilterString;
 }
 $doneeAndYearQuery .= " group by donee, year(donation_date)";
