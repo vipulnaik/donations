@@ -16,7 +16,7 @@ function print_stats($amountList, $rowName) {
   // Since the array is 0-indexed, we need to subtract 1 from the resulting
   // rank.
   for ($i = 10; $i < 100; $i = $i + 10) {
-    echo '<td align="right">' . number_format($amountList[ceil($i/100 * $n) - 1]) . "</td>\n";  // 10..90th percentile
+    echo '<td align="right">' . number_format(max(0,$amountList[ceil($i/100 * $n) - 1])) . "</td>\n";  // 10..90th percentile
   }
 
   echo '<td align="right">' . number_format($amountList[$n - 1]) . "</td>\n";  // maximum
@@ -43,25 +43,29 @@ if ($stmt = $mysqli->prepare($query)) {
     $amountList[] = $row['amount'];
     $causesList[$row['cause_area']][] = $row['amount'];
   }
-  echo '<table id="myTableDonorStatistics" class="tablesorter">';
-  echo "<thead>\n";
-  echo "<tr>\n";
-  echo "<th>Cause area</th>";
-  echo "<th>Count</th>";
-  echo "<th>Median</th>";
-  echo "<th>Mean</th>";
-  echo "<th>Minimum</th>";
-  for ($i = 10; $i < 100; $i = $i + 10) {
-    echo "<th>$i" . "th percentile</th>\n";  // 10..90th percentile
+  if (count($amountList) > 0) {
+    echo '<table id="myTableDonorStatistics" class="tablesorter">';
+    echo "<thead>\n";
+    echo "<tr>\n";
+    echo "<th>Cause area</th>";
+    echo "<th>Count</th>";
+    echo "<th>Median</th>";
+    echo "<th>Mean</th>";
+    echo "<th>Minimum</th>";
+    for ($i = 10; $i < 100; $i = $i + 10) {
+      echo "<th>$i" . "th percentile</th>\n";  // 10..90th percentile
+    }
+    echo "<th>Maximum</th>";
+    echo "</tr>\n";
+    echo "</thead>\n";
+    echo "<tbody>\n";
+    print_stats($amountList, "Overall");
+    foreach($causesList as $cause => $amounts) {
+      print_stats($amounts, $cause);
+    }
+    echo "</tbody>\n";
+    echo "</table>\n";
+  } else {
+    echo '<p>No donations recorded so far, so not printing the statistics table!</p>';
   }
-  echo "<th>Maximum</th>";
-  echo "</tr>\n";
-  echo "</thead>\n";
-  echo "<tbody>\n";
-  print_stats($amountList, "Overall");
-  foreach($causesList as $cause => $amounts) {
-    print_stats($amounts, $cause);
-  }
-  echo "</tbody>\n";
-  echo "</table>\n";
 }

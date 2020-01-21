@@ -81,6 +81,7 @@ $notes =  trim(cleanNotes($row['notes']));
 $notes_key_val_string = trim(implode('; ', $notes_key_val_pairs));
 
 /* Add a period to complete the sentence if necessary */
+$originalNotes = $notes;
 if ($notes && substr($notes, -1) != '.') {
   $notes .= '. ';
 } else {
@@ -89,7 +90,7 @@ if ($notes && substr($notes, -1) != '.') {
 if ($notes_key_val_string) {
   $notes_key_val_string = ucfirst($notes_key_val_string) . '. ';
 }
-if ($notes_pre_key_val_string && $notes_key_val_string) {
+if ($notes_pre_key_val_string && $originalNotes) {
   $notes_pre_key_val_string = $notes_pre_key_val_string . "<br/><br/><strong>Other notes:</strong> ";
 }
 print '    <td>' . $notes_pre_key_val_string . $notes . $notes_key_val_string . '</td>' . "\n";

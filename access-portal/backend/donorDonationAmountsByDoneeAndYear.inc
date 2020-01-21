@@ -2,8 +2,21 @@
 
 print '<h4 id="donorDonationAmountsByDoneeAndYear">Donation amounts by donee and year</h4>';
 
-$doneeQuery = "select donee from donations where donor=".'"'.str_replace('"','\"',$donor).'"'." $causeAreaFilterQueryComponent group by donee;";
-$doneeResult = $mysqli -> query($doneeQuery);
+$paramStr = "";
+$params = array();
+$doneeQuery = "select donee from donations where donor = ?";
+$paramStr .= "s";
+$params[] = $donor;
+if ($causeAreaFilterString) {
+  $doneeQuery .= " and cause_area REGEXP ?";
+  $paramStr .= "s";
+  $params[] = $causeAreaFilterString;
+}
+$doneeQuery .= " group by donee";
+$stmt = $mysqli->prepare($doneeQuery);
+$stmt->bind_param($paramStr, ...$params);
+$stmt->execute();
+$doneeResult = $stmt->get_result();
 $donees = array();
 for ($i = 0; $i < $doneeResult -> num_rows; $i++) {
   $row = $doneeResult -> fetch_assoc();
@@ -34,8 +47,21 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
 }
 
 
-$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor=".'"'.str_replace('"','\"',$donor).'"'." $causeAreaFilterQueryComponent group by donee, year(donation_date)";
-$doneeAndYearResult = $mysqli -> query($doneeAndYearQuery);
+$paramStr = "";
+$params = array();
+$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor = ? ";
+$paramStr .= "s";
+$params[] = $donor;
+if ($causeAreaFilterString) {
+  $doneeAndYearQuery .= " and cause_area REGEXP ?";
+  $paramStr .= "s";
+  $params[] = $causeAreaFilterString;
+}
+$doneeAndYearQuery .= " group by donee, year(donation_date)";
+$stmt = $mysqli->prepare($doneeAndYearQuery);
+$stmt->bind_param($paramStr, ...$params);
+$stmt->execute();
+$doneeAndYearResult = $stmt->get_result();
 
 for ($i=0; $i < $doneeAndYearResult -> num_rows; $i++) {
   $row = $doneeAndYearResult -> fetch_assoc();
@@ -60,7 +86,7 @@ print "<thead>\n";
 print "  <tr>\n    <th>Donee</th>\n	<th>Cause area</th>\n	<th>Metadata</th>\n";
 print "    <th>Total</th>\n";
 foreach ($years as $year) {
-  if ($yearDonationAmount[$year] != 0) {
+  if (isset($yearDonationAmouont[$year]) && $yearDonationAmount[$year] != 0) {
     print "    <th>$year</th>\n";
   }
 }
@@ -121,7 +147,7 @@ print "  <tr>\n    <td><strong>Total</strong></td>\n	".'<td align="center">--</t
 print '    <td align="right"><strong>'.number_format($grandTotalDonationAmount,2)."</strong></td>\n";
 
 foreach ($years as $year) {
-  if ($yearDonationAmount[$year] != 0) {
+  if (isset($yearDonationAmount[$year]) && $yearDonationAmount[$year] != 0) {
     print '    <td align="right"><strong>'.number_format($yearDonationAmount[$year],2)."</strong></td>\n";
   }
 }
