@@ -5,8 +5,8 @@ import datetime
 import argparse
 import base64
 import mysql.connector
-# import matplotlib
-# matplotlib.use('Agg')
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 try:
