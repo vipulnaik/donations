@@ -1,6 +1,9 @@
 <?php
-$doneeSelectQuery = "select * from donees where donee='$donee';";
-$doneeSelectResult = $mysqli -> query($doneeSelectQuery);
+$doneeSelectQuery = "select * from donees where donee = ?;";
+$stmt = $mysqli->prepare($doneeSelectQuery);
+$stmt->bind_param("s", $donee);
+$stmt->execute();
+$doneeSelectResult = $stmt->get_result();
 print '<h4 id="doneeInfo">Basic donee information</h4>';
 if ($doneeSelectResult -> num_rows == 0) {
   print "<p>We do not have any donee information for the donee $donee in our system.";

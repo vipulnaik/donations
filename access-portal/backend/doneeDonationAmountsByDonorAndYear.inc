@@ -2,8 +2,11 @@
 
 print '<h4 id="doneeDonationAmountsByDonorAndYear">Donation amounts by donor and year for donee '.$donee.'</h4>'."\n";
 
-$donorQuery = "select donor from donations where donee = ".'"'.str_replace('"','\"',$donee).'"'." group by donor;";
-$donorResult = $mysqli -> query($donorQuery);
+$donorQuery = "select donor from donations where donee = ? group by donor;";
+$stmt = $mysqli->prepare($donorQuery);
+$stmt->bind_param("s", $donee);
+$stmt->execute();
+$donorResult = $stmt->get_result();
 $donors = array();
 for ($i = 0; $i < $donorResult -> num_rows; $i++) {
   $row = $donorResult -> fetch_assoc();
@@ -18,8 +21,11 @@ foreach($donors as $donor) {
   }
 }
 
-$donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donee=".'"'.str_replace('"','\"',$donee).'"'." group by donor, year(donation_date)";
-$donorAndYearResult = $mysqli -> query($donorAndYearQuery);
+$donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donee = ? group by donor, year(donation_date)";
+$stmt = $mysqli->prepare($donorAndYearQuery);
+$stmt->bind_param("s", $donee);
+$stmt->execute();
+$donorAndYearResult = $stmt->get_result();
 
 for ($i=0; $i < $donorAndYearResult -> num_rows; $i++) {
   $row = $donorAndYearResult -> fetch_assoc();

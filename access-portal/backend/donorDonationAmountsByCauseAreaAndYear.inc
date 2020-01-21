@@ -2,14 +2,39 @@
 
 print '<h4 id="donorDonationAmountsByCauseAreaAndYear">Donation amounts by cause area and year</h4>';
 
-$totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where donor=".'"'.str_replace('"','\"',$donor).'"'." $causeAreaFilterQueryComponent;";
-$totalNumDistinctDoneesResult = $mysqli -> query($totalNumDistinctDoneesQuery);
+$paramStr = "";
+$params = array();
+$totalNumDistinctDoneesQuery = "select count(distinct donee) as numDonees from donations where donor = ?";
+$paramStr .= "s";
+$params[] = $donor;
+if ($causeAreaFilterString) {
+  $totalNumDistinctDoneesQuery .= " and cause_area REGEXP ?";
+  $paramStr .= "s";
+  $params[] = $causeAreaFilterString;
+}
+$stmt = $mysqli->prepare($totalNumDistinctDoneesQuery);
+$stmt->bind_param($paramStr, ...$params);
+$stmt->execute();
+$totalNumDistinctDoneesResult = $stmt->get_result();
 for ($i = 0; $i < $totalNumDistinctDoneesResult -> num_rows; $i++) {
   $row = $totalNumDistinctDoneesResult -> fetch_assoc();
   $totalNumDistinctDonees = $row['numDonees'];
 }
-$causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area,count(distinct donee) as numDonees,count(*) as numDonations from donations where donor=".'"'.str_replace('"','\"',$donor).'"'." $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1)";
-$causeAreaResult = $mysqli -> query($causeAreaQuery);
+$paramStr = "";
+$params = array();
+$causeAreaQuery = "select substring_index(cause_area,'/',1) as cause_area,count(distinct donee) as numDonees,count(*) as numDonations from donations where donor = ?";
+$paramStr .= "s";
+$params[] = $donor;
+if ($causeAreaFilterString) {
+  $causeAreaQuery .= " and cause_area REGEXP ?";
+  $paramStr .= "s";
+  $params[] = $causeAreaFilterString;
+}
+$causeAreaQuery .= " group by substring_index(cause_area,'/',1)";
+$stmt = $mysqli->prepare($causeAreaQuery);
+$stmt->bind_param($paramStr, ...$params);
+$stmt->execute();
+$causeAreaResult = $stmt->get_result();
 $causeAreas = array();
 $grandTotalNumDonations = 0;
 for ($i = 0; $i < $causeAreaResult -> num_rows; $i++) {
@@ -28,8 +53,21 @@ foreach($causeAreas as $causeArea) {
   }
 }
 
-$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(distinct donee) as numDonees, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor=".'"'.str_replace('"','\"',$donor).'"'." $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1), year(donation_date)";
-$causeAreaAndYearResult = $mysqli -> query($causeAreaAndYearQuery);
+$paramStr = "";
+$params = array();
+$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(distinct donee) as numDonees, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor = ?";
+$paramStr .= "s";
+$params[] = $donor;
+if ($causeAreaFilterString) {
+  $causeAreaAndYearQuery .= " and cause_area REGEXP ?";
+  $paramStr .= "s";
+  $params[] = $causeAreaFilterString;
+}
+$causeAreaAndYearQuery .= " group by substring_index(cause_area,'/',1), year(donation_date)";
+$stmt = $mysqli->prepare($causeAreaAndYearQuery);
+$stmt->bind_param($paramStr, ...$params);
+$stmt->execute();
+$causeAreaAndYearResult = $stmt->get_result();
 
 for ($i=0; $i < $causeAreaAndYearResult -> num_rows; $i++) {
   $row = $causeAreaAndYearResult -> fetch_assoc();
