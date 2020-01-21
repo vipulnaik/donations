@@ -6,11 +6,9 @@ include_once('backend/stringFunctions.inc');
 include_once('backend/cachingFunctions.inc');
 $causeAreaFilterString = '';
 $causeAreaFilterStringHelper = '';
-$causeAreaFilterQueryComponent = "";
 if (!empty($_REQUEST['cause_area_filter'])) {
   $causeAreaFilterString = $_REQUEST['cause_area_filter'];
   $causeAreaFilterStringHelper = " (filtered to cause areas matching $causeAreaFilterString)";
-  $causeAreaFilterQueryComponent = " where cause_area REGEXP '$causeAreaFilterString' ";
 }
 print "<title>Donations recorded by Vipul Naik $causeAreaFilterStringHelper</title>";
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
