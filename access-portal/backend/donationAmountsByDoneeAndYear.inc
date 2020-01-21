@@ -3,15 +3,15 @@
 $numDoneesToShowInLimitedView = 75;
 
 if (($_REQUEST['display'] ?? '') == "full") {
-  $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee;";
+  $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where cause_area REGEXP ? group by donee;";
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
-  if ($causeAreaFilterQueryComponent) {
-    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee;";
+  if ($causeAreaFilterString) {
+    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where cause_area REGEXP ? and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee;";
   } else {
     $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee;";
   }
 } else {
-  $doneeQuery = "select donee, count(distinct donor) as numDonors from donations $causeAreaFilterQueryComponent group by donee order by sum(amount) desc limit $numDoneesToShowInLimitedView;";
+  $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where cause_area REGEXP ? group by donee order by sum(amount) desc limit $numDoneesToShowInLimitedView;";
 }
 $doneeResult = $mysqli -> query($doneeQuery);
 $donees = array();
@@ -29,7 +29,7 @@ foreach($donees as $donee) {
   }
 }
 
-$doneeMetadataQuery = "select * from donees $causeAreaFilterQueryComponent;";
+$doneeMetadataQuery = "select * from donees where cause_area REGEXP ?;";
 $doneeMetadataResult = $mysqli -> query($doneeMetadataQuery);
 $website = array();
 $facebookUsername = array();
@@ -56,13 +56,13 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
 }
 
 if (($_REQUEST['display'] ?? '') == "individual-scale") {
-  if ($causeAreaFilterQueryComponent) {
-    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee, year(donation_date)";
+  if ($causeAreaFilterString) {
+    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee, year(donation_date)";
   } else {
     $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee, year(donation_date)";
   }
 } else {
-  $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations $causeAreaFilterQueryComponent group by donee, year(donation_date)";
+  $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? group by donee, year(donation_date)";
 }
 $doneeAndYearResult = $mysqli -> query($doneeAndYearQuery);
 
