@@ -10,5 +10,5 @@ yearlyGroupings(
   "influencer",
   $causeAreaFilterString,
   '<a href="/influencer.php?influencer=%s">%s</a>',
-  ($_REQUEST['display'] == "full" ? -1 : 30)
+  (isset($_REQUEST['display']) && $_REQUEST['display'] == "full" ? -1 : 30)
 );

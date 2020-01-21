@@ -1,5 +1,9 @@
 <?php
 
+if (!isset($causeAreaFilterString)) {
+  $causeAreaFilterString = '';
+}
+
 yearlyGroupings(
   $mysqli,
   $generateGraphCmdBase,
@@ -10,7 +14,7 @@ yearlyGroupings(
   "cause_area",
   $causeAreaFilterString,
   "",
-  ($_REQUEST['display'] == "full" ? -1 : 30)
+  (isset($_REQUEST['display']) && $_REQUEST['display'] == "full" ? -1 : 30)
 );
 
 ?>
