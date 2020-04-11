@@ -77,6 +77,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gfi-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/givedirectly-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/givewell-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/giving-pledge-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/good-policies-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gpi-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gwwc-docs.sql
