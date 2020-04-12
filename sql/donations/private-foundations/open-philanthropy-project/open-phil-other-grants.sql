@@ -69,8 +69,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ '80,000 Hours aims to solve skill bottlenecks for career paths in what it considers to be the world’s most pressing problems. It does this by providing online research, in-person advice, and support with the goal of helping talented graduates age 20-40 enter high-impact careers.',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'Open Phil''s grant writeup says: "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter" with the most recent similar grant being https://www.openphilanthropy.org/giving/grants/80000-hours-general-support-2019 (February 2019) and the most recent grant with a detailed writeup being https://www.openphilanthropy.org/giving/grants/80000-hours-general-support-2018 (February 2018)',
-  /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public',
-  /* donor_timing_reason */ 'Reasons for timing are not discussed, but this is likely the time when the Committee for Effective Altruism Support does its 2020 allocation',
+  /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public. ',
+  /* donor_timing_reason */ 'Reasons for timing are not discussed, but this is likely the time when the Committee for Effective Altruism Support does its 2020 allocation. Two other grants decided by CEAS at around the same time are: Machine Intelligence Research Institute ($7,703,750) and Centre for Effective Altruism ($4,146,795)',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
@@ -101,18 +101,42 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Grant of £2,000,000 ($2,688,000 at time of conversion)'),
 
-  ('Open Philanthropy Project','Centre for Effective Altruism',2756250,'2019-02-01','month','donation log','Effective altruism/movement growth','https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support-2019','https://www.openphilanthropy.org/focus/other-areas#EffectiveAltruism','Committee for Effective Altruism Support','2019-04-19','day',NULL,NULL,
-  /* donation_process */ 'The decision of whether to donate seems to have followed the Open Philanthropy Project''s usual process, but the exact amount to donate was determined by the Committee for Effective Altruism Support using the process described at https://www.openphilanthropy.org/committee-effective-altruism-support',
+  ('Open Philanthropy Project','Centre for Effective Altruism',2756250,'2019-02-01','month','donation log','Effective altruism/movement growth','https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support-2019','https://www.openphilanthropy.org/focus/other-areas#EffectiveAltruism','Committee for Effective Altruism Support','2019-04-18','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ 'The exact amount to donate was determined by the Committee for Effective Altruism Support using the process described at https://www.openphilanthropy.org/committee-effective-altruism-support',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'The grant writeup says: "CEA is a central organization within the effective altruism (EA) community that engages in a variety of activities aimed at helping the EA community."',
   /* intended_funding_timeframe_in_months */ 24,
-  /* donor_donee_reason */ 'Open Phil''s grant writeup says: "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter" and links to the June 2018 support https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support-2019',
+  /* donor_donee_reason */ 'Open Phil''s grant writeup says: "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter"',
   /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public. Two other grants with amounts decided by the Committee for Effective Altruism Support, made at the same time and therefore likely drawing from the same money pot, are to the Machine Intelligence Research Institute ($2,112,5000) and 80,000 Hours ($4,795,803)',
   /* donor_timing_reason */ 'Reasons for timing are not discussed, but likely include (1) It is about a year since the last grant to the Centre for Effective Altruism, and the grants are generally expected to last a year, so a renewal is due, (2) The Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support did its first round of money allocation, so the timing is determined by the timing of that allocation round',
   /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup September 2019 grant https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support-and-community-building-grants-2019 and January 2020 grant https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support-and-community-building-grants-2020 suggest that Open Phil would continue to stand behind the reasoning for this grant, and in fact, that it would consider the original grant amount inadequate for the grantee',
+  /* notes */ NULL),
+
+  ('Open Philanthropy Project','Centre for Effective Altruism',1755921,'2019-09-01','month','donation log','Effective altruism/movement growth','https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support-and-community-building-grants-2019','https://www.openphilanthropy.org/focus/other-areas#EffectiveAltruism','Committee for Effective Altruism Support','2019-11-08','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ 'The exact amount to donate was determined by the Committee for Effective Altruism Support using the process described at https://www.openphilanthropy.org/committee-effective-altruism-support',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant for a mix of organizational general support and supporting the Effective Altruism Community Building Grants program operated by CEA',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'Open Phil''s grant writeup says: "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter" and links to the February 2019 support https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support-2019',
+  /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support (CEAS) https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public. No other grants seem to have been decided by CEAS close in time to this grant',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy Project','Centre for Effective Altruism',4146795,'2020-01-01','month','donation log','Effective altruism/movement growth','https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support-and-community-building-grants-2020','https://www.openphilanthropy.org/focus/other-areas#EffectiveAltruism','Committee for Effective Altruism Support','2020-03-09','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ 'The exact amount to donate was determined by the Committee for Effective Altruism Support using the process described at https://www.openphilanthropy.org/committee-effective-altruism-support',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant for a mix of organizational general support and supporting the Effective Altruism Community Building Grants program operated by CEA',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'Open Phil''s grant writeup says: "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter" and links to the September 2019 support https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support-and-community-building-grants-2019 that had the same intended use of funds (general support + Community Building Grants)',
+  /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support (CEAS) https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public. Two other grants decided by CEAS at around the same time are: Machine Intelligence Research Institute ($7,703,750) and 80,000 Hours ($3,457,284)',
+  /* donor_timing_reason */ 'Reasons for timing are not discussed, but this is likely the time when the Committee for Effective Altruism Support does its 2020 allocation',
+  /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
-
+  
 /* Grant to Center for Applied Rationality */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy Project','Center for Applied Rationality',304000,'2016-05-01','month','donation log','Rationality improvement/effective altruism/movement growth','https://www.openphilanthropy.org/giving/grants/center-applied-rationality-sparc','Nick Beckstead','2016-07-07','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/2xhxrZZgjX8',NULL,
