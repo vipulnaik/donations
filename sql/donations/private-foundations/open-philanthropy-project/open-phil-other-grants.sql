@@ -70,7 +70,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'Open Phil''s grant writeup says: "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter" with the most recent similar grant being https://www.openphilanthropy.org/giving/grants/80000-hours-general-support-2019 (February 2019) and the most recent grant with a detailed writeup being https://www.openphilanthropy.org/giving/grants/80000-hours-general-support-2018 (February 2018)',
   /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public. ',
-  /* donor_timing_reason */ 'Reasons for timing are not discussed, but this is likely the time when the Committee for Effective Altruism Support does its 2020 allocation. Two other grants decided by CEAS at around the same time are: Machine Intelligence Research Institute ($7,703,750) and Centre for Effective Altruism ($4,146,795)',
+  /* donor_timing_reason */ 'Reasons for timing are not discussed, but this is likely the time when the Committee for Effective Altruism Support does its 2020 allocation. Two other grants decided by CEAS at around the same time are: Machine Intelligence Research Institute ($7,703,750),Centre for Effective Altruism ($4,146,795), and Ought ($1,593,333)',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
@@ -131,7 +131,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'Grant for a mix of organizational general support and supporting the Effective Altruism Community Building Grants program operated by CEA',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'Open Phil''s grant writeup says: "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter" and links to the September 2019 support https://www.openphilanthropy.org/giving/grants/centre-effective-altruism-general-support-and-community-building-grants-2019 that had the same intended use of funds (general support + Community Building Grants)',
-  /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support (CEAS) https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public. Two other grants decided by CEAS at around the same time are: Machine Intelligence Research Institute ($7,703,750) and 80,000 Hours ($3,457,284)',
+  /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support (CEAS) https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public. Two other grants decided by CEAS at around the same time are: Machine Intelligence Research Institute ($7,703,750), 80,000 Hours ($3,457,284), and Ought ($1,593,333)',
   /* donor_timing_reason */ 'Reasons for timing are not discussed, but this is likely the time when the Committee for Effective Altruism Support does its 2020 allocation',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
