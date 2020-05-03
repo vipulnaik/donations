@@ -10,7 +10,7 @@ if (!empty($_REQUEST['cause_area_filter'])) {
   $causeAreaFilterString = $_REQUEST['cause_area_filter'];
   $causeAreaFilterStringHelper = " (filtered to cause areas matching $causeAreaFilterString)";
 }
-print "<title>Donations recorded by Vipul Naik $causeAreaFilterStringHelper</title>";
+print "<title>Donations list website $causeAreaFilterStringHelper</title>";
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
 print '<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>'."\n";
 print '<script type="text/javascript" src="./jquery.tablesorter.js"></script>'."\n";
