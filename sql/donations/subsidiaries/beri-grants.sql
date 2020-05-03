@@ -4,14 +4,61 @@ Grants covered elsewhere:
 - Open Philanthropy grant to BERI
 */
 
+/* Grants to Machine Intelligence Research Institute (MIRI) */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Berkeley Existential Risk Initiative','Machine Intelligence Research Institute',100000,'2017-09-13','day','donation log','AI safety','http://existence.org/grants','2017-09-25','day','http://existence.org/2017/09/25/announcing-beris-first-grants-program.html',
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The announcement page says: "Broadly, we believe these groups [Machine Intelligence Research Institute and Future of Life Institute] to have done good work in the past for reducing existential risk and wish to support their continued efforts."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'This is one of two opening grants made by BERI to begin its grants program.',
+  /* donor_next_donation_thoughts */ 'The grant page says: "Over the next few months, we may write more about our reasoning behind these and other grants." It further outlines the kinds of organizations that BERI will be granting to in the short run.',
+  /* donor_retrospective */ 'BERI would make three further grants to MIRI, indicating continued confidence in the grantee. The last grant would be in March 2020 for $300,000. By that point, BERI would have transitioned these grantmaking responsibilities to the Survival and Fluorishing Fund.',
+  /* notes */ NULL),
+  ('Berkeley Existential Risk Initiative','Machine Intelligence Research Institute',100000,'2017-12-28','day','donation log','AI safety','http://existence.org/grants/','2018-01-11','day','http://existence.org/2018/01/11/activity-update-december-2017.html',
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donoor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'BERI would make two further grants to MIRI, indicating continued confidence in the grantee. The last grant would be in March 2020 for $300,000. By that point, BERI would have transitioned these grantmaking responsibilities to the Survival and Fluorishing Fund.',
+  /* notes */ NULL),
+  ('Berkeley Existential Risk Initiative','Machine Intelligence Research Institute',600000,'2019-02-26','day','donation log','AI safety','http://existence.org/grants/','2019-05-09','day','http://existence.org/2019/05/09/activity-update-march-2019.html',
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'BERI would make a further to MIRI, indicating continued confidence in the grantee. The followup grant would be in March 2020 for $300,000. By that point, BERI would have transitioned these grantmaking responsibilities to the Survival and Fluorishing Fund.',
+  /* notes */ 'This grant is also discussed by the Machine Intelligence Research Institute (the grant recipient) at https://intelligence.org/2017/11/08/major-grant-open-phil/ along with a grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support-2019 from the Open Philanthropy Project.'),
+  ('Berkeley Existential Risk Initiative','Machine Intelligence Research Institute',300000,'2020-03-02','day','donation log','AI safety','http://existence.org/grants/',NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The grant is mentioned by MIRI in the blog post https://intelligence.org/2020/04/27/miris-largest-grant-to-date/ along with a large grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support-2020 from the Open Philanthropy Project. The post says: "at the time of our 2019 fundraiser, we expected to receive a grant from BERI in early 2020, and incorporated this into our reserves estimates. However, we predicted the grant size would be $600k; now that we know the final grant amount, that estimate should be $300k lower."');
+
+/* The remaining grants are automatically generated with possible small modifications */
+
 insert into donations(donor,donee,donation_earmark,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,notes) values
-    ('Berkeley Existential Risk Initiative','Machine Intelligence Research Institute',NULL,100000,'2017-09-13','day','donation log','AI safety','https://web.archive.org/web/20180731180958/http://existence.org:80/grants https://web.archive.org/web/20180921215949/http://existence.org/organization-grants/',NULL)
-    ,('Berkeley Existential Risk Initiative','Future of Life Institute',NULL,100000,'2017-10-27','day','donation log','AI safety','https://web.archive.org/web/20180731180958/http://existence.org:80/grants https://web.archive.org/web/20180921215949/http://existence.org/organization-grants/',NULL)
+    ('Berkeley Existential Risk Initiative','Future of Life Institute',NULL,100000,'2017-10-27','day','donation log','AI safety','https://web.archive.org/web/20180731180958/http://existence.org:80/grants https://web.archive.org/web/20180921215949/http://existence.org/organization-grants/',NULL)
     ,('Berkeley Existential Risk Initiative','Future of Life Institute',NULL,50000,'2017-10-27','day','donation log','AI safety','https://web.archive.org/web/20180731180958/http://existence.org:80/grants https://web.archive.org/web/20180921215949/http://existence.org/organization-grants/','For general support. See announcement at http://existence.org/2017/11/03/activity-update-october-2017.html')
     ,('Berkeley Existential Risk Initiative','Institute for Philosophical Research',NULL,25000,'2017-12-15','day','donation log','Existential risks','https://web.archive.org/web/20180731180958/http://existence.org:80/grants https://web.archive.org/web/20180921215949/http://existence.org/organization-grants/',NULL)
     ,('Berkeley Existential Risk Initiative','Association for the Advancement of Artificial Intelligence',NULL,20000,'2017-12-18','day','donation log','AI safety','https://web.archive.org/web/20180731180958/http://existence.org:80/grants https://web.archive.org/web/20180921215949/http://existence.org/organization-grants/','To support the conference on Artificial Intelligence, Ethics, and Society. See announcement at http://existence.org/2017/12/01/activity-update-november-2017.html')
     ,('Berkeley Existential Risk Initiative','Center for Applied Rationality',NULL,100000,'2017-12-27','day','donation log','AI safety','https://web.archive.org/web/20180731180958/http://existence.org:80/grants https://web.archive.org/web/20180921215949/http://existence.org/organization-grants/','See announcement at http://existence.org/2018/01/11/activity-update-december-2017.html')
-    ,('Berkeley Existential Risk Initiative','Machine Intelligence Research Institute',NULL,100000,'2017-12-28','day','donation log','AI safety','https://web.archive.org/web/20180731180958/http://existence.org:80/grants https://web.archive.org/web/20180921215949/http://existence.org/organization-grants/','See blog announcement at http://existence.org/2018/01/11/activity-update-december-2017.html')
     ,('Berkeley Existential Risk Initiative','Miles Brundage',NULL,32500,'2018-01-02','day','donation log','AI safety','https://web.archive.org/web/20180731180958/http://existence.org:80/grants',NULL)
     ,('Berkeley Existential Risk Initiative','Global Catastrophic Risk Institute',NULL,25000,'2018-01-24','day','donation log','Existential risks','https://web.archive.org/web/20180731180958/http://existence.org:80/grants https://web.archive.org/web/20180921215949/http://existence.org/organization-grants/','For general support; grant via Social and Environmental Entrepreneurs')
     ,('Berkeley Existential Risk Initiative','Center for Applied Rationality',NULL,800000,'2018-01-26','day','donation log','AI safety','https://web.archive.org/web/20180731180958/http://existence.org:80/grants https://web.archive.org/web/20180921215949/http://existence.org/organization-grants/','General support for the purpose of a permanent venue for CFAR workshops. See announcement at http://existence.org/2018/02/08/activity-update-january-2018.html')
@@ -44,7 +91,6 @@ insert into donations(donor,donee,donation_earmark,amount,donation_date,donation
     ,('Berkeley Existential Risk Initiative','Lucius Caviola',NULL,44353,'2018-12-27','day','donation log','Existential risk','http://web.archive.org/web/20190623203105/http://existence.org/grants/','Research on the psychology of existential risk')
     ,('Berkeley Existential Risk Initiative','Leverage Research',NULL,25000,'2019-01-22','day','donation log','Existential risk','http://web.archive.org/web/20190623203105/http://existence.org/grants/','The grant follows a solicitation of feedback on Leverage ond related orgs http://existence.org/testimonials-ipr-leverage-paradigm/')
     ,('Berkeley Existential Risk Initiative','Stefan Schubert',NULL,86580,'2019-01-24','day','donation log','Existential risk','http://web.archive.org/web/20190623203105/http://existence.org/grants/','Research on the psychology of existential risk')
-    ,('Berkeley Existential Risk Initiative','Machine Intelligence Research Institute',NULL,600000,'2019-02-26','day','donation log','AI safety','http://web.archive.org/web/20190623203105/http://existence.org/grants/','This grant is also discussed by the Machine Intelligence Research Institute (the grant recipient) at https://intelligence.org/2017/11/08/major-grant-open-phil/ along with a grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support-2019 from the Open Philanthropy Project')
     ,('Berkeley Existential Risk Initiative','Alliance to Feed the Earth in Disasters',NULL,25000,'2019-03-12','day','donation log','Existential risk','http://web.archive.org/web/20190623203105/http://existence.org/grants/',NULL)
     ,('Berkeley Existential Risk Initiative','Americans for Oxford','Yarin Gal',25000,'2019-04-08','day','donation log','Existential risk','http://web.archive.org/web/20190623203105/http://existence.org/grants/',NULL)
     ,('Berkeley Existential Risk Initiative','Leverage Research',NULL,50000,'2019-04-09','day','donation log','Existential risk','http://web.archive.org/web/20190623203105/http://existence.org/grants/',NULL)
