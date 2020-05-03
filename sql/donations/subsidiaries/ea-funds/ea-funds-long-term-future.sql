@@ -33,6 +33,17 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by the timing of this round of grants, which is in turn determined by the need for Beckstead to grant out the money before handing over management of the fund',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ 'Even after the fund management being moved to a new team, the EA Meta Fund would continue making grants to 80,000 Hours. In fact, 80,000 Hours would receive grant money in each of the three subsequent grant rounds. However, the EA Long-Term Future Fund would make no further grants to 80,000 Hours. This suggests that the selection of the grantee as a Long-Term Future Fund grantee would not continue to be endorsed by the new management team',
+  /* notes */ NULL),
+  ('Effective Altruism Funds: Long-Term Future Fund','80,000 Hours',100000,'2020-04-14','day','donation log','Effective altruism/movement growth/career counseling','https://app.effectivealtruism.org/funds/far-future/payouts/3waQ7rp3Bfy4Lwr5sZP9TP','https://app.effectivealtruism.org/funds/far-future','Matt Wage|Helen Toner|Oliver Habryka|Adam Gleave',488350,0.2048,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
 /* Grants to Machine Intelligence Research Institute */

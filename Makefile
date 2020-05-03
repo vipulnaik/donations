@@ -202,6 +202,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/holden-karnofsky-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/isabel-arjmand-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/jacob-steinhardt-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/jalex-stark-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/james-snowden-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/jason-ketola-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/jeff-kaufman-and-julia-wise-donations.sql
