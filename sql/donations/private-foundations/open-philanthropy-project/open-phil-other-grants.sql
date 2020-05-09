@@ -192,6 +192,17 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ 'The grant page says: "CFAR’s performance on this grant will be judged primarily in terms of whether it provides adequate evidence of its programs resulting in improved career trajectories of the sort described above."',
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/giving/grants/center-applied-rationality-general-support-2020 would be an exit grant, suggesting that Open Phil would revise downward its assessment of continued support of CFAR, but still continue to value CFAR enough to help it exit smoothly.',
+  /* notes */ NULL),
+  ('Open Philanthropy Project','Center for Applied Rationality',375000,'2020-02-01','month','donation log','Rationality improvement','https://www.openphilanthropy.org/giving/grants/center-applied-rationality-general-support-2020','Claire Zabel','2020-04-20','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "CFAR is an adult education nonprofit that seeks to find and develop cognitive tools and to deliver these tools to promising individuals, groups, organizations, and networks focused on solving large and pressing problems. [...] They introduce people to and/or strengthen their connections with the effective altruism (EA) community and way of thinking, which we hope results in people with outstanding potential pursuing more impactful career trajectories. CFAR is particularly interested in growing the talent pipeline for work on potential risks from advanced artificial intelligence (AI)."',
+  /* intended_funding_timeframe_in_months */ 12,
+  /* donor_donee_reason */ 'The grant page says: "Our primary interest in these workshops is that we believe they introduce people to and/or strengthen their connections with the effective altruism (EA) community and way of thinking, which we hope results in people with outstanding potential pursuing more impactful career trajectories." Also: "CFAR is particularly interested in growing the talent pipeline for work on potential risks from advanced artificial intelligence (AI). More on our interest in supporting work [...]"',
+  /* donor_amount_reason */ 'Amount chosen to provide one year of operating support',
+  /* donor_timing_reason */ 'Timing determind by the end of the funding timeframe of the previous two-year grant https://www.openphilanthropy.org/giving/grants/center-applied-rationality-general-support-2018 made January 2018',
+  /* donor_next_donation_thoughts */ 'This is an exit grant, so Open Phil does not plan to make further grants to CFAR.',
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
