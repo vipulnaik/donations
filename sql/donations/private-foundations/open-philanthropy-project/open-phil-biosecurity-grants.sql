@@ -241,6 +241,20 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* University of Colorado */
+insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes) values
+  ('Open Philanthropy Project','University of Colorado',250000,'2020-04-01','month','donation log','Biosecurity and pandemic preparedness/COVID-19','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/university-of-colorado-covid-19-personal-protective-equipment-experiments','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Jacob Trefethen','2020-04-15','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support experiments on the decontamination and safe reuse of personal protective equipment (PPE) for health care workers (HCWs) treating COVID-19 patients. This effort is led by Professor May Chu at the Colorado School of Public Health with collaborators from academic research labs, professional PPE testing laboratories, and infectious disease hospitals around the world. The aim of this study is to identify simple, executable processes for decontamination of homemade masks, surgical masks, and N95 respirators that can be applied anywhere, from hospitals to low-resource settings, so that HCWs are protected. The results could inform PPE recommendations for HCW protection from bodies like the World Health Organization (WHO) and the Centers for Disease Control and Prevention (CDC)."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant is made around the time that COVID-19 is declared a global pandemic, and around the time that efforts to fight the pandemic are ramping up. The grant page also highlights the credentials of the grantee: "Professor Chu serves on the WHO’s Expert Advisory Committee for COVID-19 and helped lead the United States’ response to the 2014 Ebola epidemic at the Office of Science and Technology Policy."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The grant is made around the time that COVID-19 is declared a global pandemic, and around the time that efforts to fight the pandemic are ramping up.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Brown Institute for Media Innovation */
 insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes) values
   ('Open Philanthropy Project','Brown Institute for Media Innovation',15000,'2020-04-01','month','donation log','Biosecurity and pandemic preparedness/COVID-19','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/brown-institute-for-media-innovation-covid-19-rapid-micro-grants','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Jacob Trefethen','2020-04-27','day',NULL,NULL, /* date adjusted */
