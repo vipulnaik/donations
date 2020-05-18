@@ -269,10 +269,54 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Good Judgment Inc.*/
+insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes,is_contractwork) values
+  ('Open Philanthropy Project','Good Judgment Inc.',40000,'2020-03-01','month','donation log','Biosecurity and pandemic preparedness/COVID-19','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/good-judgment-inc-covid-19-forecasting','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Luke Muehlhauser','2020-03-17','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to expand "efforts to aggregate, publish, and track forecasts about the COVID-19 outbreak with the hope that the forecasts can help improve planning by health security professionals and the broader public, limit the spread of the virus, and save lives. The forecasts are aggregated each day from the most accurate 1-2% of forecasters from a large-scale, government-funded series of forecasting tournaments, plus an annual uptake of a handful of top performers from the nearly 40,000 forecasters on Good Judgement Open." The predictions are at https://goodjudgment.io/covid/dashboard/ and the reasoning is explained more in https://www.openphilanthropy.org/blog/forecasting-covid-19-pandemic',
+  /* intended_funding_timeframe_in_months */ 1,
+  /* donor_donee_reason */ 'The grant is made at around the time the COVID-19 pandemic is being acknowledged worldwide, and just as Open Phil is ramping up grantmaking in the area. The grant investigator, Luke Muehlhauser, has generally been interested in forecasting. Most other COVID-19 grants are investigated by Jacob Trefethen.',
+  /* donor_amount_reason */ 'Amount likely determined by project cost',
+  /* donor_timing_reason */ 'Timing determmined by the breaking out of the COVID-19 pandemic',
+  /* donor_next_donation_thoughts */ 'The blog post https://www.openphilanthropy.org/blog/forecasting-covid-19-pandemic says: "We may commission additional forecasts related to COVID-19 in the coming months, and we welcome suggestions of well-formed questions for which regularly updated forecasts would be especially helpful to public health professionals and the broader public."',
+  /* donor_retrospectivee */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1);
+
+/* Sea-Long Global Respiratory Systems */
+insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes) values
+  ('Open Philanthropy Project','Sea-Long Global Respiratory Systems',325000,'2020-04-01','month','donation log','Biosecurity and pandemic preparedness/COVID-19','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/sea-long-global-respiratory-systems-covid-19-ventilation-helmet-production','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Jacob Trefethen','2020-04-24','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support the increased production of non-invasive ventilation helmets for COVID-19 patients. The helmets are intended to aid patients under respiratory distress and reduce the demand for ventilators in regions experiencing severe outbreaks, in the U.S. and internationally."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant is made shortly after COVID-19 is declared a global pandemic, and as efforts to fight the pandemic are ramping up.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The grant is made shortly after COVID-19 is declared a global pandemic, and as efforts to fight the pandemic are ramping up.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Center for Global Development */
+
+insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes) values
+  ('Open Philanthropy Project','Center for Global Development',250000,'2020-03-01','month','donation log','Biosecurity and pandemic preparedness/COVID-19','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/center-global-development-covid-19-local-response-guidelines','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Andrew Snyder-Beattie|Jacob Trefethen','2020-03-18','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work led by Jeremy Konyndyk on developing COVID-19 response guidelines and decision support tools to disseminate to local leaders. The guidelines and tools are intended to help local leaders take appropriate measures to limit the spread of the virus."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant is made around the time that COVID-19 is declared a global pandemic, and as efforts to fight the pandemic are ramping up. The grant page notes: "Konyndyk was formerly the director of the United States Agency for International Development’s Office of Foreign Disaster Assistance, where he managed an annual budget of more than $1.4 billion and helped lead the U.S. response to the Ebola outbreak."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The grant is made around the time that COVID-19 is declared a global pandemic, and as efforts to fight the pandemic are ramping up.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Biosecure Ltd */
 
 insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes,is_contractwork) values
-  ('Open  Philanthropy Project','Biosecure Ltd',25000,'2018-12-01','month','donation log','Biosecurity and pandemic preparedness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/biosecure-campaign-against-bioweapons-research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Claire Zabel','2019-06-07','day',NULL,NULL,
+  ('Open Philanthropy Project','Biosecure Ltd',25000,'2018-12-01','month','donation log','Biosecurity and pandemic preparedness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/biosecure-campaign-against-bioweapons-research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Claire Zabel','2019-06-07','day',NULL,NULL,
   /* donation_process */ 'Discretionary grant structured through a contractor agreement. The  grant page says: "While we do not typically publish pages for contractor agreements, we chose to write about this funding because we view it as conceptually similar to an ordinary grant, despite its structure as a contract due to the recipient’s organizational form."',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grantee "intends to use these funds to explore different models for strengthening the societal norm against biological weapons and reducing the likelihood of an arms race involving biological weapons, as well as investigating the feasibility, costs, and potential benefits of the various models."',
@@ -283,7 +327,7 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL,
-  /* is_contractwork */ NULL);
+  /* is_contractwork */ 1);
 
 /* Altruistic Technology Labs */
 
