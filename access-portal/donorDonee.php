@@ -1,5 +1,7 @@
 <?php
 include_once('doctype.inc');
+include_once("backend/globalVariables/passwordFile.inc");
+include_once("backend/globalVariables/lists.inc");
 $donor = 'Vipul Naik';
 if (!empty($_REQUEST['donor'])) {
   $donor = $_REQUEST['donor'];
@@ -8,6 +10,44 @@ $donee = 'GiveDirectly';
 if (!empty($_REQUEST['donee'])) {
   $donee = $_REQUEST['donee'];
 }
+
+// If the current $donor or $donee is an alias (e.g. is a former name of an
+// organization) then redirect to the correct location.
+$query = "select donor from donors where other_names REGEXP ?";
+$stmt = $mysqli->prepare($query);
+$exactMatchRegex = '(^|\\|)'.$donor.'(\\||$)';
+$stmt->bind_param("s", $exactMatchRegex);
+$stmt->execute();
+$result = $stmt->get_result();
+$donorCanonicalName = "";
+if ($result->num_rows > 0) {
+  $row = $result->fetch_assoc();
+  $donorCanonicalName = $row['donor'];
+}
+$query = "select donee from donees where other_names REGEXP ?";
+$stmt = $mysqli->prepare($query);
+$exactMatchRegex = '(^|\\|)'.$donee.'(\\||$)';
+$stmt->bind_param("s", $exactMatchRegex);
+$stmt->execute();
+$result = $stmt->get_result();
+$doneeCanonicalName = "";
+if ($result->num_rows > 0) {
+  $row = $result->fetch_assoc();
+  $doneeCanonicalName = $row['donee'];
+}
+if ($donorCanonicalName || $doneeCanonicalName) {
+  $url_params = array();
+  parse_str($_SERVER['QUERY_STRING'], $url_params);
+  if ($donorCanonicalName) {
+    $url_params['donor'] = $donorCanonicalName;
+  }
+  if ($doneeCanonicalName) {
+    $url_params['donee'] = $doneeCanonicalName;
+  }
+  header("Location: " . $_SERVER['SCRIPT_NAME'] . '?' . http_build_query($url_params));
+  die();
+}
+
 if (!empty($_REQUEST['cause_area_filter'])) {
   $causeAreaFilterString = $_REQUEST['cause_area_filter'];
 } else {
@@ -26,8 +66,6 @@ print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
 print '<script type="text/javascript" src="./jquery-3.1.1.min.js"></script>'."\n";
 print '<script type="text/javascript" src="./jquery.tablesorter.js"></script>'."\n";
 print '</head>';
-include_once("backend/globalVariables/passwordFile.inc");
-include_once("backend/globalVariables/lists.inc");
 print '<body>';
 print '<script>$(document).ready(function()
     {
