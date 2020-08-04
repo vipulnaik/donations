@@ -1,6 +1,6 @@
 <?php
 
-$donorDocumentSelectQuery = "select * from documents where affected_donors REGEXP ? and affected_donees REGEXP ?"
+$donorDocumentSelectQuery = "select * from documents where (affected_donors REGEXP ? or author = ? or publisheer = ?) and (affected_donees REGEXP ? or author = ? or publisher = ?)"
   . ($causeAreaFilterString ? " and cause_area REGEXP ?" : "")
   . " order by publication_date desc";
 
@@ -8,9 +8,9 @@ if ($stmt = $mysqli->prepare($donorDocumentSelectQuery)) {
   $exactMatchDonorRegex = '(^|\\|)'.$donor.'(\\||$)';
   $exactMatchDoneeRegex = '(^|\\|)'.$donee.'(\\||$)';
   if ($causeAreaFilterString) {
-    $stmt->bind_param("sss", $exactMatchDonorRegex, $exactMatchDoneeRegex, $causeAreaFilterString);
+    $stmt->bind_param("sss", $exactMatchDonorRegex, $donor, $donor, $exactMatchDoneeRegex, $donee, $donee, $causeAreaFilterString);
   } else {
-    $stmt->bind_param("ss", $exactMatchDonorRegex, $exactMatchDoneeRegex);
+    $stmt->bind_param("ss", $exactMatchDonorRegex, $donor, $donor, $exactMatchDoneeRegex, $donee, $donee);
   }
   $stmt->execute();
 }
