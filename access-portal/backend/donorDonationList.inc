@@ -37,15 +37,7 @@ for($i = 0; $i < $donorDonationSelectResult -> num_rows; $i++) {
     print ' (Earmark: '.$row['donation_earmark'].')';
   }
   if ($row['amount'] != '') {
-    if ($row['amount_original_currency'] && $row['original_currency']) {
-      $originalCurr = ' title="'
-        . number_format($row['amount_original_currency'],2)
-        . ' ' . $row['original_currency'] . '"';
-    } else {
-      $originalCurr = "";
-    }
-    print '<td align="right"' . $originalCurr . '>'.number_format($row['amount'],2).'</td>';
-    print '<td align="right">'.(array_search($row['amount'], array_reverse($amountList)) + 1).'</td>';
+    printAmountWithRank($row['amount'], $amountList, $row['amount_original_currency'], $row['original_currency']);
   } else {
     print '<td>--</td>';
     print '<td>--</td>';
