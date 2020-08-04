@@ -14,6 +14,15 @@ function printSmartLink($url, $title) {
   return $stringToPrint;
 }
 
+function printDonationDate($donationDate, $donationDatePrecision, $donationDateBasis) {
+  if ($donationDatePrecision == 'month' or $donationDatePrecision == 'quarter') {
+    $donationDate = substr($donationDate,0,7);
+  } else if ($donationDatePrecision == 'year' or $donationDatePrecision == 'multi-year') {
+    $donationDate = substr($donationDate,0,4);
+  }
+  print '<td align="left"><element title="'.$donationDatePrecision.' precision, based on '.$donationDateBasis.'">'.$donationDate.'</element></td>';
+}
+
 function cleanNotes($notes) {
   $notesList = explode(" ",$notes);
   $augmentedNotes = "";
