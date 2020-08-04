@@ -1,6 +1,6 @@
 <?php
 
-$donorDocumentSelectQuery = "select * from documents where (affected_donors REGEXP ? or author = ? or publisheer = ?) and (affected_donees REGEXP ? or author = ? or publisher = ?)"
+$donorDocumentSelectQuery = "select * from documents where (affected_donors REGEXP ? or publisher = ? or author = ?) and (affected_donees REGEXP ? or author = ? or publisher = ?)"
   . ($causeAreaFilterString ? " and cause_area REGEXP ?" : "")
   . " order by publication_date desc";
 
