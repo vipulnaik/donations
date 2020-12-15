@@ -53,7 +53,7 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
   ('Open Philanthropy Project','Johns Hopkins Center for Health Security',1860000,'2020-02-01','month','donation log','Biosecurity and pandemic preparedness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/johns-hopkins-center-health-security-masters-phd-program-support','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Andrew Snyder-Beattie','2020-03-23','day',NULL,NULL, /* date adjusted */
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant " to support the implementation of a Masters and PhD program. The program will focus on major biological and health security risks. This funding will support four PhD students for four years each and four masters students for one year each, as well as faculty time for advising students and a junior administrator."',
+  /* intended_use_of_funds */ 'Grant "to support the implementation of a Masters and PhD program. The program will focus on major biological and health security risks. This funding will support four PhD students for four years each and four masters students for one year each, as well as faculty time for advising students and a junior administrator."',
   /* intended_funding_timeframe_in_months */ 48,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
