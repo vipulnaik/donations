@@ -1,0 +1,14 @@
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: bingbot
+Disallow: /
+
+User-agent: *
+Crawl-delay: 30

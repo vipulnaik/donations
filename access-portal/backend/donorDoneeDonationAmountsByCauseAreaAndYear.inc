@@ -109,7 +109,7 @@ print "  </tr>\n";
 print "</tfoot>\n";
 print "</table>";
 
-$permalinkUrlBase = "https://donations.vipulnaik.com/donor.php?donor=" . urlencode($donor);
+$permalinkUrlBase = "https://donations.vipulnaik.com/donorDonee.php?donor=" . urlencode($donor) . "&donee=" . urlencode($donee);
 
 if ($causeAreaFilterString != '') {
   $permalinkUrlBase .= '&cause_area_filter='.urlencode($causeAreaFilterString);

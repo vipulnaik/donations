@@ -66,6 +66,9 @@ $doneeAndYearResult = $stmt->get_result();
 for ($i=0; $i < $doneeAndYearResult -> num_rows; $i++) {
   $row = $doneeAndYearResult -> fetch_assoc();
   $donationAmountByDoneeAndYear[$row['donee']][$row['year']] = $row['amount'];
+  if (!isset($doneeDonationAmount[$row['donee']])) {
+    $doneeDonationAmount[$row['donee']] = 0;
+  }
   $doneeDonationAmount[$row['donee']] += $row['amount'];
   $yearDonationAmount[$row['year']] += $row['amount'];
   $grandTotalDonationAmount += $row['amount'];
@@ -86,7 +89,7 @@ print "<thead>\n";
 print "  <tr>\n    <th>Donee</th>\n	<th>Cause area</th>\n	<th>Metadata</th>\n";
 print "    <th>Total</th>\n";
 foreach ($years as $year) {
-  if (isset($yearDonationAmouont[$year]) && $yearDonationAmount[$year] != 0) {
+  if (isset($yearDonationAmount[$year]) && $yearDonationAmount[$year] != 0) {
     print "    <th>$year</th>\n";
   }
 }

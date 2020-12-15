@@ -14,6 +14,27 @@ function printSmartLink($url, $title) {
   return $stringToPrint;
 }
 
+function printDonationDate($donationDate, $donationDatePrecision, $donationDateBasis) {
+  if ($donationDatePrecision == 'month' or $donationDatePrecision == 'quarter') {
+    $donationDate = substr($donationDate,0,7);
+  } else if ($donationDatePrecision == 'year' or $donationDatePrecision == 'multi-year') {
+    $donationDate = substr($donationDate,0,4);
+  }
+  print '<td align="left"><element title="'.$donationDatePrecision.' precision, based on '.$donationDateBasis.'">'.$donationDate.'</element></td>';
+}
+
+function printAmountWithRank($amount, $amountList, $amountOriginalCurrency, $originalCurrency) {
+  if ($amountOriginalCurrency && $originalCurrency) {
+      $originalCurrStr = ' title="'
+        . number_format($row['amount_original_currency'],2)
+        . ' ' . $originalCurrency . '"';
+    } else {
+      $originalCurrStr = "";
+    }
+    print '<td align="right"' . $originalCurrStr . '>'.number_format($amount,2).'</td>';
+    print '<td align="right">'.(array_search($amount, array_reverse($amountList)) + 1).'</td>';
+}
+
 function cleanNotes($notes) {
   $notesList = explode(" ",$notes);
   $augmentedNotes = "";

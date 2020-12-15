@@ -4,7 +4,7 @@ if (!isset($causeAreaFilterString)) {
   $causeAreaFilterString = '';
 }
 
-$query = "select * from documents where affected_donees REGEXP ? or publisher = ? or author = ?". ($causeAreaFilterString ? " and cause_area REGEXP ?" : "") . " order by publication_date desc";
+$query = "select * from documents where (affected_donees REGEXP ? or publisher = ? or author = ?)". ($causeAreaFilterString ? " and cause_area REGEXP ?" : "") . " order by publication_date desc";
 if ($stmt = $mysqli->prepare($query)) {
   $exactMatchDoneeRegex = '(^|\\|)'.$donee.'(\\||$)';
   if ($causeAreaFilterString) {

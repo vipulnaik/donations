@@ -34,7 +34,7 @@ def main():
                      .format(args.url_file.name))
         org_list = list(url_map.keys())
 
-    print("insert into donees(donee, former_name, country, bay_area, "
+    print("insert into donees(donee, other_names, country, bay_area, "
           "facebook_username, website, donate_page, donor_list_page, "
           "transparency_and_financials_page, donation_case_page,"
           "donation_statistics_page, twitter_username, eahub_username, "
@@ -131,7 +131,7 @@ def cooked_row(orgname, url_map, social_media_map):
     result = "("
     result += ",".join([
         mysql_quote(orgname),  # donee
-        "NULL",  # former_name
+        "NULL",  # other_names
         "NULL",  # country
         "NULL",  # bay_area
         mysql_quote(sm.get("facebook", "")),  # facebook_username
