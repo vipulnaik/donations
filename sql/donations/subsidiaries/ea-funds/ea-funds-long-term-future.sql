@@ -91,7 +91,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'In the blog post https://intelligence.org/2020/04/27/miris-largest-grant-to-date/ MIRI mentions the grant along with a $7.7 million grant from the Open Philanthropy Project and a $300,00 grant from Berkeley Existential Risk Initiative.');
+  /* notes */ 'In the blog post https://intelligence.org/2020/04/27/miris-largest-grant-to-date/ MIRI mentions the grant along with a $7.7 million grant from the Open Philanthropy Project and a $300,000 grant from Berkeley Existential Risk Initiative.');
 
 /* Grants to Center for Applied Rationality */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
