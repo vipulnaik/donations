@@ -2,7 +2,7 @@ create table donees (
     donee_id int(11) not null auto_increment primary key,
     donee_type enum('Private nonprofit','Donor-advised fund','Subsidiary') default 'Private nonprofit',
     donee varchar(120) not null,
-    other_names varchar(100),
+    other_names varchar(140),
     country varchar(40), # -- Country of main activity
     bay_area boolean, # -- Whether the person currently lives in the San Francisco Bay Area
     facebook_username varchar(100),
