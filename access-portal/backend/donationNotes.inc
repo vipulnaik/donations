@@ -35,7 +35,7 @@ if ($val = $row['donor_retrospective']) {
   array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor retrospective of the donation:</strong> %s", trim(cleanNotes($val))));
 }
 $notes_key_val_pairs = array();
-if ($val = $row['intended_funding_timeframe_in_months'] && !($val2 = $row['donor_timing_reason'])) {
+if (($val = $row['intended_funding_timeframe_in_months']) && !($val2 = $row['donor_timing_reason'])) {
   array_push($notes_key_val_pairs, sprintf("intended funding timeframe in months: %s", $val));
 }
 if ($val = $row['affected_regions']) {
