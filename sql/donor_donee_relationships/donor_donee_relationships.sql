@@ -1,6 +1,6 @@
 insert into donor_donee_relationships(donor, donee, relationship_start_date, relationship_start_date_precision, key_interaction_urls, notes) values
     (
-        'Open Philanthropy Project', /* donor */
+        'Open Philanthropy', /* donor */
         'Machine Intelligence Research Institute', /* donee */
         NULL, /* relationship_start_date */
         NULL, /* relationship_start_date_precision */
@@ -8,7 +8,7 @@ insert into donor_donee_relationships(donor, donee, relationship_start_date, rel
         'Open Philanthropy Project (Open Phil) staff have interacted with MIRI staff from the time before Open Phil existed. The first published conversation between GiveWell staff (Holden Karnofsky) and MIRI staff dates back to February 2011 (six months before GiveWell Labs is announced), where Karnofsky decides against recommending MIRI due to lack of track record and room for more funding. In May 2012, Karnofsky publishes “Thoughts on the Singularity Institute (SI)” on LessWrong; the blog post outlines Karnofsky’s reasons for not recommending MIRI. However, over the years Karnofsky in particular has come to agree with more of MIRI’s views, as described in his post “Three Key Issues I’ve Changed My Mind About” (published September 2016). Since 2016, Open Phil has given MIRI a steady stream of grants, despite some significant reservations about its output. Since 2019, grant amounts from the Open Phil to MIRI have been determined by the Committee for Effective Altruism Support.' /* notes */
     )
     ,(
-        'Open Philanthropy Project', /* donor */
+        'Open Philanthropy', /* donor */
         'Center for Applied Rationality', /* donee */
         NULL, /* relationship_start_date */
         NULL, /* relationship_start_date_precision */
@@ -16,7 +16,7 @@ insert into donor_donee_relationships(donor, donee, relationship_start_date, rel
         'Between 2016 and 2018, Open Philanthropy Project (Open Phil) made many grants to CFAR, both for general support and for specific programs like SPARC and ESPR. The initial grants were made despite reservations about the organizational management of CFAR; by the time of the January 2018 grant, Open Phil was satisfied with CFAR''s improvement on that front. As of April 2020, Open Phil has not made any grants to CFAR since January 2018, though at least one of the January 2018 grants was a two-year grant.' /* notes */
     )
     ,(
-        'Open Philanthropy Project', /* donor */
+        'Open Philanthropy', /* donor */
         'The Humane League', /* donee */
         NULL, /* relationship_start_date */
         NULL, /* relationship_start_date_precision */
