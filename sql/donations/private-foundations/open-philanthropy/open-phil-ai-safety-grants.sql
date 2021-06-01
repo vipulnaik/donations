@@ -182,6 +182,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2019 in November 2019, five-year renewal https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2021 in January 2021, as well as many grants to Berkeley Existential Risk Initiative (BERI) to collaborate with the grantee, suggest that Open Phil would continue to think highly of the grantee, and stand by its reasoning.',
   /* notes */ 'Note that the grant recipient in the Open Phil database has been listed as UC Berkeley, but we have written it as the name of the center for easier cross-referencing.'),
+
   ('Open Philanthropy','Center for Human-Compatible AI',200000,'2019-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2019','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Daniel Dewey','2019-12-20','day',NULL,NULL, /* date adjusted */
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
@@ -193,6 +194,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Open Phil makes a $705,000 grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-chai-collaboration-2019 to the Berkeley Existential Risk Initiative (BERI) at the same time (November 2019) to collaborate with CHAI.'),
+
   ('Open Philanthropy','Center for Human-Compatible AI',11355246,'2021-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2021','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
@@ -217,7 +219,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'This is the first of annual sets of grants, decided through an annual application process.',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ 'The corresponding grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2019-class (2019) and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2020-class (2020) confirm that these grants will be made annually.',
+  /* donor_retrospective */ 'The corresponding grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2019-class (2019), https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2020-class (2020), and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2021-class (2021) confirm that these grants will be made annually.',
   /* notes */ NULL),
 
   ('Open Philanthropy','Open Phil AI Fellowship',2325000,'2019-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2019-class','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Aidan Gomez|Andrew Ilyas|Julius Adebayo|Lydia T. Liu|Max Simchowitz|Pratyusha Kullari|Siddharth Karamcheti|Smitha Milli','Daniel Dewey','2019-05-17','day',NULL,NULL, /* date adjusted */
@@ -229,7 +231,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ 'The amount is about double the amount of the 2018 grant, although the number of people supported is just one more (8 instead of 7). No explicit comparison of grant amounts is done in the grant page.',
   /* donor_timing_reason */ 'This is the second of annual sets of grants, decided through an annual application process, with the announcement made in May/June each year. The timing may have been chosen to sync with the academic year.',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2020-class (2020) confirms that the program would continue.',
+  /* donor_retrospective */ 'The followup grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2020-class (2020) and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2021-class (2021) confirm that the program would continue.',
   /* notes */ NULL),
 
   ('Open Philanthropy','Open Phil AI Fellowship',2300000,'2020-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2020-class','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Alex Tamkin|Clare Lyle|Cody Coleman|Dami Choi|Dan Hendrycks|Ethan Perez|Frances Ding|Leqi Liu|Peter Henderson|Stanislav Fort','Catherine Olsson|Daniel Dewey','2020-05-12','day',NULL,NULL, /* date adjusted */
@@ -239,7 +241,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_funding_timeframe_in_months */ 60,
   /* donor_donee_reason */ 'According to the grant page: "The intent of the Open Phil AI Fellowship is both to support a small group of promising researchers and to foster a community with a culture of trust, debate, excitement, and intellectual excellence. We plan to host gatherings once or twice per year where fellows can get to know one another, learn about each other’s work, and connect with other researchers who share their interests." In a comment reply https://forum.effectivealtruism.org/posts/DXqxeg3zj6NefR9ZQ/open-philanthropy-our-progress-in-2019-and-plans-for-2020#BCvuhRCg9egAscpyu on the Effectiive Altruism Forum, grant investigator Catherine Olsson writes: "But the short answer is I think the key pieces to keep in mind are to view the fellowship as 1) a community, not just individual scholarships handed out, and as such also 2) a multi-year project, built slowly."',
   /* donor_amount_reason */ 'The amount is comparable to the total amount of the 2019 fellowship grants, though it is distributed among a slightly larger pool of people.',
-  /* donor_timing_reason */ 'This is the second of annual sets of grants, decided through an annual application process, with the announcement made in May/June each year. The timing may have been chosen to sync with the academic year.',
+  /* donor_timing_reason */ 'This is the third of annual sets of grants, decided through an annual application process, with the announcement made between April and June each year. The timing may have been chosen to sync with the academic year.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2021-class (2021) confirms that the program would continue.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Open Phil AI Fellowship',1000000,'2021-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2021-class','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Collin Burns|Jared Quincy Davis|Jesse Mu|Meena Jagadeesan','Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'According to the grant page "These [four] fellows were selected from 397 applicants for their academic excellence, technical knowledge, careful reasoning, and interest in making the long-term, large-scale impacts of AI a central focus of their research."',
+  /* intended_use_of_funds_category */ 'Living expenses during research project',
+  /* intended_use_of_funds */ 'Grant to provide scholarship to foour machine learning researchers over five years',
+  /* intended_funding_timeframe_in_months */ 60,
+  /* donor_donee_reason */ 'According to the grant page: "The intent of the Open Phil AI Fellowship is both to support a small group of promising researchers and to foster a community with a culture of trust, debate, excitement, and intellectual excellence. We plan to host gatherings once or twice per year where fellows can get to know one another, learn about each other’s work, and connect with other researchers who share their interests."',
+  /* donor_amount_reason */ 'An explicit reason for the amount is not specified, and the total amount is lower than previous years, but the amount per researcher ($250,000) is a little higher than previous years. It''s likely that the amount per researcher is determined first and the total amount is the sum of these.',
+  /* donor_timing_reason */ 'This is the fourth of annual sets of grants, decided through an annual application process, with the announcement made between April and June each year. The timing may have been chosen to sync with the academic year.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
