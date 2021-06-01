@@ -1,6 +1,6 @@
 /* NOTE: For the pure AI safety grants, see open-phil-ai-safety-grants.sql and for the pure biosecurity grants, see open-phil-biosecurity-grants.sql This file covers grants that are not narrowly only about AI safety and biosecurity, though part of the grant may be used to address those issues */
 
-/* Center for Security and Emerging Technology (CSET) */
+/* Center for Security and Emerging Technology (CSET)*/
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Center for Security and Emerging Technology',55000000,'2019-01-01','month','donation log','Security/Biosecurity and pandemic preparedness/Global catastrophic risks/AI safety','https://www.openphilanthropy.org/giving/grants/georgetown-university-center-security-and-emerging-technology',NULL,'Luke Muehlhauser','2019-02-28','day',NULL,NULL,

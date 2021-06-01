@@ -1,5 +1,5 @@
 <?php
 
-$years = array_reverse(range(1945, 2020));
+$years = array_reverse(range(1945, 2021));
 
 ?>
