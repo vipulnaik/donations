@@ -16,7 +16,13 @@ if ($stmt = $mysqli->prepare($query)) {
 
 print '<h4 id="donorDonationList">Full list of donations in reverse chronological order ('.($donorDonationSelectResult -> num_rows).' donations)</h4>';
 
-$timeframePlotFileName = hash("md5", "timeframe plot|donor:" . $donor) . "-timeframe.png";
+$timeframePlotUrlBase = "timeframe plot|donor:" . $donor;
+
+if ($causeAreaFilterString != '') {
+  $timeframePlotUrlBase .= '&cause_area_filter='.urlencode($causeAreaFilterString);
+}
+
+$timeframePlotFileName = hash("md5", $timeframePlotUrlBase) . "-timeframe.png";
 exec($generateTimeframeGraphCmdBase . " --base64 --donor " . trimEncodeEscape($donor) . (($causeAreaFilterString ?? '') ? " --cause_area " . trimEncodeEscape($causeAreaFilterString) : "") . " --output " . trimEncodeEscape($imagesPath . $timeframePlotFileName));
 print '<p>Graph of top 10 donees by amount, showing the timeframe of donations</p>';
 print '<img src="/images/' . $timeframePlotFileName .'" alt="Graph of donations and their timeframes"></img>';
