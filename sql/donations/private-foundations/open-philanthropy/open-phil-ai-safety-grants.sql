@@ -43,11 +43,11 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'MIRI plans to use these funds for ongoing research and activities related to AI safety. Planned activities include alignment research, a summer fellows program, computer scientist workshops, and internship programs.',
   /* intended_funding_timeframe_in_months */ '24',
   /* donor_donee_reason */ 'The grant page says: "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter" Past writeups include the grant pages for the October 2017 three-year support https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support-2017 and the August 2016 one-year support https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support',
-  /* donor_amount_reason */ 'Amount decided by the Committee for Effective Altruism Support (CEAS) https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public. Two other grants with amounts decided by CEAS, made at the same time and therefore likely drawing from the same money pot, are to the Center for Effective Altruism ($2,756,250) and 80,000 Hours ($4,795,803). The original amount of $2,112,500 is split across two years, and therefore ~$1.06 million per year. https://intelligence.org/2019/04/01/new-grants-open-phil-beri/ clarifies that the amount for 2019 is on top of the third year of three-year $1.25 million/year support announced in October 2017, and the total $2.31 million represents Open Phil''s full intended funding for MIRI for 2019, but the amount for 2020 of ~$1.06 million is a lower bound, and Open Phil may grant more for 2020 later. In November 2019, additional funding would bring the total award amount to $2,652,500',
-  /* donor_timing_reason */ 'Reasons for timing are not discussed, but likely reasons include: (1) The original three-year funding period https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support-2017 is coming to an end, (2) Even though there is time before the funding period ends, MIRI has grown in budget and achievements, so a suitable funding amount could be larger, (3) The Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support did its first round of money allocation, so the timing is determined by the timing of that allocation round',
-  /* donor_next_donation_thoughts */ 'According to https://intelligence.org/2019/04/01/new-grants-open-phil-beri/ Open Phil may increase its level of support for 2020 beyond the ~$1.06 million that is part of this grant',
-  /* donor_retrospective */ 'The much larger followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support-2020 with a very similar writeup suggests that Open Phil and the Committee for Effective Altruism Support would continue to stand by the reasoning for the grant',
-  /* notes */ 'The grantee, MIRI, discusses the grant on its website at https://intelligence.org/2019/04/01/new-grants-open-phil-beri/ along with a $600,000 grant from the Berkeley Existential Risk Initiative'),
+  /* donor_amount_reason */ 'Amount decided by the Committee for Effective Altruism Support (CEAS) https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public. Two other grants with amounts decided by CEAS, made at the same time and therefore likely drawing from the same money pot, are to the Centre for Effective Altruism ($2,756,250) and 80,000 Hours ($4,795,803). The original amount of $2,112,500 is split across two years, and therefore ~$1.06 million per year. https://intelligence.org/2019/04/01/new-grants-open-phil-beri/ clarifies that the amount for 2019 is on top of the third year of three-year $1.25 million/year support announced in October 2017, and the total $2.31 million represents Open Phil''s full intended funding for MIRI for 2019, but the amount for 2020 of ~$1.06 million is a lower bound, and Open Phil may grant more for 2020 later. In November 2019, additional funding would bring the total award amount to $2,652,500.',
+  /* donor_timing_reason */ 'Reasons for timing are not discussed, but likely reasons include: (1) The original three-year funding period https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support-2017 is coming to an end, (2) Even though there is time before the funding period ends, MIRI has grown in budget and achievements, so a suitable funding amount could be larger, (3) The Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support did its first round of money allocation, so the timing is determined by the timing of that allocation round.',
+  /* donor_next_donation_thoughts */ 'According to https://intelligence.org/2019/04/01/new-grants-open-phil-beri/ Open Phil may increase its level of support for 2020 beyond the ~$1.06 million that is part of this grant.',
+  /* donor_retrospective */ 'The much larger followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support-2020 with a very similar writeup suggests that Open Phil and the Committee for Effective Altruism Support would continue to stand by the reasoning for the grant.',
+  /* notes */ 'The grantee, MIRI, discusses the grant on its website at https://intelligence.org/2019/04/01/new-grants-open-phil-beri/ along with a $600,000 grant from the Berkeley Existential Risk Initiative.'),
   ('Open Philanthropy','Machine Intelligence Research Institute',7703750,'2020-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/machine-intelligence-research-institute-general-support-2020','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Claire Zabel|Committee for Effective Altruism Support','2020-04-10','day',NULL,NULL, /* date adjusted */
   /* donation_process */ 'The decision of whether to donate seems to have followed the Open Philanthropy Project''s usual process, but the exact amount to donate was determined by the Committee for Effective Altruism Support using the process described at https://www.openphilanthropy.org/committee-effective-altruism-support',
   /* intended_use_of_funds_category */ 'Organizational general support',
@@ -58,7 +58,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Reasons for timing are not discussed, but this is likely the time when the Committee for Effective Altruism Support does its 2020 allocation.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'The donee describes the grant in the blog post https://intelligence.org/2020/04/27/miris-largest-grant-to-date/ (2020-04-27) along with other funding it has received ($300,000 from the Berkeley Existential Risk Initiative and $100,000 from the Long-Term Future Fund). The fact that the grant is a two-year grant is mentioned here, but not in the grant page on Open Phil''s website. The page also mentions that of the total grant amount of $7.7 million, $6.24 million is coming from Open Phil''s normal funders (Good Ventures) and the remaining $1.46 million is coming from Ben Delo, co-founder of the cryptocurrency trading platform BitMEX, as part of a funding partnership https://www.openphilanthropy.org/blog/co-funding-partnership-ben-delo announced November 11, 2019.');
+  /* notes */ 'The donee describes the grant in the blog post https://intelligence.org/2020/04/27/miris-largest-grant-to-date/ (2020-04-27) along with other funding it has received ($300,000 from the Berkeley Existential Risk Initiative and $100,000 from the Long-Term Future Fund). The fact that the grant is a two-year grant is mentioned here, but not in the grant page on Open Phil''s website. The page also mentions that of the total grant amount of $7.7 million, $6.24 million is coming from Open Phil''s normal funders (Good Ventures) and the remaining $1.46 million is coming from Ben Delo, co-founder of the cryptocurrency trading platform BitMEX, as part of a funding partnership https://www.openphilanthropy.org/blog/co-funding-partnership-ben-delo announced November 11, 2019.'),
 
 /* Grants to Berkeley Existential Risk Initiative (BERI) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
@@ -94,7 +94,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Open Phil makes a grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2019 to the Center for Human-Compatible AI at the same time (November 2019).');
+  /* notes */ 'Open Phil makes a grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2019 to the Center for Human-Compatible AI at the same time (November 2019).'),
+  ('Open Philanthropy','Berkeley Existential Risk Initiative',150000,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-general-support','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Claire Zabel',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "BERI seeks to reduce existential risks to humanity, and collaborates with other long-termist organizations, including the Center for Human-Compatible AI at UC Berkeley. This funding is intended to help BERI establish new collaborations."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Grants to AI Impacts */
 
@@ -138,6 +149,22 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'This is the third year that Open Phil makes a grant for AI safety research to the University of California, Berkeley (excluding the founding grant for the Center for Human-Compatible AI). It continues an annual tradition of multi-year grants to the University of California, Berkeley announced in October/November, though the researchers would be different each year. Note that the grant is to UC Berkeley, but at least one of the researchers (Jacob Steinhardt) is affiliated with the Center for Human-Compatible AI.');
 
+/* Grants to Center for Security and Emerging Technology (CSET); note that the founding grant
+   is in open-phil-other-gcr-and-security-grants.sql */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Center for Security and Emerging Technology',8000000,'2021-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-security-and-emerging-technology-general-support','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says "This funding is intended to augment our original support for CSET, particularly for its work on the intersection of security and artificial intelligence."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Grants to OpenAI */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
@@ -164,8 +191,9 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ 'The amount is based on budget estimates in https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai#Budget_and_room_for_more_funding "Professor Russell estimates that the Center could, if funded fully, spend between $1.5 million and $2 million in its first year and later increase its budget to roughly $7 million per year."',
   /* donor_timing_reason */ 'Timing seems to have been determined by the time it took to work out the details of the new center after Open Phil decided to make AI safety a major priority in 2016. According to https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai#Our_process "We have discussed the possibility of a grant to support Professor Russell’s work several times with him in the past. Following our decision earlier this year to make this focus area a major priority for 2016, we began to discuss supporting a new academic center at UC Berkeley in more concrete terms."',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospectivee */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2019 in November 2019 as well as many grants to Berkeley Existential Risk Initiative (BERI) to collaborate with the grantee suggest that Open Phil would continue to think highly of the grantee, and stand by its reasoning.',
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2019 in November 2019, five-year renewal https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2021 in January 2021, as well as many grants to Berkeley Existential Risk Initiative (BERI) to collaborate with the grantee, suggest that Open Phil would continue to think highly of the grantee, and stand by its reasoning.',
   /* notes */ 'Note that the grant recipient in the Open Phil database has been listed as UC Berkeley, but we have written it as the name of the center for easier cross-referencing.'),
+
   ('Open Philanthropy','Center for Human-Compatible AI',200000,'2019-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2019','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Daniel Dewey','2019-12-20','day',NULL,NULL, /* date adjusted */
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
@@ -176,7 +204,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Open Phil makes a $705,000 grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-chai-collaboration-2019 to the Berkeley Existential Risk Initiative (BERI) at the same time (November 2019) to collaborate with CHAI.');
+  /* notes */ 'Open Phil makes a $705,000 grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-chai-collaboration-2019 to the Berkeley Existential Risk Initiative (BERI) at the same time (November 2019) to collaborate with CHAI.'),
+
+  ('Open Philanthropy','Center for Human-Compatible AI',11355246,'2021-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2021','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says "The multi-year commitment and increased funding will enable CHAI to expand its research and student training related to potential risks from advanced artificial intelligence."',
+  /* intended_funding_timeframe_in_months */ 60,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'This is a renewal of the original founding grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai made August 2016.');
 
 /* Grants to Open Phil AI Fellowship */
 
@@ -190,7 +230,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'This is the first of annual sets of grants, decided through an annual application process.',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ 'The corresponding grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2019-class (2019) and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2020-class (2020) confirm that these grants will be made annually.',
+  /* donor_retrospective */ 'The corresponding grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2019-class (2019), https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2020-class (2020), and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2021-class (2021) confirm that these grants will be made annually. Among the grantees, Chris Maddison would continue receiving support from Open Philanthropy in the future in the form of support https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-toronto-machine-learning-research for his students, indicating continued endorsement of his work.',
   /* notes */ NULL),
 
   ('Open Philanthropy','Open Phil AI Fellowship',2325000,'2019-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2019-class','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Aidan Gomez|Andrew Ilyas|Julius Adebayo|Lydia T. Liu|Max Simchowitz|Pratyusha Kullari|Siddharth Karamcheti|Smitha Milli','Daniel Dewey','2019-05-17','day',NULL,NULL, /* date adjusted */
@@ -202,7 +242,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ 'The amount is about double the amount of the 2018 grant, although the number of people supported is just one more (8 instead of 7). No explicit comparison of grant amounts is done in the grant page.',
   /* donor_timing_reason */ 'This is the second of annual sets of grants, decided through an annual application process, with the announcement made in May/June each year. The timing may have been chosen to sync with the academic year.',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2020-class (2020) confirms that the program would continue.',
+  /* donor_retrospective */ 'The followup grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2020-class (2020) and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2021-class (2021) confirm that the program would continue. Among the grantees, Smitha Milli would receive further support https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/smitha-milli-participatory-approaches-machine-learning-workshop from Open Philanthropy, indicating continued confidence in the support.',
   /* notes */ NULL),
 
   ('Open Philanthropy','Open Phil AI Fellowship',2300000,'2020-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2020-class','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Alex Tamkin|Clare Lyle|Cody Coleman|Dami Choi|Dan Hendrycks|Ethan Perez|Frances Ding|Leqi Liu|Peter Henderson|Stanislav Fort','Catherine Olsson|Daniel Dewey','2020-05-12','day',NULL,NULL, /* date adjusted */
@@ -212,7 +252,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_funding_timeframe_in_months */ 60,
   /* donor_donee_reason */ 'According to the grant page: "The intent of the Open Phil AI Fellowship is both to support a small group of promising researchers and to foster a community with a culture of trust, debate, excitement, and intellectual excellence. We plan to host gatherings once or twice per year where fellows can get to know one another, learn about each other’s work, and connect with other researchers who share their interests." In a comment reply https://forum.effectivealtruism.org/posts/DXqxeg3zj6NefR9ZQ/open-philanthropy-our-progress-in-2019-and-plans-for-2020#BCvuhRCg9egAscpyu on the Effectiive Altruism Forum, grant investigator Catherine Olsson writes: "But the short answer is I think the key pieces to keep in mind are to view the fellowship as 1) a community, not just individual scholarships handed out, and as such also 2) a multi-year project, built slowly."',
   /* donor_amount_reason */ 'The amount is comparable to the total amount of the 2019 fellowship grants, though it is distributed among a slightly larger pool of people.',
-  /* donor_timing_reason */ 'This is the second of annual sets of grants, decided through an annual application process, with the announcement made in May/June each year. The timing may have been chosen to sync with the academic year.',
+  /* donor_timing_reason */ 'This is the third of annual sets of grants, decided through an annual application process, with the announcement made between April and June each year. The timing may have been chosen to sync with the academic year.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2021-class (2021) confirms that the program would continue.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Open Phil AI Fellowship',1000000,'2021-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2021-class','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Collin Burns|Jared Quincy Davis|Jesse Mu|Meena Jagadeesan','Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'According to the grant page "These [four] fellows were selected from 397 applicants for their academic excellence, technical knowledge, careful reasoning, and interest in making the long-term, large-scale impacts of AI a central focus of their research."',
+  /* intended_use_of_funds_category */ 'Living expenses during research project',
+  /* intended_use_of_funds */ 'Grant to provide scholarship to foour machine learning researchers over five years',
+  /* intended_funding_timeframe_in_months */ 60,
+  /* donor_donee_reason */ 'According to the grant page: "The intent of the Open Phil AI Fellowship is both to support a small group of promising researchers and to foster a community with a culture of trust, debate, excitement, and intellectual excellence. We plan to host gatherings once or twice per year where fellows can get to know one another, learn about each other’s work, and connect with other researchers who share their interests."',
+  /* donor_amount_reason */ 'An explicit reason for the amount is not specified, and the total amount is lower than previous years, but the amount per researcher ($250,000) is a little higher than previous years. It''s likely that the amount per researcher is determined first and the total amount is the sum of these.',
+  /* donor_timing_reason */ 'This is the fourth of annual sets of grants, decided through an annual application process, with the announcement made between April and June each year. The timing may have been chosen to sync with the academic year.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
@@ -250,8 +302,47 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'The grant page says: "Ought conducts research on factored cognition, which we consider relevant to AI alignment and to reducing potential risks from advanced artificial intelligence."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'The grant page says "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter"',
-  /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public. Three other grants decided by CEAS at around the same time are: Machine Intelligence Research Institute ($7,703,750), Centre for Effective Altruism ($4,146,795), and 80,000 Hours ($3,457,284)',
+  /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public. Three other grants decided by CEAS at around the same time are: Machine Intelligence Research Institute ($7,703,750), Centre for Effective Altruism ($4,146,795), and 80,000 Hours ($3,457,284).',
   /* donor_timing_reason */ 'Reasons for timing are not discussed, but this is likely the time when the Committee for Effective Altruism Support does its 2020 allocation',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to The Wilson Center */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','The Wilson Center',400000,'2018-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/wilson-center-ai-policy-seminar-series','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser','2018-08-01','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a series of in-depth AI policy seminars."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "We believe the seminar series can help inform AI policy discussions and decision-making in Washington, D.C., and could help identify and empower influential experts in those discussions, a key component of our AI policy grantmaking strategy."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/wilson-center-ai-policy-seminar-series-february-2020 and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/wilson-center-ai-policy-seminar-series-june-2020 suggest that the donor was satisfied with the outcome of the grant.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','The Wilson Center',368440,'2020-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/wilson-center-ai-policy-seminar-series-february-2020','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to continue support for a series of in-depth AI policy seminars."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grat page says: "We continue to believe the seminar series can help inform AI policy discussions and decision-making in Washington, D.C., and could help identify and empower influential experts in those discussions, a key component of our AI policy grantmaking strategy."',
+  /* donor_amount_reason */ 'The amount is similar to the previous grant of $400,000 over a similar time period (two years).',
+  /* donor_timing_reason */ 'The grant is made almost two years after the original two-year grant, so its timing is likely determined by the original grant running out.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/wilson-center-ai-policy-seminar-series-june-2020 suggests that the donor was satisfied with the outcome of the grant.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','The Wilson Center',496540,'2020-06-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/wilson-center-ai-policy-seminar-series-june-2020','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to organize additional in-depth AI policy seminars as part of its seminar series."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says "We continue to believe the seminar series can help inform AI policy discussions and decision-making in Washington, D.C., and could help identify and empower influential experts in those discussions, a key component of our AI policy grantmaking strategy."',
+  /* donor_amount_reason */ 'No reason is given for the amount. The grant is a little more than the original $368,440 two-year grant so it is likely that the additional amount is expected to double the frequency of  AI policy seminars.',
+  /* donor_timing_reason */ 'The grant is a top-up rather than a renewal; the previous two-year grant was made in February 2020. No specific reasons for timing are given.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
@@ -268,12 +359,158 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'A few months later, Open Phil would make a grant directly to Andrew Lohn for machine learning robustness research, suggesting that they were satisfied with the outcoms from this grant.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Press Shop',17000,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/press-shop-human-compatible','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Stuart Russell','Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to the publicity firm Press Shop to support expenses related to publicizing Professor Stuart Russell’s book Human Compatible: Artificial Intelligence and the Problem of Control."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page links this grant to past support for the Center for Human-Compatible AI (CHAI) where Russell is director, so the reason for the grant is likely similar to reasons for that past support. Grant pages: https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2019',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The grant is made shortly after the release of the book (book release date: October 8, 2019) so the timing is likely related to the release date.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Johns Hopkins University',55000,'2020-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/johns-hopkins-kaplan-menard','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Jared Kaplan|Brice Ménard','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support the initial research of Professors Jared Kaplan and Brice Ménard on principles underlying neural network training and performance."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','World Economic Forum',50000,'2020-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/world-economic-forum-global-ai-council-workshop','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a workshop hosted by the Global AI Council and co-developed with the Center for Human-Compatible AI at UC Berkeley. The workshop will facilitate the development of AI policy recommendations that could lead to future economic prosperity, and is part of a series of workshops examining solutions to maximize economic productivity and human wellbeing."',
+  /* intended_funding_timeframe_in_months */ 1,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','International Conference on Learning Representations',3500,'2020-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/ICLR-machine-learning-paper-awards','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to the International Conference on Learning Representations to provide awards for the best papers submitted as part of the “Towards Trustworthy Machine Learning” virtual workshop.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Centre for the Governance of AI',450000,'2020-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/gov-ai-general-support','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Committee for Effective Altruism Support',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant was recommended by the Committee for Effective Altruism Support following its process https://www.openphilanthropy.org/committee-effective-altruism-support',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "GovAI intends to use these funds to support the visit of two senior researchers and a postdoc researcher."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter" but does not link to specific past writeups (Open Phil has not previously made grants directly to GovAI).',
+  /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public.',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Andrew Lohn',15000,'2020-06-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/andrew-lohn-paper-machine-learning-model-robustness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Andrew Lohn','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to write a paper on machine learning model robustness for safety-critical AI systems."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'Nothing is specified, but the grantee''s work had previously been funded by Open Phil via the RAND Corporation for AI assurance methods.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Center for Strategic and International Studies',118307,'2020-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-strategic-and-international-studies-ai-accident-risk-and-technology-competition','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to explore possible projects related to AI accident risk in the context of technology competition."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'No specific reasons are provided, but two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-international-security-and-cooperation-ai-accident-risk-and-technology-competition and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rice-hadley-gates-manuel-ai-risk made at about the same time for the same intended use suggests interest from the donor in this particular use case at this time.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'No specific reasons are provided, but two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-international-security-and-cooperation-ai-accident-risk-and-technology-competition and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rice-hadley-gates-manuel-ai-risk made at about the same time for the same intended use suggests interest from the donor in this particular use case at this time.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The increase in grant amount in May 2021, from $75,245 to $118,307, suggests that Open Phil was satisfied with initial progress on the grant.',
+  /* notes */ 'The grant amount was updated in May 2021. The original amount was $75,245.'),
+
+  ('Open Philanthropy','Center for International Security and Cooperation',67000,'2020-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-international-security-and-cooperation-ai-accident-risk-and-technology-competition','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to explore possible projects related to AI accident risk in the context of technology competition."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'No specific reasons are provided, but two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-strategic-and-international-studies-ai-accident-risk-and-technology-competition and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rice-hadley-gates-manuel-ai-risk made at about the same time for the same intended use suggests interest from the donor in this particular use case at this time.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'No specific reasons are provided, but two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-strategic-and-international-studies-ai-accident-risk-and-technology-competition and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rice-hadley-gates-manuel-ai-risk made at about the same time for the same intended use suggests interest from the donor in this particular use case at this time.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Massachusetts Institute of Technology',275344,'2020-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/massachusetts-institute-of-technology-ai-trends-and-impacts-research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Neil Thompson','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says "The research will consist of projects to learn how algorithmic improvement affects economic growth, gather data on the performance and compute usage of machine learning methods, and estimate cost models for deep learning projects."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Smitha Milli',370,'2020-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/smitha-milli-participatory-approaches-machine-learning-workshop','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Smitha Milli','Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support Participatory Approaches to Machine Learning, a virtual workshop held during the 2020 International Conference on Machine Learning."',
+  /* intended_funding_timeframe_in_months */ 1,
+  /* donor_donee_reason */ 'The donee had previously been a recipient of the Open Phil AI Fellowship, so it is likely that that relationship helped make the way for this grant.',
+  /* donor_amount_reason */ 'No specific reasons are given for the amount; this is an unusually small grant size by the donor''s standards. The amount is likely determined by the limited funding needs of the grantee.',
+  /* donor_timing_reason */ 'The 2020 International Conference on Machine Learning was held in July 2020, so this grant seems to have been made after the thing it was supporting was already finished. No details on timing are provided.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','University of Toronto',520000,'2020-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-toronto-machine-learning-research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Chris Maddison','Daniel Dewey|Catherine Olsson',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The researcher (Chris Maddison) whose students'' work is to be funded with htis grant had previously been an Open Phil AI Fellow while pursuing his DPhil in 2018. The past connection and subsequent academic progress of the researcher (now an assistant professor) may have been factors, but the grant page has no details on the decision process.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "[the grant is] to support research on understanding, predicting, and controlling machine learning systems, led by Professor Chris Maddison, a former Open Phil AI Fellow. This funding is intended to enable three students and a postdoctoral researcher to work with Professor Maddison on the research."',
+  /* intended_funding_timeframe_in_months */ 48,
+  /* donor_donee_reason */ 'The researcher (Chris Maddison) whose students'' work is to be funded with htis grant had previously been an Open Phil AI Fellow while pursuing his DPhil in 2018. The past connection and subsequent academic progress of the researcher (now an assistant professor) may have been factors, but the grant page has no details on the decision process.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Berryville Institute of Machine Learning',150000,'2021-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berryville-institute-of-machine-learning','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Gary McGraw','Catherine Olsson|Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "[the grant is] to support research led by Gary McGraw on machine learning security. The research will focus on building a taxonomy of known attacks on machine learning, exploring a hypothesis of representation and machine learning risk, and performing an architectural risk analysis of machine learning systems."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "Our potential risks from advanced artificial intelligence team hopes that the research will help advance the field of machine learning security."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Study and Training Related to AI Policy Careers https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/study-and-training-related-to-ai-policy-careers */
+
 /* Other grants (new format) that are contract work */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
-  ('Open Philanthropy','WestExec',310000,'2020-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/westexec-report-on-assurance-in-machine-learning-systems','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser','2020-03-20','day',NULL,NULL,
+  ('Open Philanthropy','WestExec',540000,'2020-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/westexec-report-on-assurance-in-machine-learning-systems','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser','2020-03-20','day',NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Contractor agreement "to support the production and distribution of a report on advancing policy, process, and funding for the Department of Defense’s work on test, evaluation, verification, and validation for deep learning systems."',
@@ -281,6 +518,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The increases in grant amounts suggest that the donor was satisfied with initial progress.',
+  /* notes */ 'The grant amount was updated in October and November 2020 and again in May 2021. The original grant amount had been $310,000.',
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy','Rice, Hadley, Gates & Manuel LLC',25000,'2020-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rice-hadley-gates-manuel-ai-risk','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Contractor agreement "to explore possible projects related to AI accident risk in the context of technology competition."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'No specific reasons are provided, but two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-strategic-and-international-studies-ai-accident-risk-and-technology-competition and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-international-security-and-cooperation-ai-accident-risk-and-technology-competition made at about the same time for the same intended use suggests interest from the donor in this particular use case at this time.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'No specific reasons are provided, but two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-strategic-and-international-studies-ai-accident-risk-and-technology-competition and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-international-security-and-cooperation-ai-accident-risk-and-technology-competition made at about the same time for the same intended use suggests interest from the donor in this particular use case at this time.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL,
@@ -301,6 +551,5 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','Stanford University',2539,'2018-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-nips-workshop-machine-learning','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Discretionary grant to support the Neural Information Processing System (NIPS) workshop “Machine Learning and Computer Security.” at https://nips.cc/Conferences/2017/Schedule?showEvent=8775',NULL,'Daniel Dewey','2018-04-19','day',NULL,NULL),
   ('Open Philanthropy','University of Oxford',429770,'2018-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/oxford-university-global-politics-of-ai-dafoe','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Grant to support research on the global politics of advanced artificial intelligence. The work will be led by Professor Allan Dafoe at the Future of Humanity Institute in Oxford, United Kingdom. The Open Philanthropy Project recommended additional funds to support this work in 2017, while Professor Dafoe was at Yale. Continuation of grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/yale-university-global-politics-of-ai-dafoe','Allan Dafoe','Nick Beckstead','2018-07-20','day',NULL,NULL),
   ('Open Philanthropy','AI Scholarships',159000,'2018-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/ai-scholarships-2018','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Discretionary grant; total across grants to two artificial intelligence researcher, both over two years. The funding is intended to be used for the students’ tuition, fees, living expenses, and travel during their respective degree programs, and is part of an overall effort to grow the field of technical AI safety by supporting value-aligned and qualified early-career researchers. Recipients are Dmitrii Krasheninnikov, master’s degree, University of Amsterdam and Michael Cohen, master’s degree, Australian National University','Dmitrii Krasheninnikov|Michael Cohen','Daniel Dewey','2018-07-26','day',NULL,NULL),
-  ('Open Philanthropy','The Wilson Center',400000,'2018-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/wilson-center-ai-policy-seminar-series','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Grant over two years to support a series of in-depth AI policy seminars. Named for President Woodrow Wilson, the Wilson Center is a non-partisan policy forum for tackling global issues through independent research and open dialogue. Open Phil believes the seminar series could help raise the salience of AI policy in Washington, D.C. policymaking circles, and could help us identify and empower one or more influential thinkers in those circles, a key component of the Open Phil AI policy strategy.',NULL,'Luke Muehlhauser','2018-08-02','day',NULL,NULL),
   ('Open Philanthropy','Stanford University',100000,'2018-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-university-machine-learning-security-research-dan-boneh-florian-tramer','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Grant is a "gift" to Stanford Unviersity to support machine learning security research led by Professor Dan Boneh and his PhD student, Florian Tramer. Machine learning security probes worst-case performance of learned models. Believed to be a way of pushing in the direction of more AI safety concern in machine learning research and AI development','Dan Boneh|Florian Tremer','Daniel Dewey','2018-09-07','day',NULL,NULL),
   ('Open Philanthropy','GoalsRL',7500,'2018-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/goals-rl-workshop-on-goal-specifications-for-reinforcement-learning','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Discretionary grant to offset travel, registration, and other expenses associated with attending the GoalsRL 2018 workshop on goal specifications for reinforcement learning. The workshop was organized by Ashley Edwards, a recent computer science PhD candidate interested in reward learning.','Ashley Edwards','Daniel Dewey','2018-10-05','day',NULL,NULL);
