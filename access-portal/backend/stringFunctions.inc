@@ -82,4 +82,9 @@ function explodeDoneeCharSepValues($doneeCsv, string $char) {
   return $formattedString;
 }
 
+// For passing arguments containing user input to a python script.
+function trimEncodeEscape(string $x, int $limit = 300) {
+  return escapeshellarg(base64_encode(substr($x, 0, $limit)));
+}
+
 ?>
