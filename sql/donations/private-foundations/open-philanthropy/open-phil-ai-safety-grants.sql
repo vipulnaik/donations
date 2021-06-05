@@ -137,6 +137,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'This is the second year that Open Phil makes a grant for AI safety research to the University of California, Berkeley (excluding the founding grant for the Center for Human-Compatible AI). It continues an annual tradition of multi-year grants to the University of California, Berkeley announced in October/November, though the researchers would be different each year. Note that the grant is to UC Berkeley, but at least one of the researchers (Pieter Abbeel) is affiliated with the Center for Human-Compatible AI.'),
+
   ('Open Philanthropy','University of California, Berkeley',1111000,'2019-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-ai-safety-research-2019','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Jacob Steinhardt','Daniel Dewey','2020-02-19','day',NULL,NULL, /* date adjusted */
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -147,7 +148,31 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'This is the third year that Open Phil makes a grant for AI safety research to the University of California, Berkeley (excluding the founding grant for the Center for Human-Compatible AI). It continues an annual tradition of multi-year grants to the University of California, Berkeley announced in October/November, though the researchers would be different each year. Note that the grant is to UC Berkeley, but at least one of the researchers (Jacob Steinhardt) is affiliated with the Center for Human-Compatible AI.');
+  /* notes */ 'This is the third year that Open Phil makes a grant for AI safety research to the University of California, Berkeley (excluding the founding grant for the Center for Human-Compatible AI). It continues an annual tradition of multi-year grants to the University of California, Berkeley announced in October/November, though the researchers would be different each year. Note that the grant is to UC Berkeley, but at least one of the researchers (Jacob Steinhardt) is affiliated with the Center for Human-Compatible AI.'),
+
+  ('Open Philanthropy','University of California, Berkeley',330000,'2021-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-song','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Dawn Song','Catherine Olsson|Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research by Professor Dawn Song on adversarial robustness as a means to improve AI safety."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ 'This is one of three grants made by the donor for "adversarial robustness research" in February 2021, all with the same grant investigators (Catherine Olsson and Daniel Dewey). https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/mit-adversarial-robustness-research and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-wagner are the two other grants. It looks like the donor became interested in funding this research topic at this time.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'This is one of three grants made by the donor for "adversarial robustness research" in February 2021, all with the same grant investigators (Catherine Olsson and Daniel Dewey). https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/mit-adversarial-robustness-research and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-wagner are the two other grants. It looks like the donor became interested in funding this research topic at this time.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','University of California, Berkeley',330000,'2021-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-song','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','David Wagner','Catherine Olsson|Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research by Professor David Wagner on adversarial robustness as a means to improve AI safety."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ 'This is one of three grants made by the donor for "adversarial robustness research" in February 2021, all with the same grant investigators (Catherine Olsson and Daniel Dewey). https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/mit-adversarial-robustness-research and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-song are the two other grants. It looks like the donor became interested in funding this research topic at this time.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'This is one of three grants made by the donor for "adversarial robustness research" in February 2021, all with the same grant investigators (Catherine Olsson and Daniel Dewey). https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/mit-adversarial-robustness-research and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-song are the two other grants. It looks like the donor became interested in funding this research topic at this time.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Grants to Center for Security and Emerging Technology (CSET); note that the founding grant
    is in open-phil-other-gcr-and-security-grants.sql */
@@ -347,6 +372,59 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Center for a New American Security */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Center for a New American Security',24350,'2020-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-a-new-american-security-ai-governance-projects','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Paul Scharre','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work exploring possible projects related to AI governance."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'No explicit reason is provided for the donation, but another donation https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-a-new-american-security-ai-and-security-projects is made at around the same time, to the same donee and with the same earmark (Paul Scharre) suggesting a broader endorsement.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'No explicit reason is provided for the timing of the donation, but another donation https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-a-new-american-security-ai-and-security-projects is made at around the same time, to the same donee and with the same earmark (Paul Scharre).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Center for a New American Security',116744,'2020-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-a-new-american-security-ai-and-security-projects','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Paul Scharre','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work by Paul Scharre on projects related to AI and security."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'No explicit reason is provided for the donation, but another donation https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-a-new-american-security-ai-governance-projects is made at around the same time, to the same donee and with the same earmark (Paul Scharre) suggesting a broader endorsement.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'No explicit reason is provided for the timing of the donation, but another donation https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-a-new-american-security-ai-governance-projects is made at around the same time, to the same donee and with the same earmark (Paul Scharre).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Masschusetts Institute of Technology (MIT) */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Massachusetts Institute of Technology',275344,'2020-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/massachusetts-institute-of-technology-ai-trends-and-impacts-research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Neil Thompson','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says "The research will consist of projects to learn how algorithmic improvement affects economic growth, gather data on the performance and compute usage of machine learning methods, and estimate cost models for deep learning projects."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Massachusetts Institute of Technology',1430000,'2021-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/mit-adversarial-robustness-research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Aleksander Madry','Catherine Olsson|Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research by Professor Aleksandr Madry on adversarial robustness as a means to improve AI safety."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ 'This is one of three grants made by the donor for "adversarial robustness research" in February 2021, all with the same grant investigators (Catherine Olsson and Daniel Dewey). https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-song and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-wagner are the two other grants. It looks like the donor became interested in funding this research topic at this time.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'This is one of three grants made by the donor for "adversarial robustness research" in February 2021, all with the same grant investigators (Catherine Olsson and Daniel Dewey). https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-song and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-wagner are the two other grants. It looks like the donor became interested in funding this research topic at this time.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Other grants (new format) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
@@ -454,18 +532,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_donee_reason */ 'No specific reasons are provided, but two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-strategic-and-international-studies-ai-accident-risk-and-technology-competition and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rice-hadley-gates-manuel-ai-risk made at about the same time for the same intended use suggests interest from the donor in this particular use case at this time.',
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'No specific reasons are provided, but two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-strategic-and-international-studies-ai-accident-risk-and-technology-competition and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rice-hadley-gates-manuel-ai-risk made at about the same time for the same intended use suggests interest from the donor in this particular use case at this time.',
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL),
-
-  ('Open Philanthropy','Massachusetts Institute of Technology',275344,'2020-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/massachusetts-institute-of-technology-ai-trends-and-impacts-research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Neil Thompson','Luke Muehlhauser',NULL,NULL,NULL,NULL,
-  /* donation_process */ NULL,
-  /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'The grant page says "The research will consist of projects to learn how algorithmic improvement affects economic growth, gather data on the performance and compute usage of machine learning methods, and estimate cost models for deep learning projects."',
-  /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
