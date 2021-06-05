@@ -392,7 +392,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
-/* Animal Charity Evaluators grants */
+/* Grants to Animal Charity Evaluators */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Animal Charity Evaluators',500000,'2017-04-01','month','donation log','Animal welfare/factory farming/meta/charity evaluator','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-charity-evaluators-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2017-06-09','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/fsIy7jR0XJI',NULL,
@@ -400,14 +400,26 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'The grant page section https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-charity-evaluators-general-support#Proposed_activities lists these proposed activities: increasing compensation (by $2,000 to $4,000 per year), adding staff time, hiring for two research positions, making small grants to evaluated charities (in the range of $500 to $1,000 per charity), intern stipends, and fundraising. The grant will increase ACE''s expected revenue for 2017 from around $635,000 to $885,000. See also  budget without Open Phil funding https://www.openphilanthropy.org/files/Grants/Animal_Charity_Evaluators/ACE_2017_Budget_not_including_OP_grant.pdf budget with Open Phil funding https://www.openphilanthropy.org/files/Grants/Animal_Charity_Evaluators/ACE_2017_Budget_including_OP_grant.pdf and plans for Open Phil funding https://www.openphilanthropy.org/files/Grants/Animal_Charity_Evaluators/ACE_Plans_for_OP_grant_funding.pdf',
   /* intended_funding_timeframe_in_months */ 24,
-  /* donor_donee_reason */ 'https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-charity-evaluators-general-support#Case_for_the_grant gives these reasons: (1) Open Phil''s version for the farm animal welfare movement in the next decade or two includes "an important role for an institution similar to a scaled-up version of ACE" (2) Open Phil expects that "the improvements ACE plans to make with this grant will allow it to direct more money to animal welfare groups that we consider highly effective, so we consider it fairly likely that this grant will achieve a roughly one-to-one return on investment in the near-term" (3) Open Phil hopes that the grant will help ACE address "what we view as some current shortcomings, including unsustainably low salaries, reliance on low-quality research, and undervaluing of long-term gains"',
+  /* donor_donee_reason */ 'https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-charity-evaluators-general-support#Case_for_the_grant gives these reasons: (1) Open Phil''s version for the farm animal welfare movement in the next decade or two includes "an important role for an institution similar to a scaled-up version of ACE" (2) Open Phil expects that "the improvements ACE plans to make with this grant will allow it to direct more money to animal welfare groups that we consider highly effective, so we consider it fairly likely that this grant will achieve a roughly one-to-one return on investment in the near-term" (3) Open Phil hopes that the grant will help ACE address "what we view as some current shortcomings, including unsustainably low salaries, reliance on low-quality research, and undervaluing of long-term gainsx".',
   /* donor_amount_reason */ 'Amount likely determined based on budgets submitted by ACE and intended use of funds; see budget without Open Phil funding https://www.openphilanthropy.org/files/Grants/Animal_Charity_Evaluators/ACE_2017_Budget_not_including_OP_grant.pdf budget with Open Phil funding https://www.openphilanthropy.org/files/Grants/Animal_Charity_Evaluators/ACE_2017_Budget_including_OP_grant.pdf and plans for Open Phil funding https://www.openphilanthropy.org/files/Grants/Animal_Charity_Evaluators/ACE_Plans_for_OP_grant_funding.pdf',
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ 'See also https://animalcharityevaluators.org/blog/on-receiving-a-grant-from-the-open-philanthropy-project/ on the ACE blog. It says "We feel that this grant is a reaffirmation of the value and impact of ACE’s work, and we are incredibly honored to have been selected." It says: "To those who may wonder if ACE will still be able to efficiently use additional donations, at this stage the answer is an emphatic yes." It links to https://animalcharityevaluators.org/about/background/goals-and-strategy/ fo the goals for 2017, and to https://animalcharityevaluators.org/blog/ace-fundraising-restrictions/ for its 2017 fundraising');
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-charity-evaluators-general-support-2020 and the continued endorsement on the grant page suggests that Open Phil would be satisfied with the success of the grant.',
+  /* notes */ 'See also https://animalcharityevaluators.org/blog/on-receiving-a-grant-from-the-open-philanthropy-project/ on the ACE blog. It says "We feel that this grant is a reaffirmation of the value and impact of ACE’s work, and we are incredibly honored to have been selected." It says: "To those who may wonder if ACE will still be able to efficiently use additional donations, at this stage the answer is an emphatic yes." It links to https://animalcharityevaluators.org/about/background/goals-and-strategy/ fo the goals for 2017, and to https://animalcharityevaluators.org/blog/ace-fundraising-restrictions/ for its 2017 fundraising.'),
 
-/* Rethink Priorities grants */
+  ('Open Philanthropy','Animal Charity Evaluators',650000,'2020-01-01','month','donation log','Animal welfare/factory farming/meta/charity evaluator','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-charity-evaluators-general-support-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "ACE seeks to build a more effective farm animal welfare movement by identifying the most effective animal welfare charities and recommending them to donors."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "Our farm animal welfare team believes ACE’s top charities are consistently effective, and finds value in pushing farm animal welfare organizations to focus on effectiveness and impact."',
+  /* donor_amount_reason */ 'No specific reason for the amount is provided. The amount is almost double the previous 2-year grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-charity-evaluators-general-support made in April 2017; the increase might reflect increased budget of the donee or greater confidence in it from Open Phil.',
+  /* donor_timing_reason */ 'The timing is shortly after the end of the two-year time for the previous grant.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'This is a total across two grants.');
+
+/* Grants to Rethink Priorities */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Rethink Priorities',200000,'2019-03-01','month','donation log','Animal welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rethink-priorities-farm-animal-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-07-18','day',NULL,NULL,
@@ -419,8 +431,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rethink-priorities-farm-animal-welfare-research-2020 and the continued endorsement on the grant page suggests that Open Phil would be satisfied with the success of the grant.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Rethink Priorities',910000,'2020-01-01','month','donation log','Animal welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rethink-priorities-farm-animal-welfare-research-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support farm animal research. This funding is intended to help Rethink Priorities continue to produce research on potential and existing interventions, including analyzing public support for various types of reform and producing survey results that inform future farm animal welfare policy proposals."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "We believe more high-quality research in this area would help us and other farm animal welfare funders compare future opportunities."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ 'This is a total across two grants.');
 
 /* We Animals grant(s) */
 
