@@ -169,7 +169,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL),
   ('Effective Altruism Funds: Long-Term Future Fund','Ought',50000,'2019-04-07','day','donation log','AI safety','https://app.effectivealtruism.org/funds/far-future/payouts/6vDsjtUyDdvBa3sNeoNVvl','https://app.effectivealtruism.org/funds/far-future','Matt Wage|Helen Toner|Matt Fallshaw|Alex Zhu|Oliver Habryka',923150,0.0542,NULL,NULL,
   /* donation_process */ 'Donee submitted grant application through the application form for the April 2019 round of grants from the Long-Term Future Fund, and was selected as a grant recipient (23 out of almost 100 applications were accepted)',
-  /* intended_use_of_funds_category */ 'Organization financial buffer',
+  /* intended_use_of_funds_category */ 'Organizational financial buffer',
   /* intended_use_of_funds */ 'No specific information is shared on how the funds will be used at the margin, but the general description gives an idea: "Ought is a nonprofit aiming to implement AI alignment concepts in real-world applications"',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'Donor is explicitly interested in diversifying funder base for donee, who currently receives almost all its funding from only two sources and is trying to change that. Othewise, same reason as with last round of funds https://app.effectivealtruism.org/funds/far-future/payouts/3JnNTzhJQsu4yQAYcKceSi namely "We believe that Ought’s approach is interesting and worth trying, and that they have a strong team. [...] Part of the aim of the grant is to show Ought as an example of the type of organization we are likely to fund in the future."',
