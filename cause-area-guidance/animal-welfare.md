@@ -9,6 +9,8 @@ disbursed/directed by Animal Charity Evaluators.
 
 ### Factory farming
 
+Slug so far: `Animal welfare/factory farming`
+
 The "factory farming" subcause refers specifically to efforts that
 interact directly with factory farming practices. The goal of this
 effort could include research into better practices for farming
@@ -25,6 +27,8 @@ efforts.
 
 ### Diet change
 
+Slug so far: `Animal welfare/diet change`
+
 The "diet change" subcause includes efforts, mostly centered around
 advocacy to individuals and organizations, to move towards diets that
 reduce the exploitation of animals. This could include advocacy of
@@ -33,6 +37,8 @@ heavier animals to cause less suffering per unit food consumed).
 
 ### Meat alternatives
 
+Slug so far: `Animal welfare/meat alternatives`
+
 The "meat alternatives" subcause focuses on efforts to build and
 deploy alternatives to meat that do not require farming animals (at
 least at the margin), but still have some of the "qualia" of meat
@@ -40,19 +46,26 @@ least at the margin), but still have some of the "qualia" of meat
 
 ### Wild animal welfare
 
+Slug so far: `Animal welfare/wild animal welfare`
+
 Welfare of animals growing in the wild.
 
 ## Subcauses within factory farming: animal selection
 
 ### Chicken
 
+Slug so far: `Animal welfare/factory farming/chicken`
+
 Chicken are important in factory farming and have been the focus of
 animal welfare efforts because of the large numbers of chicken per
 unit mass of food produced as well as the conditions of chicken seeming
 objectively bad. There are a few subtypes of chicken of interest:
 
-* Broiler chicken: These are chicken raised specifically for
-  meat. They are used for premium chicken meat.
+* Broiler chicken (slug so far:
+  `Animal welfare/factory farming/chicken/broiler chicken`):
+  These are chicken raised
+  specifically for meat. They are used for premium chicken meat.
+ 
 * Layer chicken: These are chicken raised specifically for eggs. Once
   layer chicken reach the end of their life, they become "spent hens"
   and are generally used in less important meat.
@@ -63,6 +76,8 @@ not ubiquitous for broiler chicken.
 
 ### Fish
 
+Slug so far: `Animal welfare/factory farming/fish`
+
 Like chicken and perhaps even more so than chicken, fish are a target
 of animal welfare efforts because of the large numberr of fish per
 unit mass of food produced.
@@ -71,11 +86,17 @@ unit mass of food produced.
 
 ### Cage-free
 
+Possible slug(s): `Animal welfare/factory farming/chicken/cage-free`,
+`Animal welfare/factory farming/chicken/broiler chicken/cage-free` and
+many more
+
 The idea behind "cage-free" is to not confine the animals being raised
 in small cages. This is typically applied to chicken, but may also
 apply to other poultry and sometimes to larger animals.
 
 ### Chick culling
+
+Possible slug(s): `Animal welfare/factory farming/chicken/chick culling`
 
 Interventions related to "chick culling" apply to chicken and
 sometimes to other poultry. Typical interventions involve early sex
@@ -84,6 +105,8 @@ abortion).
 
 ## Subcauses based on mechanism of influence
 
+The mechanism of influence goes at the end of the cause area string.
+
 ### Research
 
 Research could include research on the subjective experience of
@@ -91,6 +114,8 @@ animals or technological approaches to provide alternatives to
 terrible experiences.
 
 ### Corporate campaign
+
+Possible slug(s): `Animal welfare/factory farming/chicken/corporate campaign`
 
 Corporate campaigns are campaigns targeted at companies that either
 own/operate factory farms or get supplies from factory farms. These
@@ -101,3 +126,4 @@ they own, and/or impose standards on their suppliers.
 
 Legislative campaigns are targeted at creating, modifying, or
 repealing legislations related to animal welfare.
+
