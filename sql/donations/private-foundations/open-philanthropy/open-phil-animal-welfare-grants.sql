@@ -414,7 +414,31 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Likely determined by the end of the previous two-year grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-world-farming-farm-animal-welfare-advocacy-china made February 2017',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Compassion in World Farming',2169429,'2019-09-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-world-farming-fish-welfare-and-efforts-to-end-cages','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United Kingdom','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work on fish welfare and efforts to end the use of cages and crates for all farmed animal species in the UK and Europe. These funds will support staffing needs, marketing, social media, advocacy work, investigations, and technical and operational costs."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'The grant amount is £1,759,701 ($2,169,429 at the time of conversion).',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'This is a total across two grants.'),
+
+  ('Open Philanthropy','Compassion in World Farming',1228407,'2020-11-01','month','donation log','Animmal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-world-farming-farm-animal-welfare-in-asia','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support "work to advance farm animal welfare in Asia. CIWF plans to engage in corporate outreach on poultry welfare and to re-grant funds to farm animal welfare groups throughout Asia."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'The grant amount is £964,600 ($1,228,407 at the time of conversion).',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'This is a total across two grants.');
 
 /* Grants to Compassion in World Farming USA */
 
