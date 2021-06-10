@@ -149,7 +149,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'Several followup grants from Open Phil to Mercy For Animals suggest continued satisfaction with the grantee.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','Mercy For Animals',375000,'2018-05-01','month','donation log','Animal welfare/factory farming/chicken/broiler chicken/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/mercy-animals-us-broiler-chicken-welfare-corporate-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard','2018-06-15','day',NULL,NULL,
+  ('Open Philanthropy','Mercy For Animals',375000,'2018-05-01','month','donation log','Animal welfare/factory farming/chicken/broiler chicken/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/mercy-animals-us-broiler-chicken-welfare-corporate-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard','2018-06-14','day',NULL,NULL, /* date adjusted */
   /* donation_process */ 'Discretionary grant',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support its broiler chicken welfare corporate campaigns in the U.S."',
@@ -158,10 +158,32 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'The grant happens around two years after the linked previous two-year grants https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/mercy-animals-broiler-chicken-welfare-corporate-campaigns (broiler chicken welfare) and https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/mercy-animals-corporate-cage-free-campaigns (cage-free egg campaign) suggesting that its timing is related to their expiration.',
   /* donor_next_donation_thoughts */ 'The grant page says: "We expect to evaluate the merits of a longer renewal of our support to MFA closer to the end of 2018."',
-  /* donor_retrospective */ 'Followup grants from Open Phil to Mercy For Animals suggest continued satisfaction with the grantee.',
-  /* notes */ NULL);
+  /* donor_retrospective */ 'Followup grants from Open Phil to Mercy For Animals (including https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/mercy-animals-broiler-welfare-campaigns in January 2019 with a similar scope) suggest continued satisfaction with the grantee.',
+  /* notes */ NULL),
 
-  /* Need to add two more recent grants to MFA */
+  ('Open Philanthropy','Mercy For Animals',261000,'2019-01-01','month','donation log','Animal welfare/factory farming/chicken/broiler chicken/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/mercy-animals-broiler-welfare-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This seems like a followup grant to https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/mercy-animals-us-broiler-chicken-welfare-corporate-campaigns and is likely informed by considerations affecting that and earlier grants, and also by the progress since then.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support corporate campaigns to improve the welfare of broiler chickens. [...] Their welfare is impacted by genetics, overcrowding, inhumane slaughter, and environmental factors like chronic sleep deprivation due to lighting schedules optimized for growth. Broiler welfare campaigns seek to address these causes of suffering."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Mercy For Animals',6638000,'2019-07-01','month','donation log','Animal welfare/factory farming/chicken/broiler chicken/cage-free/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/mercy-animals-corporate-campaigns-2019','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States|Canada|Brazil|Mexico','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This larger grant appears to have been under consideration at the time of https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/mercy-animals-us-broiler-chicken-welfare-corporate-campaigns (May 2018) that said: "We expect to evaluate the merits of a longer renewal of our support to MFA closer to the end of 2018."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support corporate engagement on animal welfare and capacity building. MFA plans to continue its broiler chicken campaigns and cage-free egg enforcement work in the U.S. and Canada and its cage-free egg campaigns in Brazil and Mexico."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant follows up on several past grants for similar uses, and reasons for past grants, including strong track record, probably apply. Nothing is explicitly mentioned on the grant page.',
+  /* donor_amount_reason */ 'No explicit reason for the amount is provided; this is a much larger grant than any past grant to MFA. The grant page says: "The grant amount was updated in February, March, and July 2020, and in March 2021."',
+  /* donor_timing_reason */ 'This larger grant appears to have been under consideration at the time of https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/mercy-animals-us-broiler-chicken-welfare-corporate-campaigns (May 2018) that said: "We expect to evaluate the merits of a longer renewal of our support to MFA closer to the end of 2018." The timing of the grant is likely determined by the evaluation being completed.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Grants to Animal Equality */
 
