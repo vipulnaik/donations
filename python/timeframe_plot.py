@@ -39,6 +39,7 @@ def single_donor_single_donee(output, donor, donee):
     plt.xticks(rotation=45)
     plt.xlabel("Date")
     plt.ylabel("Grant number")
+    plt.margins(y=0.1)
     plt.savefig(output, bbox_inches="tight")
 
 
@@ -110,6 +111,7 @@ def single_donor_multiple_donees(output, donor, cause_area=None):
     plt.xlabel("Date")
     plt.ylabel("Donee")
     plt.tight_layout()
+    plt.margins(y=0.1)
     plt.savefig(output, bbox_inches="tight")
 
 
@@ -153,6 +155,7 @@ def single_donee_multiple_donors(output, donee):
     plt.xlabel("Date")
     plt.ylabel("Donor")
     plt.tight_layout()
+    plt.margins(y=0.1)
     plt.savefig(output, bbox_inches="tight")
 
 
