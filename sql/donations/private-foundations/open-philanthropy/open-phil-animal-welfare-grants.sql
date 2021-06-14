@@ -248,6 +248,33 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'This is a total of four grants (presumably one grant per country).');
 
+/* Grants to L214 */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','L214',1347742,'2017-11-01','month','donation log','Animal welfare/factory farming/chicken/broiler chickken/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/L214-broiler-chicken-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','France','Lewis Bollard','2017-12-08','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/SReu0RkqPnM',NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work on broiler chicken welfare in France. Using this funding, L214 will conduct a campaign advocating for reduced chicken meat consumption as well as a corporate campaign targeting higher welfare standards for broiler chickens. Additionally, it plans to establish a new campus outreach program for movement building purposes, and will apply some funding toward capacity building such as software, training, and fundraising expenses."',
+  /* intended_Funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'Open Phil''s "Program Officer for Farm Animal Welfare, Lewis Bollard, is excited to support L214 due to its track record securing large wins to date, such as cage-free pledges from some of France’s largest retailers; his impression of its leadership team; and the organization’s strategic alignment with our goal to build a stronger farm animal welfare movement in Europe."',
+  /* donor_amount_reason */ 'The grant is for €1,140,000 (approximately $1,347,742 at the time of conversion).',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The write-up for a followup grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/L214-broiler-chicken-campaigns-2020 (November 2020) indicates Open Phil''s satisfaction with L214''s progress since this grant.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','L214',1432130,'2020-11-01','month','donation log','Animal welfare/factory farming/chicken/cage-free/broiler chicken/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/L214-broiler-chicken-campaigns-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','France','Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Based on the grant write-up, evaluation of L214''s progress since the previous grant appears to have been part of the grantmaking process.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support fundraising, professionalization, investigations, and broiler welfare advocacy in France. [...] This funding is intended to support additional welfare campaigns, investigations, and fundraising.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "Since our November 2017 support, L214 has secured broiler welfare and cage-free commitments from a number of major French supermarket chains and companies." The current grant is for continuing and expanding on similar activities.',
+  /* donor_amount_reason */ 'Grant of €1,228,000 (approximately $1,432,130 at the time of conversion).',
+  /* donor_timing_reason */ 'Reasons for timing are not discussed; the grant happens about one year after the expiration of the previous two-year grant.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Grants to University of Bern */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
@@ -278,7 +305,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 /* Grants to Humane Society Legislative Fund */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Humane Society Legislative Fund',525000,'2017-12-01','month','donation log','Animal welfare/factory farming/legislative campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/Humane-Society-Legislative-Fund-Opposing-King-Amendment','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard','2019-04-30','day',NULL,NULL,
+  ('Open Philanthropy','Humane Society Legislative Fund',525000,'2017-12-01','month','donation log','Animal welfare/factory farming/legislative campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/Humane-Society-Legislative-Fund-Opposing-King-Amendment','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard','2019-04-29','day',NULL,NULL, /* date adjusted */
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to support efforts to defeat the Protect Interstate Commerce Act, also known as the King Amendment. The amendment, if enacted, would prevent states from imposing animal welfare standards on the sale of animal products produced in another state. HSLF plans to run targeted advertising, organize new grassroots support and third-party validators, and advocate against the amendment with key congressional committee members.',
@@ -293,10 +320,10 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 /* Grants to Compassion Over Killing */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Compassion Over Killing',500000,'2016-12-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-over-killing-us-broiler-welfare-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard', '2017-02-16', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/QnCMY45su7E',NULL,
+  ('Open Philanthropy','Compassion Over Killing',500000,'2016-12-01','month','donation log','Animal welfare/factory farming/chicken/broiler chicken/research/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-over-killing-us-broiler-welfare-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard', '2017-02-16', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/QnCMY45su7E',NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant to support broiler chicken welfare research and costs of United States corporate campaigns against the abuse of broiler chickens',
+  /* intended_use_of_funds */ 'Grant "to support broiler chicken welfare research and costs of United States corporate campaigns against the abuse of broiler chickens."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
@@ -305,28 +332,28 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Part of a strategy focus on broiler chicken welfare in late 2016, though no overarching document on this has been posted. See also https://www.facebook.com/groups/EffectiveAnimalActivism/search/?query=broiler%20chicken'),
 
-  ('Open Philanthropy','Compassion Over Killing',250000,'2019-01-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-exit-grant-2019','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford','2019-05-07','day',NULL,NULL,
+  ('Open Philanthropy','Compassion Over Killing',250000,'2019-01-01','month','donation log','Animal welfare/factory farming/chicken/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-exit-grant-2019','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford','2019-05-06','day',NULL,NULL, /* date adjusted */
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant to support farm animal welfare outreach and investigations related to chickens and fish. The new funding represents an “exit grant” that will provide Compassion Over Killing with approximately one year of operating support to allow them to secure other funding.',
+  /* intended_use_of_funds */ 'Grant "to support farm animal welfare outreach and investigations related to chickens and fish. The new funding represents an “exit grant” that will provide Compassion Over Killing with approximately one year of operating support to allow them to secure other funding."',
   /* intended_funding_timeframe_in_months */ 12,
-  /* donor_donee_reason */ 'The donor had previously supported the donee in 2016 https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-over-killing-us-broiler-welfare-campaigns The new grant is an exit grant to give the donee time to find other sources of funding',
-  /* donor_amount_reason */ 'Likely selected as a reasonable amount for a one-year exit grant',
-  /* donor_timing_reason */ 'Timing likely determined by the end of the previous grant, and the need to provide more funding for a smooth exit grant',
-  /* donor_next_donation_thoughts */ 'There will be no next donation; this is an exit grant',
+  /* donor_donee_reason */ 'The donor had previously supported the donee in 2016 https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-over-killing-us-broiler-welfare-campaigns The new grant is an exit grant to give the donee time to find other sources of funding.',
+  /* donor_amount_reason */ 'Likely selected as a reasonable amount for a one-year exit grant.',
+  /* donor_timing_reason */ 'Timing likely determined by the end of the previous grant, and the need to provide more funding for a smooth exit grant.',
+  /* donor_next_donation_thoughts */ 'There will be no next donation; this is an exit grant.',
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
 /* Grants to Royal Veterinary College */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy project','Royal Veterinary College',130850,'2019-01-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/royal-vet-college-halal','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford','2019-05-23','day',NULL,NULL,
+  ('Open Philanthropy','Royal Veterinary College',130850,'2019-01-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/royal-vet-college-halal','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford','2019-05-23','day',NULL,NULL,
   /* donation_process */ 'Discretionary grant',
   /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant to investigate a more humane method of halal poultry slaughter. Controlled atmosphere slaughter techniques, which are among the most commonly used stunning systems, are not currently approved by halal authorities. Royal Veterinary College intends to use these funds to investigate a new method of stunning that would both be approved by halal authorities and allow chickens to be individually stunned',
+  /* intended_use_of_funds */ 'Grant "to investigate a more humane method of halal poultry slaughter." "Controlled atmosphere slaughter techniques, which are among the most commonly used stunning systems, are not currently approved by halal authorities. Royal Veterinary College intends to use these funds to investigate a new method of stunning that would both be approved by halal authorities and allow chickens to be individually stunned."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'The grant page says the grant would "potentially [reduce] suffering for more than 100 million chickens slaughtered in halal facilities in Europe each year."',
-  /* donor_amount_reason */ 'Grant of £100,000 ($130,850 at the time of conversion)',
+  /* donor_amount_reason */ 'Grant is for £100,000 ($130,850 at the time of conversion).',
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */NULL,
   /* donor_retrospective */ NULL,
@@ -334,11 +361,11 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Princeton University */
 
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Princeton University',170000,'2019-01-01','month','donation log','Animal welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/princeton-university-guo-peng','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Lewis Bollard','2019-05-23','day',NULL,NULL,
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Princeton University',170000,'2019-01-01','month','donation log','Animal welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/princeton-university-guo-peng','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Peter Singer|Guo Peng','Lewis Bollard','2019-05-23','day',NULL,NULL,
   /* donation_process */ 'Discretionary grant, structured as a gift',
   /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant to support the work of Shandong University Professor Guo Peng, a leading animal protection scholar in China, in collaboration with Professor Peter Singer of Princeton University. This award will support the translation of books on animal ethics and farm animal welfare issues into Mandarin Chinese',
+  /* intended_use_of_funds */ 'Grant "to support the work of Shandong University Professor Guo Peng, a leading animal protection scholar in China, in collaboration with Professor Peter Singer of Princeton University. This award will support the translation of books on animal ethics and farm animal welfare issues into Mandarin Chinese."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'The grant page says the project "could bolster animal ethics in Chinese universities, foster more attention on these issues, and eventually influence policy discussions."',
   /* donor_amount_reason */ NULL,
@@ -346,6 +373,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
+
+/* Cause area normalization not done from this point onward */
 
 /* Grants to Farm Forward */
 
@@ -961,7 +990,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','Eurogroup for Animals',625400,'2017-09-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/eurogroup-animals-eu-chicken-welfare-advocacy','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years, denominated in euros (€530,000) to support EU policy advocacy for chicken welfare. Grantee plans to use these funds on either broiler chicken or egg-laying hen welfare campaigns, depending upon which campaign appears most tractable. Actual financing of the grant from a 501(c)(4) social welfare organization',NULL,'Lewis Bollard','2017-11-28','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/eCt9clJIRvM',NULL),
   ('Open Philanthropy','Aquaculture Stewardship Council',533036,'2017-11-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/aquaculture-stewardship-council-fish-welfare-standard-development','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years, denominatoted in euros (€459,000). Grantee goal is to develop an objective, evidence-based standard that is applicable to all eligible ASC-certified species and recognized globally.',NULL,'Lewis Bollard','2017-11-28','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/eCt9clJIRvM',NULL),
   ('Open Philanthropy','Global Aquaculture Alliance',435000,'2017-09-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-aquaculture-alliance-fish-welfare-best-practices','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years via the Responsible Aquaculture Foundation to develop best practices and proposed animal welfare standards for three farmed fish species.',NULL,'Lewis Bollard','2017-12-01','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/3a9MabNTKKc',NULL),
-  ('Open Philanthropy','Association L214',1347742,'2017-11-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/L214-broiler-chicken-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years of €1,140,000 (approximately $1,347,742 at the time of conversion). Using this funding, L214 will conduct a campaign advocating for reduced chicken meat consumption as well as a corporate campaign targeting higher welfare standards for broiler chickens.','France','Lewis Bollard','2017-12-08','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/SReu0RkqPnM',NULL),
   ('Open Philanthropy','theguardian.org',886600,'2017-11-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/the-guardian-journalism-factory-farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant to support journalism on factory farming and farm animal cruelty. Theguardian.org has stated that it will regard the funds to The Guardian newspaper, which will allow The Guardian to increase its reporting output on issues related to factory farming, including publishing approximately one article per week as well as the creation of multimedia content. In keeping with The Guardian’s journalistic and transparency standards, all supported content will be clearly labeled and the Open Philanthropy Project will have no editorial control over the content ultimately published.',NULL,'Lewis Bollard','2017-12-08','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/SReu0RkqPnM',NULL),
   ('Open Philanthropy','fair-fish international association',453841,'2017-11-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fair-fish-international-fish-welfare-standards','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years for a farmed fish welfare assessment and standards project. FFI’s research team, FishEthoBase, will work jointly with fish welfare certifier Friend of the Sea (FOS) to assess fish welfare at approximately 50% of all FOS-certified farms. Findings from these assessments will then be used to create farm-specific improvement recommendations and to develop animal welfare criteria for possible inclusion in FOS standards. Additionally, FFI plans to share its findings through formal presentations at academic and industry conferences.',NULL,'Lewis Bollard','2017-12-08','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/SReu0RkqPnM',NULL),
   ('Open Philanthropy','The Good Food Institute',1500000,'2017-11-01','month','donation log','Animal welfare/factory farming/meat alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/good-food-institute-general-support-2017','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Renewal of previous grant of $1,000,000 at https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/good-food-institute-general-support Lewis Bollard considers GFI to be the leading nonprofit promoting meat alternatives, and is impressed with its strategic support for early-stage companies producing plant-based products, such as Good Dot and Good Catch.',NULL,'Lewis Bollard','2018-01-05','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/vxf9stT1x0o',NULL),
