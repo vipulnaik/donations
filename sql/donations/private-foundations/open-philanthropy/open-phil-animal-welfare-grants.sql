@@ -464,6 +464,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Changing Markets Foundation */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Changing Markets Foundation',500000,'2021-02-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/changing-markets-foundation-fish-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Spain|France|Austria|Switzerland','Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work on global investor engagement and on retailer and investor fish welfare campaigns in Spain, France, Austria, and Switzerland."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Cause area normalization not done from this point onward */
 
 /* Grants to Farm Forward */
