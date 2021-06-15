@@ -449,6 +449,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Catalyst */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Catalyst',350000,'2020-08-01','month','donation log','Animal welfare/factory farming/pig/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/catalyst-farm-animal-welfare-in-thailand','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Thailand','Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to advocate for farm animal welfare in Thailand. This funding is intended to enable the new organization to advocate for pig and chicken welfare, specifically by working with the government to, among other things, provide welfare training and develop humane certification standards."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Cause area normalization not done from this point onward */
 
 /* Grants to Farm Forward */
