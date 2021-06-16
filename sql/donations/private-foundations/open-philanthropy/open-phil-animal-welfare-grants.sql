@@ -524,6 +524,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to University of Glasgow */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','University of Glasgow',109552,'2020-12-01','month','donation log','Animal welfare/wild animal welfare/bird/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/university-of-glasgow-animal-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Davide Dominoni','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant page says: "The project was endorsed by the Wild Animal Initiative due to its potential to expand the field of welfare biology." This suggests that this endorsement was influential to the grantmaking process.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research on animal welfare led by Davide Dominoni. This funding will support research on the effects of urbanization and artificial light on birds’ welfare."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "The project was endorsed by the Wild Animal Initiative due to its potential to expand the field of welfare biology." This suggests that this endorsement was influential to the grantmaking process.',
+  /* donor_amount_reason */ 'Grant of £81,000 (approximately $109,552 at the time of conversion).',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Cause area normalization not done from this point onward */
 
 /* Grants to Farm Forward */
