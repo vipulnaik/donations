@@ -283,7 +283,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to RSPCA */
 
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
   ('Open Philanthropy','Royal Society for the Prevention of Cruelty to Animals',453440,'2017-02-01','month','donation log','Animal welfare/factory farming/China','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rspca-farm-animal-welfare-advocacy-china','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Lewis Bollard', '2017-04-04', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/z9t_U6m9zKk','https://predictionbook.com/predictions/185233|https://predictionbook.com/predictions/185234',
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -291,10 +291,13 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'The grant is part of a China focus strategy announced by Lewis Bollard at https://www.facebook.com/groups/EffectiveAnimalActivism/permalink/656583861179155/ (2016-10-25) and explained in depth in a document https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/grants-support-farm-animal-welfare-work-china announced at https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/ngrjni1iKLg (2017-08-09).',
   /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ 'The timing is determied by the China focus strategy announced by Lewis Bollard at https://www.facebook.com/groups/EffectiveAnimalActivism/permalink/656583861179155/ (2016-10-25) and explained in depth in a document https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/grants-support-farm-animal-welfare-work-china announced at https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/ngrjni1iKLg (2017-08-09).',
+  /* donor_timing_reason */ 'The timing is determined by the China focus strategy announced by Lewis Bollard at https://www.facebook.com/groups/EffectiveAnimalActivism/permalink/656583861179155/ (2016-10-25) and explained in depth in a document https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/grants-support-farm-animal-welfare-work-china announced at https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/ngrjni1iKLg (2017-08-09).',
   /* donor_next_donation_thoughts */ NULL,
   /* dnor_retrospective */ 'Several further grants from Open Phil to RSPCA, including the grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rspca-farm-animal-welfare-advocacy-asia-2020 for continued animal welfare work in Asia, suggest continued satisfaction with the grantee.',
-  /* notes */ NULL),
+  /* notes */ NULL,
+  /* amount_original_currency */ NULL,
+  /* original_currency */ NULL,
+  /* currency_conversion_basis */ NULL),
 
   ('Open Philanthropy','Royal Society for the Prevention of Cruelty to Animals',374631,'2017-10-01','month','donation log','Animal welfare/factory farming/chicken/broiler chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rspca-broiler-chicken-welfare-campaign-UK','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United Kingdom','Lewis Bollard','2017-11-08','day','https://groups.google.com/a/openphilanthropy.org/forum/#!msg/newly.published/sym4vNvqFbw/d3CCxBZ1BgAJ',NULL,
   /* donation_process */ 'RSPCA''s budget https://www.openphilanthropy.org/files/Grants/RSPCA/RSPCA_Budget_2018_2019.pdf was prepared as part of the grantmaking process.',
@@ -302,11 +305,14 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'Grant "to support a corporate chicken welfare campaign in the United Kingdom. Using this funding, RSPCA will launch a campaign encouraging retailers and food companies to adopt higher welfare broiler chicken practices."',
   /* intended_funding_timeframe_in_months */ 24,
   /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ 'Grant of £282,000 (approximately $374,631 at the time of conversion). https://www.openphilanthropy.org/files/Grants/RSPCA/RSPCA_Budget_2018_2019.pdf has a full budget.',
+  /* donor_amount_reason */ 'https://www.openphilanthropy.org/files/Grants/RSPCA/RSPCA_Budget_2018_2019.pdf has a full budget.',
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ 'Followup grants from Open Phil to RSPCA suggest continued satisfaction with the grantee.',
-  /* notes */ NULL),
+  /* notes */ NULL,
+  /* amount_original_currency */ 282000,
+  /* original_currency */ 'GBP',
+  /* currency_conversion_basis */ 'donor calculation'),
 
   ('Open Philanthropy','Royal Society for the Prevention of Cruelty to Animals',231677,'2018-05-01','month','donation log','Animal welfare/factory farming/chicken/broiler chicken/researcch','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rspca-broiler-breed-study','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United Kingdom','Lewis Bollard','2018-06-14','day',NULL,NULL, /* date adjusted */
   /* donation_process */ 'Discretionary grant',
@@ -314,11 +320,14 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'Grant "to support a broiler chicken breed welfare study. The study, to be conducted by the Royal Veterinary College under RSPCA supervision, will test the welfare of two new breeds and will validate two new behavioral measures to enhance future breed tests."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reeason */ 'The grant page says: "Farm Animal Welfare Program Officer Lewis Bollard believes the research is likely to assist broiler welfare campaigns in the U.S. and Europe."',
-  /* donor_amount_reason */ 'Grant of £171,600 (approximately $231,677 at the time of conversion).',
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL),
+  /* notes */ NULL,
+  /* amount_original_currency */ 171600,
+  /* original_currency */ 'GBP',
+  /* currency_conversion_basis */ 'donor calculation'),
 
   ('Open Philanthropy','Royal Society for the Prevention of Cruelty to Animals',36957,'2019-10-01','month','donation log','Animal welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/royal-society-prevention-cruelty-animals-organizational-development','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford',NULL,NULL,NULL,NULL,
   /* donation_process */ 'Discretionary grant',
@@ -326,11 +335,14 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'Grant "for organizational development."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ 'Grant of £30,000 ($36,957 at the time of conversion).',
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL),
+  /* notes */ NULL,
+  /* amount_original_currency */ 30000,
+  /* original_currency */ 'GBP',
+  /* currency_conversion_basis */ 'donor calculation'),
 
   ('Open Philanthropy','Royal Society for the Prevention of Cruelty to Animals',425000,'2020-03-01','month','donation log','Animal welfare/factory farming/chicken/broiler chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rspca-broiler-chicken-welfare-outreach','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United Kingdom','Lewis Bollard',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
@@ -338,11 +350,14 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'Grant "to support its outreach to improve the welfare of broiler chickens in the United Kingdom. RSPCA plans to use these funds to support corporate campaigns, industry events and awards, advertising, reports and materials, and other outreach expenses."',
   /* intended_funding_timeframe_in_months */ 24,
   /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ 'Grant of £329,000 (approximately $425,000 at the time of conversion).',
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL),
+  /* notes */ NULL,
+  /* amount_original_currency */ 329000,
+  /* original_currency */ 'GBP',
+  /* currency_conversion_basis */ 'donor calculation'),
 
   ('Open Philanthropy','Royal Society for the Prevention of Cruelty to Animals',500000,'2020-08-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rspca-farm-animal-welfare-advocacy-asia-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
@@ -350,11 +365,14 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'Grant "to support its work to advance farm animal welfare in Asia. The RSPCA intends to use this funding to build institutional support for farm animal welfare, develop and implement welfare standards, and award scholarships to researchers studying topics related to farm animal welfare."',
   /* intended_funding_timeframe_in_months */ 36,
   /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ 'Grant of £400,000 (approximately $500,000 at the time of conversion).',
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL,
+  /* amount_original_currency */ 400000,
+  /* original_currency */ 'GBP',
+  /* currency_conversion_basis */ 'donor calculation');
 
 /* Grants to University of Bern */
 
