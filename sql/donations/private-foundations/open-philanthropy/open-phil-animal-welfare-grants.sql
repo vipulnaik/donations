@@ -250,18 +250,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to L214 */
 
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
   ('Open Philanthropy','L214',1347742,'2017-11-01','month','donation log','Animal welfare/factory farming/chicken/broiler chickken/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/L214-broiler-chicken-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','France','Lewis Bollard','2017-12-08','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/SReu0RkqPnM',NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support work on broiler chicken welfare in France. Using this funding, L214 will conduct a campaign advocating for reduced chicken meat consumption as well as a corporate campaign targeting higher welfare standards for broiler chickens. Additionally, it plans to establish a new campus outreach program for movement building purposes, and will apply some funding toward capacity building such as software, training, and fundraising expenses."',
   /* intended_Funding_timeframe_in_months */ 24,
   /* donor_donee_reason */ 'Open Phil''s "Program Officer for Farm Animal Welfare, Lewis Bollard, is excited to support L214 due to its track record securing large wins to date, such as cage-free pledges from some of France’s largest retailers; his impression of its leadership team; and the organization’s strategic alignment with our goal to build a stronger farm animal welfare movement in Europe."',
-  /* donor_amount_reason */ 'The grant is for €1,140,000 (approximately $1,347,742 at the time of conversion).',
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ 'The write-up for a followup grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/L214-broiler-chicken-campaigns-2020 (November 2020) indicates Open Phil''s satisfaction with L214''s progress since this grant.',
-  /* notes */ NULL),
+  /* notes */ NULL,
+  /* amount_original_currency */ 1140000,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation'),
 
   ('Open Philanthropy','L214',1432130,'2020-11-01','month','donation log','Animal welfare/factory farming/chicken/cage-free/broiler chicken/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/L214-broiler-chicken-campaigns-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','France','Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
   /* donation_process */ 'Based on the grant write-up, evaluation of L214''s progress since the previous grant appears to have been part of the grantmaking process.',
@@ -269,11 +272,14 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'Grant "to support fundraising, professionalization, investigations, and broiler welfare advocacy in France. [...] This funding is intended to support additional welfare campaigns, investigations, and fundraising.',
   /* intended_funding_timeframe_in_months */ 24,
   /* donor_donee_reason */ 'The grant page says: "Since our November 2017 support, L214 has secured broiler welfare and cage-free commitments from a number of major French supermarket chains and companies." The current grant is for continuing and expanding on similar activities.',
-  /* donor_amount_reason */ 'Grant of €1,228,000 (approximately $1,432,130 at the time of conversion).',
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'Reasons for timing are not discussed; the grant happens about one year after the expiration of the previous two-year grant.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL,
+  /* amount_original_currency */ 1228000,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation');
 
 /* Grants to RSPCA */
 
@@ -481,18 +487,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Crustacean Compassion */
 
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
   ('Open Philanthropy','Crustacean Compassion',786830,'2021-02-01','month','donation log','Animal welfare/factory farming/crustacean/decapod crustacean','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/crustacean-compassion-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United Kingdom','Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'Grant "intended to support work to advance UK welfare reforms for decapod crustaceans, approximately 420 million of which are caught by UK vessels every year."',
   /* intended_funding_timeframe_in_months */ 24,
   /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ 'Grant of £575,000 (approximately $786,830 at the time of conversion).',
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL,
+  /* amount_original_currency */ 575000,
+  /* original_currency */ 'GBP',
+  /* currency_conversion_basis */ 'donor calculation');
 
 /* Grants to People for Animals Uttarakhand */
 
@@ -511,33 +520,39 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Institute of Agrifood Research and Technology */
 
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
   ('Open Philanthropy','Institute of Agrifood Research and Technology',237043,'2021-01-01','month','donation log','Animal welfare/factory farming/fish/sea bass/sea bream/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/irta-fish-welfare-standards','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Spain','Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support the development of welfare certification standards for sea bass and sea bream farms in Spain. The standards will be adopted by Welfair(TM), Spain’s largest farm animal welfare certifier."',
   /* intended_funding_timeframe_in_months */ 24,
   /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ 'Grant of €193,000 ($237,043 at the time of conversion).',
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL,
+  /* amount_original_currency */ 193000,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation');
 
 /* Grants to University of Glasgow */
 
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
   ('Open Philanthropy','University of Glasgow',109552,'2020-12-01','month','donation log','Animal welfare/wild animal welfare/bird/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/university-of-glasgow-animal-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Davide Dominoni','Lewis Bollard',NULL,NULL,NULL,NULL,
   /* donation_process */ 'The grant page says: "The project was endorsed by the Wild Animal Initiative due to its potential to expand the field of welfare biology." This suggests that this endorsement was influential to the grantmaking process.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research on animal welfare led by Davide Dominoni. This funding will support research on the effects of urbanization and artificial light on birds’ welfare."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'The grant page says: "The project was endorsed by the Wild Animal Initiative due to its potential to expand the field of welfare biology." This suggests that this endorsement was influential to the grantmaking process.',
-  /* donor_amount_reason */ 'Grant of £81,000 (approximately $109,552 at the time of conversion).',
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL,
+  /* amount_original_currency */ 81000,
+  /* original_currency */ 'GBP',
+  /* currency_conversion_basis */ 'donor calculation');
 
 /* Cause area normalization not done from this point onward */
 
