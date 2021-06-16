@@ -479,6 +479,51 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Crustacean Compassion */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Crustacean Compassion',786830,'2021-02-01','month','donation log','Animal welfare/factory farming/crustacean/decapod crustacean','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/crustacean-compassion-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United Kingdom','Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "intended to support work to advance UK welfare reforms for decapod crustaceans, approximately 420 million of which are caught by UK vessels every year."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'Grant of £575,000 (approximately $786,830 at the time of conversion).',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to People for Animals Uttarakhand */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','People for Animals Uttarakhand',85000,'2021-01-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/people-for-animals-uttarakhand-farm-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','India','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a movement-building fellowship for farm animal welfare advocates in India. The 10-month fellowship, run by People for Animals Uttarakhand and Humane Society International India, will train fellows and place them in animal welfare internships."',
+  /* intended_funding_timeframe_in_months */ 10,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Grant made via the Karuna Foundation.');
+
+/* Grants to Institute of Agrifood Research and Technology */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Institute of Agrifood Research and Technology',237043,'2021-01-01','month','donation log','Animal welfare/factory farming/fish/sea bass/sea bream/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/irta-fish-welfare-standards','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Spain','Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support the development of welfare certification standards for sea bass and sea bream farms in Spain. The standards will be adopted by Welfair(TM), Spain’s largest farm animal welfare certifier."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'Grant of €193,000 ($237,043 at the time of conversion).',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Cause area normalization not done from this point onward */
 
 /* Grants to Farm Forward */
@@ -712,7 +757,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'This is a total across two grants.'),
 
-  ('Open Philanthropy','Compassion in World Farming',1228407,'2020-11-01','month','donation log','Animmal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-world-farming-farm-animal-welfare-in-asia','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Compassion in World Farming',1228407,'2020-11-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-world-farming-farm-animal-welfare-in-asia','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to support "work to advance farm animal welfare in Asia. CIWF plans to engage in corporate outreach on poultry welfare and to re-grant funds to farm animal welfare groups throughout Asia."',
