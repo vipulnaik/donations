@@ -41,7 +41,7 @@ if ($val = $row['donor_retrospective']) {
   array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor retrospective of the donation:</strong> %s", trim(cleanNotes($val))));
 }
 $notes_key_val_pairs = array();
-if ($row['amount_original_currency']) {
+if ($row['amount_original_currency'] && !$row['donor_amount_reason']) {
   $val = " donation given as " . (number_format($row['amount_original_currency'], 2) ?? '') . " " . ($row['original_currency'] ?? '');
   if ($row['currency_conversion_date'] || $row['currency_conversion_basis']) {
     $val .= " (conversion done". ($row['currency_conversion_date'] ? " on " . $row['currency_conversion_date'] : '') . ($row['currency_conversion_basis'] ? " via " . $row['currency_conversion_basis'] : '') . ")";
