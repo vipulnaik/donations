@@ -16,6 +16,12 @@ if ($val = $row['donor_donee_reason']) {
 }
 if ($val = $row['donor_amount_reason']) {
   $amountNotes = trim(cleanNotes($val));
+  if ($row['amount_original_currency']) {
+    $amountNotes .= " The donation was given as " . (number_format($row['amount_original_currency'], 2) ?? '') . " " . ($row['original_currency'] ?? '');
+    if ($row['currency_conversion_date'] || $row['currency_conversion_basis']) {
+      $amountNotes .= " (conversion done". ($row['currency_conversion_date'] ? " on " . $row['currency_conversion_date'] : '') . ($row['currency_conversion_basis'] ? " via " . $row['currency_conversion_basis'] : '') . ").";
+    }
+  }
   if ($val2 = $row['fraction']) {
     $amountNotes .= "<br/>" . sprintf("Percentage of total donor spend in the corresponding batch of donations: %.2f", $val2 * 100) . '%';
   }
@@ -35,6 +41,13 @@ if ($val = $row['donor_retrospective']) {
   array_push($notes_pre_key_val_pairs, sprintf("<strong>Donor retrospective of the donation:</strong> %s", trim(cleanNotes($val))));
 }
 $notes_key_val_pairs = array();
+if ($row['amount_original_currency']) {
+  $val = " donation given as " . (number_format($row['amount_original_currency'], 2) ?? '') . " " . ($row['original_currency'] ?? '');
+  if ($row['currency_conversion_date'] || $row['currency_conversion_basis']) {
+    $val .= " (conversion done". ($row['currency_conversion_date'] ? " on " . $row['currency_conversion_date'] : '') . ($row['currency_conversion_basis'] ? " via " . $row['currency_conversion_basis'] : '') . ")";
+  }
+  array_push($notes_key_val_pairs, sprintf("currency info: %s", $val));
+}
 if (($val = $row['intended_funding_timeframe_in_months']) && !($val2 = $row['donor_timing_reason'])) {
   array_push($notes_key_val_pairs, sprintf("intended funding timeframe in months: %s", $val));
 }
