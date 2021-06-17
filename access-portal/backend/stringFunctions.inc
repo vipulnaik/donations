@@ -26,7 +26,7 @@ function printDonationDate($donationDate, $donationDatePrecision, $donationDateB
 function printAmountWithRank($amount, $amountList, $amountOriginalCurrency, $originalCurrency) {
   if ($amountOriginalCurrency && $originalCurrency) {
       $originalCurrStr = ' title="'
-        . number_format($row['amount_original_currency'],2)
+        . number_format($amountOriginalCurrency,2)
         . ' ' . $originalCurrency . '"';
     } else {
       $originalCurrStr = "";
