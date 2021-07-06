@@ -281,18 +281,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ 'EUR',
   /* currency_conversion_basis */ 'donor calculation'),
 
-  ('Open Philanthropy','L214',1432130,'2020-11-01','month','donation log','Animal welfare/factory farming/chicken/cage-free/broiler chicken/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/L214-broiler-chicken-campaigns-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','France','Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','L214',1642046,'2020-11-01','month','donation log','Animal welfare/factory farming/chicken/cage-free/broiler chicken/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/L214-broiler-chicken-campaigns-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','France','Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
   /* donation_process */ 'Based on the grant write-up, evaluation of L214''s progress since the previous grant appears to have been part of the grantmaking process.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support fundraising, professionalization, investigations, and broiler welfare advocacy in France. [...] This funding is intended to support additional welfare campaigns, investigations, and fundraising.',
   /* intended_funding_timeframe_in_months */ 24,
   /* donor_donee_reason */ 'The grant page says: "Since our November 2017 support, L214 has secured broiler welfare and cage-free commitments from a number of major French supermarket chains and companies." The current grant is for continuing and expanding on similar activities.',
-  /* donor_amount_reason */ NULL,
+  /* donor_amount_reason */ 'This is a total across two grants. The grant page initially gave a smaller total of 1,432,130 (1,228,000 EUR) for just one grant, and was updated around June 2021 to be a total of two grants, with the updated amount.',
   /* donor_timing_reason */ 'Reasons for timing are not discussed; the grant happens about one year after the expiration of the previous two-year grant.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL,
-  /* amount_original_currency */ 1228000,
+  /* notes */ 'This is a total across two grants.',
+  /* amount_original_currency */ 1408000,
   /* original_currency */ 'EUR',
   /* currency_conversion_basis */ 'donor calculation');
 
@@ -1279,6 +1279,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Grant made via Textile Exchange.');
+
+/* Grants to Material Innovation Initiative */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Material Innovation Initiative',200000,'2020-11-01','month','donation log','Animal welfare/animal fashion alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/material-innovation-initiative-plant-based-fashion-alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work promoting plant-based alternatives to animal-based fashion. This funding is intended to enable MII to hire a Senior Material Scientist, who will promote alternatives to silk and fur by connecting fashion companies with promising alternatives, providing support to plant-based alternatives start-ups, and working with academic researchers."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Other grants (still in old format) */
 
