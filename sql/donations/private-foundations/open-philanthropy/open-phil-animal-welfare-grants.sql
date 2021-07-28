@@ -1111,6 +1111,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'A later grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rethink-priorities-moral-patienthood-moral-weight-research from Open Phil to Rethink Priorities suggests continued satisfaction with the grantee, though the intended use of funds of the later grant is quite different.',
+  /* notes */ 'This is a total across two grants.'),
+
+  ('Open Philanthropy','Rethink Priorities',315500,'2021-03-01','month','donation log','Animal welfare/moral patienthood/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/rethink-priorities-moral-patienthood-moral-weight-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Luke Muehlhauser|Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The donation process is not explicitly described, but hints are provided. One of the grant investigators is Luke Muehlhauser, who is not usually involved with animal welfare grants, but had previously produced a report https://www.openphilanthropy.org/2017-report-consciousness-and-moral-patienthood on consciousness and moral patienthood that the grant page links to.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research related to moral patienthood and moral weight."',
+  /* intended_funding_timeframe_in_months*/ 24,
+  /* donor_donee_reason */ 'The grant page says: "We believe the research outputs may help us compare future opportunities within farm animal welfare, prioritize across causes, and update our assumptions informing our worldview diversification work." It links to the blog post https://www.openphilanthropy.org/blog/worldview-diversification from 2016.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'This is a total across two grants.');
 
@@ -1309,6 +1321,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Grant made via The Pollination Project.');
+
 /* Other grants (still in old format) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
