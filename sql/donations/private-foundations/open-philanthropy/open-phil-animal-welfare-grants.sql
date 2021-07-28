@@ -1322,6 +1322,48 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Grant made via The Pollination Project.');
 
+/* Grants to AWARE */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Animal Welfare Awareness, Research, and Education',64600,'2020-10-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-welfare-awareness-research-and-education-farm-animal-welfare-work','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','South Korea','Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support its work researching potential farm animal welfare policy reforms in South Korea."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "Approximately 460 million farm animals are alive in South Korea at any given time." This suggests that the scale of factory farming in South Korea is an influencing factor.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to Vegan Women Summit */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Vegan Women Summit',5000,'2020-01-01','month','donation log','Animal welfare/diversity, equity, and inclusion','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/vegan-women-summit-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant for the summit to be held in San Francisco in February 2020. "The summit aims to empower vegan women, particularly women of color, and inspire them to be leaders of the plant-based movement. A portion of the summit’s proceeds will benefit Mercy for Animals."',
+  /* intended_funding_timeframe_in_months */ 1,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Another grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/vegan-women-summit-pitch-competition from Open Phil to Vegan Women Summit later in the year suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Vegan Women Summit',20000,'2020-10-01','month','donation log','Animal welfare/meat alternatives/diversity, equity, and inclusion','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/vegan-women-summit-pitch-competition','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a pitch competition for female founders in the plant- and cell-based space. The Vegan Women Summit aims to use the competition to support early-stage female founders, particularly women of color, by connecting them with investors and publicizing their startups."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Other grants (still in old format) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
