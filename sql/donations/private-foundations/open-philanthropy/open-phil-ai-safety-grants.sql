@@ -187,6 +187,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-security-and-emerging-technology-general-support-august-2021 for a much larger amount suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Center for Security and Emerging Technology',38920000,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-security-and-emerging-technology-general-support-august-2021','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "CSET is a think tank, incubated by our January 2019 support, dedicated to policy analysis at the intersection of national and international security and emerging technologies. This funding is intended to augment our original support for CSET, particularly for its work on security and artificial intelligence."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
@@ -282,17 +294,17 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2021-class (2021) confirms that the program would continue.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','Open Phil AI Fellowship',1000000,'2021-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2021-class','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Collin Burns|Jared Quincy Davis|Jesse Mu|Meena Jagadeesan','Daniel Dewey',NULL,NULL,NULL,NULL,
-  /* donation_process */ 'According to the grant page "These [four] fellows were selected from 397 applicants for their academic excellence, technical knowledge, careful reasoning, and interest in making the long-term, large-scale impacts of AI a central focus of their research."',
+  ('Open Philanthropy','Open Phil AI Fellowship',1300000,'2021-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/open-phil-ai-fellowship-2021-class','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Collin Burns|Jared Quincy Davis|Jesse Mu|Meena Jagadeesan|Tan Zhi-Xuan','Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'According to the grant page "These [five] fellows were selected from 397 applicants for their academic excellence, technical knowledge, careful reasoning, and interest in making the long-term, large-scale impacts of AI a central focus of their research."',
   /* intended_use_of_funds_category */ 'Living expenses during research project',
-  /* intended_use_of_funds */ 'Grant to provide scholarship to foour machine learning researchers over five years',
+  /* intended_use_of_funds */ 'Grant to provide scholarship to five machine learning researchers over five years',
   /* intended_funding_timeframe_in_months */ 60,
   /* donor_donee_reason */ 'According to the grant page: "The intent of the Open Phil AI Fellowship is both to support a small group of promising researchers and to foster a community with a culture of trust, debate, excitement, and intellectual excellence. We plan to host gatherings once or twice per year where fellows can get to know one another, learn about each other’s work, and connect with other researchers who share their interests."',
-  /* donor_amount_reason */ 'An explicit reason for the amount is not specified, and the total amount is lower than previous years, but the amount per researcher ($250,000) is a little higher than previous years. It''s likely that the amount per researcher is determined first and the total amount is the sum of these.',
+  /* donor_amount_reason */ 'An explicit reason for the amount is not specified, and the total amount is lower than previous years, but the amount per researcher ($260,000) is a little higher than previous years. It''s likely that the amount per researcher is determined first and the total amount is the sum of these.',
   /* donor_timing_reason */ 'This is the fourth of annual sets of grants, decided through an annual application process, with the announcement made between April and June each year. The timing may have been chosen to sync with the academic year.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ 'The initial grant page only listed four of the five fellows and an amount of $1,000,000. The fifth fellow, Tan Zhi-Xuan, was added later and the amount was increased to $1,300,000.');
 
 /* Grants to Ought */
 
@@ -630,6 +642,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_donee_reason */ 'The grant page says: "Our potential risks from advanced artificial intelligence team hopes that the research will help advance the field of machine learning security."',
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','University of Tübingen',590000,'2021-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-tubingen-robustness-research-brendel','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Wieland Brendel','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support early-career research by Wieland Brendel on robustness as a means to improve AI safety."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ 'Open Phil made three grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-wagner https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-song https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/mit-adversarial-robustness-research  for "adversarial robustness research" in February 2021, the same month as this grant. It looks like the donor became interested in funding this research topic at this time.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Open Phil made three grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-wagner https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-song https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/mit-adversarial-robustness-research  for "adversarial robustness research" in February 2021, the same month as this grant. It looks like the donor became interested in funding this research topic at this time.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);

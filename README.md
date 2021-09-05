@@ -153,3 +153,17 @@ Donee pages don't have this option, because most donees only work within a singl
 
 The [about page](https://donations.vipulnaik.com/about/) discusses how DLW is built and
 reliability concerns for the data.
+
+## Tips and tricks
+
+### Cache removal
+
+The cache folder contains caches of several pages. Clearing the cache
+for all pages can be tedious and is not generally desired. In order to
+check your updates in the UI, you can just clear cache for specific
+pages. For instance, to clear the cache for `Open Philanthropy`, do
+the following from the repository's root folder:
+
+```bash
+rm access-portal/cache/$(echo -n "/donor.php?donor=Open+Philanthropy" | md5sum | cut -d' ' -f1).html
+```
