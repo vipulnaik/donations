@@ -587,6 +587,54 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ 'GBP',
   /* currency_conversion_basis */ 'donor calculation');
 
+/* Grants to Wakker Dier */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
+  ('Open Philanthropy','Wakker Dier',1180000,'2021-04-01','month','donation log','Animal welfare/factory farming/litigation','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/wakker-dier-faw-litigation','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Netherlands',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support farm animal welfare litigation in the Netherlands, based on violations of European Union directives transposed into Dutch law."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ 'The grant page says: "Our farm animal welfare team believes that successful litigation could encourage large-scale reforms to and enforcement of key European Union farm animal welfare policies."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* Amount_original_currency */ 1000000,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation');
+
+/* Grants to Dao Foods */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
+  ('Open Philanthropy','Dao Foods',215000,'2020-01-01','month','donation log','Animal welfare/meat alternatives/plant-based meat','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/dao-foods-plant-based-startup-incubator','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant page says: "This project was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to launch a plant-based startup incubator in China. Dao Foods is a Chinese-led impact investment firm that supports entrepreneurs who seek to develop meat alternatives."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy','Dao Foods',1100000,'2021-03-01','month','donation log','Animal welfare/meat alternatives/plant-based meat','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/dao-foods-plant-based-meat-promotion','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Asia',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support work promoting plant-based meat in Asia."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The grant is via Rethink Charity.',
+  /* is_contractwork */ 0);
+
+
 /* Cause area normalization not done from this point onward */
 
 /* Grants to Farm Forward */
@@ -1364,6 +1412,34 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Contract work grants for individuals */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
+  ('Open Philanthropy','Cynthia Schuck & Wladimir Alonso',96130,'2018-02-01','month','donation log','Animal welfare/factory farming/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/cynthia-schuck-wladimir-alonso-daly-project','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Cynthia Schuck|Wladimir Alonso','Lewis Bollard','2018-05-17','day',NULL,NULL,
+  /* donation_process */ 'The grant page says the grant "was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to develop a model for evaluating disability-adjusted life year (DALY) impacts of animal welfare reforms. This six-month pilot project will focus on the impact of various potential welfare reforms for pigs, including banning crates or mutilations and requiring indoor enrichment or outdoor access. If successful, the project could be expanded to analyze the DALY impact of other welfare reforms for other farmed species."',
+  /* intended_funding_timeframe_in_months */ 6,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy','Krystal Caldwell & Sydney Heiss',156781,'2020-01-01','month','donation log','Animal welfare/meat alternatives/plant-based meat/factoring farming/fish/consumer preferences','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/krystal-caldwell-and-sydney-heiss-farm-animal-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Krystal Caldwell|Sydney Heiss','Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant page says the grant "was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "The funding will support research projects on consumer preferences for plant-based foods, consumer attitudes toward fish welfare, and questions about the comparative moral status of different species."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1);
 /* Other grants (still in old format) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
@@ -1427,5 +1503,4 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','Jeanne Marchig International Centre for Animal Welfare Education',368188,'2019-02-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/jeanne-marchig-centre-farm-animal-welfare-advocacy-china-2019','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant of £277,000 ($368,188.40 at time of conversion) over two years to the Jeanne Marchig International Centre for Animal Welfare Education at the University of Edinburgh to support its work to improve farm animal welfare in China. The Centre plans to use these funds to continue hosting workshops for Chinese pig and poultry producers and to fund a promising Chinese farm animal welfare PhD to study at Edinburgh. Follows the March 2017 grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/jeanne-marchig-centre-farm-animal-welfare-advocacy-china','China','Lewis Bollard','2019-04-02','day',NULL,NULL);
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, is_contractwork) values
-  ('Open Philanthropy','Cynthia Schuck & Wladimir Alonso',96130,'2018-02-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/cynthia-schuck-wladimir-alonso-daly-project','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant to develop a model for evaluating disability-adjusted life year (DALY) impacts of animal welfare reforms. This six-month pilot project will focus on the impact of various potential welfare reforms for pigs, including banning crates or mutilations and requiring indoor enrichment or outdoor access. If successful, the project could be expanded to analyze the DALY impact of other welfare reforms for other farmed species.',NULL,'Lewis Bollard','2018-05-17','day',NULL,NULL,1),
   ('Open Philanthropy','Changing Tastes',50000,'2018-04-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/changing-tastes-market-insights-business-engagement-fish-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant to conduct research on attitudes about humane production of fish and seafood among U.S. restaurant and supply chain decision-makers and consumers. Changing Tastes, a food consultancy, intends to conduct surveys to identify current marketplace recognition of humane production and disseminate the results via trade conferences and media. Legally structured as contract work, but conceptually considered similar to a grant, hence reported in the grants database','United States','Lewis Bollard','2018-07-12','day',NULL,NULL,1);

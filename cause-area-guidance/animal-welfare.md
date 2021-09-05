@@ -103,6 +103,16 @@ sometimes to other poultry. Typical interventions involve early sex
 selection so that the egg can be destroyed early enough (sex-selective
 abortion).
 
+## Subcauses within meat alternatives
+
+### Plant-based meat
+
+Possible slug(s): `Animal welfare/meat alternatives/plant-based meat`
+
+### Cellular agriculture
+
+Possible slug(s): `Animal welfare/meat alternatives/cellular agriculture`
+
 ## Subcauses based on mechanism of influence
 
 The mechanism of influence goes at the end of the cause area string.
@@ -127,3 +137,7 @@ they own, and/or impose standards on their suppliers.
 Legislative campaigns are targeted at creating, modifying, or
 repealing legislations related to animal welfare.
 
+### Litigation
+
+Litigation is a strategy of bringing cases to court related to
+violation of existing laws.
