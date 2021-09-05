@@ -702,6 +702,33 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL,
   /* is_contractwork */ 1);
 
+/* Grants to Crate-Free Illinois */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Crate-Free Illinois',94720,'2019-08-01','month','donation log','Animal welfare/factory farming/pig/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/crate-free-illinois-campaigning-against-gestation-crates','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United Stattes','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support campaigning against the use of gestation crates for pigs. There are approximately 6 million sows in the United States, at least three-quarters of which are routinely confined in gestation crates."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page hints at scale being a factor: "There are approximately 6 million sows in the United States, at least three-quarters of which are routinely confined in gestation crates."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'A followup grant for the same intended use https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/crate-free-illinois-campaigning-against-gestation-crates-2021 suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Crate-Free Illinois',70350,'2021-02-01','month','donation log','Animal welfare/factory farming/pig/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/crate-free-illinois-campaigning-against-gestation-crates-2021','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support campaigning against the use of gestation crates for pigs. There are approximately 6 million sows in the United States, at least three-quarters of which are routinely confined in gestation crates."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page hints at scale being a factor: "There are approximately 6 million sows in the United States, at least three-quarters of which are routinely confined in gestation crates."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Cause area normalization not done from this point onward */
 
 /* Grants to Farm Forward */
