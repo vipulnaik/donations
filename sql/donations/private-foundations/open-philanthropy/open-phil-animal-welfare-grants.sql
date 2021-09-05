@@ -634,6 +634,73 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ 'The grant is via Rethink Charity.',
   /* is_contractwork */ 0);
 
+/* Grants to FAI Farms */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
+  ('Open Philanthropy','FAI Farms',426000,'2019-04-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-tilapia-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-06-07','day',NULL,NULL,
+  /* donation_process */ 'The grant page says: "This project was supported through a contractor agreement. While we do not typically publish pages for contractor agreements, we chose to write about this funding because we view it as conceptually similar to an ordinary grant, despite its structure as a contract due to the recipient’s organizational form."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to develop welfare measures, best practice guidelines, and training materials to improve the welfare of farmed tilapia. FAI plans to research optimal stocking density, humane transport and slaughter methods, ways to minimize handling stress, and alternatives to mouth clipping of territorial male tilapia"',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy','FAI Farms',107200,'2019-04-01','month','donation log','Animal welfare/factory farming/chicken/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-cage-free-eggs-china','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Lewis Bollard','2019-06-07','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant made via the Open Philanthropy Action Fund. The grant page says: "This project was supported through a contractor agreement. While we do not typically publish pages for contractor agreements, we chose to write about this funding because we view it as conceptually similar to an ordinary grant, despite its structure as a contract due to the recipient’s organizational form."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support Chinese farm animal welfare auditor trainings, egg farm audits, and a cage-free conference. These projects will promote cage-free production in China, the world’s largest egg producer, and aim to reduce the suffering of egg-laying hens."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The later grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-promoting-poultry-welfare-cage-free-eggs-china for very similarr work, as well as more grants in the coming years, suggest continued satisfaction with the grantee.',
+  /* notes */ NULL,
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy','FAI Farms',132400,'2019-09-01','month','donation log','Animal welfare/factory farming/chicken/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-promoting-poultry-welfare-cage-free-eggs-china','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant page says: "This project was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support events promoting poultry welfare and cage-free egg production in China. The events include a summit for food companies and producers, a poultry welfare conference in partnership with the China Animal Health and Food Safety Innovation Alliance, and a technical seminar promoting cage-free production."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Later grants such as https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-cage-free-egg-investigation for similar work suggests continued satisfaction with the grantee.',
+  /* notes */ NULL,
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy','FAI Farms',105000,'2020-01-01','month','donation log','Animal welfare/factory farming/chicken/layer chicken/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-cage-free-egg-investigation','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant page says: "This project was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support its work launching a cage-free egg certification project in partnership with the China Chain Store and Franchise Association. The project’s aim is to develop a large-scale production and certification model for cage-free eggs in China, the world’s largest egg producer."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'No explicit reason is given, but the grant page hints at the scale of the problem being addressed: "The project’s aim is to develop a large-scale production and certification model for cage-free eggs in China, the world’s largest egg producer." Open Philanthropy has previously explained its support for cage-free campaigns at https://www.openphilanthropy.org/blog/initial-grants-support-corporate-cage-free-reforms and in other blog posts.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-cage-free-egg-certification-and-summit for continuation and scaling up of the work suggest that Open Philanthropy would be satisfied with the outcome of the grant.',
+  /* notes */ NULL,
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy','FAI Farms',600000,'2021-03-01','month','donation log','Animal welfare/factory farming/chicken/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-cage-free-egg-certification-and-summit','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This grant appears to be a result of successful progress funded by a previous grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-cage-free-egg-investigation to launch a cage-free egg certification project. Also, the grant page says: "This project was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support cage-free certification work — in partnership with the China Chain Store and Franchise Association — and a summit promoting poultry welfare and cage-free egg production. The certification project’s aim is to develop a large-scale production and certification model for cage-free eggs in China, the world’s largest egg producer."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'No explicit reason is given, but the grant page hints at the scale of the problem being addressed: "The certification project’s aim is to develop a large-scale production and certification model for cage-free eggs in China, the world’s largest egg producer." Open Philanthropy has previously explained its support for cage-free campaigns at https://www.openphilanthropy.org/blog/initial-grants-support-corporate-cage-free-reforms and in other blog posts.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1);
 
 /* Cause area normalization not done from this point onward */
 
@@ -675,35 +742,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ 'There will be no next donation; this is an exit grant',
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
-
-/* Grants to FAI Farms */
-
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
-  ('Open Philanthropy','FAI Farms',426000,'2019-04-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-tilapia-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-06-07','day',NULL,NULL,
-  /* donation_process */ 'The grant page says: "This project was supported through a contractor agreement. While we do not typically publish pages for contractor agreements, we chose to write about this funding because we view it as conceptually similar to an ordinary grant, despite its structure as a contract due to the recipient’s organizational form."',
-  /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant "to develop welfare measures, best practice guidelines, and training materials to improve the welfare of farmed tilapia. FAI plans to research optimal stocking density, humane transport and slaughter methods, ways to minimize handling stress, and alternatives to mouth clipping of territorial male tilapia"',
-  /* intended_funding_timeframe_in_months */ 24,
-  /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL,
-  /* is_contractwork */ 1),
-
-  ('Open Philanthropy','FAI Farms',107200,'2019-04-01','month','donation log','Animal welfare/factory farming/chicken/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fai-farms-cage-free-eggs-china','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Lewis Bollard','2019-06-07','day',NULL,NULL,
-  /* donation_process */ 'Discretionary grant made via the Open Philanthropy Action Fund. The grant page says: "This project was supported through a contractor agreement. While we do not typically publish pages for contractor agreements, we chose to write about this funding because we view it as conceptually similar to an ordinary grant, despite its structure as a contract due to the recipient’s organizational form."',
-  /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant "to support Chinese farm animal welfare auditor trainings, egg farm audits, and a cage-free conference. These projects will promote cage-free production in China, the world’s largest egg producer, and aim to reduce the suffering of egg-laying hens."',
-  /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL,
-  /* is_contractwork */ 1);
 
 /* Grants to Family Farm Action */
 
