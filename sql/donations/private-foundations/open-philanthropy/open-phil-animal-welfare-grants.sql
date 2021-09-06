@@ -768,6 +768,117 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Fórum Nacional de Proteção e Defesa Animal */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Fórum Nacional de Proteção e Defesa Animal',100000,'2016-10-01','month','donation log','Animal welfare/factory farming/chicken/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/forum-nacional-de-protecao-e-defesa-animal-international-cage-free-advocacy','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Brazil','Lewis Bollard','2016-11-07','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/VU5R-_Kp_SU',NULL,
+  /* donation_process */ 'The grantee submitted a grant proposal, available at https://www.openphilanthropy.org/files/Grants/FNDPA/FNPDA_Grant_proposal_edited_Jul_16.pdf',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support [grantee''s] work to end the confinement of hens in battery cages." The grant proposal https://www.openphilanthropy.org/files/Grants/FNDPA/FNPDA_Grant_proposal_edited_Jul_16.pdf says: "In 2016, we plan to launch various campaigns targeting – one by one – the largest food retailers in Brazil. We will carry out investigations and these  campaigns will have online petitions, ongoing efforts to get media attention, direct outreach to the senior leadership and a direct action in front of one of their stores, creating a good photo opportunity for media attention."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'No reasons specific to the grantee are listed, but https://www.openphilanthropy.org/blog/initial-grants-support-corporate-cage-free-reforms lists several reasons for the general focus on cage-free reforms, and http://www.huffingtonpost.com/entry/chickens-animal-abuse-video_us_57fac5c5e4b0e655eab5485d describes the reasons for the internationalization phase.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing matches the timing of other grants in this second phase (internationalization) of corporate cage-free campaign spending.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Followup grants https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/forum-nacional-de-protecao-e-defesa-animal-crate-and-cage-free-campaigning-in-brazil and https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/forum-nacional-de-protecao-e-defesa-animal-crate-and-cage-free-campaigning-in-brazil-2020 suggest continued satisfaction with the grantee. The first of these says of the grantee''s progress: "FNPDA has played a role in securing crate-free pledges from Brazil’s four largest pork producers and cage-free pledges from 26 Brazilian food companies"',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Fórum Nacional de Proteção e Defesa Animal',200000,'2018-08-01','month','donation log','Animal welfare/factory farming/chicken/layer chicken/pig/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/forum-nacional-de-protecao-e-defesa-animal-crate-and-cage-free-campaigning-in-brazil','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Brazil','Lewis Bollard','2018-09-27','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "for campaigning to reduce the use of battery cages for layer hens and gestation crates for pigs in Brazil." [Grantee] intends to use these funds to continue its corporate campaigns, to start a tracker of corporate implementation of cage-free pledges, and to host a conference with egg producers, food companies, scientists, and activists to discuss implementation."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'No explicit reasons are provided, but the grant page suggests satisfaction with the grantee''s progress after the previous grant, and with their intended use of the funds for this grant.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The timing is likely determined by the previous two-year grant reaching its end.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/forum-nacional-de-protecao-e-defesa-animal-crate-and-cage-free-campaigning-in-brazil-2020 suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Fórum Nacional de Proteção e Defesa Animal',100000,'2020-12-01','month','donation log','Animal welfare/factory farming/chicken/layer chicken/pig/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/forum-nacional-de-protecao-e-defesa-animal-crate-and-cage-free-campaigning-in-brazil-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Brazil','Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work campaigning to reduce the use of battery cages for layer hens and gestation crates for pigs in Brazil."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The timing is likely determined by the previous two-year grant reaching its end.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospecttive */ NULL,
+  /* notes */ NULL);
+
+/* Grants to Animal Friends Jogja */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Animal Friends Jogja',78000,'2020-12-01','month','donation log','Animal welfare/factory farming/chicken/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-friends-jogja','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Indonesia','Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support its farm animal welfare work in Indonesia. This cooperation agreement will support Animal Friend Jogja’s animal welfare investigations, as well as its corporate campaigns and lobbying efforts promoting poultry and fish welfare."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to Group Nine Media */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Group Nine Media',215000,'2019-07-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/group-nine-media-videos','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is to "to produce videos on factory farming topics. These videos could cover farm animal welfare campaigns, legislation, regulations, and ballot measures; profile effective groups and political leaders working on farm animal welfare issues; investigate whether food companies are honoring pledges; and explain the mental capacity of farm animals and environmental impacts of factory farming."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Group Nine Media',680448,'2020-07-01','month','donation log','Animal welfare/factory farming/chicken/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/group-nine-media-factory-farming-videos-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to continue to produce videos on factory farming topics. These videos could cover farm animal welfare campaigns, the welfare of chicken, fish, and other animals, and other relevant topics."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "Our farm animal welfare team believes that the videos could increase the salience of farm animal welfare issues among the public."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to VegeProject */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','VegeProject',102400,'2020-07-01','month','donation log','Animal welfare/diet change','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/vegeproject-corporate-outreach','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Japan','Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support its work conducting corporate outreach to increase the availability of plant-based food in Japan."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to Dharma Voices for Animals */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Dharma Voices for Animals',150000,'2020-07-01','month','donation log','Animal welfare/factory farming/legislative change','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/dharma-voices-for-animals-farm-animal-welfare-legislation','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Sri Lanka','Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to Dharma Voices for Animals, a Buddhist animal welfare organization, to support its work advocating for farm animal welfare legislation in Sri Lanka."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Contract work grants for individuals */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
@@ -1551,7 +1662,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','Green Monday',226000,'2016-11-01','month','donation log','Animal welfare/factory farming/China','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/green-monday-promoting-work-china','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Part of a China focus strategy announced by Lewis Bollard at https://www.facebook.com/groups/EffectiveAnimalActivism/permalink/656583861179155/ (2016-10-25) and explained in depth in a document https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/grants-support-farm-animal-welfare-work-china announced at https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/ngrjni1iKLg (2017-08-09)','United States','Lewis Bollard', '2017-01-10', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/uG8PJ4hjgZ4','https://predictionbook.com/predictions/185241|https://predictionbook.com/predictions/185272'),
   ('Open Philanthropy','The Humane Society of the United States',1000000,'2016-11-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-united-states-new-broiler-welfare-corporate-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Part of a strategy focus on broiler chicken welfare in late 2016, though no overarching document on this has been posted. See also https://www.facebook.com/groups/EffectiveAnimalActivism/search/?query=broiler%20chicken','United States','Lewis Bollard', '2016-12-15', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/ES379jbVyno',NULL),
   ('Open Philanthropy','Humane Society International',1000000,'2016-08-01','month','donation log','Animal welfare/factory farming/chicken/cage-free campaign/international','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-society-international-international-cage-free-outreach','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Second phase (focused on internationalization) of a bunch of corporate cage-free campaign spending. See https://www.openphilanthropy.org/blog/initial-grants-support-corporate-cage-free-reforms for description of overall cage-free effort and see http://www.huffingtonpost.com/entry/chickens-animal-abuse-video_us_57fac5c5e4b0e655eab5485d for description of internationalization phase',NULL,'Lewis Bollard', '2016-10-03', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/_3Hvn7jMnuw',NULL),
-  ('Open Philanthropy','Fórum Nacional de Proteção e Defesa Animal',100000,'2016-10-01','month','donation log','Animal welfare/factory farming/chicken/cage-free campaign/international/Brazil','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/forum-nacional-de-protecao-e-defesa-animal-international-cage-free-advocacy','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Second phase (focused on internationalization) of a bunch of corporate cage-free campaign spending. See https://www.openphilanthropy.org/blog/initial-grants-support-corporate-cage-free-reforms for description of overall cage-free effort and see http://www.huffingtonpost.com/entry/chickens-animal-abuse-video_us_57fac5c5e4b0e655eab5485d for description of internationalization phase','Brazil','Lewis Bollard', '2016-11-07', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/VU5R-_Kp_SU',NULL),
   ('Open Philanthropy','People for Animals',89392,'2016-08-01','month','donation log','Animal welfare/factory farming/chicken/cage-free campaign/international/India','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/people-animals-international-cage-free-advocacy','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Second phase (focused on internationalization) of a bunch of corporate cage-free campaign spending. See https://www.openphilanthropy.org/blog/initial-grants-support-corporate-cage-free-reforms for description of overall cage-free effort and see http://www.huffingtonpost.com/entry/chickens-animal-abuse-video_us_57fac5c5e4b0e655eab5485d for description of internationalization phase. Followup conversation with Gauri Mulekhi of grantee organization at https://www.openphilanthropy.org/sites/default/files/Gauri_Maulekhi_02-06-17_%28public%29.pdf on 2017-02-06','India','Lewis Bollard', '2016-10-03', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/_3Hvn7jMnuw',NULL),
   ('Open Philanthropy','Brighter Green',99360,'2016-09-01','month','donation log','Animal welfare/factory farming/China','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/brighter-green-farm-animal-welfare-advocacy-china','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Part of a China focus strategy announced by Lewis Bollard at https://www.facebook.com/groups/EffectiveAnimalActivism/permalink/656583861179155/ (2016-10-25) and explained in depth in a document https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/grants-support-farm-animal-welfare-work-china announced at https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/ngrjni1iKLg (2017-08-09)','China','Lewis Bollard', '2016-10-11', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/gjHNdmQGrqY','https://predictionbook.com/predictions/185275|https://predictionbook.com/predictions/185276'),
   ('Open Philanthropy','The Good Food Institute',1000000,'2016-09-01','month','donation log','Animal welfare/meat alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/good-food-institute-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,NULL,'Lewis Bollard', '2016-10-25', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/3WToQ3iZkGg',NULL),
@@ -1594,7 +1704,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','Charity Science',265000,'2018-07-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/charity-science-development-of-new-animal-welfare-charities','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant to support the creation of new animal welfare charities through the Charity Entrepreneurship project. Charity Science plans to use these funds to review potential farm animal welfare interventions and incubate 3-5 new animal welfare charities, including the development of first-year plans, a training program teaching key skills, and ongoing assistance to the founders. Charity Science hopes the new groups will be able to secure ongoing funding to continue operations beyond the incubation period.',NULL,'Lewis Bollard','2018-07-26','day',NULL,NULL),
   ('Open Philanthropy','Griffith University',100000,'2018-08-01','month','donation log','Animal welfare/factory farming/China','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/griffith-university-farm-animal-welfare-advocacy-china-2018','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant to support a symposium on farm animal welfare in China in 2019 to be organized by Professor Deborah Cao, an expert on Chinese animal law, and to support Professor Cao’s work on a new book, in Chinese, about farm animal welfare. This renews the December 2016 grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/griffith-university-farm-animal-welfare-advocacy-china','China','Lewis Bollard','2018-09-01','day',NULL,NULL),
   ('Open Philanthropy','Plant Based Foods Association',250000,'2018-08-01','month','donation log','Animal welfare/factory farming/meat alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/plant-based-foods-association-state-level-policy-advocacy-against-threats-to-the-plant-based-sector','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant for state-level policy advocacy against threats to the plant-based food sector. PBFA plans to use these funds to monitor, analyze, and, when necessary, oppose attempts to create policies that undermine plant-based alternatives to animal products.','United States','Lewis Bollard','2018-09-01','day',NULL,NULL),
-  ('Open Philanthropy','Fórum Nacional de Proteção e Defesa Animal',200000,'2018-08-01','month','donation log','Animal welfare/factory farming/chicken/pig/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/forum-nacional-de-protecao-e-defesa-animal-crate-and-cage-free-campaigning-in-brazil','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years for campaigning to reduce the use of battery cages for layer hens and gestation crates for pigs in Brazil. FNPDA has played a role in securing crate-free pledges from Brazil’s four largest pork producers and cage-free pledges from 26 Brazilian food companies, and intends to use these funds to continue its corporate campaigns, to start a tracker of corporate implementation of cage-free pledges, and to host a conference with egg producers, food companies, scientists, and activists to discuss implementation. Renewal of October 2016 grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/forum-nacional-de-protecao-e-defesa-animal-international-cage-free-advocacy','Brazil','Lewis Bollard','2018-09-28','day',NULL,NULL),
   ('Open Philanthropy','Eurogroup For Animals',990000,'2018-09-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/eurogroup-animals-fish-welfare-2018','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant of €853,415 (approximately $990,000 at the time of conversion) over two years to Eurogroup for Animals to continue and expand its fish welfare advocacy. This will allow Eurogroup for Animals to continue and expand its EU-level political advocacy, its support of its member groups’ advocacy in member states, and its support for corporate reforms and increased research funding on fish welfare.',NULL,'Lewis Bollard','2018-10-05','day',NULL,NULL),
   ('Open Philanthropy','Prevent Cruelty California',4000000,'2018-10-01','month','donation log','Animal welfare/factory farming/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/prevent-cruelty-california-prop-12','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant made by the Open Philanthropy Action Fund. Grantee is a coalition of veterinarians, animal shelters, farmworkers, food safety groups, and animal protection charities advocating for Proposition 12. Prop 12, which will appear on California’s general election ballot this November, would require cage-free housing and improve space requirements in California for veal calves, pigs, and egg-laying hens, and would ensure that veal, pork, and eggs sold in California come from operations meeting these standards.','United States','Lewis Bollard','2018-10-05','day',NULL,NULL),
   ('Open Philanthropy','Better Eating International',12690,'2018-09-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/better-eating-international-organizational-development','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant for organizational development, follows February 2018 grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/better-eating-international-millenial-vegan-survey','United States','Lewis Bollard','2018-10-20','day',NULL,NULL),
