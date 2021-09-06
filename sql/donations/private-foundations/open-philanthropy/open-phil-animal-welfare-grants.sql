@@ -705,7 +705,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 /* Grants to Crate-Free Illinois */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Crate-Free Illinois',94720,'2019-08-01','month','donation log','Animal welfare/factory farming/pig/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/crate-free-illinois-campaigning-against-gestation-crates','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United Stattes','Lewis Bollard',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Crate-Free Illinois',94720,'2019-08-01','month','donation log','Animal welfare/factory farming/pig/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/crate-free-illinois-campaigning-against-gestation-crates','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page says the grant is "to support campaigning against the use of gestation crates for pigs. There are approximately 6 million sows in the United States, at least three-quarters of which are routinely confined in gestation crates."',
@@ -894,6 +894,25 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to World of Good */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork, amount_original_currency, original_currency, currency_conversion_basis) values
+  ('Open Philanthropy','World of Good',10178,'2020-06-01','month','donation log','Animal welfare/factory farming/legislative change','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/world-of-good-research-on-farm-animal-welfare-legislation','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Asia','Michelle Sinclair','Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to World of Good to support research led by Michelle Sinclair on possible farm animal welfare legislation in Asia. This funding is intended to enable Sinclair and a research assistant to conduct field studies in Asia."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1,
+  /* amount_original_currency */ 14765,
+  /* original_currency */ 'AUD',
+  /* currency_conversion_basis */ 'donor calculation');
+
 /* Contract work grants for individuals */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
@@ -922,6 +941,48 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL,
   /* is_contractwork */ 1);
+
+/* Grants to Food Frontier */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Food Frontier',100000,'2018-10-01','month','donation log','Animal welfare/factory farming/meat alternatives/plant-based meat','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/food-frontier-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Australia|New Zealand','Lewis Bollard','2018-11-26','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "Food Frontier is an Australian organization promoting plant-based meat alternatives, and will explore opportunities for Australia and New Zealand to supply the Asia-Pacific region with alternative proteins."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Food Frontier',200000,'2020-06-01','month','donation log','Animal welfare/factory farming/meat alternatives/plant-based meat','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/food-frontier-plant-based-meat-alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intendeed_use_of_funds */ 'The grant page says the grant is "to Food Frontier to support work to develop and promote plant-based meat alternatives in the Asia-Pacific region."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to CAF America */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','CAF America',130670,'2020-06-01','month','donation log','Animal welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/caf-america-farm-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Guo Peng','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support the work of Shandong University Professor Guo Peng, a leading animal protection scholar in China. Professor Peng plans to use these funds to expand the research work of the Centre for Animal Protection Studies of Shandong University and host an expanded Annual National Academic Conferences on Animal Studies."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Cause area normalization not done from this point onward */
 
@@ -1723,7 +1784,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','Prevent Cruelty California',4000000,'2018-10-01','month','donation log','Animal welfare/factory farming/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/prevent-cruelty-california-prop-12','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant made by the Open Philanthropy Action Fund. Grantee is a coalition of veterinarians, animal shelters, farmworkers, food safety groups, and animal protection charities advocating for Proposition 12. Prop 12, which will appear on California’s general election ballot this November, would require cage-free housing and improve space requirements in California for veal calves, pigs, and egg-laying hens, and would ensure that veal, pork, and eggs sold in California come from operations meeting these standards.','United States','Lewis Bollard','2018-10-05','day',NULL,NULL),
   ('Open Philanthropy','Better Eating International',12690,'2018-09-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/better-eating-international-organizational-development','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant for organizational development, follows February 2018 grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/better-eating-international-millenial-vegan-survey','United States','Lewis Bollard','2018-10-20','day',NULL,NULL),
   ('Open Philanthropy','Oxford Uehiro Centre for Practical Ethics',6683,'2018-10-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/oxford-uehiro-centre-for-practical-ethics-animal-sentience-workshop','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant of £5,217 ($6,683 at the time of conversion) to host a workshop on animal sentience. The one-day workshop aimed at academics and policymakers will include presentations of new science on animal sentience, including in fish and invertebrates, as well as discussions of the ethical and policy implications of those findings.',NULL,'Lewis Bollard','2018-10-20','day',NULL,NULL),
-  ('Open Philanthropy','Food Frontier',100000,'2018-10-01','month','donation log','Animal welfare/factory farming/meat alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/food-frontier-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant for general support. Grantee is an Australian organization promoting plant-based meat alternatives, and will explore opportunities for Australia and New Zealand to supply the Asia-Pacific region with alternative proteins.','Australia|New Zealand','Lewis Bollard','2018-11-27','day',NULL,NULL),
   ('Open Philanthropy','Chinese Animal Welfare Institute',1489201,'2018-11-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-welfare-standards-project-chinese-animal-welfare-institute','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant of $2,064,034 AUD (approximately $1,489,201 US at the time of conversion; this amount may be adjusted based on future exchange rates) over three years to the Animal Welfare Standards Project (AWSP) to create an animal welfare-focused institute, to be called the Sino-Australian Animal Welfare Centre, within China. Specifically, AWSP intends to use these funds to open a central hub in Beijing, in liaison with the China Agricultural University, to focus on attitudes, motivations, engagement, and outreach on animal welfare. AWSP will be collaborating with other institutes around China to build animal welfare capacities across the region and hopes these institutes will help develop Chinese animal welfare subject matter experts. The grant renews https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-welfare-standards-project-farm-animal-welfare-advocacy-china (December 2016 support); general discussion of the thinking behind these grants is at https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/grants-support-farm-animal-welfare-work-china','China','Lewis Bollard','2018-12-15','day',NULL,NULL),
   ('Open Philanthropy','Otwarte Klatki',10350,'2018-10-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/otwarte-klatki-care-conference-travel-grants','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant to make it possible for Eastern European farm animal advocates to attend the Conference on Animal Rights (CARE) in Europe in Prague in October. Follows previous grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/otwarte-klatki-chicken-welfare-campaigns-poland-ukraine to Otwarte Klatki',NULL,'Lewis Bollard','2019-01-31','day',NULL,NULL),
   ('Open Philanthropy','University of California, Berkeley',131579,'2019-01-01','month','donation log','Animal welfare/factory farming/meat alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/uc-berkeley-alternate-meats-lab','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant to support the Alternative Meats Lab, housed at The Sutardja Center for Entrepreneurship and Technology. The lab is the outgrowth of a class on developing animal product alternatives. This grant may help spur new startups developing alternatives to animal products, and could help build the talent pipeline for existing startups working in this space.',NULL,'Lewis Bollard','2019-02-22','day',NULL,NULL),
