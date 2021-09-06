@@ -729,6 +729,74 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants related to talent pipeline */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','University of Edinburgh',102041,'2018-10-01','month','donation log','Animal welfare/talent pipeline','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/university-of-edinburgh-scholarship-program-in-applied-animal-behavior-and-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,NULL,'Lewis Bollard','2018-11-26','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to provide scholarships for three African veterinarians or animal scientists to complete the Masters program in Applied Animal Behaviour and Animal Welfare."',
+  /* intended_funding_timeframe_in_months */ 12,
+  /* donor_donee_reason */ 'The grant page says: "We see this grant as largely devoted to building a talent pipeline for farm animal welfare research in Africa, which could account for a large number of new farm animals in the next 50 years."',
+  /* donor_amount_reason */ 'The amount was likely determined by the cost of a masters degree at the University of Edinburgh.',
+  /* donor_timing_reason */ 'Open Philanthropy seems to have become interested in the idea of developing a "talent pipeline" around this time; another grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/university-of-british-columbia-research-pig-welfare-china would be made about a month later.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','University of British Columbia',50186,'2018-11-01','month','donation log','Animal welfare/factory farming/pig/talent pipeline','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/university-of-british-columbia-research-pig-welfare-china','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Maria Chen','Lewis Bollard','2018-12-11','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to enable animal welfare science student Maria Chen to produce a Masters thesis on pig welfare in China. Her planned research could identify reform opportunities on mid-sized pig farms."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "We see this grant as largely devoted to building a talent pipeline for farm animal welfare research in China."',
+  /* donor_amount_reason */ 'The amount was likely determined by the cost of a masters degree at the University of British Columbia.',
+  /* donor_timing_reason */ 'Open Philanthropy seems to have become interested in the idea of developing a "talent pipeline" around this time; another grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/university-of-british-columbia-research-pig-welfare-china would be made about a month later.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Mount Kenya University',167766,'2021-01-01','month','donation log','Animal welfare/factory farming/talent pipeline','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/mount-kenya-university','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Kenya','Maina Ngotho','Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to support the implementation of a masters degree program in farm animal welfare science, led by Professor Maina Ngotho. [...] This funding is intended to cover costs related to course resources and student research projects.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "Our farm animal welfare team believes that the program will help develop farm animal welfare expertise and capacity in Kenya and across Africa." Open Philanthropy has previously made grants to support a talent pipeline, but past grants were to UK universities to support masters students in existing programs; this grant supports the creation of a new program.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Contract work grants for individuals */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
+  ('Open Philanthropy','Cynthia Schuck & Wladimir Alonso',96130,'2018-02-01','month','donation log','Animal welfare/factory farming/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/cynthia-schuck-wladimir-alonso-daly-project','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Cynthia Schuck|Wladimir Alonso','Lewis Bollard','2018-05-17','day',NULL,NULL,
+  /* donation_process */ 'The grant page says the grant "was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to develop a model for evaluating disability-adjusted life year (DALY) impacts of animal welfare reforms. This six-month pilot project will focus on the impact of various potential welfare reforms for pigs, including banning crates or mutilations and requiring indoor enrichment or outdoor access. If successful, the project could be expanded to analyze the DALY impact of other welfare reforms for other farmed species."',
+  /* intended_funding_timeframe_in_months */ 6,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy','Krystal Caldwell & Sydney Heiss',156781,'2020-01-01','month','donation log','Animal welfare/meat alternatives/plant-based meat/factoring farming/fish/consumer preferences','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/krystal-caldwell-and-sydney-heiss-farm-animal-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Krystal Caldwell|Sydney Heiss','Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant page says the grant "was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "The funding will support research projects on consumer preferences for plant-based foods, consumer attitudes toward fish welfare, and questions about the comparative moral status of different species."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1);
+
 /* Cause area normalization not done from this point onward */
 
 /* Grants to Farm Forward */
@@ -1477,34 +1545,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
-/* Contract work grants for individuals */
-
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
-  ('Open Philanthropy','Cynthia Schuck & Wladimir Alonso',96130,'2018-02-01','month','donation log','Animal welfare/factory farming/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/cynthia-schuck-wladimir-alonso-daly-project','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Cynthia Schuck|Wladimir Alonso','Lewis Bollard','2018-05-17','day',NULL,NULL,
-  /* donation_process */ 'The grant page says the grant "was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
-  /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'The grant page says the grant is "to develop a model for evaluating disability-adjusted life year (DALY) impacts of animal welfare reforms. This six-month pilot project will focus on the impact of various potential welfare reforms for pigs, including banning crates or mutilations and requiring indoor enrichment or outdoor access. If successful, the project could be expanded to analyze the DALY impact of other welfare reforms for other farmed species."',
-  /* intended_funding_timeframe_in_months */ 6,
-  /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL,
-  /* is_contractwork */ 1),
-
-  ('Open Philanthropy','Krystal Caldwell & Sydney Heiss',156781,'2020-01-01','month','donation log','Animal welfare/meat alternatives/plant-based meat/factoring farming/fish/consumer preferences','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/krystal-caldwell-and-sydney-heiss-farm-animal-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Krystal Caldwell|Sydney Heiss','Amanda Hungerford',NULL,NULL,NULL,NULL,
-  /* donation_process */ 'The grant page says the grant "was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
-  /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'The grant page says: "The funding will support research projects on consumer preferences for plant-based foods, consumer attitudes toward fish welfare, and questions about the comparative moral status of different species."',
-  /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL,
-  /* is_contractwork */ 1);
 /* Other grants (still in old format) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
@@ -1560,8 +1600,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','Better Eating International',12690,'2018-09-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/better-eating-international-organizational-development','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant for organizational development, follows February 2018 grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/better-eating-international-millenial-vegan-survey','United States','Lewis Bollard','2018-10-20','day',NULL,NULL),
   ('Open Philanthropy','Oxford Uehiro Centre for Practical Ethics',6683,'2018-10-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/oxford-uehiro-centre-for-practical-ethics-animal-sentience-workshop','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant of £5,217 ($6,683 at the time of conversion) to host a workshop on animal sentience. The one-day workshop aimed at academics and policymakers will include presentations of new science on animal sentience, including in fish and invertebrates, as well as discussions of the ethical and policy implications of those findings.',NULL,'Lewis Bollard','2018-10-20','day',NULL,NULL),
   ('Open Philanthropy','Food Frontier',100000,'2018-10-01','month','donation log','Animal welfare/factory farming/meat alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/food-frontier-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant for general support. Grantee is an Australian organization promoting plant-based meat alternatives, and will explore opportunities for Australia and New Zealand to supply the Asia-Pacific region with alternative proteins.','Australia|New Zealand','Lewis Bollard','2018-11-27','day',NULL,NULL),
-  ('Open Philanthropy','University of Edinburgh',102041,'2018-10-01','month','donation log','Animal welfare/talent pipeline','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/university-of-edinburgh-scholarship-program-in-applied-animal-behavior-and-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant to provide scholarships for three African veterinarians or animal scientists to complete the Masters program in Applied Animal Behaviour and Animal Welfare. The grant is devoted to building a talent pipeline for farm animal welfare research in Africa, which could account for a large number of new farm animals in the next 50 years.',NULL,'Lewis Bollard','2018-11-27','day',NULL,NULL),
-  ('Open Philanthropy','University of British Columbia',50186,'2018-11-01','month','donation log','Animal welfare/factory farming/pig/talent pipeline','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/university-of-british-columbia-research-pig-welfare-china','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant to enable animal welfare science student Maria Chen to produce a Masters thesis on pig welfare in China. Her planned research could identify reform opportunities on mid-sized pig farms. Grant is devoted to building a talent pipeline for farm animal welfare research in China.','China','Lewis Bollard','2018-12-12','day',NULL,NULL),
   ('Open Philanthropy','Chinese Animal Welfare Institute',1489201,'2018-11-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-welfare-standards-project-chinese-animal-welfare-institute','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant of $2,064,034 AUD (approximately $1,489,201 US at the time of conversion; this amount may be adjusted based on future exchange rates) over three years to the Animal Welfare Standards Project (AWSP) to create an animal welfare-focused institute, to be called the Sino-Australian Animal Welfare Centre, within China. Specifically, AWSP intends to use these funds to open a central hub in Beijing, in liaison with the China Agricultural University, to focus on attitudes, motivations, engagement, and outreach on animal welfare. AWSP will be collaborating with other institutes around China to build animal welfare capacities across the region and hopes these institutes will help develop Chinese animal welfare subject matter experts. The grant renews https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-welfare-standards-project-farm-animal-welfare-advocacy-china (December 2016 support); general discussion of the thinking behind these grants is at https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/grants-support-farm-animal-welfare-work-china','China','Lewis Bollard','2018-12-15','day',NULL,NULL),
   ('Open Philanthropy','Otwarte Klatki',10350,'2018-10-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/otwarte-klatki-care-conference-travel-grants','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant to make it possible for Eastern European farm animal advocates to attend the Conference on Animal Rights (CARE) in Europe in Prague in October. Follows previous grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/otwarte-klatki-chicken-welfare-campaigns-poland-ukraine to Otwarte Klatki',NULL,'Lewis Bollard','2019-01-31','day',NULL,NULL),
   ('Open Philanthropy','University of California, Berkeley',131579,'2019-01-01','month','donation log','Animal welfare/factory farming/meat alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/uc-berkeley-alternate-meats-lab','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant to support the Alternative Meats Lab, housed at The Sutardja Center for Entrepreneurship and Technology. The lab is the outgrowth of a class on developing animal product alternatives. This grant may help spur new startups developing alternatives to animal products, and could help build the talent pipeline for existing startups working in this space.',NULL,'Lewis Bollard','2019-02-22','day',NULL,NULL),
