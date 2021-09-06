@@ -879,6 +879,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Animal Advocacy Careers */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Animal Advocacy Careers',432000,'2020-06-01','month','donation log','Animal welfare/movement growth','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-advocacy-careers-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "Animal Advocacy Careers seeks to increase the effectiveness of farm animal welfare advocacy, and was incubated following our support for Charity Science. This funding is intended to enable Animal Advocacy Careers to provide training on leadership and management, career guidance, and effective animal advocacy to existing and aspiring farm animal welfare advocates."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Contract work grants for individuals */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
