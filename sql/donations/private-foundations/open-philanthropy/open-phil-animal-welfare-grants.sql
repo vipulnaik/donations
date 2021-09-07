@@ -1327,6 +1327,69 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Reducetarian Foundation */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Reducetarian Foundation',14190,'2020-04-01','month','donation log','Animal welfare/diet change/fish/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/reducetarian-foundation-fish-consumption-messaging-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Gregg Sparkman|Johanna Matt-Navarro','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research to analyze the impact of various messages on fish consumption, led by Gregg Sparkman and Johanna Matt-Navarro. The research will include a survey on norms and values correlated with fish consumption, an assessment of messages to reduce fish consumption, and a randomized controlled trial on the effectiveness of selected messages in reducing fish consumption among consumers."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to Equalia */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Equalia',150000,'2020-04-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/equalia-broiler-welfare-cage-free-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Spain','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support corporate campaigns to improve the welfare of chickens and caged hens in Spain and international investigations into welfare standards for chickens and laying hens in cages."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to fair-fish international association */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
+  ('Open Philanthropy','fair-fish international association',453841,'2017-11-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fair-fish-international-fish-welfare-standards','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2017-12-08','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/SReu0RkqPnM',NULL,
+  /* donation_process */ 'The grant page says: "Our Program Officer for Farm Animal Welfare, Lewis Bollard, began looking into funding opportunities related to farmed fish welfare last year, due to the number of animals affected by fish farming." The grant page links to a grant proposal https://www.openphilanthropy.org/files/Grants/Fair_Fish_International_Association/Fair_Fish_International_Friends_of_the_Sea_Proposal_2017.pdf submitted July 31, 2017.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "FFI’s research team, FishEthoBase, will work jointly with fish welfare certifier Friend of the Sea (FOS) to assess fish welfare at approximately 50% of all FOS-certified farms. Findings from these assessments will then be used to create farm-specific improvement recommendations and to develop animal welfare criteria for possible inclusion in FOS standards. Additionally, FFI plans to share its findings through formal presentations at academic and industry conferences. [...] FFI intends to use these funds for expenses related to onsite consulting, standards development, project management, travel, conference participation and presentations, and media and public relations." The linked grant proposal https://www.openphilanthropy.org/files/Grants/Fair_Fish_International_Association/Fair_Fish_International_Friends_of_the_Sea_Proposal_2017.pdf has more.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "Our Program Officer for Farm Animal Welfare, Lewis Bollard, began looking into funding opportunities related to farmed fish welfare last year, due to the number of animals affected by fish farming."',
+  /* donor_amount_reason */ 'The grant proposal https://www.openphilanthropy.org/files/Grants/Fair_Fish_International_Association/Fair_Fish_International_Friends_of_the_Sea_Proposal_2017.pdf includes a budget estimate; the actual grant amount is close to the total per the budget estimate.',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fair-fish-international-association-general-support suggests continued satisfaction with the grantee.',
+  /* notes */ NULL,
+  /* amount_original_currency */ 375000,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation'),
+
+  ('Open Philanthropy','fair-fish international association',630370,'2020-03-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fair-fish-international-association-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "This grant is intended to help FFI develop welfare profiles for more species in its FishEthoBase database, conduct and disseminate research on new fish welfare solutions, and consult with fish farms to comply with new fish welfare standards adopted by Friend of the Sea and others."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* amount_original_currency */ 565000,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation');
+
 /* Contract work grants for individuals */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
@@ -2133,7 +2196,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','Aquaculture Stewardship Council',533036,'2017-11-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/aquaculture-stewardship-council-fish-welfare-standard-development','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years, denominatoted in euros (€459,000). Grantee goal is to develop an objective, evidence-based standard that is applicable to all eligible ASC-certified species and recognized globally.',NULL,'Lewis Bollard','2017-11-28','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/eCt9clJIRvM',NULL),
   ('Open Philanthropy','Global Aquaculture Alliance',435000,'2017-09-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/global-aquaculture-alliance-fish-welfare-best-practices','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years via the Responsible Aquaculture Foundation to develop best practices and proposed animal welfare standards for three farmed fish species.',NULL,'Lewis Bollard','2017-12-01','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/3a9MabNTKKc',NULL),
   ('Open Philanthropy','theguardian.org',886600,'2017-11-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/the-guardian-journalism-factory-farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant to support journalism on factory farming and farm animal cruelty. Theguardian.org has stated that it will regard the funds to The Guardian newspaper, which will allow The Guardian to increase its reporting output on issues related to factory farming, including publishing approximately one article per week as well as the creation of multimedia content. In keeping with The Guardian’s journalistic and transparency standards, all supported content will be clearly labeled and the Open Philanthropy Project will have no editorial control over the content ultimately published.',NULL,'Lewis Bollard','2017-12-08','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/SReu0RkqPnM',NULL),
-  ('Open Philanthropy','fair-fish international association',453841,'2017-11-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/fair-fish-international-fish-welfare-standards','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years for a farmed fish welfare assessment and standards project. FFI’s research team, FishEthoBase, will work jointly with fish welfare certifier Friend of the Sea (FOS) to assess fish welfare at approximately 50% of all FOS-certified farms. Findings from these assessments will then be used to create farm-specific improvement recommendations and to develop animal welfare criteria for possible inclusion in FOS standards. Additionally, FFI plans to share its findings through formal presentations at academic and industry conferences.',NULL,'Lewis Bollard','2017-12-08','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/SReu0RkqPnM',NULL),
   ('Open Philanthropy','The Good Food Institute',1500000,'2017-11-01','month','donation log','Animal welfare/factory farming/meat alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/good-food-institute-general-support-2017','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Renewal of previous grant of $1,000,000 at https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/good-food-institute-general-support Lewis Bollard considers GFI to be the leading nonprofit promoting meat alternatives, and is impressed with its strategic support for early-stage companies producing plant-based products, such as Good Dot and Good Catch.',NULL,'Lewis Bollard','2018-01-05','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/vxf9stT1x0o',NULL),
   ('Open Philanthropy','Better Eating International',67110,'2018-02-01','month','donation log','Animal welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/better-eating-international-millenial-vegan-survey','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant to support a market research study to "Segment U.S. millennials for Targeted Vegan Education."','United States','Lewis Bollard','2018-03-24','day',NULL,NULL),
   ('Open Philanthropy','Brighter Green',430000,'2018-03-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/brighter-green-farm-animal-welfare-advocacy-china-2018','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Total across two grants, one of which was discretionary. The grants represent a renewal of https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/brighter-green-farm-animal-welfare-advocacy-china (September 2016). Grant supports work to host another national China Good Food Hero Summit as well as regional summits, administer a “Good Food Incubator” for activists and social enterprises, and research the state of factory farming and advocacy in China.','United States','Lewis Bollard','2018-03-24','day',NULL,NULL),
