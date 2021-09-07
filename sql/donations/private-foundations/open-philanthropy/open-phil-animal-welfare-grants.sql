@@ -1290,7 +1290,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Sinergia Animal */
 
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Sinergia Animal',245000,'2019-03-01','month','donation log','Animal welfare/factory farming/chicken/cage-free/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/sinergia-animal-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Argentina|Chile|Colombia','Lewis Bollard',NULL,NULL,NULL,NULL,
   /* donation_process */ 'Discretionary grant',
   /* intended_use_of_funds_category */ 'Organizational general support',
