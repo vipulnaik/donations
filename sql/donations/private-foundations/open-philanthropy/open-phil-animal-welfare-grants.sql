@@ -1483,6 +1483,68 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Soko Tierschutz */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
+  ('Open Philanthropy','Soko Tierschutz',100000,'2019-03-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/soko-tierschutz-factory-farm-investigations','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Germany|Eastern Europe','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to conduct and publicize investigations at factory farms in Germany and Eastern Europe. This funding will enable Soko Tierschutz to hire an investigator and cover all of their costs for multiple investigations over the course of one year."',
+  /* intended_funding_timeframe_in_months */ 12,
+  /* donor_donee_reason */ 'The grant page says: "We believe these investigations will support the corporate and policy advocacy of other animal welfare groups."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/soko-tierschutz-factory-farm-investigations-october-2020 suggests continued satisfaction with the grantee.',
+  /* notes */ NULL,
+  /* amount_original_currency */ NULL,
+  /* original_currency */ NULL,
+  /* currency_conversion_basis */ NULL),
+
+  ('Open Philanthropy','Soko Tierschutz',297291,'2020-02-01','month','donation log','Animal welfare/factory farming/fish/poultry','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/soko-tierschutz-factory-farm-investigations-october-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Germany|Eastern Europe','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support investigations and publicity on fish and poultry welfare in Germany and Eastern Europe."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page hints at both the scale of the problem and the grantee''s track record: "Approximately 150 million farmed birds and 20 million farmed fish are alive in Germany at any time. Soko Tierschutz investigations have generated media coverage in Germany and elsewhere."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* amount_original_currency */ 270000,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation');
+
+/* Grants to Commonwealth Veterinary Association */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
+  ('Open Philanthropy','Commonwealth Veterinary Association',31355,'2018-06-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/commonwealth-veterinary-association-animal-welfare-workshop','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','India','Lewis Bollard','2018-07-06','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to provide travel for international farm animal welfare experts to attend an animal welfare workshop in March 2019 in Bangalore, India."',
+  /* intended_funding_timeframe_in_months */ 1,
+  /* donor_donee_reason */ 'The grant page says: "As with our previous grants to support travel scholarships for animal welfare scientists, we believe it is possible to positively impact the trajectory of welfare science in developing nations." It links to https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/international-society-applied-ethology-travel-scholarships (a grant to the International Societoy for Applied Ethology for the 51st Congress).',
+  /* donor_amount_reason */ 'The amount was likely determined by travel costs.',
+  /* donor_timing_reason */ 'The timing is likely influenced by thte timing of the workshop, but the grant is made nine months in advance of the workshop.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy','Commonwealth Veterinary Association',15000,'2020-03-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/commonwealth-veterinary-association-farm-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','India','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "This grant will provide funding for a farm animal welfare workshop in February 2020, course fees for two staff members of the Veterinary College, Bangalore, to attend farm animal welfare classes at Cambridge University, and related educational materials."',
+  /* intendeed_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 0);
+
 /* Contract work grants for individuals */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
@@ -2293,7 +2355,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','WildAid',500000,'2018-03-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/wildaid-reducing-meat-consumption-china-2018','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant to support WildAid’s campaign to reduce meat consumption in China. More general information is available at https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/grants-support-farm-animal-welfare-work-china','China','Lewis Bollard','2018-03-24','day',NULL,NULL),
   ('Open Philanthropy','Aquaculture Stewardship Council',13813,'2018-03-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/aquaculture-stewardship-council-organizational-development','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant for general support; renews https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/aquaculture-stewardship-council-fish-welfare-standard-development (November 2017)',NULL,'Lewis Bollard','2018-04-19','day',NULL,NULL),
   ('Open Philanthropy','ACTAsia',350000,'2018-03-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/act-asia-reduce-fur-demand-2018','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Total across two grants to support work on a fur-free ad campaign, fur-free courses at Chinese design colleges, research and reporting on the fur industry, and a Sustainable Fashion Forum to discuss alternatives to fur.','China','Lewis Bollard','2018-05-31','day',NULL,NULL),
-  ('Open Philanthropy','Commonwealth Veterinary Association',31355,'2018-06-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/commonwealth-veterinary-association-animal-welfare-workshop','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant to support travel for international farm animal welfare experts to attend an animal welfare workshop in March 2019 in Bangalore, India. Although legally structured as a contractor agreement, conceptually it is closer to a grant, hence is listed in the grants database','India','Lewis Bollard','2018-07-06','day',NULL,NULL),
   ('Open Philanthropy','Griffith University',100000,'2018-08-01','month','donation log','Animal welfare/factory farming/China','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/griffith-university-farm-animal-welfare-advocacy-china-2018','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant to support a symposium on farm animal welfare in China in 2019 to be organized by Professor Deborah Cao, an expert on Chinese animal law, and to support Professor Cao’s work on a new book, in Chinese, about farm animal welfare. This renews the December 2016 grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/griffith-university-farm-animal-welfare-advocacy-china','China','Lewis Bollard','2018-09-01','day',NULL,NULL),
   ('Open Philanthropy','Plant Based Foods Association',250000,'2018-08-01','month','donation log','Animal welfare/factory farming/meat alternatives','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/plant-based-foods-association-state-level-policy-advocacy-against-threats-to-the-plant-based-sector','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant for state-level policy advocacy against threats to the plant-based food sector. PBFA plans to use these funds to monitor, analyze, and, when necessary, oppose attempts to create policies that undermine plant-based alternatives to animal products.','United States','Lewis Bollard','2018-09-01','day',NULL,NULL),
   ('Open Philanthropy','Prevent Cruelty California',4000000,'2018-10-01','month','donation log','Animal welfare/factory farming/cage-free','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/prevent-cruelty-california-prop-12','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant made by the Open Philanthropy Action Fund. Grantee is a coalition of veterinarians, animal shelters, farmworkers, food safety groups, and animal protection charities advocating for Proposition 12. Prop 12, which will appear on California’s general election ballot this November, would require cage-free housing and improve space requirements in California for veal calves, pigs, and egg-laying hens, and would ensure that veal, pork, and eggs sold in California come from operations meeting these standards.','United States','Lewis Bollard','2018-10-05','day',NULL,NULL),
