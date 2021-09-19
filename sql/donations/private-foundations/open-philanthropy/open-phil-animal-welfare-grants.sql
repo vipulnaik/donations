@@ -1703,6 +1703,37 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ 'EUR',
   /* currency_conversion_basis */ 'donor calculation');
 
+/* Grants to Certified Humane */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Certified Humane',210000,'2020-01-01','month','donation log','Animal welfare/factory farming/certification','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/certified-humane-farm-animal-welfare-certification-work','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China','Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support the expansion of [grantee''s] certification work into China."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "Certified Humane seeks to promote more humane farm animal practices among producers, and has certified over 5,000 farms in 16 countries."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to Center for Welfare Metrics */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
+  ('Open Philanthropy','Center for Welfare Metrics',784586,'2020-01-01','month','donation log','Animal welfare/factory farming/chicken/layer chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/center-for-welfare-metrics-impacts-of-animal-welfare-reforms-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant page says: "This project was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "Among other projects, the Center for Welfare Metrics plans to produce a report on the welfare impact of reforms for egg-laying hens, including a comparison of the prevalence, duration, and intensity of harms under various systems, including cages, enriched cages, and cage-free aviaries."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ 'The grant page says: "This analysis could inform farm animal welfare grantmaking decisions and assessment." The grapnt page also links to https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/cynthia-schuck-wladimir-alonso-daly-project-2019 as a similar previous grant.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1);
+
 /* Cause area normalization not done from this point onward */
 
 /* Grants to Farm Forward */
