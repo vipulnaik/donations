@@ -545,7 +545,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 /* Grants to University of Glasgow */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
-  ('Open Philanthropy','University of Glasgow',109552,'2020-12-01','month','donation log','Animal welfare/wild animal welfare/bird/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/university-of-glasgow-animal-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Davide Dominoni','Lewis Bollard',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Glasgow',109552,'2020-12-01','month','donation log','Animal welfare/wild animal welfare/bird/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/university-of-glasgow-animal-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Davide Dominoni','Wild Animal Initiative|Lewis Bollard',NULL,NULL,NULL,NULL,
   /* donation_process */ 'The grant page says: "The project was endorsed by the Wild Animal Initiative due to its potential to expand the field of welfare biology." This suggests that this endorsement was influential to the grantmaking process.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research on animal welfare led by Davide Dominoni. This funding will support research on the effects of urbanization and artificial light on birds’ welfare."',
@@ -1532,7 +1532,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL,
   /* is_contractwork */ 1),
 
-  ('Open Philanthropy','Commonwealth Veterinary Association',15000,'2020-03-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/commonwealth-veterinary-association-farm-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','India','Lewis Bollard',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Commonwealth Veterinary Association',15000,'2020-02-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/commonwealth-veterinary-association-farm-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','India','Lewis Bollard',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page says: "This grant will provide funding for a farm animal welfare workshop in February 2020, course fees for two staff members of the Veterinary College, Bangalore, to attend farm animal welfare classes at Cambridge University, and related educational materials."',
@@ -1600,6 +1600,108 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL,
   /* is_contractwork */ 1);
+
+/* Grants to World Animal Net */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','World Animal Net',50000,'2017-10-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/world-animal-net-co-organizing-workshops-world-bank','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2017-11-08','day','https://groups.google.com/a/openphilanthropy.org/forum/#!msg/newly.published/sym4vNvqFbw/d3CCxBZ1BgAJ',NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant " to support its engagement with the World Bank to co-organize farm animal welfare workshops. The funding is intended to allow WAN to contribute to the preparatory work and costs of the workshops; invite farm animal welfare experts/scientists who could potentially advocate for animal welfare reforms to the workshops; support research, analysis, and coordination of advocacy strategy in advance of the workshops; and conduct post-workshop follow-up and dissemination activities."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "Our Program Officer for Farm Animal Welfare, Lewis Bollard, believes influencing multilateral institutions’ policies through conference participation and activities is a potentially high-leverage route to improving farm animal welfare, particularly in emerging economies."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/world-animal-net-broiler-chicken-and-pig-welfare-guidelines suggests continued satisfaction with the grantee, though the follup grant is for a different purpose.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','World Animal Net',37600,'2020-09-01','month','donation log','Animal welfare/factory farming/chicken/broiler chicken/pig','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/world-animal-net-broiler-chicken-and-pig-welfare-guidelines','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to engage with international financial institutions, including the World Bank, on the adoption of broiler chicken and pig welfare guidelines for agribusiness projects."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* We Animals grant(s) */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','We Animals Media',240000,'2019-02-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/we-animals-farm-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-07-18','day',NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'According to the grant page, the grant is "to continue documenting the lives and experiences of farm animals. We Animals works with filmmakers, writers, and photographers to produce open-source media content that advocates and others can deploy in their campaigns. We Animals also intends to use some of the funds to support the Unbound Project, which recognizes and celebrates women at the forefront of animal advocacy."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','We Animals Media',517000,'2020-06-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/we-animals-media-content-for-farm-animal-welfare-advocacy-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says the grant is "to continue documenting the lives and experiences of farm animals. WAM works with filmmakers, writers, and photographers to produce open-source media content via the We Animals Archive for advocates and others to utilize in their campaigns. [...] This funding is intended to support WAM’s photography and video archive and farm animal welfare media work."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "Many of our farm animal welfare grantees have used WAM’s media content in their work to secure corporate and governmental farm animal welfare commitments."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to University of Missouri */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','University of Missouri',189000,'2020-01-01','month','donation log','Animal welfare/wild animal welfare/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/university-of-missouri-animal-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Samniqueka Halsey','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant page says: "The project was endorsed by the Wild Animal Initiative due to its potential to expand the field of welfare biology."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "This funding will support the creation of a database of wildlife diseases and disease interventions, as well as a stress index measuring the impact of disease on wild animal welfare."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The role of Wild Animal Initiative in recommending the grant would be mentioned by Open Philanthropy in its later grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/wild-animal-initiative-animal-welfare-research to Wild Animal Initiative.');
+
+/* Grants to Essere Animali */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
+  ('Open Philanthropy','Essere Animali',150000,'2019-02-01','month','donation log','Animal welfare/factory farming/fish/chicken/pig','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/essere-animali-farm-animal-welfare-work-in-italy','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Italy','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "to conduct farm investigations and scale up media outreach and corporate campaigning in Italy."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "Approximately 260 million farmed land animals and 140 million farmed fish are alive in Italy at any time. Essere Animali investigations at farms where fish, pigs, and chickens are raised and slaughtered have generated media coverage in Italy and elsewhere, and we believe these investigations are useful to others working on animal welfare globally."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'A followup grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/essere-animali-farm-animal-welfare-work-in-italy in 2020-01 suggests continued satisfaction with the grantee.',
+  /* notes */ NULL,
+  /* amount_original_currency */ NULL,
+  /* original_currency */ NULL,
+  /* currency_conversion_basis */ NULL),
+
+  ('Open Philanthropy','Essere Animali',462974,'2020-01-01','month','donation log','Animal welfare/factory farming/fish/chicken/pig','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/essere-animali-farm-animal-welfare-work-italy-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Italy','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support investigations and corporate campaigns on fish, chicken, and pig welfare in Italy."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "Approximately 260 million farmed land animals and 140 million farmed fish are alive in Italy at any time. Essere Animali investigations at farms where fish, pigs, and chickens are raised and slaughtered have generated media coverage in Italy and elsewhere."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* amount_original_currency */ 420000,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation');
 
 /* Cause area normalization not done from this point onward */
 
@@ -2111,21 +2213,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'This is a total across two grants.');
 
-/* We Animals grant(s) */
-
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','We Animals',240000,'2019-02-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/we-animals-farm-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-07-18','day',NULL,NULL,
-  /* donation_process */ 'Discretionary grant',
-  /* intended_use_of_funds_category */ 'Organizational general support',
-  /* intended_use_of_funds */ 'According to the grant page, the grant is "to continue documenting the lives and experiences of farm animals. We Animals works with filmmakers, writers, and photographers to produce open-source media content that advocates and others can deploy in their campaigns. We Animals also intends to use some of the funds to support the Unbound Project, which recognizes and celebrates women at the forefront of animal advocacy."',
-  /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL);
-
 /* Anima grant(s) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
@@ -2386,7 +2473,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','Animal Welfare Action Lab',79100,'2017-06-01','month','donation log','Animal welfare/factory farming/survey research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-welfare-action-lab-meat-reduction-survey','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Discretionary grant via the Reducetarian Foundation to fund a study to replicate and improve upon an earlier multi-wave study by grantee (AWAL). Improvements include a larger, more representative sample via YouGov, and the potential to fund a third-wave component analyzing whether any effect endures after two months. Funds primarily cover spending on YouGov. The initial amount of $58,550 was topped up by $20,550 in July 2018, for a total of $79,100',NULL,'Lewis Bollard','2017-08-21','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/BCHYfQlh8xk',NULL),
   ('Open Philanthropy','Federation of Indian Animal Protection Organisations',332944,'2017-07-01','month','donation log','Animal welfare/factory farming/chicken and dairy','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/federation-indian-animal-protection-organisations-india-animal-welfare-reform','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Reason for grant includes excitement about broad network of FIAPO throughout India, and the scale of opportunity in India','India','Lewis Bollard','2017-08-21','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/BCHYfQlh8xk',NULL),
   ('Open Philanthropy','Albert Schweitzer Foundation for Our Contemporaries',1000000,'2017-09-01','month','donation log','Animal welfare/factory farming/chicken/turkey/pig welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/albert-schweitzer-foundation-general-support-2017','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years for general support for farm animal welfare activities in Germany. Grant will allow grantee to significantly expand their corporate outreach on broiler chicken welfare, increase their fundraising capacity, and hire a law firm to pursue litigation related to turkey and pig welfare.','Germany','Lewis Bollard','2017-10-25','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/jQyJCLBgenc',NULL),
-  ('Open Philanthropy','World Animal Net',50000,'2017-10-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/world-animal-net-co-organizing-workshops-world-bank','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant to support engagement with the World Bank to co-organize farm animal welfare workshops. The funding is intended to allow WAN to contribute to the preparatory work and costs of the workshops; invite farm animal welfare experts/scientists who could potentially advocate for animal welfare reforms to the workshops; support research, analysis, and coordination of advocacy strategy in advance of the workshops; and conduct post-workshop follow-up and dissemination activities.',NULL,'Lewis Bollard','2017-11-08','day','https://groups.google.com/a/openphilanthropy.org/forum/#!msg/newly.published/sym4vNvqFbw/d3CCxBZ1BgAJ',NULL),
   ('Open Philanthropy','Anima',683000,'2017-10-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/anima-corporate-campaigns-merger-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Two grants combined. Funding to support chicken welfare campaigns and organizational capacity building in Scandinavia','Scandinavia','Lewis Bollard','2017-11-21','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/KPMeAgO5jVM',NULL),
   ('Open Philanthropy','Otwarte Klatki',472864,'2017-11-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/otwarte-klatki-chicken-welfare-campaigns-poland-ukraine','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant to support farm animal welfare campaigns and organizational capacity building in Poland and Ukraine. The funding will allow Otwarte Klatki to launch broiler chicken welfare campaigns in Poland and cage-free campaigns in Ukraine, as well as support expenses related to a planned merger with the Danish animal rights organization, Anima.','Poland|Ukraine','Lewis Bollard','2017-11-21','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/KPMeAgO5jVM',NULL),
   ('Open Philanthropy','Aquaculture Stewardship Council',533036,'2017-11-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/aquaculture-stewardship-council-fish-welfare-standard-development','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Grant over two years, denominatoted in euros (€459,000). Grantee goal is to develop an objective, evidence-based standard that is applicable to all eligible ASC-certified species and recognized globally.',NULL,'Lewis Bollard','2017-11-28','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/eCt9clJIRvM',NULL),
