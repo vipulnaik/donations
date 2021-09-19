@@ -2232,7 +2232,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to The Humane League UK */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','The Humane League UK',507900,'2020-12-01','month','donation log','Animal wellfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/the-humane-league-uk-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','The Humane League UK',507900,'2020-12-01','month','donation log','Animal welfare/factory farming/chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/the-humane-league-uk-general-support','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'The grant page says: "THL-UK has secured a number of broiler welfare and cage-free commitments from major UK and international restaurant chains and food service companies. This funding is intended to enable THL-UK to fill positions focused on European and global corporate welfare campaigns."',
@@ -2348,6 +2348,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
+
+/* Grants to Asia for Animals */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Asia for Animals',52400,'2020-09-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/asia-for-animals-farm-animal-welfare-coordinator','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Asia','Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to hire a farm animal welfare coordinator. Asia for Animals is a coalition of animal welfare organizations operating in Asia. The farm animal welfare coordinator will enable Asia for Animals to expand the network’s engagement on farm animal welfare issues."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Grant via the Animals Asia Foundation');
 
 /* Other grants (still in old format) */
 
