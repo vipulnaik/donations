@@ -1899,7 +1899,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ 'The later grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/plant-based-foods-association-grocery-store-study (2019-11) suggests continued satisfaction with the grantee, though the intended use of funds for this grant would be quite different.',
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/plant-based-foods-association-state-level-policy-2019 (2019-09) suggests satisfaction with the outcome of the grant.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Plant Based Foods Association',625000,'2019-09-01','month','donation log','Animal welfare/meat alternatives/plant-based meat/legislative change','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/plant-based-foods-association-state-level-policy-2019','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to protect the plant-based food sector from state-level policy threats. PBFA plans to use these funds to monitor, analyze, and, when necessary, oppose attempts to create policies that undermine plant-based alternatives to animal products."',
+  /* intended_funding_timeframe_in_months */ 18,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Though no explicit reasons are given for timing, the timing is likely determined by the outcome and the end of timeframe of the previous grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/plant-based-foods-association-state-level-policy-advocacy-against-threats-to-the-plant-based-sector (2018-08).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
   ('Open Philanthropy','Plant Based Foods Association',230000,'2019-11-01','month','donation log','Animal welfare/meat alternatives/plant-based meat/consumer preferences','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/plant-based-foods-association-grocery-store-study','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard',NULL,NULL,NULL,NULL,
@@ -1998,6 +2010,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'Grant "to support the Alternative Meats Lab, housed at The Sutardja Center for Entrepreneurship and Technology."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'The grant page says: "This grant may help spur new startups developing alternatives to animal products, and could help build the talent pipeline for existing companies working in this space." This is a followup to a smaller grant of $131,579 (2019-01) for a similar purpose.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to Oxford University */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Oxford University',41800,'2019-10-01','month','donation log','Animal welfare/wild animal welfare/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/oxford-university-animal-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Michael Bonsall','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Grant made as a gift',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research on animal welfare. The work will be led by Michael Bonsall, Professor of Mathematical Biology in the Department of Zoology. This funding will support a one-day academic workshop on wild animal welfare as well as pilot research seeking to analyze existing ecological data for information about the welfare of members of various species."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
