@@ -2235,6 +2235,37 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Asia Research & Engagement */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
+  ('Open Philanthropy','Asia Research & Engagement',340875,'2019-05-01','month','donation log','Animal welfare/factory farming/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/asia-research-engagement-farm-animal-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','China|Indonesia|Japan|Korea|Malaysia|Philippines|Singapore|Thailand|Vietnam','Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support corporate outreach for farm animal welfare reforms. ARE plans to work with banks and investors to secure corporate commitments in China, Indonesia, Japan, Korea, Malaysia, Philippines, Singapore, Thailand, and Vietnam."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1);
+
+/* Grants to Claremont Graduate University */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Claremont Graduate University',57000,'2019-03-01','month','donation log','Animal welfare/diet change/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/claremont-graduate-university-leafleting-study','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Joshua Tasoff','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "for research to measure the effect of animal advocacy leafleting on real food purchases. The project is led by CGU Economics Professor Joshua Tasoff."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "The results of the study could inform future farm animal welfare strategy."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Cause area normalization not done from this point onward */
 
 /* Grants to Farm Forward */
