@@ -38,6 +38,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ 'Followup conversation with Alan Durning of grantee organization at https://www.openphilanthropy.org/sites/default/files/Alan_Durning_07-05-16_%28public%29.pdf on 2016-07-05. The followup grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/sightline-institute-housing-and-urban-development-2017 suggests that the grant would be considered a success',
   /* notes */ NULL),
+
   ('Open Philanthropy','Sightline Institute',350000,'2017-10-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/sightline-institute-housing-and-urban-development-2017','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','Alexander Berger','United States',NULL,NULL,'2017-11-14','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/jYBHdqr_zAQ',NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -55,8 +56,32 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support work on housing and land use." Grantee "plans to use these funds to support priority housing legislation in Washington and Oregon."',
   /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ 'No explicit reasons given, but reasons likely similar to those for the October 2017 grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/sightline-institute-housing-and-urban-development-2017 and the October 2015 grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/sightline-institute-housing-and-urban-development (which has the most detailed write-up)',
-  /* donor_amount_reason */ 'The amount of this grant ($100,000) is less than the amount for previous two-year grants ($400,000 and $350,000) so it is more a supplement than a renewal',
+  /* donor_donee_reason */ 'No explicit reasons given, but reasons likely similar to those for the October 2017 grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/sightline-institute-housing-and-urban-development-2017 and the October 2015 grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/sightline-institute-housing-and-urban-development (which has the most detailed write-up).',
+  /* donor_amount_reason */ 'The amount of this grant ($100,000) is less than the amount for previous two-year grants ($400,000 and $350,000) so it is more a supplement than a renewal.',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts  */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Sightline Institute',50000,'2019-06-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/sightline-institute-YIMBYtown-2019','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States',NULL,NULL,'Alexander Berger',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a national “Yes In My Back Yard” conference, which will take place in Portland, Oregon."',
+  /* intended_funding_timeframe_in_months */ 1,
+  /* donor_donee_reason */ 'The grant page says: "We previously supported the first three national YIMBY conferences to bring those housing advocates together in 2016 in Boulder, Colorado, in 2017 in Oakland, California, and in 2018 in Boston, Massachusetts." The first grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/better-boulder-yimby-2016 (with grantee Better Boulder) has a more detailed explanation of the reasons.',
+  /* donor_amount_reason */ 'The amount of the grant is pretty similar to the amount of previous grants: $37,000 (2016), $40,000 (2017), and $40,000 (2018).',
+  /* donor_timing_reason */ 'The timing of the grant is likely determined by the timing of the conference.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Sightline Institute',600000,'2019-12-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/sightline-institute-housing-and-urban-development-december-2019','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States','Washington|Oregon',NULL,'Alexander Berger',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support [grantee''s] work on housing and urban development." Grantee "plans to use these funds to build coalitions in support of allowing more housing in Washington and Oregon."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts  */ NULL,
   /* donor_retrospective */ NULL,
@@ -98,6 +123,75 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* YIMBY Law */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, affected_states, affected_cities, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','YIMBY Law',100000,'2020-01-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/yimby-law-general-support','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States','California',NULL,'Alexander Berger',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support. YIMBY Law is a new organization that advocates for more available and affordable housing in California and pursues litigation to ensure compliance with state housing laws."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "[grantee''s] founder, Sonja Trauss, pursued a similar strategy as part of her previous work at the California Renters Legal Advocacy and Education Fund [CaRLA]." Open Philanthropy had previously made grants to CaRLA, the latest being https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-renters-legal-advocacy-and-education-fund-general-support-2019 (2019-02), so this grant was likely for similar reasons and based on the outcomes of that grant.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The grant page calls the grantee a "new organization" and its founder appears to have recently left California Renters Legal Advocacy and Education Fund, another organization previously funded by Open Phil. The timing is likely explained by it being an initial/founding grant.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup two-year $500,000 grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/yimby-law-general-support-october-2020 (2020-10) suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','YIMBY Law',500000,'2020-10-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/yimby-law-general-support-october-2020','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States','California',NULL,'Zachary Robinson|Alexander Berger',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support. YIMBY Law is a new organization that advocates for more available and affordable housing in California and pursues litigation to ensure compliance with state housing laws."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The grant is made about nine months after the first grant to the grantee, which was a founding grant. The timeframe of the original grant was not specified, but the amount ($100,000) suggests a timeframe of under a year, so the timing of this new grant is likely determined by the previous grant running out.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Abundant Housing Massachusetts */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, affected_states, affected_cities, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Abundant Housing Massachusetts',600000,'2021-03-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/abundant-housing-massachusetts','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States','Massachusetts','Boston','Zachary Robinson',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organnizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support. Abundant Housing Massachusetts is a new statewide organization that advocates for more housing across Massachusetts and within the Greater Boston Area."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The grant page calls the grantee a "new statewide organization" so this is likely an initial/founding grant and the timing is explained accordingly.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to Greater Greater Washington */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, affected_states, affected_cities, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Greater Greater Washington',250000,'2017-06-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/greater-greater-washington-housing-and-land-use-reform-2017','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','Alexander Berger','United States',NULL,'Washington, D.C.','2017-08-11','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/iyErXoVcmSE',NULL,
+  /* donation_process */ 'The grant is a result of the grant renewal request https://www.openphilanthropy.org/files/Grants/Greater_Greater_Washington/Greater_Greater_Washington_Grant_Renewal_Request_April_2017.pdf of a previous grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/smart-growth-america-greater-greater-washington-education-project to Smart Growth America for the Greater Greater Washington Education Project.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support "work on housing affordability and land use reform." The grant renewal request https://www.openphilanthropy.org/files/Grants/Greater_Greater_Washington/Greater_Greater_Washington_Grant_Renewal_Request_April_2017.pdf has more details.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "we see the coalition it has helped coordinate in support of including more housing in D.C.’s revised Comprehensive Plan as a promising initial step." It links to http://www.dchousingpriorities.org/ (for the coalition) and https://www.vox.com/policy-and-politics/2017/7/24/16010720/dc-comprehensive-plan (as a refeerence for the promising nature).',
+  /* donor_amount_reason */ 'The grant renewal request https://www.openphilanthropy.org/files/Grants/Greater_Greater_Washington/Greater_Greater_Washington_Grant_Renewal_Request_April_2017.pdf includes budget projections. The "maintain scenario" has a total two-year budget of $275,000, compared to the actual amount of $250,000.',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ 'Followup granting is not explicitly discussed, but the grant page says: "We think it is mostly too early to tell whether its work has had any impact on housing construction or affordability" suggesting that more evidence may be brought into play before deciding on a followup grant.',
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/greater-greater-washington-housing-and-land-use-reform-2019 (2019-08) suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Greater Greater Washington',300000,'2019-08-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/greater-greater-washington-housing-and-land-use-reform-2019','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States',NULL,'Washington, D.C.','Alexander Berger',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support its work on housing affordability and land use reform. Greater Greater Washington is a news and advocacy organization that focuses on housing, transportation, and other local policy issues in the greater Washington, D.C. metro area."',
+  /* intended_funding_timeframe_in_months */ 30,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'No explicit reason is given for the amount, but it is similar to the previous amount of $250,000; the difference in the amount is approximately proportional to the difference in timeframe (2 years versus 2.5 years).',
+  /* donor_timing_reason */ 'The grant is made around the end of the timeframe of the previous two-year grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/greater-greater-washington-housing-and-land-use-reform-2017 (2017-06).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Land use reform/United States */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, influencer, affected_countries, affected_states, affected_cities,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
@@ -106,6 +200,5 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','Seattle for Everyone',50000,'2016-02-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/seattle-everyone-general-support','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','Recipient is a coalition of various interest groups (including market rate developers, affordable housing developers, labor and social justice advocates, businesses, environmentalists, and urbanists) formed to promote the same set of proposed land use reforms in Seattle that Sightline Institute (another Open Phil grantee) also promotes. No detailed writeup',NULL, 'United States','Washington','Seattle', '2016-03-30', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/7DX0fvv6aOI',NULL),
   ('Open Philanthropy','Urban Institute',97865,'2015-09-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/urban-institute-land-use-convening','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','Funds research project and convening aimed at identifying policy changes that would allow more housing supply in the Washington, D.C. metropolitan area.',NULL, 'United States',NULL,'Washington, D.C.', '2015-10-06', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/YdjFV6LbrOA',NULL),
   ('Open Philanthropy','Smart Growth America',275000,'2015-07-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/smart-growth-america-greater-greater-washington-education-project','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','To support Smart Growth America’s Greater Greater Washington Education Project. Greater Greater Washington (GGW) is a group blog that covers local policy issues, such as housing, education, and transportation, in the greater Washington, D.C. metro area. Followup conversation with David Alpert, Sarah Guidi, and Jonathan Neeley of grante organization at https://www.openphilanthropy.org/sites/default/files/David_Alpert_Sarah_Guidi_and_Jonathan_Neeley_12-16-2015_%28public%29.pdf on 2015-12-16. Second followup conversation with David Alpert, Sarah Guidi, and David Whitehead of grantee organization at https://www.openphilanthropy.org/sites/default/files/David_Alpert_Sarah_Guidi_David_Whitehead_06-07-16_%28public%29.pdf on 2016-06-07',NULL, 'United States',NULL,'Washington, D.C.', '2015-07-28', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/4Bht6il4iX0',NULL),
-  ('Open Philanthropy','Greater Greater Washington',250000,'2017-06-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/greater-greater-washington-housing-and-land-use-reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','Grant to support work on housing affordability and land use reform, and the grant writeup cites the existing coalition http://www.dchousingpriorities.org/ as impressive evidence of progress so far','Alexander Berger','United States',NULL,'Washington, D.C.','2017-08-11','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/iyErXoVcmSE',NULL),
   ('Open Philanthropy','Harborlight Community Partners',40000,'2018-03-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/harborlight-community-partners-YIMBYtown-2018','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','Discretionary grant to support the 2018 national "Yes In My Back Yard" conference, scheduled to take place in Boston, Masschusetts, in September. Open Phi has supported the conference for two previous years: https://www.openphilanthropy.org/focus/us-policy/land-use-reform/better-boulder-yimby-2016 (2016, grant to Better Boulder, organizing the conference in Boulder, Colorado), and https://www.openphilanthropy.org/focus/us-policy/land-use-reform/east-bay-forward-yimbytown-2017-conference (2017, to East Bay Forward, organizing the conference in Oakland, California)','Alexander Berger','United States',NULL,NULL,'2018-04-12','day',NULL,NULL);
 
