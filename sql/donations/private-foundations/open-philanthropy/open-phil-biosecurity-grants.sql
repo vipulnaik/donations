@@ -344,6 +344,21 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
   /* donor_next_donation_thoughts */ NULL,
   /* notes */ NULL);
 
+/* MIT Media Lab */
+
+insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,donation_earmark,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes) values
+  ('Open Philanthropy','MIT Media Lab',1000000,'2021-03-01','month','donation log','Biosecurity and pandemic preparedness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/massachusetts-institute-technology-media-lab-kevin-esvelt-2021','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Kevin Esvelt','Andrew Snyder-Beattie',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to continue to support the research of Professor Kevin Esvelt. Professor Esvelt plans to use this funding to conduct work on topics related to biosecurity."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page does not discuss reasoning but alludes to an earlier grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/miscellaneous/massachusetts-institute-technology-media-lab-kevin-esvelt also supporting Kevin Esvelt''s lab, though the earlier grant was more broadly focused on global health, animal welfare, and global catastrophic risks.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Other grants */
 
 insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,notes,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions) values

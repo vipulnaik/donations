@@ -10,19 +10,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ 'There is background at https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-renters-legal-advocacy-and-education-fund-general-support#Budget_and_room_for_more_funding saying the organization has received $100,000 from another donor, and may be able to raise more funding if it attempts',
   /* donor_timing_reason */ 'This is (sort of) a founding grant to a nascent advocacy organization',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
+  /* donor_retrospective */ 'The followup grant ttps://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-renters-legal-advocacy-and-education-fund-general-support-2019 (2019-02) suggests continued satisfaction with the grantee.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','California Renters Legal Advocacy and Education Fund',400000,'2019-02-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-renters-legal-advocacy-and-education-fund-general-support-2019','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States','California',NULL,'Alexander Berger','2019-05-18','day',NULL,NULL,
+  ('Open Philanthropy','California Renters Legal Advocacy and Education Fund',340000,'2019-02-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-renters-legal-advocacy-and-education-fund-general-support-2019','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States','California',NULL,'Alexander Berger','2019-05-18','day',NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'Grantee intends to continue pursuing litigation, advocating against regulatory barriers to building housing in the San Francisco Bay Area, and developing educational resources.',
   /* intended_funding_timeframe_in_months */ 24,
-  /* donor_donee_reason */ 'Renewal of previous June 2016 grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-renters-legal-advocacy-and-education-fund-general-support',
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'The original grant amount was $400,000, but the grantee returned $60,000 of unused funds.',
+  /* donor_timing_reason */ 'The grant timing is a little after the end of the timeframe of the previous two-grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-renters-legal-advocacy-and-education-fund-general-support (2016-06).',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
+  /* donor_retrospective */ 'The later grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/yimby-law-general-support to YIMBY Law, based on its founder''s work at California Renters Legal Advocacy and Education Fund, can be thought of as a continued vote of confidence in the work funded by the grant.',
   /* notes */ NULL);
 
 /* Sightline Institute */
@@ -100,6 +100,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ 'The grant page says: "We also recommended a smaller matching grant for funding California YIMBY raises from other sources before September 1, which we will write up separately when the match is complete and the amount is finalized."',
   /* donor_retrospective */ 'The matching grant would be made in August 2018; see ttps://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support-august-2018 A further general support grant would be made in 2019; see https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support-2019 This renewed support, with essentially the same reasoning, suggests that the donor would remain satisfied with the outcome of the grant',
   /* notes */ 'Grantee is a new organization founded by people that Open Phil previously funded at CaRLA (California Renters Legal Advocacy Fund): https://www.openphilanthropy.org/focus/us-policy/land-use-reform who successfully sponsored legislation in 2017 to strengthen California’s Housing Accountability Act https://en.wikipedia.org/wiki/California_Housing_Accountability_Act and who subsequently saw sufficient opportunity and need for statewide legislative advocacy to justify a new organization.'),
+
   ('Open Philanthropy','California YIMBY',350000,'2018-08-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support-august-2018','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','Alexander Berger','United States','California',NULL,'2018-09-28','day',NULL,NULL,
   /* donation_process */ 'Grant made by the Open Philanthropy Action Fund because the funds are to be used for lobbying. This is a matching grant and the amount is therefore contingent on the amount raised by the grantee from other sources',
   /* intended_use_of_funds_category */ 'Organizational general support',
@@ -111,14 +112,15 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ 'A further general support grant would be made in 2019; see https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support-2019 This renewed support, with essentially the same reasoning, suggests that the donor would remain satisfied with the outcome of the grant',
   /* notes */ NULL),
+
   ('Open Philanthropy','California YIMBY',2000000,'2019-04-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support-2019','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','Alexander Berger','United States','California',NULL,'2019-07-22','day',NULL,NULL,
   /* donation_process */ 'Grant made by the Open Philanthropy Action Fund because the funds are to be used for lobbying',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'According to the grant page, the grantee "reports that they will use our support to continue work on organizing, communications, digital outreach, data and analytics, and finance and operations."',
   /* intended_funding_timeframe_in_months */ 24,
-  /* donor_donee_reason */ 'The grant page gives the following reasons for seeing California housing policy changes as promising philanthropy: (1) large share of US population and half of expensive metro population, (2) cost-effectiveness of state-level advocacy, as observed in criminal justice reform grantmaking, (3) wider scope of housing markets than the geographic range in which housing approvals are allocated (e.g., people search for houses outside city limits), (4) widespread consensus that California should be building more homes',
-  /* donor_amount_reason */ 'The implicit funding of $1 million/year is similar to the funding in 2018 of $850,000 ($500,000 initial grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support in April 2018 + $350,000 matching funds https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support in August 2018) with a slight increase possibly accounting for the organization''s expansion',
-  /* donor_timing_reason */ 'Timing likely determined by it being one year since the last full general support grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support of $500,000 in April 2018 (though there was a coupled matching grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support-august-2018 in August 2018, it is likely that the expected total of the two grants was expected to last one year from April 2018)',
+  /* donor_donee_reason */ 'The grant page gives the following reasons for seeing California housing policy changes as promising philanthropy: (1) large share of US population and half of expensive metro population, (2) cost-effectiveness of state-level advocacy, as observed in criminal justice reform grantmaking, (3) wider scope of housing markets than the geographic range in which housing approvals are allocated (e.g., people search for houses outside city limits), (4) widespread consensus that California should be building more homes.',
+  /* donor_amount_reason */ 'The implicit funding of $1 million/year is similar to the funding in 2018 of $850,000 ($500,000 initial grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support in April 2018 + $350,000 matching funds https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support in August 2018) with a slight increase possibly accounting for the organization''s expansion,',
+  /* donor_timing_reason */ 'Timing likely determined by it being one year since the last full general support grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support of $500,000 in April 2018 (though there was a coupled matching grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/california-yimby-general-support-august-2018 in August 2018, it is likely that the expected total of the two grants was expected to last one year from April 2018).',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
