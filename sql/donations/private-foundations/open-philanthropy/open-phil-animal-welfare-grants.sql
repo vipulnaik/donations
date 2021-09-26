@@ -62,6 +62,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
+  ('Open Philanthropy','The Humane League',22000,'2018-12-01','month','donation log','Animal welfare/factory farming/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-league-latin-america-summit','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Latin America','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to cover the costs of a Latin America regional summit held in November 2018. The funds will be used to reimburse travel costs for Latin American groups who attended a two-day event to discuss corporate campaigns and collaboration in the region."',
+  /* intended_funding_timeframe_in_months */ 1,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'Grant "to cover the costs of a Latin America regional summit held in November 2018. The funds will be used to reimburse travel costs for Latin American groups who attended a two-day event [...]"; the amount of the grant is likely determined by the travel costs.',
+  /* donor_timing_reason */ 'Timing likely determined by the timing of the summit, which was a month prior (2018-11).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
   ('Open Philanthropy','The Humane League',750000,'2019-01-01','month','donation log','Animal welfare/factory farming/chicken/broiler chicken/corporate campaign','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/humane-league-broiler-welfare-campaigns','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard','2019-04-30','day',NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -493,6 +505,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_donee_reason */ 'The grant page says: "[The book] has been influential in the farm animal welfare field. The book has remained continuously in print since first publication, and the author has written new prefaces, but the basic text has not been revised since 1990 and is now dated. We believe updating the book to reflect recent developments would provide an accurate and up-to-date resource on factory farming and help recruit new leaders to the field."',
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'No explicit reasons for timing are given, but the grant is mmad shortly afteer another grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/princeton-university-guo-peng also involving Peter Singer, to translate animal welfare books to Chinese.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to Harvard University */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Harvard University',21200,'2017-10-01','month','donation log','Animal welfare/legislative change/research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/harvard-university-animal-law-and-policy-program','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','United States','Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Discretionary grant',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support the Animal Law & Policy program at Harvard Law School. The program plans to use these funds to research the policy consequences of the Protect Interstate Commerce Act, also known as the King Amendment, in key states and jurisdictions."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
