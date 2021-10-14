@@ -227,6 +227,21 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Center for Security and Emerging Technology; note there are grants made by Open Phil to them
+   in other cause areas including security and AI safety */
+insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes) values
+  ('Open Philanthropy','Center for Security and Emerging Technology',3330000,'2021-08-01','month','donation log','Biosecurity and pandemic preparedness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/center-security-and-emerging-technology-biosecurity-research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Andrew Snyder-Beattie',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a project investigating the extent and risks of dual-use research in the biosciences."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ 'The grant page says: "The hope is that the results of this project will better inform policymakers and other stakeholders of the security implications of such research."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Against COVID-19 */
 insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes) values
   ('Open Philanthropy','Against COVID-19',10000,'2020-03-01','month','donation log','Biosecurity and pandemic preparedness/COVID-19','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/against-covid-19-covid-19-database-support','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Jacob Trefethen','2020-04-20','day',NULL,NULL, /* date adjusted */

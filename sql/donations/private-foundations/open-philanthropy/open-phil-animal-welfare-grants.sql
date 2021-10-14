@@ -1402,6 +1402,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The later grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/reducetarian-fellowship suggests continued satisfaction with the grantee, though its intended use of funds is somewhat different.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Reducetarian Foundation',200000,'2021-07-01','month','donation log','Animal welfare/diet change','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/reducetarian-fellowship','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,NULL,'Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a new fellowship program for undergraduate students in the United States. Fellows will work with mentors, participate in seminars and networking opportunities, and be placed in internships at participating organizations and startups working to reduce societal consumption of animal products."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
@@ -2413,6 +2425,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
+
+/* Grants to Animal Alliance Asia */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Animal Alliance Asia',120000,'2021-08-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-alliance-asia','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Asia','Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support farm animal welfare movement building in Asia. AAA intends to use this funding to host conferences for animal welfare groups across Asia, provide skills-building and networking for groups and individuals working on farm animal advocacy in the region, and reach out to value-aligned organizations."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Grant via The Pollination Project');
 
 /* Cause area normalization not done from this point onward */
 
