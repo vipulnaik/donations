@@ -689,6 +689,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'The grant page says: "[the grant is] to support research led by Gary McGraw on machine learning security. The research will focus on building a taxonomy of known attacks on machine learning, exploring a hypothesis of representation and machine learning risk, and performing an architectural risk analysis of machine learning systems."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'The grant page says: "Our potential risks from advanced artificial intelligence team hopes that the research will help advance the field of machine learning security."',
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
