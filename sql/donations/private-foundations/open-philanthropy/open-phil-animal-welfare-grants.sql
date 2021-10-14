@@ -1146,7 +1146,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
   ('Open Philanthropy','Eurogroup for Animals',535699,'2016-12-01','month','donation log','Animal welfare/factory farming/fish','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/eurogroup-animals-fish-welfare','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','European Union','Lewis Bollard','2017-03-13','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/e3Ffn10iZjg',NULL,
   /* donation_process */ NULL,
-  /* intended_use_of_funds_category */ 'Direct projecet expenses',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page says the grant is "to support its work to improve fish welfare."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'The grant page says: "According to the best estimates we are aware of, fish account for about three quarters of all vertebrate farmed animals. Although conditions vary greatly by species and country, our understanding is that most fish are farmed for longer and in harsher conditions than those experienced by most other farm animals. Consequently, we find it plausible that fish farming could be the greatest cause of farm animal suffering globally. Despite this, we are not aware of any major animal welfare groups that have campaigns focused on fish welfare, and we therefore believe that it is important to start building this area of farm animal welfare advocacy."',
@@ -1221,7 +1221,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
   ('Open Philanthropy','Eurogroup for Animals',635000,'2020-05-01','month','donation log','Animal welfare/factory farming/chicken/broiler chicken/layer chicken','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/eurogroup-animals-eu-chicken-welfare-advocacy-2020','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','European Union','Amanda Hungerford',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
-  /* intended_use_of_funds_category */ 'Dircet project expenses',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support EU advocacy work for layer hen and broiler chicken welfare. This funding will enable Eurogroup for Animals to carry out EU welfare campaigns, provide regrants to cage-free advocacy groups, and research layer hen and broiler chicken welfare."',
   /* intended_funding_timeframe_in_months */ 24,
   /* donor_donee_reason */ NULL,

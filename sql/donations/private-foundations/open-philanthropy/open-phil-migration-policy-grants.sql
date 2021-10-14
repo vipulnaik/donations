@@ -1,4 +1,8 @@
-# -- Migration/labor mobility grants
+/* Grants to Free Migration Project */
+
+
+
+/* Other grants */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, donation_earmark, influencer,donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions) values
   ('Open Philanthropy','New York University',30000,'2015-08-01','month','donation log','Migration policy/labor mobility/RCT','https://www.openphilanthropy.org/focus/us-policy/immigration-policy/new-york-university-support-labor-mobility-rct','https://www.openphilanthropy.org/focus/us-policy/immigration-policy','Grantee represented by Suresh Naidu and Yaw Nyarko; grant references cause page https://www.openphilanthropy.org/research/cause-reports/labor-mobility',NULL,NULL,'2015-09-23', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/_m_jhh_KTko',NULL),
