@@ -157,7 +157,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, affected_states, affected_cities, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Abundant Housing Massachusetts',600000,'2021-03-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/abundant-housing-massachusetts','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States','Massachusetts','Boston','Zachary Robinson',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
-  /* intended_use_of_funds_category */ 'Organnizational general support',
+  /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'Grant "for general support. Abundant Housing Massachusetts is a new statewide organization that advocates for more housing across Massachusetts and within the Greater Boston Area."',
   /* intended_funding_timeframe_in_months */ 24,
   /* donor_donee_reason */ NULL,

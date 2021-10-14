@@ -996,7 +996,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Encompass',200000,'2020-05-01','month','donation log','Animal welfare/movement growth/diversity, equity, and inclusion','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/encompass-diversity-farm-animal-welfare-movement','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Amanda Hungerford',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
-  /* intended_use_of_funds_category */ 'Direct projcet expenses',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page says the grant is "to support its work to make the farm animal welfare movement more racially diverse, equitable, and inclusive. Encompass intends to use these funds to provide long-term support to advocates of color, as well as to farm animal welfare organizations."',
   /* intended_funding_timeframe_in_months */ 24,
   /* donor_donee_reason */ NULL,
