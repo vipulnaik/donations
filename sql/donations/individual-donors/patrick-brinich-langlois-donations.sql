@@ -1,3 +1,64 @@
+insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, goal_amount, influencer, intended_use_of_funds_category, intended_use_of_funds, donor_donee_reason, donor_amount_reason, donor_timing_reason, notes) values
+  /* 2020 */
+  ('Patrick Brinich-Langlois','Guarding Against Pandemics',15030,NULL,'2020-10-24','day','donation log','Biosecurity and pandemic preparedness','https://www.patbl.com/misc/other/donations/',NULL,NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The donations page says: "This was for a campaign for a Denver ballot initiative that would increase marijuana taxes to fund pandemic-preparedness research."',
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'The reasons for the specific amount are not given, but the donations page gives some context: "It''s not tax-deductible, and it includes a $30 wire-transfer fee."',
+  /* donor_timing_reason */ 'Reasons for timing are not provided, but the timing is likely influenced by the timing of the ballot, which is likely part of the November 2020 elections.',
+  /* notes */ NULL),
+
+  ('Patrick Brinich-Langlois','Rethink Priorities',22492,NULL,'2020-11-01','day','donation log','Effective altruism','https://www.patbl.com/misc/other/donations/',NULL,NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The donations page says: "Restricted to longtermism and meta/movement-building."',
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* notes */ NULL),
+
+  ('Patrick Brinich-Langlois','Centre for Effective Altruism',10,NULL,'2020-11-02','day','donation log','Effective altruism','https://www.patbl.com/misc/other/donations/',NULL,NULL,
+  /* intended_use_of_funds_category */ NULL,
+  /* intended_use_of_funds */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* notes */ 'The donations page says: "This was made through Every.org, and I also gave the $25 referral bonus to the CEA."'),
+
+  ('Patrick Brinich-Langlois','Donor lottery',30,NULL,'2020-11-29','day','donation log',NULL,
+'https://www.patbl.com/misc/other/donations/',NULL,NULL,
+  /* intended_use_of_funds_category */ NULL,
+  /* intended_use_of_funds */ NULL,
+  /* donor_donee_reason */ 'The donations page says: "Test donations in preparation for Facebook''s Giving Tuesday matching program." The selection of donee was likely reflective of the fact that this "donation" was a wash in expected value.',
+  /* donor_amount_reason */ 'The donations page says: "Test donations in preparation for Facebook''s Giving Tuesday matching program." The small amount reflects the "test" nature of the donation.',
+  /* donor_timing_reason */ 'The donations page says: "Test donations in preparation for Facebook''s Giving Tuesday matching program." This expains the timing of the donation, two days before Giving Tuesday.',
+  /* notes */ 'No donations are recorded as having been made on Giving Tuesday, so it''s unclear what the testing was for.'),
+
+  ('Patrick Brinich-Langlois','Centre for Effective Altruism',10,NULL,'2020-12-21','day','donation log','Effective altruism','https://www.patbl.com/misc/other/donations/',NULL,NULL,
+  /* intended_use_of_funds_category */ NULL,
+  /* intended_use_of_funds */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* notes */ NULL),
+
+  ('Patrick Brinich-Langlois','Donor lottery',42000,NULL,'2020-11-29','day','donation log',NULL,
+'https://www.patbl.com/misc/other/donations/',NULL,NULL,
+  /* intended_use_of_funds_category */ NULL,
+  /* intended_use_of_funds */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* notes */ NULL),
+
+  /* 2021 */
+  ('Patrick Brinich-Langlois','Effective Altruism Funds: Long-Term Future Fund',500,NULL,'2021-03-06','day','donation log',NULL,'https://www.patbl.com/misc/other/donations/',NULL,NULL,
+  /* intended_use_of_funds_category */ NULL,
+  /* intended_use_of_funds */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'The grant page says: "I got a credit card that gives you $200 if you spend $500 within the first three months." This explains the donation amount of 500 USD.',
+  /* donor_timing_reason */ 'The grant page says: "I got a credit card that gives you $200 if you spend $500 within the first three months." Presumably the credit card had been received within the last three months.',
+  /* notes */ NULL);
+
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer, special_donation_reason) values
   /* Berkeley REACH donations */
   ('Patrick Brinich-Langlois','Berkeley REACH',100,NULL,'2019-12-01','day','donation log','Rationality community','https://www.patbl.com/misc/other/donations/','This looks like one of many monthly donations for $100.', NULL, NULL, NULL, NULL, NULL, NULL, 'Committed periodic donation'),

@@ -2674,7 +2674,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
   ('Open Philanthropy','Compassion in World Farming USA',30000,'2017-05-01','month','donation log','Animal welfare/factory farming/Latin America','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/compassion-world-farming-latin-america-broiler-chicken-welfare-research','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','Argentina|Brazil|Columbia|Chile|Mexico','Lewis Bollard','2017-07-27','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/hCmf-IGe40Y',NULL,
   /* donation_process */ 'Discretionary grant',
-  /* intended_use_of_funds_category */ 'Direct projeect expenses',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research into opportunities for broiler chicken welfare campaigns in Latin America." https://www.openphilanthropy.org/files/Grants/CIWF/CIWF_Market_Research_Proposal_in_Latin_America_2017.pdf has the market research proposal from the grantee.',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
