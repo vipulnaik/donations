@@ -1,5 +1,5 @@
-# This file is manually edited. Vitalik's donation to MIRI is covered in the
-# MIRI top donors file so not listed here.
+/* This file is manually edited. Vitalik's donation to MIRI is covered in the
+   MIRI top donors file so not listed here. */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, payment_modality, match_eligible, employer_match, matching_employer) values
     ('Vitalik Buterin','Internet Archive',93469.0,'2018-02-10','day','transaction','Digital preservation','https://www.ccn.com/intenet-archive-sees-big-donations-vitalik-buterin-pineapple-fund/',NULL,'Ethereum transaction',NULL,NULL,NULL)
