@@ -234,6 +234,48 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant round also includes a grant from Jaan Tallinn ($221,000) to the same grantee.');
 
+/* Grants to Centre for Enabling EA Learning & Research */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  /* This first grant was *not* through the SFF process, but is being included here
+     to place it together with Jaan Tallin's other grantmaking of that era, most of
+     which was based on the SFF process. */
+  ('Jaan Tallinn','Centre for Enabling EA Learning & Research',50000,'2020-01-01','year','date of donation announced in announcement','Effective altruism/housing','https://forum.effectivealtruism.org/posts/Trs4FeTN3eYuPs3P9/updates-from-the-centre-for-enabling-ea-learning-and',NULL,'2020-11-27','day','https://forum.effectivealtruism.org/posts/Trs4FeTN3eYuPs3P9/updates-from-the-centre-for-enabling-ea-learning-and',NULL,NULL,
+  /* donation_process */ 'Although most of Jaan Tallinn''s public grantmaking during this period is through the Survival and Flourishing Fund''s process (with https://survivalandflourishing.fund/ having the details), this particular grant was not made through the SFF process.',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'https://forum.effectivealtruism.org/posts/Trs4FeTN3eYuPs3P9/updates-from-the-centre-for-enabling-ea-learning-and#Fundraising_ says: "Recently we were fortunate to receive a generous donation of $50,000 from Jaan Tallinn. This was nominally for 6 months of operating expenses. However, with our reduced resident numbers, we expect it to last considerably longer."',
+  /* intended_funding_timeframe_in_months */ 6,
+  /* donor_donee_reeason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Continued support from Jaan Tallinn for the donee in 2021, this time via the Survival and Flourishing Fund''s S-process (see https://survivalandflourishing.fund/sff-2021-h1-recommendations for the 2021 H1 grant) suggests continued satisafction with the donee.',
+  /* notes */ NULL),
+
+  ('Jaan Tallinn','Centre for Enabling EA Learning & Research',61000,'2021-04-01','month','donation log','Effective altruism/housing','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0064,
+  /* donation_process */ 'Part of the 2021 H1 grants based on the S-process (simulation process that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the first one with a grant to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The grant round includes a grant by Jed McCaleb ($21,000) to the same grantee (CEEALAR).'),
+
+  ('Jed McCaleb','Centre for Enabling EA Learning & Research',21000,'2021-04-01','month','donation log','Effective altruism/housing','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,243000,0.0864,
+  /* donation_process */ 'Part of the 2021 H1 grants based on the S-process (simulation process that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the first one with a grant to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The grant round includes a grant by Jaan Tallinn ($61,000) to the same grantee (CEEALAR).');
+
 /* Other grants */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
