@@ -413,7 +413,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this 2020 H1 round of grants is SFF''s third round; the grantee had also received a grant in the first round.',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ 'Continued grants in future grant rounds such as https://survivalandflourishing.fund/sff-2020-h2-recommendations (2020 H2) suggest continued satisfaction with the grantee.',,
+  /* donor_retrospective */ 'Continued grants in future grant rounds such as https://survivalandflourishing.fund/sff-2020-h2-recommendations (2020 H2) suggest continued satisfaction with the grantee.',
   /* notes */ 'The grant round also includes grants from Jaan Tallinn ($30,000) and Jed McCaleb ($10,000) to the same grantee (FLI).'),
 
   ('Jaan Tallinn','Future of Life Institute',30000,'2020-04-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2020-h1-recommendations','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.0326,
