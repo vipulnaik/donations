@@ -1,6 +1,11 @@
-/* Donors tracked elsewhere: Loren Merritt, Gordon Irlam, Open Philanthropy
-   BERI, FLI, Robert Yaman, Zvi Mowshowitz, Ben Hoskin, Blake Borgeson,
-   and possibly some others. */
+/* Donors tracked elsewhere: Loren Merritt, Gordon Irlam, Open
+   Philanthropy BERI, FLI, Robert Yaman, Zvi Mowshowitz, Ben Hoskin,
+   Blake Borgeson, Thiel Foundation, and possibly some others.  Grants
+   from Jaan Tallinn and Jed McCaleb made through the Survival and
+   Flourishing Fund's process are not included but their older grants
+   are currently present here; at some point we will remove their
+   grants from this sheet as well.  */
+
 insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,notes) values
     ('Adam Weissman','Machine Intelligence Research Institute',10000.0,'2012-07-19','year','donee contributor list','AI safety','https://web.archive.org/web/20120719220051/http://singularity.org:80/topdonors/',NULL)
     ,('Alan Chang','Machine Intelligence Research Institute',18000.0,'2017-09-29','year','donee contributor list','AI safety','https://web.archive.org/web/20170929195133/https://intelligence.org/topcontributors/',NULL)
