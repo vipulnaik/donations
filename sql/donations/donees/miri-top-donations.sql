@@ -1,6 +1,6 @@
-# -- Donors tracked elsewhere: Loren Merritt, Gordon Irlam, Open Philanthropy
-# -- Project, BERI, FLI, Robert Yaman, Zvi Mowshowitz, Ben Hoskin, Blake Borgeson,
-# -- and possibly some others.
+/* Donors tracked elsewhere: Loren Merritt, Gordon Irlam, Open Philanthropy
+   BERI, FLI, Robert Yaman, Zvi Mowshowitz, Ben Hoskin, Blake Borgeson,
+   and possibly some others. */
 insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,notes) values
     ('Adam Weissman','Machine Intelligence Research Institute',10000.0,'2012-07-19','year','donee contributor list','AI safety','https://web.archive.org/web/20120719220051/http://singularity.org:80/topdonors/',NULL)
     ,('Alan Chang','Machine Intelligence Research Institute',18000.0,'2017-09-29','year','donee contributor list','AI safety','https://web.archive.org/web/20170929195133/https://intelligence.org/topcontributors/',NULL)
@@ -381,10 +381,6 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
     ,('Stephan T. Lavavej','Machine Intelligence Research Institute',15000.0,'2014-10-10','year','donee contributor list','AI safety','http://archive.today/2014.10.10-021359/http://intelligence.org/topdonors/',NULL)
     ,('Stephanie Zolayvar','Machine Intelligence Research Institute',11247.0,'2017-12-23','year','donee contributor list','AI safety','https://web.archive.org/web/20171223071315/https://intelligence.org/topcontributors/',NULL)
     ,('The Maurice Amado Foundation','Machine Intelligence Research Institute',16000.0,'2017-06-27','year','donee contributor list','AI safety','https://web.archive.org/web/20170627074344/https://intelligence.org/topcontributors/',NULL)
-    ,('Thiel Foundation','Machine Intelligence Research Institute',1100000.0,'2012-07-19','year','donee contributor list','AI safety','https://web.archive.org/web/20120719220051/http://singularity.org:80/topdonors/',NULL)
-    ,('Thiel Foundation','Machine Intelligence Research Institute',27000.0,'2013-01-15','year','donee contributor list','AI safety','https://web.archive.org/web/20130115144542/http://singularity.org/topdonors/',NULL)
-    ,('Thiel Foundation','Machine Intelligence Research Institute',250000.0,'2014-10-10','year','donee contributor list','AI safety','http://archive.today/2014.10.10-021359/http://intelligence.org/topdonors/',NULL)
-    ,('Thiel Foundation','Machine Intelligence Research Institute',250000.0,'2015-05-07','year','donee contributor list','AI safety','https://web.archive.org/web/20150507195856/https://intelligence.org/donortools/topdonors.php',NULL)
     ,('Thomas Jackson','Machine Intelligence Research Institute',5000.0,'2014-10-10','year','donee contributor list','AI safety','http://archive.today/2014.10.10-021359/http://intelligence.org/topdonors/',NULL)
     ,('Tobias Dänzer','Machine Intelligence Research Institute',5734.0,'2017-12-23','year','donee contributor list','AI safety','https://web.archive.org/web/20171223071315/https://intelligence.org/topcontributors/',NULL)
     ,('Tomer Kagan','Machine Intelligence Research Institute',10000.0,'2012-09-18','year','donee contributor list','AI safety','https://web.archive.org/web/20120918094656/http://singularity.org:80/topdonors/',NULL)
