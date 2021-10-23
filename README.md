@@ -85,10 +85,11 @@ Currently no other donor has disclosures data.
 
 ### Donee page
 
-Each donee tracked by DLW has a donee page.
-Donee pages have a path starting with `/donee.php`.
-An example is the [donee page for
-LessWrong 2.0](https://donations.vipulnaik.com/donee.php?donee=LessWrong+2.0).
+Each donee tracked by DLW has a donee page.  Donee pages have a path
+starting with `/donee.php`.  An example is the [donee page for
+Lightcone
+Infrastructure](https://donations.vipulnaik.com/donee.php?donee=Lightcone+Infrastructure)
+(formerly LessWrong 2.0).
 
 Some entities are both a donor and a donee, in which case there will be separate pages
 for each role. An example is the Berkeley Existential Risk Initiative (BERI):

@@ -366,7 +366,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Survival and Flourishing Fund','LessWrong 2.0',260000,'2019-08-01','month','donation log','Global catastrophic risks','https://survivalandflourishing.fund/','Alex Flint|Andrew Critch|Eric Rogstad','2019-08-29','day','https://github.com/survivalandflourishing/survivalandflourishing.github.io/blob/cc4ba1e3975f4e4847272ffaf72a6ce09c19648f/_data/recommendations.tsv', 880000, 0.2955,
+  ('Survival and Flourishing Fund','Lightcone Infrastructure',260000,'2019-08-01','month','donation log','Global catastrophic risks','https://survivalandflourishing.fund/','Alex Flint|Andrew Critch|Eric Rogstad','2019-08-29','day','https://github.com/survivalandflourishing/survivalandflourishing.github.io/blob/cc4ba1e3975f4e4847272ffaf72a6ce09c19648f/_data/recommendations.tsv', 880000, 0.2955,
   /* donation_process */ 'Part of the founding batch of grants for the Survival and Flourishing Fund made in August 2019. The fund is partly a successor to part of the grants program of the Berkeley Existential Risk Initiative (BERI) that handled grantmaking by Jaan Tallinn; see http://existence.org/tallinn-grants-future/ As such, this grant to LessWrong 2.0 may represent a renewal of grants totaling $250,000 made by BERI to LessWrong 2.0 in 2018',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,

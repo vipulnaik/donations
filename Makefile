@@ -86,7 +86,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/hurford-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/lets-fund-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/life-extension-docs.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/lw2-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/lightcone-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/mfa-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/miri-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/one-for-the-world-docs.sql
