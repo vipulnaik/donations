@@ -48,8 +48,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant round also includes grants from Jaan Tallinn ($30,000) and Jed McCaleb ($30,000) to the same grantee (80,000 Hours).'),
 
-  ('Jaan Tallinn','80,000 Hours',30000,'2020-04-01','quarter','donation log','Effective altruism/movement growth/career counseling','https://survivalandflourishing.fund/sff-2020-h1-recommendations','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.0326,
-  /* donation_process */ 'Part of the 2020 H1 grants based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  ('Jaan Tallinn','80,000 Hours',30000,'2020-06-09','day','donation log','Effective altruism/movement growth/career counseling','https://jaan.online/philanthropy.html','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.0326,
+  /* donation_process */ 'Part of the 2020 H1 grants https://survivalandflourishing.fund/sff-2020-h1-recommendations based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
@@ -135,13 +135,13 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant round also includes grants from the Survival and Flourishing Fund ($212,000) and Jaan Tallinn ($19,000) to the same grantee (Center for Applied Rationality).'),
 
-  ('Jaan Tallinn','Center for Applied Rationality',19000,'2020-10-01','quarter','donation log','Rationality improvement','https://survivalandflourishing.fund/sff-2020-h2-recommendations','Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,2705000,0.007,
-   /* donation_process */ 'Part of the 2020 H2 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  ('Jaan Tallinn','Center for Applied Rationality',39000,'2020-12-08','day','donation log','Rationality improvement','https://jaan.online/philanthropy.html','Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,NULL,NULL,
+   /* donation_process */ 'Part of the 2020 H2 grants https://survivalandflourishing.fund/sff-2020-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts." The amount recommended by the S-process ($19,000) was less than the amount finally granted ($39,000).',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
+  /* donor_amount_reason */ 'The S-process came with a recommendation for a grant amount of $19,000 but the amount finally granted was $39,000.',
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fourth grant round. Grants to CFAR had been made in the first two grant rounds but not the third one.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ 'Continued grants in future grant rounds (such as https://survivalandflourishing.fund/sff-2021-h1-recommendations in 2021 H1) suggest continued satisfaction with the grantee.',
@@ -186,8 +186,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'Continued grants (such as https://survivalandflourishing.fund/sff-2020-h1-recommendations in 2020 H1) suggest continued satisfaction with the grantee.',
   /* notes */ 'The grant round also includes a grant from the Survival and Flourishing Fund ($70,000) to the same grantee (AI Impacts).'),
 
-  ('Jaan Tallinn','AI Impacts',40000,'2020-04-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2020-h1-recommendations','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.0435,
-  /* donation_process */ 'Part of the 2020 H1 grants based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  ('Jaan Tallinn','AI Impacts',40000,'2020-06-12','day','donation log','AI safety','https://jaan.online/philanthropy.html','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.0435,
+  /* donation_process */ 'Part of the 2020 H1 grants https://survivalandflourishing.fund/sff-2020-h1-recommendations based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
@@ -240,7 +240,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* This first grant was *not* through the SFF process, but is being included here
      to place it together with Jaan Tallin's other grantmaking of that era, most of
      which was based on the SFF process. */
-  ('Jaan Tallinn','Centre for Enabling EA Learning & Research',50000,'2020-09-01','month','date of donation announced in announcement','Effective altruism/housing','https://forum.effectivealtruism.org/posts/Trs4FeTN3eYuPs3P9/updates-from-the-centre-for-enabling-ea-learning-and',NULL,'2020-11-27','day','https://forum.effectivealtruism.org/posts/Trs4FeTN3eYuPs3P9/updates-from-the-centre-for-enabling-ea-learning-and',NULL,NULL,
+  ('Jaan Tallinn','Centre for Enabling EA Learning & Research',50000,'2020-09-28','month','donation log','Effective altruism/housing','https://jaan.online/philanthropy.html',NULL,'2020-11-27','day','https://forum.effectivealtruism.org/posts/Trs4FeTN3eYuPs3P9/updates-from-the-centre-for-enabling-ea-learning-and',NULL,NULL,
   /* donation_process */ 'Although most of Jaan Tallinn''s public grantmaking during this period is through the Survival and Flourishing Fund''s process (with https://survivalandflourishing.fund/ having the details), this particular grant was not made through the SFF process.',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'https://forum.effectivealtruism.org/posts/Trs4FeTN3eYuPs3P9/updates-from-the-centre-for-enabling-ea-learning-and#Fundraising_ says: "Recently we were fortunate to receive a generous donation of $50,000 from Jaan Tallinn. This was nominally for 6 months of operating expenses. However, with our reduced resident numbers, we expect it to last considerably longer."',
@@ -252,7 +252,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'Continued support from Jaan Tallinn for the donee in 2021, this time via the Survival and Flourishing Fund''s S-process (see https://survivalandflourishing.fund/sff-2021-h1-recommendations for the 2021 H1 grant) suggests continued satisafction with the grantee.',
   /* notes */ 'The exact month the grant was made was confirmed through private communication. The public announcement did not include the month.'),
 
-  ('Jaan Tallinn','Centre for Enabling EA Learning & Research',61000,'2021-04-01','month','donation log','Effective altruism/housing','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0064,
+  ('Jaan Tallinn','Centre for Enabling EA Learning & Research',61000,'2021-04-01','quarter','donation log','Effective altruism/housing','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0064,
   /* donation_process */ 'Part of the 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
@@ -264,7 +264,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant round includes a grant by Jed McCaleb ($21,000) to the same grantee (CEEALAR).'),
 
-  ('Jed McCaleb','Centre for Enabling EA Learning & Research',21000,'2021-04-01','month','donation log','Effective altruism/housing','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,243000,0.0864,
+  ('Jed McCaleb','Centre for Enabling EA Learning & Research',21000,'2021-04-01','quarter','donation log','Effective altruism/housing','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,243000,0.0864,
   /* donation_process */ 'Part of the 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
@@ -291,8 +291,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant round also includes grants from Jaan Tallinn ($280,000) and Jed McCaleb ($40,000) to the same grantee (MIRI).'),
 
-  ('Jaan Tallinn','Machine Intelligence Research Institute',280000,'2020-04-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2020-h1-recommendations','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.3043,
-  /* donation_process */ 'Part of the 2020 H1 grants based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  ('Jaan Tallinn','Machine Intelligence Research Institute',280000,'2020-06-11','day','donation log','AI safety','https://survivalandflourishing.fund/sff-2020-h1-recommendations','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.3043,
+  /* donation_process */ 'Part of the 2020 H1 grants https://survivalandflourishing.fund/sff-2020-h1-recommendations based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
@@ -315,13 +315,13 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant round also includes grants from the Survival and Flourishing Fund ($20,000) and Jaan Tallinn ($280,000) to the same grantee (MIRI).'),
 
-  ('Jaan Tallinn','Machine Intelligence Research Institute',543000,'2020-10-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2020-h2-recommendations','Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,2705000,0.2007,
-  /* donation_process */ 'Part of the 2020 H2 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  ('Jaan Tallinn','Machine Intelligence Research Institute',563000,'2020-12-17','day','donation log','AI safety','https://jaan.online/philanthropy.html','Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Part of the 2020 H2 grants https://survivalandflourishing.fund/sff-2020-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts." The recommended grant amount was $543,000 but the actual grant made was for $563,000.',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
+  /* donor_amount_reason */ 'The amount recommended by the S-process was $543,0000, but the actual grant amount was $563,000 ($20,000 higher).',
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fourth grant round. Grants to MIRI had also been made in the third round (2020 H1).',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
@@ -353,8 +353,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'At the time, the grantee is known as LessWrong, and listed as such in the grants database. The grant round also includes grants from Jaan Tallinn ($110,000) and Jed McCaleb ($30,000) to the grantee.'),
 
-  ('Jaan Tallinn','Lightcone Infrastructure',110000,'2020-04-01','quarter','donation log','Rationality improvement','https://survivalandflourishing.fund/sff-2020-h1-recommendations','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.1196,
-  /* donation_process */ 'Part of the 2020 H1 grants based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  ('Jaan Tallinn','Lightcone Infrastructure',110000,'2020-06-12','day','donation log','Rationality improvement','https://jaan.online/philanthropy.html','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.1196,
+  /* donation_process */ 'Part of the 2020 H1 grants https://survivalandflourishing.fund/sff-2020-h1-recommendations based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
@@ -377,7 +377,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'At the time, the grantee is known as LessWrong, and listed as such in the grants database. The grant round also includes grants from the Survival and Flourishing Fund ($290,000) and Jaan Tallinn ($110,000) to the grantee.'),
 
-  ('Jaan Tallinn','Lightcone Infrastructure',1055000,'2021-04-01','month','donation log','Rationality improvement','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.1109,
+  ('Jaan Tallinn','Lightcone Infrastructure',1055000,'2021-04-01','quarter','donation log','Rationality improvement','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.1109,
   /* donation_process */ 'Part of the 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
@@ -416,8 +416,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'Continued grants in future grant rounds such as https://survivalandflourishing.fund/sff-2020-h2-recommendations (2020 H2) suggest continued satisfaction with the grantee.',
   /* notes */ 'The grant round also includes grants from Jaan Tallinn ($30,000) and Jed McCaleb ($10,000) to the same grantee (FLI).'),
 
-  ('Jaan Tallinn','Future of Life Institute',30000,'2020-04-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2020-h1-recommendations','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.0326,
-  /* donation_process */ 'Part of the 2020 H1 grants based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  ('Jaan Tallinn','Future of Life Institute',30000,'2020-07-23','day','donation log','Global catastrophic risks','https://jaan.online/philanthropy.html','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.0326,
+  /* donation_process */ 'Part of the 2020 H1 grants https://survivalandflourishing.fund/sff-2020-h1-recommendations based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
@@ -467,7 +467,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 /* Grants to the Centre for the Study of Existential Risk */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Survival and Flourishing Fund','Centre for the Study of Existential Risk',40000,'2019-08-01','month','donation log','Global catastrophic risks','https://survivalandflourishing.fund/','Alex Flint|Andrew Critch|Eric Rogstad','2019-08-29','day','https://github.com/survivalandflourishing/survivalandflourishing.github.io/blob/cc4ba1e3975f4e4847272ffaf72a6ce09c19648f/_data/recommendations.tsv', 880000, 0.0455,
+  ('Survival and Flourishing Fund','Centre for the Study of Existential Risk',40000,'2019-08-01','month','donation log','Global catastrophic risks','https://survivalandflourishing.fund/','Alex Flint|Andrew Critch|Eric Rogstad','2019-08-29','day','https://github.com/survivalandflourishing/survivalandflourishing.github.io/blob/cc4ba1e3975f4e4847272ffaf72a6ce09c19648f/_data/recommendations.tsv',880000,0.0455,
   /* donation_process */ 'Part of the founding batch of grants for the Survival and Flourishing Fund made in August 2019. The fund is partly a successor to part of the grants program of the Berkeley Existential Risk Initiative (BERI) that handled grantmaking by Jaan Tallinn; see http://existence.org/tallinn-grants-future/ As such, this grant to FLI may represent a followup to past grants by BERI in support of CSER (though BERI did not grant directly to CSER).',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
@@ -503,14 +503,26 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'TThe future grant https://survivalandflourishing.fund/sff-2021-h1-recommendations (2021 H1) suggests continued satisfaction with the grantee.',
   /* notes */ 'The grant round also includes a grant from the Survival and Flourishing Fund of $40,000 to the same grantee (CSER).'),
 
-  ('Jaan Tallinn','Centre for the Study of Existential Risk',145000,'2021-04-01','month','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0152,
+  ('Jaan Tallinn','Centre for the Study of Existential Risk',134000,'2020-08-31','day','donation log','Global catastrophic risks','https://jaan.online/philanthropy.html',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Unlike the bulk of Tallinn''s philanthropy, this grant was not made through the Survival and Flourishing Fund''s S-process.',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'A later grant in 2021 based on the Survival and Flourishing Fund''s S-process suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Jaan Tallinn','Centre for the Study of Existential Risk',145000,'2021-04-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0152,
   /* donation_process */ 'Part of the 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the third one with a grant to the grantee.',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the third one with a grant to the grantee. Tallinn had also made a grant to the grantee directly (outside of the SFF''s process) in 2020.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Although Jed McCaleb also participates in this grant round as a funder, he does not make any grants to this grantee.');
@@ -542,8 +554,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Jaan Tallinn also participates as a funder in this grant round, but makes no grants to the grantee in this grant round. The grant is made via Social and Environmental Entrepreneurs.'),
 
-  ('Jaan Tallinn','Global Catastrophic Risk Institute',90000,'2020-04-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2020-h1-recommendations','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.0978,
-  /* donation_process */ 'Part of the 2020 H1 grants based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  ('Jaan Tallinn','Global Catastrophic Risk Institute',90000,'2020-06-09','day','donation log','Global catastrophic risks','https://jaan.online/philanthropy.html','Alex Zhu|Andew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.0978,
+  /* donation_process */ 'Part of the 2020 H1 grants https://survivalandflourishing.fund/sff-2020-h1-recommendations based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
@@ -578,7 +590,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Although the Survival and Flourishing Fund and Jed McCaleb also participates in this grant round as funders, neither of them makes any grants to this grantee. The grant is made via Social and Environmental Entrepreneurs.'),
 
-  ('Jaan Tallinn','Global Catastrophic Risk Institute',48000,'2021-04-01','month','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.5046,
+  ('Jaan Tallinn','Global Catastrophic Risk Institute',48000,'2021-04-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.5046,
   /* donation_process */ 'Part of the 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
@@ -588,4 +600,4 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round; all previous grant rounds included grants to this grantee.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Although Jed McCaleb also participates in this grant round as a funder, he does not make any grants to this grantee.')
+  /* notes */ 'Although Jed McCaleb also participates in this grant round as a funder, he does not make any grants to this grantee.');
