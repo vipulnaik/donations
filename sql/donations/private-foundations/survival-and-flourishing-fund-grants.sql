@@ -618,6 +618,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ 'Jaan Tallinn also participates as a funder in this grant round, but makes no grants to the grantee in this grant round. The grant is made via Social and Environmental Entrepreneurs.'),
 
   ('Jaan Tallinn','Alliance to Feed the Earth in Disasters',175000,'2021-04-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0184,
+  /* donation_process */ 'Part of the 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
@@ -644,6 +645,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ 'Jaan Tallinn also participates as a funder in this grant round, but makes no grants to the grantee in this grant round. The grant is made via the Center for Innovative Governance Research.'),
 
   ('Jaan Tallinn','Charter Cities Institute',137000,'2021-04-01','quarter','donation log','Alternate governance/charter cities','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0144,
+  /* donation_process */ 'Part of the 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
