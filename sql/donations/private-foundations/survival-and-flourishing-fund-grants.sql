@@ -573,7 +573,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ 'Timing determined by timing of grant round; this 2020 H1 round of grants is SFF''s third round; the grantee had also received grants in the first two rounds but from SFF (not from McCaleb, who did not partticipate in either round).',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this 2020 H1 round of grants is SFF''s third round; the grantee had also received grants in the first two rounds but from SFF (not from McCaleb, who did not participate in either round).',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant round also includes a grant from Jaan Tallinn of $90,000. The Survival and Flourishing Fund also participates as a funder in this round but does not make a grant to the grantee. The grant is made via Social and Environmental Entrepreneurs.'),
@@ -590,7 +590,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Although the Survival and Flourishing Fund and Jed McCaleb also participates in this grant round as funders, neither of them makes any grants to this grantee. The grant is made via Social and Environmental Entrepreneurs.'),
 
-  ('Jaan Tallinn','Global Catastrophic Risk Institute',48000,'2021-04-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.5046,
+  ('Jaan Tallinn','Global Catastrophic Risk Institute',48000,'2021-04-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0050,
   /* donation_process */ 'Part of the 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
@@ -598,6 +598,58 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round; all previous grant rounds included grants to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Although Jed McCaleb also participates in this grant round as a funder, he does not make any grants to this grantee.');
+
+/* Grants to Alliance to Feed the Earth in Disasters (ALLFED) */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Survival and Flourishing Fund','Alliance to Feed the Earth in Disasters',10000,'2019-11-01','month','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2019-q4-recommendations','Alex Flint|Alex Zhu|Andrew Critch|Eric Rogstad|Oliver Habryka','2019-12-15','day','https://github.com/survivalandflourishing/survivalandflourishing.github.io/blob/aa47e9860dff38e2af8d08da56a0a13389a75af4/_data/recommendations.tsv',920000,0.0109,
+  /* donation_process */ 'Part of the 2019 Q4 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different Recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this November 2019 round of grants is SFF''s second round and the first with a grant to the grantee. BERI had previously granted money to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Jaan Tallinn also participates as a funder in this grant round, but makes no grants to the grantee in this grant round. The grant is made via Social and Environmental Entrepreneurs.'),
+
+  ('Jaan Tallinn','Alliance to Feed the Earth in Disasters',175000,'2021-04-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0184,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round. In a previous grant round (2019 Q4), SFF had made a grant to the grantee, but Tallinn had not made any direct grants.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Although Jed McCaleb also participates in this grant round as a funder, he does not make any grants to this grantee.');
+
+/* Grants to Charter Cities Institute */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Survival and Flourishing Fund','Charter Cities Institute',60000,'2019-11-01','month','donation log','Alternate governance/charter cities','https://survivalandflourishing.fund/sff-2019-q4-recommendations','Alex Flint|Alex Zhu|Andrew Critch|Eric Rogstad|Oliver Habryka','2019-12-15','day','https://github.com/survivalandflourishing/survivalandflourishing.github.io/blob/aa47e9860dff38e2af8d08da56a0a13389a75af4/_data/recommendations.tsv',920000,0.0109,
+  /* donation_process */ 'Part of the 2019 Q4 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different Recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this November 2019 round of grants is SFF''s second round and the first with a grant to the grantee. BERI had previously granted money to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Jaan Tallinn also participates as a funder in this grant round, but makes no grants to the grantee in this grant round. The grant is made via the Center for Innovative Governance Research.'),
+
+  ('Jaan Tallinn','Charter Cities Institute',137000,'2021-04-01','quarter','donation log','Alternate governance/charter cities','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0144,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round. In a previous grant round (2019 Q4), SFF had made a grant to the grantee, but Tallinn had not made any direct grants.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Although Jed McCaleb also participates in this grant round as a funder, he does not make any grants to this grantee.');
