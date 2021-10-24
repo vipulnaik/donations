@@ -124,7 +124,7 @@ if (isset($row['grant_publication_logistics_notes']) && $row['grant_publication_
     print '<p><b>Notes on grant publication logistics</b>: '.cleanNotes($row['grant_publication_logistics_notes']).'</p>';
 }
 
-if (isset($row['grant_financing_notes']) && $row['grant_publication_logistics_notes'] != '') {
+if (isset($row['grant_financing_notes']) && $row['grant_financing_notes'] != '') {
     print '<p><b>Notes on grant financing</b>: '.cleanNotes($row['grant_financing_notes']).'</p>';
 }
 
