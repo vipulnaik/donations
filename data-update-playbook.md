@@ -84,7 +84,7 @@ General caution: Websites and data formats change all the time. If a script fail
    * [Berkeley Existential Risk Initiative](#berkeley-existential-risk-initiative)
    * [EA Funds](#ea-funds)
    * [EA Grants](#ea-grants)
-   * [GiveWell discretionary regranting](#givewell-discretionary-regranting)
+   * [GiveWell Maximum Impact Fund](#givewell-maximum-impact-fund)
    * [GiveWell Incubation Grants](#givewell-incubation-grants)
    * [Good Ventures/GiveWell support](#good-venturesgivewell-support)
    * [Good Ventures/GiveWell top and standout charities](#good-venturesgivewell-top-and-standout-charities)
@@ -818,11 +818,11 @@ For the initial round, the grants were given in a Google Doc. It's not
 clear when newer grants will be announced or what format they will
 come in.  Just keep an eye on the EA Forum, I guess.
 
-### GiveWell discretionary regranting
+### GiveWell Maximum Impact Fund
 
-Check https://www.givewell.org/about/FAQ/discretionary-grantmaking and
+Check https://www.givewell.org/maximum-impact-fund and
 update
-https://github.com/vipulnaik/donations/blob/master/sql/donations/subsidiaries/givewell-discretionary-regranting.sql
+https://github.com/vipulnaik/donations/blob/master/sql/donations/subsidiaries/givewell-maximum-impact-fund.sql
 
 ### GiveWell Incubation Grants
 

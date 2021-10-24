@@ -178,8 +178,8 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-long-term-future.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-meta.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/givewell-discretionary-regranting.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/givewell-incubation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/givewell-maximum-impact-fund.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/good-ventures-givewell-support.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/good-ventures-grants-to-givewell-top-charities.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/good-ventures-not-givewell-or-open-phil.sql
