@@ -30,7 +30,7 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   /* donor_timing_reason */ 'This donation is made 15 days after Giving Tuesday, by which time the donor likely has more complete information on how many donations were successfully processed and how much more to donate to meet the intended donation target.',
   /* notes */ NULL),
 
-  ('Jeff Kaufman and Julia Wise','GiveWell Maximum Impact Fund',70000,0.2644,'2020-12-16','day','donation log','Global health/malaria','https://www.jefftk.com/donations',NULL,NULL,264727,'GiveWell',NULL,NULL,
+  ('Jeff Kaufman and Julia Wise','GiveWell Maximum Impact Fund',70000,0.2644,'2020-12-16','day','donation log','Global health and development','https://www.jefftk.com/donations',NULL,NULL,264727,'GiveWell',NULL,NULL,
   /* donor_donee_reason */ 'The donor allocates 50% of their Giving Season donation each year to GiveWell-recommended charities, usually the Maximum Impact Fund or the top charity. These donations to the Maximum Impact Fund make up the remainder of the amount the donor intended to donate after accounting for the amount successfully donated on Giving Tuesday and before.',
   /* donor_amount_reason */ 'This final donation seems intended to reach the donor''s intended target for total 2020 donations in this area.',
   /* donor_timing_reason */ 'This donation is made 15 days after Giving Tuesday, by which time the donor likely has more complete information on how many donations were successfully processed and how much more to donate to meet the intended donation target.',
