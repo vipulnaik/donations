@@ -1,4 +1,52 @@
-# -- Peterson Institute for International Economics
+/* Dezernat Zukunft */
+
+insert into donations(donor, donee, amount, donation_date,donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, affected_countries, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
+  ('Open Philanthropy','Dezernat Zukunft',100000,'2019-12-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/dezernat-zukunft-macroeconomic-stabilization','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','Europe',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support "work on monetary and fiscal policy in Europe. Currently run by volunteers, Dezernat Zukunft is a nonpartisan German think tank that seeks to gear European monetary and fiscal policies towards encouraging employment gains and sharing prosperity more widely. Dezernat Zukunft plans to use these funds to increase its organizational capacity, specifically by hiring a full-time staff person, and to support its ability to disseminate innovative macroeconomic policy proposals among policymakers, the press, and the general public."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Followup grants https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/dezernat-zukunft-monetary-and-fiscal-policy-2020 (2020-11) and https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/dezernat-zukunft-general-support-and-regranting (2021-07) suggest continued satisfaction with the grantee.',
+  /* notes */ NULL,
+  /* amount_original_currency */ 91000,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation'),
+
+  ('Open Philanthropy','Dezernat Zukunft',202079,'2020-11-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/dezernat-zukunft-monetary-and-fiscal-policy-2020','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','Germany',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support "work on monetary and fiscal policy in Europe. Dezernat Zukunft is a nonpartisan German think tank that seeks to gear European monetary and fiscal policies toward encouraging employment gains and sharing prosperity more widely. Dezernat Zukunft plans to use these funds to hire staff to encourage fiscal expansion in Germany."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/dezernat-zukunft-general-support-and-regranting (2021-07) suggests continued satisfaction with the grantee.',
+  /* notes */ NULL,
+  /* amount_original_currency */ 170000,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation'),
+
+  ('Open Philanthropy','Dezernat Zukunft',4000000,'2021-07-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/dezernat-zukunft-general-support-and-regranting','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Peter Favaloro','Europe',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support|Regranting',
+  /* intended_use_of_funds */ 'Grant "for general support and re-granting to budding and established organizations working on monetary and fiscal policy throughout Europe. Dezernat Zukunft is a nonpartisan German think tank that focuses on European monetary and fiscal policy, prioritizing employment gains, widely shared prosperity, and a more sustainable macroeconomic environment."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* amount_original_currency */ NULL,
+  /* original_currency */ NULL,
+  /* currency_conversion_basis */ NULL);
+
+/* Peterson Institute for International Economics */
 insert into donations(donor, donee, amount, donation_date,donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, affected_countries,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Peterson Institute for International Economics',250000,'2016-04-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/peterson-institute-international-economics-macroeconomic-stabilization','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States','2016-04-29','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/UeMetwk5b74',NULL,
   /* donation_process */ NULL,
@@ -25,18 +73,109 @@ insert into donations(donor, donee, amount, donation_date,donation_date_precisio
   /* notes */ NULL);
 
 /* Employ America */
+
 insert into donations(donor, donee, amount, donation_date,donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, affected_countries,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Employ America',300000,'2019-04-01','month','donation log','Macroecononic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/employ-america-start-up','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States','2019-05-29','day',NULL,NULL,
-  /* donation_process */ 'This is a total across two grants, one of which is being made by the Open Philanthropy Action Fund',
+  ('Open Philanthropy','Employ America',300000,'2019-04-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/employ-america-start-up','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States','2019-05-29','day',NULL,NULL,
+  /* donation_process */ 'This is a total across two grants, one of which is being made by the Open Philanthropy Action Fund.',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'Grant "to help launch Employ America and cover a six-month pilot period." The grant page says: "Employ America will focus on making the public and intellectual case for policies that support full employment and building a broader set of allies to further that goal, especially with an eye to the next economic downturn. In order to do so, it will produce research and analysis on the state of the labor market and current and potential macroeconomic policies and policymakers. It will be led by Sam Bell, who has previously consulted for us and our grantee Fed Up."',
   /* intended_funding_timeframe_in_months */ 6,
   /* donor_donee_reason */ 'The grant page says: "As labor market conditions have improved over the last few years, we’ve become less confident about the appropriate short term stance of monetary policy, but we continue to believe it is worthwhile to support research and advocacy like this, at least through the next recession."',
-  /* donor_amount_reason */ 'Amount likely determined based on how much is needed for an initial 6-month startup',
+  /* donor_amount_reason */ 'The amount is likely determined based on how much is needed for an initial 6-month startup.',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Several followup grants starting with https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/employ-america-general-support-october-2019 (2019-10) suggest continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Employ America',1000000,'2019-10-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/employ-america-general-support-october-2019','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This is a total across two grants.',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "Employ America makes the public and intellectual case for policies that support full employment and seeks to build a broad set of allies to further that goal. It produces research and analysis on the state of the labor market and current and potential macroeconomic policies and policymakers. Employ America is led by Sam Bell, who has consulted for us and our grantee Fed Up."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Followup grants such as https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/employ-america-general-support-2020 (2020-07) suggest continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Employ America',1250000,'2020-07-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/employ-america-general-support-2020','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This is a total across two grants.',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "Employ America makes the public and intellectual case for policies that support full employment and seeks to build a broad set of allies to further that goal. It produces research and analysis on the state of the labor market and current and potential macroeconomic policies and policymakers. Employ America is led by Sam Bell, who has consulted for us and our grantee Fed Up."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/employ-america-general-support-2021 (2021-05) suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Employ America',1000000,'2021-05-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/employ-america-general-support-2021','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This is a total across two grants.',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "Employ America makes the public and intellectual case for policies that support full employment and seeks to build a broad set of allies to further that goal. It produces research and analysis on the state of the labor market and current and potential macroeconomic policies and policymakers. Employ America was founded by Sam Bell, who has consulted for us and our grantee Fed Up."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notets */ NULL);
+  /* notes */ NULL);
+
+/* Economic Policy Institute */
+
+insert into donations(donor, donee, amount, donation_date,donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, affected_countries,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Economic Policy Institute',500000,'2016-06-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/economic-policy-institute-macroeconomic-policy-research','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States','2016-10-25','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/vAPhHDgenvY',NULL,
+  /* donation_process */ 'The grantee submitted a proposal available at https://www.openphilanthropy.org/files/Grants/EPI/EPI_Open_Phil.pdf that includes proposed research investigations and activities.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page describes two main areas supported by the grant: (1) "Preparing for the next U.S. recession, which we would guess is likely to occur before interest rates return to “normal” levels." (2) "Making the case for the importance of continued focus on reducing unemployment and against premature monetary tightening today." https://www.openphilanthropy.org/files/Grants/EPI/EPI_Open_Phil.pdf has more details on proposed activities.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Followup grants https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/economic-policy-institute-macroeconomic-policy-research-2018 (2018-07) and https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/economic-policy-institute-macroeconomic-policy-research-2020 (2020-08) suggest continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Economic Policy Institute',700000,'2018-07-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/economic-policy-institute-macroeconomic-policy-research-2018','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States','2018-08-15','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "EPI plans to use these funds primarily to continue producing policy-relevant research on the ways in which macroeconomic policy can boost living standards for working Americans, including work on different aspects of the relationships between unemployment, wage growth, inflation, and productivity."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/economic-policy-institute-macroeconomic-policy-research-2020 (2020-08) suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Economic Policy Institute',550000,'2020-08-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/economic-policy-institute-macroeconomic-policy-research-2020','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "EPI plans to use these funds to continue to produce policy-relevant research on the ways in which macroeconomic policy can boost living standards for working Americans, including work on different aspects of the relationships between unemployment, wage growth, inflation, and productivity."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'No explicit reasons are given for the amount; it is a little less than the amount ($700,000) of the previous two-year grant https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/economic-policy-institute-macroeconomic-policy-research-2018 (2018-07).',
+  /* donor_timing_reason */ 'The grant is made right around the end of the timeframe of the previous two-year grant https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/economic-policy-institute-macroeconomic-policy-research-2018 (2018-07).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Urban Institute; note that there are also grants to Urban Institute in land use reform */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, affected_countries, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Urban Institute',50000,'2020-11-01','month','donation log','Macreconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/urban-institute-counter-cyclical-state-funding-mechanisms','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a report on implementing countercyclical state funding mechanisms as a means to support states and localities in managing the effects of economic shocks like the COVID-19 pandemic and recession."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 # -- Macroeconomic policy research/United States
 insert into donations(donor, donee, amount, donation_date,donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, influencer, affected_countries,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
@@ -47,7 +186,6 @@ insert into donations(donor, donee, amount, donation_date,donation_date_precisio
   ('Open Philanthropy','Center for Popular Democracy',1429000,'2015-12-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-popular-democracy-fed-campaign-2016','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant supports the "Fed Up" campaign. Deemed unlikely to succeed but high-impact if it succeeds. Conversation with Ady Barkman of grantee organization around the time of the grant allocation at https://www.openphilanthropy.org/sites/default/files/Ady_Barkan_12-8-15_%28public%29.pdf on 2015-12-08. Followup conversations with Ady Barkan and Shawn Sebastian of grantee organization at https://www.openphilanthropy.org/sites/default/files/Fed_Up_07-14-16_and_08_31_16_and_09_02_16_%28public%29.pdf on 2016-07-14, 2016-08-31, and 2016-09-02','Alexander Berger','United States', '2016-04-06','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/JKm8ZFwuPlk',NULL),
   ('Open Philanthropy','Center on Budget and Policy Priorities',425000,'2016-07-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-budget-and-policy-priorities-full-employment-project-2016','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant supports the Full Employment Project, and renews a previous grant to CBPP made in 2014','Alexander Berger','United States', '2016-10-25', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/vAPhHDgenvY',NULL),
   ('Open Philanthropy','Center for American Progress',500000,'2016-03-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-american-progress-macroeconomic-stabilization','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant for macroeconomic stabilization policy: convenings, research reports on impacts (e.g., impact of Taylor rule on income distribution), policy proposals, and network and outreach capacity to share research and proposals with media, politicians, and Federal Reserve','Alexander Berger','United States','2016-04-19','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/Br6kCBlTAkg',NULL),
-  ('Open Philanthropy','Economic Policy Institute',500000,'2016-06-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/economic-policy-institute-macroeconomic-policy-research','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant supports work on macroeconomic policy. Includes exploring monetary policy tools, automatic stabilizes, novel fiscal stimulus measures, also making the case for importance of continued focus on reducing unemployment and against premature monetary tightening today. Essentially, same as grant to Roosevelt Institute','Alexander Berger','United States', '2016-10-25', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/vAPhHDgenvY',NULL),
   ('Open Philanthropy','Center for Popular Democracy',750000,'2015-01-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-popular-democracy-fed-campaign-2015','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant is for Fed Up Campaign 2015. Supports campaign to educate public and policymakers about monetary policy issues','Alexander Berger','United States', '2015-02-27', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/Tuu9P250vVQ',NULL),
   ('Open Philanthropy','Center on Budget and Policy Priorities',335000,'2014-09-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-budget-and-policy-priorities-full-employment-project','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant is for the Full Employment Project. Open Phil is impressed by the track record of CBPP. Followup conversation with Jared Bernstein and Ben Spielberg of grantee organization at https://www.openphilanthropy.org/sites/default/files/Jared_Bernstein_and_Ben_Spielberg_10-21-15_%28public%29.pdf on 2015-10-21','Alexander Berger','United States', '2014-09-19', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/HWCQwDbQhks',NULL),
   ('Open Philanthropy','Center for Popular Democracy',100000,'2014-08-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-popular-democracy-federal-reserve-campaign','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant is to support a campaign to educate the public and policymakers about monetary policy issues','Alexander Berger','United States', '2014-09-25', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/1akCOFYWWOM',NULL),
@@ -55,5 +193,4 @@ insert into donations(donor, donee, amount, donation_date,donation_date_precisio
   ('Open Philanthropy','Center for Popular Democracy',1200000,'2018-02-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-popular-democracy-fed-campaign-2018','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant to support the “Fed Up” campaign. The campaign aims to encourage more accommodative monetary policies and greater transparency and public engagement in the governance of the Federal Reserve. Renewal of https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-popular-democracy-fed-campaign-2017 (2017 grant). Companion grant https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-popular-democracy-action-fund-fed-campaign-2018 by the Open Philanthropy Action Fund to the Center for Popular Democracy Action Fund, the associated 501(c)(4)','Alexander Berger','United States','2018-03-24','day',NULL,NULL),
   ('Open Philanthropy','Center on Budget and Policy Priorities',100000,'2018-05-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-budget-and-policy-priorities-automatic-stabilizers','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant to support work on enhancing automatic fiscal stabilizers. Automatic fiscal stabilizers are taxes and government programs that respond automatically to changing economic conditions, and do not require additional Congressional action.','Alexander Berger','United States','2018-06-21','day',NULL,NULL),
   ('Open Philanthropy','Center on Budget and Policy Priorities',250000,'2018-07-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-budget-and-policy-priorities-full-employment-project-2018','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Exit grant to support the Full Employment Project. Renewal of July 2016 grant https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-budget-and-policy-priorities-full-employment-project-2016 Open Phil will discontinue support after this grant, which completes five years of support for the project. The reason for not continuing further is the unclear impact of marginal funding and the desire to give space to other funders','Alexander Berger','United States','2018-08-02','day',NULL,NULL),
-  ('Open Philanthropy','Economic Policy Institute',700000,'2018-07-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/economic-policy-institute-macroeconomic-policy-research-2018','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant to support macroeconomic policy research. EPI plans to use these funds primarily to continue producing policy-relevant research on the ways in which macroeconomic policy can boost living standards for working Americans, including work on different aspects of the relationships between unemployment, wage growth, inflation, and productivity. Renewal of 2016 grant https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/economic-policy-institute-macroeconomic-policy-research','Alexander Berger','United States','2018-08-16','day',NULL,NULL),
   ('Open Philanthropy','Washington Center for Equitable Growth',100000,'2018-10-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/washington-center-for-equitable-growth-automatic-stabilizers-conference','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant to host a conference, in partnership with the Hamilton Project, on a framework for thinking about optimal design of automatic stabilizer programs as well as specific suggestions for reforms. Automatic fiscal stabilizers are taxes and government programs that respond automatically to changing economic conditions, and do not require additional Congressional action, and the Open Philanthropy Project believes they are important for mitigating the effects of economic downturns.','Alexander Berger','United States','2018-11-27','day',NULL,NULL);
