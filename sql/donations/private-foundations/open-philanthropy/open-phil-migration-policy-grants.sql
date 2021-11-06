@@ -268,6 +268,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The paper https://www.yawnyarko.com/assets/publications/01.01_MonopsonyPower.pdf (see https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.725.7184&rep=rep1&type=pdf for a draft version from August 2015) titled "Monopsony Power in Migrant Labor Markets: Evidence from the United Arab Emirates" seems to be related to this research, but the timeline and paper contents suggest that it''s not the output of the data collection funded by Open Philanthropy, but of earlier work. The paper that should have been produced from this research could not be found in a search in October 2021.');
 
+/* Grants to Federation of American Scientists */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Federation of American Scientists',600000,'2021-07-01','month','donation log','Migration policy/high-skilled migraation','https://www.openphilanthropy.org/us-policy/immigration-policy/federation-of-american-scientists-high-skilled-immigration-policy','https://www.openphilanthropy.org/focus/us-policy/immigration-policy','United States',NULL,'Emily Oehlsen|Alexander Berger',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work on high-skilled immigration policy."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Grants to MoveOn.org Civic Action */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
