@@ -94,6 +94,7 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   /* donor_retrospective */ NULL,
   /* notes */ 'The amount listed as donated is based on Fixer.io currency conversion; the actual amount paid out by the donor was $4306.41 USD, including a foreign exchange fee'),
   /* End of 2019 donations */
+
   ('Vipul Naik','Free Migration Project',3000,1.0,'2019-12-22','day','donation log','Migration policy','https://vipulnaik.com/donation-history/','Check',false,3000,NULL,NULL,NULL,NULL,
   /* donation_process */ 'End-of-year donation made from a perspective of semi-obligation',
   /* intended_use_of_funds_category */ 'Organizational general support',
@@ -105,3 +106,15 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   /* donor_next_donation_thoughts */ 'The donation page log says: "I''m not planning to make a followup donation in the near future, since this donation discharges my responsibility; any further donation decisions will be based on the same sort of extensive analysis that I subjected my EA Hotel donation to."',
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
+
+  ('Vipul Naik','kfangurl',1000,1.0,'2021-10-09','day','donation log','Entertainment','https://vipulnaik.com/blog/my-somewhat-unusual-q4-2021-donation/','PayPal',false,1004.99,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The donation post describes background thinking that led to the donation, including thoughts around sponsoring a Legibility Prize, as well as deferral of the decision in order to investigate other donation opportunities. It says: "The ultimate decision to donate was a sort-of-impulsive decision with all this information in the backdrop."',
+  /* intended_use_of_funds_category */ NULL,
+  /* intended_use_of_funds */ 'The funds go directly to support kfangurl, the blogger behind https://thefangirlverdict.com/ (The Fangirl Verdict), a blog reviewing Korean and other East Asian dramas.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'Several reasons are listed in bullet points in the donation post, including a belief that the world would be better off through emulation of her style, the world is likely better off if she continues this work, preference for continued public production, and confidence that she is on the path to figuring out sustainable monetization.',
+  /* donor_amount_reason */ 'The donation amount of $1,000 is described in the donation post as the minimum amount the donor considers donating. The donor also gives two donor-specific reasons (maintaing budget for other donations, reducing potential regret) and two donee-specific reasons (not creating an obligation, not distorting the donee''s search for monetization opportunities) for not donating more, and says the donor-specific reasons were more constraining.',
+  /* donor_timing_reson */ 'The donation post says: "I had been pondering this donation since September; I mooted the idea of the Legibility Prize back on September 22. Initially, I wanted to hold off on this because I was expecting to make other, larger donations that would use up my $1,000/month budget for a while. By early October, I had decided that I either wouldn’t make the larger donations or would make them at a lower size than I had initially thought. This left some room for making the donation to kfangurl. The ultimate decision to donate was a sort-of-impulsive decision with all this information in the backdrop."',
+  /* donor_next_donation_thoughts */ 'The donation post says: "In light of the various considerations that led me to choose the donation amount, it’s relatively unlikely that I will make further donations to kfangurl. I would not rule it out, but I do not expect to privilege this donation target for consideration when thinking about future donations. [...] The donation amount is small enough that I do not feel obliged to write up a retrospective on it. I do, however, plan to continue monitoring the blog, something that’s made easier by the fact that I expect to continue to be interested in its content as a consumer. The success and the trajectory of The Fangirl Verdict in coming years will inform my thinking about such donations."',
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The donation post highlights the prima facie unusual nature of the donation: "This may come as a surprise, given my past donation history and my interest in effective altruism." It also includes several details on the evolution of the donor''s thinking about donation, donations versus gifts, and the importance of legibiility and public production.');
