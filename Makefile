@@ -51,6 +51,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/biomedical-research-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/biosecurity-and-pandemic-preparedness-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/catf-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cause-prioritization-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cea-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ces-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cfar-docs.sql
