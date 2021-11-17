@@ -153,6 +153,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL);
 
 /* CalTech grant(s) */
+
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','California Institute of Technology',2000000,'2019-07-01','month','donation log','Scientific research/transformative basic science','https://www.openphilanthropy.org/focus/scientific-research/california-institute-technology-research-reproductive-biology-magdalena-zernicka-goetz','https://www.openphilanthropy.org/focus/scientific-research','Chris Somerville|Heather Youngs','2019-09-05','day',NULL,NULL,
   /* donation_process */ NULL,
@@ -160,6 +161,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ 'The grant page says the grant is "to support research by Professor Magdalena Zernicka-Goetz on reproductive biology. Dr. Zernicka-Goetz’s proposed research would focus on understanding the molecular processes by which a single cell gives rise to all of the cell types and organ/tissue structures that comprise a fully developed embryo."',
   /* intended_funding_timeframe_in_months */ 48,
   /* donor_donee_reason */ 'The grant page says: "Progress in this area could eventually enable people with fertility challenges to have children and could eventually help reduce the incidence of a wide variety of high-burden disorders (such as heart disease, chronic pain, depression, and Alzheimer’s disease) and promote other positive outcomes. Dr. Zernicka-Goetz’s research is amongst the most promising our science team has encountered so far in this field."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Purdue University grant(s) */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Purdue University',1500000,'2021-08-01','month','donation log','Scientific research/tools and techniques','https://www.openphilanthropy.org/focus/scientific-research/purdue-preclinical-data-research-brubaker','https://www.openphilanthropy.org/focus/scientific-research/scientific-innovation-tools-and-techniques','Douglas Brubaker','Heather Youngs|Chris Somerville',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research led by Dr. Douglas Brubaker on developing a computational model to translate preclinical data in mouse disease models to humans. [...] Dr. Brubaker intends to use this funding to develop a computational model that uses mouse data from an Alzheimer’s disease study conducted by Washington University to attempt to predict the study’s human trial outcomes."',
+  /* intended_funding_timeframe_in_months */ 60,
+  /* donor_donee_reason */ 'The grant page says: "It is not uncommon that preclinical data from mice fail to translate to similar preclinical results in humans, limiting the applicability of mouse data to human medicine. [...] Our scientific research team believes that Dr. Brubaker’s computational model, if successful, could improve drug discovery and reduce reliance on mouse experiments."',
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,

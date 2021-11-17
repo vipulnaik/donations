@@ -102,12 +102,27 @@ insert into donations(donor, donee,amount,donation_date,donation_date_precision,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'Grant "to provide general support and to support GHSS project activities on deliberate events and global health security."',
   /* intended_funding_timeframe_in_months */ 24,
-  /* donor_donee_reason */ 'The grant is an "exit grant" intended to provide approximatly two years of operating support. It follows a February 2020 grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity-and-pandemic-preparedness/georgetown-center-global-health-science-and-security-general-support-2020 and is probably intendd to give the grantee enough time to find other sources of support.',
+  /* donor_donee_reason */ 'The grant is an "exit grant" intended to provide approximately two years of operating support. It follows a February 2020 grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity-and-pandemic-preparedness/georgetown-center-global-health-science-and-security-general-support-2020 and is probably intendd to give the grantee enough time to find other sources of support.',
   /* donor_amount_reason */ 'The grant page says that the grant "will provide GHSS with approximately two years of operating support." This is probably considered a reasonable amount of time for the grantee to find alternativ sources of support.',
   /* donor_timing_reason */ 'Reasons for timing are unclear; it seems that the timing is determined by Open Phil''s decision to stop supporting GHSS long-term. The decision seems relatively sudden, considering the February 2020 operating support grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity-and-pandemic-preparedness/georgetown-center-global-health-science-and-security-general-support-2020 just one month before this exit grant.',
   /* donor_next_donation_thoughts */ 'This grant is an exit grant, which means that Open Phil plans to make no further grants to GHSS.',
   /* donor_retrospective */ NULL,
   /* notes */ 'This exit grant comes at around the time that the COVID-19 pandemic is beginning to be recognized, and Open Phil is doubling down on biosecurity and pandemic preparedness spending related to COVID-19. The relationship of this exit to COVID-19, if any, is unclear.');
+
+/* Californians Against Pandemics */
+
+insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,influencer,affected_countries,affected_states,affected_cities,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes) values
+  ('Open Philanthropy','Californians Against Pandemics',5000000,'2021-10-01','month','donation log','Biosecurity and pandemic preparedness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/californians-against-pandemics-ballot-initiative','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Zachary Robinson','United States','California',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work on the California Pandemic Early Detection and Prevention Act ballot initiative. If passed by voters, the California Pandemic Early Detection and Prevention Act will create a grantmaking institute that will fund research on and development of pathogen genomics in order to reduce biosecurity risks posed by novel pathogens."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Blue Ribbon Study Panel on Biodefense and (its successor?) Bipartisan Commission on Biodefense */
 
