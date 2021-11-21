@@ -291,7 +291,7 @@ compute_similarity:
 	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-4.sql
 
 .PHONY: reset_cache
-reset_cache
+reset_cache:
 	rm -fr access-portal/cache
 	mkdir -p access-portal/cache
 	chmod a+rwx -R access-portal/cache
