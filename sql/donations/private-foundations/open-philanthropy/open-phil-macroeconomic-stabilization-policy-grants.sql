@@ -414,6 +414,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Peterson Institute for International Economics */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, donation_earmark, affected_countries, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Peterson Institute for International Economics',400000,'2019-01-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/peterson-institute-international-economics-macroeconomic-projects','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','Karen Dynan|Jason Furman','United States',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant funds two projects by nonresident fellows: (1) "Karen Dynan, a PIIE nonresident senior fellow, Harvard professor, and former chief economist at the Treasury Department, will study the optimal design of automatic stabilizer programs — taxes and government programs that respond automatically to changing economic conditions." (2) "Jason Furman, a PIIE nonresident senior fellow and formerly chair of President Obama’s Council of Economic Advisers, will study the costs and benefits of allowing employment to exceed some estimates of full employment."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "We see these both as crucially important questions in macroeconomic stabilization policy and believe Dynan and Furman are especially well-placed to address them in an influential and informative fashion."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Macroeconomic stabilization policy */
 insert into donations(donor, donee, amount, donation_date,donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, influencer, affected_countries,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy','Roosevelt Institute',200000,'2016-06-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/roosevelt-institute-macroeconomic-policy-research','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant supports work on macroeconomic policy. Includes exploring monetary policy tools, automatic stabilizes, novel fiscal stimulus measures, also making the case for importance of continued focus on reducing unemployment and against premature monetary tightening today','Alexander Berger','United States', '2016-10-25', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/vAPhHDgenvY',NULL),
