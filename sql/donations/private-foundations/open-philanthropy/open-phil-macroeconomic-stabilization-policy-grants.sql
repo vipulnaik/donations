@@ -321,7 +321,22 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
-# -- Macroeconomic policy research/United States
+/* The Center on Poverty and Inequality */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, affected_countries, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','The Center on Poverty and Inequality',50000,'2020-01-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/georgetown-university-center-on-poverty-and-inequality','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Alexander Berger','United States',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant is via Georgetown University, where the Center on Poverty ad Inequality is housed.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support the Center on Poverty and Inequality’s work on enhancing automatic fiscal stabilizers. Automatic fiscal stabilizers are taxes and government programs that respond automatically to changing economic conditions, and do not require additional Congressional action."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says, of the research topic: "We believe [automatic fiscal stabilizers] are important for mitigating the effects of economic downturns."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Macroeconomic stabilization policy */
 insert into donations(donor, donee, amount, donation_date,donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, influencer, affected_countries,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy','Roosevelt Institute',200000,'2016-06-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/roosevelt-institute-macroeconomic-policy-research','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant supports work on macroeconomic policy. Includes exploring monetary policy tools, automatic stabilizes, novel fiscal stimulus measures, also making the case for importance of continued focus on reducing unemployment and against premature monetary tightening today','Alexander Berger','United States', '2016-10-25', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/vAPhHDgenvY',NULL),
   ('Open Philanthropy','Center on Budget and Policy Priorities',425000,'2016-07-01','month','donation log','Macroeconomic stabilization policy','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy/center-budget-and-policy-priorities-full-employment-project-2016','https://www.openphilanthropy.org/focus/us-policy/macroeconomic-policy','Grant supports the Full Employment Project, and renews a previous grant to CBPP made in 2014','Alexander Berger','United States', '2016-10-25', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/vAPhHDgenvY',NULL),
