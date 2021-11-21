@@ -290,6 +290,13 @@ compute_similarity:
 	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-3.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-4.sql
 
+.PHONY: reset_cache
+reset_cache
+	rm -fr access-portal/cache
+	mkdir -p access-portal/cache
+	chmod a+rwx -R access-portal/cache
+	touch access-portal/cache/DB_LAST_UPDATE_TRACKER
+
 .PHONY: build_cache
 build_cache:
 	curl --silent 'https://donations.vipulnaik.com/' > /dev/null

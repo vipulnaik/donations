@@ -105,7 +105,7 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   /* donor_timing_reason */ 'Explaining the timing, the donation log page says: "There isn''t a very specific reason for the timing, other than the fact that at the end of the year, I''m thinking about donation opportunities and in particular looking at donations that I have some sense of "obligation" to make."',
   /* donor_next_donation_thoughts */ 'The donation page log says: "I''m not planning to make a followup donation in the near future, since this donation discharges my responsibility; any further donation decisions will be based on the same sort of extensive analysis that I subjected my EA Hotel donation to."',
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL),
 
   ('Vipul Naik','kfangurl',1000,1.0,'2021-10-09','day','donation log','Entertainment','https://vipulnaik.com/blog/my-somewhat-unusual-q4-2021-donation/','PayPal',false,1004.99,NULL,NULL,NULL,NULL,
   /* donation_process */ 'The donation post describes background thinking that led to the donation, including thoughts around sponsoring a Legibility Prize, as well as deferral of the decision in order to investigate other donation opportunities. It says: "The ultimate decision to donate was a sort-of-impulsive decision with all this information in the backdrop."',
