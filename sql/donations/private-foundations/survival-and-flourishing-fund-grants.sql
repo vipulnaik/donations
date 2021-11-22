@@ -428,7 +428,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the fourth one with a grant to this grantee.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'The grant round also includes a $500,000 grant to the grantee from the Casey and Family Foundation, that is participating as a funder in the SFF process for the first time.'),
+  /* notes */ 'The grant round also includes a $500,000 grant to the grantee from the Casey and Family Foundation, that is participating as a funder in the SFF process for the first time. Althuogh Jed McCaleb also participates as a funder in this round, and has previously granted money to Lightcone Infrastructure, he does not make any grants to Lightcone Infrastructure in this round.'),
 
   ('The Casey and Family Foundation','Lightcone Infrastructure',500000,'2021-10-01','quarter','donation log','Rationality improvement','https://survivalandflourishing.fund/sff-2021-h2-recommendations','Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',500000,1.0,
   /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H2 grants based on S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
@@ -440,7 +440,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the fourth one with a grant to this grantee. The Casey and Family Foundation is participating in SFF''s process for the first time, and this is its only grant in this round.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'The grant round also includes a $380,000 grant to the grantee from Jaan Tallinn, who has participated in earlier grant rounds and funded Lightcone Infrastructure in several of them.');
+  /* notes */ 'The grant round also includes a $380,000 grant to the grantee from Jaan Tallinn, who has participated in earlier grant rounds and funded Lightcone Infrastructure in several of them. Althuogh Jed McCaleb also participates as a funder in this round, and has previously granted money to Lightcone Infrastructure, he does not make any grants to Lightcone Infrastructure in this round.');
 
 /* Grants to Future of Life Institute */
 
@@ -680,7 +680,36 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round. In a previous grant round (2019 Q4), SFF had made a grant to the grantee, but Tallinn had not made any direct grants.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Although Jed McCaleb also participates in this grant round as a funder, he does not make any grants to this grantee.');
+  /* notes */ 'Although Jed McCaleb also participates in this grant round as a funder, he does not make any grants to this grantee.'),
+
+  ('Jaan Tallinn','Alliance to Feed the Earth in Disasters',979000,'2021-10-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h2-recommendations','Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',8858000,0.1105,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H2 grants based on S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the third one with a grant to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Grant made via the Players Philanthropy Fund. The other two funders in this SFF grant round (Jed McCaleb and The Casey and Family Foundation) do not make grants to ALLFED.');
+
+/* Grants to Center on Long-Term Risk */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Jaan Tallinn','Center on Long-Term Risk',1218000,'2021-10-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h2-recommendations','Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',8858000,0.1375,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H2 grants based on S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the first one with a grant to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The other two funders in this SFF grant round (Jed McCaleb and The Casey and Family Foundation) do not make grants to the Center on Long-Term Risk.');
+
+/* Grants to The Centre for Long-Term Resilience (dba Alpenglow Group Limited) */
 
 /* Grants to Charter Cities Institute */
 
