@@ -162,7 +162,6 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/smith-richardson-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/stone-family-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/surdna-foundation-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/survival-and-flourishing-fund-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/templeton-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/the-lynde-and-harry-bradley-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/theiss-research.sql
@@ -184,6 +183,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/good-ventures-givewell-support.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/good-ventures-grants-to-givewell-top-charities.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/good-ventures-not-givewell-or-open-phil.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/survival-and-flourishing-fund-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/aaron-gertler-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/ajeya-cotra-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/alexander-berger-donations.sql
