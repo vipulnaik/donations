@@ -8,9 +8,9 @@ if ($stmt = $mysqli->prepare($donorDocumentSelectQuery)) {
   $exactMatchDonorRegex = '(^|\\|)'.$donor.'(\\||$)';
   $exactMatchDoneeRegex = '(^|\\|)'.$donee.'(\\||$)';
   if ($causeAreaFilterString) {
-    $stmt->bind_param("sss", $exactMatchDonorRegex, $donor, $donor, $exactMatchDoneeRegex, $donee, $donee, $causeAreaFilterString);
+    $stmt->bind_param("sssssss", $exactMatchDonorRegex, $donor, $donor, $exactMatchDoneeRegex, $donee, $donee, $causeAreaFilterString);
   } else {
-    $stmt->bind_param("ss", $exactMatchDonorRegex, $donor, $donor, $exactMatchDoneeRegex, $donee, $donee);
+    $stmt->bind_param("ssssss", $exactMatchDonorRegex, $donor, $donor, $exactMatchDoneeRegex, $donee, $donee);
   }
   $stmt->execute();
 }
