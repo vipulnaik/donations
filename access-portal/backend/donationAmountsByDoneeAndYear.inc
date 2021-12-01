@@ -67,9 +67,9 @@ $linkedinUsername = array();
 $twitterUsername = array();
 $givewellReview = array();
 $causeAreaForDonee = array();
-$charityNavigatorPag = array();
+$charityNavigatorPage = array();
 $guidestarPage = array();
-$timelinesWikipage = array();
+$timelinesWikiPage = array();
 
 for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
   $row = $doneeMetadataResult -> fetch_assoc();

@@ -87,7 +87,7 @@ foreach ($causeAreas as $causeArea) {
   print '    <td align="right"><strong>'.number_format($causeAreaDonationAmount[$causeArea],2)."</strong></td>\n";
   foreach ($years as $year) {
     if (isset($yearDonationAmount[$year]) && $yearDonationAmount[$year] != 0) {
-      print '    <td align="right"><a title="'.sprintf("%d",$numDonationsByCauseAreaAndYear[$causeArea][$year]).' donations">'.number_format($donationAmountByCauseAreaAndYear[$causeArea][$year],2)."</a></td>\n";
+      print '    <td align="right"><a title="'.sprintf("%d",$numDonationsByCauseAreaAndYear[$causeArea][$year]).' donations">'.number_format($donationAmountByCauseAreaAndYear[$causeArea][$year] ?? 0,2)."</a></td>\n";
     }
   }
   print "  </tr>\n";
@@ -135,3 +135,5 @@ if (count(array_filter($yearDonationAmount)) > 1) {
 } else {
   print "<p>Skipping spending graph as there is fewer than one year’s worth of donations.</p>\n";
 }
+
+?>
