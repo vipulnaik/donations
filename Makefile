@@ -184,6 +184,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/good-ventures-grants-to-givewell-top-charities.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/good-ventures-not-givewell-or-open-phil.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/survival-and-flourishing-fund-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/survival-and-flourishing-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/aaron-gertler-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/ajeya-cotra-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/alexander-berger-donations.sql
