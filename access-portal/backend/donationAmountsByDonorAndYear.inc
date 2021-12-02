@@ -87,9 +87,12 @@ $grandTotalDonationAmount = 0;
 foreach($donors as $donor) {
   $donorDonationAmount[$donor] = 0;
   foreach($years as $year) {
-    $yearDonationAmount[$year] = 0;
     $donationAmountByDonorAndYear[$donor][$year] = 0;
   }
+}
+
+foreach($years as $year) {
+  $yearDonationAmount[$year] = 0;
 }
 
 $paramStr = "";

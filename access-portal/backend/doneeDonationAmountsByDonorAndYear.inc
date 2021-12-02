@@ -16,9 +16,12 @@ $grandTotalDonationAmount = 0;
 foreach($donors as $donor) {
   $donorDonationAmount[$donor] = 0;
   foreach($years as $year) {
-    $yearDonationAmount[$year] = 0;
     $donationAmountByDonorAndYear[$donor][$year] = 0;
   }
+}
+
+foreach($years as $year) {
+  $yearDonationAmount[$year] = 0;
 }
 
 $donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donee = ? group by donor, year(donation_date)";

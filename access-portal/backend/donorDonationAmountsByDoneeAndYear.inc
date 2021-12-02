@@ -26,9 +26,12 @@ $grandTotalDonationAmount = 0;
 foreach($donees as $donee) {
   $doneeDonationAmount[$donee] = 0;
   foreach($years as $year) {
-    $yearDonationAmount[$year] = 0;
     $donationAmountByDoneeAndYear[$donee][$year] = 0;
   }
+}
+
+foreach($years as $year) {
+  $yearDonationAmount[$year] = 0;
 }
 
 $doneeMetadataQuery = "select * from donees;";
