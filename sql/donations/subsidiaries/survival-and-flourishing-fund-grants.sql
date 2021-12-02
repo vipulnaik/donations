@@ -239,7 +239,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant round also includes a grant from Jaan Tallinn ($40,000) to the same grantee (AI Impacts). Although the Survival and Flourishing Fund also participates as a funder in the round, it has no direct grants to AI Impacts.'),
 
-  ('Jaan Tallinn','AI Impacts',221000,'2021-04-01','quarter','donation log','Rationality improvement','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0232,
+  ('Jaan Tallinn','AI Impacts',221000,'2021-04-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0232,
    /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
@@ -251,7 +251,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant round also includes a grant from Jed McCaleb ($82,000) to the same grantee (AI Impacts).'),
 
-  ('Jed McCaleb','AI Impacts',82000,'2021-04-01','quarter','donation log','Rationality improvement','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,243000,0.3374,
+  ('Jed McCaleb','AI Impacts',82000,'2021-04-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,243000,0.3374,
   /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
