@@ -69,7 +69,7 @@ if (($val = $row['employer_match']) && ($me = $row['matching_employer'])) {
     sprintf("Employer match: %s matched %s", $me, number_format($val, 2))
   );
 }
-if ($val = $row['fraction'] && !($val2 = $row['donor_amount_reason'])) {
+if (($val = $row['fraction']) && !($val2 = $row['donor_amount_reason'])) {
   array_push($notes_key_val_pairs, sprintf("Percentage of total donor spend in the corresponding batch of donations: %.2f", $val * 100) . '%');
 }
 if ($val = $row['donation_announcement_date']) {
