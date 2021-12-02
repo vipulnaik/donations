@@ -48,6 +48,7 @@ $grandTotalDonationAmount = 0;
 foreach($causeAreas as $causeArea) {
   $causeAreaDonationAmount[$causeArea] = 0;
   foreach($years as $year) {
+    $numDonationsByCauseAreaAndYear[$causeAreaa][$year] = 0;
     $donationAmountByCauseAreaAndYear[$causeArea][$year] = 0;
   }
 }
