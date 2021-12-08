@@ -12,3 +12,16 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to AI Safety Camp */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Survival and Flourishing','AI Safety Camp',35000,'2021-07-01','month',NULL,'AI safety',NULL,'Remmelt Ellen',NULL,NULL,NULL,NULL,NULL,NULL, /* Fill in goal amount once we know all grants are announced */
+  /* donation_process */ 'http://survivalandflourishing.org/saf-2021-q2-announcement says: "SAF is hosting a competition for individuals seeking a fixed amount of funding for projects benefitting SAF’s mission. We expect this competition to allocate between $300k and $350k in total funding across all winners, similar to our last round. [..] Winning applicants will be selected by a Selection Committee comprising at least three people appointed by SAF’s Project Director and Advisors. The Selection Committee will rank-order projects and award funding and project contracts to the top-ranked projects falling within our budget for this round. We may adjust our total budget for the round based on the quality of applications."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant for "facilitating two editions where selected applicants prioritise and test their fit for AI x-safety research."',
+  /* intended_funding_timeframe_in_months */ 12,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'While reasons for the amount for individual grants are not given, SAF provides guidance on the ranges it allows for amounts. Amounts must be between $5,000 and $200,000, for a time frame of up to 2 years. The amount is also capped at {$300,000} times {the applicant’s percentage time commitment to the project} times {the duration of the project in years}.',
+  /* donor_timing_reason */ 'Timing determined by the timing of the 2021 Q2 grant round',
+  /* donor_next_donation_thoughts */ 'While no thoughts are included on followup donations for individual grants, SAF says on the grant page that it usually does not fund ongoing work, making followup grants unlikely. However, AI Safety Camp is an ongoing series of camps, so it is possible that other camps in the series may be funded in the future, with the funding possibly going to other individuals than the person this time (Remmelt Ellen).',
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The 2021 Q2 grants are not yet publicly announced on SAF''s website; this grant was directly communicated by the grantee to the donations list website along with proof. Information entered here should match up with publicly available information once the 2021 Q2 grants are publicly announced.');
