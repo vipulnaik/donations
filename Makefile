@@ -146,6 +146,7 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-animal-welfare-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-biosecurity-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-criminal-justice-reform-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-givewell-recommended.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-global-health-and-development-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-land-use-reform-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-macroeconomic-stabilization-policy-grants.sql
