@@ -1,10 +1,10 @@
 /* Donors tracked elsewhere: Loren Merritt, Gordon Irlam, Open
    Philanthropy BERI, FLI, Robert Yaman, Zvi Mowshowitz, Ben Hoskin,
-   Blake Borgeson, Thiel Foundation, and possibly some others.  Grants
-   from Jaan Tallinn and Jed McCaleb made through the Survival and
-   Flourishing Fund's process are not included but their older grants
-   are currently present here; at some point we will remove their
-   grants from this sheet as well.  */
+   Blake Borgeson, Thiel Foundation, Vitalik Buterin, and possibly
+   some others.  Grants from Jaan Tallinn and Jed McCaleb made through
+   the Survival and Flourishing Fund's process are not included but
+   their older grants are currently present here; at some point we
+   will remove their grants from this sheet as well.  */
 
 insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,notes) values
     ('Adam Weissman','Machine Intelligence Research Institute',10000.0,'2012-07-19','year','donee contributor list','AI safety','https://web.archive.org/web/20120719220051/http://singularity.org:80/topdonors/',NULL)
@@ -396,7 +396,6 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
     ,('Tuxedage John Adams','Machine Intelligence Research Institute',5000.0,'2014-10-10','year','donee contributor list','AI safety','http://archive.today/2014.10.10-021359/http://intelligence.org/topdonors/',NULL)
     ,('Victoria Krakovna','Machine Intelligence Research Institute',17066.0,'2018-01-17','year','donee contributor list','AI safety','https://web.archive.org/web/20180117010054/https://intelligence.org/topcontributors/',NULL)
     ,('Victoria Krakovna','Machine Intelligence Research Institute',2801.0,'2018-04-07','year','donee contributor list','AI safety','https://web.archive.org/web/20180407192941/https://intelligence.org/topcontributors/',NULL)
-    ,('Vitalik Buterin','Machine Intelligence Research Institute',802136.0,'2018-01-17','year','donee contributor list','AI safety','https://web.archive.org/web/20180117010054/https://intelligence.org/topcontributors/',NULL)
     ,('William Morgan','Machine Intelligence Research Institute',5800.0,'2012-09-18','year','donee contributor list','AI safety','https://web.archive.org/web/20120918094656/http://singularity.org:80/topdonors/',NULL)
     ,('William Morgan','Machine Intelligence Research Institute',1200.0,'2012-11-18','year','donee contributor list','AI safety','https://web.archive.org/web/20121118064729/http://singularity.org:80/topdonors/',NULL)
     ,('William Morgan','Machine Intelligence Research Institute',5171.0,'2013-10-21','year','donee contributor list','AI safety','http://archive.today/2013.10.21-235551/http://intelligence.org/topdonors/',NULL)
