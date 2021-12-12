@@ -77,7 +77,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ 'AKITA',
   /* currency_conversion_basis */ 'Etherscan.io'),
 
-  ('Vitalik Buterin','GiveWell',50659666.68,'2021-05-12','day','transaction',NULL,'https://etherscan.io/tx/0x33e4aa32018786e2c75a90b2e096164cbefb55664cb4ce586cb46dd379cf0390',NULL,'2021-05-12','day','https://www.forbes.com/sites/ninabambysheva/2021/05/12/ethereums-co-founder-vitalik-buterin-donates-over-1-billion-to-india-covid-relief-fund-and-other-charities/',NULL,NULL,'Ethereum transaction',
+  ('Vitalik Buterin','GiveWell',50659666.68,'2021-05-12','day','transaction','Global health and development/charity evaluator','https://etherscan.io/tx/0x33e4aa32018786e2c75a90b2e096164cbefb55664cb4ce586cb46dd379cf0390','Global health and development','2021-05-12','day','https://www.forbes.com/sites/ninabambysheva/2021/05/12/ethereums-co-founder-vitalik-buterin-donates-over-1-billion-to-india-covid-relief-fund-and-other-charities/',NULL,NULL,'Ethereum transaction',
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
@@ -92,7 +92,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ 'ETH',
   /* currency_conversion_basis */ 'Etherscan.io'),
 
-  ('Vitalik Buterin','Methuselah Foundation',231061626.05,'2021-05-12','day','transaction',NULL,'https://etherscan.io/tx/0xdab7634a04e3b7afb0d5a9faf9db59a05a04372234c0c960342102a4859aca16',NULL,'2021-05-12','day','https://www.forbes.com/sites/ninabambysheva/2021/05/12/ethereums-co-founder-vitalik-buterin-donates-over-1-billion-to-india-covid-relief-fund-and-other-charities/',NULL,NULL,'Dogelon transaction',
+  ('Vitalik Buterin','Methuselah Foundation',231061626.05,'2021-05-12','day','transaction','Scientific research/life extension','https://etherscan.io/tx/0xdab7634a04e3b7afb0d5a9faf9db59a05a04372234c0c960342102a4859aca16',NULL,'2021-05-12','day','https://www.forbes.com/sites/ninabambysheva/2021/05/12/ethereums-co-founder-vitalik-buterin-donates-over-1-billion-to-india-covid-relief-fund-and-other-charities/',NULL,NULL,'Dogelon transaction',
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
@@ -107,7 +107,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ 'ELON',
   /* currency_conversion_basis */ 'Etherscan.io'),
 
-  ('Vitalik Buterin','Machine Intelligence Research Institute',4001854.50,'2021-05-12','day','transaction',NULL,'https://etherscan.io/tx/0x949bc96c02090165ccb2c180dc105ce6592514576dced024356402248844836d',NULL,'2021-05-12','day','https://www.forbes.com/sites/ninabambysheva/2021/05/12/ethereums-co-founder-vitalik-buterin-donates-over-1-billion-to-india-covid-relief-fund-and-other-charities/',NULL,NULL,'Ethereum transaction',
+  ('Vitalik Buterin','Machine Intelligence Research Institute',4001854.50,'2021-05-12','day','transaction',NULL,'https://etherscan.io/tx/0x949bc96c02090165ccb2c180dc105ce6592514576dced024356402248844836d','AI safety','2021-05-12','day','https://www.forbes.com/sites/ninabambysheva/2021/05/12/ethereums-co-founder-vitalik-buterin-donates-over-1-billion-to-india-covid-relief-fund-and-other-charities/',NULL,NULL,'Ethereum transaction',
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
