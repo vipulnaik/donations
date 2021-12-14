@@ -304,6 +304,6 @@ reset_cache:
 build_cache:
 	curl --silent 'https://donations.vipulnaik.com/' > /dev/null
 	curl --silent 'https://donations.vipulnaik.com/?display=individual-scale' > /dev/null
-	curl --silent 'https://donations.vipulnaik.com/donor.php?donor=Open+Philanthropy+Project' > /dev/null
+	curl --silent 'https://donations.vipulnaik.com/donor.php?donor=Open+Philanthropy' > /dev/null
 	curl --silent 'https://donations.vipulnaik.com/donee.php?donee=Machine+Intelligence+Research+Institute' > /dev/null
 	curl --silent 'https://donations.vipulnaik.com/?display=full' > /dev/null
