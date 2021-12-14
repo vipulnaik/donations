@@ -270,7 +270,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
   ('Open Philanthropy','GiveDirectly',500000,'2021-01-01','month','donation log','https://www.openphilanthropy.org/focus/global-health-and-development/miscellaneous/givedirectly-general-support-2021',NULL,'GiveWell',70000000,0.0071,
   /* donation_process */  'The grant is based on GiveWell''s recommendation. GiveWell made the recommendations as part of its end-of-year recommendations to Open Philanthropy, along with allocations to other GiveWell top and standout charities. The total budget of $100 million is set by Open Philanthropy, but GiveWell decides to allocate only $70 million in end-of-year grantmaking and defers the remaining $30 million to early 2021. GiveWell explains the process in detail at https://www.givewell.org/charities/top-charities/2020/open-philanthropy-recommendation (published February 2021).',
-  /* intended_use_of_funds_category */ 'Organizational general support'
+  /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'https://www.givewell.org/charities/top-charities/2020/open-philanthropy-recommendation#Our_recommended_allocation_to_Open_Philanthropy describes the grant as an incentive grant since the grantee is a GiveWell top charity.',
