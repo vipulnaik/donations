@@ -268,7 +268,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The END Fund would continue to be a GiveWell top charity in 2021.',
   /* notes */ 'See https://www.givewell.org/charities/end-fund/November-2020-version for GiveWell''s review of The END Fund at the time of the grant recommendation.'),
 
-  ('Open Philanthropy','GiveDirectly',500000,'2021-01-01','month','donation log','https://www.openphilanthropy.org/focus/global-health-and-development/miscellaneous/givedirectly-general-support-2021',NULL,'GiveWell',70000000,0.0071,
+  ('Open Philanthropy','GiveDirectly',500000,'2021-01-01','month','donation log','Cash transfers/unconditional cash transfers','https://www.openphilanthropy.org/focus/global-health-and-development/miscellaneous/givedirectly-general-support-2021',NULL,'GiveWell',70000000,0.0071,
   /* donation_process */  'The grant is based on GiveWell''s recommendation. GiveWell made the recommendations as part of its end-of-year recommendations to Open Philanthropy, along with allocations to other GiveWell top and standout charities. The total budget of $100 million is set by Open Philanthropy, but GiveWell decides to allocate only $70 million in end-of-year grantmaking and defers the remaining $30 million to early 2021. GiveWell explains the process in detail at https://www.givewell.org/charities/top-charities/2020/open-philanthropy-recommendation (published February 2021).',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
