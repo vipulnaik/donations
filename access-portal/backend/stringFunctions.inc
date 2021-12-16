@@ -49,35 +49,30 @@ function cleanNotes($notes) {
 }
 
 function explodeDonorCsv($donorCsv) {
-  return explodeDonorCharSepValues($donorCsv, ",");
+  return explodeCharSepValues($donorCsv, ",", "donor");
 }
 
 function explodeDoneeCsv($doneeCsv) {
-  return explodeDoneeCharSepValues($doneeCsv, ",");
+  return explodeCharSepValues($doneeCsv, ",", "donee");
 }
 
 function explodeDonorPsv($donorPsv) {
-  return explodeDonorCharSepValues($donorPsv, "|");
+  return explodeCharSepValues($donorPsv, "|", "donor");
 }
 
 function explodeDoneePsv($doneePsv) {
-  return explodeDoneeCharSepValues($doneePsv, "|");
+  return explodeCharSepValues($doneePsv, "|", "donee");
 }
 
-function explodeDonorCharSepValues($donorCsv, string $char) {
-  $donorsList = explode($char,$donorCsv);
-  $formattedString = '';
-  foreach ($donorsList as $donor) {
-    $formattedString = $formattedString . '<a href="/donor.php?donor='.urlencode($donor).'">'.$donor.'</a> ';
-  }
-  return $formattedString;
+function explodeInfluencerPsv($influencerPsv) {
+  return explodeCharSepValues($influencerPsv, "|", "influencer");
 }
 
-function explodeDoneeCharSepValues($doneeCsv, string $char) {
-  $doneesList = explode($char,$doneeCsv);
+function explodeCharSepValues($csv, string $char, string $entityType) {
+  $entityList = explode($char,$csv);
   $formattedString = '';
-  foreach ($doneesList as $donee) {
-    $formattedString = $formattedString . '<a href="/donee.php?donee='.urlencode($donee).'">'.$donee.'</a> ';
+  foreach ($entityList as $entity) {
+    $formattedString = $formattedString . '<a href="/'.$entityType.'.php?'.$entityType.'='.urlencode($entity).'">'.$entity.'</a> ';
   }
   return $formattedString;
 }
