@@ -2,14 +2,7 @@ MYSQL_ARGS=
 DATABASE=donations
 
 .PHONY: reset
-reset:
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists documents;"
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donations;"
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donees;"
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donors;"
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists gifts;"
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists money_moved;"
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists disclosures;"
+reset: reset_documents reset_donations reset_donees reset_donors reset_gifts reset_money_moved reset_disclosures reset_donor_donee_relationships
 	rm -fr access-portal/cache
 	mkdir -p access-portal/cache
 	chmod a+rwx -R access-portal/cache
@@ -20,22 +13,48 @@ init:
 	mkdir -p access-portal/images
 	mysql $(MYSQL_ARGS) -e "create database $(DATABASE);"
 
-# To update this section, paste the output of:
-#     find ./sql -type f -iname '*.sql' | sort | sed 's/^\.\//\tmysql $(MYSQL_ARGS) $(DATABASE) < /'
+# To update the read_* sections below, paste the output of (changing "table_name_here" to the correct table name):
+#     find ./sql/table_name_here -type f -iname '*.sql' | sort | sed 's/^\.\//\tmysql $(MYSQL_ARGS) $(DATABASE) < /'
 # Then move the SQL files ending in "-schema" to the top. In Vim you can
 # visually select the .sql lines:
 #     '<,'>g/-schema/m'<-1
 .PHONY: read
-read:
+read: read_documents read_donations read_donees read_donors read_gifts read_money_moved read_disclosures read_donor_donee_relationships
+
+.PHONY: reset_documents
+reset_documents:
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists documents;"
+
+.PHONY: reset_donations
+reset_donations:
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donations;"
+
+.PHONY: reset_donees
+reset_donees:
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donees;"
+
+.PHONY: reset_donors
+reset_donors:
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donors;"
+
+.PHONY: reset_gifts
+reset_gifts:
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists gifts;"
+
+.PHONY: reset_money_moved
+reset_money_moved:
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists money_moved;"
+
+.PHONY: reset_disclosures
+reset_disclosures:
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists disclosures;"
+
+.PHONY: reset_donor_donee_relationships
+	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donor_donee_relationships;"
+
+.PHONY: read_documents
+read_documents:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents-schema.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees-schema.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/donors-schema.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/money_moved-schema.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donor_donee_relationships/donor_donee_relationships-schema.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/disclosures/disclosures-schema.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donor_donee_relationships/donor_donee_relationships.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/disclosures/open-phil-disclosures.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/80k-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ace-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/aidgrade-docs.sql
@@ -105,6 +124,10 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/wild-animal-initiative-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/wild-animal-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/wmf-docs.sql
+
+.PHONY: read_donations
+read_donations:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/ai-safety-camp.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/brain-preservation-foundation-donations.sql
@@ -234,16 +257,41 @@ read:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/vipul-naik-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/vitalik-buterin-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/zvi-mowshowitz-donations.sql
+
+.PHONY: read_donees
+read_donees:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/donees.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/social-media-mass-grab.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donees/aiwatch-update.sql
+
+.PHONY: read_donors
+read_donors:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/donors-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/individual-donors.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/private-foundations-and-subsidiaries.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donors/aiwatch-update.sql
+
+.PHONY: read_gifts
+read_gifts:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/gifts.sql
+
+.PHONY: read_money_moved
+read_money_moved:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/money_moved-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/double-up-drive.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/givewell.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/money_moved/giving-tuesday-facebook-match.sql
+
+.PHONY: read_disclosures
+read_disclosures:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/disclosures/disclosures-schema.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/disclosures/open-phil-disclosures.sql
+
+.PHONY: read_donor_donee_relationships
+read_donor_donee_relationships:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donor_donee_relationships/donor_donee_relationships-schema.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donor_donee_relationships/donor_donee_relationships.sql
 
 .PHONY: fetch_table_sorting
 fetch_table_sorting:
