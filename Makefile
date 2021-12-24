@@ -2,11 +2,7 @@ MYSQL_ARGS=
 DATABASE=donations
 
 .PHONY: reset
-reset: reset_documents reset_donations reset_donees reset_donors reset_gifts reset_money_moved reset_disclosures reset_donor_donee_relationships
-	rm -fr access-portal/cache
-	mkdir -p access-portal/cache
-	chmod a+rwx -R access-portal/cache
-	touch access-portal/cache/DB_LAST_UPDATE_TRACKER
+reset: reset_documents reset_donations reset_donees reset_donors reset_gifts reset_money_moved reset_disclosures reset_donor_donee_relationships reset_cache
 
 .PHONY: init
 init:
