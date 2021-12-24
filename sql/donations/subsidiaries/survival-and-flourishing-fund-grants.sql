@@ -1,13 +1,25 @@
 /* Grants to Long-Term Future Fund (LTFF) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Jaan Tallinn','Effective Altruism Funds: Long-Term Future Fund',1417000,'2021-10-01','quarter','donation log',NULL,'https://survivalandflourishing.fund/sff-2021-h2-recommendations','Survival and Flourishing Fund|Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',8858000,0.16,
+  ('Jaan Tallinn','Effective Altruism Funds: Long-Term Future Fund',675000,'2021-04-01','quarter','donation log','Longtermism','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.071,
+   /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Regranting',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the first wit a round to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'In the next grant round, Tallinn would make an even bigger grant of $1,417,000 to the grantee, suggesting continued satisfaction with the strategy of donating money to the Long-Term Future Fund for regranting.',
+  /* notes */ 'Although Jed McCaleb also participated as a funder in this grant round, he did not make any grants to this grantee (Center for Applied Rationality). Jaan Tallinn''s philanthropy goals as described in https://jaan.online/philanthropy/ set targets in terms of the total amount of endpoint grants, i.e., grants spent on actual grantees and not for regranting. It is not clear how grants to the Long-Term Future Fund are counted, but since the LTFF tends to spend most of its balance in its grant rounds, Tallinn likely expects that the bulk of the money will become endpoint grants shortly.'),
+
+  ('Jaan Tallinn','Effective Altruism Funds: Long-Term Future Fund',1417000,'2021-10-01','quarter','donation log','Longtermism','https://survivalandflourishing.fund/sff-2021-h2-recommendations','Survival and Flourishing Fund|Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',8858000,0.16,
   /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H2 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts. [...] [The] system is designed to generally favor funding things that at least one recommender is excited to fund, rather than things that every recommender is excited to fund." https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff explains the process from a recommender''s perspective.',
   /* intended_use_of_funds_category */ 'Regranting',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ 'Zvi Mowshowitz, one of the recommmenders in this grant round, writes in https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff "They have some clear wins on their book (e.g. John Wentworth) and my notes indicate I thought the bulk of their targets seemed reasonable, although on reflection that makes me worry about the extent to which ‘seem reasonable’ was an optimization target. It’s another case of ‘find individuals and other places to put small amounts in ways that seem plausibly good and do it’ and it seems like something like SFF should be able to do better but if the applicant pool is this shallow maybe we can’t. As an isolated thing, almost all small grants of these types that are issued without forcing people to apply first seem like they’re net good, but they also end up warping the space and culture around the seeking of such grants, whether or not formal applications have to be involved.',
   /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the first one with a grant to the grantee.',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the second one with a grant to the grantee.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Jaan Tallinn''s philanthropy goals as described in https://jaan.online/philanthropy/ set targets in terms of the total amount of endpoint grants, i.e., grants spent on actual grantees and not for regranting. It is not clear how grants to the Long-Term Future Fund are counted, but since the LTFF tends to spend most of its balance in its grant rounds, Tallinn likely expects that the bulk of the money will become endpoint grants shortly.');
@@ -801,6 +813,60 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round. In a previous grant round (2019 Q4), SFF had made a grant to the grantee, but Tallinn had not made any direct grants.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Zvi Mowshowitz, one of the recommenders participating in SFF''s next grant round (2021 H2) writes in https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff#Orthogonal_Applications shedding light on why he considered the Charter Cities Institute''s application orthogonal to SFF''s grantmaking goals: "I talked to them hoping it would be aligned with the mission. [...] What I was looking for on that call was the ability to do things you can’t do in First World countries. In particular, challenge trials seemed like a strong litmus test. If your charter city allows the world to do challenge trials, then it’s super valuable. If it doesn’t, then you might be helping the particular people, but you’re not mostly doing the thing I care about. [...] To fight the blight."',
+  /* notes */ 'Although Jed McCaleb also participates in this grant round as a funder, he does not make any grants to this grantee.');
+
+/* Grants to New Science Research */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Jaan Tallinn','New Science Research',147000,'2021-04-01','quarter','donation log','Scientific research','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0155,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the first with a grant to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Jed McCaleb, the other funder participating in the grant round, grants $51,000 to the grantee.'),
+
+  ('Jed McCaleb','New Science Research',51000,'2021-04-01','quarter','donation log','Scientific research','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,243000,0.2099,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the first with a grant to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Jaan Tallinn, the other funder participating in the grant round, grants $147,000 to the grantee.'),
+
+  ('Jaan Tallinn','New Science Research',500000,'2021-10-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2021-h2-recommendations','Survival and Flourishing Fund|Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',8858000,0.0564,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'Zvi Mowshowitz, one of the recommenders, writes in https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff#Innovation_Station "If one could reinvigorate science for real, that seems clearly on the good side, so to the extent that I saw promising such attempts I was excited. There were several proposals in this category looking to directly reinvigorate or enable science of a sort: NewScience, PrivateARPA, SocialMinds@CMU and Ought. NewScience, SocialMinds and PrivateARPA seemed like they were good ideas if we were optimistic about execution. I was able to get there on NewScience, but not on PrivateARPA or SocialMinds."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the second with a grant to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Jed McCaleb and The Casey and Family Foundation, who also participate as funders in this grant round, do not make any grants to this grantee.');
+
+/* Grants to Legal Priorities Project */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Jaan Tallinn','Legal Priorities Project',265000,'2021-04-01','quarter','donation log','Longtermism','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0279,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the first with a grant to this grantee.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Although Jed McCaleb also participates in this grant round as a funder, he does not make any grants to this grantee.');
