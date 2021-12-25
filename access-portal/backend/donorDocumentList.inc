@@ -13,7 +13,7 @@ if ($stmt = $mysqli->prepare($query)) {
 }
 
 if ($documentSelectResult -> num_rows > 0) {
-  print '<h4 id="donorDocumentList">Full list of documents in reverse chronological order ('.($donorDocumentSelectResult -> num_rows).' documents)</h4>';
+  print '<h4 id="donorDocumentList">Full list of documents in reverse chronological order ('.($documentSelectResult -> num_rows).' documents)</h4>';
   print "\n";
   print '<table id="myTableDonorDocumentList" class="tablesorter">'."\n"; 
   include_once("documentListBase.inc");
