@@ -196,8 +196,8 @@ read_donations:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/eaf-fund.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-animal-welfare.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-global-health-and-development.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-infrastructure.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-long-term-future.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-meta.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/givewell-incubation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/givewell-maximum-impact-fund-grants.sql
