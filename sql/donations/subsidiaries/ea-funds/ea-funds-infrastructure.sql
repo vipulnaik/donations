@@ -125,6 +125,30 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of grant round, also by the readiness of these projects to be funded',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Effective Altruism Funds: Infrastructure Fund','Rethink Priorities',248300,'2021-04-01','day','donatin log','Cause prioritization','https://funds.effectivealtruism.org/funds/payouts/may-2021-ea-infrastructure-fund-grants','Michelle Hutchinson|Buck Shlegeris|Max Daniel|Ben Kuhn',1221178,0.2033,NULL,NULL,
+  /* donation_process */ 'Part of the April 2021 EA Infrastructure Fund grants round (based on applications in Q1 2021). The grant page says: "Total grants: $1,221,178 (assuming all grantees accept the full grants); Number of grants: 26; Number of applications (excluding desk rejections): 58. [...] This is the first grant round led by the EAIF’s new committee, consisting of Buck Shlegeris, Max Daniel, Michelle Hutchinson, and Ben Kuhn as a guest fund manager, with Jonas Vollmer temporarily taking on chairperson duties, advising, and voting consultatively on grants."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant page says: "Rethink Priorities is a research organization working on (largely empirical) questions related to how to do the most good, including questions like what moral weights we should assign to different animal species, or understanding what the current limitations of forecasting mean for longtermism. Roughly half of this grant supports 9 interns (7 FTE), with the main aim of training them in empirical impact-focused research. [...] The second half of the grant goes toward growing Rethink’s capacity to conduct research on EA movement strategy. The team focuses on running surveys, aimed both at EAs and the broader public. The types of research this funding will enable include getting a better sense of how many people in the broader public are aware of and open to EA."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "Our perception is that it would be useful to have more of this research done and that there currently aren’t many mentors who can help people learn to do it. Rethink Priorities has some experience of successfully supporting EA researchers to skill up. The case study of Luisa Rodriguez seemed compelling to us: she started out doing full-time EA research for Rethink Priorities, went on to become a research assistant for William MacAskill''s forthcoming book about longtermism, and plans to work as a researcher at 80,000 Hours. Luisa thinks it''s unlikely she would have become a full-time EA researcher if she hadn''t received the opportunity to train up at Rethink Priorities. [For the second purpose of the grant] This research seems useful for planning how much and what kinds of EA outreach to do. For example, a number of people we asked found RP’s survey on longtermism useful."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'A small top-up grant of $14,228 is announced at https://funds.effectivealtruism.org/funds/payouts/may-august-2021-ea-infrastructure-fund-grants as part of the May to August 2021 grants.',
+  /* notes */ 'The grant page says, talking of the EA-related surveys portion of the grant: "a funding model we considered suggesting was EAIF paying for specific pieces of research ‘commissioned’ by groups such as CEA. This model would have the benefit that the group commissioning the research would be responsible for applying for the funding, and so the onus would be on them to make sure they would use the research generated. On the other hand, we hope that this type of research will be useful to many different groups, including ones like local groups who typically don’t have much funding. We therefore decided in favor of approving this funding application as is. We’d still be interested in continued close collaborations between RP and the groups who will be using the research, such as CEA and local EA groups."'),
+
+  ('Effective Altruism Funds: Infrastructure Fund','Rethink Priorities',14228,'2021-07-01','quarter','donation log','Effective altruism/research guidance','https://funds.effectivealtruism.org/funds/payouts/may-august-2021-ea-infrastructure-fund-grants','https://funds.effectivealtruism.org/funds/ea-community','Michelle Hutchinson|Michael Aird|Max Daniel|Buck Shlegeris|Chi Nguyen',1700346,0.0084,NULL,NULL,
+  /* donation_process */ 'Part of a set of grants that were decided between May and August 2021. This includes grant applications from the Q2 grant cycle as well as rolling applications since then; the exact timing of this particular grant is not stated.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Michelle Hutchinson''s writeup on the grant on the grant page says: "In the last round, we partially funded Rethink Priorities’ internship programme. They had a stronger applicant pool than expected and wanted to take on more people, so this grant is a small top-up to our previous grant."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'Likely the same reasons apply as for the original grant, that https://funds.effectivealtruism.org/funds/payouts/may-2021-ea-infrastructure-fund-grants#rethink-priorities-248300 documents.',
+  /* donor_amount_reason */ 'The amount is decided based on the funds needed for hiring the additional interns over the original budget.',
+  /* donor_timing_reason */ 'Timing likely determined by the internship application process and identification of promising applications.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
 /* Effective Thesis */
@@ -179,7 +203,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Within two months of this grant, the Infrastructure Fund makes another grant to Metaculus for $73,500 (the order between the grants is not clear, but the grant page says they are separated by two months).'),
+  /* notes */ 'Within two months of this grant, the Infrastructure Fund makes another grant to Metaculus for $73,500 (the order between the grants is not clear, but the grant page says they are separated by two months). In a quick take comment https://forum.effectivealtruism.org/posts/pwnvva4AHfxYZmaGM/ea-infrastructure-fund-may-august-2021-grant-recommendations?commentId=YkLKFcrkLrYvPYbHL Ozzie Gooen writes: "Seems pretty safe and I look forward to the results. One small point is that I think Metaculus might be a c-corp startup; if this is the case, it could be neat if future donations come with equity. (Mainly a concern if donations increase, and the investment is general-purpose)"'),
 
   ('Effective Altruism Funds: Infrastructure Fund','Metaculus',73500,'2021-07-01','quarter','donation log','Forecasting','https://funds.effectivealtruism.org/funds/payouts/may-august-2021-ea-infrastructure-fund-grants','https://funds.effectivealtruism.org/funds/ea-community','Michael Aird|Max Daniel|Michelle Hutchinson|Buck Shlegeris|Chi Nguyen',1700346,0.0432,NULL,NULL,
   /* donation_process */ 'Part of a set of grants that were decided between May and August 2021. This includes grant applications from the Q2 grant cycle as well as rolling applications since then; the exact timing of this particular grant is not stated.',
@@ -191,7 +215,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Within two months of this grant, the Infrastructure Fund makes another grant to Metaculus for $73,500 (the order between the grants is not clear, but the grant page says they are separated by two months).');
+  /* notes */ 'Within two months of this grant, the Infrastructure Fund makes another grant to Metaculus for $73,500 (the order between the grants is not clear, but the grant page says they are separated by two months). In a quick take comment https://forum.effectivealtruism.org/posts/pwnvva4AHfxYZmaGM/ea-infrastructure-fund-may-august-2021-grant-recommendations?commentId=YkLKFcrkLrYvPYbHL Ozzie Gooen writes: "Seems pretty safe and I look forward to the results. One small point is that I think Metaculus might be a c-corp startup; if this is the case, it could be neat if future donations come with equity. (Mainly a concern if donations increase, and the investment is general-purpose)"');
 
 /* July 2019 update (all grants to one-off grantees) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
