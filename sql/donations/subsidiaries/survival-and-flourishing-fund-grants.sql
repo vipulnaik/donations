@@ -898,7 +898,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'Grants in several future grant rounds suggest continued satisfaction with the grantee.',
   /* notes */ NULL),
 
-  ('Jaan Tallinn','Topos Institute',151000,'2020-10-01','quarter','donation log',NULLx,'https://survivalandflourishing.fund/sff-2020-h2-recommendations','Survival and Flourishing Fund|Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,2705000,0.0532,
+  ('Jaan Tallinn','Topos Institute',151000,'2020-10-01','quarter','donation log',NULL,'https://survivalandflourishing.fund/sff-2020-h2-recommendations','Survival and Flourishing Fund|Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,2705000,0.0532,
   /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2020 H2 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Conditional support',
   /* intended_use_of_funds */ NULL,
