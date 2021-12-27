@@ -644,7 +644,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ 'The grant round also includes a grant from Jaan Tallinn of $90,000. The Survival and Flourishing Fund also participates as a funder in this round but does not make a grant to the grantee. The grant is made via Social and Environmental Entrepreneurs.'),
 
   ('Jaan Tallinn','Global Catastrophic Risk Institute',209000,'2021-01-12','day','donation log','Global catastrophic risks','https://jaan.online/philanthropy/donations.html','Survival and Flourishing Fund|Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,2705000,0.1283,
-    /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2020 H2 grants https://survivalandflourishing.fund/sff-2020-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2020 H2 grants https://survivalandflourishing.fund/sff-2020-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
@@ -800,7 +800,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ 'Timing determined by timing of grant round; this November 2019 round of grants is SFF''s second round and the first with a grant to the grantee. BERI had previously granted money to the grantee.',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this November 2019 round of grants is SFF''s second round and the first with a grant to the grantee.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Jaan Tallinn also participates as a funder in this grant round, but makes no grants to the grantee in this grant round. The grant is made via the Center for Innovative Governance Research.'),
@@ -933,6 +933,45 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Although Jed McCaleb and The Casey and Family Foundation also participate as funders in this grant round, they do not make any grants to Topos Institute in this round.');
+
+/* Grants to Median Group */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Survival and Flourishing Fund','Median Group',50000,'2020-01-16','day','donation log','Global catastrophic risks','https://jaan.online/philanthropy/donations.html','Alex Flint|Alex Zhu|Andrew Critch|Eric Rogstad|Oliver Habryka','2019-12-15','day','https://github.com/survivalandflourishing/survivalandflourishing.github.io/blob/aa47e9860dff38e2af8d08da56a0a13389a75af4/_data/recommendations.tsv',920000,0.0543,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2019 Q4 grants https://survivalandflourishing.fund/sff-2019-q4-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different Recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this November 2019 round of grants is SFF''s second round and the first with grants to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Jaan Tallinn makes a $120,000 grant to Median Group in this grant round.'),
+
+  ('Jaan Tallinn','Median Group',120000,'2020-01-16','day','donation log','Global catastrophic risks','https://jaan.online/philanthropy/donations.html','Survival and Flourishing Fund|Alex Flint|Alex Zhu|Andrew Critch|Eric Rogstad|Oliver Habryka','2019-12-15','day','https://github.com/survivalandflourishing/survivalandflourishing.github.io/blob/aa47e9860dff38e2af8d08da56a0a13389a75af4/_data/recommendations.tsv',1090000,0.1101,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2019 Q4 grants https://survivalandflourishing.fund/sff-2019-q4-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different Recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this November 2019 round of grants is SFF''s second round and the first with grants to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'This grant is made via the Median Foundation. The Survival and Flourishing Fund makes a $50,000 grant to Median Group in this grant round.'),
+
+  ('Jaan Tallinn','Median Group',98000,'2020-12-23','day','donation log','Global catastrophic risks','https://jaan.online/philanthropy/donations.html','Survival and Flourishing Fund|Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,2705000,0.0362,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2020 H2 grants https://survivalandflourishing.fund/sff-2020-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fourth grant round and the second with grants to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Although the Survival and Flourishing Fund and Jed McCaleb also participates in this grant round as funders, neither of them makes any grants to this grantee.');
 
 /* Grants to Legal Priorities Project */
 
