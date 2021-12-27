@@ -1123,6 +1123,48 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Leverage Research */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  /* The first grant is made before SFF came into being, but is included here for continuity with SFF grants. */
+  ('Jaan Tallinn','Leverage Research',100000,'2019-04-03','day','donation log',NULL,'https://jaan.online/philanthropy/donations.html',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'A followup grant of $50,000 on 2019-12-04 and then another of of $80,000 on 2020-06-15 (this one recommended by the Survival and Flourishing Fund''s 2020 H1 S-proocess) suggest continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  /* This grant is made after SFF comes into being, but is not (at least publicly) listed under SFF;
+     however, that grant round did allow for recommenders to veto the group's official endorsement. */
+  ('Jaan Tallinn','Leverage Research',50000,'2019-12-04','day','donation log',NULL,'https://jaan.online/philanthropy/donations.html',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This grant was made after the Survival and Flourishing Fund''s 2019 Q4 S-process-based grant recommendations https://survivalandflourishing.fund/sff-2019-q4-recommendations and its timing coincides with the timing of several grants made based on those recommendations. This grant is not listed among SFF''s grant recommendations, but that grant round''s page says: "each Recommender in the round had the unilateral ability to veto the group’s official endorsement of any particular grant. Grants not officially endorsed in this way will not appear on the list below." Given the general concerns about Leverage Research in the communities that recommenders are drawn from, it''s plausible that Leverage Research was recommended through the process and vetoed.',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'A followup grant of $80,000 on 2020-06-15 (this one recommended by the Survival and Flourishing Fund''s 2020 H1 S-proocess) suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Jaan Tallinn','Leverage Research',80000,'2020-06-15','day','donation log',NULL,'https://jaan.online/philanthropy/donations.html','Survival and Flourishing Fund|Alex Zhu|Andrew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.0866,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2020 H1 grants https://survivalandflourishing.fund/sff-2020-h1-recommendations based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this 2020 H1 round of grants is SFF''s third round and the first with a (publicly documented) grant to the grantee; however, Jaan Tallinn made grants to the grantee in 2019.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Although the Survival and Flourishing Fund and Jed McCaleb also participate as funders in this grant round, neither of them makes a grant to the grantee.');
+
 /* Grants to Legal Priorities Project */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
