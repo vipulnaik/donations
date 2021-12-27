@@ -1040,7 +1040,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the third one with grants to the grantee.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Grant made via Convergence Analysis. Although Jed McCaleb and The Casey and Family Foundation also participate as funders in this grant round, they do not make any grants to Modeling Cooperation in this round.');
+  /* notes */ 'Grant made via Convergence Analysis. Although Jed McCaleb and The Casey and Family Foundation also participate as funders in this grant round, they do not make any grants to Modeling Cooperation in this round. Zvi Mowshowitz, one of the recommenders in the grant round, writes a post https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff about the round that does not seem to mention this grant.');
 
 /* Grants to Quantified Uncertainty Research Institute */
 
@@ -1094,7 +1094,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the first one with grants to the grantee.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Grant made via Foresight Institute. Although Jed McCaleb and The Casey and Family Foundation also participate as funders in this grant round, they do not make any grants to Modeling Cooperation in this round. In https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff#AI_Safety_Paper_Production Zvi Mowshowitz, one of the recommenders in the grant round, expresses his reservations: "Then there’s the people who think the ‘AI Safety’ risk is that things will be insufficiently ‘democratic,’ too ‘capitalist’ or ‘biased’ or otherwise not advance their particular agendas. They care about, in Eliezer’s terminology from Twitter, which monkey gets the poisoned banana first. To the extent that they redirect attention, that’s harmful. [...] I do feel the need to mention one organization here, AIObjectives@Foresight, because they’re the only organization that got funding that I view as an active negative. I strongly objected to the decision to fund them, and would have used my veto on an endorsement if I’d retained the right to veto. I do see that they are doing some amount of worthwhile research into ‘how to make AIs do what humans actually want’ but given what else is on their agenda, I view their efforts as strongly net-harmful, and I’m quite sad that they got money. Some others seemed to view this concern more as a potential ‘poisoning the well’ concern that the cause area would become associated with such political focus, whereas I was object-level concerned about the agenda, and in giving leverage over important things to people who are that wrong about very important things and focused on making the world match their wrong views."');
+  /* notes */ 'Grant made via Foresight Institute. Although Jed McCaleb and The Casey and Family Foundation also participate as funders in this grant round, they do not make any grants to AI Objectives Institute in this round. In https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff#AI_Safety_Paper_Production Zvi Mowshowitz, one of the recommenders in the grant round, expresses his reservations: "Then there’s the people who think the ‘AI Safety’ risk is that things will be insufficiently ‘democratic,’ too ‘capitalist’ or ‘biased’ or otherwise not advance their particular agendas. They care about, in Eliezer’s terminology from Twitter, which monkey gets the poisoned banana first. To the extent that they redirect attention, that’s harmful. [...] I do feel the need to mention one organization here, AIObjectives@Foresight, because they’re the only organization that got funding that I view as an active negative. I strongly objected to the decision to fund them, and would have used my veto on an endorsement if I’d retained the right to veto. I do see that they are doing some amount of worthwhile research into ‘how to make AIs do what humans actually want’ but given what else is on their agenda, I view their efforts as strongly net-harmful, and I’m quite sad that they got money. Some others seemed to view this concern more as a potential ‘poisoning the well’ concern that the cause area would become associated with such political focus, whereas I was object-level concerned about the agenda, and in giving leverage over important things to people who are that wrong about very important things and focused on making the world match their wrong views."');
 
 /* Grants to Center for Human-Compatible AI */
 
@@ -1164,6 +1164,57 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Although the Survival and Flourishing Fund and Jed McCaleb also participate as funders in this grant round, neither of them makes a grant to the grantee.');
+
+/* Grants to Convergence Analysis */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Jaan Tallinn','Convergence Analysis',10000,'2020-06-29','day','donation log','Global catastrophic risks','https://jaan.online/philanthropy/donations.html','urvival and Flourishing Fund|Alex Zhu|Andrew Critch|Jed McCaleb|Oliver Habryka',NULL,NULL,NULL,920000,0.0109,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2020 H1 grants https://survivalandflourishing.fund/sff-2020-h1-recommendations based on the S-process (simulation process). A request for grants was made at https://forum.effectivealtruism.org/posts/wQk3nrGTJZHfsPHb6/survival-and-flourishing-grant-applications-open-until-march and open till 2020-03-07. The S-process "involves allowing the recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn, Jed McCaleb, and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this 2020 H1 round of grants is SFF''s third round and the first with a grant to the grantee. However, a previous grant to Modeling Cooperation had been made via the grantee (Convergence Analysis).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Although the Survival and Flourishing Fund and Jed McCaleb also participate as funders in this grant round, neither of them makes a grant to the grantee.'),
+
+  ('Jaan Tallinn','Convergence Analysis',103000,'2021-04-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.1083,
+   /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support "Convergence: Project AI Clarity"',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the second with a grant to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The grant round also includes a $13,000 grant to Convergence Analysis for Convergence. Although Jed McCaleb also participates as a funder in this grant round, he does not make any grants to this grantee.'),
+
+  ('Jaan Tallinn','Convergence Analysis',13000,'2021-04-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,9513000,0.0137,
+   /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support "Convergence"',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the second with a grant to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The grant round also includes a $103,000 grant to Convergence Analysis for Convergence: Project AI Clarity. Although Jed McCaleb also participates as a funder in this grant round, he does not make any grants to this grantee.'),
+
+  ('Jaan Tallinn','Convergence Analysis',34000,'2021-10-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2021-h2-recommendations','Survival and Flourishing Fund|Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',8858000,0.0384,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H2 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts. [...] [The] system is designed to generally favor funding things that at least one recommender is excited to fund, rather than things that every recommender is excited to fund." https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff explains the process from a recommender''s perspective.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support "Research on AI & International Relations"',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the third one with grants to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Although Jed McCaleb and The Casey and Family Foundation also participate as funders in this grant round, they do not make any grants to the grantee.  Zvi Mowshowitz, one of the recommenders in the grant round, writes a post https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff about the round that does not seem to mention this grant.');
 
 /* Grants to Legal Priorities Project */
 
