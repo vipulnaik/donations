@@ -1111,7 +1111,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Although the Survival and Flourishing Fund and Jed McCaleb also participate in this grant round as funders, neither of them makes any grants to this grantee.'),
 
-  ('Jaan Tallinn','Center for Human-Compatible AI',20000,'2021-03-12','day','donation log','AI safety','https://jaan.online/philanthropy/donations.html',NULL,NULL,NULL,NULL,NULL,
+  ('Jaan Tallinn','Center for Human-Compatible AI',20000,'2021-03-12','day','donation log','AI safety','https://jaan.online/philanthropy/donations.html',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'Although most of Jaan Tallinn''s public grantmaking during this period is through the Survival and Flourishing Fund''s process (with https://survivalandflourishing.fund/ having the details), this particular grant is not made through the SFF process. However, it is made shortly after a much larger 2020 H2 garnt through the SFF process, so it may simply be a top-up of that grant.',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
