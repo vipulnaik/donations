@@ -282,7 +282,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
      to place it together with Jaan Tallin's other grantmaking of that era, most of
      which was based on the SFF process. */
   ('Jaan Tallinn','Centre for Enabling EA Learning & Research',50000,'2020-09-28','day','donation log','Effective altruism/housing','https://jaan.online/philanthropy/donations.html',NULL,'2020-11-27','day','https://forum.effectivealtruism.org/posts/Trs4FeTN3eYuPs3P9/updates-from-the-centre-for-enabling-ea-learning-and',NULL,NULL,
-  /* donation_process */ 'Although most of Jaan Tallinn''s public grantmaking during this period is through the Survival and Flourishing Fund''s process (with https://survivalandflourishing.fund/ having the details), this particular grant was not made through the SFF process.',
+  /* donation_process */ 'Although most of Jaan Tallinn''s public grantmaking during this period is through the Survival and Flourishing Fund''s process (with https://survivalandflourishing.fund/ having the details), this particular grant is not made through the SFF process.',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'https://forum.effectivealtruism.org/posts/Trs4FeTN3eYuPs3P9/updates-from-the-centre-for-enabling-ea-learning-and#Fundraising_ says: "Recently we were fortunate to receive a generous donation of $50,000 from Jaan Tallinn. This was nominally for 6 months of operating expenses. However, with our reduced resident numbers, we expect it to last considerably longer."',
   /* intended_funding_timeframe_in_months */ 6,
@@ -362,7 +362,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ 'The amount recommended by the S-process was $543,0000, but the actual grant amount was $563,000 ($20,000 higher).',
+  /* donor_amount_reason */ 'The amount recommended by the S-process is $543,0000, but the actual grant amount is $563,000 ($20,000 higher).',
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fourth grant round. Grants to MIRI had also been made in the third round (2020 H1).',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
@@ -569,7 +569,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ 'The grant round also includes a grant from the Survival and Flourishing Fund of $40,000 to the same grantee (CSER).'),
 
   ('Jaan Tallinn','Centre for the Study of Existential Risk',134000,'2020-08-31','day','donation log','Global catastrophic risks','https://jaan.online/philanthropy/donations.html',NULL,NULL,NULL,NULL,NULL,NULL,
-  /* donation_process */ 'Unlike the bulk of Tallinn''s philanthropy, this grant was not made through the Survival and Flourishing Fund''s S-process.',
+  /* donation_process */ 'Unlike the bulk of Tallinn''s philanthropy, this grant is not made through the Survival and Flourishing Fund''s S-process.',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
@@ -971,7 +971,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fourth grant round and the second with grants to this grantee.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Although the Survival and Flourishing Fund and Jed McCaleb also participates in this grant round as funders, neither of them makes any grants to this grantee.');
+  /* notes */ 'Although the Survival and Flourishing Fund and Jed McCaleb also participate in this grant round as funders, neither of them makes any grants to this grantee.');
 
 /* Grants to Rethink Priorities */
 
@@ -1028,7 +1028,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fourth grant round and the second with grants to this grantee.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Grant made via Convergence Analysis. Although the Survival and Flourishing Fund and Jed McCaleb also participates in this grant round as funders, neither of them makes any grants to this grantee.'),
+  /* notes */ 'Grant made via Convergence Analysis. Although the Survival and Flourishing Fund and Jed McCaleb also participate in this grant round as funders, neither of them makes any grants to this grantee.'),
 
   ('Jaan Tallinn','Modeling Cooperation',83000,'2021-10-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2021-h2-recommendations','Survival and Flourishing Fund|Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',8858000,0.0094,
   /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H2 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts. [...] [The] system is designed to generally favor funding things that at least one recommender is excited to fund, rather than things that every recommender is excited to fund." https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff explains the process from a recommender''s perspective.',
@@ -1095,6 +1095,33 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Grant made via Foresight Institute. Although Jed McCaleb and The Casey and Family Foundation also participate as funders in this grant round, they do not make any grants to Modeling Cooperation in this round. In https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff#AI_Safety_Paper_Production Zvi Mowshowitz, one of the recommenders in the grant round, expresses his reservations: "Then there’s the people who think the ‘AI Safety’ risk is that things will be insufficiently ‘democratic,’ too ‘capitalist’ or ‘biased’ or otherwise not advance their particular agendas. They care about, in Eliezer’s terminology from Twitter, which monkey gets the poisoned banana first. To the extent that they redirect attention, that’s harmful. [...] I do feel the need to mention one organization here, AIObjectives@Foresight, because they’re the only organization that got funding that I view as an active negative. I strongly objected to the decision to fund them, and would have used my veto on an endorsement if I’d retained the right to veto. I do see that they are doing some amount of worthwhile research into ‘how to make AIs do what humans actually want’ but given what else is on their agenda, I view their efforts as strongly net-harmful, and I’m quite sad that they got money. Some others seemed to view this concern more as a potential ‘poisoning the well’ concern that the cause area would become associated with such political focus, whereas I was object-level concerned about the agenda, and in giving leverage over important things to people who are that wrong about very important things and focused on making the world match their wrong views."');
+
+/* Grants to Center for Human-Compatible AI */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Jaan Tallinn','Center for Human-Compatible AI',799000,'2021-01-12','day','donation log','AI safety','https://jaan.online/philanthropy/donations.html','Survival and Flourishing Fund|Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2020 H2 grants https://survivalandflourishing.fund/sff-2020-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'The amout recommended by the S-process is $779,000, but the actual grant amount is $799,000 ($20,000 higher).',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fourth grant round and the first with grants to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Although the Survival and Flourishing Fund and Jed McCaleb also participate in this grant round as funders, neither of them makes any grants to this grantee.'),
+
+  ('Jaan Tallinn','Center for Human-Compatible AI',20000,'2021-03-12','day','donation log','AI safety','https://jaan.online/philanthropy/donations.html',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Although most of Jaan Tallinn''s public grantmaking during this period is through the Survival and Flourishing Fund''s process (with https://survivalandflourishing.fund/ having the details), this particular grant is not made through the SFF process. However, it is made shortly after a much larger 2020 H2 garnt through the SFF process, so it may simply be a top-up of that grant.',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Grants to Legal Priorities Project */
 
