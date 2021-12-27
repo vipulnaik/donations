@@ -1003,6 +1003,45 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Although Jed McCaleb also participates as a funder in this grant round, he does not make any grants to this grantee.');
 
+/* Grants to Modeling Cooperation */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Survival and Flourishing Fund','Modeling Cooperation',50000,'2019-12-12','day','donation log','AI safety','https://jaan.online/philanthropy/donations.html','Alex Flint|Alex Zhu|Andrew Critch|Eric Rogstad|Oliver Habryka','2019-12-15','day','https://github.com/survivalandflourishing/survivalandflourishing.github.io/blob/aa47e9860dff38e2af8d08da56a0a13389a75af4/_data/recommendations.tsv',920000,0.0543,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2019 Q4 grants https://survivalandflourishing.fund/sff-2019-q4-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different Recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this November 2019 round of grants is SFF''s second round and the first with grants to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Grant made via Convergence Analysis.'),
+
+  ('Jaan Tallinn','Modeling Cooperation',74000,'2020-12-08','day','donation log','AI safety','https://jaan.online/philanthropy/donations.html','Survival and Flourishing Fund|Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,2705000,0.0274,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2020 H2 grants https://survivalandflourishing.fund/sff-2020-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fourth grant round and the second with grants to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Grant made via Convergence Analysis. Although the Survival and Flourishing Fund and Jed McCaleb also participates in this grant round as funders, neither of them makes any grants to this grantee.'),
+
+  ('Jaan Tallinn','Modeling Cooperation',83000,'2021-10-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2021-h2-recommendations','Survival and Flourishing Fund|Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',8858000,0.0094,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H2 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts. [...] [The] system is designed to generally favor funding things that at least one recommender is excited to fund, rather than things that every recommender is excited to fund." https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff explains the process from a recommender''s perspective.',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the third one with grants to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Grant made via Convergence Analysis. Although Jed McCaleb and The Casey and Family Foundation also participate as funders in this grant round, they do not make any grants to Modeling Cooperation in this round.');
+
 /* Grants to Legal Priorities Project */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
