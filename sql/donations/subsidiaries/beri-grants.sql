@@ -2,6 +2,7 @@
 Grants covered elsewhere:
 - EA Funds/Giving Group grants to BERI
 - Open Philanthropy grant to BERI
+- Survival and Flourishing Fund grants to BERI
 */
 
 /* Grants to Machine Intelligence Research Institute (MIRI) */
