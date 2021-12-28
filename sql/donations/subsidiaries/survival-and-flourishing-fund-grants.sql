@@ -844,7 +844,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Jaan Tallinn, the other funder participating in the grant round, grants $147,000 to the grantee.'),
 
-  ('Jaan Tallinn','New Science Research',500000,'2021-10-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2021-h2-recommendations','Survival and Flourishing Fund|Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',8858000,0.0564,
+  ('Jaan Tallinn','New Science Research',500000,'2021-10-01','quarter','donation log','Scientific research','https://survivalandflourishing.fund/sff-2021-h2-recommendations','Survival and Flourishing Fund|Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',8858000,0.0564,
   /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2021 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
@@ -1224,7 +1224,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to support the BERI-CSER collaboration, This is BERI''s collaboration with the Centre for the Study of Existential Risk (CSER). See https://existence.org/collaborations/ for BERI''s full list of collaborations.',
   /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ NULL,
+  /* donor_donee_reason */ 'Zvi Mowshowitz, one of the recommenders, writes in https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff#AI_Safety_Paper_Production "I consider AI Safety and related existential risks to be by far the most important ‘cause area,’ that’s even more true given the focus of SFF, and I am confident Jaan feels the same way. [...] It’s hard to find things that might possibly work in the AI Safety space, as opposed to plans to look around for something that might possibly work. [...] CHAI@BERI also seemed clearly worthwhile, and they got a large grant as well."',
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this 2020 H1 round of grants is SFF''s third round and the first with a grant to BERI.',
   /* donor_next_donation_thoughts */ NULL,
