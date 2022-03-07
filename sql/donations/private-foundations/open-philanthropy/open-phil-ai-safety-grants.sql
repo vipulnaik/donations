@@ -520,7 +520,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Grant is structured as an unrestricted "gift" to Stanford University Computer Science.'),
 
-  ('Open Philanthropy','Stanford University',6500,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-university-ai-safety-seminar','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Dorsa Sadigh','Daniel Dewey',NULL,NULL,NULL,NULL, /* date adjusted */
+  ('Open Philanthropy','Stanford University',6500,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-university-ai-safety-seminar','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Dorsa Sadigh','Daniel Dewey',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant "is intended to fund the travel costs for experts on AI safety to present at the [AI safety] seminar [led by Dorsa Sadigh]."',
@@ -530,23 +530,73 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL),
 
-/* Contract work grants (new format) */
-
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
-  ('Open Philanthropy','Daniel Kang|Jacob Steinhardt|Yi Sun|Alex Zhai',2351,'2018-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/study-robustness-machine-learning-models','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Daniel Kang|Jacob Steinhardt|Yi Sun|Alex Zhai','Daniel Dewey',NULL,NULL,NULL,NULL,
-  /* donation_process */ 'The grant page says: "This project was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
+  ('Open Philanthropy','Stanford University',330792,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Dimitis Tsipras','Catherine Olsson',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant "to reimburse technology costs for their efforts to study the robustness of machine learning models, especially robustness to unforeseen adversaries."',
-  /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ 'The grant page says "We believe this will accelerate progress in adversarial, worst-case robustness in machine learning."',
+  /* intended_use_of_funds */ 'Grant "to support early-career research by Dimitris Tsipras on adversarial robustness as a means to improve AI safety."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL,
-  /* is_contractwork */ 1);
+  /* notes */ 'Open Phil made another grant http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-santurkar at the same time, for the same amount and 3-year timeframe, with the same grant investigator, and with the same receiving university.'),
+
+  ('Open Philanthropy','Stanford University',330792,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-santurkar','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Shibani Santurkar','Catherine Olsson',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support early-career research by Shibani Santurkar on adversarial robustness as a means to improve AI safety."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Open Phil made another grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras at the same time, for the same amount and 3-year timeframe, with the same grant investigator, and with the same receiving university.');
+
+/* Grants to Redwood Research */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Redwood Research',9420000,'2021-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/redwood-research-general-support','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support. Redwood Research is a new research institution that conducts research to better understand and make progress on AI alignment in order to improve the long-run future."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'This is a total across four grants.');
+
+/* Grants to Centre for the Governance of AI */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Centre for the Governance of AI',450000,'2020-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/gov-ai-general-support','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Committee for Effective Altruism Support',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant was recommended by the Committee for Effective Altruism Support following its process https://www.openphilanthropy.org/committee-effective-altruism-support',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "GovAI intends to use these funds to support the visit of two senior researchers and a postdoc researcher."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter" but does not link to specific past writeups (Open Phil has not previously made grants directly to GovAI).',
+  /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public.',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Grant made via the Berkeley Existential Risk Initiative.'),
+
+  ('Open Philanthropy','Centre for the Governance of AI',2537600,'2021-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/gov-ai-field-building','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support activities related to building the field of AI governance research. GovAI intends to use this funding to conduct AI governance research and to develop a talent pipeline for those interested in entering the field."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Grant made via the Centre for Effective Altruism.');
 
 /* Other grants (new format) */
 
@@ -587,6 +637,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
+  ('Open Philanthropy','Study and Training Related to AI Policy Careers',594420,'2020-03-01','month','donation log','AI safety/talent pipeline','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/study-and-training-related-to-ai-policy-careers','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Emefa Agawu|Karson Elmgren|Matthew Gentzel|Becca Kagan|Benjamin Mueller','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This is a scholarship program run by Open Philanthropy. Applications were sought at https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/funding-AI-policy-careers with the last date for applications being 2019-10-15.',
+  /* intended_use_of_funds_category */ 'Living expenses during research project',
+  /* intended_use_of_funds */ 'Grant is "flexible support to enable individuals to pursue and explore careers in artificial intelligence policy." Recipients include Emefa Agawu, Karson Elmgren, Matthew Gentzel, Becca Kagan, and Benjamin Mueller. The ways that specific recipients intend to use the funds is not described, but https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/funding-AI-policy-careers#examples gives general guidance on the kinds of uses Open Philanthropy was expecting to see when it opened applications.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/funding-AI-policy-careers#goal says: "The goal of this program is to provide flexible support that empowers exceptional people who are interested in positively affecting the long-run effects of transformative AI via careers in AI policy, which we see as an important and neglected issue." https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/funding-AI-policy-careers#appendix provides links to Open Philanthropy''s other writing on the importance of the issue.',
+  /* donor_amount_reason */ 'https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/funding-AI-policy-careers#summary says: "There is neither a maximum nor a minimum number of applications we intend to fund; rather, we intend to fund the applications that seem highly promising to us."',
+  /* donor_timing_reason */ 'Timing is likely determined by the time taken to review all applications after the close of applications on 2019-10-15.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'As of early 2022, there do not appear to have been further rounds of grantmaking from Open Philanthropy for this purpose.',
+  /* notes */ 'Open Philanthropy runs a related fellowship program called the Open Phil AI Fellowship, that has an annual cadence of announcing new grants, though individual grants are often multi-year. The Open Phil AI Fellowship grantees are mostly people working on technical AI safety, whereas this grant is focused on AI policy work. Moreover, the Open Phil AI Fellowship targets graduate-level research,, whereas this grant targets study and training.'),
+
   ('Open Philanthropy','World Economic Forum',50000,'2020-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/world-economic-forum-global-ai-council-workshop','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Daniel Dewey',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -606,18 +668,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL),
-
-  ('Open Philanthropy','Centre for the Governance of AI',450000,'2020-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/gov-ai-general-support','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Committee for Effective Altruism Support',NULL,NULL,NULL,NULL,
-  /* donation_process */ 'The grant was recommended by the Committee for Effective Altruism Support following its process https://www.openphilanthropy.org/committee-effective-altruism-support',
-  /* intended_use_of_funds_category */ 'Organizational general support',
-  /* intended_use_of_funds */ 'The grant page says: "GovAI intends to use these funds to support the visit of two senior researchers and a postdoc researcher."',
-  /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ 'The grant page says "we see the basic pros and cons of this support similarly to what we’ve presented in past writeups on the matter" but does not link to specific past writeups (Open Phil has not previously made grants directly to GovAI).',
-  /* donor_amount_reason */ 'The amount is decided by the Committee for Effective Altruism Support https://www.openphilanthropy.org/committee-effective-altruism-support but individual votes and reasoning are not public.',
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
@@ -717,12 +767,23 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Open Phil made four grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-santa-cruz-xie-adversarial-robustness https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-wagner https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-song https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/mit-adversarial-robustness-research for "adversarial robustness research" in January and February 2021, around the time of this grant. It looks like the donor became interested in funding this research topic at this time.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
-
-/* Study and Training Related to AI Policy Careers https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/study-and-training-related-to-ai-policy-careers */
+  /* notes */ NULL),
 
 /* Other grants (new format) that are contract work */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
+  ('Open Philanthropy','Daniel Kang|Jacob Steinhardt|Yi Sun|Alex Zhai',2351,'2018-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/study-robustness-machine-learning-models','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence','Daniel Kang|Jacob Steinhardt|Yi Sun|Alex Zhai','Daniel Dewey',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant page says: "This project was supported through a contractor agreement. While we typically do not publish pages for contractor agreements, we occasionally opt to do so."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to reimburse technology costs for their efforts to study the robustness of machine learning models, especially robustness to unforeseen adversaries."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says "We believe this will accelerate progress in adversarial, worst-case robustness in machine learning."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1),
+
   ('Open Philanthropy','WestExec',540000,'2020-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/westexec-report-on-assurance-in-machine-learning-systems','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence',NULL,'Luke Muehlhauser','2020-03-20','day',NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
