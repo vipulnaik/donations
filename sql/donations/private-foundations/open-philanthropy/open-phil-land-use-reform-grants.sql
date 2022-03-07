@@ -194,9 +194,24 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Open New York */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, affected_states, affected_cities, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Open New York',1000000,'2021-08-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/open-new-york','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','United States','New York','New York City','Otis Reid',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "This funding is intended to support Open New York’s work advocating for New York housing to be affordable and accessible to everyone."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "As part of our focus on land use reform to promote housing affordability, we’ve supported a number of advocacy organizations in high-wage, high-cost regions (e.g. Seattle and Washington, D.C.) to push for more housing."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Land use reform/United States */
 
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, influencer, affected_countries, affected_states, affected_cities,donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, influencer, affected_countries, affected_states, affected_cities, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions) values
   ('Open Philanthropy','East Bay Forward',40000,'2017-04-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/east-bay-forward-yimbytown-2017-conference','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','Money to support a YIMBYtown 2017 conference planned for July 2017. Grant via the California Renters Legal Advocacy and Education Fund (CaRLA). Follows up on grant https://www.openphilanthropy.org/focus/us-policy/land-use-reform/better-boulder-yimby-2016 to Better Boulder supporting the YIMBY 2016 conference','Alexander Berger','United States',NULL,NULL,'2017-07-07','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/YPBvXvkkB1w',NULL),
   ('Open Philanthropy','Better Boulder',37000,'2016-04-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/better-boulder-yimby-2016','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','Money to support a conference of land use reform advocates from around the United States and Canada, called YIMBY 2016, in Boulder, Colorado. YIMY = Yes, In My Backyard" is a play on the corresponding more famous opposite acronym NIMBY', NULL, 'United States|Canada', NULL, NULL, '2016-05-09','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/pkD3HWSPamM',NULL),
   ('Open Philanthropy','Seattle for Everyone',50000,'2016-02-01','month','donation log','Land use reform','https://www.openphilanthropy.org/focus/us-policy/land-use-reform/seattle-everyone-general-support','https://www.openphilanthropy.org/focus/us-policy/land-use-reform','Recipient is a coalition of various interest groups (including market rate developers, affordable housing developers, labor and social justice advocates, businesses, environmentalists, and urbanists) formed to promote the same set of proposed land use reforms in Seattle that Sightline Institute (another Open Phil grantee) also promotes. No detailed writeup',NULL, 'United States','Washington','Seattle', '2016-03-30', 'day', 'https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/7DX0fvv6aOI',NULL),
