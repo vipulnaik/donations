@@ -297,3 +297,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
+
+/* Grants to University of Rochester */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','University of Rochester',893156,'2021-10-01','month','donation log','Migration policy','http://www.openphilanthropy.org/focus/us-policy/immigration-policy/university-of-rochester-rural-urban-migration-in-kenya','http://www.openphilanthropy.org/focus/us-policy/immigration-policy','Kenya','Travis Baseler','Saarthak Gupta',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support the scale-up of a previous study https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3534715 conducted by Professor Travis Baseler, on the impact of information asymmetries on rural-urban migration in Kenya. Approximately 500 rural households participated in the previous study, which found that correcting underestimates of wages in Nairobi led to increased migration and significantly increased migrants’ household incomes. Professor Baseler intends to use this funding to expand the study to 16,800 households in Kenya."',
+  /* intended_funding_timeframe_in_months */ 60,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'No explicit reasons for timing are discussed, but the grant is made about one month after the paper https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3534715 about the previous study is published.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
