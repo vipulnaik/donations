@@ -389,6 +389,24 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* University of Oxford */
+
+insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,donation_earmark,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes,amount_original_curreency,original_currency,currency_conversion_basis) values
+  ('Open Philanthropy','University of Oxford',26086,'2018-10-01','month','donation log','Biosecurity and pandemic preparedness','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/oxford-university-dphil-support-for-andrew-snyder-beattie','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity','Andrew Snyder-Beattie','Claire Zabel','2018-10-29','day',NULL,NULL, /* date adjusted */
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support the research of the Mathematical Ecology Research Group and the research costs of Andrew Snyder-Beattie, who recently served as Director of Research at the Future of Humanity Institute and a member of FHI’s Biotechnology Research Team."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Andrew Snyder-Beattie, whose work the grant would fund, would later be hired by Open Philanthropy and lead its biosecurity and pandemic preparedness program. This probably indicates continued satisfaction with him.',
+  /* notes */ NULL,
+  /* amount_original_currency */ 20000,
+  /* original_currency */ 'GBP',
+  /* currency_conversion_basis */ 'donor calculation');
+  
 /* Other grants */
 
 insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,notes,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions) values
