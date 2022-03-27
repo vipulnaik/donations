@@ -5,7 +5,7 @@
    a batch, and it's easier to understand and enter the grants grouped
    this way. */
 
--- 2018 end-of-year top charities only
+/* 2018 end-of-year top charities only */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, affected_countries, influencer, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Malaria Consortium',26600000,'2018-12-01','month','donation log','Global health/malaria/seasonal malaria chemoprevention','https://www.openphilanthropy.org/focus/global-health-and-development/miscellaneous/malaria-consortium-seasonal-malaria-chemoprevention-december-2018','Nigeria|Burkina Faso|Chad','GiveWell',
   /* donation_process */ 'The grant is based on GiveWell''s recommendation. GiveWell made the recommendations as part of its end-of-year recommendations to Open Philanthropy, along with allocations to other GiveWell top and standout charities. The total budget is based on guidelines set by Open Philanthropy. GiveWell explains the process in detail at https://blog.givewell.org/2018/11/26/our-recommendation-to-good-ventures/ Charity status updates in 2018 are at https://www.givewell.org/charities/top-charities/updates-in-november-2018#Malaria_Consortium-s_seasonal_malaria_chemoprevention_program',
@@ -103,7 +103,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Even accounting for this grant, GiveWell identifies a remaining funding gap of over $100 million for GiveDirectly; this is the largest identified room for more funding of all GiveWell top charities.');
 
--- 2019 end-of-year top charities only
+/* 2019 end-of-year top charities only */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, affected_countries, influencer, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Malaria Consortium',33926000,'2020-02-01','month','donation log','Global health/malaria/seasonal malaria chemoprevention','https://www.openphilanthropy.org/focus/global-health-and-development/miscellaneous/malaria-consortium-seasonal-malaria-chemoprevention-february-2020','Burkina Faso|Chad|Nigeria|Togo','GiveWell',
   /* donation_process */ 'The grant is based on GiveWell''s recommendation. GiveWell made the recommendations as part of its end-of-year recommendations to Open Philanthropy, along with allocations to other GiveWell top and standout charities. The total budget is based on guidelines set by Open Philanthropy. GiveWell explains the process in detail at https://www.givewell.org/charities/top-charities/2019/open-philanthropy-recommendation (published November 2019).',
