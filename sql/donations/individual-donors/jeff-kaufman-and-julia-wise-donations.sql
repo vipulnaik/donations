@@ -1,4 +1,48 @@
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, payment_modality, match_eligible, goal_amount, influencer, employer_match, matching_employer, donor_donee_reason, donor_amount_reason, donor_timing_reason, notes) values
+  /* 2022 */
+  ('Jeff Kaufman and Julia Wise','Carrick Flynn for Congress',5800,0.0145,'2022-02-11','day','donation log','Biosecurity and pandemic preparedness','https://www.jefftk.com/donations',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donor_donee_reason */ 'https://www.jefftk.com/donations#footnote2 says: "We hadn''t donated to a political campaign since college, but Julia was impressed with this candidate''s work on pandemic preparedness, which is an area we''ve both thought was important for a long time. In general, we prefer to donate through funds because they are able to put a lot more time and attention into identifying excellent donation opportunities, but campaign finance rules mean this model doesn''t work for political donations. Unlike our other donations, these are not tax-deductible." It links to https://forum.effectivealtruism.org/posts/FffuQRBYjvm5hiaFw/there-s-a-role-for-small-ea-donors-in-campaign-finance for backgound on campaign finance donations.',
+  /* donor_amount_reason */ 'Donations to United States political campaigns are limited to $2,900 per donor per campaign. Since the donor is a couple, their effective donation ceiling is $5,800, and they max out the ceiling.',
+  /* donor_timing_reason */ 'The timing is determined by the timing of https://www.carrickflynnfororegon.com/ (the political campaign). It also happens shortly after the post https://forum.effectivealtruism.org/posts/Qi9nnrmjwNbBqWbNT/the-best-usd5-800-i-ve-ever-donated-to-pandemic-prevention by Open Philanthropy''s program officer.',
+  /* notes */ 'The donation happens shortly after https://forum.effectivealtruism.org/posts/Qi9nnrmjwNbBqWbNT/the-best-usd5-800-i-ve-ever-donated-to-pandemic-prevention but that blog post is not explicitly attributed.'),
+
+  /* 2021 */
+  ('Jeff Kaufman and Julia Wise','GiveWell Maximum Impact Fund',100000,0.25,'2021-11-23','day','donation log','Global health and development','https://www.jefftk.com/donations',NULL,NULL,400000,'GiveWell',NULL,NULL,
+  /* donor_donee_reason */ 'The donor allocates 50% of their Giving Season donation each year to GiveWell-recommended charities, usually the Maximum Impact Fund or the top charity. In 2021, all the GiveWell-influenced donations (50% of $400,000 = $200,000) would be to the Maximum Impact Fund; this particular donation is half of the total $200,000.',
+  /* donor_amount_reason */ 'The total amount donated by the donor to the donee ($200,000) for the 2021 Giving Season is about 50% of the donor''s total donations ($400,000) for that Giving Season, and the total donation amount is targeted to be around 50% of the donor''s AGI (though in this particular year it fell short). This particular donation of $100,000 is half the total amount donated by the donor to the donee .',
+  /* donor_timing_reason */ 'The donation is timed for the beginning of 2021 Giving Season; the donor generally makes their donations in this period.',
+  /* notes */ NULL),
+
+  ('Jeff Kaufman and Julia Wise','GiveWell Maximum Impact Fund',25,0.0001,'2021-11-29','day','donation log','Global health and development','https://www.jefftk.com/donations','Facebook Fundraisers',NULL,400000,'GiveWell',NULL,NULL,
+  /* donor_donee_reason */ 'The donor allocates 50% of their Giving Season donation each year to GiveWell-recommended charities, usually the Maximum Impact Fund or the top charity. In 2021, all the GiveWell-influenced donations (50% of $400,000 = $200,000) would be to the Maximum Impact Fund.',
+  /* donor_amount_reason */ 'The total amount donated by the donor to the donee ($200,000) for the 2021 Giving Season is about 50% of the donor''s total donations ($400,000) for that Giving Season, and the total donation amount is targeted to be around 50% of the donor''s AGI (though in this particular year it fell short). This particular donation is fairly small and may have been made to test specific payment methods.',
+  /* donor_timing_reason */ 'The donation is timed for the beginning of 2021 Giving Season; the donor generally makes their donations in this period. This particular donation is fairly small and may have been made to test specific payment methods.',
+  /* notes */ NULL),
+
+  ('Jeff Kaufman and Julia Wise','GiveWell Maximum Impact Fund',500,0.0013,'2021-11-29','day','donation log','Global health and development','https://www.jefftk.com/donations','Facebook Fundraisers',NULL,400000,'GiveWell',NULL,NULL,
+  /* donor_donee_reason */ 'The donor allocates 50% of their Giving Season donation each year to GiveWell-recommended charities, usually the Maximum Impact Fund or the top charity. In 2021, all the GiveWell-influenced donations (50% of $400,000 = $200,000) would be to the Maximum Impact Fund.',
+  /* donor_amount_reason */ 'The total amount donated by the donor to the donee ($200,000) for the 2021 Giving Season is about 50% of the donor''s total donations ($400,000) for that Giving Season, and the total donation amount is targeted to be around 50% of the donor''s AGI (though in this particular year it fell short). This particular donation is fairly small and may have been made to test specific payment methods.',
+  /* donor_timing_reason */ 'The donation is timed for the beginning of 2021 Giving Season; the donor generally makes their donations in this period. This particular donation is fairly small and may have been made to test specific payment methods.',
+  /* notes */ NULL),
+
+  ('Jeff Kaufman and Julia Wise','Effective Altruism Funds: Effective Altruism Infrastructure Fund',183376,,0.4584,'2021-11-30','day','donation log','Effective altruism','https://www.jefftk.com/donations','Facebook Fundraisers',NULL,400000,'Giving Tuesday Facebook match',NULL,NULL,
+   /* donor_donee_reason */  'This is one of two donations by the donor to the donee for the 2021 Giving Season. The donee was selected as the sole representative for "effective altruism" donations of $200,000, which take up about half of the donor''s annual donation of $400,000 (which in turn is about half of the donor''s AGI).',
+  /* donor_amount_reason */ 'The total amount donated by the donor to the donee for the 2021 Giving Season ($200,000) is 50% of the donor''s total donations for that Giving Season ($400,000), and the total donation amount is targeted to be around 50% of the donor''s AGI ($782,158).',
+  /* donor_timing_reason */ 'The donation is timed for Giving Tuesday in order to benefit from the Giving Tuesday Facebook match.',
+  /* notes */ 'Facebook''s match amount for this donation works out to $34,081.'),
+
+  ('Jeff Kaufman and Julia Wise','Effective Altruism Funds: Effective Altruism Infrastructure Fund',16624,0.0416,'2021-12-12','day','donation log','Effective altruism','https://www.jefftk.com/donations',NULL,NULL,400000,NULL,NULL,NULL,
+  /* donor_donee_reason */ 'This is one of two donations by the donor to the donee for the 2021 Giving Season. The donee was selected as the sole representative for "effective altruism" donations of $200,000, which take up about half of the donor''s annual donation of $400,000 (which in turn is about half of the donor''s AGI).',
+  /* donor_amount_reason */ 'The total amount donated by the donor to the donee for the 2021 Giving Season ($200,000) is 50% of the donor''s total donations for that Giving Season ($400,000), and the total donation amount is targeted to be around 50% of the donor''s AGI ($782,158). This donation ($16,624) is the residual portion of the $200,000 after the original donation of $183,376 on Giving Tuesday.',
+  /* donor_timing_reason */ 'This donation is timed for the 2021 Giving Season.',
+  /* notes */ NULL),
+
+  ('Jeff Kaufman and Julia Wise','GiveWell Maximum Impact Fund',99475,0.2487,'2021-12-12','day','donation log','Global health and development','https://www.jefftk.com/donations',NULL,NULL,400000,'GiveWell',NULL,NULL,
+  /* donor_donee_reason */ 'The donor allocates 50% of their Giving Season donation each year to GiveWell-recommended charities, usually the Maximum Impact Fund or the top charity. In 2021, all the GiveWell-influenced donations (50% of $400,000 = $200,000) would be to the Maximum Impact Fund; this particular donation is the last of the donations and about half of the total.',
+  /* donor_amount_reason */ 'The total amount donated by the donor to the donee for the 2021 Giving Season ($200,000) is 50% of the donor''s total donations for that Giving Season ($400,000), and the total donation amount is targeted to be around 50% of the donor''s AGI ($782,158). This donation ($99,475) is the residual portion of the $200,000 after the previous donations of $100,000, $25, aand $500.',
+  /* donor_timing_reason */ 'This donation is timed for the 2021 Giving Season.',
+  /* notes */ NULL),
+
   /* 2020 */
   ('Jeff Kaufman and Julia Wise','Effective Altruism Funds: Effective Altruism Infrastructure Fund',1000,0.0038,'2020-11-20','day','donation log','Effective altruism','https://www.jefftk.com/donations',NULL,NULL,264727,NULL,NULL,NULL,
   /* donor_donee_reason */ 'This is one of several donations by the donor to the donee for the 2020 Giving Season. The donee was selected as the sole representative for "effective altruism" donations, which take up about half of the donor''s annual donation (which in turn is about half of the donor''s AGI).',
