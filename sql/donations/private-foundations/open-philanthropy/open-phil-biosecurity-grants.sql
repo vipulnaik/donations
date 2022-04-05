@@ -406,7 +406,22 @@ insert into donations(donor,donee,amount,donation_date,donation_date_precision,d
   /* amount_original_currency */ 20000,
   /* original_currency */ 'GBP',
   /* currency_conversion_basis */ 'donor calculation');
-  
+
+/* Nigerian Institute of Medical Research */
+
+insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,donation_earmark,affected_countries,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions,donation_process,intended_use_of_funds_category,intended_use_of_funds,intended_funding_timeframe_in_months,donor_donee_reason,donor_amount_reason,donor_timing_reason,donor_next_donation_thoughts,donor_retrospective,notes) values
+  ('Open Philanthopy','Nigerian Institute of Medical Research',2921000,'2022-01-01','month','donation log','Biosecurity and pandemic preparedness/COVID-19','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity/nigerian-institute-of-medical-research-covid-19-fractional-dosing-trial','https://www.openphilanthropy.org/focus/global-catastrophic-risks/biosecurity',NULL,'Nigeria','Jacob Trefethen',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a safety and immunogenicity trial in adults in Nigeria of fractional doses of the AstraZeneca, Moderna, and Johnson & Johnson COVID-19 vaccines."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "The trial has the potential to indicate that doses of these vaccines that are a quarter or half the size of standard doses promote “non-inferior” immune responses. If non-inferiority can be established, this could allow many people to be vaccinated against COVID-19 sooner despite limited supplies, reducing deaths and other harms from the pandemic."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The grant is made two years after the start of the COVID-19 pandemic, and about a year after the initial release of the vaccines being tested. The rise of variants such as delta and omicron in the past year has led to interest in booster doses, meaning that ongoing supply of the vaccine may be needed.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Other grants */
 
 insert into donations(donor,donee,amount,donation_date,donation_date_precision,donation_date_basis,cause_area,url,donor_cause_area_url,notes,influencer,donation_announcement_date,donation_announcement_date_precision,donation_announcement_url,predictions) values

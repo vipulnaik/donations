@@ -1862,6 +1862,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','theguardian.org',450000,'2021-12-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/the-guardian-journalism-factory-farming-animal-cruelty-2021','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support journalism on factory farming and farm animal cruelty. In keeping with The Guardian’s journalistic and transparency standards, all supported content will be clearly labeled, and Open Philanthropy will have no editorial control over the content ultimately published."',
+  /* intended_funding_timeframe_in_months */ 12,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'The amount per year for this grant ($450,000 / year) is the same as for the previous grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/the-guardian-journalism-factory-farming-animal-cruelty-2020 ($900,000 over two years).',
+  /* donor_timing_reason */ 'The grant is made right after the end of the two-year timeframe of the previous grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/the-guardian-journalism-factory-farming-animal-cruelty-2020 (2020-01).',
+  /* donor_next_donation_thoughts */ 'This is an exit grant, so Open Philanthropy has no plans to make followup grants.',
+  /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
 /* Grants to Aquaculture Stewardship Council */
@@ -1932,6 +1944,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_donee_reason */ 'The grant page says the funding is "to create a sustainable, healthy, and just global food system."',
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','The Good Food Institute',10000000,'2021-12-01','month','donation log','Animal welfare/meat alternatives/plant-based meat','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/good-food-institute-general-support-2021','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare',NULL,'Lewis Bollard|Amanda Hungerford',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support, including its work promoting plant-based alternatives to animal products."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ 'The grant page says: "Our Farm Animal Welfare team has been particularly impressed with GFI’s public policy work relating to plant-based products."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The grant is made is made right after the end of the two-year timeframe of the previous grant https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/good-food-institute-international-work (2019-12).',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
@@ -3119,7 +3143,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to AWARE */
 
-insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, affected_countries, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
   ('Open Philanthropy','Animal Welfare Awareness, Research, and Education',64600,'2020-10-01','month','donation log','Animal welfare/factory farming','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-welfare-awareness-research-and-education-farm-animal-welfare-work','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','South Korea','Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -3130,7 +3154,25 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL,
+  /* amount_original_currency */ NULL,
+  /* original_currency */ NULL,
+  /* currency_conversion_basis */ NULL),
+
+  ('Open Philanthropy','Animal Welfare Awareness, Research, and Education',267723,'2021-12-01','month','donation log','Animal welfare/factory farming/pig','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare/animal-welfare-awareness-research-and-education-pig-welfare-reforms','https://www.openphilanthropy.org/focus/us-policy/farm-animal-welfare','South Korea','Amanda Hungerford|Lewis Bollard',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant page says: "AWARE identified pig welfare as a promising policy reform opportunity following our October 2020 support."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work on pig welfare reforms in South Korea. [...] This funding is intended to support the implementation of a sow stall ban and the creation of a welfare standard assessment for pigs."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* amount_original_currency */ 318000000,
+  /* original_currency */ 'KRW',
+  /* currency_conversion_basis */ 'donor calculation');
 
 /* Grants to Vegan Women Summit */
 

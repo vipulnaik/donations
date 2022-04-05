@@ -4,7 +4,7 @@ create table donations (
     donee varchar(200),
     amount float(14,2),
     amount_original_currency float(24,2),
-    original_currency enum('AUD','BRL','BTC','CAD','CHF','CZK','DKK','ETH','EUR','GBP','INR','NOK','NZD','SEK','SGD','USD','XRP','ZAR','SHIB','AKITA','ELON','MKR') DEFAULT 'USD',
+    original_currency enum('AUD','BRL','BTC','CAD','CHF','CZK','DKK','ETH','EUR','GBP','INR','NOK','NZD','SEK','SGD','USD','XRP','ZAR','SHIB','AKITA','ELON','MKR','KRW') DEFAULT 'USD',
     currency_conversion_date date,
     currency_conversion_basis enum('donor calculation','donee calculation','Peter Hurford','Bloomberg','Fixer.io','Coindesk','Etherscan.io'),
     fraction float(5, 4),
