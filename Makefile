@@ -215,6 +215,7 @@ read_donations:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/anonymous-miri-crypto-donor-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/ben-hoskin-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/ben-kuhn-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/ben-west-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/blake-borgeson-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/brian-tomasik-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/catherine-hollander-donations.sql
@@ -228,6 +229,7 @@ read_donations:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/haseeb-qureshi-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/helen-toner-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/holden-karnofsky-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/howie-lempel-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/isabel-arjmand-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/jacob-steinhardt-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/jalex-stark-donations.sql
@@ -238,6 +240,7 @@ read_donations:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/josh-rosenberg-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/liftigniter-giving-initiative.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/loren-merritt-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/luke-muehlhauser-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/michael-dello-iovaco-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/michael-dickens-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/morgan-davis-donations.sql
