@@ -25,7 +25,7 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   /* donor_timing_reason */ 'The donation is timed for the beginning of 2021 Giving Season; the donor generally makes their donations in this period. This particular donation is fairly small and may have been made to test specific payment methods.',
   /* notes */ NULL),
 
-  ('Jeff Kaufman and Julia Wise','Effective Altruism Funds: Effective Altruism Infrastructure Fund',183376,,0.4584,'2021-11-30','day','donation log','Effective altruism','https://www.jefftk.com/donations','Facebook Fundraisers',NULL,400000,'Giving Tuesday Facebook match',NULL,NULL,
+  ('Jeff Kaufman and Julia Wise','Effective Altruism Funds: Effective Altruism Infrastructure Fund',183376,0.4584,'2021-11-30','day','donation log','Effective altruism','https://www.jefftk.com/donations','Facebook Fundraisers',NULL,400000,'Giving Tuesday Facebook match',NULL,NULL,
    /* donor_donee_reason */  'This is one of two donations by the donor to the donee for the 2021 Giving Season. The donee was selected as the sole representative for "effective altruism" donations of $200,000, which take up about half of the donor''s annual donation of $400,000 (which in turn is about half of the donor''s AGI).',
   /* donor_amount_reason */ 'The total amount donated by the donor to the donee for the 2021 Giving Season ($200,000) is 50% of the donor''s total donations for that Giving Season ($400,000), and the total donation amount is targeted to be around 50% of the donor''s AGI ($782,158).',
   /* donor_timing_reason */ 'The donation is timed for Giving Tuesday in order to benefit from the Giving Tuesday Facebook match.',
