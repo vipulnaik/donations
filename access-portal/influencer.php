@@ -29,7 +29,7 @@ print '<script>$(document).ready(function()
     }
 ); </script>'."\n";
 print "<h3>$influencer money moved</h3>";
-print '<p> <!-- blank space to prevent cumulative layout shift --><span id="changeThemeMenu" style="display: none;">Change <a href="javascript:;" onclick="change_theme_color()">color</a></span></p>';
+print '<p><span id="changeThemeMenu" style="display: none;">Change <a href="javascript:;" onclick="change_theme_color()">color</a></span>   &thinsp;<!-- blank space to prevent cumulative layout shift --></p>';
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
