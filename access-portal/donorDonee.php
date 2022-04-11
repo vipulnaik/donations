@@ -77,7 +77,7 @@ print '<script>$(document).ready(function()
 print "<h3>$donor donations made to $donee"
   . ($causeAreaFilterString ? " (filtered to cause areas matching $causeAreaFilterString)" : '')
  . "</h3>";
-print '<span id="changeThemeMenu" style="display: none;">Change <a href="#" onclick="change_theme_color()">color</a></span>';
+print '<p> <!-- blank space to prevent cumulative layout shift --><span id="changeThemeMenu" style="display: none;">Change <a href="javascript:;" onclick="change_theme_color()">color</a></span></p>';
 include_once('preamble.inc');
 print '<h4>Table of contents</h4>';
 print '<ul>';
