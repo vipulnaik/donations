@@ -125,7 +125,7 @@ read_documents:
 read_donations:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/ai-safety-camp.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/ai-safety-camp-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/brain-preservation-foundation-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2016.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2017-cea.sql
