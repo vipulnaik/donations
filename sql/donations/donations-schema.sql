@@ -10,7 +10,7 @@ create table donations (
     fraction float(5, 4),
     donation_date date,
     donation_date_precision enum('day','month','quarter','year','multi-year'),
-    donation_date_basis enum('transaction','donation log','date of donation announced in announcement','date of donation announcement','donee contributor list', 'IATI','Effective Altruism Survey'),
+    donation_date_basis enum('transaction','donation log','date of donation announced in announcement','date of donation announcement','donee contributor list', 'IATI','Effective Altruism Survey','private communication by donee'),
     cause_area varchar(100),
     url varchar(400),
     donor_cause_area_url varchar(200),
