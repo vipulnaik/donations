@@ -7,7 +7,7 @@ reset: reset_documents reset_donations reset_donees reset_donors reset_gifts res
 .PHONY: init
 init:
 	mkdir -p access-portal/images
-	mysql $(MYSQL_ARGS) -e "create database $(DATABASE);"
+	mysql $(MYSQL_ARGS) -e "create database if not exists $(DATABASE);"
 
 # To update the read_* sections below, paste the output of (changing "table_name_here" to the correct table name):
 #     find ./sql/table_name_here -type f -iname '*.sql' | sort | sed 's/^\.\//\tmysql $(MYSQL_ARGS) $(DATABASE) < /'
