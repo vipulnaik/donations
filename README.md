@@ -9,7 +9,7 @@ Note that the `passwordFile.inc` file in `access-portal/backend/globalVariables`
 From the shell run (note this will create and read into a `donations` database,
 so be careful if you already have a database with that name):
 
-    make init && make read
+    make init && make read && make reset_similarity
 
 If you need to pass in arguments to `mysql`, use the `MYSQL_ARGS` variable:
 
