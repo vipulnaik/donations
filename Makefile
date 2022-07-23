@@ -122,17 +122,14 @@ read_documents:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/wmf-docs.sql
 
 .PHONY: read_donations
-read_donations:
+read_donations: read_donations_schema read_foundation_and_subsidiary_grants read_other_donations
+
+.PHONY: read_donations_schema
+read_donations_schema:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/ai-safety-camp-donations.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/brain-preservation-foundation-donations.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2016.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2017-cea.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2019-cea-100k.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2019-cea-500k.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/ea-hotel-donations.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/miri-top-donations.sql
+
+.PHONY: read_foundation_and_subsidiary_grants
+read_foundation_and_subsidiary_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/one-for-the-world-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/andrea-and-charles-bronfman-philanthropies-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/arch-community-fund-grants.sql
@@ -207,6 +204,18 @@ read_donations:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/good-ventures-not-givewell-or-open-phil.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/survival-and-flourishing-fund-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/survival-and-flourishing-grants.sql
+
+.PHONY: read_other_donations
+read_other_donations:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/ai-safety-camp-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/brain-preservation-foundation-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2016.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2017-cea.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2019-cea-100k.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/donor-lottery-2019-cea-500k.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/ea-hotel-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/miri-top-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/aaron-gertler-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/ajeya-cotra-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/alexander-berger-donations.sql
@@ -222,6 +231,7 @@ read_donations:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/chelsea-tabart-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/ea-survey.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/elie-hassenfeld-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/eliezer-yudkowsky-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/elizabeth-van-nostrand-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/founders-pledge-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/gordon-irlam-donations.sql
@@ -253,10 +263,12 @@ read_donations:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/patrick-brinich-langlois-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/peter-hurford-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/rebecca-raible-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/rob-bensinger-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/robert-yaman-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/sophie-monahan-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/vipul-naik-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/vitalik-buterin-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/william-ehlhardt-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/zvi-mowshowitz-donations.sql
 
 .PHONY: read_donees

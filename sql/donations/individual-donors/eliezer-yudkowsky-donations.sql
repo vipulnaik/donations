@@ -1,0 +1,7 @@
+insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donor_donee_reason, donor_amount_reason, donor_timing_reason, notes) values
+  ('Eliezer Yudkowsky','Carrick Flynn for Congress',5800,NULL,'2022-03-29','day','date of donation announcement','Biosecurity and pandemic preparedness','https://twitter.com/ESYudkowsky/status/1509034366403432449','Carl Shulman',
+  /* donor_donee_reason */ 'The tweet announcing the donation says that Carrick Flynn "previously worked with Nick Bostrom, on the recommendation of Carl Shulman among others." It links to https://astralcodexten.substack.com/p/open-thread-217 that talks about the reasons many effective altruists are excited to support Flynn''s campaign.',
+  /* donor_amount_reason */ 'Donations to United States political campaigns are limited to $2,900 per donor per campaign. The limit applies separately to the primary and the general election, resulting in an effective limit of $5,800.',
+  /* donor_timing_reason */ 'The timing is determined by the timing of https://www.carrickflynnfororegon.com/ (the political campaign). https://astralcodexten.substack.com/p/open-thread-217 also says: "If you do donate, it would be extra helpful if the money came in before a key reporting deadline March 31."',
+  /* notes */ 'It is likely that $2,900 of the $5,800 would be returned due to Carrick Flynn not winning the primary.');
+
