@@ -234,6 +234,7 @@ read_other_donations:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/eliezer-yudkowsky-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/elizabeth-van-nostrand-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/founders-pledge-donations.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/garrison-lovely-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/gordon-irlam-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/gwern-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/individual-donors/haseeb-qureshi-donations.sql
