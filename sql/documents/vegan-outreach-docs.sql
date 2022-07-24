@@ -1,4 +1,4 @@
-# -- Animal Charity Evaluators reviews
+-- Animal Charity Evaluators reviews
 
 insert into documents(url,title,publication_date,modified_date,author,publisher,affected_donors,affected_donees,document_scope,cause_area,notes) values
   ('https://animalcharityevaluators.org/charity-review/vegan-outreach/2014-may/','VEGAN OUTREACH. Archived Version: May, 2014','2014-05-01',NULL,NULL,'Animal Charity Evaluators',NULL,'Vegan Outreach','Evaluator review of donee','Animal welfare','Animal Charity Evaluators (ACE) publishes its first detailed review of Vegan Outreach (VO). Strengths include a long track record of a program that ACE considers cost-effective. Weaknesses include a concern that VO is heavily reliant on anecdotal evidence and is not collecting and therefore not responsive to data suggesting direction changes. Also, the ongoing leadership transition makes it harder for ACE to understand how the organization would be guided going forward'),

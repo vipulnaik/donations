@@ -65,6 +65,7 @@ read_documents:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/berkeley-reach.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/biomedical-research-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/biosecurity-and-pandemic-preparedness-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/carrick-flynn-for-congress-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/catf-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cause-prioritization-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/cea-docs.sql
