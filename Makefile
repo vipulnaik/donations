@@ -92,6 +92,7 @@ read_documents:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/fli-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/forethought-foundation-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/founders-pledge-docs.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/ftx-future-fund-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gcri-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/gfi-docs.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/givedirectly-docs.sql
