@@ -1,5 +1,5 @@
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('FTX Future Fund','Good Judgment Project',300000,'2022-05-01','month','donation log','Forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('FTX Future Fund','Good Judgment Project',300000,'2022-05-01','month','donation log','Epistemic institutions/forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support a Good Judgment initiative to produce forecasts on 10 Our World in Data data sets/charts."',
@@ -11,7 +11,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('FTX Future Fund','Peter Hrosso',230000,'2022-05-01','month','donation log','Forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('FTX Future Fund','Peter Hrosso',230000,'2022-05-01','month','donation log','Epistemic institutions/forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support a project aimed at training large language models to represent the probability distribution over question answers in a prediction market."',
@@ -23,7 +23,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('FTX Future Fund','Manifold Markets',500000,'2022-05-01','month','donation log','Forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('FTX Future Fund','Manifold Markets',500000,'2022-05-01','month','donation log','Epistemic institutions/forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support Manifold Markets in building a charity prediction market, as an experiment for enabling effective forecasters to direct altruistic donations."',
@@ -35,7 +35,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('FTX Future Fund','Nathan Young',182000,'2022-06-01','month','donation log','Forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('FTX Future Fund','Apollo Academic Surveys',250000,'2022-05-01','month','donation log','Epistemic institutions','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support Apollo’s work aggregating the views of academic experts in many different fields and making them freely available online."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made shortly after the application window for the open call (2022-02-28 to 2022-03-21).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('FTX Future Fund','Nathan Young',182000,'2022-06-01','month','donation log','Epistemic institutions/forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support the creation of a website for collaboratively creating public forecasting questions for a range of prediction aggregators and markets."',
@@ -47,7 +59,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('FTX Future Fund','Global Guessing',336000,'2022-05-01','month','donation log','Forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('FTX Future Fund','Global Guessing',336000,'2022-05-01','month','donation log','Epistemic institutions/forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support Global Guessing’s forecasting coverage on the Russian invasion of Ukraine, which they will also use to build tools and infrastructure to support future forecasting work."',
@@ -59,7 +71,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('FTX Future Fund','Sage',700000,'2022-05-01','month','donation log','Forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('FTX Future Fund','Sage',700000,'2022-05-01','month','donation log','Epistemic institutions/forecasting','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support the creation of a pilot version of a forecasting platform, and a paid forecasting team, to make predictions about questions relevant to high-impact research."',
@@ -70,5 +82,3 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
-
-  /* There is a grant to Apollo Academic Surveys for $250,000 that is also under "Epistemic Institutions" but not related to forecasting; we should figure out where and how to include it */

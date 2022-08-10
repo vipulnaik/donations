@@ -38,4 +38,4 @@ insert into donations(donor, donee, amount, fraction, donation_date, donation_da
   ('Anonymous', 'AI Impacts', 39000, NULL, '2018-07-05', 'day', 'date of donation announcement', 'AI safety', 'https://aiimpacts.org/occasional-update-july-5-2018/', 'To support several projects from AI Impacts’s list of promising research projects https://aiimpacts.org/promising-research-projects/', NULL);
 
 insert into donations(donor, donee, amount, fraction, donation_date, donation_date_precision, donation_date_basis, cause_area, url, notes, influencer) values
-  ('Eric Rogstad', 'Lightcone Infrastructure', 10000, NULL, '2017-09-14', 'day', 'date of donation announcement', 'Rationality improvement', 'https://www.lesswrong.com/posts/rEHLk9nC5TtrNoAKT/lw-2-0-strategic-overview', NULL, NULL);
+  ('Eric Rogstad', 'Lightcone Infrastructure', 10000, NULL, '2017-09-14', 'day', 'date of donation announcement', 'Epistemic institutions', 'https://www.lesswrong.com/posts/rEHLk9nC5TtrNoAKT/lw-2-0-strategic-overview', NULL, NULL);
