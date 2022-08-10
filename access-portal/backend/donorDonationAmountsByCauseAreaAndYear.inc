@@ -169,5 +169,5 @@ if (count(array_filter($yearDonationAmount)) > 1) {
   print "<p><strong>Graph of spending by cause area and year (cumulative)</strong></p>";
   print '<img src="/images/'.$graphs[1].'-timeseries.png" alt="Graph of spending should have loaded here"></img>';
 } else {
-  print "<p>Skipping spending graph as there is at most one year's worth of donations.</p>\n";
+  print "<p>Skipping spending graph as there is at most one year’s worth of donations.</p>\n";
 }
