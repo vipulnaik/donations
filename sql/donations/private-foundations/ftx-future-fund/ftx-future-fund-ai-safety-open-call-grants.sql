@@ -119,10 +119,10 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('FTX Future Fund','James Lin',190000,'2022-05-01','month','donation log','AI safety|Biosecurity and pandemic preparedness','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/artificial-intelligence',NULL,NULL,NULL,NULL,NULL,NULL,
-  /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
+  ('FTX Future Fund','James Lin',190000,'2022-05-01','month','donation log','AI safety','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/artificial-intelligence',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21. The grant recipient had written a blog post https://forum.effectivealtruism.org/posts/qoB8MHe94kCEZyswd/i-want-future-perfect-but-for-science-publications on 2022-03-08 (during the grant application period) describing the idea.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant to "allow a reputable technology publication to engage 2-5 undergraduate student interns to write about topics including AI safety, alternative proteins, and biosecurity."',
+  /* intended_use_of_funds */ 'Grant to "allow a reputable technology publication to engage 2-5 undergraduate student interns to write about topics including AI safety, alternative proteins, and biosecurity." See https://forum.effectivealtruism.org/posts/qoB8MHe94kCEZyswd/i-want-future-perfect-but-for-science-publications for the grantee''s original vision.',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
@@ -154,4 +154,3 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
-

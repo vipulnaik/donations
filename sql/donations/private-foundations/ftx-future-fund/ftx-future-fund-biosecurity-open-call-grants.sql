@@ -1,3 +1,30 @@
+/* Grants to Institute for Progress */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('FTX Future Fund','Institute for Progress',480000,'2022-05-01','month','donation log','Biosecurity and pandemic preparedness','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support the Institute’s research and policy engagement work on high skilled immigration, biosecurity, and pandemic prevention."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made shortly after the application window for the open call (2022-02-28 to 2022-03-21).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('FTX Future Fund','Institute for Progress',135000,'2022-05-01','month','donation log','Biosecurity and pandemic preparedness','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/','Nikki Teran',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support the creation of biosecurity policy priorities via conversations with experts in security, technology, policy, and advocacy. It will develop position papers, research papers, and agendas for the biosecurity community."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made shortly after the application window for the open call (2022-02-28 to 2022-03-21).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Other grants */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('FTX Future Fund','SecureBio',1200000,'2022-03-01','month','donation log','Biosecurity and pandemic preparedness','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/','Kevin Esvelt',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'According to https://forum.effectivealtruism.org/posts/paMYXYFYbbjpdjgbt/future-fund-june-2022-update#Open_call this grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
@@ -10,18 +37,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'The June 2022 update https://ftxfuturefund.org/future-fund-june-2022-update/ by the FTX Future Fund highlights the grant as one of its example grants.'),
-
-  ('FTX Future Fund','Institute for Progress',480000,'2022-05-01','month','donation log','Biosecurity and pandemic preparedness','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/',NULL,NULL,NULL,NULL,NULL,NULL,
-  /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
-  /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant to "support the Institute’s research and policy engagement work on high skilled immigration, biosecurity, and pandemic prevention."',
-  /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made shortly after the application window for the open call (2022-02-28 to 2022-03-21).',
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL),
 
   ('FTX Future Fund','MITRE',485000,'2022-05-01','month','donation log','Biosecurity and pandemic preparedness','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/','Michael Jacob',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
@@ -71,9 +86,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  /* Investment in Confirm Solutions; need to figure out how to enter investments */
-
-  ('FTX Future Fund','1Day Sooner',350000,'2022-06-01','month','donation log','Biosecurity and pandemic preparedness/political advocacy','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('FTX Future Fund','1Day Sooner',350000,'2022-06-01','month','donation log','Biosecurity and pandemic preparedness/coordination efforts','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support 1DS’ work on pandemic preparedness, including advocacy for advance market purchase commitments, collaboration with the UK Pandemic Ethics Accelerator on challenge studies, and advocacy with 1Day Africa and the West African Health Organization for a global pandemic insurance fund."',
@@ -95,7 +108,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made close to the application window for the open call (2022-02-28 to 2022-03-21).',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('FTX Future Fund','Council on Strategic Risks',400000,'2022-05-01','month','donation log','Biosecurity and pandemic preparedness/coordination efforts','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grant description says: "We recommended a grant to support a project which will develop and advance ideas for strengthening regional and multilateral cooperation for addressing biological risks and filling gaps in current international institutions. These efforts include promoting the creation of a center with the capacity to rapidly respond to emerging infectious disease threats to prioritize blunting the impact of such events as well as quickly saving lives, and cooperative mechanisms to enhance biosafety and biosecurity while reducing the potential risks of spaces such as high-containment laboratories."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made close to the application window for the open call (2022-02-28 to 2022-03-21).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
-  /* Grant to ALTER is in AI safety grants file */
-  /* Many more grants to be added */
+  /* Grants to ALTER and James Lin are in AI safety grants file */
+
+  /* The following grants were structured as investments, so we need to figure out how to process them: Confirm Solutions, AVECRIS Pte. Ltd., Piezo Therapeutics */
