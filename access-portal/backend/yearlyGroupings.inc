@@ -375,7 +375,7 @@ function printYearlyGroupedHtmlTable(
       print '<img src="/images/' . $graphs[1] . '-timeseries.png" '
         . 'alt="Graph of spending should have loaded here"></img>';
     } else {
-      print "<p>Skipping spending graph as there is fewer than one year’s worth of donations.</p>\n";
+      print "<p>Skipping spending graph as there is at most one year’s worth of donations.</p>\n";
     }
   } else {
     print "<p>Sorry, we couldn't find any $groupName information.</p>\n";
