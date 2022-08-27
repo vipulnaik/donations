@@ -19,34 +19,34 @@ read: read_documents read_donations read_donees read_donors read_gifts read_mone
 
 .PHONY: reset_documents
 reset_documents:
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists documents;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists documents;"
 
 .PHONY: reset_donations
 reset_donations:
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donations;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists donations;"
 
 .PHONY: reset_donees
 reset_donees:
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donees;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists donees;"
 
 .PHONY: reset_donors
 reset_donors:
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donors;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists donors;"
 
 .PHONY: reset_gifts
 reset_gifts:
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists gifts;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists gifts;"
 
 .PHONY: reset_money_moved
 reset_money_moved:
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists money_moved;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists money_moved;"
 
 .PHONY: reset_disclosures
 reset_disclosures:
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists disclosures;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists disclosures;"
 
 .PHONY: reset_donor_donee_relationships
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists donor_donee_relationships;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists donor_donee_relationships;"
 
 .PHONY: read_documents
 read_documents:
@@ -350,13 +350,13 @@ clean_anchorjs:
 
 .PHONY: compute_similarity_php
 compute_similarity_php:
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists similarity;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists similarity;"
 	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-schema.sql
 	php -f similarity/compute_similarity.php
 
 .PHONY: reset_similarity
 reset_similarity:
-	mysql $(MYSQL_ARGS) -e "use $(DATABASE); drop table if exists similarity;"
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists similarity;"
 	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-schema.sql
 
 .PHONY: compute_similarity
