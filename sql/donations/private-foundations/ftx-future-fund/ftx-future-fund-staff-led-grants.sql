@@ -1,4 +1,9 @@
-/* These grants are not separated by cause area because they tend to be cross-cutting and not have well-defined cause areas */
+/* Separate files:
+   - Biosecurity: ftx-future-fund-biosecurity-staff-led-grants.sql
+   - Effective altruism: ftx-future-fund-effective-altruism-staff-led-grants.sql
+   All other grants are here
+ */
+
 
 /* Grants to Legal Priorities Project */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
@@ -29,10 +34,22 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 /* Other grants */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('FTX Future Fund','Lightcone Infrastructure',2000000,'2022-02-01','month','donation log','Effective altruism|AI safety','https://ftxfuturefund.org/our-grants/?_funding_stream=ad-hoc','https://ftxfuturefund.org/area-of-interest/effective-altruism/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('FTX Future Fund','Brown University',500000,'2022-01-01','month','donation log','Economic growth','https://ftxfuturefund.org/our-grants/?_funding_stream=ad-hoc','https://ftxfuturefund.org/area-of-interest/economic-growth/','Oded Galor',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is part of staff-led grantmaking by FTX Future Fund. https://forum.effectivealtruism.org/posts/paMYXYFYbbjpdjgbt/future-fund-june-2022-update#Staff_led_grantmaking_in_more_detail says: "Unlike the open call and regranting, these grants and investments are not a test of a particular potentially highly scalable funding model. These are projects we funded because we became aware of them and thought they were good ideas."',
-  /* intended_use_of_funds_category */ 'Organizational general support',
-  /* intended_use_of_funds */ 'Grant to "support Lightcone’s ongoing projects including running the LessWrong forum, hosting conferences and events, and maintaining an office space for Effective Altruist organizations."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support two years of academic research on long-term economic growth."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('FTX Future Fund','The Atlas Fellowship',5000000,'2022-01-01','month','donation log','Education|Talent pipeline','https://ftxfuturefund.org/our-grants/?_funding_stream=ad-hoc','https://ftxfuturefund.org/area-of-interest/empowering-exceptional-people/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This grant is part of staff-led grantmaking by FTX Future Fund. https://forum.effectivealtruism.org/posts/paMYXYFYbbjpdjgbt/future-fund-june-2022-update#Staff_led_grantmaking_in_more_detail says: "Unlike the open call and regranting, these grants and investments are not a test of a particular potentially highly scalable funding model. These are projects we funded because we became aware of them and thought they were good ideas."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support scholarships for talented and promising high school students to use towards educational opportunities and enrolling in a summer program."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
@@ -77,10 +94,10 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('FTX Future Fund','Centre for Effective Altruism',13940000,'2022-03-01','month','donation log','Effective altruism','https://ftxfuturefund.org/our-grants/?_funding_stream=ad-hoc','https://ftxfuturefund.org/area-of-interest/effective-altruism/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('FTX Future Fund','Pathos Labs',50000,'2022-01-01','year','donation log','Values and reflective processes','https://ftxfuturefund.org/our-grants/?_funding_stream=ad-hoc','https://ftxfuturefund.org/area-of-interest/values-and-reflective-processes/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is part of staff-led grantmaking by FTX Future Fund. https://forum.effectivealtruism.org/posts/paMYXYFYbbjpdjgbt/future-fund-june-2022-update#Staff_led_grantmaking_in_more_detail says: "Unlike the open call and regranting, these grants and investments are not a test of a particular potentially highly scalable funding model. These are projects we funded because we became aware of them and thought they were good ideas."',
-  /* intended_use_of_funds_category */ 'Organizational general support',
-  /* intended_use_of_funds */ 'Grant for "general support for their activities, including running conferences, supporting student groups, and maintaining online resources."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support Pathos Labs to produce a PopShift convening connecting experts on the future of technology and existential risks with television writers to inspire new ideas for their shows."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,

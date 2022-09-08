@@ -117,11 +117,45 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made close to the application window for the open call (2022-02-28 to 2022-03-21).',
+  /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made shortly after the application window for the open call (2022-02-28 to 2022-03-21).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('FTX Future Fund','Confirm Solutions',1000000,'2022-05-01','month','donation log','Biosecurity and pandemic preparedness/regulatory speedup','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This investment (the grantee is a public-benefit corporation) is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Investment to "support development of statistical models and software tools that can automate parts of the regulatory process for complex clinical trials."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant description says: "We anticipate that this work can help to speed up approvals of new vaccines and medical treatments while enhancing their statistical rigor."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made shortly after the application window for the open call (2022-02-28 to 2022-03-21).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('FTX Future Fund','AVECRIS',3600000,'2022-05-01','month','donation log','Biosecurity and pandemic preparedness/vaccine development','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This investment is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Investment in AVECRIS’s "Project DOOR to support the development of a next generation genetic vaccine platform that aims to allow for highly distributed vaccine production using AVECRIS’s advanced DNA vector delivery technology."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made shortly after the application window for the open call (2022-02-28 to 2022-03-21).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('FTX Future Fund','Piezo Therapeutics',1000000,'2022-05-01','month','donation log','Biosecurity and pandemic preparedness/vaccine development','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This investment is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support work on technology for delivering mRNA vaccines without lipid nanoparticles with the aim of making vaccines more safe, affordable, and scalable."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made shortly after the application window for the open call (2022-02-28 to 2022-03-21).',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
   /* Grants to ALTER and James Lin are in AI safety grants file */
-
-  /* The following grants were structured as investments, so we need to figure out how to process them: Confirm Solutions, AVECRIS Pte. Ltd., Piezo Therapeutics */
