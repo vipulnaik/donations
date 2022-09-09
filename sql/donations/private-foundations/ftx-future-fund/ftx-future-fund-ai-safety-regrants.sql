@@ -57,4 +57,16 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('FTX Future Fund','Federation for American Scientists',1000000,'2022-05-01','month','donation log','AI safety|Migration policy/high-skilled migration','https://ftxfuturefund.org/our-regrants/','https://ftxfuturefund.org/area-of-interest/artificial-intelligence/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_prcess */ 'The grant is made as part of the Future Fund''s regranting program. See https://forum.effectivealtruism.org/posts/paMYXYFYbbjpdjgbt/future-fund-june-2022-update#Regranting_program_in_more_detail for more detail on the regranting program.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support a researcher and research assistant to work on high-skill immigration and AI policy at FAS for three years."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
   /* notes */ NULL);
