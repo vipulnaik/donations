@@ -48,6 +48,14 @@ reset_disclosures:
 .PHONY: reset_donor_donee_relationships
 	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists donor_donee_relationships;"
 
+.PHONY: reset_ftx_grants
+reset_ftx_grants:
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "delete from donations where donor = 'FTX Future Fund';"
+
+.PHONY: reset_open_phil_grants
+reset_open_phil_grants:
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "delete from donations where donor = 'Open Philanthropy';"
+
 .PHONY: read_documents
 read_documents:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents-schema.sql
@@ -131,8 +139,36 @@ read_donations: read_donations_schema read_foundation_and_subsidiary_grants read
 read_donations_schema:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donations-schema.sql
 
-.PHONY: read_foundation_and_subsidiary_grants
-read_foundation_and_subsidiary_grants:
+.PHONY: read_ftx_grants
+read_ftx_grants:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-ai-safety-open-call-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-biosecurity-open-call-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-biosecurity-staff-led-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-effective-altruism-open-call-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-effective-altruism-staff-led-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-epistemic-institutions-open-call-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-open-call-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-staff-led-grants.sql
+
+.PHONY: read_open_phil_grants
+read_open_phil_grants:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/nathan-cummings-foundation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-ai-safety-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-animal-welfare-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-biosecurity-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-climate-change-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-criminal-justice-reform-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-givewell-recommended-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-global-health-and-development-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-land-use-reform-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-macroeconomic-stabilization-policy-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-migration-policy-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-other-gcr-and-security-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-other-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-scientific-research-grants.sql
+
+.PHONY: read_other_foundation_and_subsidiary_grants
+read_other_foundation_and_subsidiary_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/one-for-the-world-donations.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/andrea-and-charles-bronfman-philanthropies-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/arch-community-fund-grants.sql
@@ -148,14 +184,6 @@ read_foundation_and_subsidiary_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/foundational-questions-institute-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/future-justice-fund-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/future-of-life-institute-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-ai-safety-open-call-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-biosecurity-open-call-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-biosecurity-staff-led-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-effective-altruism-open-call-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-effective-altruism-staff-led-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-epistemic-institutions-open-call-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-open-call-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-staff-led-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/gates-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/google-org.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/haas-jr-fund-grants.sql
@@ -169,20 +197,6 @@ read_foundation_and_subsidiary_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/mcdowell-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/mellon-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/mulago-foundation-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/nathan-cummings-foundation-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-ai-safety-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-animal-welfare-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-biosecurity-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-climate-change-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-criminal-justice-reform-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-givewell-recommended-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-global-health-and-development-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-land-use-reform-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-macroeconomic-stabilization-policy-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-migration-policy-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-other-gcr-and-security-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-other-grants.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-scientific-research-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/pineapple-fund-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/public-welfare-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/quixote-foundation-grants.sql
@@ -215,6 +229,9 @@ read_foundation_and_subsidiary_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/good-ventures-not-givewell-or-open-phil.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/survival-and-flourishing-fund-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/survival-and-flourishing-grants.sql
+
+.PHONY: read_foundation_and_subsidiary_grants
+read_foundation_and_subsidiary_grants: read_ftx_grants read_open_phil_grants read_other_foundation_and_subsidiary_grants
 
 .PHONY: read_other_donations
 read_other_donations:
