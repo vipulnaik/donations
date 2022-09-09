@@ -33,7 +33,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of the open call https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 for applications; the grant is made shortly after the application window for the open call (2022-02-28 to 2022-03-21).',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL),
+  /* notes */ 'The Future Fund makes another grant to Manifold Markets of $1,000,000 for a related purpose at about the same time; this other grant is a regrant.'),
 
   ('FTX Future Fund','Apollo Academic Surveys',250000,'2022-05-01','month','donation log','Epistemic institutions','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/epistemic-institutions/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',

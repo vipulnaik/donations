@@ -142,11 +142,13 @@ read_donations_schema:
 .PHONY: read_ftx_grants
 read_ftx_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-ai-safety-open-call-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-ai-safety-regrants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-biosecurity-open-call-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-biosecurity-staff-led-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-effective-altruism-open-call-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-effective-altruism-staff-led-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-epistemic-institutions-open-call-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-epistemic-institutions-regrants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-open-call-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-staff-led-grants.sql
 
