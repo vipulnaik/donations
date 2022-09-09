@@ -69,4 +69,16 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('FTX Future Fund','Apart Research',95000,'2022-05-01','month','donation log','AI safety/talent pipeline','https://ftxfuturefund.org/our-regrants/','https://ftxfuturefund.org/area-of-interest/artificial-intelligence/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_prcess */ 'The grant is made as part of the Future Fund''s regranting program. See https://forum.effectivealtruism.org/posts/paMYXYFYbbjpdjgbt/future-fund-june-2022-update#Regranting_program_in_more_detail for more detail on the regranting program.',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant to "support the creation of an AI Safety organization which will create a platform to share AI safety research ideas and educational materials, connect people working on AI safety, and bring new people into the field."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
   /* notes */ NULL);

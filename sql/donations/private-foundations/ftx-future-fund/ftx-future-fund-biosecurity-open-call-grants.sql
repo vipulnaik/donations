@@ -50,6 +50,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
+  /* This grant appears to have disappeared from the FTX page -- need to figure out what's going on! */
   ('FTX Future Fund','Charity Entrepreneurship',470000,'2022-05-01','month','donation log','Biosecurity and pandemic preparedness','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/biorisk-and-recovery-from-catastrophe/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
