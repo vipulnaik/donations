@@ -144,6 +144,7 @@ read_ftx_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-ai-safety-open-call-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-ai-safety-regrants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-biosecurity-open-call-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-biosecurity-regrants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-biosecurity-staff-led-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-effective-altruism-open-call-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/ftx-future-fund/ftx-future-fund-effective-altruism-staff-led-grants.sql
