@@ -1,8 +1,18 @@
-<!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
-<title>About Donations List Website</title></head>
+<?php
+include_once('../doctype.inc');
+include_once('../analytics.inc');
+?>
+<script src="../change-theme.js"></script>
+<title>About Donations List Website</title>
+<?php
+include_once("../style.inc");;
+?>
+
+</head>
 
 <body>
+
+<p><span id="changeThemeMenu" style="display: none;">Change <a href="javascript:;" onclick="change_theme_color()">color</a></span>   &thinsp;<!-- blank space to prevent cumulative layout shift --></p>
 
 <p><strong>Donations List Website</strong> is a minimalistic website
 with a razor-like focus on understanding donations, donors, donees,
@@ -120,3 +130,7 @@ the <a href="https://forum.effectivealtruism.org/posts/A7NWTjnWZPmjyLdtT/donatio
 <p>Pageview data for this site is available at monthly granularity
 at <a href="https://analytics.vipulnaik.com/">analytics.vipulnaik.com</a>.</p>
 
+<?php
+include_once("../anchorjs.inc");
+?>
+</body>
