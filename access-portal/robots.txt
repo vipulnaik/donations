@@ -28,5 +28,8 @@ Disallow: /
 User-agent: SeekportBot
 Disallow: /
 
+User-agent: CCBot
+Disallow: /
+
 User-agent: *
 Crawl-delay: 30
