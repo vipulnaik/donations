@@ -6,7 +6,7 @@ $paramStr = "";
 $params = array();
 if (($_REQUEST['display'] ?? '') == "full") {
   if ($causeAreaFilterString) {
-    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where cause_area REGEXP ? group by donee;";
+    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where cause_area REGEXP ? and donation_date is not null group by donee;";
     $paramStr .= "s";
     $params[] = $causeAreaFilterString;
   } else {
@@ -14,19 +14,19 @@ if (($_REQUEST['display'] ?? '') == "full") {
   }
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
   if ($causeAreaFilterString) {
-    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where cause_area REGEXP ? and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee;";
+    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where cause_area REGEXP ? and donation_date is not null and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee;";
     $paramStr .= "s";
     $params[] = $causeAreaFilterString;
   } else {
-    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee;";
+    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where donation_date is not null and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee;";
   }
 } else {
   if ($causeAreaFilterString) {
-    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where cause_area REGEXP ? group by donee order by sum(amount) desc limit $numDoneesToShowInLimitedView;";
+    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where cause_area REGEXP ? and donation_date is not null group by donee order by sum(amount) desc limit $numDoneesToShowInLimitedView;";
     $paramStr .= "s";
     $params[] = $causeAreaFilterString;
   } else {
-    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations group by donee order by sum(amount) desc limit $numDoneesToShowInLimitedView;";
+    $doneeQuery = "select donee, count(distinct donor) as numDonors from donations where donation_date is not null group by donee order by sum(amount) desc limit $numDoneesToShowInLimitedView;";
   }
 }
 $stmt = $mysqli->prepare($doneeQuery);
@@ -91,19 +91,19 @@ $paramStr = "";
 $params = array();
 if (($_REQUEST['display'] ?? '') == "individual-scale") {
   if ($causeAreaFilterString) {
-    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee, year(donation_date)";
+    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and donation_date is not null and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee, year(donation_date)";
     $paramStr .= "s";
     $params[] = $causeAreaFilterString;
   } else {
-    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee, year(donation_date)";
+    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donation_date is not null and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by donee, year(donation_date)";
   }
 } else {
   if ($causeAreaFilterString) {
-    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? group by donee, year(donation_date)";
+    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and donation_date is not null group by donee, year(donation_date)";
     $paramStr .= "s";
     $params[] = $causeAreaFilterString;
   } else {
-    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations group by donee, year(donation_date)";
+    $doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donation_date is not null group by donee, year(donation_date)";
   }
 }
 $stmt = $mysqli->prepare($doneeAndYearQuery);
