@@ -53,28 +53,28 @@ $paramStr = "";
 $params = array();
 if (($_REQUEST['display'] ?? '') == "full") {
   if ($causeAreaFilterString) {
-    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? group by substring_index(cause_area,'/',1), year(donation_date)";
+    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and donation_date is not null group by substring_index(cause_area,'/',1), year(donation_date)";
     $paramStr .= "s";
     $params[] = $causeAreaFilterString;
   } else {
-    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations group by substring_index(cause_area,'/',1), year(donation_date)";
+    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where donation_date is not null group by substring_index(cause_area,'/',1), year(donation_date)";
   }
 } else if (($_REQUEST['display'] ?? '') == "individual-scale") {
   if ($causeAreaFilterString) {
-    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by substring_index(cause_area,'/',1), year(donation_date)";
+    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and donation_date is not null and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by substring_index(cause_area,'/',1), year(donation_date)";
     $paramStr .= "s";
     $params[] = $causeAreaFilterString;
   } else {
-    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by substring_index(cause_area,'/',1), year(donation_date)";
+    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where donation_date is not null and donor in (select donor from donors where donor_type = 'Individual' or donor_type = 'Couple') group by substring_index(cause_area,'/',1), year(donation_date)";
   }
 } else {
   if ($causeAreaFilterString) {
-    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and substring_index(cause_area,'/',1) in (select * from (select substring_index(cause_area,'/',1) from donations where cause_area REGEXP ? group by substring_index(cause_area,'/',1) order by sum(amount) desc limit 30) as x) group by substring_index(cause_area,'/',1), year(donation_date)";
+    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where cause_area REGEXP ? and donation_date is not null and substring_index(cause_area,'/',1) in (select * from (select substring_index(cause_area,'/',1) from donations where cause_area REGEXP ? group by substring_index(cause_area,'/',1) order by sum(amount) desc limit 30) as x) group by substring_index(cause_area,'/',1), year(donation_date)";
     $paramStr .= "ss";
     $params[] = $causeAreaFilterString;
     $params[] = $causeAreaFilterString;
   } else {
-    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where substring_index(cause_area,'/',1) in (select * from (select substring_index(cause_area,'/',1) from donations group by substring_index(cause_area,'/',1) order by sum(amount) desc limit 30) as x) group by substring_index(cause_area,'/',1), year(donation_date)";
+    $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, year(donation_date) as year, sum(amount) as amount from donations where donation_date is not null and substring_index(cause_area,'/',1) in (select * from (select substring_index(cause_area,'/',1) from donations group by substring_index(cause_area,'/',1) order by sum(amount) desc limit 30) as x) group by substring_index(cause_area,'/',1), year(donation_date)";
   }
 }
 $stmt = $mysqli->prepare($causeAreaAndYearQuery);
