@@ -194,6 +194,7 @@ EOD;
       $data['numDonations'][$col][$y] = $row['numDonations'];
       $data['numDonees'][$col][$y] = $row['numDonees'];
 
+      $data['amount'][$col]['Total'] = $data['amount'][$col]['Total'] ?? 0;
       $data['amount'][$col]['Total'] += $row['amount'];
 
       $data['numDonations']['Total'][$y] += $row['numDonations'];
