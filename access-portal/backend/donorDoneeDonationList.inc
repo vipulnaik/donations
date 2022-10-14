@@ -17,7 +17,7 @@ print '<h4 id="donorDoneeDonationList">Full list of donations in reverse chronol
 
 if ($donorDoneeDonationSelectResult -> num_rows == 0) {
   print '<p>Sorry, we couldn't find any donations!</p>';
-else {
+} else {
   $timeframePlotUrlBase = "timeframe plot|donor:" . $donor . "|donee:" . $donee;
 
   if ($causeAreaFilterString != '') {
