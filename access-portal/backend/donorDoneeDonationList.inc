@@ -15,65 +15,68 @@ if ($stmt = $mysqli->prepare($query)) {
 
 print '<h4 id="donorDoneeDonationList">Full list of donations in reverse chronological order ('.($donorDoneeDonationSelectResult -> num_rows).' donations)</h4>';
 
-$timeframePlotUrlBase = "timeframe plot|donor:" . $donor . "|donee:" . $donee;
+if ($donorDoneeDonationSelectResult -> num_rows == 0) {
+  print '<p>Sorry, we couldn't find any donations!</p>';
+else {
+  $timeframePlotUrlBase = "timeframe plot|donor:" . $donor . "|donee:" . $donee;
 
-if ($causeAreaFilterString != '') {
-  $timeframePlotUrlBase .= '&cause_area_filter='.urlencode($causeAreaFilterString);
-}
+  if ($causeAreaFilterString != '') {
+    $timeframePlotUrlBase .= '&cause_area_filter='.urlencode($causeAreaFilterString);
+  }
 
-$timeframePlotFileName = hash("md5", $timeframePlotUrlBase) . "-timeframe.png";
-exec($generateTimeframeGraphCmdBase . " --base64 --donor " . trimEncodeEscape($donor) . " --donee " . trimEncodeEscape($donee) . " --output " . trimEncodeEscape($imagesPath . $timeframePlotFileName));
-print '<p>Graph of all donations, showing the timeframe of donations</p>';
-print '<img src="/images/' . $timeframePlotFileName .'" alt="Graph of donations and their timeframes"></img>';
+  $timeframePlotFileName = hash("md5", $timeframePlotUrlBase) . "-timeframe.png";
+  exec($generateTimeframeGraphCmdBase . " --base64 --donor " . trimEncodeEscape($donor) . " --donee " . trimEncodeEscape($donee) . " --output " . trimEncodeEscape($imagesPath . $timeframePlotFileName));
+  print '<p>Graph of all donations (with known year of donation), showing the timeframe of donations</p>';
+  print '<img src="/images/' . $timeframePlotFileName .'" alt="Graph of donations and their timeframes"></img>';
 
-print '<table id="myTableDonorDonationList" class="tablesorter">'."\n";
-print "<thead>\n";
-print '<tr>';
-print '<th>Amount (current USD)</th>';
-print '<th>Amount rank (out of '. count($amountList) .')</th>';
-print '<th>Donation date</th>';
-print '<th>Cause area</th>';
-print '<th>URL</th>';
-print '<th>Influencer</th>';
-print '<th>Notes</th>';
-print '</tr>';
-print "</thead>\n<tbody>\n";
-
-while ($row = $donorDoneeDonationSelectResult->fetch_assoc()) {
+  print '<table id="myTableDonorDonationList" class="tablesorter">'."\n";
+  print "<thead>\n";
   print '<tr>';
-  if ($row['amount'] != '') {
-    printAmountWithRank($row['amount'], $amountList, $row['amount_original_currency'], $row['original_currency']);
-  } else {
-    print '<td>--</td>';
-    print '<td>--</td>';
-  }
-  if ($row['donation_date'] != '') {
-    printDonationDate($row['donation_date'],$row['donation_date_precision'],$row['donation_date_basis']);
-  } else {
-    print '<td>--</td>';
-  }
-  if ($row['cause_area'] != '') {
-    if ($row['donor_cause_area_url'] != '') {
-      print '<td><a href="'.$row['donor_cause_area_url'].'">'.$row['cause_area'].'</a></td>';
-    } else {
-      print '<td>'.$row['cause_area'].'</td>';
-    }
-  } else {
-    print '<td>--</td>';
-  }
-  if ($row['url'] != '') {
-    print '<td>'.printSmartLink($row['url'],$row['url']).'</td>';
-  } else {
-    print '<td>--</td>';
-  }
-  if ($row['influencer'] != '') {
-    print '<td align="right">' . explodeDonorPsv($row['influencer']) . '</td>';
-  } else {
-    print '<td>--</td>';
-  }
-  include("donationNotes.inc");
+  print '<th>Amount (current USD)</th>';
+  print '<th>Amount rank (out of '. count($amountList) .')</th>';
+  print '<th>Donation date</th>';
+  print '<th>Cause area</th>';
+  print '<th>URL</th>';
+  print '<th>Influencer</th>';
+  print '<th>Notes</th>';
   print '</tr>';
-}
-print "</tbody>\n</table>\n";
+  print "</thead>\n<tbody>\n";
 
+  while ($row = $donorDoneeDonationSelectResult->fetch_assoc()) {
+    print '<tr>';
+    if ($row['amount'] != '') {
+      printAmountWithRank($row['amount'], $amountList, $row['amount_original_currency'], $row['original_currency']);
+    } else {
+      print '<td>--</td>';
+      print '<td>--</td>';
+    }
+    if ($row['donation_date'] != '') {
+      printDonationDate($row['donation_date'],$row['donation_date_precision'],$row['donation_date_basis']);
+    } else {
+      print '<td>--</td>';
+    }
+    if ($row['cause_area'] != '') {
+      if ($row['donor_cause_area_url'] != '') {
+        print '<td><a href="'.$row['donor_cause_area_url'].'">'.$row['cause_area'].'</a></td>';
+      } else {
+        print '<td>'.$row['cause_area'].'</td>';
+      }
+    } else {
+      print '<td>--</td>';
+    }
+    if ($row['url'] != '') {
+      print '<td>'.printSmartLink($row['url'],$row['url']).'</td>';
+    } else {
+      print '<td>--</td>';
+    }
+    if ($row['influencer'] != '') {
+      print '<td align="right">' . explodeDonorPsv($row['influencer']) . '</td>';
+    } else {
+      print '<td>--</td>';
+    }
+    include("donationNotes.inc");
+    print '</tr>';
+  }
+  print "</tbody>\n</table>\n";
+}
 ?>

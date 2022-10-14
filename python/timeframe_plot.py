@@ -58,6 +58,7 @@ def single_donor_multiple_donees(output, donor, cause_area=None):
                             donations
                           where
                             donor = %s and
+                            donation_date is not null and
                             substring_index(cause_area,'/',1)=%s and
                             donee in (
                               select * from (
@@ -65,6 +66,7 @@ def single_donor_multiple_donees(output, donor, cause_area=None):
                                 from donations
                                 where
                                   donor = %s and
+                                  donation_date is not null and
                                   substring_index(cause_area,'/',1)=%s
                                 group by donee
                                 order by sum(amount) desc
@@ -81,11 +83,13 @@ def single_donor_multiple_donees(output, donor, cause_area=None):
                             donations
                           where
                             donor = %s and
+                            donation_date is not null and
                             donee in (
                               select * from (
                                 select donee
                                 from donations
-                                where donor = %s
+                                where donor = %s and
+                                donation_date is not null
                                 group by donee
                                 order by sum(amount) desc
                                 limit 10
@@ -126,11 +130,13 @@ def single_donee_multiple_donors(output, donee):
                         donations
                       where
                         donee = %s and
+                        donation_date is not null and
                         donor in (
                           select * from (
                             select donor
                             from donations
-                            where donee = %s
+                            where donee = %s and
+                            donation_date is not null
                             group by donor
                             order by sum(amount) desc
                             limit 10
