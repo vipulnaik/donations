@@ -16,7 +16,7 @@ if ($stmt = $mysqli->prepare($query)) {
 print '<h4 id="donorDoneeDonationList">Full list of donations in reverse chronological order ('.($donorDoneeDonationSelectResult -> num_rows).' donations)</h4>';
 
 if ($donorDoneeDonationSelectResult -> num_rows == 0) {
-  print '<p>Sorry, we couldn't find any donations!</p>';
+  print "<p>Sorry, we couldn't find any donations!</p>";
 } else {
   $timeframePlotUrlBase = "timeframe plot|donor:" . $donor . "|donee:" . $donee;
 
