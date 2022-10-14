@@ -63,7 +63,7 @@ for ($i = 0; $i < $doneeMetadataResult -> num_rows; $i++) {
 
 $paramStr = "";
 $params = array();
-$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor = ? ";
+$doneeAndYearQuery = "select donee, year(donation_date) as year, sum(amount) as amount from donations where donor = ? and donation_date is not null";
 $paramStr .= "s";
 $params[] = $donor;
 if ($causeAreaFilterString) {

@@ -24,7 +24,7 @@ foreach($years as $year) {
   $yearDonationAmount[$year] = 0;
 }
 
-$donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donee = ? group by donor, year(donation_date)";
+$donorAndYearQuery = "select donor, year(donation_date) as year, sum(amount) as amount from donations where donee = ? and donation_date is not null group by donor, year(donation_date)";
 $stmt = $mysqli->prepare($donorAndYearQuery);
 $stmt->bind_param("s", $donee);
 $stmt->execute();

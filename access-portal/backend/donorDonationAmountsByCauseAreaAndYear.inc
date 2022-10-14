@@ -58,7 +58,7 @@ foreach($years as $year) {
 
 $paramStr = "";
 $params = array();
-$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(distinct donee) as numDonees, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor = ?";
+$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(distinct donee) as numDonees, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor = ? and donation_date is not null";
 $paramStr .= "s";
 $params[] = $donor;
 if ($causeAreaFilterString) {

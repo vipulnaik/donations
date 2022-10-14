@@ -35,8 +35,7 @@ foreach($years as $year) {
   $yearDonationAmount[$year] = 0;
 }
 
-/* $causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(distinct donee) as numDonees, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor=".'"'.str_replace('"','\"',$donor).'"'." $causeAreaFilterQueryComponent group by substring_index(cause_area,'/',1), year(donation_date)"; */
-$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor = ? and donee = ?"
+$causeAreaAndYearQuery = "select substring_index(cause_area,'/',1) as cause_area, count(*) as numDonations, year(donation_date) as year, sum(amount) as amount from donations where donor = ? and donee = ? and donation_date is not null"
   . ($causeAreaFilterString ? " and cause_area REGEXP ?" : "")
   . " group by substring_index(cause_area,'/',1), year(donation_date)";
 if ($stmt = $mysqli->prepare($causeAreaAndYearQuery)) {
