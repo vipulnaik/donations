@@ -9,9 +9,9 @@ function distinctDonees($mysqli, $causeAreaFilterString, $donor,
           from donations
 EOD;
   if ($classifiedString) {
-    $query .= " where $classifiedString";
+    $query .= " where donation_date is not null and $classifiedString";
   } else {
-    $query .= " where TRUE";
+    $query .= " where donation_date is not null";
   }
   if ($donorRestriction) {
     $query .= " and $donorRestriction";
@@ -99,7 +99,7 @@ function yearlyGroupings($mysqli, $generateGraphCmdBase, $imagesPath, $years,
           count(distinct donee) as numDonees,
           count(*) as numDonations
       from donations
-      where TRUE
+      where donation_date is not null
 EOD;
   if ($donorRestriction) {
     $groupQuery .= " and $donorRestriction";
