@@ -163,7 +163,7 @@ EOD;
           year(donation_date) as year,
           sum(amount) as amount
       from donations
-      where TRUE
+      where donation_date is not null
 EOD;
   if ($donorRestriction) {
     $groupAndYearQuery .= " and $donorRestriction";
