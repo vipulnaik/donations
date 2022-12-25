@@ -13,4 +13,4 @@ create table documents (
   cause_area varchar(200),
   notes varchar(2000),
   unique key url(`url`)
-) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;

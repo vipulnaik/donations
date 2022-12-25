@@ -34,4 +34,4 @@ create table disclosures (
   --     donor_side_name (donor) ↔ donee_side_name (donee)
   full_relationship varchar(2000),
   index disclosure_key(donor, donee, url, donation_date)
-) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
