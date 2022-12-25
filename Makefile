@@ -391,7 +391,7 @@ compute_similarity:
 reset_cache:
 	rm -fr access-portal/cache
 	mkdir -p access-portal/cache
-	chmod a+rwx -R access-portal/cache
+	chmod -R a+rwx access-portal/cache
 	touch access-portal/cache/DB_LAST_UPDATE_TRACKER
 
 .PHONY: build_cache
