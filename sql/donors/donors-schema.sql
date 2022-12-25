@@ -1,5 +1,5 @@
 create table donors (
-    donor_id int(11) not null auto_increment primary key,
+    donor_id int not null auto_increment primary key,
     donor varchar(100) not null,
     donor_type enum('Individual','Couple','Donor group','Subsidiary','Private foundation', 'Donor-advised fund') default 'Individual',
     other_names varchar(140),
@@ -25,7 +25,7 @@ create table donors (
     timelines_wiki_page varchar(100),
     website varchar(100),
     donations_url varchar(1000),
-    income int(12),
+    income int,
     notes varchar(5000) default null,
     best_overview_url varchar(200),
     brief_history varchar(2000),
@@ -49,4 +49,4 @@ create table donors (
     dlw_data_processing_script varchar(100),
     orgwatch boolean default false,
     unique key donor(`donor`)
-) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

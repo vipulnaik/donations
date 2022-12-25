@@ -1,5 +1,5 @@
 create table disclosures (
-  disclosure_id int(11) not null auto_increment primary key,
+  disclosure_id int not null auto_increment primary key,
   donor varchar(100),
   donee varchar(200),
   url varchar(300),
@@ -13,7 +13,7 @@ create table disclosures (
   -- law school or undergraduate studies.
   relationship_nature enum('Romantic relationship', 'Friendship', 'Personal', 'Professional', 'Marriage', 'Social', 'Academic', 'Hybrid'),
   notes varchar(2000),
-  cardinality int(11) default 1,
+  cardinality int default 1,
   -- Each chain in full_relationship is of the form:
   --     A (B) ↔ C (D)
   -- Where A and C are individuals and B and D are organizations. The chain
@@ -34,4 +34,4 @@ create table disclosures (
   --     donor_side_name (donor) ↔ donee_side_name (donee)
   full_relationship varchar(2000),
   index disclosure_key(donor, donee, url, donation_date)
-) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

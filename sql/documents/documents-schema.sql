@@ -1,5 +1,5 @@
 create table documents (
-  document_id int(11) not null auto_increment primary key,
+  document_id int not null auto_increment primary key,
   url varchar(200),
   title varchar(400),
   publication_date date,
@@ -13,4 +13,4 @@ create table documents (
   cause_area varchar(200),
   notes varchar(2000),
   unique key url(`url`)
-) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
