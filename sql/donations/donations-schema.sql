@@ -4,7 +4,7 @@ create table donations (
     donee varchar(200), /* max observed length (as of 2022-12-25) 176 */
     amount decimal(14,2),
     amount_original_currency decimal(24,2),
-    original_currency enum('AUD','BRL','BTC','CAD','CHF','CZK','DKK','ETH','EUR','GBP','INR','NOK','NZD','SEK','SGD','USD','XRP','ZAR','SHIB','AKITA','ELON','MKR','KRW') DEFAULT 'USD',
+    original_currency enum('AUD','BRL','BTC','CAD','CHF','CZK','DKK','ETH','EUR','GBP','INR','NOK','NZD','SEK','SGD','USD','XRP','ZAR','SHIB','AKITA','ELON','MKR','KRW') default 'USD',
     currency_conversion_date date,
     currency_conversion_basis enum('donor calculation','donee calculation','Peter Hurford','Bloomberg','Fixer.io','Coindesk','Etherscan.io'),
     fraction decimal(5, 4),
@@ -14,16 +14,16 @@ create table donations (
     cause_area varchar(100), /* max observed length (as of 2022-12-25) 100 */
     url varchar(400), /* max observed length (as of 2022-12-25) 228 */
     donor_cause_area_url varchar(200), /* max observed length (as of 2022-12-25) 117 */
-    notes text DEFAULT NULL, /* max observed length (as of 2022-12-25) 1923 */
-    donation_process text DEFAULT NULL, /* max observed length (as of 2022-12-25) 2161 */
-    intended_use_of_funds_category varchar(200) DEFAULT NULL, /* max observed length (as of 2022-12-25) 63 */
-    intended_use_of_funds text DEFAULT NULL, /* max observed length (as of 2022-12-25) 1007 */
-    intended_funding_timeframe_in_months int DEFAULT NULL,
-    donor_donee_reason text DEFAULT NULL, /* max observed length (as of 2022-12-25) 999 */
-    donor_amount_reason text DEFAULT NULL, /* max observed length (as of 2022-12-25) 990 */
-    donor_timing_reason text DEFAULT NULL, /* max observed length (as of 2022-12-25) 999 */
-    donor_next_donation_thoughts text DEFAULT NULL, /* max observed length (as of 2022-12-25) 984 */
-    donor_retrospective text DEFAULT NULL, /* max observed length (as of 2022-12-25) 997 */
+    notes text default null, /* max observed length (as of 2022-12-25) 1923 */
+    donation_process text default null, /* max observed length (as of 2022-12-25) 2161 */
+    intended_use_of_funds_category varchar(200) default null, /* max observed length (as of 2022-12-25) 63 */
+    intended_use_of_funds text default null, /* max observed length (as of 2022-12-25) 1007 */
+    intended_funding_timeframe_in_months int default null,
+    donor_donee_reason text default null, /* max observed length (as of 2022-12-25) 999 */
+    donor_amount_reason text default null, /* max observed length (as of 2022-12-25) 990 */
+    donor_timing_reason text default null, /* max observed length (as of 2022-12-25) 999 */
+    donor_next_donation_thoughts text default null, /* max observed length (as of 2022-12-25) 984 */
+    donor_retrospective text default null, /* max observed length (as of 2022-12-25) 997 */
     payment_modality varchar(100), /* max observed length (as of 2022-12-25) 38 */
     match_eligible boolean,
     goal_amount decimal(14,2),
@@ -41,4 +41,4 @@ create table donations (
     donation_announcement_url varchar(200), /* max observed length (as of 2022-12-25) 165 */
     predictions text, /* max observed length (as of 2022-12-25) 324 */
     is_contractwork tinyint(1) default 0
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 default CHARSET=utf8mb4;

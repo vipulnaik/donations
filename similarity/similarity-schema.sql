@@ -9,4 +9,4 @@ create table similarity (
     jaccard_index decimal(5,4),
     cosine_similarity decimal(5,4),
     weighted_cosine_similarity decimal(5,4)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;

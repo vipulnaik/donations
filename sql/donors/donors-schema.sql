@@ -3,16 +3,16 @@ create table donors (
     donor varchar(100) not null,
     donor_type enum('Individual','Couple','Donor group','Subsidiary','Private foundation', 'Donor-advised fund') default 'Individual',
     other_names varchar(140),
-    country varchar(40) not null, # -- Country of current residence, NOT country of origin
-    affiliated_orgs varchar(1000), # -- All current and former employers, plus orgs they are board members or advisors for, but restricting to orgs that are either potential donees or other nonprofits with significant footprint in the associated communities
-    bay_area boolean, # -- Whether the person currently lives in the San Francisco Bay Area
+    country varchar(40) not null, /* Country of current residence, NOT country of origin */
+    affiliated_orgs varchar(1000), /* All current and former employers, plus orgs they are board members or advisors for, but restricting to orgs that are either potential donees or other nonprofits with significant footprint in the associated communities */
+    bay_area boolean, /* Whether the person currently lives in the San Francisco Bay Area */
     contact_email varchar(40),
     wikipedia_page varchar(120),
     key_people varchar(2000),
     launch_date date,
     launch_date_precision enum('day','month','year','multi-year'),
     launch_date_url varchar(200),
-    philosophy_url varchar(200), # -- URL to grant/giving philosophy
+    philosophy_url varchar(200), /* URL to grant/giving philosophy */
     grant_application_process_url varchar(200),
     foundation_center_url varchar(200),
     youtube_username varchar(100),
@@ -28,11 +28,11 @@ create table donors (
     income int,
     notes varchar(5000) default null,
     best_overview_url varchar(200),
-    brief_history varchar(2000),
-    brief_donor_focus_notes varchar(2000),
-    grant_decision_logistics_notes varchar(2000),
-    grant_publication_logistics_notes varchar(2000),
-    grant_financing_notes varchar(2000),
+    brief_history text,
+    brief_donor_focus_notes text,
+    grant_decision_logistics_notes text,
+    grant_publication_logistics_notes text,
+    grant_financing_notes text,
     twitter_username varchar(40),
     lesswrong_username varchar(40),
     eaf_username varchar(40),
@@ -49,4 +49,4 @@ create table donors (
     dlw_data_processing_script varchar(100),
     orgwatch boolean default false,
     unique key donor(`donor`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;

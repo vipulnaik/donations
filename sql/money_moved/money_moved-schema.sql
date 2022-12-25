@@ -9,4 +9,4 @@ create table money_moved(
   document_url varchar(200),
   document_title varchar(200),
   notes varchar(1000)
-)  ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+)  ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
