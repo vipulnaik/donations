@@ -49,4 +49,4 @@ create table donors (
     dlw_data_processing_script varchar(100),
     orgwatch boolean default false,
     unique key donor(`donor`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=15239276 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;

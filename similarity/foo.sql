@@ -12,7 +12,7 @@ drop table if exists donee_sim;
 drop table if exists donee_similarity;
 
 
-set @dne = "Machine Intelligence Research Institute";
+set @dne = "Machine Intelligence Research Institute" COLLATE utf8_unicode_ci;
 
 create table donee_donor_pairs as
 select
