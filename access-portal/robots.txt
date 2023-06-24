@@ -31,5 +31,9 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
+User-agent: AwarioRssBot
+User-agent: AwarioSmartBot
+Disallow: /
+
 User-agent: *
-Crawl-delay: 30
+Crawl-delay: 60
