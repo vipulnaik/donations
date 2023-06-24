@@ -35,5 +35,8 @@ User-agent: AwarioRssBot
 User-agent: AwarioSmartBot
 Disallow: /
 
+User-agent: dotbot
+Disallow: /
+
 User-agent: *
 Crawl-delay: 60
