@@ -39,4 +39,4 @@ User-agent: dotbot
 Disallow: /
 
 User-agent: *
-Crawl-delay: 60
+Crawl-delay: 3600
