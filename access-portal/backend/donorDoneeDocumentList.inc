@@ -16,12 +16,16 @@ if ($stmt = $mysqli->prepare($query)) {
 }
 
 $documentSelectResult = $stmt->get_result();
+
+print '<h4 id="donorDoneeDocumentList">Full list of documents in reverse chronological order ('.($documentSelectResult -> num_rows)." documents)</h4>\n";
+print "\n";
+
 if ($documentSelectResult -> num_rows > 0) {
-  print '<h4 id="donorDoneeDocumentList">Full list of documents in reverse chronological order ('.($documentSelectResult -> num_rows)." documents)</h4>\n";
-  print "\n";
   print '<table id="myTableDonorDocumentList" class="tablesorter">'."\n";
   include_once("documentListBase.inc");
   print "</table>\n";
+} else {
+  print "<p>There are no documents associated with this combination of donor and donee.</p>";
 }
 
 ?>
