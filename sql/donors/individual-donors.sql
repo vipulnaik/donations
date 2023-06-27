@@ -84,7 +84,7 @@ insert into donors(donor, donor_type, country, facebook_username, website, donat
   ('Eric Friedman', 'Individual','United States','friedman.eric','http://reinventingphilanthropy.com/',NULL,NULL,'ericfriedman',NULL,NULL,'eric-friedman',NULL,NULL),
   ('Haseeb Qureshi', 'Individual','United States','someguynamedhaseeb','http://haseebq.com/',NULL,NULL,'imhaseeb',NULL,NULL,'haseeb-qureshi','Haseeb-Qureshi','hosseeb'),
   ('Jacob Trefethen', 'Individual','United States','jacob.trefethen','https://jacobtrefethen.com/',NULL,NULL,'jacob-trefethen-82105350',NULL,'JacobTref',NULL,'jacobtref','JacobTref'),
-  ('Ben Hoskin', 'Individual','United States','ben.944',NULL,NULL,'Larks','ben-hoskin-024b9021','Machine Intelligence Research Institute|Giving What We Can','Larks',NULL,NULL,NULL),
+  ('Ben Hoskin', 'Individual','United States','ben.944',NULL,NULL,NULL,'ben-hoskin-024b9021','Machine Intelligence Research Institute|Giving What We Can',NULL,NULL,NULL,NULL),
   ('Eva Vivalt', 'Individual','United States','eva.vivalt','http://evavivalt.com/',NULL,NULL,'eva-vivalt-a1579b54','AidGrade',NULL,'eva-vivalt',NULL,'evavivalt'),
   ('Holden Karnofsky', 'Individual','United States','holden.karnofsky','https://medium.com/@holden0',NULL,'HoldenKarnofsky','holden-karnofsky-75970b7','GiveWell|Open Philanthropy','HoldenKarnofsky',NULL,NULL,'holdenkarnofsky'),
   ('Elie Hassenfeld', 'Individual','United States','elie.hassenfeld',NULL,NULL,NULL,'elie-hassenfeld-92072a9','GiveWell|Open Philanthropy',NULL,NULL,NULL,'eliehassenfeld'),

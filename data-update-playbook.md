@@ -632,7 +632,7 @@ Current donations are all from GiveWell and Open Phil staff donations posts.
 
 ### Ben Hoskin
 
-Current donations are all from MIRI's top contributors page, but see EA Forum for potentially new AI risk literature reviews.
+Current donations are all from MIRI's top contributors page.
 
 ### Ben Kuhn
 
