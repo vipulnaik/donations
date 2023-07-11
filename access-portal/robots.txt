@@ -4,5 +4,8 @@ Disallow: /
 User-agent: Amazonbot
 Disallow: /
 
+User-agent: BLEXBot
+Disallow: /
+
 User-agent: *
 Crawl-delay: 600
