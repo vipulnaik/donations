@@ -2,7 +2,7 @@ MYSQL_ARGS=
 DATABASE=donations
 
 .PHONY: reset
-reset: reset_documents reset_donations reset_donees reset_donors reset_gifts reset_money_moved reset_disclosures reset_donor_donee_relationships reset_cache
+reset: reset_similarity reset_documents reset_donations reset_donees reset_donors reset_gifts reset_money_moved reset_disclosures reset_donor_donee_relationships reset_cache
 
 .PHONY: init
 init:
@@ -371,21 +371,24 @@ fetch_anchorjs:
 clean_anchorjs:
 	rm -f access-portal/anchor.min.js
 
-.PHONY: compute_similarity_php
-compute_similarity_php:
-	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists similarity;"
-	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-schema.sql
+.PHONY: compute_similarity_php_actual
+compute_similarity_php_actual:
 	php -f similarity/compute_similarity.php
 
 .PHONY: reset_similarity
 reset_similarity:
 	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists similarity;"
 	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-schema.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "drop table if exists cause_area_similarity;"
+	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/cause_area_similarity-schema.sql
 
 .PHONY: compute_similarity
 compute_similarity:
 	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-3.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < similarity/similarity-4.sql
+
+.PHONY: compute_similarity_php
+compute_similarity_php: reset_similarity compute_similarity_php_actual
 
 .PHONY: reset_cache
 reset_cache:

@@ -76,7 +76,9 @@ from
     cause_area_sim_pre.second_donor = cause_area_donor_summary_2.donor
     and cause_area_sim_pre.cause_area = cause_area_donor_summary_2.cause_area;
 
-create table cause_area_similarity as
+truncate table cause_area_similarity;
+
+insert into cause_area_similarity
 select
   cause_area,
   first_donor,
