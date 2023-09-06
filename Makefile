@@ -404,3 +404,4 @@ build_cache:
 	curl --silent 'https://donations.vipulnaik.com/donor.php?donor=Open+Philanthropy' > /dev/null
 	curl --silent 'https://donations.vipulnaik.com/donee.php?donee=Machine+Intelligence+Research+Institute' > /dev/null
 	curl --silent 'https://donations.vipulnaik.com/?display=full' > /dev/null
+	curl --silent 'https://donations.vipulnaik.com/donor.php?donor=Open+Philanthropy&cause_area_filter=AI+safety' > /dev/null
