@@ -73,6 +73,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
+
   ('Open Philanthropy','Berkeley Existential Risk Initiative',250000,'2019-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-chai-ml-engineers','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey','2019-03-04','day',NULL,NULL, /* date adjusted */
   /* donation_process */ 'The Open Philanthropy Project described the donation decision as being based on "conversations with various professors and students"',
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -84,6 +85,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-chai-collaboration-2019 suggests that the donor would continue to stand behind the reasoning for the grant.',
   /* notes */ 'Follows previous support https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai for the launch of CHAI and previous grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-core-staff-and-chai-collaboration to collaborate with CHAI.'),
+
   ('Open Philanthropy','Berkeley Existential Risk Initiative',705000,'2019-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-chai-collaboration-2019','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey','2019-12-13','day',NULL,NULL, /* date adjusted */
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -95,6 +97,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Open Phil makes a grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2019 to the Center for Human-Compatible AI at the same time (November 2019).'),
+
   ('Open Philanthropy','Berkeley Existential Risk Initiative',150000,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-general-support','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Claire Zabel',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
@@ -104,8 +107,68 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-general-support-2/ suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Berkeley Existential Risk Initiative',210000,'2021-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-seri-summer-fellowships/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Stanford Existential Risks Initiative','Claire Zabel',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to provide stipends for the Stanford Existential Risks Initiative (SERI) summer research fellowship program."',
+  /* intended_funding_timeframe_in_months */ 2, /* rough estimate of what a "summer" is like */
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The multiple future grants https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-seri-mats-program-2/ https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-seri-mats-program/ and https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/ from Open Philanthropy to BERI for the SERI-MATS program, a successor of sorts to this program, suggests satisfaction with the outcome of this grant.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Berkeley Existential Risk Initiative',195000,'2021-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-seri-mats-program-2/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Stanford Existential Risks Initiative',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support its collaboration with the Stanford Existential Risks Initiative (SERI) on the SERI ML Alignment Theory Scholars (MATS) Program. MATS is a two-month program where students will research problems related to AI alignment while supervised by a mentor."',
+  /* intended_funding_timeframe_in_months */ 6, /* funding is for one cohort; the whole process from applications to training/research/extension for the cohort is about 6 months; more helpfully, there are two cohorts per year, so the amortized duration of a cohort is 6 months */
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grants https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-seri-mats-program/ and https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/ for the second and third cohort of the SERI-MATS program suggests the donor''s continued satisfaction with the SERI-MATS program.',
+  /* notes */ 'See https://www.serimats.org/program for details of the program including its timeline. Although the research phase of the timeline is just two months, the application process, training phase, and extension phase together make up about half a year.'),
+
+  ('Open Philanthropy','Berkeley Existential Risk Initiative',1008127,'2022-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-seri-mats-program/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Stanford Existential Risks Initiative',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to the Berkeley Existential Risk Initiative to support its collaboration with the Stanford Existential Risks Initiative (SERI) on the second cohort of the SERI Machine Learning Alignment Theory Scholars (MATS) Program. MATS is an educational seminar and independent research program that aims to provide talented scholars with talks, workshops, and research mentorship in the field of AI alignment, and connect them with the Berkeley alignment research community."',
+  /* intended_funding_timeframe_in_months */ 6, /* funding is for one cohort; the whole process from applications to training/research/extension for the cohort is about 6 months; more helpfully, there are two cohorts per year, so the amortized duration of a cohort is 6 months */
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/ for the third cohort of the SERI-MATS program suggests the donor''s continued satisfaction with the SERI-MATS program.',
+  /* notes */ 'See https://www.serimats.org/program for details of the program including its timeline. Although the research phase of the timeline is just two months, the application process, training phase, and extension phase together make up about half a year.'),
+
+  ('Open Philanthropy','Berkeley Existential Risk Initiative',100000,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-general-support-2/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support. BERI seeks to reduce existential risks to humanity by providing services and support to university-based research groups, including the Center for Human-Compatible AI at the University of California, Berkeley."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Berkeley Existential Risk Initiative',2047268,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Stanford Existential Risks Initiative',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support their collaboration with the Stanford Existential Risks Initiative (SERI) on SERI’s Machine Learning Alignment Theory Scholars (MATS) program. MATS is an educational seminar and independent research program that aims to provide talented scholars with talks, workshops, and research mentorship in the field of AI alignment, and connect them with the Berkeley alignment research community. This grant will support the MATS program’s third cohort."',
+  /* intended_funding_timeframe_in_months */ 6, /* funding is for one cohort; the whole process from applications to training/research/extension for the cohort is about 6 months; more helpfully, there are two cohorts per year, so the amortized duration of a cohort is 6 months */
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'See https://www.serimats.org/program for details of the program including its timeline. Although the research phase of the timeline is just two months, the application process, training phase, and extension phase together make up about half a year.');
 
 /* Grants to AI Impacts */
 
@@ -686,7 +749,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing is likely determined by the time taken to review all applications after the close of applications on 2019-10-15.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ 'As of early 2022, there do not appear to have been further rounds of grantmaking from Open Philanthropy for this purpose.',
-  /* notes */ 'Open Philanthropy runs a related fellowship program called the Open Phil AI Fellowship, that has an annual cadence of announcing new grants, though individual grants are often multi-year. The Open Phil AI Fellowship grantees are mostly people working on technical AI safety, whereas this grant is focused on AI policy work. Moreover, the Open Phil AI Fellowship targets graduate-level research,, whereas this grant targets study and training.'),
+  /* notes */ 'Open Philanthropy runs a related fellowship program called the Open Phil AI Fellowship, that has an annual cadence of announcing new grants, though individual grants are often multi-year. The Open Phil AI Fellowship grantees are mostly people working on technical AI safety, whereas this grant is focused on AI policy work. Moreover, the Open Phil AI Fellowship targets graduate-level research, whereas this grant targets study and training.'),
 
   ('Open Philanthropy','World Economic Forum',50000,'2020-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/world-economic-forum-global-ai-council-workshop','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
