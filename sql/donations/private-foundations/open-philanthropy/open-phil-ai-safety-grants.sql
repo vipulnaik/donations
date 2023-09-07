@@ -146,6 +146,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/ for the third cohort of the SERI-MATS program suggests the donor''s continued satisfaction with the SERI-MATS program.',
   /* notes */ 'See https://www.serimats.org/program for details of the program including its timeline. Although the research phase of the timeline is just two months, the application process, training phase, and extension phase together make up about half a year.'),
 
+  ('Open Philanthropy','Berkeley Existential Risk Initiative',30000,'2022-06-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-language-model-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Samuel Bowman',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a project led by Professor Samuel Bowman of New York University to develop a dataset and accompanying methods for language model alignment research."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
   ('Open Philanthropy','Berkeley Existential Risk Initiative',100000,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-general-support-2/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
@@ -173,7 +185,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 /* Grants to AI Impacts */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','AI Impacts',32000,'2016-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/ai-impacts-general-support','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,'2017-02-02','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/FU2Is9LMWJg',NULL,
+  ('Open Philanthropy','AI Impacts',32000,'2016-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-impacts-general-support-2016/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,'2017-02-02','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/FU2Is9LMWJg',NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'The grant page says: "AI Impacts plans to use this grant to work on strategic questions related to potential risks from advanced artificial intelligence."',
@@ -185,7 +197,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'Renewals in 2018 https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/ai-impacts-general-support-2018 and 2020 https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/ai-impacts-general-support-2020 suggest continued satisfaction with the grantee.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','AI Impacts',100000,'2018-06-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/ai-impacts-general-support-2018','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey','2018-06-27','day',NULL,NULL, /* date adjusted */
+  ('Open Philanthropy','AI Impacts',100000,'2018-06-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-impacts-general-support-2018/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey','2018-06-27','day',NULL,NULL, /* date adjusted */
   /* donation_process */ 'Discretionary grant',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'The grant page says: "AI Impacts plans to use this grant to work on strategic questions related to potential risks from advanced artificial intelligence."',
@@ -194,13 +206,25 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ 'Renewal in 2020 https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/ai-impacts-general-support-2020 suggest continued satisfaction with the grantee, though the amount of the renewal grant is lower (just $50,000).',
+  /* donor_retrospective */ 'Renewal in 2020 https://www.openphilanthropy.org/grants/ai-impacts-general-support-2020/ and 2022 https://www.openphilanthropy.org/grants/ai-impacts-general-support/ suggest continued satisfaction with the grantee, though the amount of the 2020 renewal grant is lower (just $50,000).',
   /* notes */ 'The grant is via the Machine Intelligence Research Institute.'),
 
-  ('Open Philanthropy','AI Impacts',50000,'2020-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/ai-impacts-general-support-2020','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Tom Davidson|Ajeya Cotra',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','AI Impacts',50000,'2020-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-impacts-general-support-2020/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Tom Davidson|Ajeya Cotra',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'The grant page says: "AI Impacts plans to use this grant to work on strategic questions related to potential risks from advanced artificial intelligence."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Renewal in 2022 https://www.openphilanthropy.org/grants/ai-impacts-general-support/ *for a much larger amount) suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','AI Impacts',364893,'2022-06-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-impacts-general-support/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support. AI Impacts works on strategic questions related to advanced artificial intelligence."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
