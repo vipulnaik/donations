@@ -62,7 +62,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Berkeley Existential Risk Initiative (BERI) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Berkeley Existential Risk Initiative',403890,'2017-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-core-staff-and-chai-collaboration','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey','2017-09-28','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/5UjOZN6KlWQ',NULL,
+  ('Open Philanthropy','Berkeley Existential Risk Initiative',403890,'2017-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-core-support-and-chai-collaboration/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey','2017-09-28','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/5UjOZN6KlWQ',NULL,
   /* donation_process */ 'BERI submitted a grant proposal at https://www.openphilanthropy.org/files/Grants/BERI/BERI_Grant_Proposal_2017.pdf',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to support work with the Center for Human-Compatible AI (CHAI) at UC Berkeley, to which the Open Philanthropy Project provided a two-year founding grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai The funding is intended to help BERI hire contractors and part-time employees to help CHAI, such as web development and coordination support, research engineers, software developers, or research illustrators. This funding is also intended to help support BERI’s core staff. More in the grant proposal https://www.openphilanthropy.org/files/Grants/BERI/BERI_Grant_Proposal_2017.pdf',
@@ -74,7 +74,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Berkeley Existential Risk Initiative',250000,'2019-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-chai-ml-engineers','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey','2019-03-04','day',NULL,NULL, /* date adjusted */
+  ('Open Philanthropy','Berkeley Existential Risk Initiative',250000,'2019-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-chai-ml-engineers/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey','2019-03-04','day',NULL,NULL, /* date adjusted */
   /* donation_process */ 'The Open Philanthropy Project described the donation decision as being based on "conversations with various professors and students"',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to temporarily or permanently hire machine learning research engineers dedicated to BERI’s collaboration with the Center for Human-compatible Artificial Intelligence (CHAI).',
@@ -84,9 +84,9 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-chai-collaboration-2019 suggests that the donor would continue to stand behind the reasoning for the grant.',
-  /* notes */ 'Follows previous support https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai for the launch of CHAI and previous grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-core-staff-and-chai-collaboration to collaborate with CHAI.'),
+  /* notes */ 'Follows previous support https://www.openphilanthropy.org/grants/uc-berkeley-center-for-human-compatible-ai-2016/ for the launch of CHAI and previous grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-core-support-and-chai-collaboration/ to collaborate with CHAI.'),
 
-  ('Open Philanthropy','Berkeley Existential Risk Initiative',705000,'2019-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-chai-collaboration-2019','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey','2019-12-13','day',NULL,NULL, /* date adjusted */
+  ('Open Philanthropy','Berkeley Existential Risk Initiative',705000,'2019-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-chai-collaboration-2019/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey','2019-12-13','day',NULL,NULL, /* date adjusted */
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page says the grant is "to support continued work with the Center for Human-Compatible AI (CHAI) at UC Berkeley. This includes one year of support for machine learning researchers hired by BERI, and two years of support for CHAI."',
@@ -98,7 +98,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Open Phil makes a grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-center-human-compatible-ai-2019 to the Center for Human-Compatible AI at the same time (November 2019).'),
 
-  ('Open Philanthropy','Berkeley Existential Risk Initiative',150000,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berkeley-existential-risk-initiative-general-support','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Claire Zabel',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Berkeley Existential Risk Initiative',150000,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-general-support/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Claire Zabel',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'The grant page says: "BERI seeks to reduce existential risks to humanity, and collaborates with other long-termist organizations, including the Center for Human-Compatible AI at UC Berkeley. This funding is intended to help BERI establish new collaborations."',
@@ -634,7 +634,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 /* Grants to Redwood Research */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Redwood Research',9420000,'2021-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/redwood-research-general-support','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Redwood Research',9420000,'2021-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/redwood-research-general-support/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'Grant "for general support. Redwood Research is a new research institution that conducts research to better understand and make progress on AI alignment in order to improve the long-run future."',
@@ -643,8 +643,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/redwood-research-general-support-2/ of a comparable amount ($10.7 million) suggests continued satisfaction with the grantee.',
+  /* notes */ 'This is a total across four grants.'),
+
+  ('Open Philanthropy','Redwood Research',10700000,'2022-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/redwood-research-general-support-2/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support. Redwood Research is a nonprofit research institution focused on aligning advanced AI with human interests."',
+  /* intended_funding_timeframe_in_months */ 18,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'This is a total across four grants.');
+  /* notes */ NULL);
 
 /* Grants to Centre for the Governance of AI */
 
