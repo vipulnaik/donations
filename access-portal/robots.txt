@@ -7,5 +7,8 @@ Disallow: /
 User-agent: BLEXBot
 Disallow: /
 
+User-agent: SeekportBot
+Disallow: /
+
 User-agent: *
 Crawl-delay: 600
