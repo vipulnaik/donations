@@ -10,5 +10,11 @@ Disallow: /
 User-agent: SeekportBot
 Disallow: /
 
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: SEOKicks
+Disallow: /
+
 User-agent: *
 Crawl-delay: 600
