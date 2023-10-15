@@ -1137,6 +1137,30 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'At around the same time as this grant, Open Philanthropy made two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-santurkar to early-stage researchers in adversarial robustness research.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','University of Chicago',250000,'2023-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-chicago-research-on-complementary-ai/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Chenhao Tan',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research, led by Professor Chenhao Tan, on how to train AI systems to complement human efforts." Chenhao Tan''s website https://chenhaot.com/ is linnked from the grant page.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Apollo Research',1535480,'2023-06-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/apollo-research-startup-funding/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for startup costs. Apollo Research is a new organization that will conduct research on how to evaluate whether AI models are aligned and safe, with a focus on interpretability and detecting whether models are deceptive. Apollo also plans to do research on AI governance."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'The timing is likely determined by the timing of the start of the funded organization (Apollo Research).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
 /* Other grants (new format) that are contract work */
