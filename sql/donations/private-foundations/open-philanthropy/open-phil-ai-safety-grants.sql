@@ -266,7 +266,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ 'Renewal in 2022 https://www.openphilanthropy.org/grants/ai-impacts-general-support/ *for a much larger amount) suggests continued satisfaction with the grantee.',
+  /* donor_retrospective */ 'Renewal in 2022 https://www.openphilanthropy.org/grants/ai-impacts-general-support/ (for a much larger amount) suggests continued satisfaction with the grantee.',
   /* notes */ NULL),
 
   ('Open Philanthropy','AI Impacts',364893,'2022-06-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-impacts-general-support/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
@@ -278,8 +278,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/ai-impacts-expert-survey-on-progress-in-ai/ suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','AI Impacts',150000,'2023-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-impacts-expert-survey-on-progress-in-ai/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support an expert survey on progress in artificial intelligence. AI Impacts works to answer questions about the future of artificial intelligence."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ 'AI Impacts previously did expert surveys on the state of AI, including https://aiimpacts.org/2016-expert-survey-on-progress-in-ai/ in 2016 and (a rerun) https://aiimpacts.org/2022-expert-survey-on-progress-in-ai/ in 2022. This survey is likely a followup/rerun of those surveys.');
 
 /* Grants to the University of California, Berkeley (UC Berkeley) (note that grants funding the Center for Human-Compatible AI (CHAI) is entered as a grant to CHAI rather than to UC Berkeley) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
@@ -723,6 +735,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'Grant "for general support. Redwood Research is a nonprofit research institution focused on aligning advanced AI with human interests."',
   /* intended_funding_timeframe_in_months */ 18,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/redwood-research-general-support-2023/ suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Redwood Research',5300000,'2023-06-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/redwood-research-general-support-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support. Redwood Research is a nonprofit research institution focused on aligning advanced AI with human interests."',
+  /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
