@@ -808,6 +808,70 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+
+/* Grants to FAR AI */
+
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','FAR AI',425800,'2021-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/language-model-safety-fund-language-model-misalignment/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Ethan Perez',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to the Fund for Alignment Research, led by Ethan Perez, to support salaries and equipment for projects related to misalignment in language models. Perez plans to hire and supervise four engineers to work on these projects."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/fund-for-alignment-research-language-model-misalignment-2022/ for a similar amount (and with the same research area and leader Ethan Perez), as well as several other followup grants in the coming years, suggest continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','FAR AI',463693,'2022-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/fund-for-alignment-research-language-model-misalignment-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Ethan Perez',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research projects, led by Ethan Perez, related to misalignment in language models."',
+  /* intended_funding_timeframe_in_months */ 18,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Several followup grants, such as https://www.openphilanthropy.org/grants/far-ai-general-support/ for general support, suggest continued satisfaction with the grantee. However, as of mid-2023, there are no followup grants exclusively for the research area of this grant (language model misalignment).',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','FAR AI',50000,'2022-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/far-ai-interpretability-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Alex Tamkin',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support [FAR AI''s] research on machine learning interpretability, in collaboration with Open Philanthropy AI Fellow Alex Tamkin."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/far-ai-ai-interpretability-research/ for the same research area and same leader (Alex Tamkin), as well as several other grants to the organization, suggest continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','FAR AI',49500,'2022-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/far-ai-inverse-scaling-prize/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support their Inverse Scaling Prize, which is a contest that awards prizes to contestants who find examples of tasks where language models perform worse as they scale."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'The announcement post https://www.alignmentforum.org/posts/eqxqgFxymP8hXDTt5/announcing-the-inverse-scaling-prize-usd250k-prize-pool (published six months prior to the grant) states that the total prize pool is $250,000. https://github.com/inverse-scaling/prize#prize-information says "2023/03/21 Update: The prize pool has been funded by Open Philanthropy" suggesting that the amount provided by Open Philanthropy closed the funding gap to the target amount of $250,000.',
+  /* donor_timing_reason */ 'The grant is made six months after the announcement https://www.alignmentforum.org/posts/eqxqgFxymP8hXDTt5/announcing-the-inverse-scaling-prize-usd250k-prize-pool of the $250,000 prize pool for the prize. https://github.com/inverse-scaling/prize#prize-information says "2023/03/21 Update: The prize pool has been funded by Open Philanthropy"; this suggests that Open Philanthropy made the grant in light of the already-running prize in order to fill the funding gap.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'See the announcement post https://www.alignmentforum.org/posts/eqxqgFxymP8hXDTt5/announcing-the-inverse-scaling-prize-usd250k-prize-pool and the GitHub repository https://github.com/inverse-scaling/prize for more details.'),
+
+  ('Open Philanthropy','FAR AI',625000,'2022-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/far-ai-general-support/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support. FAR AI works to incubate and accelerate research agendas to ensure AI systems are more trustworthy and beneficial to society."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Other grants (new format) */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
