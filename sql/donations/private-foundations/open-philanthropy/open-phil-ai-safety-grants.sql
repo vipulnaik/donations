@@ -778,8 +778,20 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/centre-for-the-governance-of-ai-general-support-2/ suggests continued satisfaction with the grantee.',
+  /* notes */ 'Grant made via the Centre for Effective Altruism.'),
+
+  ('Open Philanthropy','Centre for the Governance of AI',1000000,'2023-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/centre-for-the-governance-of-ai-general-support-2/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "to the Centre for the Governance of AI (GovAI) for general support. GovAI conducts research on AI governance and works to develop a talent pipeline for those interested in entering the field."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Grant made via the Centre for Effective Altruism.');
+  /* notes */ NULL);
 
 /* Grants to Alignment Research Center */
 
@@ -907,6 +919,60 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
+
+/* Grants to Rethink Priorities */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
+  ('Open Philanthropy','Rethink Priorities',495685,'2021-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research projects on topics related to AI governance."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "We believe that Rethink Priorities’ research outputs may help inform our AI policy grantmaking strategy."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy','Rethink Priorities',2728319,'2022-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to Rethink Priorities to expand its research on topics related to AI governance."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research-2023/ suggests continued satisfaction with the grantee.',
+  /* notes */ NULL,
+  /* is_contractwork */ 0),
+
+  ('Open Philanthropy','Rethink Priorities',302390,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-workshop/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support an in-person workshop bringing together professionals working on AI governance."',
+  /* intended_funding_timeframe_in_months */ 1,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 0),
+
+  ('Open Philanthropy','Rethink Priorities',154801,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research on AI governance, with a focus on hardware security features."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* is_contractwork */ 0);
 
 /* Other grants (new format) */
 
@@ -1228,21 +1294,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL,
-  /* is_contractwork */ 1),
-
-  ('Open Philanthropy','Rethink Priorities',495685,'2021-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rethink-priorities-ai-governance','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
-  /* donation_process */ NULL,
-  /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant "to support research projects on topics related to AI governance."',
-  /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ 'The grant page says: "We believe that Rethink Priorities’ research outputs may help inform our AI policy grantmaking strategy."',
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL,
   /* is_contractwork */ 1);
-
 
 /* Other grants (old format) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, notes, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions) values
