@@ -961,7 +961,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL,
   /* is_contractwork */ 0),
 
-  ('Open Philanthropy','Rethink Priorities',154801,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Rethink Priorities',154810,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research on AI governance, with a focus on hardware security features."',
@@ -971,7 +971,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL,
+  /* notes */ 'As of 2023-10-14, the text of the grant page states the amount to be $154,801, but the metadata on top and on the grants list page states the amount to be $154,810.',
   /* is_contractwork */ 0);
 
 /* Other grants (new format) */
