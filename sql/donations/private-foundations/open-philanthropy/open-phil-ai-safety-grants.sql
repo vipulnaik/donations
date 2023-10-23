@@ -215,8 +215,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'The grant is made in time for the third cohort of the SERI-MATS program; this is the cohort being funded by the grant.',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/conjecture-seri-mats-2023/ for the LOndon-based extension suggests continued satisfaction with this funded program.',
-  /* notes */ 'See https://www.serimats.org/program for details of the program including its timeline. Although the research phase of the timeline is just two months, the application process, training phase, and extension phase together make up about half a year.'),
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/conjecture-seri-mats-2023/ for the London-based extension suggests continued satisfaction with this funded program.',
+  /* notes */ 'See https://www.serimats.org/program for details of the program including its timeline. Although the research phase of the timeline is just two months, the application process, training phase, and extension phase together make up about half a year. See also the companion grants: https://www.openphilanthropy.org/grants/ai-safety-support-seri-mats-program/ to AI Safety Support and https://www.openphilanthropy.org/grants/conjecture-seri-mats-2023/ to Conjecture for the London-based extension.'),
 
   ('Open Philanthropy','Berkeley Existential Risk Initiative',35000,'2023-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-lab-retreat/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Anca Dragan',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
@@ -1146,6 +1146,44 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ 'The "Grantee expectations" section at https://www.openphilanthropy.org/open-philanthropy-course-development-grants/ does not specifically talk about followup grants. It says: "We would like grantees to continue teaching the developed course in the future (at least three times), but this is not a requirement of a grant. Grantees are required to provide us, after completion of the course, with a copy of the course syllabus, a copy of the final exam/final paper (if permitted of by the relevant university’s policies), enrollment statistics, student evaluations, and a brief summary (roughly half a page in length) describing their own experience teaching the course. We will strongly encourage grantees to make their syllabi available online, but we won’t require this." This suggests that the grantee is not expected to receive followup grants for teaching the same course, since the grant is for course *development*; further grants for different courses may be possible.',
   /* donor_retrospective */ NULL,
   /* notes */ 'On the Open Philanthropy website, the cause area is listed as global catastrophic risks rather than AI safety. We''re using AI safety on the donations list website, so this may result in inconsistencies in some totals between the Open Philanthropy website and the donations list website.');
+
+/* Grants to AI Safety Support */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','AI Safety Support',42000,'2022-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-safety-support-research-on-trends-in-machine-learning/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jaime Sevilla',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to scale up a research group, led by Jaime Sevilla, which studies trends in machine learning."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'Further grant https://www.openphilanthropy.org/grants/ai-safety-support-seri-mats-program/ and https://www.openphilanthropy.org/grants/ai-safety-support-situational-awareness-research/ from Open Philanthropy, though with slightly different goals, suggest continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','AI Safety Support',1538000,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-safety-support-seri-mats-program/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support [AI Safety Support''s] collaboration with Stanford Existential Risks Initiative (SERI) on SERI’s Machine Learning Alignment Theory Scholars (MATS) program. MATS is an educational seminar and independent research program that aims to provide talented scholars with talks, workshops, and research mentorship in the field of AI alignment, and connect them with in-person alignment research communities."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'See also the companion grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/ to Berkeley Existential Risk Initiative and the grant https://www.openphilanthropy.org/grants/conjecture-seri-mats-2023/ to Conjecture for the London-based extension.'),
+
+  ('Open Philanthropy','AI Safety Support',443716,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-safety-support-situational-awareness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Owain Evans',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Three grants "to support research led by Owain Evans to evaluate whether machine learning models have situational awareness. These grants were made to AI Safety Support, Effective Ventures Foundation USA, and the Berkeley Existential Risk Initiative, and will support salaries, office space, and compute for this research project."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Both the Open Philanthropy website and the donations list website list the grantee as AI Safety Support, but this is actually a combination of three grants, one each to "AI Safety Support, Effective Ventures Foundation USA, and the Berkeley Existential Risk Initiative"; the single donee is for simplicity and due to system limitations.');
 
 /* Other grants (new format) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
