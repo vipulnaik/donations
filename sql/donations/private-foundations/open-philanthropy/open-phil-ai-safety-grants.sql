@@ -820,7 +820,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
-
 /* Grants to FAR AI */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
@@ -1020,6 +1019,44 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* amount_original_currency */ NULL,
   /* original_currency */ NULL,
   /* currency_conversion_basis */ NULL);
+
+/* Grants to Center for AI safety */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Center for AI Safety',5160000,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-ai-safety-general-support/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support. The Center for AI Safety does technical research and field-building aimed at reducing catastrophic and existential risks from artificial intelligence."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup general support grant https://www.openphilanthropy.org/grants/center-for-ai-safety-general-support-2023/ in 2023 for a similar amount suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Center for AI Safety',1433000,'2023-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-ai-safety-philosophy-fellowship/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support the CAIS Philosophy Fellowship, which is a research fellowship that will support philosophers researching topics related to AI safety. This grant also supported a workshop on adversarial robustness, as well as prizes for safety-related competitions at the 2022 NeurIPS conference." Links: https://philosophy.safe.ai/ for CAIS Philosophy Fellowship, https://eccv22-arow.github.io/ for the workshop, and https://trojandetection.ai/ and https://neurips2022.mlsafety.org/ for the prizes.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Center for AI Safety',4025729,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-ai-safety-general-support-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'Grant "for general support. The Center for AI Safety works on research, field-building, and advocacy to reduce existential risks from artificial intelligence."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Other grants (new format) */
 
