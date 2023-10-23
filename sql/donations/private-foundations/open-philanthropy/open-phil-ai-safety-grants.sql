@@ -820,7 +820,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL);
 
 /* Grants to FAR AI */
-
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','FAR AI',425800,'2021-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/language-model-safety-fund-language-model-misalignment/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Ethan Perez',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
