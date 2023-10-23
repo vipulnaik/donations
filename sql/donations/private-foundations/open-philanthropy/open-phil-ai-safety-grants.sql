@@ -1184,6 +1184,23 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Both the Open Philanthropy website and the donations list website list the grantee as AI Safety Support, but this is actually a combination of three grants, one each to "AI Safety Support, Effective Ventures Foundation USA, and the Berkeley Existential Risk Initiative"; the single donee is for simplicity and due to system limitations.');
 
+/* Grants to Longview Philanthropy */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
+  ('Open Philanthropy','Longview Philanthropy',770076,'2023-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/longview-philanthropy-ai-policy-development-at-the-oecd/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to Longview Philanthropy to support their collaboration with the Organization for Economic Co-operation and Development (OECD) on a project to develop potential policies that could reduce existential risks from artificial intelligence."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* amount_original_currency */ 720000,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation');
+
 /* Other grants (new format) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','RAND Corporation',30751,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rand-corporation-research-on-the-state-of-ai-assurance-methods','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Andrew Lohn','Luke Muehlhauser','2020-03-19','day',NULL,NULL,
