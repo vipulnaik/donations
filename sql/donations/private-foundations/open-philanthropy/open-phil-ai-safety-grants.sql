@@ -155,7 +155,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'The grant is made in time for the second cohort of the SERI-MATS program; this is the cohort being funded by the grant.',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/ for the third cohort of the SERI-MATS program suggests the donor''s continued satisfaction with the SERI-MATS program.',
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/ for the third cohort of the SERI-MATS program suggests the donor''s continued satisfaction with the SERI-MATS program. Also, the grant https://www.openphilanthropy.org/grants/conjecture-seri-mats-program-in-london/ for the London-based extension of this cohort (the second cohort) also suggests the donor''s satisfaction with the program.',
   /* notes */ 'See https://www.serimats.org/program for details of the program including its timeline. Although the research phase of the timeline is just two months, the application process, training phase, and extension phase together make up about half a year.'),
 
   ('Open Philanthropy','Berkeley Existential Risk Initiative',210000,'2022-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-ai-standards-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Center for Long-Term Cybersecurity',NULL,NULL,NULL,NULL,NULL,
@@ -215,7 +215,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'The grant is made in time for the third cohort of the SERI-MATS program; this is the cohort being funded by the grant.',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/conjecture-seri-mats-2023/ for the LOndon-based extension suggests continued satisfaction with this funded program.',
   /* notes */ 'See https://www.serimats.org/program for details of the program including its timeline. Although the research phase of the timeline is just two months, the application process, training phase, and extension phase together make up about half a year.'),
 
   ('Open Philanthropy','Berkeley Existential Risk Initiative',35000,'2023-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-lab-retreat/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Anca Dragan',NULL,NULL,NULL,NULL,NULL,
@@ -231,7 +231,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL);
 
 /* Grants to AI Impacts */
-
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','AI Impacts',32000,'2016-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-impacts-general-support-2016/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,'2017-02-02','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/FU2Is9LMWJg',NULL,
   /* donation_process */ NULL,
@@ -1096,8 +1095,33 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
-/* Other grants (new format) */
+/* Grants to Conjecture */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Conjecture',457380,'2022-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/conjecture-seri-mats-program-in-london/','https://www.openphilanthropy.org/grants?focus-area=potential-risks-advanced-ai',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support [Conjecture''s] collaboration with the Stanford Existential Risks Initiative (SERI) on SERI’s Machine Learning Alignment Theory Scholars (MATS) program. MATS is an educational seminar and independent research program that aims to provide talented scholars with talks, workshops, and research mentorship in the field of AI alignment. This grant will support a London-based extension for a MATS cohort that started in Berkeley. Conjecture will use this funding to provide office space in London and operations support."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant is a followup to the grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-seri-mats-program/ for the original SERI-MATS cohort (the second cohort). Conjecture was likely selected for the grant due to its interest, willingness and ability to manage the logistics of the extension in London.',
+  /* donor_amount_reason */ 'While no reason is provided for the amount, the amount is a little under half the amount granted at https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-seri-mats-program/ for the SERI-MATS cohort whose extension is being funded by this grant.',
+  /* donor_timing_reason */ 'The grant is made six months after the grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-seri-mats-program/ for the SERI-MATS cohort whose extension is being funded by this grant. This makes sense since the extension happens after the program, whose duration (including application steps) is about 6 months.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/conjecture-seri-mats-2023/ for a similar London-based extension of the third SERI-MATS cohort suggests continued satisfaction with the program being funded.',
+  /* notes */ NULL),
 
+  ('Open Philanthropy','Conjecture',245000,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/conjecture-seri-mats-2023/','https://www.openphilanthropy.org/grants?focus-area=potential-risks-advanced-ai',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support [Conjecture''s] collaboration with the Stanford Existential Risks Initiative (SERI) on SERI’s Machine Learning Alignment Theory Scholars (MATS) program. MATS is an educational seminar and independent research program that aims to provide talented scholars with talks, workshops, and research mentorship in the field of AI alignment. This grant will support a London-based extension of the MATS program’s third cohort, which we supported last year."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'This grant is a followup to the grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/ for the original SERI-MATS cohort (the third cohort). Conjecture was likely selected for the grant due to its interest, willingness and ability to manage the logistics of the extension in London, and its success at running a similar extension for the second cohort; that extension was also funded by Open Philanthropy (see https://www.openphilanthropy.org/grants/conjecture-seri-mats-program-in-london/ for details).',
+  /* donor_amount_reason */ 'While no reason is provided for the amount, the amount is a little over 10% of the amount for the SERI-MATS grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/ and a little over half the amount of the previous extension grant. The previous extension grant had been about half the corresponding SERI-MATS cohort grant. The reason for the reduced amount of this grant is not clear.',
+  /* donor_timing_reason */ 'The grant is made six months after the grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/ for the SERI-MATS cohort whose extension is being funded by this grant. This makes sense since the extension happens after the program, whose duration (including application steps) is about 6 months.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Other grants (new format) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','RAND Corporation',30751,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rand-corporation-research-on-the-state-of-ai-assurance-methods','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Andrew Lohn','Luke Muehlhauser','2020-03-19','day',NULL,NULL,
   /* donation_process */ NULL,
