@@ -1121,6 +1121,32 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to University of Utah */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','University of Utah',140000,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-utah-ai-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Daniel Brown',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research led by Professor Daniel Brown on ways to verify the extent to which an AI system is aligned with human values."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','University of Utah',31773,'2023-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-utah-course-on-human-ai-alignment/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Daniel Brown',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The grant is part of Open Philanthropy Course Development Grants https://www.openphilanthropy.org/open-philanthropy-course-development-grants/ for which applications can be submitted online. The grant page https://www.openphilanthropy.org/grants/university-of-utah-course-on-human-ai-alignment/ says: "We sought applications for this funding to support the development of courses on a range of topics that are relevant to certain areas of Open Philanthropy’s grantmaking."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support Daniel Brown in developing a course on human-AI alignment."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'The online application form linked from https://www.openphilanthropy.org/open-philanthropy-course-development-grants/ requires applicants to include an estimated budget. The amount granted was likely based on the budget submitted by the applicant.',
+  /* donor_timing_reason */ 'The timing was likely determined by the timing of the grant application, as well as the academic year cycle. Details are not publicly available.',
+  /* donor_next_donation_thoughts */ 'The "Grantee expectations" section at https://www.openphilanthropy.org/open-philanthropy-course-development-grants/ does not specifically talk about followup grants. It says: "We would like grantees to continue teaching the developed course in the future (at least three times), but this is not a requirement of a grant. Grantees are required to provide us, after completion of the course, with a copy of the course syllabus, a copy of the final exam/final paper (if permitted of by the relevant university’s policies), enrollment statistics, student evaluations, and a brief summary (roughly half a page in length) describing their own experience teaching the course. We will strongly encourage grantees to make their syllabi available online, but we won’t require this." This suggests that the grantee is not expected to receive followup grants for teaching the same course, since the grant is for course *development*; further grants for different courses may be possible.',
+  /* donor_retrospective */ NULL,
+  /* notes */ 'On the Open Philanthropy website, the cause area is listed as global catastrophic risks rather than AI safety. We''re using AI safety on the donations list website, so this may result in inconsistencies in some totals between the Open Philanthropy website and the donations list website.');
+
 /* Other grants (new format) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','RAND Corporation',30751,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rand-corporation-research-on-the-state-of-ai-assurance-methods','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Andrew Lohn','Luke Muehlhauser','2020-03-19','day',NULL,NULL,
