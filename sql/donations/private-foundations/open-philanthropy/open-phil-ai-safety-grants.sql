@@ -1201,7 +1201,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ 'EUR',
   /* currency_conversion_basis */ 'donor calculation');
 
-/* Other grants (new format) */
+/* Grants to RAND Corporation */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','RAND Corporation',30751,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rand-corporation-research-on-the-state-of-ai-assurance-methods','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Andrew Lohn','Luke Muehlhauser','2020-03-19','day',NULL,NULL,
   /* donation_process */ NULL,
@@ -1212,9 +1212,23 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ 'A few months later, Open Phil would make a grant directly to Andrew Lohn for machine learning robustness research, suggesting that they were satisfied with the outcoms from this grant.',
+  /* donor_retrospective */ 'A few months later, Open Phil would make a grant directly to Andrew Lohn for machine learning robustness research, suggesting that they were satisfied with the outcome from this grant.',
   /* notes */ NULL),
 
+  ('Open Philanthropy','RAND Corporation',5500000,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rand-corporation-emerging-technology-fellowships-and-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jason Matheny','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to be spent at RAND President Jason Matheny’s discretion. Matheny has designated this funding to launch two new initiatives: a technology policy training program, and a research fund to help produce information that policymakers need to make wise decisions about emerging technology and security priorities."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "We have been impressed with Matheny’s past work on technology and security — at IARPA, at the Center for Security and Technology, and in the White House — and we believe RAND is well-positioned to use such funding to great impact."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Other grants (new format) */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Press Shop',17000,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/press-shop-human-compatible','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Stuart Russell','Daniel Dewey',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -1431,6 +1445,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
+  ('Open Philanthropy','California State University, San José',39000,'2023-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/san-jose-state-university-ai-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Yan Zhang',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research by Professor Yan Zhang on AI forecasting and AI governance." The webpage https://www.sjsu.edu/people/yan.zhang/ is linked.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
   ('Open Philanthropy','Forecasting Research Institute',150000,'2023-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/forecasting-research-institute-ai-forecasting-project/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -1447,6 +1473,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support Professor Ben Levinstein’s research on AI alignment." Levinstein''s website https://www.levinstein.org/ is linked.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','University of Maryland',312959,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-maryland-policy-fellowship-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to the University of Maryland to support a fellowship related to technology and national security."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
@@ -1499,6 +1537,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'The timing is likely determined by the timing of the start of the funded organization (Apollo Research).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Legal Priorities Project',75000,'2023-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/legal-priorities-project-law-ai-summer-research-fellowship/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support [grantee''s] Summer Research Fellowship in Law & AI. Participants will work with researchers at LPP on projects at the intersection of law and risks from advanced AI."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
