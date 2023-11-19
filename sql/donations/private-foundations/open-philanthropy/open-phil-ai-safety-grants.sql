@@ -1317,6 +1317,32 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Georgetown University */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Georgetown Universty',246564,'2021-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/georgetown-university-policy-fellowship-2021/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a fellowship related to AI and cybersecurity policy."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/georgetown-university-policy-fellowship-2022/ the next year for the same purpose and for a similar amount suggest satisfaction with the outcome of the grant.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Georgetown University',239061,'2022-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/georgetown-university-policy-fellowship-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a fellowship related to AI and cybersecurity policy."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'The amount of the grant is very similar to the amount of the previous grant https://www.openphilanthropy.org/grants/georgetown-university-policy-fellowship-2021/ to the grantee for the same fellowship the previous year.',
+  /* donor_timing_reason */ 'The grant is made exactly one year after the previous grant https://www.openphilanthropy.org/grants/georgetown-university-policy-fellowship-2021/ to the grantee for the same fellowship, suggesting that this is an annual renewal grant as the fellowship is being run for a second year.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Grants to Brian Christian */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork, amount_original_currency, original_currency, currency_conversion_basis) values
   ('Open Philanthropy','Brian Christian',66000,'2021-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/brian-christian-alignment-book-promotion','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
