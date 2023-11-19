@@ -1184,6 +1184,38 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Both the Open Philanthropy website and the donations list website list the grantee as AI Safety Support, but this is actually a combination of three grants, one each to "AI Safety Support, Effective Ventures Foundation USA, and the Berkeley Existential Risk Initiative"; the single donee is for simplicity and due to system limitations.');
 
+/* Grants to AI Safety Hub */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
+  ('Open Philanthropy','AI Safety Hub',235000,'2022-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-safety-hub-startup-costs/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Julia Karbing',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "Open Philanthropy recommended two grants totaling $235,000 to the AI Safety Hub to support their initial development costs, and to hire several contractors to work on projects related to AI safety. The AI Safety Hub, directed by Century Fellow Julia Karbing, is a new organization that will work on movement building in the AI safety field."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/ai-safety-hub-safety-labs/ suggests satisfaction with the outcome of this grant.',
+  /* notes */ 'This is a total across two grants.',
+  /* amount_original_currency */ NULL,
+  /* original_currency */ NULL,
+  /* currency_conversion_basis */ NULL),
+
+  ('Open Philanthropy','AI Safety Hub',63839,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-safety-hub-safety-labs/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support [grantee''s] Safety Labs program, which will match students with mentors while the students research questions related to AI safety."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* amount_original_currency */ 53700,
+  /* original_currency */ 'GBP',
+  /* currency_conversion_basis */ 'donor calculation');
+
 /* Grants to Longview Philanthropy */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
   ('Open Philanthropy','Longview Philanthropy',770076,'2023-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/longview-philanthropy-ai-policy-development-at-the-oecd/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
@@ -1543,6 +1575,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ 'No explicit reasons for the amount are given, but the amount is similar to the amounts for other grants from Open Philanthropy to early-stage researchers in adversarial robustness research. This includes the two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-santurkar made around the same time, as well as grants earlier in the year to researchers at Carnegie Mellon University, University of Tübingen, and UC Berkeley.',
   /* donor_timing_reason */ 'At around the same time as this grant, Open Philanthropy made two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-santurkar to early-stage researchers in adversarial robustness research.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Northeastern University',562128,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/northeastern-university-large-language-model-interpretability-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','David Bau',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This is a followup grant to the grant to David Bau made as part of a collection of grants https://www.openphilanthropy.org/grants/funding-for-ai-alignment-projects-working-with-deep-learning-systems/ providing funding for projects working with deep learning system. That previous grant had been made through grant applications sought at https://www.openphilanthropy.org/request-for-proposals-for-projects-in-ai-alignment-that-work-with-deep-learning-systems/ (a request for proposals).',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support Professor David Bau’s research on interpreting large language models." The webpage https://baulab.info/ is linked.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
