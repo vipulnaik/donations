@@ -1717,7 +1717,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Adam Jermyn',19231,'2023-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/adam-jermyn-independent-ai-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Adam Jermyn',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Adam Jermyn',19231,'2023-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/adam-jermyn-independent-ai-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to Adam Jermyn to support his independent technical research on AI alignment."',
