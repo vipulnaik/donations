@@ -305,6 +305,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'This is the first year that Open Phil makes a grant for AI safety research to the University of California, Berkeley (excluding the founding grant for the Center for Human-Compatible AI). It would begin an annual tradition of multi-year grants to the University of California, Berkeley announced in October/November, though the researchers would be different each year. Note that the grant is to UC Berkeley, but at least one of the researchers (Anca Dragan) is affiliated with the Center for Human-Compatible AI.'),
+
   ('Open Philanthropy','University of California, Berkeley',1145000,'2018-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-california-berkeley-artificial-intelligence-safety-research-2018','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Pieter Abeel|Aviv Tamar','Daniel Dewey','2018-12-11','day',NULL,NULL, /* date adjusted */
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
