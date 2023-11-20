@@ -369,7 +369,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-security-and-emerging-technology-general-support-august-2021 for a much larger amount suggests continued satisfaction with the grantee.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','Center for Security and Emerging Technology',38920000,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-security-and-emerging-technology-general-support-august-2021','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Center for Security and Emerging Technology',38920000,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-security-and-emerging-technology-general-support-august-2021/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'The grant page says: "CSET is a think tank, incubated by our January 2019 support, dedicated to policy analysis at the intersection of national and international security and emerging technologies. This funding is intended to augment our original support for CSET, particularly for its work on security and artificial intelligence."',
@@ -700,7 +700,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Open Phil made another grant http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-santurkar at the same time, for the same amount and 3-year timeframe, with the same grant investigator, and with the same receiving university.'),
 
-  ('Open Philanthropy','Stanford University',330792,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-santurkar','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Shibani Santurkar','Catherine Olsson',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Stanford University',330792,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/stanford-university-adversarial-robustness-research-shibani-santurkar/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Shibani Santurkar','Catherine Olsson',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support early-career research by Shibani Santurkar on adversarial robustness as a means to improve AI safety."',
@@ -1280,7 +1280,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to University of Tübingen */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','University of Tübingen',590000,'2021-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-tubingen-robustness-research-brendel','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Wieland Brendel','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Tübingen',590000,'2021-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-tubingen-robustness-research-wieland-brendel/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Wieland Brendel','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page says the grant is "to support early-career research by Wieland Brendel on robustness as a means to improve AI safety."',
@@ -1292,7 +1292,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','University of Tübingen',300000,'2021-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-tuebingen-adversarial-robustness-hein','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Matthias Hein','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Tübingen',300000,'2021-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-tubingen-adversarial-robustness-research-matthias-hein/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Matthias Hein','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research by Professor Matthias Hein on adversarial robustness as a means to improve AI safety."',
@@ -1344,7 +1344,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to University of California, Santa Cruz */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','University of California, Santa Cruz',265000,'2021-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-santa-cruz-xie-adversarial-robustness','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Cihang Xie','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of California, Santa Cruz',265000,'2021-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/uc-santa-cruz-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Cihang Xie','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page says the grant is "to support early-career research by Cihang Xie on adversarial robustness as a means to improve AI safety."',
@@ -1562,7 +1562,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Grant made via Cambridge in America.'),
 
-  ('Open Philanthropy','Carnegie Mellon University',330000,'2021-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/carnegie-mellon-adversarial-robustness-kolter','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Zico Kolter','Catherine Olsson',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Carnegie Mellon University',330000,'2021-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/carnegie-mellon-university-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Zico Kolter','Catherine Olsson',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support Professor Zico Kolter on adversarial robustness as a means to improve AI safety."',
@@ -1586,7 +1586,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','University of Southern California',320000,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-southern-california-adversarial-robustness-research','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Robin Jia','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Southern California',320000,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-southern-california-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Robin Jia','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support early-career research by Robin Jia on adversarial robustness and out-of-distribution generalization as a means to improve AI safety."',
