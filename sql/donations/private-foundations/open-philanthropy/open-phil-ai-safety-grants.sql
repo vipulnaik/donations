@@ -1442,7 +1442,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/daniel-dewey-ai-alignment-projects-2022/ suggests continued satisfaction with the grant outcome.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','Daniel Dewey',175000,'2022-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/daniel-dewey-ai-alignment-projects-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Daniel Dewey',175000,'2022-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/daniel-dewey-ai-alignment-projects-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support [Dewey''s] work on AI alignment. Daniel will continue work on a website explaining how artificial intelligence poses a global risk, and continue work on proposals for experiments related to AI safety." The webpage https://www.danieldewey.net/risk/index.html is linked.',
