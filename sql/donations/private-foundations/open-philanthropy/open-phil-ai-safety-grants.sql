@@ -1512,7 +1512,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Phlanthropy','Carnegie Mellon University',343235,'2022-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/carnegie-mellon-university-research-on-adversarial-examples/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Aditi Raghunathan',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Carnegie Mellon University',343235,'2022-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/carnegie-mellon-university-research-on-adversarial-examples/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Aditi Raghunathan',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support research led by Professor Aditi Raghunathan on adversarial examples (inputs optimized to cause machine learning models to make mistakes)." The webpages https://www.cs.cmu.edu/~aditirag/ and https://en.wikipedia.org/wiki/Adversarial_machine_learning#Adversarial_examples are linked.',
