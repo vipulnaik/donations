@@ -172,7 +172,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Open Philanthropy','Berkeley Existential Risk Initiative',140050,'2022-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-david-krueger-collaboration/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','David Krueger',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_fudns */ 'Grant "to the Berkeley Existential Risk Initiative to support its collaboration with Professor David Krueger."',
+  /* intended_use_of_funds */ 'Grant "to the Berkeley Existential Risk Initiative to support its collaboration with Professor David Krueger."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
@@ -351,7 +351,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'This is one of five grants made by the donor for "adversarial robustness research" in January and February 2021, all with the same grant investigators (Catherine Olsson and Daniel Dewey) except the Santa Cruz grant that had Olsson and Nick Beckstead. https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-santa-cruz-xie-adversarial-robustness https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/mit-adversarial-robustness-research https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-tuebingen-adversarial-robustness-hein and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/uc-berkeley-adversarial-robustness-song are the four other grants. It looks like the donor became interested in funding this research topic at this time.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL),
+
+  ('Open Philanthropy','University of California, Berkeley',87829,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/uc-berkeley-adversarial-robustness-research-aditi-raghunathan/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Aditi Raghunathan',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support postdoctoral research by Aditi Raghunathan on adversarial robustness as a means to improve AI safety."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The grant page says: "The grant amount was updated in July 2023."');
 
 /* Grants to Center for Security and Emerging Technology (CSET); note that the founding grant
    is in open-phil-other-gcr-and-security-grants.sql */
@@ -767,6 +779,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Open Phil made another grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras at the same time, for the same amount and 3-year timeframe, with the same grant investigator, and with the same receiving university.'),
+
+  ('Open Philanthropy','Stanford University',78000,'2021-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/stanford-university-ai-index/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support the AI Index, which collects and reports data related to artificial intelligence, including data relevant to AI safety and AI ethics." The webpage https://aiindex.stanford.edu/ is linked.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
 
   ('Open Philanthropy','Stanford University',1500000,'2021-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/stanford-university-ai-alignment-research-2021/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Percy Liang',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
@@ -1706,6 +1730,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
+  ('Open Philanthropy','University of Washington',730000,'2021-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-washington-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Ludwig Schmidt',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support early-career research by Ludwig Schmidt on adversarial robustness as a means to improve AI safety."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
   ('Open Philanthropy','National Academies of Sciences, Engineering, and Medicine',309441,'2022-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/national-academies-of-sciences-engineering-and-medicine-safety-critical-machine-learning/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -2092,6 +2128,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Other grants (new format) in other currencies */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
+  ('Open Philanthropy','Université de Montréal',210552,'2021-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/universite-de-montreal-research-project-on-artificial-intelligence/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Mila|Future of Humanity Institute',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support a research project investigating AI consciousness and moral patienthood. The research will be conducted in collaboration with Mila and the Future of Humanity Institute. This funding will support post-docs and students studying the topic, as well as publications and workshops."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* amount_original_currency */ 266200,
+  /* original_currency */ 'EUR',
+  /* currency_conversion_basis */ 'donor calculation'),
+
   ('Open Philanthropy','Stiftung Neue Verantwortung',444000,'2022-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/stiftung-neue-verantwortung-ai-policy-analysis/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
