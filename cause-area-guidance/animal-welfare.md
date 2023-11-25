@@ -79,7 +79,7 @@ not ubiquitous for broiler chicken.
 Slug so far: `Animal welfare/factory farming/fish`
 
 Like chicken and perhaps even more so than chicken, fish are a target
-of animal welfare efforts because of the large numberr of fish per
+of animal welfare efforts because of the large numbers of fish per
 unit mass of food produced.
 
 ## Subcauses within factory farming based on the type of change on the ground
