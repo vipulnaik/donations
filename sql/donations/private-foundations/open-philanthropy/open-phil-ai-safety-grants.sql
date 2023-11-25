@@ -576,7 +576,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 /* Grants to Center for a New American Security */
 
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Center for a New American Security',24350,'2020-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-a-new-american-security-ai-governance-projects','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Paul Scharre','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Center for a New American Security',24350,'2020-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-a-new-american-security-ai-governance-projects/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Paul Scharre','Luke Muehlhauser',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support work exploring possible projects related to AI governance."',
@@ -588,7 +588,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Center for a New American Security',116744,'2020-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-a-new-american-security-ai-and-security-projects','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Paul Scharre','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Center for a New American Security',116744,'2020-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-a-new-american-security-ai-and-security-projects/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Paul Scharre','Luke Muehlhauser',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support work by Paul Scharre on projects related to AI and security."',
@@ -596,6 +596,30 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_donee_reason */ 'No explicit reason is provided for the donation, but another donation https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-a-new-american-security-ai-governance-projects is made at around the same time, to the same donee and with the same earmark (Paul Scharre) suggesting a broader endorsement.',
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'No explicit reason is provided for the timing of the donation, but another donation https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-a-new-american-security-ai-governance-projects is made at around the same time, to the same donee and with the same earmark (Paul Scharre).',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Center for a New American Security',101187,'2021-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-a-new-american-security-risks-from-militarized-ai/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support a working group that will focus on mitigating risks from possible military applications of artificial intelligence. This group will be composed of technical and policy experts from the US, Russia, China, and Europe, and will investigate possible confidence-building measures (actions designed to prevent miscalculation and conflict between states) for militarized AI."',
+  /* intended_funding_timeframe_in_months */ 18,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Center for a New American Security',4816710,'2022-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-a-new-american-security-work-on-ai-governance/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support work related to artificial intelligence policy and governance."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
@@ -710,7 +734,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'At around the same time as this grant, Open Philanthropy made two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-southern-california-adversarial-robustness-research to early-stage researchers in adversarial robustness research.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Open Phil made another grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras at the same time, for the same amount and 3-year timeframe, with the same grant investigator, and with the same receiving university.');
+  /* notes */ 'Open Phil made another grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras at the same time, for the same amount and 3-year timeframe, with the same grant investigator, and with the same receiving university.'),
+
+  ('Open Philanthropy','Stanford University',153820,'2022-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/stanford-university-ai-alignment-research-barrett-and-viteri/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Clark Barrett|Scott Viteri',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research on AI alignment by Professor Clark Barrett and Stanford student Scott Viteri."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Grants to Redwood Research */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
@@ -1454,6 +1490,32 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to Carnegie Mellon University */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Carnegie Mellon University',330000,'2021-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/carnegie-mellon-university-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Zico Kolter','Catherine Olsson',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support Professor Zico Kolter on adversarial robustness as a means to improve AI safety."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ 'No explicit reasons for the amount are given, but the amount is similar to the amounts for other grants from Open Philanthropy to early-stage researchers in adversarial robustness research. This includes grants earlier and later in the year to early-stage researchers at UC Berkeley, University of Tübingen, Stanfard University, and University of Southern California.',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Phlanthropy','Carnegie Mellon University',343235,'2022-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/carnegie-mellon-university-research-on-adversarial-examples/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Aditi Raghunathan',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support research led by Professor Aditi Raghunathan on adversarial examples (inputs optimized to cause machine learning models to make mistakes)." The webpages https://www.cs.cmu.edu/~aditirag/ and https://en.wikipedia.org/wiki/Adversarial_machine_learning#Adversarial_examples are linked.',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Aditi Raghunathan, whose work the grant funds, previously received money from Open Philanthropy as part of the Open Phil AI Fellowship https://www.openphilanthropy.org/grants/open-phil-ai-fellowship-2018-class/ and https://www.openphilanthropy.org/grants/uc-berkeley-adversarial-robustness-research-aditi-raghunathan/ while at UC Berkeley.');
+
 /* Other grants (new format) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Press Shop',17000,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/press-shop-human-compatible','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Stuart Russell','Daniel Dewey',NULL,NULL,NULL,NULL,
@@ -1587,18 +1649,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Grant made via Cambridge in America.'),
-
-  ('Open Philanthropy','Carnegie Mellon University',330000,'2021-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/carnegie-mellon-university-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Zico Kolter','Catherine Olsson',NULL,NULL,NULL,NULL,
-  /* donation_process */ NULL,
-  /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant "to support Professor Zico Kolter on adversarial robustness as a means to improve AI safety."',
-  /* intended_funding_timeframe_in_months */ 36,
-  /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ 'No explicit reasons for the amount are given, but the amount is similar to the amounts for other grants from Open Philanthropy to early-stage researchers in adversarial robustness research. This includes grants earlier and later in the year to early-stage researchers at UC Berkeley, University of Tübingen, Stanfard University, and University of Southern California.',
-  /* donor_timing_reason */ NULL,
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL),
 
   ('Open Philanthropy','University of Southern California',320000,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-southern-california-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Robin Jia','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
