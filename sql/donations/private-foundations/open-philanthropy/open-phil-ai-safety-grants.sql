@@ -362,7 +362,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/carnegie-mellon-university-research-on-adversarial-examples/ for the continuation of the grantee''s work at Carnegie Mellon University suggests satisfaction with the grant outcome.',
   /* notes */ 'The grant page says: "The grant amount was updated in July 2023."');
 
 /* Grants to Center for Security and Emerging Technology (CSET); note that the founding grant
