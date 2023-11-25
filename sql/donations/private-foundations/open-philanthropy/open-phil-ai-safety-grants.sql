@@ -1428,6 +1428,32 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ 'GBP',
   /* currency_conversion_basis */ 'donor calculation');
 
+/* Grants to Daniel Dewey */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Daniel Dewey',175000,'2021-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/daniel-dewey-ai-alignment-project','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to support "work on an AI alignment project and related field-building efforts. Daniel plans to use this funding to produce writing and reports summarizing existing research and investigating potentially valuable projects relevant to AI alignment, with the goal of helping junior researchers and others understand how they can contribute to the field."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/daniel-dewey-ai-alignment-projects-2022/ suggests continued satisfaction with the grant outcome.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Daniel Dewey',175000,'2022-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/daniel-dewey-ai-alignment-projects-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support [Dewey''s] work on AI alignment. Daniel will continue work on a website explaining how artificial intelligence poses a global risk, and continue work on proposals for experiments related to AI safety." The webpage https://www.danieldewey.net/risk/index.html is linked.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Other grants (new format) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Press Shop',17000,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/press-shop-human-compatible','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Stuart Russell','Daniel Dewey',NULL,NULL,NULL,NULL,
@@ -1574,18 +1600,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Daniel Dewey',175000,'2021-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/daniel-dewey-ai-alignment-project','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
-  /* donation_process */ NULL,
-  /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant to support "work on an AI alignment project and related field-building efforts. Daniel plans to use this funding to produce writing and reports summarizing existing research and investigating potentially valuable projects relevant to AI alignment, with the goal of helping junior researchers and others understand how they can contribute to the field."',
-  /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL),
-
   ('Open Philanthropy','University of Southern California',320000,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-southern-california-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Robin Jia','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -1594,6 +1608,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ 'No explicit reasons for the amount are given, but the amount is similar to the amounts for other grants from Open Philanthropy to early-stage researchers in adversarial robustness research. This includes the two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-santurkar made around the same time, as well as grants earlier in the year to researchers at Carnegie Mellon University, University of Tübingen, and UC Berkeley.',
   /* donor_timing_reason */ 'At around the same time as this grant, Open Philanthropy made two other grants https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras and https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-santurkar to early-stage researchers in adversarial robustness research.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Centre for Effective Altruism',250000,'2022-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/centre-for-effective-altruism-harvard-ai-safety-office/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to rent and refurbish a temporary office space for one year for the Harvard AI Safety Team." The webpage https://haist.ai/ is linked.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
@@ -1884,7 +1910,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ NULL);
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Modulo Research',408255,'2023-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/modulo-research-ai-safety-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Gabriel Recchia',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support research — led by Gabriel Recchia — into large language model sandwiching experiments, dataset development, and capability evaluations." The webpage https://uk.linkedin.com/in/gabriel-recchia-38575b10 and the LessWrong blog post section https://www.lesswrong.com/posts/PZtsoaoSLpKjjbMqM/the-case-for-aligning-narrowly-superhuman-models#Potential_near_future_projects___sandwiching_ are linked.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The grant https://www.openphilanthropy.org/grants/surge-ai-data-production-for-ai-safety-research/ to Surge AI made around the same time also supports work by the same person (Gabriel Recchia) on a "research project on sandwiching experiments and capability evaluations of large language models."');
 
 /* Other grants (new format) in other currencies */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
@@ -1955,6 +1993,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ NULL,
+  /* is_contractwork */ 1),
+
+  ('Open Philanthropy','Surge AI',123750,'2023-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/surge-ai-data-production-for-ai-safety-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Gabriel Recchia',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support Gabriel Recchia in producing data points for a research project on sandwiching experiments and capability evaluations of large language models." The webpage https://uk.linkedin.com/in/gabriel-recchia-38575b10 and the LessWrong post section https://www.lesswrong.com/posts/PZtsoaoSLpKjjbMqM/the-case-for-aligning-narrowly-superhuman-models#Potential_near_future_projects___sandwiching_ are linked.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'The grant https://www.openphilanthropy.org/grants/modulo-research-ai-safety-research/ to Modulo Research made around the same time also supports work by the same person (Gabriel Recchia) on a "research project on sandwiching experiments and capability evaluations of large language models."',
   /* is_contractwork */ 1);
 
 /* Other grants (old format) */
