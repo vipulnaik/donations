@@ -580,6 +580,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','The Wilson Center',2023322,'2022-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/wilson-center-ai-policy-training-program-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support [grantee''s] AI policy training program, which is aimed at staffers for members of Congress and other policymakers. The program’s ultimate goal is to increase policymakers’ access to technical AI expertise."',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
 /* Grants to Center for a New American Security */
@@ -693,7 +705,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ 'The amount is likely determined by the grant proposal details; it covers about 20% of Percy Liang''s time as well as about three graduate students.',
   /* donor_timing_reason */ 'The timing is likely determined by the timing of the grant proposal being ready.',
   /* donor_next_donation_thoughts */ 'The grant page says: "At the end of the grant period, we will decide whether to renew our support based on our technical advisors’ evaluation of Professor Liang’s work so far, his proposed next steps, and our assessment of how well his research program has served as a pipeline for students entering the field. We are optimistic about the chances of renewing our support. We think the most likely reason we might choose not to renew would be if Professor Liang decides that AI alignment research isn’t a good fit for him or for his students."',
-  /* donor_retrospective */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/stanford-university-ai-alignment-research-2021/ suggests satisfaction with the grant outcome.',
   /* notes */ NULL),
 
   ('Open Philanthropy','Stanford University',6771,'2018-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-nips-workshop-machine-learning','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey','2018-04-18','day',NULL,NULL, /* date adjusted */
@@ -755,6 +767,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Open Phil made another grant https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-tsipras at the same time, for the same amount and 3-year timeframe, with the same grant investigator, and with the same receiving university.'),
+
+  ('Open Philanthropy','Stanford University',1500000,'2021-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/stanford-university-ai-alignment-research-2021/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Percy Liang',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support research led by Professor Percy Liang on AI safety and alignment."',
+  /* intended_funding_timeframe_in_months */ 36,
+  /* donor_donee_reason */ 'The grant page says: "We hope this funding will accelerate progress on technical problems and help to build a pipeline for younger researchers to work on AI alignment."',
+  /* donor_amount_reason */ 'No explicit reason is given for the amount. It is somewhat but not a lot higher per year ($1,500,000 over 3 years = $500,000) than the previous grant https://www.openphilanthropy.org/grants/stanford-university-support-for-percy-liang/ ($1,337,600 over 4 years = $334,400 per year).',
+  /* donor_timing_reason */ 'No explicit reason is given for the timing. The grant is made right around the end of the timeframe of the previous grant https://www.openphilanthropy.org/grants/stanford-university-support-for-percy-liang/ (four-year grant made in 2017) also for Percy Liang''s research.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
 
   ('Open Philanthropy','Stanford University',153820,'2022-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/stanford-university-ai-alignment-research-barrett-and-viteri/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Clark Barrett|Scott Viteri',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
@@ -1682,6 +1706,30 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
+  ('Open Philanthropy','National Academies of Sciences, Engineering, and Medicine',309441,'2022-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/national-academies-of-sciences-engineering-and-medicine-safety-critical-machine-learning/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support research on machine learning in safety-critical environments."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Michael Page',52500,'2022-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/michael-page-career-transition-grant/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to work on several short-term projects while [Michael Page] explores different career options."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page says: "Page recently finished his tenure as a Research Fellow at the Center for Security and Emerging Technology, and we believe that his expertise on forecasting and AI policy makes him an exceptionally strong candidate for an impactful career."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
   ('Open Philanthropy','Hofvarpnir Studios',1443540,'2022-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/hofvarpnir-studios-compute-cluster-for-ai-safety-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jacob Steinhardt|Center for Human-Compatible Artificial Intelligence',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -2044,6 +2092,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Other grants (new format) in other currencies */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
+  ('Open Philanthropy','Stiftung Neue Verantwortung',444000,'2022-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/stiftung-neue-verantwortung-ai-policy-analysis/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support data-driven reports on AI-related talent flows and the global microchip supply chain."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* amount_original_currency */ 390528,
+  /* original_currency */ 'EUR',
+  /* currenncy_conversion_basis */ 'donor calculation'),
+
   ('Open Philanthropy','Egor Krasheninnikov',6526,'2022-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/egor-krasheninnikov-research-collaboration-with-david-krueger/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','David Krueger',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
