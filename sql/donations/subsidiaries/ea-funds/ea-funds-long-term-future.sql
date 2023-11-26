@@ -54,6 +54,56 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants related to SERI-MATS program */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Effective Altruism Funds: Long-Term Future Fund','SERI-MATS program',316000,'2022-10-01','quarter','donation log','AI safety/technical research/talent pipeline','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future','Caleb Parikh|Asya Bergal',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The general process is for the grantee to submit an application at https://av20jp3z.paperform.co/?fund=Long-Term%20Future%20Fund and get a response within 3 weeks (for most applications) or 2 months (for all applications). https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#SERI_MATS_program___316_000___8_weeks_scholars_program_to_pair_promising_alignment_researchers_with_renowned_mentors___Originally_evaluated_by_Asya_Bergal_ says that the grant evaluator is Caleb Parikh, but was originally Asya Bergal.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grants database gives the following purpose of the grant: "8 weeks scholars program to pair promising alignment researchers with renowned mentors". https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#SERI_MATS_program___316_000___8_weeks_scholars_program_to_pair_promising_alignment_researchers_with_renowned_mentors___Originally_evaluated_by_Asya_Bergal_ says: "SERI MATS is a program that helps established AI safety researchers find mentees. The program has grown substantially since we first provided funding, and now supports 15 mentors, but at the time, the mentors were Alex Gray, Beth Barnes, Evan Hubinger, John Wentworth, Leo Gao, Mark Xu, and Stuart Armstrong. Mentors took part in the program in Berkeley in a shared office space."',
+  /* intended_funding_timeframe_in_months */ 2, /* translating 8 weeks into months gives ~2 months */
+  /* donor_donee_reason */ 'At https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#SERI_MATS_program___316_000___8_weeks_scholars_program_to_pair_promising_alignment_researchers_with_renowned_mentors___Originally_evaluated_by_Asya_Bergal_ the grant evaluator Caleb Parikh writes: "When SERI MATS was founded, there were very few opportunities for junior researchers to try out doing alignment research. Many opportunities were informal mentorship positions, sometimes set up through cold emails or after connecting at conferences. The program has generally received many more qualified applicants than they have places for, and the vast majority of fellows report a positive experience of the program. I also believe the program has substantially increased the number of alignment research mentorship positions available. I think that SERI MATS is performing a vital role in building the talent pipeline for alignment research. I am a bit confused about why more organisations don’t offer larger internship programs so that the mentors can run their programs ‘in-house’. My best guess is that MATS is much better than most organisations running small internship programs for the first time, particularly in supporting their fellows holistically (often providing accommodation and putting significant effort into the MATS fellows community). One downside of the program relative to an internship at an organisation is that there are fewer natural routes to enter a managed position, though many fellows have gone on to receive LTFF grants for independent projects or continued their mentorship under the same mentor."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The Long-Term Future Fund would make several grants to SERI-MATS scholars, including some grants for the scholars continuing to work on the projects after having finished the SERI-MATS program. This suggests satisfaction with the grant outcome.',
+  /* notes */ 'Another grant of $27,000 is made by the Long-Term Future Fund to SERI-MATs program, with "Scaleing up the number of people working in alignment theory" as the stated purpose.'),
+
+  ('Effective Altruism Funds: Long-Term Future Fund','SERI-MATS program',27000,'2022-10-01','quarter','donation log','AI safety/technical research/talent pipeline','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The process for this particular grant is not available, but the general process is for the grantee to submit an application at https://av20jp3z.paperform.co/?fund=Long-Term%20Future%20Fund and get a response within 3 weeks (for most applications) or 2 months (for all applications).',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grants database gives the following purpose of the grant: "Scaleing up the number of people working in alignment theory"',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'No explicit reason is given for this grant, but the reasoning is likely similar to that provided at https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#SERI_MATS_program___316_000___8_weeks_scholars_program_to_pair_promising_alignment_researchers_with_renowned_mentors___Originally_evaluated_by_Asya_Bergal_ for another grant of $316,000 made to the same grantee at around the same time.',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'See https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#SERI_MATS_program___316_000___8_weeks_scholars_program_to_pair_promising_alignment_researchers_with_renowned_mentors___Originally_evaluated_by_Asya_Bergal_ for another grant from the Long-Term Future Find to SERI-MATS program for a much larger amount ($316,000) at around the same time.'),
+
+  ('Effective Altruism Funds: Long-Term Future Fund','Jeremy Gillen',40000,'2022-10-01','month','donation log','AI safety/technical research','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future','SERI-MATS program',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The process for this particular grant is not available, but the general process is for the grantee to submit an application at https://av20jp3z.paperform.co/?fund=Long-Term%20Future%20Fund and get a response within 3 weeks (for most applications) or 2 months (for all applications).',
+  /* intended_use_of_funds_category */ 'Living expenses during research project',
+  /* intended_use_of_funds */ 'The grants database gives the following purpose of the grant: "6-month salary to work on the research I started during SERI MATS, solving alignment problems in model based RL"',
+  /* intended_funding_timeframe_in_months */ 6,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'This is one of several grants made by the Long-Term Future Fund to SERI-MATS scholars to work on their SERI-MATS research, including its continuation beyond the original program. The grants database only provides the quarter in which the grant was made; see https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#Other_grants_we_made_during_this_period for the precise month. See https://jezgillen.github.io/ for the grantee''s webpage.'),
+
+  ('Effective Altruism Funds: Long-Term Future Fund','David Udell',100000,'2022-10-01','month','donation log','AI safety/technical research','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future','SERI-MATS program',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The process for this particular grant is not available, but the general process is for the grantee to submit an application at https://av20jp3z.paperform.co/?fund=Long-Term%20Future%20Fund and get a response within 3 weeks (for most applications) or 2 months (for all applications).',
+  /* intended_use_of_funds_category */ 'Living expenses during research project',
+  /* intended_use_of_funds */ 'The grants database gives the following purpose of the grant: "One-year full-time salary to work on alignment distillation and conceptual research with Team Shard after SERI MATS"',
+  /* intended_funding_timeframe_in_months */ 12,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'This is one of several grants made by the Long-Term Future Fund to SERI-MATS scholars to work on their SERI-MATS research, including its continuation beyond the original program. The grants database only provides the quarter in which the grant was made; see https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#Other_grants_we_made_during_this_period for the precise month. See https://www.alignmentforum.org/users/david-udell for the grantee''s Alignment Forum profile and contributions.');
+
 /* Grants to Legal Priorities Project */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Effective Altruism Funds: Long-Term Future Fund','Legal Priorities Project',135000,'2021-04-01','day','donation log','AI safety/governance','https://funds.effectivealtruism.org/payouts/may-2021-long-term-future-fund-grants','https://funds.effectivealtruism.org/funds/far-future','Daniel Eth|Asya Bergal|Adam Gleave|Oliver Habryka|Evan Hubinger|Ozzie Gooen',1650795,0.0818,NULL,NULL,
