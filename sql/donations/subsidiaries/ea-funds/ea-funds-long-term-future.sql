@@ -1,5 +1,73 @@
 /* Global catastrophic risks/long-term future (grants made from the Long-Term Future Fund. Some of them may be in other cause areas though) */
 
+/* Grants to Alignment Research Center */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Effective Altruism Funds: Long-Term Future Fund','Alignment Research Center',72000,'2022-10-01','quarter','donation log','AI safety/technical research','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future','Asya Bergal',NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The process for this particular grant is not available, but the general process is for the grantee to submit an application at https://av20jp3z.paperform.co/?fund=Long-Term%20Future%20Fund and get a response within 3 weeks (for most applications) or 2 months (for all applications).',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grants database gives the following purpose of the grant: "A research & networking retreat for winners of the Eliciting Latent Knowledge contest" https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#Alignment_Research_Center__54_543__Support_for_a_research___networking_event_for_winners_of_the_Eliciting_Latent_Knowledge_contest (written by Asya Bergal) gives further detail: "This was funding a research & networking event for the winners of the Eliciting Latent Knowledge contest run in early 2022; the plan for the event was mainly for it to be participant-led, with participants sharing what they were working on and connecting with others, along with professional alignment researchers visiting to share their own work with participants." The LessWrong post https://www.lesswrong.com/posts/QEYWkRoCn4fZxXQAY/prizes-for-elk-proposals is linked for more detail on the Eliciting Latent Knowledge contest.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'The grant page section https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#Alignment_Research_Center__54_543__Support_for_a_research___networking_event_for_winners_of_the_Eliciting_Latent_Knowledge_contest written by Asya Bergal says: "I think the case for this grant is pretty straightforward: the winners of this contest are (presumably) selected for being unusually likely to be able to contribute to problems in AI alignment, and retreats, especially those involving interactions with professionals in the space, have a strong track record of getting people more involved with this work."',
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#Alignment_Research_Center__54_543__Support_for_a_research___networking_event_for_winners_of_the_Eliciting_Latent_Knowledge_contest gives a grant amount of $54,543, but the grants database gives an amount of $72,000.');
+
+/* Grants to AI Safety Support */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Effective Altruism Funds: Long-Term Future Fund','AI Safety Support',25000,'2021-07-01','quarter','donation log','AI safety','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future',NULL,NULL,NULL,NULL,'JJ Hepburn',
+  /* donation_process */ 'The process for this particular grant is not available, but the general process is for the grantee to submit an application at https://av20jp3z.paperform.co/?fund=Long-Term%20Future%20Fund and get a response within 3 weeks (for most applications) or 2 months (for all applications).',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grants database gives the following purpose of the grant: "6-month salary for JJ Hepburn to continue providing 1-on-1 support to early AI safety researchers and transition AI safety support"',
+  /* intended_funding_timeframe_in_months */ 6,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'A followup grant to AI Safety Support about six months later, at the end of the timeframe covered by this grant, suggests continued satisfaction with the grant outcome. AI Safety Support would be shut down about two years later; see https://forum.effectivealtruism.org/posts/Bjr6FXvnKqb37uMPP/shutting-down-ai-safety-support for details.',
+  /* notes */ NULL),
+
+  ('Effective Altruism Funds: Long-Term Future Fund','AI Safety Support',80000,'2022-01-01','quarter','donation log','AI safety/movement growth','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The process for this particular grant is not available, but the general process is for the grantee to submit an application at https://av20jp3z.paperform.co/?fund=Long-Term%20Future%20Fund and get a response within 3 weeks (for most applications) or 2 months (for all applications).',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grants database gives the following purpose of the grant: "Free health coaching to optimize the health and wellbeing, and thus capacity/productivity, of those working on AI safety"',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'AI Safety Support would be shut down about 1.5 years later; see https://forum.effectivealtruism.org/posts/Bjr6FXvnKqb37uMPP/shutting-down-ai-safety-support for details.',
+  /* notes */ NULL);
+
+/* Grants to AI Safety Hub */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Effective Altruism Funds: Long-Term Future Fund','AI Safety Hub',60000,'2022-07-01','quarter','donation log','AI safety/technical research','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The process for this particular grant is not available, but the general process is for the grantee to submit an application at https://av20jp3z.paperform.co/?fund=Long-Term%20Future%20Fund and get a response within 3 weeks (for most applications) or 2 months (for all applications).',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grants database gives the following purpose of the grant: "Organising paid internships for promising Oxford students to try out supervised AI Safety research projects this summer"',
+  /* intended_funding_timeframe_in_months */ 2, /* estimated length of summer internship */
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+/* Grants to Legal Priorities Project */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Effective Altruism Funds: Long-Term Future Fund','Legal Priorities Project',135000,'2021-04-01','day','donation log','AI safety/governance','https://funds.effectivealtruism.org/payouts/may-2021-long-term-future-fund-grants','https://funds.effectivealtruism.org/funds/far-future','Daniel Eth|Asya Bergal|Adam Gleave|Oliver Habryka|Evan Hubinger|Ozzie Gooen',1650795,0.0818,NULL,NULL,
+  /* donation_process */ 'Grant selected from a pool of applicants. https://funds.effectivealtruism.org/payouts/may-2021-long-term-future-fund-grants#legal-priorities-project--135000 says: "The Legal Priorities Project (LPP) applied for funding to hire Suzanne Van Arsdale and Renan Araújo to conduct academic legal research, and Alfredo Parra to perform operations work. All have previously been involved with the LPP, and Suzanne and Renan contributed to the LPP’s research agenda."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'https://funds.effectivealtruism.org/payouts/may-2021-long-term-future-fund-grants#legal-priorities-project--135000 says: "Hiring staff to carry out longtermist academic legal research and increase the operational capacity of the organization. The Legal Priorities Project (LPP) applied for funding to hire Suzanne Van Arsdale and Renan Araújo to conduct academic legal research, and Alfredo Parra to perform operations work. All have previously been involved with the LPP, and Suzanne and Renan contributed to the LPP’s research agenda."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ 'https://funds.effectivealtruism.org/payouts/may-2021-long-term-future-fund-grants#legal-priorities-project--135000 (written by Daniel Eth) says: "I’m excited about this grant for reasons related to LPP as an organization, the specific hires they would use the grant for, and the proposed work of the new hires." It goes into considerable further detail regarding the reasons.',
+  /* donor_amount_reason */ 'Amount likely determined based on the amount needed for the intended uses of the grant funds.',
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
 /* Grants to Berkeley Existential Risk Initiative (BERI) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Effective Altruism Funds: Long-Term Future Fund','Berkeley Existential Risk Initiative',14838.02,'2017-03-20','day','donation log','AI safety/other global catastrophic risks','https://funds.effectivealtruism.org/funds/payouts/march-2017-berkeley-existential-risk-initiative-beri','https://funds.effectivealtruism.org/funds/far-future','Nick Beckstead',14838.02,1.0,NULL,NULL,

@@ -56,6 +56,10 @@ reset_ftx_grants:
 reset_open_phil_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) -e "delete from donations where donor = 'Open Philanthropy';"
 
+.PHONY: reset_ea_funds_grants
+reset_ea_funds_grants:
+	mysql $(MYSQL_ARGS) $(DATABASE) -e "delete from donations where donor in ('Effective Altruism Funds: Animal Welfare Fund','Effective Altruism Funds: Long-Term Future Fund','Effective Altruism Funds: Effective Altruism Infrastructure Fund','Effective Altruism Funds: Global Health and Development Fund');"
+
 .PHONY: read_documents
 read_documents:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/documents/documents-schema.sql
@@ -170,6 +174,13 @@ read_open_phil_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-other-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-scientific-research-grants.sql
 
+.PHONY: read_ea_funds_grants
+read_ea_funds_grants:
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-animal-welfare.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-global-health-and-development.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-infrastructure.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-long-term-future.sql
+
 .PHONY: read_other_foundation_and_subsidiary_grants
 read_other_foundation_and_subsidiary_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/donees/one-for-the-world-donations.sql
@@ -220,10 +231,6 @@ read_other_foundation_and_subsidiary_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/william-e-simon-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/beri-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/eaf-fund.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-animal-welfare.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-global-health-and-development.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-infrastructure.sql
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-funds/ea-funds-long-term-future.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/ea-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/givewell-incubation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/givewell-maximum-impact-fund-grants.sql
@@ -234,7 +241,7 @@ read_other_foundation_and_subsidiary_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/subsidiaries/survival-and-flourishing-grants.sql
 
 .PHONY: read_foundation_and_subsidiary_grants
-read_foundation_and_subsidiary_grants: read_ftx_grants read_open_phil_grants read_other_foundation_and_subsidiary_grants
+read_foundation_and_subsidiary_grants: read_ftx_grants read_open_phil_grants read_ea_funds_grants read_other_foundation_and_subsidiary_grants
 
 .PHONY: read_other_donations
 read_other_donations:
