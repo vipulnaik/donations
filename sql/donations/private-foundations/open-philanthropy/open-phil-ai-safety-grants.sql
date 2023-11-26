@@ -771,7 +771,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Open Phil made another grant http://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/stanford-adversarial-robustness-research-santurkar at the same time, for the same amount and 3-year timeframe, with the same grant investigator, and with the same receiving university.'),
 
-  ('Open Philanthropy','Stanford University',330792,'2021-08-01','month','donation log','AI safety/techical research','https://www.openphilanthropy.org/grants/stanford-university-adversarial-robustness-research-shibani-santurkar/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Shibani Santurkar','Catherine Olsson',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Stanford University',330792,'2021-08-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/stanford-university-adversarial-robustness-research-shibani-santurkar/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Shibani Santurkar','Catherine Olsson',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support early-career research by Shibani Santurkar on adversarial robustness as a means to improve AI safety."',
@@ -1045,7 +1045,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Rethink Priorities */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork) values
-  ('Open Philanthropy','Rethink Priorities',495685,'2021-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Rethink Priorities',495685,'2021-07-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research projects on topics related to AI governance."',
@@ -1058,7 +1058,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL,
   /* is_contractwork */ 1),
 
-  ('Open Philanthropy','Rethink Priorities',2728319,'2022-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Rethink Priorities',2728319,'2022-03-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to Rethink Priorities to expand its research on topics related to AI governance."',
@@ -1071,7 +1071,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL,
   /* is_contractwork */ 0),
 
-  ('Open Philanthropy','Rethink Priorities',302390,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-workshop/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Rethink Priorities',302390,'2023-04-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-workshop/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support an in-person workshop bringing together professionals working on AI governance."',
@@ -1084,7 +1084,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL,
   /* is_contractwork */ 0),
 
-  ('Open Philanthropy','Rethink Priorities',154810,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Rethink Priorities',154810,'2023-04-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/rethink-priorities-ai-governance-research-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research on AI governance, with a focus on hardware security features."',
@@ -1099,7 +1099,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Mila */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
-  ('Open Philanthropy','Mila',2400000,'2017-07-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/montreal-institute-for-learning-algorithms-ai-safety-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Yoshua Bengio|Joelle Pineau|Doina Precup',NULL,'2017-07-19','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/qL9PbCP-U3w',NULL,
+  ('Open Philanthropy','Mila',2400000,'2017-07-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/montreal-institute-for-learning-algorithms-ai-safety-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Yoshua Bengio|Joelle Pineau|Doina Precup',NULL,'2017-07-19','day','https://groups.google.com/a/openphilanthropy.org/forum/#!topic/newly.published/qL9PbCP-U3w',NULL,
   /* donation_process */ 'The grant page says: "We spoke with Professor Bengio and several of his students during our recent outreach to machine learning researchers and formed a positive impression of him and his work. Our technical advisors spoke highly of Professor Bengio’s capabilities, reputation, and goals."',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support technical research on potential risks from advanced artificial intelligence (AI). $1.6 million of this grant will support Professor Yoshua Bengio and his co-investigators at the Université de Montréal, and $800,000 will support Professors Joelle Pineau and Doina Precup at McGill University. We see Professor Bengio’s research group as one of the world’s preeminent deep learning labs and are excited to provide support for it to undertake AI safety research."',
@@ -1114,7 +1114,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ NULL,
   /* currency_conversion_basis */ NULL),
 
-  ('Open Philanthropy','Mila',237931,'2021-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/mila-research-project-on-artificial-intelligence/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Mila',237931,'2021-11-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/mila-research-project-on-artificial-intelligence/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support a research project investigating AI consciousness and moral patienthood. The research will be conducted in collaboration with the Université de Montréal and the Future of Humanity Institute. This funding will support postdoctoral researchers and students studying the topic, as well as publications and workshops."',
@@ -1129,7 +1129,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ 'CAD',
   /* currency_conversion_basis */ 'donor calculation'),
 
-  ('Open Philanthropy','Mila',50000,'2023-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/mila-workshop-on-human-level-ai/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jacob Steinhardt',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Mila',50000,'2023-05-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/mila-workshop-on-human-level-ai/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jacob Steinhardt',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support a workshop on human-level artificial intelligence, led by Professor Jacob Steinhardt, that will bring together experts on AI and AI alignment."',
@@ -1146,7 +1146,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Center for AI safety */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Center for AI Safety',5160000,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-ai-safety-general-support/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Center for AI Safety',5160000,'2022-11-01','month','donation log','AI safety/technical research/movement growth','https://www.openphilanthropy.org/grants/center-for-ai-safety-general-support/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'Grant "for general support. The Center for AI Safety does technical research and field-building aimed at reducing catastrophic and existential risks from artificial intelligence."',
@@ -1158,7 +1158,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The followup general support grant https://www.openphilanthropy.org/grants/center-for-ai-safety-general-support-2023/ in 2023 for a similar amount suggests continued satisfaction with the grantee.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','Center for AI Safety',1433000,'2023-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-ai-safety-philosophy-fellowship/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Center for AI Safety',1433000,'2023-02-01','month','donation log','AI safety/technical research/strategy','https://www.openphilanthropy.org/grants/center-for-ai-safety-philosophy-fellowship/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support the CAIS Philosophy Fellowship, which is a research fellowship that will support philosophers researching topics related to AI safety. This grant also supported a workshop on adversarial robustness, as well as prizes for safety-related competitions at the 2022 NeurIPS conference." Links: https://philosophy.safe.ai/ for CAIS Philosophy Fellowship, https://eccv22-arow.github.io/ for the workshop, and https://trojandetection.ai/ and https://neurips2022.mlsafety.org/ for the prizes.',
@@ -1170,7 +1170,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Center for AI Safety',4025729,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-ai-safety-general-support-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Center for AI Safety',4025729,'2023-04-01','month','donation log','AI safety/technical research/movement growth','https://www.openphilanthropy.org/grants/center-for-ai-safety-general-support-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'Grant "for general support. The Center for AI Safety works on research, field-building, and advocacy to reduce existential risks from artificial intelligence."',
@@ -1184,7 +1184,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Epoch */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Epoch',1960000,'2022-06-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/epoch-general-support/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Epoch',1960000,'2022-06-01','month','donation log','AI safety/strategy','https://www.openphilanthropy.org/grants/epoch-general-support/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'Grant "for general support. Epoch is a research organization that works on investigating trends in machine learning and forecasting the development of transformative artificial intelligence."',
@@ -1196,7 +1196,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Epoch',188558,'2023-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/epoch-ai-worldview-investigations/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Epoch',188558,'2023-02-01','month','donation log','AI safety/strategy','https://www.openphilanthropy.org/grants/epoch-ai-worldview-investigations/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support [Epoch''s] “worldview investigations” related to AI." The linked blog post section https://www.openphilanthropy.org/research/our-progress-in-2019-and-plans-for-2020/#worldview-investigations describes this in more detail, starting with: "Identify debatable views we hold that play a key role in our cause prioritization, such as the view that there’s a nontrivial likelihood of transformative artificial intelligence being developed by 2036."',
@@ -1208,7 +1208,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Epoch',6922565,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/epoch-general-support-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Epoch',6922565,'2023-04-01','month','donation log','AI safety/strategy','https://www.openphilanthropy.org/grants/epoch-general-support-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'Grant "for general support. Epoch researches trends in machine learning to better understand the pace of progress in artificial intelligence, and to help forecast the development of advanced AI and its subsequent economic impacts."',
@@ -1222,7 +1222,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Conjecture */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Conjecture',457380,'2022-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/conjecture-seri-mats-program-in-london/','https://www.openphilanthropy.org/grants?focus-area=potential-risks-advanced-ai',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Conjecture',457380,'2022-10-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/conjecture-seri-mats-program-in-london/','https://www.openphilanthropy.org/grants?focus-area=potential-risks-advanced-ai',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support [Conjecture''s] collaboration with the Stanford Existential Risks Initiative (SERI) on SERI’s Machine Learning Alignment Theory Scholars (MATS) program. MATS is an educational seminar and independent research program that aims to provide talented scholars with talks, workshops, and research mentorship in the field of AI alignment. This grant will support a London-based extension for a MATS cohort that started in Berkeley. Conjecture will use this funding to provide office space in London and operations support."',
@@ -1234,7 +1234,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/conjecture-seri-mats-2023/ for a similar London-based extension of the third SERI-MATS cohort suggests continued satisfaction with the program being funded.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','Conjecture',245000,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/conjecture-seri-mats-2023/','https://www.openphilanthropy.org/grants?focus-area=potential-risks-advanced-ai',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Conjecture',245000,'2023-04-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/conjecture-seri-mats-2023/','https://www.openphilanthropy.org/grants?focus-area=potential-risks-advanced-ai',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support [Conjecture''s] collaboration with the Stanford Existential Risks Initiative (SERI) on SERI’s Machine Learning Alignment Theory Scholars (MATS) program. MATS is an educational seminar and independent research program that aims to provide talented scholars with talks, workshops, and research mentorship in the field of AI alignment. This grant will support a London-based extension of the MATS program’s third cohort, which we supported last year."',
@@ -1248,7 +1248,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to University of Utah */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','University of Utah',140000,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-utah-ai-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Daniel Brown',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Utah',140000,'2023-04-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/university-of-utah-ai-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Daniel Brown',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research led by Professor Daniel Brown on ways to verify the extent to which an AI system is aligned with human values."',
@@ -1260,7 +1260,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','University of Utah',31773,'2023-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-utah-course-on-human-ai-alignment/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Daniel Brown',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Utah',31773,'2023-08-01','month','donation log','AI safety/movement growth','https://www.openphilanthropy.org/grants/university-of-utah-course-on-human-ai-alignment/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Daniel Brown',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'The grant is part of Open Philanthropy Course Development Grants https://www.openphilanthropy.org/open-philanthropy-course-development-grants/ for which applications can be submitted online. The grant page https://www.openphilanthropy.org/grants/university-of-utah-course-on-human-ai-alignment/ says: "We sought applications for this funding to support the development of courses on a range of topics that are relevant to certain areas of Open Philanthropy’s grantmaking."',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support Daniel Brown in developing a course on human-AI alignment."',
@@ -1274,7 +1274,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to AI Safety Support */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','AI Safety Support',42000,'2022-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-safety-support-research-on-trends-in-machine-learning/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jaime Sevilla',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','AI Safety Support',42000,'2022-04-01','month','donation log','AI safety/strategy','https://www.openphilanthropy.org/grants/ai-safety-support-research-on-trends-in-machine-learning/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jaime Sevilla',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to scale up a research group, led by Jaime Sevilla, which studies trends in machine learning."',
@@ -1286,7 +1286,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'Further grant https://www.openphilanthropy.org/grants/ai-safety-support-seri-mats-program/ and https://www.openphilanthropy.org/grants/ai-safety-support-situational-awareness-research/ from Open Philanthropy, though with slightly different goals, suggest continued satisfaction with the grantee.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','AI Safety Support',1538000,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-safety-support-seri-mats-program/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','AI Safety Support',1538000,'2022-11-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/ai-safety-support-seri-mats-program/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support [AI Safety Support''s] collaboration with Stanford Existential Risks Initiative (SERI) on SERI’s Machine Learning Alignment Theory Scholars (MATS) program. MATS is an educational seminar and independent research program that aims to provide talented scholars with talks, workshops, and research mentorship in the field of AI alignment, and connect them with in-person alignment research communities."',
@@ -1298,7 +1298,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'See also the companion grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-machine-learning-alignment-theory-scholars/ to Berkeley Existential Risk Initiative and the grant https://www.openphilanthropy.org/grants/conjecture-seri-mats-2023/ to Conjecture for the London-based extension.'),
 
-  ('Open Philanthropy','AI Safety Support',443716,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-safety-support-situational-awareness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Owain Evans',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','AI Safety Support',443716,'2023-04-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/ai-safety-support-situational-awareness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Owain Evans',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Three grants "to support research led by Owain Evans to evaluate whether machine learning models have situational awareness. These grants were made to AI Safety Support, Effective Ventures Foundation USA, and the Berkeley Existential Risk Initiative, and will support salaries, office space, and compute for this research project."',
@@ -1312,7 +1312,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to AI Safety Hub */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
-  ('Open Philanthropy','AI Safety Hub',235000,'2022-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-safety-hub-startup-costs/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Julia Karbing',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','AI Safety Hub',235000,'2022-09-01','month','donation log','AI safety/movement growth','https://www.openphilanthropy.org/grants/ai-safety-hub-startup-costs/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Julia Karbing',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ 'The grant page says: "Open Philanthropy recommended two grants totaling $235,000 to the AI Safety Hub to support their initial development costs, and to hire several contractors to work on projects related to AI safety. The AI Safety Hub, directed by Century Fellow Julia Karbing, is a new organization that will work on movement building in the AI safety field."',
@@ -1327,7 +1327,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ NULL,
   /* currency_conversion_basis */ NULL),
 
-  ('Open Philanthropy','AI Safety Hub',63839,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-safety-hub-safety-labs/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','AI Safety Hub',63839,'2022-11-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/ai-safety-hub-safety-labs/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support [grantee''s] Safety Labs program, which will match students with mentors while the students research questions related to AI safety."',
@@ -1344,7 +1344,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Longview Philanthropy */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
-  ('Open Philanthropy','Longview Philanthropy',770076,'2023-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/longview-philanthropy-ai-policy-development-at-the-oecd/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Longview Philanthropy',770076,'2023-02-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/longview-philanthropy-ai-policy-development-at-the-oecd/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to Longview Philanthropy to support their collaboration with the Organization for Economic Co-operation and Development (OECD) on a project to develop potential policies that could reduce existential risks from artificial intelligence."',
@@ -1361,7 +1361,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to RAND Corporation */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','RAND Corporation',30751,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rand-corporation-research-on-the-state-of-ai-assurance-methods','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Andrew Lohn','Luke Muehlhauser','2020-03-19','day',NULL,NULL,
+  ('Open Philanthropy','RAND Corporation',30751,'2020-01-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/rand-corporation-research-on-the-state-of-ai-assurance-methods','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Andrew Lohn','Luke Muehlhauser','2020-03-19','day',NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support exploratory research by Andrew Lohn on the state of AI assurance methods."',
@@ -1373,7 +1373,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'A few months later, Open Phil would make a grant directly to Andrew Lohn for machine learning robustness research, suggesting that they were satisfied with the outcome from this grant.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','RAND Corporation',5500000,'2023-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/rand-corporation-emerging-technology-fellowships-and-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jason Matheny','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','RAND Corporation',5500000,'2023-04-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/rand-corporation-emerging-technology-fellowships-and-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jason Matheny','Luke Muehlhauser',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to be spent at RAND President Jason Matheny’s discretion. Matheny has designated this funding to launch two new initiatives: a technology policy training program, and a research fund to help produce information that policymakers need to make wise decisions about emerging technology and security priorities."',
@@ -1387,7 +1387,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to University of Tübingen */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','University of Tübingen',590000,'2021-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-tubingen-robustness-research-wieland-brendel/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Wieland Brendel','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Tübingen',590000,'2021-02-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/university-of-tubingen-robustness-research-wieland-brendel/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Wieland Brendel','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page says the grant is "to support early-career research by Wieland Brendel on robustness as a means to improve AI safety."',
@@ -1399,7 +1399,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','University of Tübingen',300000,'2021-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-tubingen-adversarial-robustness-research-matthias-hein/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Matthias Hein','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Tübingen',300000,'2021-02-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/university-of-tubingen-adversarial-robustness-research-matthias-hein/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Matthias Hein','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research by Professor Matthias Hein on adversarial robustness as a means to improve AI safety."',
@@ -1411,7 +1411,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','University of Tübingen',575000,'2023-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-tuebingen-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Matthias Bethge',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Tübingen',575000,'2023-02-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/university-of-tuebingen-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Matthias Bethge',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research led by Professor Matthias Bethge on adversarial robustness as a means to improve AI safety."',
@@ -1425,7 +1425,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to University of Toronto */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','University of Toronto',520000,'2020-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-toronto-machine-learning-research','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Chris Maddison','Daniel Dewey|Catherine Olsson',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Toronto',520000,'2020-12-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-toronto-machine-learning-research','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Chris Maddison','Daniel Dewey|Catherine Olsson',NULL,NULL,NULL,NULL,
   /* donation_process */ 'The researcher (Chris Maddison) whose students'' work is to be funded with this grant had previously been an Open Phil AI Fellow while pursuing his DPhil in 2018. The past connection and subsequent academic progress of the researcher (now an assistant professor) may have been factors, but the grant page has no details on the decision process.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page says: "[the grant is] to support research on understanding, predicting, and controlling machine learning systems, led by Professor Chris Maddison, a former Open Phil AI Fellow. This funding is intended to enable three students and a postdoctoral researcher to work with Professor Maddison on the research."',
@@ -1437,7 +1437,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','University of Toronto',80000,'2023-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-toronto-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Toryn Klassen',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Toronto',80000,'2023-01-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/university-of-toronto-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Toryn Klassen',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support Toryn Klassen’s research on topics related to AI alignment."',
@@ -1451,7 +1451,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to University of California, Santa Cruz */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','University of California, Santa Cruz',265000,'2021-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/uc-santa-cruz-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Cihang Xie','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of California, Santa Cruz',265000,'2021-01-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/uc-santa-cruz-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Cihang Xie','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page says the grant is "to support early-career research by Cihang Xie on adversarial robustness as a means to improve AI safety."',
@@ -1463,7 +1463,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/university-of-california-santa-cruz-adversarial-robustness-research-2023/ to support the same research leader and research agenda suggests satisfaction with the grant outcome.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','University of California, Santa Cruz',114000,'2023-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-california-santa-cruz-adversarial-robustness-research-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Cihang Xie',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of California, Santa Cruz',114000,'2023-01-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/university-of-california-santa-cruz-adversarial-robustness-research-2023/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Cihang Xie',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research, led by Professor Cihang Xie, on adversarial robustness in AI systems. This funding will support salaries and other costs for two graduate students in Professor Xie’s lab." The webpage https://cihangxie.github.io/ is linked.',
@@ -1503,7 +1503,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Grants to Brian Christian */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, is_contractwork, amount_original_currency, original_currency, currency_conversion_basis) values
-  ('Open Philanthropy','Brian Christian',66000,'2021-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/brian-christian-alignment-book-promotion','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Brian Christian',66000,'2021-03-01','month','donation log','AI safety/movement growth','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/brian-christian-alignment-book-promotion','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Contractor agreement "with Brian Christian to support the promotion of his book The Alignment Problem: Machine Learning and Human Values."',
@@ -1519,7 +1519,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* original_currency */ NULL,
   /* currency_conversion_basis */ NULL),
 
-  ('Open Philanthropy','Brian Christian',37903,'2023-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/brian-christian-psychology-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Brian Christian',37903,'2023-02-01','month','donation log','AI safety/strategy','https://www.openphilanthropy.org/grants/brian-christian-psychology-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support a DPhil in psychology at the University of Oxford. His research will focus on human preferences, with the goal of informing efforts to align AI systems with human values."',
@@ -1549,7 +1549,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/daniel-dewey-ai-alignment-projects-2022/ suggests continued satisfaction with the grant outcome.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','Daniel Dewey',175000,'2022-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/daniel-dewey-ai-alignment-projects-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Daniel Dewey',175000,'2022-08-01','month','donation log','AI safety/strategy','https://www.openphilanthropy.org/grants/daniel-dewey-ai-alignment-projects-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support [Dewey''s] work on AI alignment. Daniel will continue work on a website explaining how artificial intelligence poses a global risk, and continue work on proposals for experiments related to AI safety." The webpage https://www.danieldewey.net/risk/index.html is linked.',
@@ -1589,7 +1589,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
 /* Other grants (new format) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Open Philanthropy','Press Shop',17000,'2020-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/press-shop-human-compatible','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Stuart Russell','Daniel Dewey',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Press Shop',17000,'2020-01-01','month','donation log','AI safety/movement growth','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/press-shop-human-compatible','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Stuart Russell','Daniel Dewey',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to the publicity firm Press Shop to support expenses related to publicizing Professor Stuart Russell’s book Human Compatible: Artificial Intelligence and the Problem of Control."',
@@ -1601,7 +1601,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Johns Hopkins University',55000,'2020-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/johns-hopkins-kaplan-menard','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jared Kaplan|Brice Ménard','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Johns Hopkins University',55000,'2020-03-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/johns-hopkins-kaplan-menard','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jared Kaplan|Brice Ménard','Luke Muehlhauser',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support the initial research of Professors Jared Kaplan and Brice Ménard on principles underlying neural network training and performance."',
@@ -1613,7 +1613,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Study and Training Related to AI Policy Careers',594420,'2020-03-01','month','donation log','AI safety/talent pipeline','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/study-and-training-related-to-ai-policy-careers','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Emefa Agawu|Karson Elmgren|Matthew Gentzel|Becca Kagan|Benjamin Mueller','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Study and Training Related to AI Policy Careers',594420,'2020-03-01','month','donation log','AI safety/governance/talent pipeline','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/study-and-training-related-to-ai-policy-careers','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Emefa Agawu|Karson Elmgren|Matthew Gentzel|Becca Kagan|Benjamin Mueller','Luke Muehlhauser',NULL,NULL,NULL,NULL,
   /* donation_process */ 'This is a scholarship program run by Open Philanthropy. Applications were sought at https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/funding-AI-policy-careers with the last date for applications being 2019-10-15.',
   /* intended_use_of_funds_category */ 'Living expenses during research project',
   /* intended_use_of_funds */ 'Grant is "flexible support to enable individuals to pursue and explore careers in artificial intelligence policy." Recipients include Emefa Agawu, Karson Elmgren, Matthew Gentzel, Becca Kagan, and Benjamin Mueller. The ways that specific recipients intend to use the funds is not described, but https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/funding-AI-policy-careers#examples gives general guidance on the kinds of uses Open Philanthropy was expecting to see when it opened applications.',
@@ -1625,7 +1625,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'As of early 2022, there do not appear to have been further rounds of grantmaking from Open Philanthropy for this purpose.',
   /* notes */ 'Open Philanthropy runs a related fellowship program called the Open Phil AI Fellowship, that has an annual cadence of announcing new grants, though individual grants are often multi-year. The Open Phil AI Fellowship grantees are mostly people working on technical AI safety, whereas this grant is focused on AI policy work. Moreover, the Open Phil AI Fellowship targets graduate-level research, whereas this grant targets study and training.'),
 
-  ('Open Philanthropy','World Economic Forum',50000,'2020-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/world-economic-forum-global-ai-council-workshop','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','World Economic Forum',50000,'2020-04-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/world-economic-forum-global-ai-council-workshop','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support a workshop hosted by the Global AI Council and co-developed with the Center for Human-Compatible AI at UC Berkeley. The workshop will facilitate the development of AI policy recommendations that could lead to future economic prosperity, and is part of a series of workshops examining solutions to maximize economic productivity and human wellbeing."',
@@ -1637,7 +1637,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','International Conference on Learning Representations',3500,'2020-05-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/ICLR-machine-learning-paper-awards','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','International Conference on Learning Representations',3500,'2020-05-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/ICLR-machine-learning-paper-awards','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Daniel Dewey',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to the International Conference on Learning Representations to provide awards for the best papers submitted as part of the “Towards Trustworthy Machine Learning” virtual workshop.',
@@ -1649,7 +1649,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Andrew Lohn',15000,'2020-06-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/andrew-lohn-paper-machine-learning-model-robustness','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Andrew Lohn','Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Andrew Lohn',15000,'2020-06-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/andrew-lohn-paper-machine-learning-model-robustness','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Andrew Lohn','Luke Muehlhauser',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to write a paper on machine learning model robustness for safety-critical AI systems."',
@@ -1661,7 +1661,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Center for Strategic and International Studies',118307,'2020-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-strategic-and-international-studies-ai-accident-risk-and-technology-competition','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Center for Strategic and International Studies',118307,'2020-09-01','month','donation log','AI safety/strategy','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-strategic-and-international-studies-ai-accident-risk-and-technology-competition','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to explore possible projects related to AI accident risk in the context of technology competition."',
@@ -1673,7 +1673,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'The increase in grant amount in May 2021, from $75,245 to $118,307, suggests that Open Phil was satisfied with initial progress on the grant.',
   /* notes */ 'The grant amount was updated in May 2021. The original amount was $75,245.'),
 
-  ('Open Philanthropy','Center for International Security and Cooperation',67000,'2020-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-international-security-and-cooperation-ai-accident-risk-and-technology-competition','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Center for International Security and Cooperation',67000,'2020-09-01','month','donation log','AI safety/strategy','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/center-for-international-security-and-cooperation-ai-accident-risk-and-technology-competition','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,'Luke Muehlhauser',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to explore possible projects related to AI accident risk in the context of technology competition."',
@@ -1685,7 +1685,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Smitha Milli',370,'2020-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/smitha-milli-participatory-approaches-machine-learning-workshop','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Smitha Milli','Daniel Dewey',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Smitha Milli',370,'2020-10-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/smitha-milli-participatory-approaches-machine-learning-workshop','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Smitha Milli','Daniel Dewey',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support Participatory Approaches to Machine Learning, a virtual workshop held during the 2020 International Conference on Machine Learning."',
@@ -1697,7 +1697,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Berryville Institute of Machine Learning',150000,'2021-01-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berryville-institute-of-machine-learning','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Gary McGraw','Catherine Olsson|Daniel Dewey',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Berryville Institute of Machine Learning',150000,'2021-01-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/berryville-institute-of-machine-learning','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Gary McGraw','Catherine Olsson|Daniel Dewey',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page says: "[the grant is] to support research led by Gary McGraw on machine learning security. The research will focus on building a taxonomy of known attacks on machine learning, exploring a hypothesis of representation and machine learning risk, and performing an architectural risk analysis of machine learning systems."',
@@ -1709,7 +1709,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','University of Cambridge',250000,'2021-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-cambridge-david-krueger','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','David Krueger','Daniel Dewey',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Cambridge',250000,'2021-04-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/university-of-cambridge-david-krueger','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','David Krueger','Daniel Dewey',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support Professor David Krueger’s machine learning research."',
@@ -1721,7 +1721,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Grant made via Cambridge in America.'),
 
-  ('Open Philanthropy','University of Southern California',320000,'2021-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-southern-california-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Robin Jia','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Southern California',320000,'2021-08-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/university-of-southern-california-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Robin Jia','Catherine Olsson|Nick Beckstead',NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support early-career research by Robin Jia on adversarial robustness and out-of-distribution generalization as a means to improve AI safety."',
@@ -1733,7 +1733,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','University of Washington',730000,'2021-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/university-of-washington-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Ludwig Schmidt',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','University of Washington',730000,'2021-10-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/university-of-washington-adversarial-robustness-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Ludwig Schmidt',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support early-career research by Ludwig Schmidt on adversarial robustness as a means to improve AI safety."',
@@ -1745,7 +1745,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','National Academies of Sciences, Engineering, and Medicine',309441,'2022-02-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/national-academies-of-sciences-engineering-and-medicine-safety-critical-machine-learning/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','National Academies of Sciences, Engineering, and Medicine',309441,'2022-02-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/national-academies-of-sciences-engineering-and-medicine-safety-critical-machine-learning/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support research on machine learning in safety-critical environments."',
@@ -1769,7 +1769,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Hofvarpnir Studios',1443540,'2022-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/hofvarpnir-studios-compute-cluster-for-ai-safety-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jacob Steinhardt|Center for Human-Compatible Artificial Intelligence',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Hofvarpnir Studios',1443540,'2022-03-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/hofvarpnir-studios-compute-cluster-for-ai-safety-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jacob Steinhardt|Center for Human-Compatible Artificial Intelligence',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "create and maintain a compute cluster for Jacob Steinhardt’s lab that will also be used by researchers at the Center for Human-Compatible Artificial Intelligence." The webpage https://jsteinhardt.stat.berkeley.edu/ is linked.',
@@ -1781,7 +1781,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Carnegie Endowment for International Peace',597717,'2022-03-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/carnegie-endowment-for-international-peace-ai-governance-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Matt Sheehan',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Carnegie Endowment for International Peace',597717,'2022-03-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/carnegie-endowment-for-international-peace-ai-governance-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Matt Sheehan',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support a research project on international AI governance led by Matt Sheehan."',
@@ -1793,7 +1793,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Center for Long-Term Cybersecurity',20000,'2022-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/center-for-long-term-cybersecurity-ai-standards-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Center for Long-Term Cybersecurity',20000,'2022-04-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/center-for-long-term-cybersecurity-ai-standards-2022/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support work by CLTC’s AI Security Initiative on the development and implementation of AI standards."',
@@ -1805,7 +1805,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'This grant is made via the University of California, Berkeley. A related, much larger ($210,000) grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-ai-standards-2022/ is made by Open Philanthropy to the Berkeley Existential Risk Initiative for supporting work.'),
 
-  ('Open Philanthropy','OpenMined',28320,'2022-04-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/openmined-research-on-privacy-enhancing-technologies-and-ai-safety/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','OpenMined',28320,'2022-04-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/openmined-research-on-privacy-enhancing-technologies-and-ai-safety/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant to "support research on the intersection between privacy-enhancing technologies and technical infrastructure for AI safety." The webpage https://en.wikipedia.org/wiki/Privacy-enhancing_technologies is linked.',
@@ -1817,7 +1817,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Centre for Effective Altruism',250000,'2022-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/centre-for-effective-altruism-harvard-ai-safety-office/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Centre for Effective Altruism',250000,'2022-08-01','month','donation log','AI safety/movement growth','https://www.openphilanthropy.org/grants/centre-for-effective-altruism-harvard-ai-safety-office/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to rent and refurbish a temporary office space for one year for the Harvard AI Safety Team." The webpage https://haist.ai/ is linked.',
@@ -1829,7 +1829,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','AI Alignment Awards',70000,'2022-09-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/ai-alignment-awards-shutdown-problem-contest/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','AI Alignment Awards',70000,'2022-09-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/ai-alignment-awards-shutdown-problem-contest/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "over 1.5 years to AI Alignment Awards to support a contest asking participants to share ideas on how AI systems can be designed or trained to avoid the shutdown problem." The webpage https://www.alignmentawards.com/shutdown is linked.',
@@ -1841,7 +1841,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Foundation Model Tracker',15000,'2022-10-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/thomas-liao-foundation-model-tracker/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Thomas Liao',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Foundation Model Tracker',15000,'2022-10-01','month','donation log','AI safety/strategy','https://www.openphilanthropy.org/grants/thomas-liao-foundation-model-tracker/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Thomas Liao',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to Thomas Liao to support his work on maintaining Foundation Model Tracker, a website that tracks the release of large AI models." The webpage https://foundationmodeltracker.com/ is linked, but does not work as of 2023-11-19. However, the webpage https://foundationmodeltracker.notion.site/foundationmodeltracker/Model-Tracker-v0-9-794ba77f74ec469186efdbdb87e9b8e6 that https://foundationmodeltracker.com/ used to redirect to still works.',
@@ -1853,7 +1853,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Mordechai Rorvig',110000,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/mordechai-rorvig-independent-ai-journalism/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Mordechai Rorvig',110000,'2022-11-01','month','donation log','AI safety/movement growth','https://www.openphilanthropy.org/grants/mordechai-rorvig-independent-ai-journalism/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'The grantee''s webpage gives context on why the grantee sought the grant: "In November 2022, I was awarded a grant from Open Philanthropy, a grantmaking organization, to provide one year’s worth of support for my independent journalism work in computer science and AI. This grant neither affects my editorial independence nor indicates an endorsement of my writing by the Open Philanthropy organization. I sought out grants after leaving Quanta in August 2022, and becoming increasingly informed about what I believe is a severe state of underfunding in science journalism, particularly for areas as important as computer science and AI." The Twitter thread https://twitter.com/mordecwhy/status/1559254697940336640 is linked from the webpage.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support his independent journalism on topics related to computer science, AI, and AI safety." The webpage https://mordechairorvig.com/ is linked.',
@@ -1865,7 +1865,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Jacob Steinhardt',100000,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/jacob-steinhardt-ai-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Jacob Steinhardt',100000,'2022-11-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/jacob-steinhardt-ai-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to provide operational support to Steinhardt’s lab at the University of California Berkeley, which specializes in research on how to align machine learning systems." The webpage https://jsteinhardt.stat.berkeley.edu/ is linked.',
@@ -1877,8 +1877,8 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Northeastern University',562128,'2022-11-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/northeastern-university-large-language-model-interpretability-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','David Bau',NULL,NULL,NULL,NULL,NULL,
-  /* donation_process */ 'This is a followup grant to the grant to David Bau made as part of a collection of grants https://www.openphilanthropy.org/grants/funding-for-ai-alignment-projects-working-with-deep-learning-systems/ providing funding for projects working with deep learning system. That previous grant had been made through grant applications sought at https://www.openphilanthropy.org/request-for-proposals-for-projects-in-ai-alignment-that-work-with-deep-learning-systems/ (a request for proposals).',
+  ('Open Philanthropy','Northeastern University',562128,'2022-11-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/northeastern-university-large-language-model-interpretability-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','David Bau',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This is a followup grant to the grant to David Bau made as part of a collection of grants https://www.openphilanthropy.org/grants/funding-for-ai-alignment-projects-working-with-deep-learning-systems/ providing funding for projects working with deep learning systems. That previous grant had been made through grant applications sought at https://www.openphilanthropy.org/request-for-proposals-for-projects-in-ai-alignment-that-work-with-deep-learning-systems/ (a request for proposals).',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support Professor David Bau’s research on interpreting large language models." The webpage https://baulab.info/ is linked.',
   /* intended_funding_timeframe_in_months */ 24,
@@ -1901,7 +1901,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'This is a total across two grants.'),
 
-  ('Open Philanthropy','Jérémy Scheurer',110000,'2022-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/jeremy-scheurer-independent-ai-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Jérémy Scheurer',110000,'2022-12-01','month','donation log','AI safety/technical research/talent pipeline','https://www.openphilanthropy.org/grants/jeremy-scheurer-independent-ai-alignment-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support [grantee''s] independent research on AI alignment." The Google Scholar citations page https://scholar.google.com/citations?user=_6nYXQYAAAAJ is linked from the grantee''s name.',
@@ -1913,7 +1913,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Simon McGregor',7000,'2022-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/simon-mcgregor-ai-risk-workshop/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Simon McGregor',7000,'2022-12-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/simon-mcgregor-ai-risk-workshop/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support [grantee''s] work to organize a workshop on AI risk."',
@@ -1925,7 +1925,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL),
 
-  ('Open Philanthropy','Purdue University',170000,'2022-12-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/purdue-university-language-model-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Xiangyu Zhang',NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','Purdue University',170000,'2022-12-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/purdue-university-language-model-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Xiangyu Zhang',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support research led by Professor Xiangyu Zhang on improving the robustness of language models against adversarial attacks." The webpage https://www.cs.purdue.edu/homes/xyzhang/ is linked.',
