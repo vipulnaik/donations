@@ -1286,7 +1286,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ 'Further grant https://www.openphilanthropy.org/grants/ai-safety-support-seri-mats-program/ and https://www.openphilanthropy.org/grants/ai-safety-support-situational-awareness-research/ from Open Philanthropy, though with slightly different goals, suggest continued satisfaction with the grantee.',
   /* notes */ NULL),
 
-  ('Open Philanthropy','AI Safety Support',1538000,'2022-11-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/ai-safety-support-seri-mats-program/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  ('Open Philanthropy','AI Safety Support',1538000,'2022-11-01','month','donation log','AI safety/technical research/talent pipeline','https://www.openphilanthropy.org/grants/ai-safety-support-seri-mats-program/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','SERI-MATS program',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to support [AI Safety Support''s] collaboration with Stanford Existential Risks Initiative (SERI) on SERI’s Machine Learning Alignment Theory Scholars (MATS) program. MATS is an educational seminar and independent research program that aims to provide talented scholars with talks, workshops, and research mentorship in the field of AI alignment, and connect them with in-person alignment research communities."',
