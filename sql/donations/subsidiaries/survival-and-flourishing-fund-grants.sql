@@ -1,3 +1,41 @@
+/* Grants to Alignment Research Center */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Jaan Tallinn','Alignment Research Center',2179000,'2022-12-20','day','donation log','AI safety/technical research','https://jaan.online/philanthropy/donations.html','Survival and Flourishing Fund|Nick Hay|Alyssa Vance|Scott Garrabrant',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2022 H2 grants https://survivalandflourishing.fund/sff-2022-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal value functions. Recommenders specified a marginal value function for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different value functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s eighth grant round and the first with a grant to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The grant recommendation in the future grant round https://survivalandflourishing.fund/sff-2023-h1-recommendations suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Future of Life Institute','Alignment Research Center',1401000,'2023-04-01','quarter','donation log','AI safety/technical research','https://futureoflife.org/grant-program/2023-grants/','Survival and Flourishing Fund|Olle Häggström|Steve Omohundro|Daniel Kokotajlo',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2023 H1 grants https://survivalandflourishing.fund/sff-2023-h1-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios. In each simulation, Recommenders specify a marginal value function for funding each application, and an algorithm calculates a table of grant recommendations by taking turns distributing funding recommendations from each Recommender in succession, using their marginal value functions to prioritize. The Recommenders then discuss their evaluations and update the simulation with their new opinions, using approval voting to prioritize discussion topics, until the end of the last meeting when their inputs are finalized. Similarly, funders specify and adjust different value functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'https://futureoflife.org/grant-program/2023-grants/ says: "Support for the Alignment Research Center (ARC) Evaluation (Evals) Team. Evals is a new team at ARC building capability evaluations (and in the future, alignment evaluations) for advanced ML models. The goals of the project are to improve our understanding of what alignment danger is going to look like, understand how far away we are from dangerous AI, and create metrics that labs can make commitments around."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s ninth grant round and the second with a grant to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'In this grant round, there are two funders: Jaan Tallinn and Future of Life Institute, and the page https://survivalandflourishing.fund/sff-2023-h1-recommendations does not provide a breakdown of the grant amount $3,247,000 by funder. https://futureoflife.org/grant-program/2023-grants/ is used to obtain the amount actually granted by FLI.'),
+
+  ('Jaan Tallinn','Alignment Research Center',1846000,'2023-04-01','quarter','donation log','AI safety/technical research','https://survivalandflourishing.fund/sff-2023-h1-recommendations','Survival and Flourishing Fund|Olle Häggström|Steve Omohundro|Daniel Kokotajlo',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2023 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios. In each simulation, Recommenders specify a marginal value function for funding each application, and an algorithm calculates a table of grant recommendations by taking turns distributing funding recommendations from each Recommender in succession, using their marginal value functions to prioritize. The Recommenders then discuss their evaluations and update the simulation with their new opinions, using approval voting to prioritize discussion topics, until the end of the last meeting when their inputs are finalized. Similarly, funders specify and adjust different value functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'https://futureoflife.org/grant-program/2023-grants/ says: "Support for the Alignment Research Center (ARC) Evaluation (Evals) Team. Evals is a new team at ARC building capability evaluations (and in the future, alignment evaluations) for advanced ML models. The goals of the project are to improve our understanding of what alignment danger is going to look like, understand how far away we are from dangerous AI, and create metrics that labs can make commitments around."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s ninth grant round and the second with a grant to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'In this grant round, there are two funders: Jaan Tallinn and Future of Life Institute, and the page https://survivalandflourishing.fund/sff-2023-h1-recommendations does not provide a breakdown of the grant amount $3,247,000 by funder. https://futureoflife.org/grant-program/2023-grants/ is used to obtain the amount ($1,401,000) granted by FLI, and the amount granted by Jaan Tallinn is calculated as the difference of the two amounts. https://jaan.online/philanthropy/donations.html is expected to eventually include the donation, but as of 2023-11-26 it does not.');
+
 /* Grants to Redwood Research */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Jaan Tallinn','Redwood Research',1274000,'2022-06-16','day','donation log','AI safety/technical research','https://survivalandflourishing.fund/sff-2022-h1-recommendations','Survival and Flourishing Fund|Nell Watson|Malo Bourgon|Catherine Olsson',NULL,NULL,NULL,NULL,NULL,
@@ -368,7 +406,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the first one with a grant to this grantee.',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
+  /* donor_retrospective */ 'The grant recommendation in the future grant round https://survivalandflourishing.fund/sff-2022-h2-recommendations suggests continued satisfaction with the grantee.',
   /* notes */ 'The grant round includes a grant by Jed McCaleb ($21,000) to the same grantee (CEEALAR).'),
 
   ('Jed McCaleb','Centre for Enabling EA Learning & Research',21000,'2021-04-01','quarter','donation log','Effective altruism/housing','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,243000,0.0864,
@@ -381,7 +419,19 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round and the first one with a grant to this grantee.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'The grant round includes a grant by Jaan Tallinn ($61,000) to the same grantee (CEEALAR).');
+  /* notes */ 'The grant round includes a grant by Jaan Tallinn ($61,000) to the same grantee (CEEALAR).'),
+
+  ('Jaan Tallinn','Centre for Enabling EA Learning & Research',224000,'2022-12-15','day','donation log','Effective altruism/housing','https://jaan.online/philanthropy/donations.html','Survival and Flourishing Fund|Nick Hay|Alyssa Vance|Scott Garrabrant',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2022 H2 grants https://survivalandflourishing.fund/sff-2022-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal value functions. Recommenders specified a marginal value function for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different value functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s eighth grant round.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Grants to Machine Intelligence Research Institute */
 
@@ -791,7 +841,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s tenth grant round.',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s ninth grant round.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'In this grant round, there are two funders: Jaan Tallinn and Future of Life Institute, and the breakdown of each grant by funder is not provided. We are inferring that the entirety of the amount is being funded by Jaan Tallinn, since https://futureoflife.org/grant-program/2023-grants/ does not include the grant. However, as of 2023-11-26, https://jaan.online/philanthropy/donations.html does not include the grant either.');
@@ -921,7 +971,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s tenth grant round.',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s ninth grant round.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'In this grant round, there are two funders: Jaan Tallinn and Future of Life Institute, and the breakdown of each grant by funder is not provided. We are inferring that the entirety of the amount is being funded by Jaan Tallinn, since https://futureoflife.org/grant-program/2023-grants/ does not include the grant. However, as of 2023-11-26, https://jaan.online/philanthropy/donations.html does not include the grant either.');
