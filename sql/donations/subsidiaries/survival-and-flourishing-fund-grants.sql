@@ -220,9 +220,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ 'Although Jed McCaleb also participates as a funder in this grant round, he does not make any grants to this grantee (Center for Applied Rationality).');
 
 /* Grants to AI Impacts */
-
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
-  ('Survival and Flourishing Fund','AI Impacts',70000,'2019-12-04','day','donation log','AI safety','https://jaan.online/philanthropy/donations.html','Alex Flint|Alex Zhu|Andrew Critch|Eric Rogstad|Oliver Habryka','2019-12-15','day','https://github.com/survivalandflourishing/survivalandflourishing.github.io/blob/aa47e9860dff38e2af8d08da56a0a13389a75af4/_data/recommendations.tsv',920000,0.0761,
+  /* The grant below is before SFF, but is included here for continuity with SFF grants */
+  ('Jaan Tallinn','AI Impacts',5000,'2015-10-15','day','donation log','AI safety/strategy','https://jaan.online/philanthropy/donations.html',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Survival and Flourishing Fund','AI Impacts',70000,'2019-12-04','day','donation log','AI safety/strategy','https://jaan.online/philanthropy/donations.html','Alex Flint|Alex Zhu|Andrew Critch|Eric Rogstad|Oliver Habryka','2019-12-15','day','https://github.com/survivalandflourishing/survivalandflourishing.github.io/blob/aa47e9860dff38e2af8d08da56a0a13389a75af4/_data/recommendations.tsv',920000,0.0761,
   /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2019 Q4 grants https://survivalandflourishing.fund/sff-2019-q4-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Funders were free to assign different weights to different Recommenders in the process; the weights were determined by marginal utility functions specified by the funders (Jaan Tallinn and SFF). In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
@@ -1197,7 +1209,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL);
 
 /* Grants to Leverage Research */
-
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   /* The first grant is made before SFF came into being, but is included here for continuity with SFF grants. */
   ('Jaan Tallinn','Leverage Research',100000,'2019-04-03','day','donation log',NULL,'https://jaan.online/philanthropy/donations.html',NULL,NULL,NULL,NULL,NULL,NULL,
