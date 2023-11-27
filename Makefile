@@ -2,7 +2,7 @@ MYSQL_ARGS=
 DATABASE=donations
 
 .PHONY: reset
-reset: reset_similarity reset_documents reset_donations reset_donees reset_donors reset_gifts reset_money_moved reset_disclosures reset_donor_donee_relationships reset_cache
+reset: reset_similarity reset_documents reset_donations reset_donees reset_donors reset_gifts reset_money_moved reset_disclosures reset_donor_donee_relationships
 
 .PHONY: init
 init:
