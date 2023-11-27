@@ -279,7 +279,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round. Grants to AI Impacts had been made in the second and third grant rounds.',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
+  /* donor_retrospective */ 'The followup grant for AI Impacts in https://survivalandflourishing.fund/sff-2021-h1-recommendations continued satisfaction with the grant outcome.',
   /* notes */ 'The grant round also includes a grant from Jed McCaleb ($82,000) to the same grantee (AI Impacts).'),
 
   ('Jed McCaleb','AI Impacts',82000,'2021-04-01','quarter','donation log','AI safety','https://survivalandflourishing.fund/sff-2021-h1-recommendations','Survival and Flourishing Fund|Ben Hoskin|Katja Grace|Oliver Habryka|Adam Marblestone',NULL,NULL,NULL,243000,0.3374,
@@ -295,19 +295,42 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ 'The grant round also includes a grant from Jaan Tallinn ($221,000) to the same grantee.'),
 
   ('Jaan Tallinn','AI Impacts',546000,'2022-12-06','day','donation log','AI safety/strategy','https://jaan.online/philanthropy/donations.html','Survival and Flourishing Fund|Nick Hay|Alyssa Vance|Scott Garrabrant',NULL,NULL,NULL,NULL,NULL,
-  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2022 H1 grants https://survivalandflourishing.fund/sff-2022-h1-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal value functions. Recommenders specified a marginal value function for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different value functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2022 H2 grants https://survivalandflourishing.fund/sff-2022-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal value functions. Recommenders specified a marginal value function for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different value functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s eighth grant round and the first with a grant to this grantee.',
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s eighth grant round and the fourth with a grant to this grantee.',
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ 'The followup grant recommendations for AI Impacts in https://survivalandflourishing.fund/sff-2023-h2-recommendations (about a year later) suggest continued satisfaction with the grant outcome.',
-  /* notes */ NULL);
+  /* notes */ NULL),
+
+  ('Jaan Tallinn','AI Impacts',179000,'2023-10-01','quarter','donation log','AI safety/strategy','https://survivalandflourishing.fund/sff-2023-h2-recommendations','Survival and Flourishing Fund|Nathan Labenz|Michael Page',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Part of the Survival and Flourising Fund''s 2023 H2 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios. In each simulation, Recommenders specify a marginal value function for funding each application, and an algorithm calculates a table of grant recommendations by taking turns distributing funding recommendations from each Recommender in succession, using their marginal value functions to prioritize. The Recommenders then discuss their evaluations and update the simulation with their new opinions, using approval voting to prioritize discussion topics, until the end of the last meeting when their inputs are finalized. Similarly, funders specify and adjust different value functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s tenth grant round and the fifth with a grant to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'This includes a speculation grant of $72,000; so the additional granted amount is $107,000. The grant is made completely via SFF rather than via Lightspeed Grants, unlike other grants in this round. A grant recommendation to the same grantee of $162,000 is also made for funder Future of Life Institute as part of the same SFF round.'),
+
+  ('Future of Life Institute','AI Impacts',162000,'2023-10-01','quarter','donation log','AI safety/strategy','https://survivalandflourishing.fund/sff-2023-h2-recommendations','Survival and Flourishing Fund|Nathan Labenz|Michael Page',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Part of the Survival and Flourising Fund''s 2023 H2 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios. In each simulation, Recommenders specify a marginal value function for funding each application, and an algorithm calculates a table of grant recommendations by taking turns distributing funding recommendations from each Recommender in succession, using their marginal value functions to prioritize. The Recommenders then discuss their evaluations and update the simulation with their new opinions, using approval voting to prioritize discussion topics, until the end of the last meeting when their inputs are finalized. Similarly, funders specify and adjust different value functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s tenth grant round and the fifth with a grant to this grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'A grant recommendation to the same grantee of $179,000 is also made for funder Jaan Tallinn as part of the same SFF round.');
 
 /* Grants to Centre for Enabling EA Learning & Research */
-
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision,donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   /* This first grant was *not* through the SFF process, but is being included here
      to place it together with Jaan Tallin's other grantmaking of that era, most of
