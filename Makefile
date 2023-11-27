@@ -15,7 +15,7 @@ init:
 # visually select the .sql lines:
 #     '<,'>g/-schema/m'<-1
 .PHONY: read
-read: read_documents read_donations read_donees read_donors read_gifts read_money_moved read_disclosures read_donor_donee_relationships
+read: read_documents read_donations read_donees read_donors read_gifts read_money_moved read_disclosures read_donor_donee_relationships build_cache
 
 .PHONY: reset_documents
 reset_documents:
