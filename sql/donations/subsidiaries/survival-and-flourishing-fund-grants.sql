@@ -757,7 +757,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s fifth grant round. In a previous grant round (2019 Q4), SFF had made a grant to the grantee, but Tallinn had not made any direct grants.',
   /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
+  /* donor_retrospective */ 'The grant recommendation in the future grant round https://survivalandflourishing.fund/sff-2022-h2-recommendations suggests continued satisfaction with the grant outcome.',
   /* notes */ 'Although Jed McCaleb also participates in this grant round as a funder, he does not make any grants to this grantee.'),
 
   ('Jaan Tallinn','Alliance to Feed the Earth in Disasters',979000,'2021-10-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2021-h2-recommendations','Survival and Flourishing Fund|Beth Barnes|Oliver Habryka|Zvi Mowshowitz','2021-11-20','day','https://www.facebook.com/jaan.tallinn/posts/4436719686377948',8858000,0.1105,
@@ -769,8 +769,32 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s sixth grant round and the third one with a grant to the grantee.',
   /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The grant recommendation in the future grant round https://survivalandflourishing.fund/sff-2022-h2-recommendations suggests continued satisfaction with the grantee.',
+  /* notes */ 'Grant made via the Players Philanthropy Fund. The other two funders in this SFF grant round (Jed McCaleb and The Casey and Family Foundation) do not make grants to ALLFED. Zvi Mowshowitz, one of the recommenders, writes in https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff in more detail about the concerns raised: "(1) Capacity. Could ALLFED scale? Could it remain effective, hire and manage well, and so on? Was it mostly the one person who produced value? (2) Amateurism. Basically a ‘yes, thank you, you founded the space, but now we should leave this to the professionals no?’ kind of vibe thing. (3) Feasibility. Are their ideas good? I had this too, as noted above. (4) Honesty. There were concerns, especially around impact calculations." He then goes into details about his thoughts on each of the concerns, in particular on the honesty and ALLFED''s previous calculations of its own impact.'),
+
+  ('Jaan Tallinn','Alliance to Feed the Earth in Disasters',427000,'2023-02-16','day','donation log','Global catastrophic risks','https://jaan.online/philanthropy/donations.html','Survival and Flourishing Fund|Nick Hay|Alyssa Vance|Scott Garrabrant',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2022 H2 grants https://survivalandflourishing.fund/sff-2022-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a table of marginal value functions. Recommenders specified a marginal value function for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different value functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s eighth grant round and the fourth one with a grant to the grantee.',
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The grant recommendation in the future grant round https://survivalandflourishing.fund/sff-2022-h2-recommendations suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Jaan Tallinn','Alliance to Feed the Earth in Disasters',1159000,'2023-04-01','quarter','donation log','Global catastrophic risks','https://survivalandflourishing.fund/sff-2023-h1-recommendations','Survival and Flourishing Fund|Olle Häggström|Steve Omohundro|Daniel Kokotajlo',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2023 H1 grants based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios. In each simulation, Recommenders specify a marginal value function for funding each application, and an algorithm calculates a table of grant recommendations by taking turns distributing funding recommendations from each Recommender in succession, using their marginal value functions to prioritize. The Recommenders then discuss their evaluations and update the simulation with their new opinions, using approval voting to prioritize discussion topics, until the end of the last meeting when their inputs are finalized. Similarly, funders specify and adjust different value functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts."',
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ NULL,
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ 'Timing determined by timing of grant round; this is SFF''s tenth grant round.',
+  /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'Grant made via the Players Philanthropy Fund. The other two funders in this SFF grant round (Jed McCaleb and The Casey and Family Foundation) do not make grants to ALLFED. Zvi Mowshowitz, one of the recommenders, writes in https://www.lesswrong.com/posts/kuDKtwwbsksAW4BG2/zvi-s-thoughts-on-the-survival-and-flourishing-fund-sff in more detail about the concerns raised: "(1) Capacity. Could ALLFED scale? Could it remain effective, hire and manage well, and so on? Was it mostly the one person who produced value? (2) Amateurism. Basically a ‘yes, thank you, you founded the space, but now we should leave this to the professionals no?’ kind of vibe thing. (3) Feasibility. Are their ideas good? I had this too, as noted above. (4) Honesty. There were concerns, especially around impact calculations." He then goes into details about his thoughts on each of the concerns, in particular on the honesty and ALLFED''s previous calculations of its own impact.');
+  /* notes */ 'In this grant round, there are two funders: Jaan Tallinn and Future of Life Institute, and the breakdown of each grant by funder is not provided. We are inferring that the entirety of the amount is being funded by Jaan Tallinn, since https://futureoflife.org/grant-program/2023-grants/ does not include the grant. However, as of 2023-11-26, https://jaan.online/philanthropy/donations.html does not include the grant either.');
 
 /* Grants to Center on Long-Term Risk */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, goal_amount, fraction, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
