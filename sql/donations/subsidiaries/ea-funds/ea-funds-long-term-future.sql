@@ -644,7 +644,31 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'The Long-Term Future Fund makes a number of other related grants to Turner, including a grant at around the same time of $115,411 for a team led by Turner. The grants all share similar reasoning, that https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#Alexander_Turner___220_000___Year_long_stipend_for_shard_theory_and_RL_mechanistic_interpretability_research describes. The grants database only provides the quarter in which the grant was made (and seems to be off by one quarter); see https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#Other_grants_we_made_during_this_period for the precise month.');
+  /* notes */ 'The Long-Term Future Fund makes a number of other related grants to Turner, including a grant at around the same time of $115,411 for a team led by Turner. The grants all share similar reasoning, that https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#Alexander_Turner___220_000___Year_long_stipend_for_shard_theory_and_RL_mechanistic_interpretability_research describes. The grants database only provides the quarter in which the grant was made (and seems to be off by one quarter); see https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#Other_grants_we_made_during_this_period for the precise month.'),
+
+  ('Effective Altruism Funds: Long-Term Future Fund','Alexander Turner',30000,'2023-04-01','quarter','donation log','AI safety/technical research','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The process for this particular grant is not available, but the general process is for the grantee to submit an application at https://av20jp3z.paperform.co/?fund=Long-Term%20Future%20Fund and get a response within 3 weeks (for most applications) or 2 months (for all applications).',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grants database gives the following intended use of funds: "5 months of funding for office space for collaboration on interpretability/model-steering alignment research"',
+  /* intended_funding_timeframe_in_months */ 5,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Effective Altruism Funds: Long-Term Future Fund','Alexander Turner',40000,'2023-04-01','quarter','donation log','AI safety/technical research','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'The process for this particular grant is not available, but the general process is for the grantee to submit an application at https://av20jp3z.paperform.co/?fund=Long-Term%20Future%20Fund and get a response within 3 weeks (for most applications) or 2 months (for all applications).',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'The grants database gives the following intended use of funds: "Conference publication of interpretability and LM-steering results"',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Other April 2019 grants */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, influencer, goal_amount, fraction, affected_countries, donation_earmark, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
