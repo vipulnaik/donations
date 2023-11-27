@@ -250,7 +250,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grants database only provides the quarter in which the grant was made; see https://forum.effectivealtruism.org/posts/zZ2vq7YEckpunrQS4/long-term-future-fund-april-2023-grant-recommendations#Other_grants_we_made_during_this_period for the precise month.'),
 
-  ('Effective Altruism Funds: Long-Term Future Fund','Robert Miles',121575,'2023-07-01','month','donation log','AI safety/movement growth','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future',NULL,NULL,NULL,NULL,NULL,
+  ('Effective Altruism Funds: Long-Term Future Fund','Robert Miles',121575,'2023-07-01','quarter','donation log','AI safety/movement growth','https://funds.effectivealtruism.org/grants?fund=Long-Term%2520Future%2520Fund&sort=round','https://funds.effectivealtruism.org/funds/far-future',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'The process for this particular grant is not available, but the general process is for the grantee to submit an application at https://av20jp3z.paperform.co/?fund=Long-Term%20Future%20Fund and get a response within 3 weeks (for most applications) or 2 months (for all applications).',
   /* intended_use_of_funds_category */ 'Living expenses during project',
   /* intended_use_of_funds */ 'The grants database gives the following intended use of funds: "1yr salary to make videos and podcasts about AI Safety/Alignment, and build a community to help new people get involved"',
