@@ -410,7 +410,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant round also includes grants from the Survival and Flourishing Fund ($20,000) and Jaan Tallinn ($280,000) to the same grantee (MIRI).'),
 
-  ('Jaan Tallinn','Machine Intelligence Research Institute',563000,'2020-12-17','day','donation log','AI safety','https://jaan.online/philanthropy/donations.html','Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,NULL,NULL,
+  ('Jaan Tallinn','Machine Intelligence Research Institute',563000,'2020-12-17','day','donation log','AI safety','https://jaan.online/philanthropy/donations.html','Survival and Flourishing Fund|Oliver Habryka|Eric Rogstad',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'Part of the Survival and Flourishing Fund''s 2020 H2 grants https://survivalandflourishing.fund/sff-2020-h2-recommendations based on the S-process (simulation process) that "involves allowing the Recommenders and funders to simulate a large number of counterfactual delegation scenarios using a spreadsheet of marginal utility functions. Recommenders specified marginal utility functions for funding each application, and adjusted those functions through discussions with each other as the round progressed. Similarly, funders specified and adjusted different utility functions for deferring to each Recommender. In this round, the process also allowed the funders to make some final adjustments to decide on their final intended grant amounts." The recommended grant amount was $543,000 but the actual grant made was for $563,000.',
   /* intended_use_of_funds_category */ 'Organizational general support',
   /* intended_use_of_funds */ NULL,
