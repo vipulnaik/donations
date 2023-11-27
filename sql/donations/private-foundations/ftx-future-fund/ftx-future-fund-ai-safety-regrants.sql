@@ -73,7 +73,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
   ('FTX Future Fund','Evan R. Murphy',30000,'2022-07-01','month','donation log','AI safety','https://ftxfuturefund.org/our-regrants/','https://ftxfuturefund.org/area-of-interest/artificial-intelligence/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_prcess */ 'The grant is made as part of the Future Fund''s regranting program. See https://forum.effectivealtruism.org/posts/paMYXYFYbbjpdjgbt/future-fund-june-2022-update#Regranting_program_in_more_detail for more detail on the regranting program.',
-  /* intended_use_of_funds_category */ 'Living expenses during research project',
+  /* intended_use_of_funds_category */ 'Living expenses during project',
   /* intended_use_of_funds */ 'Grant to "support six months of independent research on interpretability and other AI safety topics."',
   /* intended_funding_timeframe_in_months */ NULL,
   /* donor_donee_reason */ NULL,

@@ -61,7 +61,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
 
   ('FTX Future Fund','Maxwell Tabarrok',7500,'2022-05-01','month','donation log','Global catastrophic risks|Economic growth','https://ftxfuturefund.org/our-grants/?_funding_stream=open-call','https://ftxfuturefund.org/area-of-interest/great-power-relations/',NULL,NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ 'This grant is a result of the Future Fund''s open call for applications originally announced on 2022-02-28 at https://forum.effectivealtruism.org/posts/2mx6xrDrwiEKzfgks/announcing-the-future-fund-1 with a deadline of 2022-03-21.',
-  /* intended_use_of_funds_category */ 'Living expenses during research project',
+  /* intended_use_of_funds_category */ 'Living expenses during project',
   /* intended_use_of_funds */ 'Grant to "support [Maxwell Tabarrok] to spend a summer at the Future of Humanity Institute at Oxford University researching differential tech development and the connection between existential risks to humanity and economic growth."',
   /* intended_funding_timeframe_in_months */ 3,
   /* donor_donee_reason */ NULL,
