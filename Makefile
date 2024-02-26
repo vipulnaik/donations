@@ -159,7 +159,6 @@ read_ftx_grants:
 
 .PHONY: read_open_phil_grants
 read_open_phil_grants:
-	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/nathan-cummings-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-ai-safety-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-animal-welfare-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/open-philanthropy/open-phil-biosecurity-grants.sql
@@ -211,6 +210,7 @@ read_other_foundation_and_subsidiary_grants:
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/mcdowell-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/mellon-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/mulago-foundation-grants.sql
+	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/nathan-cummings-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/pineapple-fund-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/public-welfare-foundation-grants.sql
 	mysql $(MYSQL_ARGS) $(DATABASE) < sql/donations/private-foundations/quixote-foundation-grants.sql
