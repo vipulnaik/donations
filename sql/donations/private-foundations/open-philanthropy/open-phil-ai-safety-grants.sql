@@ -2218,6 +2218,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ 'Grant via the Effective Ventures Foundation.'),
 
+  ('Open Philanthropy','Guide Labs',750000,'2023-08-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/guide-labs-open-access-interpretability-project/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a project developing and testing AI error diagnostics and model guiding tools. To support AI safety and alignment, these tools will be made freely available to the general public."',
+  /* intended_funding_timeframe_in_months */ 18,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
   ('Open Philanthropy','University of Pennsylvania',110000,'2023-09-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/university-of-pennsylvania-ai-governance-roundtables/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Peter Conti-Brown',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
   /* intended_use_of_funds_category */ 'Direct project expenses',
@@ -2317,6 +2329,21 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL,
   /* amount_original_currency */ 10540,
   /* original_currency */ 'GBP',
+  /* currency_conversion_basis */ 'donor calculation'),
+
+  ('Open Philanthropy','Swiss AI Safety Summer Camp',51248,'2023-08-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/swiss-ai-safety-summer-camp-ai-safety-bootcamp/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds _category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to the Swiss AI Safety Summer Camp to support its 2023 bootcamp. The program offers a multidisciplinary learning experience through activities such as deep learning courses, paper readings, discussions, presentations, and lectures." Although not linked from the grant page, the summer camp webpage is at https://www.aisafetycamp.ch/ and gives a timeframe of 4th to 16th September 2023 for the camp.',
+  /* intended_funding_timeframe_in_months */ 1,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL,
+  /* amount_original_currency */ 45165,
+  /* original_currency */ 'CHF',
   /* currency_conversion_basis */ 'donor calculation');
 
 /* Other grants (new format) that are contract work */
