@@ -1422,7 +1422,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* notes */ NULL),
 
   ('Open Philanthropy','RAND Corporation',10500000,'2023-10-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/rand-corporation-emerging-technology-initiatives/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Jason Matheny','Luke Muehlhauser',NULL,NULL,NULL,NULL,
-  /* donation_process */ NULL,
+  /* donation_process */ 'This is a followup grant to the grant https://www.openphilanthropy.org/grants/rand-corporation-emerging-technology-fellowships-and-research/ to the same grantee for similar purposes.',
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'The grant page lists the following initiatives to be funded by the grant: "(1) A technology policy training program. (2) Support for the Pardee RAND Graduate School. (3) A new research center focused on China studies. (4) A research fund that will help to produce information for policymakers about emerging technology and security priorities."',
   /* intended_funding_timeframe_in_months */ NULL,
@@ -1634,6 +1634,32 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'Aditi Raghunathan, whose work the grant funds, previously received money from Open Philanthropy as part of the Open Phil AI Fellowship https://www.openphilanthropy.org/grants/open-phil-ai-fellowship-2018-class/ and https://www.openphilanthropy.org/grants/uc-berkeley-adversarial-robustness-research-aditi-raghunathan/ while at UC Berkeley.');
+
+/* Grants to Northeastern University */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','Northeastern University',562128,'2022-11-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/northeastern-university-large-language-model-interpretability-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','David Bau',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This is a followup grant to the grant to David Bau made as part of a collection of grants https://www.openphilanthropy.org/grants/funding-for-ai-alignment-projects-working-with-deep-learning-systems/ providing funding for projects working with deep learning systems. That previous grant had been made through grant applications sought at https://www.openphilanthropy.org/request-for-proposals-for-projects-in-ai-alignment-that-work-with-deep-learning-systems/ (a request for proposals).',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support Professor David Bau’s research on interpreting large language models." The webpage https://baulab.info/ is linked.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/northeastern-university-mechanistic-interpretability-research/ to Northeastern University for David Bau''s lab suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Northeastern University',116072,'2023-09-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/northeastern-university-mechanistic-interpretability-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','David Bau|Sam Marks',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ 'This is a followup grant to the grant https://www.openphilanthropy.org/grants/northeastern-university-large-language-model-interpretability-research/ to David Bau''s lab.',
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a postdoctoral position for Sam Marks in Professor David Bau’s lab, where Sam will conduct research on mechanistic interpretability." The webpages https://baulab.info/ and https://www.neelnanda.io/mechanistic-interpretability/quickstart are linked.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Other grants (new format) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
@@ -1918,18 +1944,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* intended_use_of_funds_category */ 'Direct project expenses',
   /* intended_use_of_funds */ 'Grant "to provide operational support to Steinhardt’s lab at the University of California Berkeley, which specializes in research on how to align machine learning systems." The webpage https://jsteinhardt.stat.berkeley.edu/ is linked.',
   /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL),
-
-  ('Open Philanthropy','Northeastern University',562128,'2022-11-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/northeastern-university-large-language-model-interpretability-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','David Bau',NULL,NULL,NULL,NULL,NULL,
-  /* donation_process */ 'This is a followup grant to the grant to David Bau made as part of a collection of grants https://www.openphilanthropy.org/grants/funding-for-ai-alignment-projects-working-with-deep-learning-systems/ providing funding for projects working with deep learning systems. That previous grant had been made through grant applications sought at https://www.openphilanthropy.org/request-for-proposals-for-projects-in-ai-alignment-that-work-with-deep-learning-systems/ (a request for proposals).',
-  /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant "to support Professor David Bau’s research on interpreting large language models." The webpage https://baulab.info/ is linked.',
-  /* intended_funding_timeframe_in_months */ 24,
   /* donor_donee_reason */ NULL,
   /* donor_amount_reason */ NULL,
   /* donor_timing_reason */ NULL,
