@@ -1661,6 +1661,33 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
+/* Grants to OpenMined */
+insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
+  ('Open Philanthropy','OpenMined',28320,'2022-04-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/openmined-research-on-privacy-enhancing-technologies-and-ai-safety/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant to "support research on the intersection between privacy-enhancing technologies and technical infrastructure for AI safety." The webpage https://en.wikipedia.org/wiki/Privacy-enhancing_technologies is linked.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ 'The followup grant https://www.openphilanthropy.org/grants/openmined-software-for-ai-audits/ in September 2023 for a much larger amount suggests continued satisfaction with the grantee.',
+  /* notes */ NULL),
+
+  ('Open Philanthropy','OpenMined',6000000,'2023-09-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/openmined-software-for-ai-audits/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support work on developing software that facilitates access to advanced AI systems for external researchers and auditors while preserving privacy, security, and intellectual property."',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
+
+
 /* Other grants (new format) */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes) values
   ('Open Philanthropy','Press Shop',17000,'2020-01-01','month','donation log','AI safety/movement growth','https://www.openphilanthropy.org/focus/global-catastrophic-risks/potential-risks-advanced-artificial-intelligence/press-shop-human-compatible','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Stuart Russell','Daniel Dewey',NULL,NULL,NULL,NULL,
@@ -1878,18 +1905,6 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'This grant is made via the University of California, Berkeley. A related, much larger ($210,000) grant https://www.openphilanthropy.org/grants/berkeley-existential-risk-initiative-ai-standards-2022/ is made by Open Philanthropy to the Berkeley Existential Risk Initiative for supporting work.'),
-
-  ('Open Philanthropy','OpenMined',28320,'2022-04-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/openmined-research-on-privacy-enhancing-technologies-and-ai-safety/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
-  /* donation_process */ NULL,
-  /* intended_use_of_funds_category */ 'Direct project expenses',
-  /* intended_use_of_funds */ 'Grant to "support research on the intersection between privacy-enhancing technologies and technical infrastructure for AI safety." The webpage https://en.wikipedia.org/wiki/Privacy-enhancing_technologies is linked.',
-  /* intended_funding_timeframe_in_months */ NULL,
-  /* donor_donee_reason */ NULL,
-  /* donor_amount_reason */ NULL,
-  /* donor_timing_reason */ NULL,
-  /* donor_next_donation_thoughts */ NULL,
-  /* donor_retrospective */ NULL,
-  /* notes */ NULL),
 
   ('Open Philanthropy','Centre for Effective Altruism',250000,'2022-08-01','month','donation log','AI safety/movement growth','https://www.openphilanthropy.org/grants/centre-for-effective-altruism-harvard-ai-safety-office/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
@@ -2190,6 +2205,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
   /* notes */ 'The grant https://www.openphilanthropy.org/grants/surge-ai-data-production-for-ai-safety-research/ to Surge AI made around the same time also supports work by the same person (Gabriel Recchia) on a "research project on sandwiching experiments and capability evaluations of large language models."'),
+
+  ('Open Philanthropy','AI Safety Communications Centre',288000,'2023-08-01','month','donation log','AI safety','https://www.openphilanthropy.org/grants/effective-ventures-foundation-ai-safety-communications-centre/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Organizational general support',
+  /* intended_use_of_funds */ 'The grant page says: "This project provides the AI safety community with communications support, and connects journalists to AI safety experts and resources." https://aiscc.org/ is the linked grantee website.',
+  /* intended_funding_timeframe_in_months */ NULL,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ 'Grant via the Effective Ventures Foundation.'),
 
   ('Open Philanthropy','University of Pennsylvania',110000,'2023-09-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/university-of-pennsylvania-ai-governance-roundtables/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Peter Conti-Brown',NULL,NULL,NULL,NULL,NULL,
   /* donation_process */ NULL,
