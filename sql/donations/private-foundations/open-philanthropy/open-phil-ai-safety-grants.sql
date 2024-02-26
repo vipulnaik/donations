@@ -1065,6 +1065,18 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','FAR AI',166500,'2023-09-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/far-ai-alignment-workshop/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/',NULL,NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a two-day alignment workshop in advance of NeurIPS 2023, a major machine learning and computational neuroscience conference."',
+  /* intended_funding_timeframe_in_months */ 1,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
   /* notes */ NULL);
 
 /* Grants to Rethink Priorities */
@@ -2163,7 +2175,31 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   /* donor_timing_reason */ NULL,
   /* donor_next_donation_thoughts */ NULL,
   /* donor_retrospective */ NULL,
-  /* notes */ 'The grant https://www.openphilanthropy.org/grants/surge-ai-data-production-for-ai-safety-research/ to Surge AI made around the same time also supports work by the same person (Gabriel Recchia) on a "research project on sandwiching experiments and capability evaluations of large language models."');
+  /* notes */ 'The grant https://www.openphilanthropy.org/grants/surge-ai-data-production-for-ai-safety-research/ to Surge AI made around the same time also supports work by the same person (Gabriel Recchia) on a "research project on sandwiching experiments and capability evaluations of large language models."'),
+
+  ('Open Philanthropy','University of Pennsylvania',110000,'2023-09-01','month','donation log','AI safety/governance','https://www.openphilanthropy.org/grants/university-of-pennsylvania-ai-governance-roundtables/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Peter Conti-Brown',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support a series of roundtables led by Professor Peter Conti-Brown. At these events, experts will discuss how insights from financial regulation might inform emerging discussions on AI governance." The webpage https://lgst.wharton.upenn.edu/profile/petercb/ is linked.',
+  /* intended_funding_timeframe_in_months */ 24,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL),
+
+  ('Open Philanthropy','Eleuther AI',2642273,'2023-11-01','month','donation log','AI safety/technical research','https://www.openphilanthropy.org/grants/eleuther-ai-interpretability-research/','https://www.openphilanthropy.org/focus/potential-risks-advanced-ai/','Nora Belrose',NULL,NULL,NULL,NULL,NULL,
+  /* donation_process */ NULL,
+  /* intended_use_of_funds_category */ 'Direct project expenses',
+  /* intended_use_of_funds */ 'Grant "to support the work of Nora Belrose. Nora will conduct research on AI interpretability and hire other researchers to assist her in this work."',
+  /* intended_funding_timeframe_in_months */ 48,
+  /* donor_donee_reason */ NULL,
+  /* donor_amount_reason */ NULL,
+  /* donor_timing_reason */ NULL,
+  /* donor_next_donation_thoughts */ NULL,
+  /* donor_retrospective */ NULL,
+  /* notes */ NULL);
 
 /* Other grants (new format) in other currencies */
 insert into donations(donor, donee, amount, donation_date, donation_date_precision, donation_date_basis, cause_area, url, donor_cause_area_url, donation_earmark, influencer, donation_announcement_date, donation_announcement_date_precision, donation_announcement_url, predictions, donation_process, intended_use_of_funds_category, intended_use_of_funds, intended_funding_timeframe_in_months, donor_donee_reason, donor_amount_reason, donor_timing_reason, donor_next_donation_thoughts, donor_retrospective, notes, amount_original_currency, original_currency, currency_conversion_basis) values
