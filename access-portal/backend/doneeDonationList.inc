@@ -26,7 +26,9 @@ if ($doneeDonationSelectResult -> num_rows == 0) {
   }
 
   $timeframePlotFileName = hash("md5", $timeframePlotUrlBase) . "-timeframe.png";
-  exec($generateTimeframeGraphCmdBase . " --base64 --donee " . trimEncodeEscape($donee) . " --output " . trimEncodeEscape($imagesPath . $timeframePlotFileName));
+  if (sys_getloadavg()[0] <= 0.65) {
+    exec($generateTimeframeGraphCmdBase . " --base64 --donee " . trimEncodeEscape($donee) . " --output " . trimEncodeEscape($imagesPath . $timeframePlotFileName));
+  }
   print '<p>Graph of top 10 donors (for donations with known year of donation) by amount, showing the timeframe of donations</p>';
   print '<img src="/images/' . $timeframePlotFileName .'" alt="Graph of donations and their timeframes"></img>';
 
