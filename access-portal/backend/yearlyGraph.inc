@@ -7,6 +7,7 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
   $cumulativeForGroup = array();
   $dataForGraph = "Year";
   $dataForCumulativeGraph = "Year";
+  $loadThresholdForGraphGeneration = 0.65;
 
   foreach ($group as $i) {
     $dataForGraph .= "|" . preg_replace("/\\|/", ", ", $i);
@@ -67,7 +68,7 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
   /* Incremental graph */
   $cmdToExecute = $generateGraphCmdBase . " " . $filePathBase . ".csv " .
     $filePathBase . "-timeseries.png";
-  if (sys_getloadavg()[0] <= 1.0 and ($dataHasChanged or ! file_exists($filePathBase . "-timeseries.png"))) {
+  if (sys_getloadavg()[0] <= $loadThresholdForGraphGeneration and ($dataHasChanged or ! file_exists($filePathBase . "-timeseries.png"))) {
     if (file_exists($filePathBase . "-timeseries.png")) {
       exec("rm " . $filePathBase . "-timeseries.png");
     }
@@ -93,7 +94,7 @@ function yearlyGraphs($years, $group, $yearDonationAmount,
   $cmdToExecuteCumulative = $generateGraphCmdBase . " " .
     $filePathBaseCumulative . ".csv " . $filePathBaseCumulative .
     "-timeseries.png";
-  if (sys_getloadavg()[0] <= 1.0 and ($dataHasChangedCumulative or ! file_exists($filePathBaseCumulative .
+  if (sys_getloadavg()[0] <= $loadThresholdForGraphGeneration and ($dataHasChangedCumulative or ! file_exists($filePathBaseCumulative .
       "-timeseries.png"))) {
     if (file_exists($filePathBaseCumulative . "-timeseries.png")) {
       exec("rm ".$filePathBaseCumulative . "-timeseries.png");
