@@ -1,5 +1,7 @@
 // License: CC0 https://creativecommons.org/publicdomain/zero/1.0/
-// Source: https://github.com/riceissa/issarice.com/blob/master/static/change-theme.js
+// Modified from https://github.com/riceissa/issarice.com/blob/master/static/change-theme.js
+// with the only change being the removal of the ~second half of the file
+// that deals with stuff specific to issarice.com
 
 // We use a self-executing anonymous function to create a separate namespace
 // called change_theme. This way any functions we define here won't affect
@@ -90,70 +92,4 @@
     const dark_mode_preference = window.matchMedia("(prefers-color-scheme: dark)");
     dark_mode_preference.addEventListener("change", e => change_theme.set_theme_when_os_preference_changes());
 
-
-    // This one should not save the current setting in a cookie, because if you
-    // click through to a new page, you are by definition in "movement mode" rather
-    // than "absorption mode".
-    change_theme.change_reader_mode = function change_reader_mode() {
-        if (window.getSelection().toString() != "") {
-            var closestZeroElem = window.getSelection().anchorNode.parentNode;
-        } else {
-            var mainElem = document.querySelector('main');
-            // var mainElem = document.body;
-            var childElems = mainElem.querySelectorAll('*');
-            var closestZero = Infinity;
-            var closestZeroElem = null;
-            for (var i = 0; i < childElems.length; i++) {
-                var rect = childElems[i].getBoundingClientRect();
-
-                if (Math.abs(rect.top) < Math.abs(closestZero)) {
-                    closestZeroElem = childElems[i];
-                    closestZero = rect.top;
-                }
-            }
-            // console.log(closestZeroElem);
-            // console.log(closestZero);
-        }
-
-        if (document.body.classList.contains("absorption")) {
-            var toc = document.querySelector('#TOC');
-            if (toc) {
-                var mainElem = document.querySelector('main');
-                mainElem.before(toc);
-                toc.style.position = 'fixed';
-                toc.style.top = 0;
-                toc.style.width = "150px";
-                // toc.style.backgroundColor = "#eee8d5";
-                mainElem.style.marginLeft = "150px";
-            }
-
-            document.body.classList.remove("absorption");
-            document.getElementById("change-reader-mode-toggle").textContent = "movement";
-        } else {
-            var toc = document.querySelector('#TOC');
-            if (toc) {
-                var mainElem = document.querySelector('main');
-                toc.style.position = "";
-                toc.style.top = "";
-                toc.style.width = "";
-                // toc.style.backgroundColor = "#fdf6e3";
-                mainElem.style.marginLeft = "";
-
-                var titleBlock = document.querySelector('#title-block-header');
-                titleBlock.after(toc);
-            }
-
-
-            document.body.classList.add("absorption");
-            document.getElementById("change-reader-mode-toggle").textContent = "absorption";
-        }
-
-        closestZeroElem.scrollIntoView();
-    };
-
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 't' && event.target.tagName !== 'INPUT' && event.target.tagName !== 'TEXTAREA') {
-            change_theme.change_reader_mode();
-        }
-    });
 }(window.change_theme = window.change_theme || {}));
