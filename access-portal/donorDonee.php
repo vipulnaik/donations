@@ -101,21 +101,26 @@ print '</ul>';
 
 $cache_location = "cache/" . md5($_SERVER['REQUEST_URI']) . ".html";
 if (needToRegenerate($cache_location)) {
-  ob_start();
-  include ("backend/donorInfo.inc");
-  print '<p><a href="/donor.php?donor='.urlencode($donor).'">Full donor page for donor '.$donor.'</a></p>'."\n";
-  include ("backend/doneeInfo.inc");
-  print '<p><a href="/donee.php?donee='.urlencode($donee).'">Full donee page for donee '.$donee.'</a></p>'."\n";
-  include ("backend/donorDoneeRelationship.inc");
-  include ("backend/donorDoneeStatistics.inc");
-  include ("backend/donorDoneeDonationAmountsByCauseAreaAndYear.inc");
-  include ("backend/donorDoneeDocumentList.inc");
-  include ("backend/donorDoneeDonationList.inc");
-  $output = ob_get_clean();
-  file_put_contents($cache_location, $output);
+  if (sys_getloadavg()[0] <= 1.10) {
+    ob_start();
+    include ("backend/donorInfo.inc");
+    print '<p><a href="/donor.php?donor='.urlencode($donor).'">Full donor page for donor '.$donor.'</a></p>'."\n";
+    include ("backend/doneeInfo.inc");
+    print '<p><a href="/donee.php?donee='.urlencode($donee).'">Full donee page for donee '.$donee.'</a></p>'."\n";
+    include ("backend/donorDoneeRelationship.inc");
+    include ("backend/donorDoneeStatistics.inc");
+    include ("backend/donorDoneeDonationAmountsByCauseAreaAndYear.inc");
+    include ("backend/donorDoneeDocumentList.inc");
+    include ("backend/donorDoneeDonationList.inc");
+    $output = ob_get_clean();
+    file_put_contents($cache_location, $output);
+    include($cache_location);
+  } else {
+    include_once("backend/overload.inc");
+  }
+} else {
+  include($cache_location);
 }
-include($cache_location);
-
 include_once("anchorjs.inc");
 print '</body>';
 ?>
