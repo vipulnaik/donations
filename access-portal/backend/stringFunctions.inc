@@ -20,7 +20,7 @@ function printDonationDate($donationDate, $donationDatePrecision, $donationDateB
   } else if ($donationDatePrecision == 'year' or $donationDatePrecision == 'multi-year') {
     $donationDate = substr($donationDate,0,4);
   }
-  print '<td align="left"><element title="'.$donationDatePrecision.' precision, based on '.$donationDateBasis.'">'.$donationDate.'</element></td>';
+  print '<td align="left"><element title="'.htmlspecialchars($donationDatePrecision).' precision, based on '.htmlspecialchars($donationDateBasis).'">'.htmlspecialchars($donationDate).'</element></td>';
 }
 
 function printAmountWithRank($amount, $amountList, $amountOriginalCurrency, $originalCurrency) {
@@ -31,8 +31,8 @@ function printAmountWithRank($amount, $amountList, $amountOriginalCurrency, $ori
     } else {
       $originalCurrStr = "";
     }
-    print '<td align="right"' . $originalCurrStr . '>'.number_format($amount,2).'</td>';
-    print '<td align="right">'.(array_search($amount, array_reverse($amountList)) + 1).'</td>';
+    print '<td align="right"' . htmlspecialchars($originalCurrStr) . '>'.htmlspecialchars(number_format($amount,2)).'</td>';
+    print '<td align="right">'.htmlspecialchars(array_search($amount, array_reverse($amountList)) + 1).'</td>';
 }
 
 function cleanNotes($notes) {

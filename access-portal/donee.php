@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
   die();
 }
 
-print "<title>$donee donations received</title>";
+print "<title>" . htmlspecialchars($donee) . " donations received</title>";
 include_once('analytics.inc');
 include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
@@ -46,7 +46,7 @@ print '<script>$(document).ready(function()
         $("#myTableDoneeDonationList").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
-print "<h3>$donee donations received</h3>";
+print "<h3>" . htmlspecialchars($donee) . " donations received</h3>";
 ?>
 
 <p><span id="changeThemeMenu" style="display: none;">Set color scheme to:

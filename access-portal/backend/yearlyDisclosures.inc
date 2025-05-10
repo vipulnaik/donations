@@ -37,8 +37,8 @@ function filteredDonorCauseArea($mysqli, $query1, $query2, $donor,
     return $result;
   } else {
     print "<pre>";
-    print 'DEBUG: ' . $mysqli->error . "\n";
-    print "DEBUG: Query was: " . $query . "\n";
+    print 'DEBUG: ' . htmlspecialchars($mysqli->error) . "\n";
+    print "DEBUG: Query was: " . htmlspecialchars($query) . "\n";
     print "</pre>\n";
   }
 }

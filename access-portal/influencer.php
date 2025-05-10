@@ -4,7 +4,7 @@ $influencer = 'GiveWell';
 if (!empty($_REQUEST['influencer'])) {
   $influencer = $_REQUEST['influencer'];
 }
-print "<title>$influencer money moved</title>";
+print "<title>" . htmlspecialchars($influencer) . " money moved</title>";
 include_once('analytics.inc');
 print '<script src="change-theme.js"></script>';
 include_once('strip-commas.inc');
@@ -28,7 +28,7 @@ print '<script>$(document).ready(function()
         $("#myTableInfluencerDonationAmountsByDonorAndYear").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
-print "<h3>$influencer money moved</h3>";
+print "<h3>" . htmlspecialchars($influencer) . " money moved</h3>";
 ?>
 
 <p><span id="changeThemeMenu" style="display: none;">Set color scheme to:

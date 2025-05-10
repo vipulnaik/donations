@@ -7,7 +7,7 @@ $donorSelectResult = $stmt->get_result();
 $affiliatedOrgsList = array();
 print '<h4 id="donorInfo">Basic donor information</h4>';
 if ($donorSelectResult -> num_rows == 0) {
-  print "<p>We do not have any donor information for the donor $donor in our system.";
+  print "<p>We do not have any donor information for the donor " . htmlspecialchars($donor) . " in our system.";
 } else {
   $row = $donorSelectResult -> fetch_assoc();
   print "\n";

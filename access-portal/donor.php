@@ -32,7 +32,7 @@ if (!empty($_REQUEST['cause_area_filter'])) {
   $causeAreaFilterString = $_REQUEST['cause_area_filter'];
   $causeAreaFilterStringHelper = " (filtered to cause areas matching $causeAreaFilterString)";
 }
-print "<title>$donor donations made $causeAreaFilterStringHelper</title>";
+print "<title>" . htmlspecialchars($donor) . " donations made " . htmlspecialchars($causeAreaFilterStringHelper) . "</title>";
 include_once('analytics.inc');
 include_once('strip-commas.inc');
 include_once('backend/stringFunctions.inc');
@@ -57,7 +57,7 @@ print '<script>$(document).ready(function()
         $("#myTableDonorSimilarDonors").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
-print "<h3>$donor donations made $causeAreaFilterStringHelper</h3>";
+print "<h3>" . htmlspecialchars($donor) . " donations made " . htmlspecialchars($causeAreaFilterStringHelper) . "</h3>";
 ?>
 
 <p><span id="changeThemeMenu" style="display: none;">Set color scheme to:
