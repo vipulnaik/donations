@@ -41,7 +41,7 @@ EOD;
 
 function printFooterRow($data, $years, $rowName, $rowLabel) {
   print "  <tr>\n";
-  print "    <td><strong>$rowLabel</strong></td>\n";
+  print "    <td><strong>" . htmlspecialchars($rowLabel) . "</strong></td>\n";
   print '    <td align="right"><strong>'
     . ($data['numDonations'][$rowName]['Total'] ?? 0)
     . "</strong></td>\n";
@@ -263,13 +263,13 @@ function printYearlyGroupedHtmlTable(
 ) {
 
   $donorString = $donor ? "donor" : "";
-  print '<h4 id="' . $donorString . ($donorString ? 'Donation' : 'donation')
-    . 'AmountsBy' . camelCaseStripSpace($groupName)
-    . 'AndYear">' . "Donation amounts by $groupName and year</h4>";
+  print '<h4 id="' . htmlspecialchars($donorString) . ($donorString ? 'Donation' : 'donation')
+    . 'AmountsBy' . urlencode(camelCaseStripSpace($groupName))
+    . 'AndYear">' . "Donation amounts by " . htmlspecialchars($groupName) . " and year</h4>";
 
   if (($data['amount']['Classified']['Total'] ?? 0) > 0) {
 
-    print "<p>If you hover over a cell for a given $groupName and year, "
+    print "<p>If you hover over a cell for a given " . htmlspecialchars($groupName) . " and year, "
       . "you will get a tooltip with the number of donees and the number of "
       . "donations.</p>\n";
 

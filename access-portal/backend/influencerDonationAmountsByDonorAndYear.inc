@@ -12,7 +12,7 @@ function linkDonees(string $doneeList, string $donor) {
 }
 
 
-print '<h4 id="influencerDonationAmountsByDonorAndYear">Donation amounts by donor and year for influencer '.$influencer.'</h4>'."\n";
+print '<h4 id="influencerDonationAmountsByDonorAndYear">Donation amounts by donor and year for influencer '.htmlspecialchars($influencer).'</h4>'."\n";
 
 $query = "select donor, group_concat(distinct donee order by donee separator '|') as donee_list from donations where influencer regexp ?";
 $paramStr = "s";

@@ -11,7 +11,7 @@ if (!empty($_REQUEST['cause_area_filter'])) {
   $causeAreaFilterString = $_REQUEST['cause_area_filter'];
   $causeAreaFilterStringHelper = " (filtered to cause areas matching $causeAreaFilterString)";
 }
-print "<title>Donations list website $causeAreaFilterStringHelper</title>";
+print "<title>Donations list website " . htmlspecialchars($causeAreaFilterStringHelper) . "</title>";
 print '<link href="style.css" rel="stylesheet" type="text/css" />'."\n";
 include_once("style.inc");
 print '<script type="text/javascript" src="./jquery-3.7.1.min.js"></script>'."\n";
@@ -30,7 +30,7 @@ print '<script>$(document).ready(function()
         $("#myTableDonationAmountsByDisclosuresAndYear").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
-print "<h3>Donations recorded by Vipul Naik $causeAreaFilterStringHelper</h3>";
+print "<h3>Donations recorded by Vipul Naik " . htmlspecialchars($causeAreaFilterStringHelper) . "</h3>";
 ?>
 
 <p><span id="changeThemeMenu" style="display: none;">Set color scheme to:
