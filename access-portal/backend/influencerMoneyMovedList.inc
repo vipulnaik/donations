@@ -103,7 +103,7 @@ while ($row = $result->fetch_assoc()) {
 }
 
 if ($amountClaimedNumRows > 0) {
-  print '<h4 id="influencerMoneyMovedList">Money moved infomation for influencer '.$influencer.' (' . $amountClaimedNumRows . ' rows)</h4>';
+  print '<h4 id="influencerMoneyMovedList">Money moved infomation for influencer '.htmlspecialchars($influencer).' (' . $amountClaimedNumRows . ' rows)</h4>';
   print '<table id="myTableInfluencerMoneyMovedList" class="tablesorter">'."\n";
   print "<thead>\n";
   print "<tr>\n";

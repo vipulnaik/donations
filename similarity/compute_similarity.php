@@ -95,7 +95,7 @@ foreach ($donors as $donor) {
     $stmt->execute();
     $result = $stmt->get_result();
 
-    print "Doing $donor\n";
+    print "Doing " . htmlspecialchars($donor) . "\n";
     if ((! $result) || ($result->num_rows <= 0)) {
       printf("<p>Sorry, we couldn't find any similar donors.</p>");
     } else {

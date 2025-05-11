@@ -55,8 +55,8 @@ if (!empty($_REQUEST['cause_area_filter'])) {
   $causeAreaFilterString = '';
 }
 
-print "<title>$donor donations made to $donee"
-  . ($causeAreaFilterString ? " (filtered to cause areas matching $causeAreaFilterString)" : '')
+print "<title>" . htmlspecialchars($donor) . " donations made to " . htmlspecialchars($donee)
+  . htmlspecialchars($causeAreaFilterString ? " (filtered to cause areas matching $causeAreaFilterString)" : '')
   . "</title>";
 include_once('analytics.inc');
 include_once('strip-commas.inc');
@@ -74,8 +74,8 @@ print '<script>$(document).ready(function()
         $("table").tablesorter({textExtraction: stripCommas});
     }
 ); </script>'."\n";
-print "<h3>$donor donations made to $donee"
-  . ($causeAreaFilterString ? " (filtered to cause areas matching $causeAreaFilterString)" : '')
+print "<h3>" . htmlspecialchars($donor) . " donations made to " . htmlspecialchars($donee)
+  . htmlspecialchars($causeAreaFilterString ? " (filtered to cause areas matching $causeAreaFilterString)" : '')
  . "</h3>";
 ?>
 
@@ -104,9 +104,9 @@ if (needToRegenerate($cache_location)) {
   if (sys_getloadavg()[0] <= 1.10) {
     ob_start();
     include ("backend/donorInfo.inc");
-    print '<p><a href="/donor.php?donor='.urlencode($donor).'">Full donor page for donor '.$donor.'</a></p>'."\n";
+    print '<p><a href="/donor.php?donor='.urlencode($donor).'">Full donor page for donor '.htmlspecialchars($donor).'</a></p>'."\n";
     include ("backend/doneeInfo.inc");
-    print '<p><a href="/donee.php?donee='.urlencode($donee).'">Full donee page for donee '.$donee.'</a></p>'."\n";
+    print '<p><a href="/donee.php?donee='.urlencode($donee).'">Full donee page for donee '.htmlspecialchars($donee).'</a></p>'."\n";
     include ("backend/donorDoneeRelationship.inc");
     include ("backend/donorDoneeStatistics.inc");
     include ("backend/donorDoneeDonationAmountsByCauseAreaAndYear.inc");

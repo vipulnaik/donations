@@ -1,6 +1,6 @@
 <?php
 
-print '<h4 id="doneeDonationAmountsByDonorAndYear">Donation amounts by donor and year for donee '.$donee.'</h4>'."\n";
+print '<h4 id="doneeDonationAmountsByDonorAndYear">Donation amounts by donor and year for donee '.htmlspecialchars($donee).'</h4>'."\n";
 
 $donorQuery = "select donor from donations where donee = ? group by donor;";
 $stmt = $mysqli->prepare($donorQuery);
