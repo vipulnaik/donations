@@ -6,7 +6,7 @@ $stmt->execute();
 $doneeSelectResult = $stmt->get_result();
 print '<h4 id="doneeInfo">Basic donee information</h4>';
 if ($doneeSelectResult -> num_rows == 0) {
-  print "<p>We do not have any donee information for the donee $donee in our system.";
+  print "<p>We do not have any donee information for the donee " . htmlspecialchars($donee) . " in our system.";
 } else {
   $row = $doneeSelectResult -> fetch_assoc();
   print "\n";
