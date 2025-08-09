@@ -85,7 +85,7 @@ insert into donations(donor, donee, amount, donation_date, donation_date_precisi
   ('Gordon Irlam','RESULTS Educational Fund',10000,'2008-01-01','year','donation log','Education','https://www.gricf.org/2008-report.html',NULL,NULL),
   ('Gordon Irlam','Center for Policy Analysis',1000,'2008-01-01','year','donation log',NULL,'https://www.gricf.org/2008-report.html',NULL,NULL),
   ('Gordon Irlam','COLT-USA',1000,'2008-01-01','year','donation log',NULL,'https://www.gricf.org/2008-report.html',NULL,'c/o Follow Your Dream'),
-  ('Gordon Irlam','Grantmakers Without Borders',250,'2008--01-01','year','donation log',NULL,'https://www.gricf.org/2008-report.html',NULL,NULL),
+  ('Gordon Irlam','Grantmakers Without Borders',250,'2008-01-01','year','donation log',NULL,'https://www.gricf.org/2008-report.html',NULL,NULL),
   # -- 2009 donations
   ('Gordon Irlam','RESULTS Educational Fund',35000,'2009-01-01','year','donation log','Education','https://www.gricf.org/2009-report.html',NULL,NULL),
   ('Gordon Irlam','Institute for One World Health',25000,'2009-01-01','year','donation log','Global health','https://www.gricf.org/2009-report.html',NULL,NULL),
